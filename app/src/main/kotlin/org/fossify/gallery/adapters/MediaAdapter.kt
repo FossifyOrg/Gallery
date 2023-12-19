@@ -619,7 +619,7 @@ class MediaAdapter(
 
             playPortraitOutline?.beVisibleIf(medium.isVideo() || medium.isPortrait())
             if (medium.isVideo()) {
-                playPortraitOutline?.setImageResource(org.fossify.commons.R.drawable.ic_play_outline_vector)
+                playPortraitOutline?.setImageResource(org.fossify.commons.R.drawable.ic_play_vector)
                 playPortraitOutline?.beVisible()
             } else if (medium.isPortrait()) {
                 playPortraitOutline?.setImageResource(R.drawable.ic_portrait_photo_vector)
