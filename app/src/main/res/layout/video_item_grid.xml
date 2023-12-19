@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/play_portrait_outline"
         android:layout_alignBottom="@+id/play_portrait_outline"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginTop="@dimen/tiny_margin"
         android:layout_toEndOf="@id/play_portrait_outline"
         android:ellipsize="end"
         android:gravity="end"
@@ -51,6 +51,9 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/normal_text_size"
         android:visibility="gone"
+        android:background="@drawable/darkened_rounded_background"
+        android:paddingTop="@dimen/one_dp"
+        android:paddingHorizontal="@dimen/small_margin"
         tools:text="02:34" />
 
     <ImageView
