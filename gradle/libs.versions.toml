@@ -13,9 +13,9 @@ exif = "1.0.1"
 #Room
 room = "2.6.0-beta01"
 #Simple tools
-commons = "7241fe4591"
+commons = "0053668b48"
 #Gradle
-gradlePlugins-agp = "8.1.2"
+gradlePlugins-agp = "8.2.0"
 #Other
 androidGifDrawable = "1.2.25"
 androidImageCropper = "4.5.0"
@@ -55,7 +55,7 @@ exif = { module = "it.sephiroth.android.exif:library", version.ref = "exif" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-#Simple Mobile Tools
+#Fossify
 fossify-commons = { module = "org.fossify:commons", version.ref = "commons" }
 #Other
 android-gif-drawable = { module = "pl.droidsonroids.gif:android-gif-drawable", version.ref = "androidGifDrawable" }
