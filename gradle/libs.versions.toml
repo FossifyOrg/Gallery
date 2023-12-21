@@ -13,9 +13,9 @@ exif = "1.0.1"
 #Room
 room = "2.6.0-beta01"
 #Simple tools
-commons = "f01629d679"
+commons = "0053668b48"
 #Gradle
-gradlePlugins-agp = "8.1.2"
+gradlePlugins-agp = "8.2.0"
 #Other
 androidGifDrawable = "1.2.25"
 androidImageCropper = "4.5.0"
