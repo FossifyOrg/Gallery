@@ -31,9 +31,9 @@
         android:layout_height="@dimen/selection_check_size"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/small_margin"
         android:layout_marginTop="@dimen/small_margin"
-        android:layout_marginLeft="@dimen/small_margin"
-        android:background="@drawable/darkened_automatic_circle_background" >
+        android:background="@drawable/darkened_automatic_circle_background">
 
         <ImageView
             android:id="@+id/play_portrait_outline"
