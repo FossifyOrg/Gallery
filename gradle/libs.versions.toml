@@ -1,6 +1,4 @@
 [versions]
-#imgly
-imgly = "10.7.3"
 #jetbrains
 kotlin = "1.8.22"
 #KSP
@@ -83,4 +81,3 @@ room = [
 android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-imgly = { id = "ly.img.android.sdk", version.ref = "imgly" }
