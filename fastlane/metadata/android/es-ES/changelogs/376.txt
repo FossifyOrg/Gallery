@@ -1,3 +1,0 @@
-* Actualizado el editor de fotos/vídeos
- * Añadido un botón Conseguir un teléfono sencillo en la sección Acerca de
- * Añadidas algunas mejoras de traducción y UX
