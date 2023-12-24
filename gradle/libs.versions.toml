@@ -10,7 +10,7 @@ androidx-constraintlayout = "2.1.4"
 exif = "1.0.1"
 #Room
 room = "2.6.0-beta01"
-#Simple tools
+#Fossify
 commons = "0053668b48"
 #Gradle
 gradlePlugins-agp = "8.2.0"
