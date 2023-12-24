@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Prosta galeria</string>
     <string name="app_launcher_name">Galeria</string>
     <string name="edit">Edytuj</string>
     <string name="open_camera">Otwórz aparat</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Zmień filtry</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ta funkcja ukrywa folder, dodając do niego plik „.nomedia”, i ukryje również wszystkie podfoldery. Możesz je zobaczyć, przełączając opcję „Pokazuj ukryte elementy” w Ustawieniach. Kontynuować\?</string>
-    <string name="exclude_folder_description">Spowoduje to wykluczenie wybranego folderu i jego podfolderów z Prostej galerii. Możesz zarządzać wykluczonymi folderami w Ustawieniach.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Czy zamiast tego wykluczyć folder nadrzędny\?</string>
-    <string name="excluded_activity_placeholder">Wykluczenie folderów spowoduje ukrycie ich wraz z podfolderami tylko w Prostej Galerii, w innych aplikacjach będą nadal widoczne.
-\n
-\nJeśli chcesz je ukryć także w innych aplikacjach, użyj funkcji „Ukryj folder”.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Ukryte foldery</string>
     <string name="manage_hidden_folders">Zarządzaj ukrytymi folderami</string>
     <string name="hidden_folders_placeholder">Wygląda na to, że nie masz żadnych ukrytych folderów z plikiem „.nomedia”.</string>
@@ -115,7 +112,7 @@
     <string name="other_aspect_ratio">Inne</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Prosta tapeta</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Ustaw jako tapetę</string>
     <string name="set_as_wallpaper_failed">Ustawienie jako tapety nie powiodło się</string>
     <string name="set_as_wallpaper_with">Ustaw jako tapetę w:</string>
@@ -348,8 +345,9 @@
     <string name="pesdk_common_title_pipettableColor">Kolor z pipety</string>
     <string name="vesdk_video_trim_title_name">Przytnij</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Jak mogę ustawić Prostą galerię jako domyślną galerię urządzenia\?</string>
-    <string name="faq_1_text">Najpierw znajdź aktualnie domyślną galerię urządzenia w ustawieniach urządzenia (sekcja „Aplikacje”). Na ekranie z informacjami o niej wybierz „Otwórz domyślnie”, a następnie „Wyczyść domyślne”. Gdy podczas następnej próby otwarcia obrazu czy wideo system zapyta Cię, którą aplikacją to zrobić, wybierz Prostą galerię i opcję zapamiętania tego wyboru.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Zablokowałem aplikację hasłem i je zapomniałem. Co mogę zrobić\?</string>
     <string name="faq_2_text">Możesz rozwiązać to na 2 sposoby. Możesz zarówno przeinstalować aplikację, jak i znaleźć ją w ustawieniach swojego urządzenia i wybrać „Wyczyść dane”. Przywróci to oryginalne ustawienia aplikacji, nie usuwając żadnych plików multimedialnych.</string>
     <string name="faq_3_title">Jak sprawić, aby album zawsze pojawiał się na górze\?</string>
@@ -357,7 +355,7 @@
     <string name="faq_4_title">Jak mogę przewijać wideo do przodu\?</string>
     <string name="faq_4_text">Możesz to zrobić, naciskając dwukrotnie bok ekranu albo tekst aktualnego lub całkowitego czasu trwania w pobliżu paska przewijania. Jeśli włączysz „Zawsze otwieraj wideo na osobnym ekranie…” w ustawieniach aplikacji, możesz też używać poziomych gestów.</string>
     <string name="faq_5_title">Jaka jest różnica między ukryciem a wykluczeniem folderu\?</string>
-    <string name="faq_5_text">Wykluczanie działa tylko w obrębie Prostej galerii, podczas gdy ukrywanie ma wpływ także na inne galerie. Działa to przez dodanie do folderu pustego pliku „.nomedia”, który możesz potem usunąć w dowolnym menedżerze plików. Uwaga: Niektóre urządzenia nie pozwalają na ukrywanie folderów takich, jak Aparat, Zrzuty ekranu i Pobrane.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Dlaczego pojawiają się foldery z okładką albumu muzycznego lub naklejkami\?</string>
     <string name="faq_6_text">Może się zdarzyć, że zobaczysz w aplikacji jakieś nietypowe albumy. Możesz je łatwo wykluczyć, naciskając je długo i wybierając Wyklucz. W następnym oknie możesz wybrać folder nadrzędny, co prawdopodobnie zapobiegnie również wyświetlaniu się innych powiązanych albumów.</string>
     <string name="faq_7_title">Folder z obrazami nie wyświetla się lub nie pokazuje wszystkich elementów. Co mogę zrobić\?</string>

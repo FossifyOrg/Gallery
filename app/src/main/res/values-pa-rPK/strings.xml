@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">سادیاں تصویراں</string>
     <string name="app_launcher_name">تصویراں</string>
     <string name="edit">سودھو</string>
     <string name="open_camera">کیمرہ کھُلھو</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Change filters</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">This function hides the folder by adding a \'.nomedia\' file into it, it will hide all subfolders too. You can see them by toggling the \'Show hidden items\' option in Settings. Continue\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Simple Gallery only. You can manage excluded folders in Settings.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Exclude a parent instead\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Simple Gallery, they will still be visible in other applications.
-\n
-\nIf you want to hide them from other apps too, use the Hide function.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Hidden folders</string>
     <string name="manage_hidden_folders">Manage hidden folders</string>
     <string name="hidden_folders_placeholder">Seems like you don\'t have any folders hidden with a \".nomedia\" file.</string>
@@ -111,7 +108,7 @@
     <string name="free_aspect_ratio">Free</string>
     <string name="other_aspect_ratio">ہور</string>
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Simple Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Set as Wallpaper</string>
     <string name="set_as_wallpaper_failed">Setting as Wallpaper failed</string>
     <string name="set_as_wallpaper_with">Set as wallpaper with:</string>
@@ -344,8 +341,9 @@
     <string name="pesdk_common_title_pipettableColor">Pipettable color</string>
     <string name="vesdk_video_trim_title_name">Trim</string>
     <!-- FAQ -->
-    <string name="faq_1_title">How can I make Simple Gallery the default device gallery\?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\". The next time you will try opening an image or video you should see an app picker, where you can select Simple Gallery and make it the default app.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">I locked the app with a password, but I forgot it. What can I do\?</string>
     <string name="faq_2_text">You can solve it in 2 ways. You can either reinstall the app, or find the app in your device settings and select \"Clear data\". It will reset all your settings, it will not remove any media files.</string>
     <string name="faq_3_title">How can I make an album always appear at the top\?</string>
@@ -353,7 +351,7 @@
     <string name="faq_4_title">How can I fast forward videos\?</string>
     <string name="faq_4_text">You can do it by double tapping the side of the screen, or tapping the current or max duration texts near the seekbar. If you enable opening videos on a separate screen in the app settings, you can use horizontal gestures too.</string>
     <string name="faq_5_title">What is the difference between hiding and excluding a folder\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Simple Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Why do folders with music cover art or stickers show up\?</string>
     <string name="faq_6_text">It can happen that you will see some unusual albums show up. You can easily exclude them by long pressing them and selecting Exclude. In the next dialog you can then select the parent folder, chances are it will prevent the other related albums showing up too.</string>
     <string name="faq_7_title">A folder with images isn\'t showing up, or it doesn\'t show all items. What can I do\?</string>
