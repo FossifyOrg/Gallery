@@ -136,7 +136,7 @@
     <string name="home_and_lock_screen">Галоўны экран і экран блакіроўкі</string>
     <string name="allow_changing_aspect_ratio">Дазволіць змяняць суадносіны бакоў</string>
     <string name="other_aspect_ratio">Іншае</string>
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Усталяваць у якасці шпалер</string>
     <string name="set_as_wallpaper_failed">Збой усталявання ў якасці шпалер</string>
     <string name="interval">Інтэрвал</string>

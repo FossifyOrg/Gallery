@@ -110,7 +110,7 @@
     <string name="other_aspect_ratio">其他</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">设置为壁纸</string>
     <string name="set_as_wallpaper_failed">设置壁纸失败</string>
     <string name="set_as_wallpaper_with">设置壁纸方式：</string>

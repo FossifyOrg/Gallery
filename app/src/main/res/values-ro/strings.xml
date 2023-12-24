@@ -110,7 +110,7 @@
     <string name="other_aspect_ratio">Altele</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Setează ca imagine de fundal</string>
     <string name="set_as_wallpaper_failed">Setarea ca imagine de fundal a eşuat</string>
     <string name="set_as_wallpaper_with">Setează ca imagine de fundal cu:</string>

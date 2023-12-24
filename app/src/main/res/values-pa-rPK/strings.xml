@@ -108,7 +108,7 @@
     <string name="free_aspect_ratio">Free</string>
     <string name="other_aspect_ratio">ہور</string>
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Set as Wallpaper</string>
     <string name="set_as_wallpaper_failed">Setting as Wallpaper failed</string>
     <string name="set_as_wallpaper_with">Set as wallpaper with:</string>

@@ -110,7 +110,7 @@
     <string name="other_aspect_ratio">Khác</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Cài làm hình nền</string>
     <string name="set_as_wallpaper_failed">Thất bại</string>
     <string name="set_as_wallpaper_with">Đặt làm hình nền với:</string>

@@ -110,7 +110,7 @@
     <string name="other_aspect_ratio">অন্যান্য</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">ওয়ালপেপার হিশেবে সেট করুন</string>
     <string name="set_as_wallpaper_failed">ওয়ালপেপার সেট করা ব্যর্থ হয়েছে</string>
     <string name="set_as_wallpaper_with">ওয়ালপেপার সেট করুন:</string>

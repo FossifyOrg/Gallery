@@ -110,7 +110,7 @@
     <string name="other_aspect_ratio">Egyéb</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Beállítás háttérképként</string>
     <string name="set_as_wallpaper_failed">A háttérképként beállítás sikertelen</string>
     <string name="set_as_wallpaper_with">Beállítás háttérképként ezzel:</string>

@@ -108,7 +108,7 @@
     <string name="free_aspect_ratio">חופשי</string>
     <string name="other_aspect_ratio">אחר</string>
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fossify Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">קבע כרקע</string>
     <string name="set_as_wallpaper_failed">ההגדרה כטפט נכשלה</string>
     <string name="set_as_wallpaper_with">הגדר כטפט עם:</string>
