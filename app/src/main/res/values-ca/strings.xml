@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Gallery</string>
     <string name="app_launcher_name">Galeria</string>
     <string name="edit">Edita</string>
     <string name="open_camera">Obre la càmera</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Canvia els filtres</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Aquesta funció oculta la carpeta agregant un fitxer «.nomedia» a dins d\'ella. També ocultarà les subcarpetes. Podeu veure-les canviant l\'opció «Mostra els elements ocults» a la configuració. Continuo\?</string>
-    <string name="exclude_folder_description">Això exclourà la selecció junt amb les seves subcarpetes, només a la Simple Gallery. Podeu gestionar les carpetes excloses a la configuració.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Voleu excloure la carpeta superior\?</string>
-    <string name="excluded_activity_placeholder">Excloure les carpetes les ocultarà junt amb les seves subcarpetes, però només a la Simple Gallery. Seguiran sent visibles en altres aplicacions.
-\n
-\nSi voleu ocultar-les d\'altres aplicacions, feu servir la funció Oculta.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Carpetes ocultes</string>
     <string name="manage_hidden_folders">Gestiona les carpetes ocultes</string>
     <string name="hidden_folders_placeholder">Sembla que no teniu cap carpeta oculta amb el fitxer «.nomedia».</string>
@@ -113,7 +110,7 @@
     <string name="other_aspect_ratio">Altres</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Fons de pantalla simple</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">Estableix com a fons de pantalla</string>
     <string name="set_as_wallpaper_failed">Ha fallat en establir com a fons de pantalla</string>
     <string name="set_as_wallpaper_with">Estableix com a fons de pantalla amb:</string>
@@ -346,8 +343,9 @@
     <string name="pesdk_common_title_pipettableColor">Color que es pot triar amb una pipeta</string>
     <string name="vesdk_video_trim_title_name">Retalla</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Com puc fer que Simple Gallery sigui la galeria predeterminada del dispositiu\?</string>
-    <string name="faq_1_text">Primer heu de trobar la galeria actualment predeterminada a la secció Aplicacions de la configuració del dispositiu, cerqueu un botó que digui alguna cosa semblant a «Obre per defecte», feu-hi clic i seleccioneu «Neteja els valors predeterminats». La pròxima vegada que proveu d\'obrir una imatge o un vídeo, haureu de veure un selector d\'aplicació, on podeu seleccionar Simple Gallery i convertir-la en l\'aplicació predeterminada.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Vaig bloquejar l\'aplicació amb una contrasenya, però l\'he oblidat. Què puc fer\?</string>
     <string name="faq_2_text">Es pot resoldre de dues maneres. Podeu tornar a instal·lar l\'aplicació o trobar l\'aplicació a la configuració del dispositiu i seleccionar «Neteja les dades». Això reiniciarà totes les configuracions, no eliminarà cap fitxer multimèdia.</string>
     <string name="faq_3_title">Com puc fer que un àlbum sempre aparegui a la part superior\?</string>
@@ -355,7 +353,7 @@
     <string name="faq_4_title">Com puc avançar ràpidament els vídeos\?</string>
     <string name="faq_4_text">Podeu fer-ho tocant dues vegades la vora de la pantalla, o tocant els textos de durada actual o màxima a prop de la barra de cerca. Si activeu l\'obertura de vídeos en una pantalla separada a la configuració de l\'aplicació, també podreu fer servir gestos horitzontals.</string>
     <string name="faq_5_title">Quina és la diferència entre ocultar i excloure una carpeta\?</string>
-    <string name="faq_5_text">Excloure impedeix mostrar la carpeta només a Simple Gallery, mentre que ocultar també amaga la carpeta a altres galeries. Funciona creant un fitxer «.nomedia» buit a la carpeta indicada, que podeu eliminar amb qualsevol gestor de fitxers. Tingueu en compte que alguns dispositius no permeten amagar carpetes com Càmera, Captures de pantalla o Descàrregues.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Per què apareixen les carpetes amb les portades de la música o adhesius\?</string>
     <string name="faq_6_text">Pot passar que veureu que apareixen alguns àlbums inusuals. Podeu excloure\'ls fàcilment prement-los prolongadament i seleccionant Excloure. Al diàleg següent, podeu seleccionar la carpeta principal, és probable que impedeixi que també apareguin altres àlbums relacionats.</string>
     <string name="faq_7_title">No apareix una carpeta amb imatges, o no mostra tots els elements. Què puc fer\?</string>

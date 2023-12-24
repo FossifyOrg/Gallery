@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">簡易相簿</string>
     <string name="app_launcher_name">簡易相簿</string>
     <string name="edit">編輯</string>
     <string name="open_camera">開啟相機</string>
@@ -47,11 +46,9 @@
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">這功能藉由添加一個\".nomedia\"檔案，來隱藏資料夾和所有子資料夾。您可以透過[設定]中的\"顯示隱藏的項目\"選項來查看。
 \n是否繼續\?</string>
-    <string name="exclude_folder_description">此資料夾與子資料夾將只會都從簡易相簿中排除。您可以在設定中進行管理。</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">是否排除上層資料夾\?</string>
-    <string name="excluded_activity_placeholder">[排除資料夾]只會將選擇的資料夾與子資料夾一起從簡易相簿中隱藏，他們仍會出現在其他應用程式中。
-\n
-\n如果您要在其他應用程式中也隱藏，請使用[隱藏]功能。</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">隱藏資料夾</string>
     <string name="manage_hidden_folders">管理隱藏資料夾</string>
     <string name="hidden_folders_placeholder">您似乎沒有用\".nomedia\"檔案來隱藏的資料夾</string>
@@ -112,7 +109,7 @@
     <string name="other_aspect_ratio">其它</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">簡易桌布</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">設為桌布</string>
     <string name="set_as_wallpaper_failed">設為桌布失敗</string>
     <string name="set_as_wallpaper_with">用其他程式設為桌布:</string>
@@ -345,8 +342,9 @@
     <string name="pesdk_common_title_pipettableColor">Pipettable color</string>
     <string name="vesdk_video_trim_title_name">Trim</string>
     <!-- FAQ -->
-    <string name="faq_1_title">我如何將簡易相簿設為預設相簿\?</string>
-    <string name="faq_1_text">首先你必須先在裝置設定中應用程式部分尋找目前預設相簿，找到一個像是\"預設開啟(Open by default)\"的按鈕，點下去，然後選擇\"清除預設(Clear defaults)\"。 下次你要開啟圖片或影片時應該會看到程式選擇器，你可以在那裡選擇簡易相簿並設為預設程式。</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">我用密碼鎖住了這應用程式，但我忘記了。怎麼辦\?</string>
     <string name="faq_2_text">有兩個解決方法。你可以重新安裝應用程式，或者在裝置設定中找到這程式然後選擇\"清除資料(Clear data)\"。這將重置你程式內所有設定，不會移除任何媒體檔案。</string>
     <string name="faq_3_title">我如何讓某個相冊總是出現在頂端\?</string>
@@ -354,7 +352,7 @@
     <string name="faq_4_title">我如何快轉影片\?</string>
     <string name="faq_4_text">You can do it by double tapping the side of the screen, or tapping the current or max duration texts near the seekbar. If you enable opening videos on a separate screen in the app settings, you can use horizontal gestures too.</string>
     <string name="faq_5_title">隱藏和排除資料夾，兩者有什麼不同\?</string>
-    <string name="faq_5_text">[排除]只在簡易相簿中避免顯示出來；而[隱藏]則作用於整個系統，資料夾也會被其他相簿隱藏。這是藉由在指定資料夾內建立一個\".nomedia\"空白檔案來進行隱藏，你之後也能用任何檔案管理器移除。 Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">為什麼有些音樂專輯封面或貼圖的資料夾會出現\?</string>
     <string name="faq_6_text">這情況可能發生，你會看到一些異常的相冊出現。你可以長按再選擇[排除]來輕易排除他們。在下個對話框，你可以選擇上層資料夾，有可能讓其他相關相冊也避免出現。</string>
     <string name="faq_7_title">有一個圖片資料夾沒有顯示出來，怎麼辦\?</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Једноставна галерија</string>
     <string name="app_launcher_name">Галерија</string>
     <string name="edit">Уредити</string>
     <string name="open_camera">Отвори камеру</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Измени филтере</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ова функција скрива фасциклу додавањем \'.nomedia\' фајла у њу, она ће такође сакрити све подфасцикле. Можете их видети притиском на опцију \'Прикажи скривене ставке\' у подешавањима. Настави\?</string>
-    <string name="exclude_folder_description">Ово ће изузети одабир заједно са подфасциклама само из Једноставне галерије. Можете управљати изузетим фасциклама у подешавањима.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Изузми родитеља уместо овог\?</string>
-    <string name="excluded_activity_placeholder">Изузимање фасцикли ће их заједно са њиховим подфасциклама учинити скривеним само у Једноставној галерији, они ће и даље бити видљиви у другим апликацијама.
-\n
-\nАко желите да их сакријете од других апликација, употребите Сакриј функцију.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Скривене фасцикле</string>
     <string name="manage_hidden_folders">Управљај скривеним фасциклама</string>
     <string name="hidden_folders_placeholder">Изгледа да немате ни једну фасциклу скривену са \".nomedia\" датотеком.</string>
@@ -113,7 +110,7 @@
     <string name="other_aspect_ratio">Друга пропорција</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Једноставна позадина</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">Подеси као позадину</string>
     <string name="set_as_wallpaper_failed">Подешавање позадине неуспешно</string>
     <string name="set_as_wallpaper_with">Подеси као позадину са:</string>
@@ -346,8 +343,9 @@
     <string name="pesdk_common_title_pipettableColor">Боја за пипетирање</string>
     <string name="vesdk_video_trim_title_name">Трим</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Како да подесим Једноставну галерију да буде главна галерија уређаја\?</string>
-    <string name="faq_1_text">Први морате да нађете тренутну главну галерију у Апликације секцији подешавања вашег уређаја, потражите дугме које каже нешто попут \"Отвори по дифолту\", кликни на то, затим изабери \"Уклони дифолт\". Следећи пут када покушате да отворите слику или видео требало би да видите изабирач апликација, где можете да изаберете Једноставну галерију и учините је подразумевајућом апликацијом.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Закључао сам апликацију са шифром и заборавио шифру. Како да решим проблем\?</string>
     <string name="faq_2_text">Постоје 2 начина. Можете да обришете апликацију, или да нађете апликацију у подешавањима и кликнете на \"Обриши податке\". То ће ресетовати сва подешавања, али неће обрисати медија фајлове.</string>
     <string name="faq_3_title">Како да подесим да се неки албум увек појављује на врху\?</string>
@@ -355,7 +353,7 @@
     <string name="faq_4_title">Како да премотавам видео снимке\?</string>
     <string name="faq_4_text">То можете да урадите тако што ћете двапут куцнути на бочну страну екрана или куцнути текст тренутног или максималног трајања близу траке за претрагу. Ако омогућите отварање видео записа на посебном екрану у подешавањима апликације, можете да користите и хоризонталне покрете.</string>
     <string name="faq_5_title">Која је разлика између скривања и изузимања фасцикле\?</string>
-    <string name="faq_5_text">Изузимање спречава приказивање фасцикле само у Једноставној галерији, док се скривање односи на цео систем и скрива фасциклу од свих других галерија. Он функционише тако што прави празан \".nomedia\" фајл у задатој фасцикли, који затим можете да уклоните са било којим фајл менаџером. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Зашто се фасцикле са сликама музичких извођача или налепницама приказују\?</string>
     <string name="faq_6_text">Може се десити да се приказују неки необични албуми. Можете их лако изузети дугим притиском, а затим одабиром Изузми. У следећем дијалогу можете изабрати фасциклу родитеља, шансе су да ће спречити све остале албуме од приказивања.</string>
     <string name="faq_7_title">Фасцикла са сликама се не приказује, или не приказује све ставке. Шта да урадим\?</string>

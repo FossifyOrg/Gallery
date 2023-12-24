@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Enostavna galerija</string>
     <string name="app_launcher_name">Galerija</string>
     <string name="edit">Uredi</string>
     <string name="open_camera">Zaženi fotoaparat</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Spremeni filtre</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ta funkcija skrije mapo tako, da vanjo doda \'.nomedia\' datoteko, kar skrije tudi vse podmape. Ponovno jih lahko prikažete z uporabo možnosti \'Prikaži skrite elemente\' v Nastavitvah. Nadaljujem\?</string>
-    <string name="exclude_folder_description">Izbira bo skupaj s podmapami izključena zgolj iz te Galerije. Izključene mape lahko urejate v Nastavitvah.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Namesto tega izključim nadrejeno mapo\?</string>
-    <string name="excluded_activity_placeholder">Izključevanje map jih bo skupaj s podmapami skrilo zgolj v tej Galeriji, v ostalih aplikacijah bodo normalno vidne.
-\n
-\nČe jih želite skriti tudi v drugih aplikacijah, uporabite funkcijo Skrij.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Skrite mape</string>
     <string name="manage_hidden_folders">Urejaj skrite mape</string>
     <string name="hidden_folders_placeholder">Kot kaže, ne obstajajo skrite mape z \".nomedia\" datoteko.</string>
@@ -113,7 +110,7 @@
     <string name="other_aspect_ratio">Drugo</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Simple ozadje</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">Nastavi kot ozadje</string>
     <string name="set_as_wallpaper_failed">Nastavljanje ozadja ni uspelo</string>
     <string name="set_as_wallpaper_with">Nastavi kot ozadje z:</string>
@@ -346,8 +343,9 @@
     <string name="pesdk_common_title_pipettableColor">Pipetiraj barvo</string>
     <string name="vesdk_video_trim_title_name">Obreži</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Kako naredim Simple galerijo za privzeto aplikacijo na napravi\?</string>
-    <string name="faq_1_text">Najprej morate najti trenutno privzeto aplikacijo za prikaz slik med aplikacijami v nastavitvah naprave, kjer poiščete gumb v smislu \"Odpri kot privzeto\", kliknite nanj in izberite \"Izbriši privzeto\". Ko boste naslednjič želeli odpreti fotografijo ali videoposnetek, bi se moral pokazati izbirnik, v katerem lahko izberete Simple galerijo in jo določite kot privzeto aplikacijo.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Aplikacijo sem zaklenil z geslom, ki se ga ne spomnim več. Kaj lahko naredimo\?</string>
     <string name="faq_2_text">To lahko rešite na 2 načina. Lahko ali ponovno namestite aplikacijo ali pa jo poiščete v nastavitvah in kliknete \"Počisti podatke\". To bo ponastavilo vaše nastavitve, ne bo pa izbrisalo nobenih datotek.</string>
     <string name="faq_3_title">Kako nastaviti, da se določen album vedno prikaže na vrhu\?</string>
@@ -355,7 +353,7 @@
     <string name="faq_4_title">Ali lahko hitro predvajam videoposnetke\?</string>
     <string name="faq_4_text">To lahko storite tako, da dvakrat pritisnete stranski del zaslona ali pritisnete besedilo o trenutnem ali največjem trajanju v bližini iskalne vrstice. Če v nastavitvah aplikacije omogočite odpiranje videoposnetkov na ločenem zaslonu, lahko uporabite tudi vodoravne geste.</string>
     <string name="faq_5_title">Kakšna je razlika med skrivanjem in izključevanjem mape\?</string>
-    <string name="faq_5_text">Izključevanje mape jo skrije le v Simple galeriji, medtem ko jo skrivanje skrije tudi v ostalih aplikacijah oz. galerijah. Deluje tako, da kreira prazno \".nomedia\" datoteko v izbrani mapi, katero lahko odstranite tudi s katerimkoli urejevalnikom datotek. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Zakaj se v galeriji prikažejo datoteke z naslovnicami glasbenih map ali nalepk\?</string>
     <string name="faq_6_text">Lahko se zgodi, da se vam prikažejo nepoznani albumi, ki vsebujejo tovrstne datoteke. Lahko jih preprosto skrijete tako, da z dolgim pritiskom na album prikličete meni in tam izberete Izključi. V naslednjem oknu lahko izberete tudi nadrejeno mapo, obstaja pa verjetnost, da bo to preprečilo tudi prikazovanje ostalih povezanih albumov.</string>
     <string name="faq_7_title">Mapa s slikami se ne prikaže. Kaj naj naredim\?</string>

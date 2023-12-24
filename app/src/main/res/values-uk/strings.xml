@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Проста Галерея</string>
     <string name="app_launcher_name">Галерея</string>
     <string name="edit">Редагувати</string>
     <string name="open_camera">Запустити камеру</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Змінити фільтри</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ця функція приховує теку шляхом додавання в неї файлу \".nomedia\"; це також приховає і підтеки. Ви можете побачити приховані теки, обравши опцію \'Показати приховані елементи\' в \"Налаштуваннях\". Продовжити\?</string>
-    <string name="exclude_folder_description">Це призведе до виключення виділеного елемента разом із його вкладеними папками лише з Простої Галереї. Керувати виключеними папками можна в налаштуваннях.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Виключити батьківську папку\?</string>
-    <string name="excluded_activity_placeholder">Виключення папок призведе до того, що вони разом із вкладеними папками будуть приховані лише в Простій Галереї, але вони залишаться видимими в інших застосунках.
-\n
-\nЯкщо ви також хочете приховати їх від інших застосунків, скористайтеся функцією «Приховати».</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Приховані теки</string>
     <string name="manage_hidden_folders">Керування прихованими теками</string>
     <string name="hidden_folders_placeholder">Схоже, у вас немає тек, прихованих за допомогою файлу \".nomedia\".</string>
@@ -115,7 +112,7 @@
     <string name="other_aspect_ratio">Інше</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Прості Шпалери</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">Встановити як шпалери</string>
     <string name="set_as_wallpaper_failed">Не вдалося встановити шпалери</string>
     <string name="set_as_wallpaper_with">Встановити шпалери за допомогою:</string>
@@ -348,8 +345,9 @@
     <string name="pesdk_common_title_pipettableColor">Колір заливки</string>
     <string name="vesdk_video_trim_title_name">Обрізка</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Як зробити Просту Галерею галереєю за промовчанням\?</string>
-    <string name="faq_1_text">Спочатку необхідно знайти поточну галерею замовчуванням в розділі \"Застосунки\" налаштувань вашого пристрою. Знайдіть і натисніть на кнопку \"Використовувати замовчуванням\",а потім оберіть \"Очистити типові\". Наступного разу коли ви намагатиметеся відкрити зображення або відео, ви побачите вікно з вибором застосунків для цього. Оберіть Просту Галерею та зробіть її застосунком замовчуванням.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Я заблокував додаток за допомогою пароля і забув його. Що я можу зробити\?</string>
     <string name="faq_2_text">Ви можете вирішити цю проблему двома способами: перевстановити застосунок або знайти його в розділі \"Застосунки\" налаштувань вашого пристрою та обрати \"Очистити дані\". Це скине усі ваші налаштування застосунка, але не видалить жодного медіа файлу.</string>
     <string name="faq_3_title">Як зробити альбом завжди доступним у верхній частині\?</string>
@@ -357,7 +355,7 @@
     <string name="faq_4_title">Як я можу швидко прокручувати відео\?</string>
     <string name="faq_4_text">Ви можете двічі натиснути збоку дисплея або натиснути на поточному чи максимальному значенні тривалості поруч з пошуковою планкою. Якщо в налаштуваннях додатка ви оберете опцію Відкривати відео в окремому вікні, то також зможете користуватися горизонтальними жестами.</string>
     <string name="faq_5_title">В чому полягає різниця між приховуванням та виключенням теки\?</string>
-    <string name="faq_5_text">«Виключити» запобігає відображенню теки тільки в застосунку Проста Галерея, в той час як «Приховати» працює на системному рівні і приховує папку і в інших галереях також. Це здійснюється шляхом створення порожнього файлу «.nomedia» в заданій папці, який пізніше може бути видалений будь-яким файловим менеджером. Зауважте, що деякі пристрої не дозволяють приховувати папки, як-от «Камера», «Знімки екрана» та «Завантаження».</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Чому відображаються теки з музичними обкладинками або стікерами\?</string>
     <string name="faq_6_text">Може так трапитися, що з\'являться деякі незвичні альбоми. Їх можна легко виключити довгим натисканням і вибором \"Виключити\". В наступному діалозі у вас буде можливість обрати батьківську папку. Швидше за все, це дозволить також запобігти появі інших пов\'язаних альбомів.</string>
     <string name="faq_7_title">Тека з зображеннями не відображається, що мені робити\?</string>

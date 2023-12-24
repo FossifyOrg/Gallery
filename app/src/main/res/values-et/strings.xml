@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lihtne galerii</string>
     <string name="app_launcher_name">Galerii</string>
     <string name="edit">Muuda</string>
     <string name="open_camera">Ava kaamera</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Muuda filtreid</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">See funktsioon peidab kausta koos alamkaustadega, lisades sinna faili „.nomedia“. Neid näed, lülitades seadetes sisse valiku „Kuva peidetud kirjed“. Kas jätkame\?</string>
-    <string name="exclude_folder_description">See välistab valiku koos selle alamkaustadega ainult Lihtsast galeriist. Väljajäetud kaustu saad hallata seadetes.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Kas selle asemel jätame ülemkirjed välja\?</string>
-    <string name="excluded_activity_placeholder">Kaustade välistamine peidab kaustad koos nende alamkaustadega vaid Lihtsast galeriist ning nad jäävad nähtavaks muudele rakendustele.
-\n
-\nKui sa tahad neid varjata ka muude rakenduste eest, siis kasuta peitmise funktsionaalsust.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Peidetud kaustad</string>
     <string name="manage_hidden_folders">Halda peidetud kaustu</string>
     <string name="hidden_folders_placeholder">Tundub, et sa pole „.nomedia“ faili abil ühtegi kausta märkinud peidetuks.</string>
@@ -113,7 +110,7 @@
     <string name="other_aspect_ratio">Muud</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Lihtne taustapilt</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">Määra taustapildiks</string>
     <string name="set_as_wallpaper_failed">Taustapildiks määramine ei õnnestunud</string>
     <string name="set_as_wallpaper_with">Määra taustapildiks:</string>
@@ -346,8 +343,9 @@
     <string name="pesdk_common_title_pipettableColor">Pipeteeritav värv</string>
     <string name="vesdk_video_trim_title_name">Video kärpimine</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Kuidas saan teha Simple Gallery seadme vaikimisi galeriiks\?</string>
-    <string name="faq_1_text">Kõigepealt otsi seadme seadete rakenduste valikust praegune vaikimisi galerii, leia nupp, millel on midagi sellist nagu „Ava vaikimisi“, klõpsa sellel ja vali „Tühista vaikimisi“. Järgmine kord, kui proovid pilti või videot avada, peaksid nägema rakenduste valijat, kus saad valida Lihtsa galerii ja teha selle vaikimisi rakenduseks.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Lukustasin rakenduse salasõnaga, kuid unustasin selle. Mida ma saan teha\?</string>
     <string name="faq_2_text">Seda saad lahendada kahel viisil. Võid kas paigaldada rakenduse uuesti või otsi rakenduse kirje oma seadme seadistustest ja vali „Tühjenda andmed“. See nullib kõik sinu seadistused, see ei eemalda ühtegi meediafaili.</string>
     <string name="faq_3_title">Kuidas saan teha nii, et album ilmuks alati ülaosas\?</string>
@@ -355,7 +353,7 @@
     <string name="faq_4_title">Kuidas saan videoid kiiresti edasi kerida\?</string>
     <string name="faq_4_text">Seda saad teha, kui topeltkoputad ekraani küljele või koputad praeguse või maksimaalse kestuse tekstidele otsinguriba lähedal. Kui lubad rakenduse seadetes videote avamise eraldi ekraanil, saate kasutada ka horisontaalseid viipeid.</string>
     <string name="faq_5_title">Mis vahe on kausta varjamise ja väljajätmise vahel\?</string>
-    <string name="faq_5_text">Exclude takistab kausta kuvamist ainult Simple Gallery\'s, samas kui Hide töötab süsteemipõhiselt ja peidab kausta ka teistest galeriidest. See töötab, luues antud kausta tühja \".nomedia\" faili, mille saate seejärel eemaldada ka mis tahes failihalduriga. Pange tähele, et mõned seadmed ei võimalda kaustade, nagu Camera, Screenshots ja Downloads, peitmist.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Miks ilmuvad kaustad muusika kaanekujundusega või kleebised\?</string>
     <string name="faq_6_text">Võib juhtuda, et ilmub mõni ebatavaline album. Saate need hõlpsasti välja jätta, vajutades pikalt ja valides Exclude (Väljaarvamine). Järgmises dialoogis saate seejärel valida vanemkausta, mis tõenäoliselt takistab ka teiste seotud albumite ilmumist.</string>
     <string name="faq_7_title">Kaust, kus on pilte, ei ilmu või ei näita kõiki objekte. Mida ma saan teha\?</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">الاستديو البسيط</string>
     <string name="app_launcher_name">الاستديو</string>
     <string name="edit">تعديل</string>
     <string name="open_camera">فتح الكاميرا</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>تغيير الفلاتر</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">تقوم هذه الوظيفة بإخفاء المجلد عن طريق إضافة ملف \'. nomedia \' إليه، وستقوم بإخفاء كل المجلدات الفرعية أيضًا. يمكنك رؤيتهم عن طريق تبديل خيار \'إظهار العناصر المخفية \' في الإعدادات. هل تريد المتابعة؟</string>
-    <string name="exclude_folder_description">سيؤدي ذلك إلى استبعاد التحديد مع المجلدات الفرعية من الاستديو فقط. يمكنك إدارة المجلدات المستبعدة في الإعدادات.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">استبعاد المجلد الأصل بدلاً من ذلك (المحدد)؟</string>
-    <string name="excluded_activity_placeholder">سيؤدي استبعاد المجلدات إلى جعلها هي والمجلدات الفرعية مخفية في الاستديو فقط، وستظل مرئية في تطبيقات أخرى.
-\n
-\nإذا كنت تريد إخفاءها من التطبيقات الأخرى أيضاً، فاستخدم وظيفة الإخفاء.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">المجلدات المخفية</string>
     <string name="manage_hidden_folders">إدارة المجلدات المخفية</string>
     <string name="hidden_folders_placeholder">يبدو أنه لا توجد لديك أي مجلدات مخفية بملف \".nomedia\".</string>
@@ -117,7 +114,7 @@
     <string name="other_aspect_ratio">أخرى</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">خلفية بسيطة</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">تعيين كخلفية</string>
     <string name="set_as_wallpaper_failed">فشل التعيين كخلفية</string>
     <string name="set_as_wallpaper_with">تعيين كخلفية باستخدام:</string>
@@ -350,8 +347,9 @@
     <string name="pesdk_common_title_pipettableColor">Pipettable لون</string>
     <string name="vesdk_video_trim_title_name">تقليم</string>
     <!-- FAQ -->
-    <string name="faq_1_title">كيف يمكنني جعل تطبيق الاستديو معرض الجهاز الإفتراضي؟</string>
-    <string name="faq_1_text">أولًا، يجب عليك العثور على المعرض الافتراضي الحالي في قسم التطبيقات من إعدادات الجهاز، ثم ابحث عن زر يقول شيئاً مثل \"فتح كافتراضي\" ثم انقر عليه، ثم حدد \"مسح الإعدادات الإفتراضية\". في المرة القادمة التي ستحاول فيها فتح صورة أو مقطع فيديو يجب أن ترى اختيار تطبيق، حيث يمكنك تحديد تطبيق الاستديو وجعله التطبيق الافتراضي.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">لقد أغلقت التطبيق بكلمة مرور، لكنني نسيتها. ماذا يمكنني أن أفعل؟</string>
     <string name="faq_2_text">يمكنك حلها بطريقتين. يمكنك إما إعادة تثبيت التطبيق أو البحث عن التطبيق في إعدادات جهازك وتحديد \"مسح البيانات\". سيتم إعادة تعيين كل إعداداتك، ولن يقوم بإزالة أي ملفات وسائط.</string>
     <string name="faq_3_title">كيف يمكنني جعل ألبوماً يظهر دائماً في الأعلى؟</string>
@@ -359,7 +357,7 @@
     <string name="faq_4_title">كيف يمكنني تسريع مقاطع الفيديو؟</string>
     <string name="faq_4_text">يمكنك القيام بذلك عن طريق النقر المزدوج على جانب الشاشة، أو النقر على نصوص المدة الحالية أو القصوى بالقرب من شريط التمرير. إذا قمت بتمكين فتح مقاطع الفيديو على شاشة منفصلة في إعدادات التطبيق، يمكنك استخدام الإيماءات الأفقية أيضاً.</string>
     <string name="faq_5_title">ما الفرق بين إخفاء المجلد واستبعاده؟</string>
-    <string name="faq_5_text">لاحظ أن بعض الأجهزة لا تسمح بإخفاء المجلدات مثل الكاميرا ولقطات الشاشة والتنزيلات. الاستبعاد يمنع عرض المجلد فقط في الاستديو، بينما الإخفاء يعمل على مستوى النظام ويخفي المجلد من المعارض الأخرى أيضاً. يعمل عن طريق إنشاء ملف فارغ .nomedia \" في المجلد المحدد، والذي يمكنك إزالته بعد ذلك بواسطة أي مدير ملفات أيضًا.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">لماذا تظهر المجلدات مع صورة غلاف الموسيقى أو الملصقات؟</string>
     <string name="faq_6_text">قد يحدث أن ترى بعض الألبومات غير العادية تظهر. يمكنك بسهولة إستبعادهم بالضغط مطولاً عليهم واختيار استبعاد. في مربع الحوار التالي يمكنك بعد ذلك تحديد المجلد الاصل، من المحتمل أن يمنع ظهور الألبومات الأخرى ذات الصلة أيضاً.</string>
     <string name="faq_7_title">المجلد الذي به صور لا يظهر، أو لا يظهر كل العناصر. ماذا يمكنني أن أفعل؟</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Gallery</string>
     <string name="app_launcher_name">Galeria</string>
     <string name="edit">Editar</string>
     <string name="open_camera">Abrir câmara</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Alterar filtros</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Esta função oculta a pasta, adicionando-lhe um ficheiro \'.nomedia\' e ocultará também todas as subpastas nela existentes. Pode ver as pastas com a opção \'Mostrar pastas ocultas\'. Continuar\?</string>
-    <string name="exclude_folder_description">As pastas selecionadas, bem como as suas subpastas serão excluídas apenas e só nesta aplicação. Pode gerir as pastas excluídas nas Definições.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Excluir antes a pasta superior\?</string>
-    <string name="excluded_activity_placeholder">Excluir pastas – e implicitamente, as suas subpastas também – faz com que deixem de ser apresentadas apenas e só na Simple Gallery. Continuarão visíveis noutras aplicações.
-\n
-\nSe as quiser ocultar também noutras aplicações, utilize a função Ocultar.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Pastas ocultas</string>
     <string name="manage_hidden_folders">Gerir pastas ocultas</string>
     <string name="hidden_folders_placeholder">Parece que não existem pastas ocultas com ficheiros \".nomedia\".</string>
@@ -114,7 +111,7 @@
     <string name="other_aspect_ratio">Outra</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Simple Wallpaper</string>
+    <string name="simple_wallpaper">Fossify Wallpaper</string>
     <string name="set_as_wallpaper">Definir como fundo de ecrã</string>
     <string name="set_as_wallpaper_failed">Falha ao definir o fundo de ecrã</string>
     <string name="set_as_wallpaper_with">Definir fundo com:</string>
@@ -347,8 +344,9 @@
     <string name="pesdk_common_title_pipettableColor">Pipeta de cores</string>
     <string name="vesdk_video_trim_title_name">Recortar</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Como tornar Simple Gallery a minha galeria padrão\?</string>
-    <string name="faq_1_text">Primeiro, identifique a galeria padrão do sistema em Definições -&gt; Gerir aplicações. Na informação da aplicação dessa mesma galeria, selecione Limpar predefinições. Da próxima vez que tentar abrir um ficheiro de imagem ou de vídeo, irá deparar-se com diversas alternativas. Escolha então Simple Gallery e escolha-a para abrir sempre os ficheiros deste tipo.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Bloqueei a aplicação com uma palavra-passe mas agora esqueci-me dela. O que posso fazer\?</string>
     <string name="faq_2_text">Existem duas soluções. Reinstala a aplicação ou, nas Definições do sistema –&gt; Gerir aplicações –&gt; Informações da aplicação, seleccone Limpar dados. Reiniciará assim todas as suas definições na aplicação mas não apagará os seus ficheiros multimedia.</string>
     <string name="faq_3_title">Como posso fazer para que um álbum seja sempre mostrado no topo\?</string>
@@ -356,7 +354,7 @@
     <string name="faq_4_title">Como posso fazer avançar rápido os videos\?</string>
     <string name="faq_4_text">Dando dois toques nas margens ecrã ou então dando um toque em cima da indicação de duração junto à barra de pesquisa. E, se a opção de abrir videos noutro ecrã estiver habilitada, pode também fazê-lo por gestos.</string>
     <string name="faq_5_title">Qual a diferença entre ocultar e excluir uma pasta\?</string>
-    <string name="faq_5_text">Excluir impede que a pasta seja apresentada unicamente na Simple Gallery, enquanto Ocultar é adoptado por todo o sistema e esconde a pasta noutras galerias também. Funciona criando um ficheiro \".nomedia\" vazio dentro de uma pasta, que pode ser simplesmente removido através de um gestor de ficheiros. Tenha em atenção que alguns dispositivos não permitem Ocultar pastas tais como a da Câmera, a da Captura de ecrã e a das Transferências.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Porque são apresentadas capas de albuns ou stickers\?</string>
     <string name="faq_6_text">Pode dar-se o caso de alguns items invulgares aparecerem. Consegue exclui-los premindo longamente e seleccionando Excluir. Na caixa de diálogo seguinte, escolha a pasta superior na hierarquia. Provavelmente, isso irá impedir que outros itens semelhantes sejam apresentados também.</string>
     <string name="faq_7_title">Uma pasta com imagens não é apresentada ou não mostra todos os itens lá contidos. O que posso fazer\?</string>
