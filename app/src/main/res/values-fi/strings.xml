@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Yksinkertainen galleria</string>
     <string name="app_launcher_name">Galleria</string>
     <string name="edit">Muokkaa</string>
     <string name="open_camera">Avaa kamera</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>Muuta suotimia</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Tämä piilottaa kansion ja alikansiot lisäämällä \'.nomedia\' tiedoston kansioon. Näet ne valitsemalla \'Näytä piilotetut kansiot\' asetuksissa. Jatketaanko\?</string>
-    <string name="exclude_folder_description">Tämä poissulkee valitun ja alikansiot vain Simple Gallerysta. Voit hallinnoida poissuljettuja kansioita asetuksista.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Poissulje yläkansio tämän sijaan\?</string>
-    <string name="excluded_activity_placeholder">Kansion poissulkeminen piilottaa kansion alikansioineen vain Simple Galleryssa, ne jäävät näkyviin muihin sovelluksiin.
-\n
-\nJos haluat piilottaa kansion myös muissa sovelluksissa, käytä piilota-toimintoa.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Piilotetut kansiot</string>
     <string name="manage_hidden_folders">Hallitse piilotettuja kansioita</string>
     <string name="hidden_folders_placeholder">Näyttää siltä, että sinulla ei ole kansioita piilotettuna \".nomedia\" -tiedostolla.</string>
@@ -113,7 +110,7 @@
     <string name="other_aspect_ratio">Muu</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Simple Wallpaper</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Aseta taustakuvaksi</string>
     <string name="set_as_wallpaper_failed">Taustakuvan asetus epäonnistui</string>
     <string name="set_as_wallpaper_with">Aseta taustakuvaksi sovelluksella:</string>
@@ -346,8 +343,9 @@
     <string name="pesdk_common_title_pipettableColor">Poimi väri</string>
     <string name="vesdk_video_trim_title_name">Leikkaa</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Miten voin tehdä Simple Gallerystä oletusgalleriasovelluksen\?</string>
-    <string name="faq_1_text">Etsi ensin laitteen asetuksista oletusgalleriasovellus, valitse sen asetuksista \"Avaa oletuksena\" ja valitse \"Poista oletukset\". Seuraavalla kerralla kun avaat kuvan tai videon, pyydetään valitsemaan uusi oletussovellus.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Lukitsin sovelluksen salasanalla, jonka unohdin. Mitä voin tehdä\?</string>
     <string name="faq_2_text">Tähän on kaksi ratkaisua. Voit joko asentaa sovelluksen uudelleen tai etsiä sovelluksen laitteen asetuksista ja tyhjentää sovelluksen tiedot. Sovelluksen asetukset nollautuvat, mutta mediatiedostoja ei poisteta.</string>
     <string name="faq_3_title">Kuinka saan albumin näkymään aina ylhäällä\?</string>
@@ -355,7 +353,7 @@
     <string name="faq_4_title">Kuinka voin kelata videota nopeasti eteenpäin\?</string>
     <string name="faq_4_text">Tuplaklikkaa haluamaasi puolta ruudusta. Voit myös napauttaa hakupalkin vierestä kestoa kuvaavaa tekstiä. Jos käytössä on videoiden avaus erillisellä ruudulla, voit käyttää vaakatasoeleitä.</string>
     <string name="faq_5_title">Mitä eroa on kansion piilotuksella ja poissululla\?</string>
-    <string name="faq_5_text">Poissulku piilottaa kansion vain Simple Galleryssä, piilotus taas piilottaa järjestelmänlaajuisesti muistakin galleriasovelluksista. Piilotustoiminto luo kansioon tyhjän \".nomedia\"-tiedoston jonka voi tarvittaessa poistaa millä tahansa tiedostonhallintasovelluksella. Huomioi, että jotkin laitteet eivät salli joidenkin kansioden, kuten Camera, Screenshots ja Downloads, piilotusta.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Miksi galleriassa näkyy kansioita musiikkialbumien kansitaiteella tai tarroilla\?</string>
     <string name="faq_6_text">Voi olla, että joitain epätavallisia albumeita näytetään. Voit poissulkea ne helposti painamalla pitkään albumia ja valitsemalla Poissulje. Avautuvassa valikossa voit valita yläkansion, jonka poissulku mahdollisesti estää myös muiden epätoivottujen albumien näkymisen.</string>
     <string name="faq_7_title">Kuvan sisältävä kansio ei näy tai siinä ei näy kaikkia kuvia. Mitä voin tehdä\?</string>

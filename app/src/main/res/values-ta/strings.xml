@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">எளிய காட்சியகம்</string>
     <string name="app_launcher_name">காட்சியகம்</string>
     <string name="edit">திருத்து</string>
     <string name="open_camera">படக்கருவியைத் திற</string>
@@ -46,11 +45,9 @@
     <string name="change_filters_underlined"><u>வடிகட்டிகளை மாற்று</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">இச்செயல்பாடு ஒரு \'.nomedia\' கோப்பைச் சேர்த்து அடைவை மறைக்கிறது, இது எல்லா துணையடைவுகளையும் மறைக்கும். அமைப்புகளில் \'மறைந்த உருப்படிகளைக் காட்டு\' விருப்பத்தை மாற்றிஅவற்றைக் காணலாம். தொடரவா\?</string>
-    <string name="exclude_folder_description">இது எளிய காட்சியகத்திலிருந்து தெரிவின் துணையடைவுகளுடன் அதை விலக்கும். அமைப்புகளில் விலக்கிய அடைவுகளை நீங்கள் நிர்வகிக்கலாம்.</string>
+    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">பதிலாக ஒரு பெற்றோரை விலக்கவா\?</string>
-    <string name="excluded_activity_placeholder">அடைவுகளை விலக்குதல், அவற்றின் துணையடைவுகளுடன் அவற்றை எளிய காட்சியகத்தில் மட்டுமே மறைக்கும், அவை பிற செயலிகளில் இன்னும் தெரியும்.
-\n
-\nபிற செயலிகளிலிருந்தும் அவற்றை மறைக்க, மறை செயல்பாட்டைப் பயன்படுத்து.</string>
+    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">மறைத்த அடைவுகள்</string>
     <string name="manage_hidden_folders">மறைத்த அடைவுகளை நிர்வகி</string>
     <string name="hidden_folders_placeholder">உங்களிடம் \".nomedia\" கோப்புடன் எவ்வடைகளும் மறைக்கப்படவில்லை என தெரிகிறது.</string>
@@ -113,7 +110,7 @@
     <string name="other_aspect_ratio">மற்ற</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="simple_wallpaper">எளிய சுவர்த்தாள்</string>
+    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">சுவர்த்தாளாக அமை</string>
     <string name="set_as_wallpaper_failed">சுவர்த்தாளாக அமைத்தல் தோல்வி</string>
     <string name="set_as_wallpaper_with">இதனுடன் சுவர்த்தாளாக அமை:</string>
@@ -346,8 +343,9 @@
     <string name="pesdk_common_title_pipettableColor">பைப்பேடபில் நிறம்</string>
     <string name="vesdk_video_trim_title_name">ஒழுங்கமை</string>
     <!-- FAQ -->
-    <string name="faq_1_title">எளிய காட்சியகத்தை இயல்புநிலை சாதன காட்சியகமாக மாற்றுவது எப்படி\?</string>
-    <string name="faq_1_text">முதலில் உங்கள் சாதன அமைப்புகளின் செயலிகள் பிரிவில் தற்போது இயல்புநிலை காட்சியகத்தைக் கண்டுபிடிக்க வேண்டும், \"இயல்புநிலையாகத் திற\" போன்றதைக் கூறும் பொத்தானைத் தேடு, அதைக் சொடுக்கி, \"இயல்புநிலைகளைத் துடை\" என்பதைத் தேர்ந்தெடு. அடுத்த முறை நீங்கள் ஒரு படத்தை அ காணொளியை திறக்க முயற்சிப்பீர்கள், நீங்கள் ஒரு செயலி எடுப்பியைப் பார்க்க வேண்டும், அங்கு நீங்கள் எளிய காட்சியகத்தை தேர்ந்தெடுத்து அதை இயல்புநிலை செயலியாக மாற்றலாம்.</string>
+    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
+        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">கடவுச்சொல்லுடன் செயலியைப் பூட்டினேன், ஆனால் அதை மறந்தேன். என்ன செய்வது\?</string>
     <string name="faq_2_text">நீங்கள் அதை 2 வழிகளில் தீர்க்கலாம். நீங்கள் செயலியை மறுநிறுவலாம் அ உங்கள் சாதன அமைப்புகளில் செயலியைக் கண்டுபிடித்து \"தரவைத் துடை\" என்பதைத் தேர்ந்தெடுக்கலாம். இது உங்கள் எல்லா அமைப்புகளையும் அகரமாக்கும், இது எந்த ஊடக கோப்புகளையும் நீக்காது.</string>
     <string name="faq_3_title">ஒரு தொகுப்பை எப்போதும் மேலே தோன்றச்செய்வது எப்படி\?</string>
@@ -355,7 +353,7 @@
     <string name="faq_4_title">காணொளிகளை எவ்வாறு வேகமாக அனுப்புவது\?</string>
     <string name="faq_4_text">திரையின் பக்கத்தை இருமுறை தட்டியோ சீக்பார் அருகே தற்போதைய அ அதிகபட்ச கால நூல்களைத் தட்டியோ நீங்கள் இதைச் செய்யலாம். செயலி அமைப்புகளில் தனித்திரையில் காணொளிகளைத் திறக்க நீங்கள் இயக்கினால், கிடைமட்ட சைகைகளையும் பயன்படுத்தலாம்.</string>
     <string name="faq_5_title">ஒரு அடைவை மறைப்பதற்கும் விலக்குவதற்கும் என்ன வேறுபாடு\?</string>
-    <string name="faq_5_text">விலக்கு எளிய காட்சியகத்தில் மட்டுமே அடைவைக் காண்பிப்பதைத் தடுக்கிறது, அதே சமயம் கணினி வாரியாக மறைக்கிறது, மேலும் இது மற்ற காட்சியகங்களிலிருந்தும் அடைவை மறைக்கிறது. கொடுக்கப்பட்ட அடைவில் வெற்று \".nomedia\" கோப்பை உருவாக்குவதன் மூலம் இது செயல்படுகிறது, அதை நீங்கள் எந்தக் கோப்பு நிர்வாகியுடனும் நீக்கலாம். படக்கருவி, திரைப்பிடிப்புகள் மற்றும் பதிவிறக்கங்கள் போன்ற அடைவுகளை மறைக்க சில சாதனங்கள் அனுமதிக்காது என்பதை நினைவில் கொள்க.</string>
+    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">இசை கவர் ஆர்ட் அ ஒட்டுபடங்களைக் கொண்ட அடைவுகள் ஏன் காட்டப்படுகின்றன\?</string>
     <string name="faq_6_text">சில அசாதாரண தொகுப்புகள் காட்டப்படுவதை நீங்கள் காண்பீர்கள். அவற்றை நீண்டழுத்தி, விலக்கு என்பதைத் தேர்ந்தெடுத்து எளிதாக விலக்கலாம். அடுத்த ஈருரையில் நீங்கள் பெற்றோர் அடைவைத் தேர்ந்தெடுக்கலாம், இது பிற உறவுடைய தொகுப்புகள் காண்பிப்பதையும் தடுக்கும் வாய்ப்புகள் உள்ளன.</string>
     <string name="faq_7_title">படங்களைக் கொண்ட அடைவு காண்பிக்கப்படவில்லை, அல்லது அது எல்லா உருப்படிகளையும் காட்டவில்லை. என்ன செய்யலாம்\?</string>

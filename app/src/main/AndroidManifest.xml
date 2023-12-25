@@ -254,7 +254,7 @@
             android:name=".activities.SetWallpaperActivity"
             android:configChanges="orientation"
             android:exported="true"
-            android:label="@string/simple_wallpaper">
+            android:label="@string/wallpaper">
             <intent-filter>
                 <action android:name="android.intent.action.ATTACH_DATA" />
 
