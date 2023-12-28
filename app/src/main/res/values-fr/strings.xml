@@ -45,9 +45,11 @@
     <string name="change_filters_underlined"><u>Modifier les filtres</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Cette option cache le dossier en y ajoutant un fichier .nomedia, elle cachera aussi tous les sous-dossiers. Vous pouvez afficher ces dossiers avec l\'option "Afficher les fichiers cachés" dans les paramètres. Continuer \?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
+    <string name="exclude_folder_description">Ceci exclura la sélection avec ses sous-dossiers de Fossify Gallery seulement. Vous pouvez gérer les dossiers exclus dans Paramètres.</string>
     <string name="exclude_folder_parent">Exclure un dossier parent \?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
+    <string name="excluded_activity_placeholder">À l\'exclusion des dossiers, ils seront toujours visibles dans d\'autres applications.
+\n
+\nSi vous voulez les cacher d\'autres applications aussi, utilisez la fonction Masquer.</string>
     <string name="hidden_folders">Dossiers cachés</string>
     <string name="manage_hidden_folders">Gérer les dossiers cachés</string>
     <string name="hidden_folders_placeholder">Il semblerait que vous n\'ayez pas de dossier caché par un fichier .nomedia.</string>
@@ -111,7 +113,7 @@
     <string name="other_aspect_ratio">Autre</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
+    <string name="wallpaper">Fond d\'écran</string>
     <string name="set_as_wallpaper">Définir comme fond d\'écran</string>
     <string name="set_as_wallpaper_failed">Échec de la définition en tant que fond d\'écran</string>
     <string name="set_as_wallpaper_with">Définir comme fond d\'écran avec :</string>
@@ -288,7 +290,7 @@
     <string name="pesdk_editor_accept">Accepter</string>
     <string name="pesdk_editor_save">Enregistrer</string>
     <string name="pesdk_editor_text_exportProgressUnknown">Exportation…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Exportation %s</string>
+    <string name="pesdk_editor_text_exportProgress" formatted="false">Exportation %s.</string>
     <string name="pesdk_sticker_title_name">Autocollant</string>
     <string name="pesdk_sticker_title_color">Couleur de l\'autocollant</string>
     <string name="pesdk_sticker_title_options">Options de l\'autocollant</string>
@@ -344,9 +346,8 @@
     <string name="pesdk_common_title_pipettableColor">Couleur de la pipette</string>
     <string name="vesdk_video_trim_title_name">Couper</string>
     <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
+    <string name="faq_1_title">Comment puis-je faire de Fossify Gallery la galerie par défaut ?</string>
+    <string name="faq_1_text">D\'abord, vous devez trouver la galerie actuellement par défaut dans la section Applis de vos paramètres de périphérique, cherchez un bouton qui dit quelque chose comme « Ouvrir par défaut », cliquez dessus, puis sélectionnez « Par défaut de clavier ». La prochaine fois que vous tenterez d\'ouvrir une image ou une vidéo, vous devriez voir un récupérateur d\'application, où vous pouvez sélectionner Fossify Gallery et en faire l\'application par défaut.</string>
     <string name="faq_2_title">J\'ai verrouillé l\'application avec un mot de passe et je ne m\'en rappelle plus. Que faire \?</string>
     <string name="faq_2_text">Il y a deux façons de procéder. Soit vous réinstallez l\'application, soit vous recherchez l\'application dans les paramètres de l\'appareil et appuyez sur "Supprimer les données". Ceci réinitialisera seulement les paramètres de l\'application et ne supprimera pas vos fichiers.</string>
     <string name="faq_3_title">Comment faire pour qu\'un dossier soit toujours affiché tout en haut \?</string>
@@ -354,8 +355,8 @@
     <string name="faq_4_title">Comment avancer rapidement dans les vidéos \?</string>
     <string name="faq_4_text">Appuyez deux fois sur le côté de l\'écran, ou appuyez sur la valeur de durée actuelle ou maximale près de la barre de recherche. Si vous activez l\'ouverture des vidéos sur un écran séparé dans les paramètres de l\'application, vous pouvez également utiliser des gestes horizontaux.</string>
     <string name="faq_5_title">Quelle est la différence entre cacher et exclure un dossier \?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
-    <string name="faq_6_title">Pourquoi des dossiers avec des pochettes d\'albums musicaux ou des miniatures d\'images sont affichés \?</string>
+    <string name="faq_5_text">Exclure empêche l\'affichage du dossier seulement dans la galerie Fossify, tandis que Masquer fonctionne selon le système et il cache le dossier d\'autres galeries aussi. Il fonctionne en créant un fichier vide « .nomedia » dans le dossier donné, que vous pouvez ensuite supprimer avec n\'importe quel gestionnaire de fichier aussi. Notez que certains appareils ne permettent pas de cacher des dossiers comme Appareil photo, Captures d\'écran et Téléchargements.</string>
+    <string name="faq_6_title">Pourquoi des dossiers avec des pochettes d\'albums musicaux ou des miniatures d\'images sont affichés ?</string>
     <string name="faq_6_text">Il est possible que des dossiers qui ne devraient pas être affichés le soient. Vous pouvez les exclure facilement en les sélectionnant par un appui prolongé, puis en choisissant l\'option "Exclure le dossier", après quoi vous pouvez aussi sélectionner le dossier parent, ce qui devrait éviter l\'apparition de dossiers similaires.</string>
     <string name="faq_7_title">Un dossier avec des images n\'apparaît pas. Que faire \?</string>
     <string name="faq_7_text">Cela peut arriver pour de multiples raisons, mais c\'est facile à résoudre. Allez dans Paramètres, puis Gérer les dossiers ajoutés, appuyez sur + et sélectionnez le dossier voulu.</string>
