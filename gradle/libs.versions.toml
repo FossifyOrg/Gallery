@@ -11,7 +11,7 @@ exif = "1.0.1"
 #Room
 room = "2.6.0-beta01"
 #Fossify
-commons = "990b87ceba"
+commons = "2a246dc086"
 #Gradle
 gradlePlugins-agp = "8.2.0"
 #Other
