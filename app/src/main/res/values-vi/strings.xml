@@ -72,8 +72,7 @@
     <string name="resize_factor_info">Thay đổi kích thước hình ảnh theo tỷ lệ phần trăm nhất định, giá trị phải nằm trong khoảng 10 và 90.</string>
     <string name="resize_factor_error">Nhập một số từ 10 đến 90</string>
     <plurals name="failed_to_resize_images">
-        <item quantity="one">Failed to resize %d image</item>
-        <item quantity="other">Failed to resize %d images</item>
+        <item quantity="other">Thay đổi kích thước %d ảnh thất bại</item>
     </plurals>
     <string name="images_resized_successfully">Thay đổi kích thước hình ảnh thành công</string>
     <!-- Editor -->
@@ -110,7 +109,7 @@
     <string name="other_aspect_ratio">Khác</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
+    <string name="wallpaper">Hình nền</string>
     <string name="set_as_wallpaper">Cài làm hình nền</string>
     <string name="set_as_wallpaper_failed">Thất bại</string>
     <string name="set_as_wallpaper_with">Đặt làm hình nền với:</string>
@@ -210,15 +209,15 @@
     <string name="export_favorite_paths">Xuất yêu thích</string>
     <string name="import_favorite_paths">Nhập yêu thích</string>
     <string name="paths_imported_successfully">Đường dẫn được nhập thành công</string>
-    <string name="media_management_prompt">To make sure that all file operations work reliably, please make this app a Media management app in your device settings.</string>
+    <string name="media_management_prompt">Để đảm bảo rằng tất cả các thao tác với tệp hoạt động đáng tin cậy, vui lòng đặt ứng dụng này làm ứng dụng Quản lý phương tiện trong cài đặt thiết bị của bạn.</string>
     <string name="password_protect_excluded">Mật khẩu bảo vệ khả năng hiển thị thư mục bị loại trừ</string>
     <string name="media_management_manual">Something went wrong, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
     <string name="media_management_note">If the redirection does not work, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
     <string name="media_management_alternative">If you do not want to do it, you can also go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
     <string name="alternative_media_access">Alternatively, you can allow accessing media files only. In that case you will not be able to work with hidden files though.</string>
-    <string name="media_only">Media only</string>
-    <string name="all_files">All files</string>
-    <string name="search_all_files">Search all files instead of folders on the main screen</string>
+    <string name="media_only">Chỉ phương tiện</string>
+    <string name="all_files">Tất cả các tập tin</string>
+    <string name="search_all_files">Tìm kiếm tất cả các tập tin thay vì thư mục trên màn hình chính</string>
     <string name="show_all_folders">Show a menu button for toggling Show All Folders Content quickly</string>
     <!-- Setting sections -->
     <string name="thumbnails">Hình thu nhỏ</string>
@@ -280,14 +279,14 @@
     <string name="pesdk_brush_title_brushColor">Màu cọ</string>
     <string name="pesdk_editor_title_name">Trình biên tập</string>
     <string name="pesdk_editor_title_closeEditorAlert">Đóng trình biên tập\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Do you really want to discard the changes\?</string>
+    <string name="pesdk_editor_text_closeEditorAlert">Bạn có thực sự muốn loại bỏ những thay đổi?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Có</string>
     <string name="pesdk_editor_button_closeEditorAlertCancelation">Không</string>
     <string name="pesdk_editor_cancel">Hủy bỏ</string>
     <string name="pesdk_editor_accept">Chấp nhận</string>
     <string name="pesdk_editor_save">Lưu</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">Exporting…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Exporting %s.</string>
+    <string name="pesdk_editor_text_exportProgressUnknown">Đang xuất…</string>
+    <string name="pesdk_editor_text_exportProgress" formatted="false">Đang xuất %s.</string>
     <string name="pesdk_sticker_title_name">Sticker</string>
     <string name="pesdk_sticker_title_color">Sticker Color</string>
     <string name="pesdk_sticker_title_options">Sticker Options</string>
@@ -344,8 +343,7 @@
     <string name="vesdk_video_trim_title_name">Trim</string>
     <!-- FAQ -->
     <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
+    <string name="faq_1_text">Trước tiên, bạn phải tìm thư viện mặc định hiện tại trong phần Ứng dụng trong cài đặt thiết bị của mình, tìm nút có nội dung như \"Mở theo mặc định\", nhấp vào nút đó, sau đó chọn \"Xóa mặc định\". Lần tới khi thử mở hình ảnh hoặc video, bạn sẽ thấy bộ chọn ứng dụng, nơi bạn có thể chọn Thư viện Fossify và đặt nó làm ứng dụng mặc định.</string>
     <string name="faq_2_title">Tôi đã khóa ứng dụng bằng mật khẩu, nhưng tôi quên mất. Tôi có thể làm gì\?</string>
     <string name="faq_2_text">Bạn có thể giải quyết nó theo 2 cách. Bạn có thể cài đặt lại ứng dụng hoặc tìm ứng dụng trong cài đặt thiết bị của mình và chọn \"Xóa dữ liệu\". Nó sẽ thiết lập lại tất cả các cài đặt của bạn, nó sẽ không xóa bất kỳ tập tin phương tiện nào.</string>
     <string name="faq_3_title">Làm thế nào tôi có thể làm cho một album luôn xuất hiện ở đầu\?</string>
