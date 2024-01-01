@@ -9,7 +9,7 @@ androidx-constraintlayout = "2.1.4"
 #exif
 exif = "1.0.1"
 #Room
-room = "2.6.0-beta01"
+room = "2.6.1"
 #Fossify
 commons = "2a246dc086"
 #Gradle
