@@ -1,8 +1,8 @@
 [versions]
 #jetbrains
-kotlin = "1.8.22"
+kotlin = "1.9.10"
 #KSP
-ksp = "1.8.22-1.0.11"
+ksp = "1.9.10-1.0.13"
 #AndroidX
 androidx-swiperefreshlayout = "1.1.0"
 androidx-constraintlayout = "2.1.4"
