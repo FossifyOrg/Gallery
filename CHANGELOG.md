@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 1.1.0 *(2024-01-02)*
+----------------------------
+
+* Removed proprietary panorama library
+* Added some translations
+
 Version 1.0.2 *(2023-12-30)*
 ----------------------------
 
