@@ -26,7 +26,7 @@ Customize the look, feel, and functionality to match your style. From UI themes 
 
 **📷 UNIVERSAL FORMAT FREEDOM:**
 
-JPEG, PNG, MP4, MKV, RAW, SVG, GIF, panoramas, videos, and more – we've got your memories covered, in any format you choose. No restrictions, just limitless possibilities.
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, videos, and more – we've got your memories covered, in any format you choose. No restrictions, just limitless possibilities.
 
 **✨ MATERIAL DESIGN WITH DYNAMIC THEMES:**
 

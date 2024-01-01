@@ -25,8 +25,6 @@ gestureviews = "e706487a14"
 androidsvgAar = "1.4"
 imagefilters = "1.0.7"
 sanselan = "0.97-incubator"
-sdkVideowidget = "1.180.0"
-sdkPanowidget = "1.180.0"
 media3Exoplayer = "1.1.0"
 okhttp = "4.9.0"
 okio = "3.0.0"
@@ -65,8 +63,6 @@ imagefilters = { module = "info.androidhive:imagefilters", version.ref = "imagef
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 sanselan = { module = "org.apache.sanselan:sanselan", version.ref = "sanselan" }
-sdk-videowidget = { module = "com.google.vr:sdk-videowidget", version.ref = "sdkVideowidget" }
-sdk-panowidget = { module = "com.google.vr:sdk-panowidget", version.ref = "sdkPanowidget" }
 apng = { module = "com.github.penfeizhou.android.animation:apng", version.ref = "apng" }
 awebp = { module = "com.github.penfeizhou.android.animation:awebp", version.ref = "awebp" }
 glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glideCompiler" }

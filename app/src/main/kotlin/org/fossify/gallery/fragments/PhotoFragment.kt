@@ -1,6 +1,5 @@
 package org.fossify.gallery.fragments
 
-import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -48,7 +47,6 @@ import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isRPlus
 import org.fossify.gallery.R
-import org.fossify.gallery.activities.PanoramaPhotoActivity
 import org.fossify.gallery.activities.PhotoActivity
 import org.fossify.gallery.activities.PhotoVideoActivity
 import org.fossify.gallery.activities.ViewPagerActivity
@@ -212,9 +210,10 @@ class PhotoFragment : ViewPagerFragment() {
         mWasInit = true
         updateInstantSwitchWidths()
 
-        ensureBackgroundThread {
-            checkIfPanorama()
-        }
+        // TODO: Implement panorama using a FOSS library
+        // ensureBackgroundThread {
+        //      checkIfPanorama()
+        // }
 
         return mView
     }
@@ -517,7 +516,8 @@ class PhotoFragment : ViewPagerFragment() {
                     if (mMedium.path != mOriginalPath) {
                         mMedium.path = mOriginalPath
                         loadImage()
-                        checkIfPanorama()
+                        // TODO: Implement panorama using a FOSS library
+                        // checkIfPanorama()
                     }
                 }
             })
@@ -642,10 +642,7 @@ class PhotoFragment : ViewPagerFragment() {
     private fun getFilePathToShow() = if (mMedium.isPortrait()) mCurrentPortraitPhotoPath else getPathToLoad(mMedium)
 
     private fun openPanorama() {
-        Intent(context, PanoramaPhotoActivity::class.java).apply {
-            putExtra(PATH, mMedium.path)
-            startActivity(this)
-        }
+        TODO("Panorama is not yet implemented.")
     }
 
     private fun scheduleZoomableView() {

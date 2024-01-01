@@ -23,7 +23,6 @@ import org.fossify.gallery.fragments.ViewPagerFragment
 import org.fossify.gallery.helpers.*
 import org.fossify.gallery.models.Medium
 import java.io.File
-import java.io.FileInputStream
 
 open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentListener {
     private var mMedium: Medium? = null
@@ -258,37 +257,18 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
             return
         }
 
-        var isPanorama = false
-        val realPath = intent?.extras?.getString(REAL_FILE_PATH) ?: ""
-        try {
-            if (realPath.isNotEmpty()) {
-                val fis = FileInputStream(File(realPath))
-                parseFileChannel(realPath, fis.channel, 0, 0, 0) {
-                    isPanorama = true
-                }
-            }
-        } catch (ignored: Exception) {
-        } catch (ignored: OutOfMemoryError) {
-        }
-
         hideKeyboard()
-        if (isPanorama) {
-            Intent(applicationContext, PanoramaVideoActivity::class.java).apply {
-                putExtra(PATH, realPath)
-                startActivity(this)
+        val mimeType = getUriMimeType(mUri.toString(), newUri)
+        Intent(applicationContext, VideoPlayerActivity::class.java).apply {
+            setDataAndType(newUri, mimeType)
+            addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT)
+            if (intent.extras != null) {
+                putExtras(intent.extras!!)
             }
-        } else {
-            val mimeType = getUriMimeType(mUri.toString(), newUri)
-            Intent(applicationContext, VideoPlayerActivity::class.java).apply {
-                setDataAndType(newUri, mimeType)
-                addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT)
-                if (intent.extras != null) {
-                    putExtras(intent.extras!!)
-                }
 
-                startActivity(this)
-            }
+            startActivity(this)
         }
+
         finish()
     }
 

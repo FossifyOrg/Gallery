@@ -31,8 +31,6 @@
         android:name="android.permission.CAMERA"
         tools:node="remove" />
 
-    <uses-sdk tools:overrideLibrary="com.google.vr.widgets.common, com.google.vr.sdk.widgets.pano" />
-
     <queries>
         <package android:name="org.fossify.gallery.debug" />
         <package android:name="org.fossify.gallery" />
@@ -160,18 +158,6 @@
             android:exported="false"
             android:parentActivityName=".activities.MediaActivity"
             android:theme="@style/TranslucentTheme" />
-
-        <activity
-            android:name=".activities.PanoramaPhotoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:theme="@style/FullScreenTheme" />
-
-        <activity
-            android:name=".activities.PanoramaVideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:theme="@style/FullScreenTheme" />
 
         <activity
             android:name=".activities.IncludedFoldersActivity"
