@@ -45,9 +45,11 @@
     <string name="change_filters_underlined"><u>Cambia filtro</u></string>
     <!-- Hide / Exclude -->
     <string name="hide_folder_description">Questa funzione nasconde la cartella aggiungendo un file .nomedia all\'interno, nasconderà anche tutte le sottocartelle. Si possono vedere attivando l\'opzione «Mostra cartelle nascoste» nelle impostazioni. Continuare\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
+    <string name="exclude_folder_description">In questo modo la selezione e le sue sottocartelle saranno escluse solo da Galleria Fossify. È possibile gestire le cartelle escluse nelle impostazioni.</string>
     <string name="exclude_folder_parent">Vuoi invece escluderne una superiore\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
+    <string name="excluded_activity_placeholder">L\'esclusione delle cartelle le renderà nascoste insieme alle loro sottocartelle solo in Galleria Fossify, mentre saranno ancora visibili in altre applicazioni.
+\n
+\nSe desideri nasconderle anche da altre applicazioni, utilizza la funzione Nascondi.</string>
     <string name="hidden_folders">Cartelle nascoste</string>
     <string name="manage_hidden_folders">Gestisci le cartelle nascoste</string>
     <string name="hidden_folders_placeholder">Non c\'è alcuna cartella nascosta con un file .nomedia.</string>
@@ -111,7 +113,7 @@
     <string name="other_aspect_ratio">Altro</string>
     <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
     <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
+    <string name="wallpaper">Sfondo</string>
     <string name="set_as_wallpaper">Imposta come sfondo</string>
     <string name="set_as_wallpaper_failed">Impostazione sfondo non riuscita</string>
     <string name="set_as_wallpaper_with">Imposta come sfondo con:</string>
@@ -344,9 +346,8 @@
     <string name="pesdk_common_title_pipettableColor">Colore pipettabile</string>
     <string name="vesdk_video_trim_title_name">Ritaglia</string>
     <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
+    <string name="faq_1_title">Come posso rendere Galleria Fossify la galleria predefinita del dispositivo?</string>
+    <string name="faq_1_text">Per prima cosa è necessario trovare la galleria attualmente predefinita nella sezione Applicazioni delle impostazioni del dispositivo, cercare un pulsante che dica qualcosa come \"Apri per impostazione predefinita\", fare clic su di esso, quindi selezionare \"Cancella impostazioni predefinite\". La prossima volta che proverai ad aprire un\'immagine o un video dovresti vedere un selettore di app, dove potrai selezionare Galleria Fossify e renderla l\'app predefinita.</string>
     <string name="faq_2_title">Ho bloccato l\'app con una password, ma l\'ho dimenticata. Cosa posso fare\?</string>
     <string name="faq_2_text">Si può risolvere in due modi: reinstallare l\'app, oppure trovare l\'app nelle impostazioni del dispositivo e seleziona «Cancella dati». Tutte le impostazioni verranno ripristinate, nessun file verrà rimosso.</string>
     <string name="faq_3_title">Come posso fare apparire un album sempre in cima\?</string>
@@ -354,7 +355,7 @@
     <string name="faq_4_title">Come avanzo velocemente nei video\?</string>
     <string name="faq_4_text">Puoi farlo con un doppio tocco del lato dello schermo o toccando i testi di durata attuale o massima vicino alla barra. Se attivi l\'apertura di video su uno schermo separato nelle impostazioni, puoi anche usare i gesti orizzontali.</string>
     <string name="faq_5_title">Che differenza c\'è tra nascondere ed escludere una cartella\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
+    <string name="faq_5_text">Escludi impedisce la visualizzazione della cartella solo nella Galleria Fossify, mentre Nascondi funziona a livello di sistema e nasconde la cartella anche dalle altre gallerie. Funziona creando un file \".nomedia\" vuoto nella cartella indicata, che può essere rimosso con qualsiasi gestore di file. Nota che alcuni dispositivi non consentono di nascondere cartelle come Fotocamera, Screenshot e Download.</string>
     <string name="faq_6_title">Perchè vengono mostrate cartelle con copertine o adesivi di musica\?</string>
     <string name="faq_6_text">Può succedere che si vedano apparire alcuni album insoliti. Si possono escluderli facilmente toccandoli a lungo e selezionando Escludi. Nella finestra successiva si possono quindi selezionare la cartella superiore, con la possibilità di impedire la visualizzazione anche di altri album correlati.</string>
     <string name="faq_7_title">Una cartella con immagini non viene mostrata, cosa posso fare\?</string>
