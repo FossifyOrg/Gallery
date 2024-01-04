@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="unknown_location">Location incognite</string>
+    <string name="all_folders">Tote le dossieres</string>
+    <string name="volume">Volumine</string>
+    <string name="edit">Modificar</string>
+    <string name="app_launcher_name">Galeria</string>
+    <string name="hidden">(celate)</string>
+    <string name="show_on_map">Monstrar in le mappa</string>
+    <string name="other_folder">Altere dossier</string>
+    <string name="brightness">Luminositate</string>
+    <string name="open_camera">Aperir le camera</string>
+    <string name="show_all">Monstrar le contento de tote le dossieres</string>
+</resources>

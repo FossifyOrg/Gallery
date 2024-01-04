@@ -231,7 +231,7 @@
     <string name="toggle_file_visibility">Visa/dölj fil</string>
     <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Anpassad</string>
-    <string name="pesdk_transform_button_resetCrop">Reset</string>
+    <string name="pesdk_transform_button_resetCrop">Återställ</string>
     <string name="pesdk_transform_button_squareCrop">Fyrkant</string>
     <string name="pesdk_transform_title_name">Transformera</string>
     <string name="pesdk_filter_title_name">Filter</string>
@@ -276,7 +276,7 @@
     <string name="pesdk_brush_button_size">Storlek</string>
     <string name="pesdk_brush_button_hardness">Styrka</string>
     <string name="pesdk_brush_button_bringToFront">Framtill</string>
-    <string name="pesdk_brush_button_delete">Delete</string>
+    <string name="pesdk_brush_button_delete">Radera</string>
     <string name="pesdk_brush_title_brushColor">Pensel Färg</string>
     <string name="pesdk_editor_title_name">Redigerare</string>
     <string name="pesdk_editor_title_closeEditorAlert">Stäng Redigerare\?</string>
@@ -343,7 +343,7 @@
     <string name="pesdk_common_title_pipettableColor">Pipetterbar färg</string>
     <string name="vesdk_video_trim_title_name">Trimma</string>
     <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
+    <string name="faq_1_title">Hur kan jag göra Fossify Gallery till enhetens standardgalleri?</string>
     <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
         The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Jag låste appen med ett lösenord, men jag glömde det. Vad kan jag göra\?</string>
