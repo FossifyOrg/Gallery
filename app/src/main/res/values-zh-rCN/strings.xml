@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">通过拖动重新排序文件夹</string>
     <string name="reorder_by_dragging_pro">通过拖动重新排序文件夹 (Pro)</string>
     <string name="restore_to_path">还原到 \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">筛选媒体文件</string>
     <string name="images">图片</string>
     <string name="videos">视频</string>
@@ -43,7 +42,6 @@
     <string name="portraits">人像</string>
     <string name="no_media_with_filters">没有媒体文件匹配选定的筛选条件。</string>
     <string name="change_filters_underlined"><u>更改筛选条件</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">该功能通过添加“.nomedia”文件到文件夹来隐藏它，这也会隐藏其所有子文件夹。您可以通过启用设置中的“显示隐藏的项目”选项来查看它们，是否继续？</string>
     <string name="exclude_folder_description">这只会将选定的文件夹及其子文件夹排除在 Fossify 图库之外。您可以在设置中管理排除的文件夹。</string>
     <string name="exclude_folder_parent">是否排除父文件夹？</string>
@@ -55,7 +53,6 @@
     <string name="hidden_folders_placeholder">看起来您没有任何使用“.nomedia”文件隐藏的目录。</string>
     <string name="hidden_all_files">你必须授予访问所有文件的权限，应用才能看到隐藏的文件。</string>
     <string name="cant_unhide_folder">如果某个文件夹或其父级文件夹中的一个在文件夹名称前有一个 . 的话，这样的文件夹会被隐藏且无法像这样取消隐藏。你必须进行重命名操作移除这个 . 符号。</string>
-    <!-- Include folders -->
     <string name="include_folders">包含的文件夹</string>
     <string name="manage_included_folders">管理包含的文件夹</string>
     <string name="add_folder">添加文件夹</string>
@@ -63,7 +60,6 @@
 \n
 \n在此处添加一些项目不会排除任何其他文件夹。</string>
     <string name="no_media_add_included">没有找到媒体文件。请手动添加包含媒体文件的文件夹。</string>
-    <!-- Resizing -->
     <string name="resize_and_save">调整选定项目的尺寸并保存</string>
     <string name="width">宽度</string>
     <string name="height">高度</string>
@@ -77,7 +73,6 @@
         <item quantity="other">未能调整 %d 张图片的尺寸</item>
     </plurals>
     <string name="images_resized_successfully">成功调整了图片尺寸</string>
-    <!-- Editor -->
     <string name="editor">编辑器</string>
     <string name="basic_editor">基础编辑器</string>
     <string name="advanced_editor">高级编辑器</string>
@@ -107,10 +102,7 @@
     <string name="flip_horizontally">水平翻转</string>
     <string name="flip_vertically">垂直翻转</string>
     <string name="free_aspect_ratio">自由</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">其他</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
     <string name="wallpaper">壁纸</string>
     <string name="set_as_wallpaper">设置为壁纸</string>
     <string name="set_as_wallpaper_failed">设置壁纸失败</string>
@@ -123,7 +115,6 @@
     <string name="lock_screen">锁定屏幕</string>
     <string name="home_and_lock_screen">主屏幕和锁定屏幕</string>
     <string name="allow_changing_aspect_ratio">允许更改长宽比</string>
-    <!-- Slideshow -->
     <string name="slideshow">幻灯片</string>
     <string name="interval">间隔</string>
     <string name="include_photos">包含照片</string>
@@ -138,9 +129,7 @@
     <string name="slide">滑动</string>
     <string name="slideshow_ended">幻灯片结束</string>
     <string name="no_media_for_slideshow">没有找到可播放幻灯片媒体文件</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">直接分组文件夹</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">分组依据</string>
     <string name="do_not_group_files">不分组文件</string>
     <string name="by_folder">文件夹</string>
@@ -154,10 +143,8 @@
     <string name="by_extension">扩展名</string>
     <string name="show_file_count_section_header">在节头显示文件数</string>
     <string name="grouping_and_sorting">请注意，分组和排序是两种独立的组织方式</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">在小工具上显示的文件夹：</string>
     <string name="show_folder_name">显示文件夹名称</string>
-    <!-- Settings -->
     <string name="autoplay_videos">自动播放视频</string>
     <string name="remember_last_video_position">记住上次视频播放位置</string>
     <string name="loop_videos">循环播放视频</string>
@@ -221,16 +208,13 @@
     <string name="all_files">所有文件</string>
     <string name="search_all_files">在主屏幕上搜索所有文件而不是文件夹</string>
     <string name="show_all_folders">显示可快速切换“显示所有文件夹内容”选项的菜单按钮</string>
-    <!-- Setting sections -->
     <string name="thumbnails">缩略图</string>
     <string name="fullscreen_media">全屏显示媒体</string>
     <string name="extended_details">更多详情</string>
     <string name="bottom_actions">底栏选项</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">管理底栏选项</string>
     <string name="toggle_favorite">切换收藏</string>
     <string name="toggle_file_visibility">隐藏文件</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">自定义</string>
     <string name="pesdk_transform_button_resetCrop">重置</string>
     <string name="pesdk_transform_button_squareCrop">正方形</string>
@@ -343,7 +327,6 @@
     <string name="pesdk_common_title_aquamarinColor">碧绿</string>
     <string name="pesdk_common_title_pipettableColor">取色器</string>
     <string name="vesdk_video_trim_title_name">剪辑</string>
-    <!-- FAQ -->
     <string name="faq_1_title">我如何才能把 Fossify 图库设为本设备的默认图库应用？</string>
     <string name="faq_1_text">首先，你需要在设备设置的“应用‘部分找到当前的默认图库应用，然后查找相应按钮，上面会有类似“默认打开方式”这样的文字，找到后，请单击此按钮，接着选择”清除默认“。 下次你试着打开图片或视频文件时，你应该会看到应用选择器，你可以选中 Fossify 图库并使其成为默认应用。</string>
     <string name="faq_2_title">我用密码锁定了本应用，但我忘记密码了。该怎么办？</string>
@@ -379,8 +362,4 @@
     <string name="faq_17_text">由于 Android 11 的系统变化，这一功能也停止了工作，本应用不能再浏览真实的文件夹了，它依赖于所谓的 MediaStore 来获取数据。</string>
     <string name="faq_18_title">为何我在视频播放期间看到广告？</string>
     <string name="faq_18_text">我们的应用没有任何广告。如果您在视频播放期间看到它们，那么您一定是在使用其他视频播放器。尝试在设备设置中找到默认的视频播放器，然后在其上执行“清除默认设置”。下次你调用视频意图，你会看到一个应用选择提示，在那里你可以选择你想使用的播放器。</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

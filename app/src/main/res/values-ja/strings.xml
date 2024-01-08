@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">ドラッグによるフォルダの並べ替え</string>
     <string name="reorder_by_dragging_pro">ドラッグによるフォルダの並べ替え (Pro)</string>
     <string name="restore_to_path">\'%s\' に復元中</string>
-    <!-- Filter -->
     <string name="filter_media">表示する形式</string>
     <string name="images">画像</string>
     <string name="videos">動画</string>
@@ -43,38 +42,22 @@
     <string name="portraits">ポートレイト</string>
     <string name="no_media_with_filters">条件に該当するメディアがありません。</string>
     <string name="change_filters_underlined"><u>絞り込み条件を変更</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">対象のフォルダに「.nomedia」ファイルを作成し、フォルダを非表示にします。そのフォルダの中にあるすべてのサブフォルダも非表示となります。非表示のフォルダを見るには、「設定」の中にある「非表示のアイテムを表示する」を有効にしてください。このフォルダを非表示にしますか？</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">親フォルダを選択して除外することもできます。</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">非表示フォルダ</string>
     <string name="manage_hidden_folders">非表示フォルダの管理</string>
     <string name="hidden_folders_placeholder">「.nomedia」で隠されたフォルダはありません。</string>
     <string name="hidden_all_files">非表示項目を表示するには [すべてのファイルへのアクセス] を許可する必要があります。許可をしないと機能しません。</string>
-    <string name="cant_unhide_folder">If a folder or one of its parent folders has a dot before its name, it is hidden and cannot be unhidden like this. You have to remove the dot by renaming it.</string>
-    <!-- Include folders -->
     <string name="include_folders">追加フォルダ</string>
     <string name="manage_included_folders">追加フォルダの管理</string>
     <string name="add_folder">フォルダを追加</string>
     <string name="included_activity_placeholder">メディア入りのフォルダがアプリで認識されない場合は手動で追加します。</string>
     <string name="no_media_add_included">メディアファイルが見つかりません。メディアファイルを手動で追加することにより解決できます。</string>
-    <!-- Resizing -->
     <string name="resize_and_save">選択領域をリサイズして保存</string>
     <string name="width">幅</string>
     <string name="height">高さ</string>
     <string name="keep_aspect_ratio">縦横比を固定</string>
     <string name="invalid_values">解像度を正しく入力してください</string>
-    <string name="resize_multiple_images">Resize multiple images</string>
-    <string name="resize_factor">Resize factor</string>
-    <string name="resize_factor_info">Resize images to the given percentage, value must be within 10 and 90.</string>
-    <string name="resize_factor_error">Enter a number between 10 and 90</string>
-    <plurals name="failed_to_resize_images">
-        <item quantity="one">Failed to resize %d image</item>
-        <item quantity="other">Failed to resize %d images</item>
-    </plurals>
-    <string name="images_resized_successfully">Images resized successfully</string>
-    <!-- Editor -->
     <string name="editor">編集</string>
     <string name="basic_editor">基本的な編集</string>
     <string name="advanced_editor">高度な編集</string>
@@ -104,11 +87,7 @@
     <string name="flip_horizontally">水平方向に反転</string>
     <string name="flip_vertically">垂直方向に反転</string>
     <string name="free_aspect_ratio">任意</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">その他</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">壁紙に設定</string>
     <string name="set_as_wallpaper_failed">壁紙の設定に失敗しました</string>
     <string name="set_as_wallpaper_with">壁紙に設定:</string>
@@ -120,7 +99,6 @@
     <string name="lock_screen">ロック画面</string>
     <string name="home_and_lock_screen">ホーム画面とロック画面</string>
     <string name="allow_changing_aspect_ratio">縦横比の変更を許可</string>
-    <!-- Slideshow -->
     <string name="slideshow">スライドショー</string>
     <string name="interval">間隔</string>
     <string name="include_photos">写真を含める</string>
@@ -135,9 +113,7 @@
     <string name="slide">スライド</string>
     <string name="slideshow_ended">スライドショーが終了しました</string>
     <string name="no_media_for_slideshow">スライドショーに表示するメディアがありません</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">サブフォルダでグループ化</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">グループ分け</string>
     <string name="do_not_group_files">何もしない</string>
     <string name="by_folder">フォルダ</string>
@@ -151,10 +127,8 @@
     <string name="by_extension">拡張子</string>
     <string name="show_file_count_section_header">セクションの見出しにファイル数を表示</string>
     <string name="grouping_and_sorting">注意：グループ分けと並べ替えはそれぞれ独立したフィールドです</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">ウィジェットに表示するフォルダ:</string>
     <string name="show_folder_name">フォルダ名を表示</string>
-    <!-- Settings -->
     <string name="autoplay_videos">動画を自動再生</string>
     <string name="remember_last_video_position">動画の最後の再生位置を記憶する</string>
     <string name="loop_videos">動画を繰り返し再生</string>
@@ -218,16 +192,13 @@
     <string name="all_files">すべてのファイル</string>
     <string name="search_all_files">メイン画面の検索でフォルダの代わりにすべてのファイルを検索する</string>
     <string name="show_all_folders">「すべてを表示」を素早く切り替えるためのメニューボタンを表示</string>
-    <!-- Setting sections -->
     <string name="thumbnails">サムネイル設定</string>
     <string name="fullscreen_media">メディア設定</string>
     <string name="extended_details">詳細も表示する</string>
     <string name="bottom_actions">画面下部のアクション</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">表示するアクションの選択</string>
     <string name="toggle_favorite">お気に入り</string>
     <string name="toggle_file_visibility">表示/非表示の切替</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">カスタム</string>
     <string name="pesdk_transform_button_resetCrop">リセット</string>
     <string name="pesdk_transform_button_squareCrop">正方形</string>
@@ -340,10 +311,6 @@
     <string name="pesdk_common_title_aquamarinColor">アクアマリン</string>
     <string name="pesdk_common_title_pipettableColor">ピペッティング可能な色</string>
     <string name="vesdk_video_trim_title_name">トリム</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">アプリをパスワードでロックしましたが、パスワードを忘れてしまいました。どうすればいいですか？</string>
     <string name="faq_2_text">解決策は2つあります。アプリを再インストールするか、デバイス設定からアプリを見つけて「データを消去」を選択するかです。そうすると設定がリセットされますが、メディアファイルは削除されません。</string>
     <string name="faq_3_title">アルバムが常に上部に表示されるようにするにはどうすればいいですか？</string>
@@ -351,7 +318,6 @@
     <string name="faq_4_title">動画を早送りするにはどうすればよいですか？</string>
     <string name="faq_4_text">画面端をダブルタップするか、シークバーの近くにある曲の長さを示すテキストをタップすれば可能です。アプリ設定の左右ジェスチャー機能の切り替えを有効にすると、右ジェスチャーで早送りが可能です（無効にすると左右ジェスチャーで別の動画を開きます）。</string>
     <string name="faq_5_title">フォルダの非表示と除外の違いは何ですか？</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">音楽のカバー画像が表示されるのはなぜですか？</string>
     <string name="faq_6_text">埋め込みのカバー画像ではなく外部参照のカバー画像をアルバムが使用している場合、アルバムのカバー画像が表示されることがあります。長押しして除外を選択することで取り除くことができます。表示されるダイアログで親フォルダを選択すると、他のカバー画像も表示されなくなります。</string>
     <string name="faq_7_title">画像フォルダが表示されなかったり、全てのアイテムが表示されなかったりします。どうしたらいいですか？</string>
@@ -377,8 +343,4 @@
     <string name="faq_17_text">これもAndorid11のシステム変更により機能しなくなりました。アプリは実際のフォルダを参照できなくなり、システムのMediaStoreに依存するようになりました。</string>
     <string name="faq_18_title">動画の再生中に広告が表示されるのはなぜですか？</string>
     <string name="faq_18_text">私たちのアプリには広告は一切表示されません。動画の再生中に広告が表示される場合、他のアプリの動画プレーヤーを使用している可能性があります。端末の設定でデフォルトの動画プレーヤーを見つけて、「デフォルトの設定をクリア」（あるいは「設定を消去」や「デフォルトをクリア」といった表記のもの）を実行してみてください。次回以降、何らかの動画を開こうとすると、使用するアプリを選択するアプリ選択ダイアログが表示されます。</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

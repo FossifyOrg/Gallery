@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Promijeni redoslijed mapa povlačenjem</string>
     <string name="reorder_by_dragging_pro">Promijeni redoslijed mapa povlačenjem (Pro)</string>
     <string name="restore_to_path">Obnavlja se u „%s”</string>
-    <!-- Filter -->
     <string name="filter_media">Filtar medija</string>
     <string name="images">Slike</string>
     <string name="videos">Video</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Portreti</string>
     <string name="no_media_with_filters">Nije pronađena nijedna datoteka s odabranim filtrom.</string>
     <string name="change_filters_underlined"><u>Promijeni filtar</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ova funkcija skriva mapu dodavanjem „.nomedia” datoteke u mapu. Također će sakriti i sve podmape. Možeš ih vidjeti uključivanjem opcije „Prikaži skrivene mape” u postavkama. Nastaviti\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Isključiti glavnu mapu umjesto toga\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Skrivene mape</string>
     <string name="manage_hidden_folders">Upravljaj skrivenim mapama</string>
     <string name="hidden_folders_placeholder">Čini se da nemaš skrivene mape s \".nomedia\" datotekom.</string>
     <string name="hidden_all_files">Aplikaciji moraš odobriti pristup svim datotekama za prikaz skrivenih datoteka, inače neće raditi.</string>
     <string name="cant_unhide_folder">Ukoliko mapa ili neka od mapa koje je sadržavaju imaju ime koje počinje sa tačkom, ne mogu se otkriti na ovaj način. Morate ukloniti tačku iz njihovog imena da biste ih otkrili.</string>
-    <!-- Include folders -->
     <string name="include_folders">Uključene mape</string>
     <string name="manage_included_folders">Upravljaj uključenim mapama</string>
     <string name="add_folder">Dodaj mapu</string>
@@ -61,7 +56,6 @@
 \n
 \nDodavanjem stavki ovdje neće isključiti bilo koju drugu mapu.</string>
     <string name="no_media_add_included">Medijske datoteke nisu pronađene. To možeš riješiti ručnim dodavanjem mapa koje sadrže medijske datoteke.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Promjeni veličinu odabira i spremi</string>
     <string name="width">Širina</string>
     <string name="height">Visina</string>
@@ -77,7 +71,6 @@
         <item quantity="other">Neuspjelo mijenjanje veličine za %d slika</item>
     </plurals>
     <string name="images_resized_successfully">Veličina slika je uspješno promijenjena</string>
-    <!-- Editor -->
     <string name="editor">Uređivač</string>
     <string name="basic_editor">Osnovni uređivač</string>
     <string name="advanced_editor">Napredni uređivač</string>
@@ -107,11 +100,7 @@
     <string name="flip_horizontally">Preokreni vodoravno</string>
     <string name="flip_vertically">Preokreni okomito</string>
     <string name="free_aspect_ratio">Slobodan</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Drugi</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Postavi kao pozadinu</string>
     <string name="set_as_wallpaper_failed">Postavljanje pozadine neuspjelo</string>
     <string name="set_as_wallpaper_with">Postavi kao pozadinu pomoću:</string>
@@ -123,7 +112,6 @@
     <string name="lock_screen">Zaključaj ekran</string>
     <string name="home_and_lock_screen">Početni i zaključani ekran</string>
     <string name="allow_changing_aspect_ratio">Dopusti mijenjanje omjera</string>
-    <!-- Slideshow -->
     <string name="slideshow">Dijaprojekcija</string>
     <string name="interval">Razmak</string>
     <string name="include_photos">Dodaj slike</string>
@@ -135,12 +123,9 @@
     <string name="animation">Animacija</string>
     <string name="no_animation">Bez</string>
     <string name="fade">Iščezavanje</string>
-    <string name="slide">Slide</string>
     <string name="slideshow_ended">Kraj dijaprojekcije</string>
     <string name="no_media_for_slideshow">Nema datoteka za dijaprojekciju</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Grupiraj izravne podmape</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Grupiraj prema</string>
     <string name="do_not_group_files">Nemoj grupirati ove datoteke</string>
     <string name="by_folder">Mapi</string>
@@ -154,10 +139,8 @@
     <string name="by_extension">Datotečnom nastavku</string>
     <string name="show_file_count_section_header">Prikaži broj datoteka u zaglavljima odjeljaka</string>
     <string name="grouping_and_sorting">Imaj na umu da su grupiranje i razvrstavanje dva neovisna polja</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Mapa prikazana na widgetu:</string>
     <string name="show_folder_name">Prikaži ime mape</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Pokreni videa automatski</string>
     <string name="remember_last_video_position">Zapamti poziciju zadnjeg reproduciranog videa</string>
     <string name="loop_videos">Ponavljaj videa</string>
@@ -221,16 +204,13 @@
     <string name="all_files">Sve datoteke</string>
     <string name="search_all_files">Pretraži sve datoteke umjesto mapa u glavnom ekranu</string>
     <string name="show_all_folders">Pokaži gumb izbornika za brzo uključivanje i isključivanje „Prikaži sadržaj svih mapa”</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Sličice</string>
     <string name="fullscreen_media">Mediji u cjeloekranskom prikazu</string>
     <string name="extended_details">Proširene pojedinosti</string>
     <string name="bottom_actions">Donje radnje</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Upravljaj vidljivim donjim radnjama</string>
     <string name="toggle_favorite">Uključi/isključi favorite</string>
     <string name="toggle_file_visibility">Uključi/isključi vidljivost datoteka</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Prilagođeno</string>
     <string name="pesdk_transform_button_resetCrop">Obnovi</string>
     <string name="pesdk_transform_button_squareCrop">Kvadrat</string>
@@ -261,11 +241,9 @@
     <string name="pesdk_text_title_name">Tekst</string>
     <string name="pesdk_text_title_options">Opcije za tekst</string>
     <string name="pesdk_text_title_textColor">Boja teksta</string>
-    <string name="pesdk_text_title_font">Font</string>
     <string name="pesdk_text_button_add">Dodaj</string>
     <string name="pesdk_text_button_edit">Uredi</string>
     <string name="pesdk_text_button_straighten">Izravnaj</string>
-    <string name="pesdk_text_button_font">Font</string>
     <string name="pesdk_text_button_color">Boja</string>
     <string name="pesdk_text_button_backgroundColor">Boja pozadine</string>
     <string name="pesdk_text_button_alignment">Poravnanje</string>
@@ -343,10 +321,6 @@
     <string name="pesdk_common_title_aquamarinColor">Morsko plava</string>
     <string name="pesdk_common_title_pipettableColor">Pipetom odabrana boja</string>
     <string name="vesdk_video_trim_title_name">Skrati</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Zaključao/la sam aplikaciju lozinkom, ali sam je zaboravio/la. Što mogu učiniti\?</string>
     <string name="faq_2_text">Problem možeš riješiti na dva načina. Ponovo instalirati aplikaciju ili pronađi aplikaciju u postavkama uređaja i odaberi opciju „Izbriši podatke”. Navedeno će obnoviti sve postavke, ali neće ukloniti nikoje medijske datoteke.</string>
     <string name="faq_3_title">Kako mogu postaviti album uvijek na vrh\?</string>
@@ -354,7 +328,6 @@
     <string name="faq_4_title">Kako mogu premotati video prema naprijed\?</string>
     <string name="faq_4_text">To možeš učiniti dvostrukim dodirom strane ekrana ili dodirom na tekstove trenutačnog ili maksimalnog trajanja u blizini trake prematanja. Ako aktiviraš otvaranje videoa u zasebnom ekranu u postavkama aplikacije, možeš koristiti i vodoravne geste.</string>
     <string name="faq_5_title">Koja je razlika između skrivanja i isključivanja mape\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Zašto se prikazuju mape sa slikama naslovnica ili naljepnice\?</string>
     <string name="faq_6_text">Može se dogoditi da vidiš neke neobične albume. Za isključivanje tih albuma, pritisni ih dugo i odaberi „Isključi”. U sljedećem dijaloškom okviru možeš odabrati glavnu mapu. Time ćeš vrlo vjerojatno također spriječiti pojavljivanje drugih srodnih albuma.</string>
     <string name="faq_7_title">Mapa sa slikama se ne prikazuje ili ne prikazuje sve slike. Što mogu učiniti\?</string>
@@ -380,8 +353,4 @@
     <string name="faq_17_text">To je prestalo raditi zbog promjena sustava koje su uvedene s Androidom 11. Aplikacija više ne može pregledavati stvarne mape, oslanja se na takozvani MediaStore za dohvaćanje podataka.</string>
     <string name="faq_18_title">Zašto vidim oglase tijekom reprodukcije videa\?</string>
     <string name="faq_18_text">Naše aplikacije ne sadrže oglase. Ako ih vidiš tijekom reprodukcije videa, vjerojatno koristiš neki drugi video player. Pokušaj pronaći zadani video player u postavkama uređaja, a zatim na njemu izvrši „Očisti zadane postavke“. Sljedeći put kada pozoveš neku namjeru gledanja videa, vidjet ćeš upit za biranje aplikacija u kojem možeš odabrati aplikaciju koju želiš koristiti.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

@@ -4,7 +4,6 @@
     <string name="edit">編輯</string>
     <string name="open_camera">開啟相機</string>
     <string name="hidden">(隱藏)</string>
-    <string name="excluded">(excluded)</string>
     <string name="pin_folder">釘選資料夾</string>
     <string name="unpin_folder">取消釘選資料夾</string>
     <string name="pin_to_the_top">釘選在頂端</string>
@@ -25,91 +24,46 @@
     <string name="fix_date_taken">修復拍照日期數值</string>
     <string name="fixing">修復中…</string>
     <string name="dates_fixed_successfully">日期修復成功</string>
-    <string name="no_date_takens_found">No Date Taken values have been found</string>
     <string name="share_resized">分享調整大小的版本</string>
-    <string name="switch_to_file_search">Switch to file search across all visible folders</string>
-    <string name="set_as_default_folder">Set as default folder</string>
-    <string name="unset_as_default_folder">Unset as default folder</string>
-    <string name="reorder_by_dragging">Reorder folders by dragging</string>
-    <string name="reorder_by_dragging_pro">Reorder folders by dragging (Pro)</string>
-    <string name="restore_to_path">Restoring to \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">篩選媒體檔案</string>
     <string name="images">圖片</string>
     <string name="videos">影片</string>
     <string name="gifs">GIF</string>
     <string name="raw_images">RAW圖檔</string>
     <string name="svgs">SVG</string>
-    <string name="portraits">Portraits</string>
     <string name="no_media_with_filters">選擇的篩選條件未發現媒體檔案。</string>
     <string name="change_filters_underlined"><u>更改篩選條件</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">這功能藉由添加一個\".nomedia\"檔案，來隱藏資料夾和所有子資料夾。您可以透過[設定]中的\"顯示隱藏的項目\"選項來查看。
 \n是否繼續\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">是否排除上層資料夾\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">隱藏資料夾</string>
     <string name="manage_hidden_folders">管理隱藏資料夾</string>
     <string name="hidden_folders_placeholder">您似乎沒有用\".nomedia\"檔案來隱藏的資料夾</string>
-    <string name="hidden_all_files">You have to grant the app All Files access to see hidden files, else it cannot work.</string>
-    <string name="cant_unhide_folder">If a folder or one of its parent folders has a dot before its name, it is hidden and cannot be unhidden like this. You have to remove the dot by renaming it.</string>
-    <!-- Include folders -->
     <string name="include_folders">包含資料夾</string>
     <string name="manage_included_folders">管理包含資料夾</string>
     <string name="add_folder">增加資料夾</string>
     <string name="included_activity_placeholder">如果有些資料夾含有媒體檔案，卻沒被辨識到，您可以在此手動加入。</string>
-    <string name="no_media_add_included">No media files have been found. You can solve it by adding the folders containing media files manually.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">縮放所選區域並儲存</string>
     <string name="width">寬度</string>
     <string name="height">高度</string>
     <string name="keep_aspect_ratio">保持長寬比</string>
     <string name="invalid_values">請輸入有效的解析度</string>
-    <string name="resize_multiple_images">Resize multiple images</string>
-    <string name="resize_factor">Resize factor</string>
-    <string name="resize_factor_info">Resize images to the given percentage, value must be within 10 and 90.</string>
-    <string name="resize_factor_error">Enter a number between 10 and 90</string>
-    <plurals name="failed_to_resize_images">
-        <item quantity="one">Failed to resize %d image</item>
-        <item quantity="other">Failed to resize %d images</item>
-    </plurals>
-    <string name="images_resized_successfully">Images resized successfully</string>
-    <!-- Editor -->
     <string name="editor">編輯器</string>
-    <string name="basic_editor">Basic Editor</string>
-    <string name="advanced_editor">Advanced Editor</string>
     <string name="rotate">旋轉</string>
     <string name="invalid_image_path">無效的圖片路徑</string>
-    <string name="invalid_video_path">Invalid video path</string>
     <string name="image_editing_failed">圖片編輯失敗</string>
-    <string name="video_editing_failed">Video editing failed</string>
-    <string name="image_editing_cancelled">Image editing cancelled</string>
-    <string name="video_editing_cancelled">Video editing cancelled</string>
-    <string name="file_edited_successfully">File edited successfully</string>
-    <string name="image_edited_successfully">Image edited successfully</string>
-    <string name="video_edited_successfully">Video edited successfully</string>
     <string name="edit_image_with">編輯圖片:</string>
-    <string name="edit_video_with">Edit video with:</string>
     <string name="no_image_editor_found">找不到圖片編輯器</string>
-    <string name="no_video_editor_found">No video editor found</string>
     <string name="unknown_file_location">未知的檔案位置</string>
     <string name="error_saving_file">無法誤蓋原始檔案</string>
     <string name="rotate_left">向左轉</string>
     <string name="rotate_right">向右轉</string>
     <string name="rotate_one_eighty">旋轉180º</string>
-    <string name="transform">Transform</string>
-    <string name="crop">Crop</string>
-    <string name="draw">Draw</string>
     <string name="flip">翻轉</string>
     <string name="flip_horizontally">水平翻轉</string>
     <string name="flip_vertically">垂直翻轉</string>
     <string name="free_aspect_ratio">自由</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">其它</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">設為桌布</string>
     <string name="set_as_wallpaper_failed">設為桌布失敗</string>
     <string name="set_as_wallpaper_with">用其他程式設為桌布:</string>
@@ -120,8 +74,6 @@
     <string name="home_screen">主頁螢幕</string>
     <string name="lock_screen">鎖定螢幕</string>
     <string name="home_and_lock_screen">主頁和鎖定螢幕</string>
-    <string name="allow_changing_aspect_ratio">Allow changing the aspect ratio</string>
-    <!-- Slideshow -->
     <string name="slideshow">投影片</string>
     <string name="interval">間隔</string>
     <string name="include_photos">包含照片</string>
@@ -130,32 +82,19 @@
     <string name="random_order">隨機順序</string>
     <string name="move_backwards">反向播放</string>
     <string name="loop_slideshow">投影片循環</string>
-    <string name="animation">Animation</string>
-    <string name="no_animation">None</string>
-    <string name="fade">Fade</string>
-    <string name="slide">Slide</string>
     <string name="slideshow_ended">投影片結束</string>
     <string name="no_media_for_slideshow">找不到投影片的媒體檔案</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">歸類子資料夾</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">歸類</string>
     <string name="do_not_group_files">不歸類檔案</string>
     <string name="by_folder">資料夾</string>
     <string name="by_last_modified">最後修改</string>
-    <string name="by_last_modified_daily">Last modified (daily)</string>
-    <string name="by_last_modified_monthly">Last modified (monthly)</string>
     <string name="by_date_taken">拍照日期</string>
-    <string name="by_date_taken_daily">Date taken (daily)</string>
-    <string name="by_date_taken_monthly">Date taken (monthly)</string>
     <string name="by_file_type">檔案類型</string>
     <string name="by_extension">副檔名</string>
-    <string name="show_file_count_section_header">Show file count at section headers</string>
     <string name="grouping_and_sorting">請注意，歸類和排序是兩者是獨立的</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">在小工具顯示資料夾:</string>
     <string name="show_folder_name">顯示資料夾名稱</string>
-    <!-- Settings -->
     <string name="autoplay_videos">自動播放影片</string>
     <string name="remember_last_video_position">記住影片上次播放位置</string>
     <string name="loop_videos">影片循環播放</string>
@@ -194,165 +133,21 @@
     <string name="speed">速度</string>
     <string name="compromise">折衷</string>
     <string name="avoid_showing_invalid_files">避免顯示無效的檔案</string>
-    <string name="show_image_file_types">Show image file types</string>
-    <string name="allow_zooming_videos">Allow zooming videos with double tapping them</string>
-    <string name="folder_thumbnail_style">Folder thumbnail style</string>
-    <string name="file_thumbnail_style">File thumbnail style</string>
-    <string name="mark_favorite_items">Mark favorite items</string>
-    <string name="thumbnail_spacing">Thumbnail spacing</string>
-    <string name="show_file_count_line">Show file count on a separate line</string>
-    <string name="show_file_count_brackets">Show file count in brackets</string>
-    <string name="show_file_count_none">Do not show file count</string>
-    <string name="limit_folder_title">Limit long folder titles to 1 line</string>
-    <string name="square">Square</string>
-    <string name="rounded_corners">Rounded corners</string>
-    <string name="export_favorite_paths">Export favorites</string>
-    <string name="import_favorite_paths">Import favorites</string>
-    <string name="paths_imported_successfully">Paths imported successfully</string>
-    <string name="media_management_prompt">To make sure that all file operations work reliably, please make this app a Media management app in your device settings.</string>
-    <string name="password_protect_excluded">Password protect excluded folder visibility</string>
-    <string name="media_management_manual">Something went wrong, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="media_management_note">If the redirection does not work, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="media_management_alternative">If you do not want to do it, you can also go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="alternative_media_access">Alternatively, you can allow accessing media files only. In that case you will not be able to work with hidden files though.</string>
-    <string name="media_only">Media only</string>
-    <string name="all_files">All files</string>
-    <string name="search_all_files">Search all files instead of folders on the main screen</string>
-    <string name="show_all_folders">Show a menu button for toggling Show All Folders Content quickly</string>
-    <!-- Setting sections -->
     <string name="thumbnails">縮圖</string>
     <string name="fullscreen_media">全螢幕媒體檔案</string>
     <string name="extended_details">詳細資訊</string>
     <string name="bottom_actions">底部操作</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">管理要顯示的底部操作</string>
     <string name="toggle_favorite">我的最愛</string>
     <string name="toggle_file_visibility">檔案顯示</string>
-    <!-- New editor strings -->
-    <string name="pesdk_transform_button_freeCrop">Custom</string>
-    <string name="pesdk_transform_button_resetCrop">Reset</string>
-    <string name="pesdk_transform_button_squareCrop">Square</string>
-    <string name="pesdk_transform_title_name">Transform</string>
-    <string name="pesdk_filter_title_name">Filter</string>
-    <string name="pesdk_filter_asset_none">None</string>
-    <string name="pesdk_adjustments_title_name">Adjust</string>
-    <string name="pesdk_adjustments_button_shadowTool">Shadows</string>
-    <string name="pesdk_adjustments_button_exposureTool">Exposure</string>
-    <string name="pesdk_adjustments_button_highlightTool">Highlights</string>
-    <string name="pesdk_adjustments_button_brightnessTool">Brightness</string>
-    <string name="pesdk_adjustments_button_contrastTool">Contrast</string>
-    <string name="pesdk_adjustments_button_saturationTool">Saturation</string>
-    <string name="pesdk_adjustments_button_clarityTool">Clarity</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
-    <string name="pesdk_adjustments_button_blacksTool">Blacks</string>
-    <string name="pesdk_adjustments_button_whitesTool">Whites</string>
-    <string name="pesdk_adjustments_button_temperatureTool">Temperature</string>
-    <string name="pesdk_adjustments_button_sharpnessTool">Sharpness</string>
-    <string name="pesdk_adjustments_button_reset">Reset</string>
-    <string name="pesdk_focus_title_name">Focus</string>
-    <string name="pesdk_focus_title_disabled">None</string>
-    <string name="pesdk_focus_button_radial">Radial</string>
-    <string name="pesdk_focus_button_linear">Linear</string>
-    <string name="pesdk_focus_button_mirrored">Mirrored</string>
-    <string name="pesdk_focus_button_gaussian">Gaussian</string>
-    <string name="pesdk_text_title_input">Add text</string>
-    <string name="pesdk_text_title_name">Text</string>
-    <string name="pesdk_text_title_options">Text Options</string>
-    <string name="pesdk_text_title_textColor">Text Color</string>
-    <string name="pesdk_text_title_font">Font</string>
-    <string name="pesdk_text_button_add">Add</string>
-    <string name="pesdk_text_button_edit">Edit</string>
-    <string name="pesdk_text_button_straighten">Straighten</string>
-    <string name="pesdk_text_button_font">Font</string>
-    <string name="pesdk_text_button_color">Color</string>
-    <string name="pesdk_text_button_backgroundColor">BG Color</string>
-    <string name="pesdk_text_button_alignment">Alignment</string>
-    <string name="pesdk_text_button_bringToFront">To Front</string>
-    <string name="pesdk_text_button_delete">Delete</string>
-    <string name="pesdk_text_text_editTextPlaceholder">Your text</string>
-    <string name="pesdk_brush_title_name">Brush</string>
-    <string name="pesdk_brush_button_color">Color</string>
-    <string name="pesdk_brush_button_size">Size</string>
-    <string name="pesdk_brush_button_hardness">Hardness</string>
-    <string name="pesdk_brush_button_bringToFront">To Front</string>
-    <string name="pesdk_brush_button_delete">Delete</string>
-    <string name="pesdk_brush_title_brushColor">Brush Color</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Close Editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Do you really want to discard the changes\?</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">Yes</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">No</string>
-    <string name="pesdk_editor_cancel">Cancel</string>
-    <string name="pesdk_editor_accept">Accept</string>
-    <string name="pesdk_editor_save">Save</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">Exporting…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Exporting %s.</string>
-    <string name="pesdk_sticker_title_name">Sticker</string>
-    <string name="pesdk_sticker_title_color">Sticker Color</string>
-    <string name="pesdk_sticker_title_options">Sticker Options</string>
-    <string name="pesdk_sticker_button_add">Add</string>
-    <string name="pesdk_sticker_button_color">Color</string>
-    <string name="pesdk_sticker_button_delete">Delete</string>
-    <string name="pesdk_sticker_button_bringToFront">To Front</string>
-    <string name="pesdk_sticker_button_straighten">Straighten</string>
-    <string name="pesdk_sticker_button_replace">Replace</string>
-    <string name="pesdk_sticker_button_opacity">Opacity</string>
-    <string name="pesdk_sticker_button_contrast">Contrast</string>
-    <string name="pesdk_sticker_button_saturation">Saturation</string>
-    <string name="pesdk_sticker_button_brightness">Brightness</string>
-    <string name="pesdk_sticker_category_name_custom">Uploads</string>
-    <string name="pesdk_overlay_title_name">Overlay</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
-    <string name="pesdk_overlay_button_blendModeDarken">Darken</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
-    <string name="pesdk_overlay_button_blendModeOverlay">Overlay</string>
-    <string name="pesdk_overlay_button_blendModeLighten">Lighten</string>
-    <string name="pesdk_overlay_button_blendModeMultiply">Multiply</string>
-    <string name="pesdk_overlay_button_blendModeColorBurn">Color Burn</string>
-    <string name="pesdk_overlay_button_blendModeSoftLight">Soft Light</string>
-    <string name="pesdk_overlay_button_blendModeHardLight">Hard Light</string>
-    <string name="pesdk_overlay_asset_none">None</string>
-    <string name="pesdk_overlay_asset_golden">Golden</string>
-    <string name="pesdk_overlay_asset_lightleak1">Lightleak 1</string>
-    <string name="pesdk_overlay_asset_mosaic">Mosaic</string>
-    <string name="pesdk_overlay_asset_paper">Paper</string>
-    <string name="pesdk_overlay_asset_rain">Rain</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
-    <string name="pesdk_common_button_flipH">Flip H</string>
-    <string name="pesdk_common_button_flipV">Flip V</string>
-    <string name="pesdk_common_button_undo">Undo</string>
-    <string name="pesdk_common_button_redo">Redo</string>
-    <string name="pesdk_common_title_colorPicker">Color Picker</string>
-    <string name="pesdk_common_title_transparentColor">Transparent</string>
-    <string name="pesdk_common_title_whiteColor">White</string>
-    <string name="pesdk_common_title_grayColor">Gray</string>
-    <string name="pesdk_common_title_blackColor">Black</string>
-    <string name="pesdk_common_title_lightBlueColor">Light blue</string>
-    <string name="pesdk_common_title_blueColor">Blue</string>
-    <string name="pesdk_common_title_purpleColor">Purple</string>
-    <string name="pesdk_common_title_orchidColor">Orchid</string>
-    <string name="pesdk_common_title_pinkColor">Pink</string>
-    <string name="pesdk_common_title_redColor">Red</string>
-    <string name="pesdk_common_title_orangeColor">Orange</string>
-    <string name="pesdk_common_title_goldColor">Gold</string>
-    <string name="pesdk_common_title_yellowColor">Yellow</string>
-    <string name="pesdk_common_title_oliveColor">Olive</string>
-    <string name="pesdk_common_title_greenColor">Green</string>
-    <string name="pesdk_common_title_aquamarinColor">Aquamarin</string>
-    <string name="pesdk_common_title_pipettableColor">Pipettable color</string>
-    <string name="vesdk_video_trim_title_name">Trim</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">我用密碼鎖住了這應用程式，但我忘記了。怎麼辦\?</string>
     <string name="faq_2_text">有兩個解決方法。你可以重新安裝應用程式，或者在裝置設定中找到這程式然後選擇\"清除資料(Clear data)\"。這將重置你程式內所有設定，不會移除任何媒體檔案。</string>
     <string name="faq_3_title">我如何讓某個相冊總是出現在頂端\?</string>
     <string name="faq_3_text">你可以長按想要的相冊，然後在操作選單中選擇[圖釘]圖示，就會釘選於頂端。你也能釘選多個資料夾，釘選的項目會依預設的排序方法來排序。</string>
     <string name="faq_4_title">我如何快轉影片\?</string>
-    <string name="faq_4_text">You can do it by double tapping the side of the screen, or tapping the current or max duration texts near the seekbar. If you enable opening videos on a separate screen in the app settings, you can use horizontal gestures too.</string>
     <string name="faq_5_title">隱藏和排除資料夾，兩者有什麼不同\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">為什麼有些音樂專輯封面或貼圖的資料夾會出現\?</string>
     <string name="faq_6_text">這情況可能發生，你會看到一些異常的相冊出現。你可以長按再選擇[排除]來輕易排除他們。在下個對話框，你可以選擇上層資料夾，有可能讓其他相關相冊也避免出現。</string>
     <string name="faq_7_title">有一個圖片資料夾沒有顯示出來，怎麼辦\?</string>
@@ -373,13 +168,6 @@
     <string name="faq_15_text">應用程式快取最多占用250MB，以確保更快的圖片讀取。如果這應用程式占用了多更多的空間，最有可能是因為你在垃圾桶內有東西。那些檔案也計入應用程式大小內。你可以開啟垃圾桶並刪除全部檔案，或者從應用程式設定來清除垃圾桶。垃圾桶內的每個檔案都會在30天後自動刪除。</string>
     <string name="faq_16_title">What happened to file and folder hiding and why cannot I see hidden items anymore\?</string>
     <string name="faq_16_text">Starting with Android 11 you cannot hide or unhide files or folders anymore, you cannot see the hidden ones in gallery apps either. You will have to use some file manager for that.</string>
-    <string name="faq_16_text_extra">Or you can also grant this gallery access to All Files through your device settings, that will allow us showing hidden items and make file operations more reliable in general.</string>
     <string name="faq_17_title">Why cannot I include missing folders anymore\?</string>
-    <string name="faq_17_text">That stopped working due to the system changes that came with Android 11 too, the app cannot browse real folders anymore, it relies on the so called MediaStore at fetching data.</string>
     <string name="faq_18_title">Why do I see ads during video playback\?</string>
-    <string name="faq_18_text">Our apps have no ads whatsoever. If you see them during video playback, you must be using some other apps video player. Try finding your default video player in the device settings, then do a \"Clear defaults\" on it. The next time you invoke some video intent you will see an app picker prompt, where you can select what app you want to use.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

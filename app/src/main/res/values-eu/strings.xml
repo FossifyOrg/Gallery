@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Berrordenatu karpetak arrastatuz</string>
     <string name="reorder_by_dragging_pro">Berrordenatu karpetak arrastatuz (Pro)</string>
     <string name="restore_to_path">\'%s\'-ra leheneratzen</string>
-    <!-- Filter -->
     <string name="filter_media">Iragazi multimedia</string>
     <string name="images">Irudiak</string>
     <string name="videos">Bideoak</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Erretratuak</string>
     <string name="no_media_with_filters">Hautatutako filtroa duen multimedia fitxategirik ez da aurkitu.</string>
     <string name="change_filters_underlined"><u>Aldatu filtroak</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Funtzio honek karpeta \'.nomedia\' fitxategi bat gehituz ezkutatzen du, azpikarpeta guztiak ere ezkutatuko ditu. Ezarpenetako \'Erakutsi ezkutatutako elementuak\' aukera aldatuz ikus ditzakezu. Jarraitu\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Baztertu nagusia horren ordez\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Ezkutatutako karpetak</string>
     <string name="manage_hidden_folders">Kudeatu ezkutatutako karpetak</string>
     <string name="hidden_folders_placeholder">Badirudi \".nomedia\" fitxategia duen ezkutatutako karpetarik ez duzula.</string>
     <string name="hidden_all_files">Ezkutuko fitxategiak ikusteko Fitxategi guztiak sarbidea eman behar diozu aplikazioari, bestela ezin izango du funtzionatu.</string>
     <string name="cant_unhide_folder">Karpeta batek edo bere karpeta nagusietako batek bere izenaren aurretik puntu bat badu, ezkutatuta egongo da eta ezin da horrela erakutsi. Puntua kendu behar duzu izena aldatuz.</string>
-    <!-- Include folders -->
     <string name="include_folders">Sartutako karpetak</string>
     <string name="manage_included_folders">Kudeatu sartutako karpetak</string>
     <string name="add_folder">Gehitu karpeta</string>
@@ -61,7 +56,6 @@
 \n
 \nHainbat elementu hemen gehitzeak ez du beste karpetarik baztertuko.</string>
     <string name="no_media_add_included">Multimedia fitxategirik ez da aurkitu. Fitxategi horiek dituzten karpetak eskuz gehituz konpondu dezakezu.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Aldatu hautatutakoaren tamaina eta gorde</string>
     <string name="width">Zabalera</string>
     <string name="height">Altuera</string>
@@ -76,7 +70,6 @@
         <item quantity="other">Ezin izan da %d irudiren tamaina aldatu</item>
     </plurals>
     <string name="images_resized_successfully">Irudien tamaina behar bezala aldatu da</string>
-    <!-- Editor -->
     <string name="editor">Editorea</string>
     <string name="basic_editor">Oinarrizko editorea</string>
     <string name="advanced_editor">Editore aurreratua</string>
@@ -106,11 +99,7 @@
     <string name="flip_horizontally">Irauli horizontalki</string>
     <string name="flip_vertically">Irauli bertikalki</string>
     <string name="free_aspect_ratio">Askea</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Bestelakoa</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Ezarri horma-paper gisa</string>
     <string name="set_as_wallpaper_failed">Horma-paper gisa ezartzeak huts egin du</string>
     <string name="set_as_wallpaper_with">Ezarri horma-paper gis honekin:</string>
@@ -122,7 +111,6 @@
     <string name="lock_screen">Blokeatutako pantaila</string>
     <string name="home_and_lock_screen">Hasierako eta blokeatutako pantaila</string>
     <string name="allow_changing_aspect_ratio">Baimendu aspektu-erlazioa aldatzea</string>
-    <!-- Slideshow -->
     <string name="slideshow">Diaporama</string>
     <string name="interval">Tartea</string>
     <string name="include_photos">Sartu argazkiak</string>
@@ -137,9 +125,7 @@
     <string name="slide">Diapositiba</string>
     <string name="slideshow_ended">Diaporama bukatu da</string>
     <string name="no_media_for_slideshow">Diaporamarako multimediarik ez da aurkitu</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Taldekatu zuzeneko azpikarpetak</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Taldekatu</string>
     <string name="do_not_group_files">Ez taldekatu fitxategiak</string>
     <string name="by_folder">Karpeta</string>
@@ -153,10 +139,8 @@
     <string name="by_extension">Luzapena</string>
     <string name="show_file_count_section_header">Erakutsi fitxategien kopurua atalen goiburuetan</string>
     <string name="grouping_and_sorting">Kontuan hartu taldekatzea eta ordenatzea bi eremu independente direla</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Trepetan erakutsitako karpeta:</string>
     <string name="show_folder_name">Erakutsi karpetaren izena</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Erreproduzitu bideoak automatikoki</string>
     <string name="remember_last_video_position">Gogoratu azken bideoaren erreprodukzio-posizioa</string>
     <string name="loop_videos">Errepikatu bideoak</string>
@@ -220,16 +204,13 @@
     <string name="all_files">Fitxategi guztiak</string>
     <string name="search_all_files">Bilatu fitxategi guztiak karpetak ordez hasierako pantailan</string>
     <string name="show_all_folders">Erakutsi menu-botoia Erakutsi karpeta guztien edukira azkar aldatzeko</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturak</string>
     <string name="fullscreen_media">Pantaila osoko multimedia</string>
     <string name="extended_details">Xehetasun hedatuak</string>
     <string name="bottom_actions">Beheko ekintzak</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Kudeatu ikusgai dauden beheko ekintzak</string>
     <string name="toggle_favorite">Aldatu gogokoa</string>
     <string name="toggle_file_visibility">Aldatu fitxategien ikusgaitasuna</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Pertsonalizatu</string>
     <string name="pesdk_transform_button_resetCrop">Berrezarri</string>
     <string name="pesdk_transform_button_squareCrop">Karratua</string>
@@ -244,7 +225,6 @@
     <string name="pesdk_adjustments_button_contrastTool">Kontrastea</string>
     <string name="pesdk_adjustments_button_saturationTool">Saturazioa</string>
     <string name="pesdk_adjustments_button_clarityTool">Argitasuna</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Beltzak</string>
     <string name="pesdk_adjustments_button_whitesTool">Zuriak</string>
     <string name="pesdk_adjustments_button_temperatureTool">Tenperatura</string>
@@ -256,7 +236,6 @@
     <string name="pesdk_focus_button_linear">Lineala</string>
     <string name="pesdk_focus_button_mirrored">Ispilua</string>
     <string name="pesdk_focus_button_gaussian">Gaussiarra</string>
-    <string name="pesdk_text_title_input">Add text</string>
     <string name="pesdk_text_title_name">Testua</string>
     <string name="pesdk_text_title_options">Testu-aukerak</string>
     <string name="pesdk_text_title_textColor">Testuaren kolorea</string>
@@ -342,10 +321,6 @@
     <string name="pesdk_common_title_aquamarinColor">Akuamarinoa</string>
     <string name="pesdk_common_title_pipettableColor">Hautatu kolorea (pipeta)</string>
     <string name="vesdk_video_trim_title_name">Moztu</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Aplikazioa pasahitz batez blokeatu dut, baina ahaztu egin zait. Zer egin dezaket\?</string>
     <string name="faq_2_text">Bi modutan konpondu dezakezu: aplikazioa berriro instala dezakezu edo aplikazioa zure gailuaren ezarpenetan aurkitu eta \"Garbitu datuak\" aukeratu. Zure ezarpen guztiak berrezarriko ditu, ez du multimedia fitxategirik kenduko.</string>
     <string name="faq_3_title">Nola egin dezaket album bat beti goian agertzeko\?</string>
@@ -353,7 +328,6 @@
     <string name="faq_4_title">Nola aurreratu ditzaket bideoak azkar\?</string>
     <string name="faq_4_text">Pantailaren alboa bitan sakatuz edo bilaketa-barratik gertu dauden uneko edo gehienezko iraupeneko testuak sakatuz egin dezakezu. Aplikazioaren ezarpenetan bideoak pantaila bereizi batean irekitzea gaitzen baduzu, keinu horizontalak ere erabil ditzakezu.</string>
     <string name="faq_5_title">Zein da karpeta bat ezkutatzearen eta baztertzearen arteko aldea\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Zergatik agertzen dira musikaren azala edo eranskailuak dituzten karpetak\?</string>
     <string name="faq_6_text">Gerta daiteke ezohiko album batzuk agertzea. Erraz bazter ditzakezu luze sakatuz eta Baztertu hautatuz. Hurrengo elkarrizketa-koadroan karpeta nagusia hauta dezakezu, litekeena da erlazionatutako beste albumak ere agertzea eragotziko duela.</string>
     <string name="faq_7_title">Irudiak dituen karpeta bat ez da agertzen edo ez ditu elementu guztiak erakusten. Zer egin dezaket\?</string>
@@ -379,8 +353,4 @@
     <string name="faq_17_text">Horrek funtzionatzeari utzi zion Android 11rekin ere etorri ziren sistema aldaketen ondorioz, aplikazioak ezin ditu jada benetako karpetak arakatu, MediaStore izenekoan oinarritzen da datuak eskuratzeko.</string>
     <string name="faq_18_title">Zergatik ikusten ditut iragarkiak bideoa erreproduzitzean\?</string>
     <string name="faq_18_text">Gure aplikazioek ez dute iragarkirik. Bideoak erreproduzitzerakoan ikusten badituzu, beste aplikazio batzuk erabili behar dituzu bideo-erreproduzitzailea. Saiatu zure bideo-erreproduzitzaile lehenetsia aurkitzen gailuaren ezarpenetan, eta egin ezazu \"Garbitu lehenetsiak\". Bideo-asmoren bat deitzen duzun hurrengoan aplikazio-hautatzaile baten gonbita ikusiko duzu, non erabili nahi duzun aplikazioa hauta dezakezun.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

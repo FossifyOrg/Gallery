@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Reordenar carpetas arrastrándolas</string>
     <string name="reorder_by_dragging_pro">Reordenar carpetas arrastrándolas (Pro)</string>
     <string name="restore_to_path">Restaurando a \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filtro de medios</string>
     <string name="images">Imágenes</string>
     <string name="videos">Vídeos</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Retratos</string>
     <string name="no_media_with_filters">No se han encontrado ficheros con los filtros seleccionados.</string>
     <string name="change_filters_underlined"><u>Cambiar filtros</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Esta función oculta la carpeta agregando un archivo \'.nomedia\' en ella, y también ocultará las subcarpetas. Puede mostrarlas modificando la opción \'Mostrar carpetas ocultas\' en los Ajustes. ¿Continuar\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">¿Excluir mejor la carpeta superior\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Carpetas ocultas</string>
     <string name="manage_hidden_folders">Gestionar carpetas ocultas</string>
     <string name="hidden_folders_placeholder">Parece que no tiene carpetas ocultas con archivos \".nomedia\".</string>
     <string name="hidden_all_files">Tienes que conceder a la aplicación el acceso a todos los archivos para ver los archivos ocultos, de lo contrario no puede funcionar.</string>
     <string name="cant_unhide_folder">Si una carpeta o una de tus carpetas principales tiene un punto antes del nombre, estará oculta. Debes eliminar el punto cambiándole el nombre.</string>
-    <!-- Include folders -->
     <string name="include_folders">Carpetas incluidas</string>
     <string name="manage_included_folders">Gestionar carpetas incluidas</string>
     <string name="add_folder">Agregar carpeta</string>
@@ -61,7 +56,6 @@
 \n
 \nAñadir elementos aquí no excluirá ninguna otra carpeta.</string>
     <string name="no_media_add_included">Ningún archivo multimedia ha sido encontrado. Puede resolverlo añadiendo las carpetas que contengan archivos multimedia manualmente.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Redimensionar la selección y guardar</string>
     <string name="width">Ancho</string>
     <string name="height">Alto</string>
@@ -77,8 +71,6 @@
         <item quantity="other">Error al cambiar el tamaño de las imágenes %d</item>
     </plurals>
     <string name="images_resized_successfully">Imágenes redimensionadas correctamente</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Editor básico</string>
     <string name="advanced_editor">Editor avanzado</string>
     <string name="rotate">Rotar</string>
@@ -107,11 +99,7 @@
     <string name="flip_horizontally">Horizontalmente</string>
     <string name="flip_vertically">Verticalmente</string>
     <string name="free_aspect_ratio">Libre</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Otro</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Establecer como fondo de pantalla</string>
     <string name="set_as_wallpaper_failed">Error al establecer el fondo de pantalla</string>
     <string name="set_as_wallpaper_with">Establecer como fondo de pantalla con:</string>
@@ -123,7 +111,6 @@
     <string name="lock_screen">Pantalla de bloqueo</string>
     <string name="home_and_lock_screen">Pantalla de inicio y de bloqueo</string>
     <string name="allow_changing_aspect_ratio">Permitir cambiar la relación de aspecto</string>
-    <!-- Slideshow -->
     <string name="slideshow">Presentación de diapositivas</string>
     <string name="interval">Intervalo</string>
     <string name="include_photos">Incluir fotos</string>
@@ -138,9 +125,7 @@
     <string name="slide">Desplazamiento</string>
     <string name="slideshow_ended">La presentación de diapositivas terminó</string>
     <string name="no_media_for_slideshow">No se han encontrado medios para la presentación de diapositivas</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Agrupar subcarpetas directas</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Agrupar por</string>
     <string name="do_not_group_files">No agrupar</string>
     <string name="by_folder">Carpeta</string>
@@ -154,10 +139,8 @@
     <string name="by_extension">Extensión</string>
     <string name="show_file_count_section_header">Mostrar recuento de archivos en los encabezados de sección</string>
     <string name="grouping_and_sorting">Tenga en cuenta que la agrupación y la clasificación son 2 campos independientes</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Carpeta mostrada en el widget:</string>
     <string name="show_folder_name">Mostrar nombre de carpeta</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Reproducir videos automáticamente</string>
     <string name="remember_last_video_position">Recordar la última posición de avance en la reproducción de video</string>
     <string name="loop_videos">Repetir reproducción de videos en bucle</string>
@@ -221,16 +204,13 @@
     <string name="all_files">Todos los archivos</string>
     <string name="search_all_files">Buscar todos los archivos en lugar de carpetas en la pantalla de inicio</string>
     <string name="show_all_folders">Mostrar un botón de menú para ver rápidamente el contenido de todas las carpetas</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturas</string>
     <string name="fullscreen_media">Medios a pantalla completa</string>
     <string name="extended_details">Detalles ampliados</string>
     <string name="bottom_actions">Acciones en la parte inferior</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Administrar los botones de la parte inferior</string>
     <string name="toggle_favorite">Alternar favorito</string>
     <string name="toggle_file_visibility">Alternar visibilidad del archivo</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Personalizado</string>
     <string name="pesdk_transform_button_resetCrop">Reiniciar</string>
     <string name="pesdk_transform_button_squareCrop">Cuadrado</string>
@@ -266,24 +246,20 @@
     <string name="pesdk_text_button_edit">Editar</string>
     <string name="pesdk_text_button_straighten">Enderezar</string>
     <string name="pesdk_text_button_font">Fuente</string>
-    <string name="pesdk_text_button_color">Color</string>
     <string name="pesdk_text_button_backgroundColor">Color de fondo</string>
     <string name="pesdk_text_button_alignment">Alineación</string>
     <string name="pesdk_text_button_bringToFront">Traer al frente</string>
     <string name="pesdk_text_button_delete">Eliminar</string>
     <string name="pesdk_text_text_editTextPlaceholder">Su texto</string>
     <string name="pesdk_brush_title_name">Pincel</string>
-    <string name="pesdk_brush_button_color">Color</string>
     <string name="pesdk_brush_button_size">Tamaño</string>
     <string name="pesdk_brush_button_hardness">Dureza</string>
     <string name="pesdk_brush_button_bringToFront">Traer al frente</string>
     <string name="pesdk_brush_button_delete">Eliminar</string>
     <string name="pesdk_brush_title_brushColor">Color del pincel</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">¿Desea cerrar el editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">¿Realmente desea descartar todos los cambios\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Sí</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">No</string>
     <string name="pesdk_editor_cancel">Cancelar</string>
     <string name="pesdk_editor_accept">Aceptar</string>
     <string name="pesdk_editor_save">Guardar</string>
@@ -293,7 +269,6 @@
     <string name="pesdk_sticker_title_color">Color de Sticker</string>
     <string name="pesdk_sticker_title_options">Opciones de Sticker</string>
     <string name="pesdk_sticker_button_add">Añadir</string>
-    <string name="pesdk_sticker_button_color">Color</string>
     <string name="pesdk_sticker_button_delete">Eliminar</string>
     <string name="pesdk_sticker_button_bringToFront">Al frente</string>
     <string name="pesdk_sticker_button_straighten">Enderezar</string>
@@ -304,7 +279,6 @@
     <string name="pesdk_sticker_button_brightness">Brillo</string>
     <string name="pesdk_sticker_category_name_custom">Subidas</string>
     <string name="pesdk_overlay_title_name">Modo de fusión</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Más oscuro</string>
     <string name="pesdk_overlay_button_blendModeScreen">Pantalla</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Superpuesto</string>
@@ -319,7 +293,6 @@
     <string name="pesdk_overlay_asset_mosaic">Mosaico</string>
     <string name="pesdk_overlay_asset_paper">Papel</string>
     <string name="pesdk_overlay_asset_rain">Lluvia</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">Girar H</string>
     <string name="pesdk_common_button_flipV">Girar V</string>
     <string name="pesdk_common_button_undo">Deshacer</string>
@@ -343,10 +316,6 @@
     <string name="pesdk_common_title_aquamarinColor">Aguamarina</string>
     <string name="pesdk_common_title_pipettableColor">Color pipetable</string>
     <string name="vesdk_video_trim_title_name">Recortar</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">He protegido la aplicación con una contraseña, pero la he olvidado. ¿Que puedo hacer\?</string>
     <string name="faq_2_text">Puede resolverlo de 2 maneras. Puede reinstalar la aplicación o encontrar la aplicación en la configuración de su dispositivo y seleccionar \"Borrar datos \". Restablecerá todas sus configuraciones, no eliminará ningún archivo multimedia.</string>
     <string name="faq_3_title">¿Cómo puedo hacer que un álbum siempre aparezca en la parte superior\?</string>
@@ -354,7 +323,6 @@
     <string name="faq_4_title">¿Cómo puedo avanzar videos\?</string>
     <string name="faq_4_text">Puede hacerlo tocando dos veces el costado de la pantalla o tocando los textos de duración actual o máxima cerca de la barra de búsqueda. Si habilita la apertura de videos en una pantalla separada en la configuración de la aplicación, también puede usar gestos horizontales.</string>
     <string name="faq_5_title">¿Cuál es la diferencia entre ocultar y excluir una carpeta\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">¿Por qué aparecen las carpetas con la portada de la música o las pegatinas\?</string>
     <string name="faq_6_text">Puede suceder que vea aparecer algunos álbumes inusuales. Puede excluirlos fácilmente presionándolos durante mucho tiempo y seleccionando Excluir. En el siguiente cuadro de diálogo, puede seleccionar la carpeta principal, lo más probable es que evite que aparezcan otros álbumes relacionados.</string>
     <string name="faq_7_title">Una carpeta con imágenes no aparece, ¿qué puedo hacer\?</string>
@@ -380,8 +348,4 @@
     <string name="faq_17_text">Eso dejó de funcionar debido a los cambios en el sistema que vinieron con Android 11 también, la aplicación no puede navegar por las carpetas reales más, se basa en el llamado MediaStore en la obtención de datos.</string>
     <string name="faq_18_title">¿Por qué veo anuncios durante la reproducción de vídeo\?</string>
     <string name="faq_18_text">Nuestras aplicaciones no tienen anuncios de ninguna clase. Si los ve durante la reproducción de video, entonces debe estar usando el reproductor de vídeo de otra aplicación. Pruebe encontrando su reproductor de video por defecto en los ajustes del dispositivo, luego realice un \"Borrar predeterminados\" en él. La siguiente vez que vaya a ver un vídeo verá un selector de aplicaciones, en el cual puede seleccionar que aplicación quiere usar para reproducirlo.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

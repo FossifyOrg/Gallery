@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">透過拖曳來重新排序資料夾</string>
     <string name="reorder_by_dragging_pro">透過拖曳來重新排序資料夾 (專業版)</string>
     <string name="restore_to_path">還原到「%s」</string>
-    <!-- Filter -->
     <string name="filter_media">篩選媒體檔案</string>
     <string name="images">圖片</string>
     <string name="videos">影片</string>
@@ -43,17 +42,13 @@
     <string name="portraits">人像</string>
     <string name="no_media_with_filters">選擇的篩選條件未發現媒體檔案。</string>
     <string name="change_filters_underlined"><u>更改篩選條件</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">啟用此功能將會在選定資料夾中建立「.nomedia」檔案，使該資料夾及其所有子資料夾被隱藏。如果您想查看這些隱藏的資料夾，可以在設定中選擇「顯示隱藏項目」的選項。是否繼續？</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">是否排除上層資料夾？</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">隱藏資料夾</string>
     <string name="manage_hidden_folders">管理隱藏資料夾</string>
     <string name="hidden_folders_placeholder">看來沒有以「.nomedia」檔案來隱藏的資料夾。</string>
     <string name="hidden_all_files">為了讓您能夠查看隱藏的檔案，請務必開放「所有檔案存取」的權限給此應用程式，否則將無法正常使用。</string>
     <string name="cant_unhide_folder">若資料夾或其母資料夾的名稱前方有「.」，該資料夾將會被隱藏，而此情況下不能直接取消隱藏。您需要改變資料夾名稱以移除前方的「.」。</string>
-    <!-- Include folders -->
     <string name="include_folders">包含資料夾</string>
     <string name="manage_included_folders">管理包含資料夾</string>
     <string name="add_folder">增加資料夾</string>
@@ -61,7 +56,6 @@
 \n
 \n此處新增的項目不會將其他資料夾排除在外。</string>
     <string name="no_media_add_included">未發現媒體檔案。您可以手動加入包含媒體檔案的資料夾來解決。</string>
-    <!-- Resizing -->
     <string name="resize_and_save">縮放所選區域並儲存</string>
     <string name="width">寬度</string>
     <string name="height">高度</string>
@@ -75,7 +69,6 @@
         <item quantity="other">%d 張圖片大小調整失敗</item>
     </plurals>
     <string name="images_resized_successfully">圖片調整大小成功</string>
-    <!-- Editor -->
     <string name="editor">編輯器</string>
     <string name="basic_editor">基礎編輯器</string>
     <string name="advanced_editor">進階編輯器</string>
@@ -105,11 +98,7 @@
     <string name="flip_horizontally">水平翻轉</string>
     <string name="flip_vertically">垂直翻轉</string>
     <string name="free_aspect_ratio">自由</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">其它</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">設為桌布</string>
     <string name="set_as_wallpaper_failed">設為桌布失敗</string>
     <string name="set_as_wallpaper_with">用其他程式設為桌布:</string>
@@ -121,7 +110,6 @@
     <string name="lock_screen">鎖定畫面</string>
     <string name="home_and_lock_screen">主畫面及鎖定畫面</string>
     <string name="allow_changing_aspect_ratio">允許變更長寬比</string>
-    <!-- Slideshow -->
     <string name="slideshow">投影片</string>
     <string name="interval">間隔</string>
     <string name="include_photos">包含照片</string>
@@ -136,9 +124,7 @@
     <string name="slide">滑動</string>
     <string name="slideshow_ended">投影片結束</string>
     <string name="no_media_for_slideshow">找不到投影片的媒體檔案</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">歸類子資料夾</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">歸類</string>
     <string name="do_not_group_files">不歸類檔案</string>
     <string name="by_folder">資料夾</string>
@@ -152,10 +138,8 @@
     <string name="by_extension">副檔名</string>
     <string name="show_file_count_section_header">於分段標題顯示檔案數量</string>
     <string name="grouping_and_sorting">請注意，歸類和排序兩者是獨立的</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">在小工具顯示資料夾:</string>
     <string name="show_folder_name">顯示資料夾名稱</string>
-    <!-- Settings -->
     <string name="autoplay_videos">自動播放影片</string>
     <string name="remember_last_video_position">記住影片上次播放位置</string>
     <string name="loop_videos">影片循環播放</string>
@@ -219,16 +203,13 @@
     <string name="all_files">所有檔案</string>
     <string name="search_all_files">在主畫面搜尋所有檔案，而非資料夾</string>
     <string name="show_all_folders">顯示一個選單按鈕，快速切換「顯示所有資料夾內容」</string>
-    <!-- Setting sections -->
     <string name="thumbnails">縮圖</string>
     <string name="fullscreen_media">全螢幕媒體檔案</string>
     <string name="extended_details">詳細資訊</string>
     <string name="bottom_actions">底部操作</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">管理要顯示的底部操作</string>
     <string name="toggle_favorite">我的最愛</string>
     <string name="toggle_file_visibility">檔案顯示</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">自訂</string>
     <string name="pesdk_transform_button_resetCrop">重置</string>
     <string name="pesdk_transform_button_squareCrop">正方形</string>
@@ -243,7 +224,6 @@
     <string name="pesdk_adjustments_button_contrastTool">對比</string>
     <string name="pesdk_adjustments_button_saturationTool">飽和度</string>
     <string name="pesdk_adjustments_button_clarityTool">清晰度</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">黑色</string>
     <string name="pesdk_adjustments_button_whitesTool">白色</string>
     <string name="pesdk_adjustments_button_temperatureTool">色溫</string>
@@ -255,7 +235,6 @@
     <string name="pesdk_focus_button_linear">線性</string>
     <string name="pesdk_focus_button_mirrored">鏡像</string>
     <string name="pesdk_focus_button_gaussian">高斯</string>
-    <string name="pesdk_text_title_input">Add text</string>
     <string name="pesdk_text_title_name">文字</string>
     <string name="pesdk_text_title_options">文字選項</string>
     <string name="pesdk_text_title_textColor">文字顏色</string>
@@ -302,9 +281,7 @@
     <string name="pesdk_sticker_button_brightness">亮度</string>
     <string name="pesdk_sticker_category_name_custom">上傳</string>
     <string name="pesdk_overlay_title_name">覆蓋</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">變暗</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
     <string name="pesdk_overlay_button_blendModeOverlay">覆蓋</string>
     <string name="pesdk_overlay_button_blendModeLighten">變亮</string>
     <string name="pesdk_overlay_button_blendModeMultiply">色彩增值</string>
@@ -317,7 +294,6 @@
     <string name="pesdk_overlay_asset_mosaic">馬賽克</string>
     <string name="pesdk_overlay_asset_paper">紙質</string>
     <string name="pesdk_overlay_asset_rain">雨</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">水平翻轉</string>
     <string name="pesdk_common_button_flipV">垂直翻轉</string>
     <string name="pesdk_common_button_undo">復原</string>
@@ -341,10 +317,6 @@
     <string name="pesdk_common_title_aquamarinColor">藍綠</string>
     <string name="pesdk_common_title_pipettableColor">顏色吸取器</string>
     <string name="vesdk_video_trim_title_name">修剪</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">用密碼把這個 APP 上鎖後忘記密碼該怎麼辦？</string>
     <string name="faq_2_text">有兩種解決方法。一是重新安裝本 APP。一是在裝置的設定中找到本 APP，然後按「清除資料」（或「清除儲存空間」等類似的字眼），APP 的設定將會被重設，但不會移除任何媒體檔案。</string>
     <string name="faq_3_title">如何使某個相簿顯示在最頂端？</string>
@@ -352,7 +324,6 @@
     <string name="faq_4_title">如何快轉影片？</string>
     <string name="faq_4_text">按兩下螢幕邊邊，或者按一下進度條旁邊的目前播放時間／影片時長文字。若您在設定中啟用了「總是用新的水平手勢在獨立畫面開啟影片」，則您也可以使用水平手勢快轉。</string>
     <string name="faq_5_title">「隱藏」與「排除」資料夾的差別是？</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">為何出現了音樂的封面圖或是貼圖的資料夾？</string>
     <string name="faq_6_text">有時候會出現一些異常的相簿。長按並點選排除可排除它們，在接下來的對話框選擇它們的上層資料夾的話，有機會避免相關的相簿出現。</string>
     <string name="faq_7_title">有個含有圖片的資料夾沒出現，抑或是沒有顯示所有項目時，該怎麼辦？</string>
@@ -378,8 +349,4 @@
     <string name="faq_17_text">因 Android 11 的系統變更，這項功能無法再運作。app 沒辦法瀏覽實際的資料夾，而是透過所謂的 MediaStorage 來擷取資料。</string>
     <string name="faq_18_title">為什麼我在播放影片時看到廣告？</string>
     <string name="faq_18_text">我們的應用程式完全沒有廣告。如果您在播放影片時看到它們，那麼您一定是在使用其他應用程式的影片播放器。嘗試在裝置設定中找到您的預設影片播放器，然後對其進行清除其預設值。下次您嘗試播放影片時，系統會提示您選擇應用程式，您可以在此選擇您想要使用的影片播放器。</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

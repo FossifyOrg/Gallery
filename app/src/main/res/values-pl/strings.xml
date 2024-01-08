@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Przeorganizuj foldery przeciągając</string>
     <string name="reorder_by_dragging_pro">Przeorganizuj foldery przeciągając (Pro)</string>
     <string name="restore_to_path">Przywracanie do „%s”</string>
-    <!-- Filter -->
     <string name="filter_media">Filtruj multimedia</string>
     <string name="images">Obrazy</string>
     <string name="videos">Wideo</string>
@@ -43,7 +42,6 @@
     <string name="portraits">Portrety</string>
     <string name="no_media_with_filters">Nie znaleziono plików multimedialnych z wybranymi filtrami.</string>
     <string name="change_filters_underlined"><u>Zmień filtry</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ta funkcja ukrywa folder, dodając do niego plik „.nomedia”, i ukryje również wszystkie podfoldery. Możesz je zobaczyć, przełączając opcję „Pokazuj ukryte elementy” w Ustawieniach. Kontynuować\?</string>
     <string name="exclude_folder_description">Spowoduje to wykluczenie wybranego folderu i jego podfolderów z Fossify Gallery. Możesz zarządzać wykluczonymi folderami w Ustawieniach.</string>
     <string name="exclude_folder_parent">Czy zamiast tego wykluczyć folder nadrzędny\?</string>
@@ -55,7 +53,6 @@
     <string name="hidden_folders_placeholder">Wygląda na to, że nie masz żadnych ukrytych folderów z plikiem „.nomedia”.</string>
     <string name="hidden_all_files">Musisz przyznać aplikacji dostęp do wszystkich plików, aby widzieć ukryte pliki, inaczej to nie będzie działać.</string>
     <string name="cant_unhide_folder">Jeśli folder lub jeden z jego folderów nadrzędnych ma kropkę przed swoją nazwą, jest ukryty i nie można go odkryć w ten sposób. Musisz usunąć kropkę, zmieniając jego nazwę.</string>
-    <!-- Include folders -->
     <string name="include_folders">Dołączone foldery</string>
     <string name="manage_included_folders">Zarządzaj dołączonymi folderami</string>
     <string name="add_folder">Dodaj folder</string>
@@ -63,7 +60,6 @@
 \n
 \nDodanie tutaj niektórych elementów nie wykluczy żadnego innego folderu.</string>
     <string name="no_media_add_included">Nie znaleziono żadnych plików multimedialnych. Możesz to naprawić, ręcznie dodając foldery zawierające pliki multimedialne.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Zmień rozmiar zaznaczenia i zapisz</string>
     <string name="width">Szerokość</string>
     <string name="height">Wysokość</string>
@@ -80,7 +76,6 @@
         <item quantity="other">Nie udało się zmienić rozmiaru %d obrazów</item>
     </plurals>
     <string name="images_resized_successfully">Rozmiar obrazów został zmieniony</string>
-    <!-- Editor -->
     <string name="editor">Edytor</string>
     <string name="basic_editor">Podstawowy edytor</string>
     <string name="advanced_editor">Zaawansowany edytor</string>
@@ -110,10 +105,7 @@
     <string name="flip_horizontally">Odbij w poziomie</string>
     <string name="flip_vertically">Odbij w pionie</string>
     <string name="free_aspect_ratio">Dowolne</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Inne</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
     <string name="wallpaper">Tapeta</string>
     <string name="set_as_wallpaper">Ustaw jako tapetę</string>
     <string name="set_as_wallpaper_failed">Ustawienie jako tapety nie powiodło się</string>
@@ -126,7 +118,6 @@
     <string name="lock_screen">Ekran blokady</string>
     <string name="home_and_lock_screen">Ekran główny i blokady</string>
     <string name="allow_changing_aspect_ratio">Zezwól na zmianę proporcji</string>
-    <!-- Slideshow -->
     <string name="slideshow">Pokaz slajdów</string>
     <string name="interval">Czas trwania</string>
     <string name="include_photos">Uwzględnij obrazy</string>
@@ -141,12 +132,9 @@
     <string name="slide">Przesuwanie</string>
     <string name="slideshow_ended">Pokaz slajdów zakończony</string>
     <string name="no_media_for_slideshow">Nie znaleziono multimediów do pokazu slajdów</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Grupuj bezpośrednie podfoldery</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Grupuj według</string>
     <string name="do_not_group_files">Nie grupuj plików</string>
-    <string name="by_folder">Folder</string>
     <string name="by_last_modified">Data ostatniej modyfikacji</string>
     <string name="by_last_modified_daily">Data ostatniej modyfikacji (dziennie)</string>
     <string name="by_last_modified_monthly">Data ostatniej modyfikacji (miesięcznie)</string>
@@ -157,10 +145,8 @@
     <string name="by_extension">Rozszerzenie</string>
     <string name="show_file_count_section_header">Pokazuj liczbę plików w nagłówkach sekcji</string>
     <string name="grouping_and_sorting">Uwaga: Grupowanie i sortowanie to dwa niezależne pola</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Folder wyświetlany w widżecie:</string>
     <string name="show_folder_name">Pokazuj nazwę folderu</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Odtwarzaj wideo automatycznie</string>
     <string name="remember_last_video_position">Pamiętaj ostatnią pozycję odtwarzania wideo</string>
     <string name="loop_videos">Zapętlaj wideo</string>
@@ -224,16 +210,13 @@
     <string name="all_files">Wszystkie pliki</string>
     <string name="search_all_files">Przeszukuj wszystkie pliki zamiast folderów na ekranie głównym</string>
     <string name="show_all_folders">Pokazuj przycisk w menu do szybkiego przełączania opcji „Pokaż zawartość wszystkich folderów”</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturki</string>
     <string name="fullscreen_media">Multimedia na pełnym ekranie</string>
     <string name="extended_details">Dodatkowe szczegóły</string>
     <string name="bottom_actions">Dolne przyciski akcji</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Zarządzaj widocznością dolnych przycisków akcji</string>
     <string name="toggle_favorite">Ulubione</string>
     <string name="toggle_file_visibility">Zmień widoczność pliku</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Własne</string>
     <string name="pesdk_transform_button_resetCrop">Resetuj</string>
     <string name="pesdk_transform_button_squareCrop">Kwadrat</string>
@@ -248,7 +231,6 @@
     <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
     <string name="pesdk_adjustments_button_saturationTool">Nasycenie</string>
     <string name="pesdk_adjustments_button_clarityTool">Przejrzystość</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Czerń</string>
     <string name="pesdk_adjustments_button_whitesTool">Biel</string>
     <string name="pesdk_adjustments_button_temperatureTool">Temperatura</string>
@@ -335,7 +317,6 @@
     <string name="pesdk_common_title_lightBlueColor">Jasnoniebieski</string>
     <string name="pesdk_common_title_blueColor">Niebieski</string>
     <string name="pesdk_common_title_purpleColor">Fioletowy</string>
-    <string name="pesdk_common_title_orchidColor">Orchid</string>
     <string name="pesdk_common_title_pinkColor">Różowy</string>
     <string name="pesdk_common_title_redColor">Czerwony</string>
     <string name="pesdk_common_title_orangeColor">Pomarańczowy</string>
@@ -346,7 +327,6 @@
     <string name="pesdk_common_title_aquamarinColor">Akwamaryna</string>
     <string name="pesdk_common_title_pipettableColor">Kolor z pipety</string>
     <string name="vesdk_video_trim_title_name">Przytnij</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Jak mogę ustawić Fossify Gallery jako domyślną galerię urządzenia?</string>
     <string name="faq_1_text">Najpierw znajdź aktualnie domyślną galerię urządzenia w ustawieniach urządzenia (sekcja „Aplikacje”). Na ekranie z informacjami o niej wybierz „Otwórz domyślnie”, a następnie „Wyczyść domyślne”. Gdy podczas następnej próby otwarcia obrazu czy wideo system zapyta Cię, którą aplikacją to zrobić, wybierz Fossify Gallery i opcję zapamiętania tego wyboru.</string>
     <string name="faq_2_title">Zablokowałem aplikację hasłem i je zapomniałem. Co mogę zrobić\?</string>
@@ -382,8 +362,4 @@
     <string name="faq_17_text">To również przestało działać z powodu zmian systemowych, które pojawiły się w Androidzie 11. Aplikacja nie może już przeglądać prawdziwych folderów i polega na tak zwanym MediaStore przy pobieraniu danych.</string>
     <string name="faq_18_title">Dlaczego widzę reklamy podczas odtwarzania wideo\?</string>
     <string name="faq_18_text">Nasze aplikacje nie mają żadnych reklam. Jeśli widzisz je podczas odtwarzania wideo, musisz używać odtwarzacza wideo innej aplikacji. Spróbuj znaleźć domyślny odtwarzacz wideo w ustawieniach urządzenia, a następnie wykonaj na nim „Wyczyść domyślne”. Następnym razem, gdy spróbujesz odtworzyć wideo, zobaczysz ekran wyboru aplikacji, gdzie możesz wybrać, którą chcesz użyć.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

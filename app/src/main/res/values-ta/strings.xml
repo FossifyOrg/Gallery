@@ -4,7 +4,6 @@
     <string name="edit">திருத்து</string>
     <string name="open_camera">படக்கருவியைத் திற</string>
     <string name="hidden">(மறைந்த)</string>
-    <string name="excluded">(excluded)</string>
     <string name="pin_folder">அடைவை முள்ளிடு</string>
     <string name="unpin_folder">அடைவை முள்ளெடு</string>
     <string name="pin_to_the_top">மேலே முள்ளிடு</string>
@@ -32,8 +31,6 @@
     <string name="unset_as_default_folder">இயல்புநிலை அடைவாக அமைக்காதே</string>
     <string name="reorder_by_dragging">பிடித்திழுத்து அடைவுகளை மறுசீரமை</string>
     <string name="reorder_by_dragging_pro">பிடித்திழுத்து அடைவுகளை மறுசீரமை (Pro)</string>
-    <string name="restore_to_path">Restoring to \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">ஊடகத்தை வடிகட்டு</string>
     <string name="images">படங்கள்</string>
     <string name="videos">காணொளிகள்</string>
@@ -43,17 +40,11 @@
     <string name="portraits">உருவப்படங்கள்</string>
     <string name="no_media_with_filters">தேர்ந்தெடுத்த வடிகட்டிகளுடன் ஊடக கோப்புகள் ஏதுமில்லை.</string>
     <string name="change_filters_underlined"><u>வடிகட்டிகளை மாற்று</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">இச்செயல்பாடு ஒரு \'.nomedia\' கோப்பைச் சேர்த்து அடைவை மறைக்கிறது, இது எல்லா துணையடைவுகளையும் மறைக்கும். அமைப்புகளில் \'மறைந்த உருப்படிகளைக் காட்டு\' விருப்பத்தை மாற்றிஅவற்றைக் காணலாம். தொடரவா\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">பதிலாக ஒரு பெற்றோரை விலக்கவா\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">மறைத்த அடைவுகள்</string>
     <string name="manage_hidden_folders">மறைத்த அடைவுகளை நிர்வகி</string>
     <string name="hidden_folders_placeholder">உங்களிடம் \".nomedia\" கோப்புடன் எவ்வடைகளும் மறைக்கப்படவில்லை என தெரிகிறது.</string>
-    <string name="hidden_all_files">You have to grant the app All Files access to see hidden files, else it cannot work.</string>
-    <string name="cant_unhide_folder">If a folder or one of its parent folders has a dot before its name, it is hidden and cannot be unhidden like this. You have to remove the dot by renaming it.</string>
-    <!-- Include folders -->
     <string name="include_folders">உள்ளடக்கிய அடைவுகள்</string>
     <string name="manage_included_folders">உள்ளடக்கிய அடைவுகளை நிர்வகி</string>
     <string name="add_folder">அடைவு சேர்</string>
@@ -61,25 +52,12 @@
 \n
 \nசில உருப்படிகளை இங்கே சேர்ப்பது வேறு எவ்வடைவையும் விலக்காது.</string>
     <string name="no_media_add_included">ஊடக கோப்புகள் ஏதுமில்லை. ஊடக கோப்புகளைக் கொண்ட அடைவுகளை கைமுறையாகச் சேர்த்து அதைத் தீர்க்கலாம்.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">தெரிவை மறுஅளவிட்டுச் சேமி</string>
     <string name="width">அகலம்</string>
     <string name="height">உயரம்</string>
     <string name="keep_aspect_ratio">கூறுவிகிதத்தை வைத்திரு</string>
     <string name="invalid_values">செல்லத்தக்க தீர்மானத்தை உள்ளிடவும்</string>
-    <string name="resize_multiple_images">Resize multiple images</string>
-    <string name="resize_factor">Resize factor</string>
-    <string name="resize_factor_info">Resize images to the given percentage, value must be within 10 and 90.</string>
-    <string name="resize_factor_error">Enter a number between 10 and 90</string>
-    <plurals name="failed_to_resize_images">
-        <item quantity="one">Failed to resize %d image</item>
-        <item quantity="other">Failed to resize %d images</item>
-    </plurals>
-    <string name="images_resized_successfully">Images resized successfully</string>
-    <!-- Editor -->
     <string name="editor">திருத்தி</string>
-    <string name="basic_editor">Basic Editor</string>
-    <string name="advanced_editor">Advanced Editor</string>
     <string name="rotate">சுழற்று</string>
     <string name="invalid_image_path">செல்லாத பட பாதை</string>
     <string name="invalid_video_path">செல்லாத காணொளி பாதை</string>
@@ -99,18 +77,11 @@
     <string name="rotate_left">இடதில் சுழற்று</string>
     <string name="rotate_right">வலதில் சுழற்று</string>
     <string name="rotate_one_eighty">180º சுழற்று</string>
-    <string name="transform">Transform</string>
-    <string name="crop">Crop</string>
-    <string name="draw">Draw</string>
     <string name="flip">புரட்டு</string>
     <string name="flip_horizontally">கிடைமட்டமாக புரட்டு</string>
     <string name="flip_vertically">செங்குத்தாக புரட்டு</string>
     <string name="free_aspect_ratio">கட்டுப்பாடற்ற</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">மற்ற</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">சுவர்த்தாளாக அமை</string>
     <string name="set_as_wallpaper_failed">சுவர்த்தாளாக அமைத்தல் தோல்வி</string>
     <string name="set_as_wallpaper_with">இதனுடன் சுவர்த்தாளாக அமை:</string>
@@ -121,8 +92,6 @@
     <string name="home_screen">முகப்புத் திரை</string>
     <string name="lock_screen">பூட்டுத் திரை</string>
     <string name="home_and_lock_screen">முகப்பு மற்றும் பூட்டுத் திரை</string>
-    <string name="allow_changing_aspect_ratio">Allow changing the aspect ratio</string>
-    <!-- Slideshow -->
     <string name="slideshow">வில்லைக்காட்சி</string>
     <string name="interval">இடைவெளி</string>
     <string name="include_photos">புகைப்படங்களை உள்ளடக்கு</string>
@@ -137,9 +106,7 @@
     <string name="slide">வில்லை</string>
     <string name="slideshow_ended">வில்லைக்காட்சி முடிந்தது</string>
     <string name="no_media_for_slideshow">வில்லைக்காட்சிக்கான ஊடகங்கள் ஏதுமில்லை</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">நேரடி துணையடைவுகளை ஒன்றிணை</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">இதன்படி ஒன்றிணை</string>
     <string name="do_not_group_files">கோப்புகளை ஒன்றிணைக்காதே</string>
     <string name="by_folder">அடைவு</string>
@@ -153,10 +120,8 @@
     <string name="by_extension">நீட்டிப்பு</string>
     <string name="show_file_count_section_header">கோப்பெண்ணிக்கையை பிரிவு மேற்குறிப்பில் காட்டு</string>
     <string name="grouping_and_sorting">ஒன்றிணைத்தலும் வரிசைப்படுத்தலும் 2 சார்பிலா புலங்கள் என்பதை குறிக்கவும்</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">விட்ஜெட்டில் கோப்புறை காட்டப்பட்டுள்ளது:</string>
     <string name="show_folder_name">அடைவு பெயரைக் காட்டு</string>
-    <!-- Settings -->
     <string name="autoplay_videos">காணொளிகளைத் தானியக்கு</string>
     <string name="remember_last_video_position">கடைசி காணொளி பின்னணி நிலையை நினைவிற்கொள்</string>
     <string name="loop_videos">காணொளிகளை வட்டமடி</string>
@@ -208,28 +173,13 @@
     <string name="square">சதுரம்</string>
     <string name="rounded_corners">மழுங்கையான மூலைகள்</string>
     <string name="export_favorite_paths">பிடித்த கோப்பு பாதைகளை ஏற்றுமதி செய்</string>
-    <string name="import_favorite_paths">Import favorites</string>
-    <string name="paths_imported_successfully">Paths imported successfully</string>
-    <string name="media_management_prompt">To make sure that all file operations work reliably, please make this app a Media management app in your device settings.</string>
-    <string name="password_protect_excluded">Password protect excluded folder visibility</string>
-    <string name="media_management_manual">Something went wrong, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="media_management_note">If the redirection does not work, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="media_management_alternative">If you do not want to do it, you can also go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="alternative_media_access">Alternatively, you can allow accessing media files only. In that case you will not be able to work with hidden files though.</string>
-    <string name="media_only">Media only</string>
-    <string name="all_files">All files</string>
-    <string name="search_all_files">Search all files instead of folders on the main screen</string>
-    <string name="show_all_folders">Show a menu button for toggling Show All Folders Content quickly</string>
-    <!-- Setting sections -->
     <string name="thumbnails">சிறுபடங்கள்</string>
     <string name="fullscreen_media">முழுத்திரை ஊடகம்</string>
     <string name="extended_details">நீடித்த விவரங்கள்</string>
     <string name="bottom_actions">அடிப்புறச் செயல்கள்</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">புலப்படும் அடிப்புறச் செயல்களை நிர்வகி</string>
     <string name="toggle_favorite">அபிமானதை நிலைமாற்று</string>
     <string name="toggle_file_visibility">கோப்பு கட்புலனை நிலைமாற்று</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">தனிப்பயன்</string>
     <string name="pesdk_transform_button_resetCrop">அகரமாக்கு</string>
     <string name="pesdk_transform_button_squareCrop">சதுரம்</string>
@@ -342,10 +292,6 @@
     <string name="pesdk_common_title_aquamarinColor">நீலப்பச்சை</string>
     <string name="pesdk_common_title_pipettableColor">பைப்பேடபில் நிறம்</string>
     <string name="vesdk_video_trim_title_name">ஒழுங்கமை</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">கடவுச்சொல்லுடன் செயலியைப் பூட்டினேன், ஆனால் அதை மறந்தேன். என்ன செய்வது\?</string>
     <string name="faq_2_text">நீங்கள் அதை 2 வழிகளில் தீர்க்கலாம். நீங்கள் செயலியை மறுநிறுவலாம் அ உங்கள் சாதன அமைப்புகளில் செயலியைக் கண்டுபிடித்து \"தரவைத் துடை\" என்பதைத் தேர்ந்தெடுக்கலாம். இது உங்கள் எல்லா அமைப்புகளையும் அகரமாக்கும், இது எந்த ஊடக கோப்புகளையும் நீக்காது.</string>
     <string name="faq_3_title">ஒரு தொகுப்பை எப்போதும் மேலே தோன்றச்செய்வது எப்படி\?</string>
@@ -353,7 +299,6 @@
     <string name="faq_4_title">காணொளிகளை எவ்வாறு வேகமாக அனுப்புவது\?</string>
     <string name="faq_4_text">திரையின் பக்கத்தை இருமுறை தட்டியோ சீக்பார் அருகே தற்போதைய அ அதிகபட்ச கால நூல்களைத் தட்டியோ நீங்கள் இதைச் செய்யலாம். செயலி அமைப்புகளில் தனித்திரையில் காணொளிகளைத் திறக்க நீங்கள் இயக்கினால், கிடைமட்ட சைகைகளையும் பயன்படுத்தலாம்.</string>
     <string name="faq_5_title">ஒரு அடைவை மறைப்பதற்கும் விலக்குவதற்கும் என்ன வேறுபாடு\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">இசை கவர் ஆர்ட் அ ஒட்டுபடங்களைக் கொண்ட அடைவுகள் ஏன் காட்டப்படுகின்றன\?</string>
     <string name="faq_6_text">சில அசாதாரண தொகுப்புகள் காட்டப்படுவதை நீங்கள் காண்பீர்கள். அவற்றை நீண்டழுத்தி, விலக்கு என்பதைத் தேர்ந்தெடுத்து எளிதாக விலக்கலாம். அடுத்த ஈருரையில் நீங்கள் பெற்றோர் அடைவைத் தேர்ந்தெடுக்கலாம், இது பிற உறவுடைய தொகுப்புகள் காண்பிப்பதையும் தடுக்கும் வாய்ப்புகள் உள்ளன.</string>
     <string name="faq_7_title">படங்களைக் கொண்ட அடைவு காண்பிக்கப்படவில்லை, அல்லது அது எல்லா உருப்படிகளையும் காட்டவில்லை. என்ன செய்யலாம்\?</string>
@@ -374,13 +319,6 @@
     <string name="faq_15_text">செயலி பதுக்ககம் 250MB வரை எடுக்கலாம், இது படத்தை விரைவாக ஏற்றுவதை உறுதி செய்கிறது. செயலி இன்னும் அதிக இடத்தை எடுத்துக்கொண்டால், மீள்சுழற்சி தொட்டியில் நீங்கள் உருப்படிகளை வைத்திருப்பதால் இது பெரும்பாலும் ஏற்படலாம். அந்த கோப்புகள் செயலி அளவிற்கு எண்ணப்படுகின்றன. மீள்சுழற்சி தொட்டியை அதனைத் திறந்து எல்லா கோப்புகளையும் அழித்தோ செயலி அமைவுகளிலிருந்து அழித்தோ துடைக்கலாம். தொட்டியில் உள்ள ஒவ்வொரு கோப்பும் 30 நாட்களுக்குப் பிறகு தானாகவே அழிக்கப்படும்.</string>
     <string name="faq_16_title">What happened to file and folder hiding and why cannot I see hidden items anymore\?</string>
     <string name="faq_16_text">Starting with Android 11 you cannot hide or unhide files or folders anymore, you cannot see the hidden ones in gallery apps either. You will have to use some file manager for that.</string>
-    <string name="faq_16_text_extra">Or you can also grant this gallery access to All Files through your device settings, that will allow us showing hidden items and make file operations more reliable in general.</string>
     <string name="faq_17_title">Why cannot I include missing folders anymore\?</string>
-    <string name="faq_17_text">That stopped working due to the system changes that came with Android 11 too, the app cannot browse real folders anymore, it relies on the so called MediaStore at fetching data.</string>
     <string name="faq_18_title">Why do I see ads during video playback\?</string>
-    <string name="faq_18_text">Our apps have no ads whatsoever. If you see them during video playback, you must be using some other apps video player. Try finding your default video player in the device settings, then do a \"Clear defaults\" on it. The next time you invoke some video intent you will see an app picker prompt, where you can select what app you want to use.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

@@ -14,7 +14,6 @@
     <string name="other_folder">Andere map</string>
     <string name="show_on_map">Op kaart tonen</string>
     <string name="unknown_location">Locatie onbekend</string>
-    <string name="volume">Volume</string>
     <string name="brightness">Helderheid</string>
     <string name="lock_orientation">Schermoriëntatie vergrendelen</string>
     <string name="unlock_orientation">Schermoriëntatie ontgrendelen</string>
@@ -33,7 +32,6 @@
     <string name="reorder_by_dragging">Volgorde mappen bepalen met sleepgebaren</string>
     <string name="reorder_by_dragging_pro">Volgorde mappen bepalen met sleepgebaren (Pro)</string>
     <string name="restore_to_path">Herstellen naar \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Media filteren</string>
     <string name="images">Afbeeldingen</string>
     <string name="videos">Video\'s</string>
@@ -43,17 +41,13 @@
     <string name="portraits">Portretten</string>
     <string name="no_media_with_filters">Er zijn geen bestanden gevonden met de huidige filters.</string>
     <string name="change_filters_underlined"><u>Filters aanpassen</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Deze functie verbergt de map door het bestand ’.nomedia’ toe te voegen. Alle onderliggende mappen zullen ook worden verborgen. Kies ’Verborgen mappen tonen’ in de instellingen om toch verborgen mappen te kunnen inzien. Doorgaan\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">In plaats hiervan de bovenliggende map uitsluiten\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Verborgen mappen</string>
     <string name="manage_hidden_folders">Verborgen mappen beheren</string>
     <string name="hidden_folders_placeholder">Er zijn geen mappen gevonden die zijn verborgen door bestand \".nomedia\".</string>
     <string name="hidden_all_files">Geef de app het recht om alle bestanden te beheren om ook verborgen items te kunnen zien.</string>
     <string name="cant_unhide_folder">Mappen waarvan de naam begint met een punt worden altijd verborgen. Verwijder de punt uit de naam om de map te weergeven.</string>
-    <!-- Include folders -->
     <string name="include_folders">Toegevoegde mappen</string>
     <string name="manage_included_folders">Toegevoegde mappen beheren</string>
     <string name="add_folder">Map toevoegen</string>
@@ -61,7 +55,6 @@
 \n
 \nHet hier toevoegen van mappen zal andere mappen niet uitsluiten.</string>
     <string name="no_media_add_included">Er zijn geen mediabestanden gevonden. Dit is op te lossen door de mappen met mediabestanden handmatig toe te voegen.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Grootte aanpassen en opslaan</string>
     <string name="width">Breedte</string>
     <string name="height">Hoogte</string>
@@ -76,7 +69,6 @@
         <item quantity="other">%d afbeeldingen zijn niet aangepast</item>
     </plurals>
     <string name="images_resized_successfully">Afbeeldingen zijn aangepast</string>
-    <!-- Editor -->
     <string name="editor">Bewerken</string>
     <string name="basic_editor">Eenvoudige bewerking</string>
     <string name="advanced_editor">Uitgebreide bewerking</string>
@@ -106,11 +98,7 @@
     <string name="flip_horizontally">Horizontaal spiegelen</string>
     <string name="flip_vertically">Verticaal spiegelen</string>
     <string name="free_aspect_ratio">Vrij</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Anders</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Als achtergrond instellen</string>
     <string name="set_as_wallpaper_failed">Achtergrond instellen mislukt</string>
     <string name="set_as_wallpaper_with">Achtergrond instellen met:</string>
@@ -122,9 +110,7 @@
     <string name="lock_screen">Vergrendelscherm</string>
     <string name="home_and_lock_screen">Start- en vergrendelscherm</string>
     <string name="allow_changing_aspect_ratio">Beeldverhouding mag worden gewijzigd</string>
-    <!-- Slideshow -->
     <string name="slideshow">Diavoorstelling</string>
-    <string name="interval">Interval</string>
     <string name="include_photos">Afbeeldingen tonen</string>
     <string name="include_videos">Video\'s tonen</string>
     <string name="include_gifs">GIF-bestanden tonen</string>
@@ -137,9 +123,7 @@
     <string name="slide">Verschuiven</string>
     <string name="slideshow_ended">De diavoorstelling is beëindigd</string>
     <string name="no_media_for_slideshow">Geen media gevonden voor diavoorstelling</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Direct onderliggende mappen groeperen</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Groeperen op</string>
     <string name="do_not_group_files">Bestanden niet groeperen</string>
     <string name="by_folder">Map</string>
@@ -153,10 +137,8 @@
     <string name="by_extension">Extensie</string>
     <string name="show_file_count_section_header">Bij de sectiekoppen het aantal bestanden tonen</string>
     <string name="grouping_and_sorting">Groeperen en sorteren zijn twee aparte opties</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Map tonen in de widget:</string>
     <string name="show_folder_name">Mapnaam tonen</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Video\'s automatisch afspelen</string>
     <string name="remember_last_video_position">Laatste positie in video’s onthouden</string>
     <string name="loop_videos">Video\'s herhalen</string>
@@ -220,37 +202,30 @@
     <string name="all_files">Alle bestanden</string>
     <string name="search_all_files">Op het beginscherm niet naar mappen, maar bestanden in de zichtbare mappen zoeken</string>
     <string name="show_all_folders">Menuknop ’Inhoud van alle mappen tonen’ tonen</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturen</string>
     <string name="fullscreen_media">Volledig scherm</string>
     <string name="extended_details">Uitgebreide informatie</string>
     <string name="bottom_actions">Acties onderin het scherm</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Actieknoppen onderaan beheren</string>
     <string name="toggle_favorite">Favoriet in-/uitschakelen</string>
     <string name="toggle_file_visibility">Bestand tonen/verbergen</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Aangepast</string>
     <string name="pesdk_transform_button_resetCrop">Beginwaarden</string>
     <string name="pesdk_transform_button_squareCrop">Vierkant</string>
     <string name="pesdk_transform_title_name">Vervormen</string>
-    <string name="pesdk_filter_title_name">Filter</string>
     <string name="pesdk_filter_asset_none">Geen</string>
     <string name="pesdk_adjustments_title_name">Aanpassen</string>
     <string name="pesdk_adjustments_button_shadowTool">Schaduwen</string>
     <string name="pesdk_adjustments_button_exposureTool">Belichting</string>
     <string name="pesdk_adjustments_button_highlightTool">Accenten</string>
     <string name="pesdk_adjustments_button_brightnessTool">Helderheid</string>
-    <string name="pesdk_adjustments_button_contrastTool">Contrast</string>
     <string name="pesdk_adjustments_button_saturationTool">Verzadiging</string>
     <string name="pesdk_adjustments_button_clarityTool">Lokaal contrast</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Zwarte tinten</string>
     <string name="pesdk_adjustments_button_whitesTool">Witte tinten</string>
     <string name="pesdk_adjustments_button_temperatureTool">Temperatuur</string>
     <string name="pesdk_adjustments_button_sharpnessTool">Scherpte</string>
     <string name="pesdk_adjustments_button_reset">Beginwaarden</string>
-    <string name="pesdk_focus_title_name">Focus</string>
     <string name="pesdk_focus_title_disabled">Geen</string>
     <string name="pesdk_focus_button_radial">Radiaal</string>
     <string name="pesdk_focus_button_linear">Lineair</string>
@@ -288,7 +263,6 @@
     <string name="pesdk_editor_save">Opslaan</string>
     <string name="pesdk_editor_text_exportProgressUnknown">Exporteren…</string>
     <string name="pesdk_editor_text_exportProgress" formatted="false">%s exporteren.</string>
-    <string name="pesdk_sticker_title_name">Sticker</string>
     <string name="pesdk_sticker_title_color">Stickerkleur</string>
     <string name="pesdk_sticker_title_options">Stickeropties</string>
     <string name="pesdk_sticker_button_add">Toevoegen</string>
@@ -298,11 +272,8 @@
     <string name="pesdk_sticker_button_straighten">Rechttrekken</string>
     <string name="pesdk_sticker_button_replace">Vervangen</string>
     <string name="pesdk_sticker_button_opacity">Dekking</string>
-    <string name="pesdk_sticker_button_contrast">Contrast</string>
     <string name="pesdk_sticker_button_saturation">Verzadiging</string>
     <string name="pesdk_sticker_button_brightness">Helderheid</string>
-    <string name="pesdk_sticker_category_name_custom">Uploads</string>
-    <string name="pesdk_overlay_title_name">Overlay</string>
     <string name="pesdk_overlay_button_blendModeNormal">Normaal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Donkerder</string>
     <string name="pesdk_overlay_button_blendModeScreen">Raster</string>
@@ -318,7 +289,6 @@
     <string name="pesdk_overlay_asset_mosaic">Mozaïek</string>
     <string name="pesdk_overlay_asset_paper">Papier</string>
     <string name="pesdk_overlay_asset_rain">Regen</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">Spiegelen H</string>
     <string name="pesdk_common_button_flipV">Spiegelen V</string>
     <string name="pesdk_common_button_undo">Ongedaan maken</string>
@@ -342,10 +312,6 @@
     <string name="pesdk_common_title_aquamarinColor">Aquamarijn</string>
     <string name="pesdk_common_title_pipettableColor">Met pipet kiezen</string>
     <string name="vesdk_video_trim_title_name">Titel afkappen</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Ik heb de app beveiligd met een wachtwoord, maar ben het wachtwoord nu vergeten. Wat kan ik doen\?</string>
     <string name="faq_2_text">Deïnstalleer en herinstalleer de app, of ga naar de app in de Android-instellingen via \"Apps (en meldingen)\" -&gt; \"App-info\" en kies via \"Opslagruimte\" voor \"Gegevens wissen\". Hiermee worden alleen de instellingen van deze app gewist.</string>
     <string name="faq_3_title">Hoe kan ik een map bovenaan vastzetten\?</string>
@@ -353,7 +319,6 @@
     <string name="faq_4_title">Hoe kan ik terug- of vooruitspoelen in video’s\?</string>
     <string name="faq_4_text">Dubbelklik op de zijkant van het scherm, of tik op de cijfers die de voortgang of de lengte van de video weergeven om resp. terug of vooruit te springen. Als de instelling om video\'s in een apart scherm te openen is ingeschakeld, dan kunnen ook horizontale veeggebaren worden gebruikt.</string>
     <string name="faq_5_title">Wat is het verschil tussen het verbergen en het uitsluiten van mappen\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Waarom zie ik mappen met stickers of covers van muziekalbums\?</string>
     <string name="faq_6_text">Soms worden er wat ongebruikelijke afbeeldingen van andere apps getoond. Deze zijn gemakkelijk uit het overzicht te halen door lang te drukken op de map en vervolgens te kiezen voor \"Uitsluiten\". In het daaropvolgende venster is ook de bovenliggende map te kiezen; dit zou het tonen van soortgelijke ongewenste items kunnen voorkomen.</string>
     <string name="faq_7_title">Een bepaalde map met afbeeldingen wordt niet getoond. Wat kan ik doen\?</string>
@@ -379,8 +344,4 @@
     <string name="faq_17_text">Dit werkt ook niet meer sinds de aanpassingen in Android 11: deze app mag niet meer door de mappen op het apparaat navigeren, maar is voortaan afhankelijk van de MediaStore van Android bij het ophalen van bestandsgegevens.</string>
     <string name="faq_18_title">Waarom zie ik advertenties bij het afspelen van video\'s\?</string>
     <string name="faq_18_text">Onze apps bevatten geen advertenties. Indien er wél advertenties verschijnen bij video\'s, dan kan dat alleen vanuit een andere app zijn. Probeer uit te vinden welke app als standaard-videospeler is ingesteld, zoek de app in de systeeminstellingen op en klik op \"Standaardwaarden wissen\". Kies de volgende keer bij het afspelen van een video welke app er gebruikt moet worden.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Omorganiser mapper ved at trække</string>
     <string name="reorder_by_dragging_pro">Omorganiser mapper ved at trække (Pro)</string>
     <string name="restore_to_path">Gendanner til \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filtrer medier</string>
     <string name="images">Billeder</string>
     <string name="videos">Videoer</string>
@@ -43,17 +42,12 @@
     <string name="portraits">Portrætter</string>
     <string name="no_media_with_filters">Der blev ikke fundet nogen filer med det valgte filter.</string>
     <string name="change_filters_underlined"><u>Skift filter</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Denne funktion skjuler mappen og dens eventuelle undermapper ved at oprette en \".nomedia\"-fil i den. Du kan se dem ved at klikke på \"Vis skjulte\" i indstillingerne. Fortsæt\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Ekskluder en overliggende mappe i stedet\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Skjulte mapper</string>
     <string name="manage_hidden_folders">Administrer skjulte mapper</string>
     <string name="hidden_folders_placeholder">Det ser ikke ud til at du har nogen skjulte mapper med en \".nomedia\"-fil.</string>
     <string name="hidden_all_files">Du skal give app\'en "Alle filer" tilladelsen for at se skjulte filer, ellers vil det ikke fungere.</string>
-    <string name="cant_unhide_folder">If a folder or one of its parent folders has a dot before its name, it is hidden and cannot be unhidden like this. You have to remove the dot by renaming it.</string>
-    <!-- Include folders -->
     <string name="include_folders">Inkluderede mapper</string>
     <string name="manage_included_folders">Administrer inkluderede mapper</string>
     <string name="add_folder">Tilføj mappe</string>
@@ -61,7 +55,6 @@
 \n
 \nDet vil ikke ekskludere andre mapper.</string>
     <string name="no_media_add_included">Ingen mediefiler er fundet. Dette kan løses ved manuelt at tilføje mapper som indeholder mediefiler.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Skaler valgte elementer og gem</string>
     <string name="width">Bredde</string>
     <string name="height">Højde</string>
@@ -76,8 +69,6 @@
         <item quantity="other">Kunne ikke ændre størrelse på %d billeder</item>
     </plurals>
     <string name="images_resized_successfully">Billedstørrelser ændret</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Grundlæggende editor</string>
     <string name="advanced_editor">Avanceret editor</string>
     <string name="rotate">Roter</string>
@@ -106,11 +97,7 @@
     <string name="flip_horizontally">Spejlvend vandret</string>
     <string name="flip_vertically">Spejlvend lodret</string>
     <string name="free_aspect_ratio">Fri</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Andet</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Indstil som baggrundsbillede</string>
     <string name="set_as_wallpaper_failed">Indstilling af billede som baggrund mislykkedes</string>
     <string name="set_as_wallpaper_with">Sæt som baggrundsbillede med:</string>
@@ -122,7 +109,6 @@
     <string name="lock_screen">Låseskærm</string>
     <string name="home_and_lock_screen">Hjemme- og låseskærm</string>
     <string name="allow_changing_aspect_ratio">Tillader ændring af billedformatet</string>
-    <!-- Slideshow -->
     <string name="slideshow">Lysbilledshow</string>
     <string name="interval">Frekvens</string>
     <string name="include_photos">Inkluder billeder</string>
@@ -131,15 +117,12 @@
     <string name="random_order">Tilfældig rækkefølge</string>
     <string name="move_backwards">Kør baglæns</string>
     <string name="loop_slideshow">Endeløs kørsel</string>
-    <string name="animation">Animation</string>
     <string name="no_animation">Ingen</string>
     <string name="fade">Udton</string>
     <string name="slide">Glid</string>
     <string name="slideshow_ended">Lysbilledshowet endte</string>
     <string name="no_media_for_slideshow">Der blev ikke fundet nogen mediefiler til lysbilledshowet</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Gruppér direkte undermapper</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Gruppér efter</string>
     <string name="do_not_group_files">Gruppér ikke filer</string>
     <string name="by_folder">Mappe</string>
@@ -153,10 +136,8 @@
     <string name="by_extension">Filendelse</string>
     <string name="show_file_count_section_header">Vis antal filer ved sektionsoverskrifter</string>
     <string name="grouping_and_sorting">Vær opmærksom på at gruppering og sortering er to uafhængige felter</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Mappe vist på widget:</string>
     <string name="show_folder_name">Vis mappenavn</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Afspil automatisk videoer</string>
     <string name="remember_last_video_position">Husk sidste position ved videoafspilning</string>
     <string name="loop_videos">Kør videoer i sløjfe</string>
@@ -220,21 +201,17 @@
     <string name="all_files">Alle filer</string>
     <string name="search_all_files">Søg i alle filer i stedet for mapper på hovedskærmen</string>
     <string name="show_all_folders">Vis en menuknap til at slå "Vis indholdet af alle mapper" til og fra hurtigt</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturebilleder</string>
     <string name="fullscreen_media">Fuldskærmsmedier</string>
     <string name="extended_details">Flere oplysninger</string>
     <string name="bottom_actions">Handlingsknapper</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Administrer synlige handlingsknapper</string>
     <string name="toggle_favorite">Favorit</string>
     <string name="toggle_file_visibility">Synlighed</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Brugerdefineret</string>
     <string name="pesdk_transform_button_resetCrop">Nulstil</string>
     <string name="pesdk_transform_button_squareCrop">Firkant</string>
     <string name="pesdk_transform_title_name">Transformér</string>
-    <string name="pesdk_filter_title_name">Filter</string>
     <string name="pesdk_filter_asset_none">Ingen</string>
     <string name="pesdk_adjustments_title_name">Justér</string>
     <string name="pesdk_adjustments_button_shadowTool">Skygger</string>
@@ -244,7 +221,6 @@
     <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
     <string name="pesdk_adjustments_button_saturationTool">Mætning</string>
     <string name="pesdk_adjustments_button_clarityTool">Klarhed</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Sorte</string>
     <string name="pesdk_adjustments_button_whitesTool">Hvide</string>
     <string name="pesdk_adjustments_button_temperatureTool">Temperatur</string>
@@ -252,7 +228,6 @@
     <string name="pesdk_adjustments_button_reset">Nulstil</string>
     <string name="pesdk_focus_title_name">Fokus</string>
     <string name="pesdk_focus_title_disabled">Ingen</string>
-    <string name="pesdk_focus_button_radial">Radial</string>
     <string name="pesdk_focus_button_linear">Lineær</string>
     <string name="pesdk_focus_button_mirrored">Spejlvendt</string>
     <string name="pesdk_focus_button_gaussian">Gaussisk</string>
@@ -278,7 +253,6 @@
     <string name="pesdk_brush_button_bringToFront">Til Front</string>
     <string name="pesdk_brush_button_delete">Slet</string>
     <string name="pesdk_brush_title_brushColor">Penselfarve</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Luk editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Vil du virkelig kassere ændringerne\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Ja</string>
@@ -301,9 +275,7 @@
     <string name="pesdk_sticker_button_contrast">Kontrast</string>
     <string name="pesdk_sticker_button_saturation">Mætning</string>
     <string name="pesdk_sticker_button_brightness">Lysstyrke</string>
-    <string name="pesdk_sticker_category_name_custom">Uploads</string>
     <string name="pesdk_overlay_title_name">Overlejring</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Formørk</string>
     <string name="pesdk_overlay_button_blendModeScreen">Skærm</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Overlejring</string>
@@ -318,7 +290,6 @@
     <string name="pesdk_overlay_asset_mosaic">Mosaik</string>
     <string name="pesdk_overlay_asset_paper">Papir</string>
     <string name="pesdk_overlay_asset_rain">Regn</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">Vend H</string>
     <string name="pesdk_common_button_flipV">Vend V</string>
     <string name="pesdk_common_button_undo">Fortryd</string>
@@ -334,18 +305,12 @@
     <string name="pesdk_common_title_orchidColor">Orkidé</string>
     <string name="pesdk_common_title_pinkColor">Lyserød</string>
     <string name="pesdk_common_title_redColor">Rød</string>
-    <string name="pesdk_common_title_orangeColor">Orange</string>
     <string name="pesdk_common_title_goldColor">Guld</string>
     <string name="pesdk_common_title_yellowColor">Gul</string>
     <string name="pesdk_common_title_oliveColor">Oliven</string>
     <string name="pesdk_common_title_greenColor">Grøn</string>
     <string name="pesdk_common_title_aquamarinColor">Akvamarin</string>
     <string name="pesdk_common_title_pipettableColor">Pipetterbar farve</string>
-    <string name="vesdk_video_trim_title_name">Trim</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Jeg har låst appen med en adgangskode, men jeg har glemt den. Hvad kan jeg gøre\?</string>
     <string name="faq_2_text">Du har to muligheder. Du kan enten geninstallere appen, eller finde den i indstillingerne på din enhed og vælge \"Ryd data\". Dette vil nulstille alle dine indstillinger, det vil ikke slette nogen mediefiler.</string>
     <string name="faq_3_title">Hvordan kan jeg altid få et bestemt album vist i toppen\?</string>
@@ -353,7 +318,6 @@
     <string name="faq_4_title">Hvordan kan jeg spole fremad i videoer\?</string>
     <string name="faq_4_text">Du kan gøre det ved at dobbelttrykke på siden af skærmen eller ved at trykke på teksten for aktuel eller maksimal varighed nær søgelinjen. Hvis du aktiverer åbning af videoer på en separat skærm i appindstillingerne, kan du også bruge horisontale bevægelser.</string>
     <string name="faq_5_title">Hvad er forskellen på at skjule og ekskludere en mappe\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Hvorfor dukker mapper med musikomslag eller klistermærker op\?</string>
     <string name="faq_6_text">Det kan ske at du vil se nogle udsædvanlige albummer. Du kan nemt ekskludere disse ved at holde fingeren nede på disse og vælge Ekskluder. I den næste dialogboks kan du vælge den ovenliggende mappe, da andre relaterede albummer så sandsynligvis også vil blive forhindret i at blive vist.</string>
     <string name="faq_7_title">En mappe med billeder dukker ikke op, eller den viser ikke alle elementer. Hvad kan jeg gøre\?</string>
@@ -379,8 +343,4 @@
     <string name="faq_17_text">Det holdt op med at virke på grund af systemændringerne, der fulgte med Android 11, appen kan ikke længere gennemse rigtige mapper, den er afhængig af den såkaldte MediaStore til at hente data.</string>
     <string name="faq_18_title">Hvorfor ser jeg reklamer under videoafspilning\?</string>
     <string name="faq_18_text">Vores apps har ingen reklamer overhovedet. Hvis du ser dem under videoafspilning, bruger du videoafspilleren fra en anden app. Prøv at finde din standard videoafspiller i enhedens indstillinger, og vælg \"Ryd standarder\" på den. Næste gang du forsøger at åbne en videofil, vil du se en prompt, hvor du kan vælge hvilken app du vil bruge.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

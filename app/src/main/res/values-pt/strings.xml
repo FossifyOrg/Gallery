@@ -14,7 +14,6 @@
     <string name="other_folder">Outra pasta</string>
     <string name="show_on_map">Mostrar no mapa</string>
     <string name="unknown_location">Localização desconhecida</string>
-    <string name="volume">Volume</string>
     <string name="brightness">Brilho</string>
     <string name="lock_orientation">Bloquear orientação</string>
     <string name="unlock_orientation">Desbloquear orientação</string>
@@ -33,7 +32,6 @@
     <string name="reorder_by_dragging">Organizar pastas por arrasto</string>
     <string name="reorder_by_dragging_pro">Organizar pastas por arrasto (Pro)</string>
     <string name="restore_to_path">A restaurar para \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filtrar multimédia</string>
     <string name="images">Imagens</string>
     <string name="videos">Vídeos</string>
@@ -43,17 +41,12 @@
     <string name="portraits">Retratos</string>
     <string name="no_media_with_filters">Não foram encontrados ficheiros que cumpram os requisitos.</string>
     <string name="change_filters_underlined"><u>Alterar filtros</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Esta função oculta a pasta, adicionando-lhe um ficheiro \'.nomedia\' e ocultará também todas as subpastas nela existentes. Pode ver as pastas com a opção \'Mostrar pastas ocultas\'. Continuar\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Excluir antes a pasta superior\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Pastas ocultas</string>
     <string name="manage_hidden_folders">Gerir pastas ocultas</string>
     <string name="hidden_folders_placeholder">Parece que não existem pastas ocultas com ficheiros \".nomedia\".</string>
     <string name="hidden_all_files">Tem que conceder o acesso a todos os ficheiros para ver os ficheiros ocultos. Se não o fizer, a aplicação não funcionará corretamente.</string>
-    <string name="cant_unhide_folder">If a folder or one of its parent folders has a dot before its name, it is hidden and cannot be unhidden like this. You have to remove the dot by renaming it.</string>
-    <!-- Include folders -->
     <string name="include_folders">Pastas incluídas</string>
     <string name="manage_included_folders">Gerir pastas incluídas</string>
     <string name="add_folder">Adicionar pasta</string>
@@ -61,7 +54,6 @@
 \n
 \nAdicionar itens aqui não exclui as restantes pastas.</string>
     <string name="no_media_add_included">Não foram encontrados ficheiros multimédia. Pode adicionar manualmente as pastas que contenham esses ficheiros.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Redimensionar seleção e guardar</string>
     <string name="width">Largura</string>
     <string name="height">Altura</string>
@@ -69,7 +61,6 @@
     <string name="invalid_values">Introduza uma resolução válida</string>
     <string name="resize_multiple_images">Redimensionar várias imagens</string>
     <string name="resize_factor">Fator de escala</string>
-    <string name="resize_factor_info">Resize images to the given percentage, value must be within 10 and 90.</string>
     <string name="resize_factor_error">Introduza um número entre 10 e 90</string>
     <plurals name="failed_to_resize_images">
         <item quantity="one">Falha ao redimensionar %d imagem</item>
@@ -77,8 +68,6 @@
         <item quantity="other">Falha ao redimensionar %d imagens</item>
     </plurals>
     <string name="images_resized_successfully">Imagens redimensionadas com sucesso</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Editor básico</string>
     <string name="advanced_editor">Editor avançado</string>
     <string name="rotate">Rodar</string>
@@ -107,11 +96,7 @@
     <string name="flip_horizontally">Horizontalmente</string>
     <string name="flip_vertically">Verticalmente</string>
     <string name="free_aspect_ratio">Livre</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Outra</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Definir como fundo de ecrã</string>
     <string name="set_as_wallpaper_failed">Falha ao definir o fundo de ecrã</string>
     <string name="set_as_wallpaper_with">Definir fundo com:</string>
@@ -123,7 +108,6 @@
     <string name="lock_screen">Ecrã de bloqueio</string>
     <string name="home_and_lock_screen">Ecrã principal e ecrã de bloqueio</string>
     <string name="allow_changing_aspect_ratio">Permitir alterar a proporção</string>
-    <!-- Slideshow -->
     <string name="slideshow">Apresentação</string>
     <string name="interval">Intervalo</string>
     <string name="include_photos">Incluir fotos</string>
@@ -138,9 +122,7 @@
     <string name="slide">Deslizar</string>
     <string name="slideshow_ended">Apresentação terminada</string>
     <string name="no_media_for_slideshow">Não foram encontrados ficheiros para a apresentação</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Agrupar subpastas</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Agrupar por</string>
     <string name="do_not_group_files">Não agrupar ficheiros</string>
     <string name="by_folder">Pasta</string>
@@ -154,10 +136,8 @@
     <string name="by_extension">Extensão</string>
     <string name="show_file_count_section_header">Mostrar contagem no título da secção</string>
     <string name="grouping_and_sorting">Tenha em atenção de que agrupamento e ordenação são campos independentes</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Pasta mostrada no widget:</string>
     <string name="show_folder_name">Mostrar nome da pasta</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Reproduzir vídeos automaticamente</string>
     <string name="remember_last_video_position">Memorizar posição da reprodução</string>
     <string name="loop_videos">Vídeos em ciclo</string>
@@ -221,16 +201,13 @@
     <string name="all_files">Todos os ficheiros</string>
     <string name="search_all_files">Pesquisar todos os ficheiros em vez de pastas no ecrã principal</string>
     <string name="show_all_folders">Mostrar botão para alternar rapidamente a opção Mostrar conteúdo de todas as pastas</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturas</string>
     <string name="fullscreen_media">Multimédia em ecrã completo</string>
     <string name="extended_details">Mais detalhes</string>
     <string name="bottom_actions">Ações em baixo</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Gerir exibição dos botões de ação</string>
     <string name="toggle_favorite">Alternar favorito</string>
     <string name="toggle_file_visibility">Alternar visibilidade dos ficheiros</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Personalizado</string>
     <string name="pesdk_transform_button_resetCrop">Repor</string>
     <string name="pesdk_transform_button_squareCrop">Quadrado</string>
@@ -253,8 +230,6 @@
     <string name="pesdk_adjustments_button_reset">Repor</string>
     <string name="pesdk_focus_title_name">Foco</string>
     <string name="pesdk_focus_title_disabled">Nenhum</string>
-    <string name="pesdk_focus_button_radial">Radial</string>
-    <string name="pesdk_focus_button_linear">Linear</string>
     <string name="pesdk_focus_button_mirrored">Espelhado</string>
     <string name="pesdk_focus_button_gaussian">Gaussiano</string>
     <string name="pesdk_text_title_input">Adicionar texto</string>
@@ -279,7 +254,6 @@
     <string name="pesdk_brush_button_bringToFront">Para a frente</string>
     <string name="pesdk_brush_button_delete">Apagar</string>
     <string name="pesdk_brush_title_brushColor">Cor do pincel</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Fechar editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Tem a certeza de que pretende descartar as alterações\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Sim</string>
@@ -289,7 +263,6 @@
     <string name="pesdk_editor_save">Guardar</string>
     <string name="pesdk_editor_text_exportProgressUnknown">A exportar…</string>
     <string name="pesdk_editor_text_exportProgress" formatted="false">A exportar %s.</string>
-    <string name="pesdk_sticker_title_name">Sticker</string>
     <string name="pesdk_sticker_title_color">Cor do sticker</string>
     <string name="pesdk_sticker_title_options">Opções do sticker</string>
     <string name="pesdk_sticker_button_add">Adicionar</string>
@@ -304,7 +277,6 @@
     <string name="pesdk_sticker_button_brightness">Brilho</string>
     <string name="pesdk_sticker_category_name_custom">Carregamentos</string>
     <string name="pesdk_overlay_title_name">Sobreposição</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Escurecer</string>
     <string name="pesdk_overlay_button_blendModeScreen">Ecrã</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Sobreposição</string>
@@ -319,7 +291,6 @@
     <string name="pesdk_overlay_asset_mosaic">Mosaico</string>
     <string name="pesdk_overlay_asset_paper">Papel</string>
     <string name="pesdk_overlay_asset_rain">Chuva</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">Inversão horizontal</string>
     <string name="pesdk_common_button_flipV">Inversão vertical</string>
     <string name="pesdk_common_button_undo">Desfazer</string>
@@ -343,10 +314,6 @@
     <string name="pesdk_common_title_aquamarinColor">Aquamarino</string>
     <string name="pesdk_common_title_pipettableColor">Pipeta de cores</string>
     <string name="vesdk_video_trim_title_name">Recortar</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Bloqueei a aplicação com uma palavra-passe mas agora esqueci-me dela. O que posso fazer\?</string>
     <string name="faq_2_text">Existem duas soluções. Reinstala a aplicação ou, nas Definições do sistema –&gt; Gerir aplicações –&gt; Informações da aplicação, seleccone Limpar dados. Reiniciará assim todas as suas definições na aplicação mas não apagará os seus ficheiros multimedia.</string>
     <string name="faq_3_title">Como posso fazer para que um álbum seja sempre mostrado no topo\?</string>
@@ -354,7 +321,6 @@
     <string name="faq_4_title">Como posso fazer avançar rápido os videos\?</string>
     <string name="faq_4_text">Dando dois toques nas margens ecrã ou então dando um toque em cima da indicação de duração junto à barra de pesquisa. E, se a opção de abrir videos noutro ecrã estiver habilitada, pode também fazê-lo por gestos.</string>
     <string name="faq_5_title">Qual a diferença entre ocultar e excluir uma pasta\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Porque são apresentadas capas de albuns ou stickers\?</string>
     <string name="faq_6_text">Pode dar-se o caso de alguns items invulgares aparecerem. Consegue exclui-los premindo longamente e seleccionando Excluir. Na caixa de diálogo seguinte, escolha a pasta superior na hierarquia. Provavelmente, isso irá impedir que outros itens semelhantes sejam apresentados também.</string>
     <string name="faq_7_title">Uma pasta com imagens não é apresentada ou não mostra todos os itens lá contidos. O que posso fazer\?</string>

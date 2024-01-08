@@ -4,7 +4,6 @@
     <string name="edit">Уредити</string>
     <string name="open_camera">Отвори камеру</string>
     <string name="hidden">(скривено)</string>
-    <string name="excluded">(excluded)</string>
     <string name="pin_folder">Прикачи фасциклу</string>
     <string name="unpin_folder">Раскачи фасциклу</string>
     <string name="pin_to_the_top">Закачи на врх</string>
@@ -33,7 +32,6 @@
     <string name="reorder_by_dragging">Промените редослед фасцикли превлачењем</string>
     <string name="reorder_by_dragging_pro">Промените редослед директоријума превлачењем (Про)</string>
     <string name="restore_to_path">Враћање на \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Филтрирај медију</string>
     <string name="images">Слике</string>
     <string name="videos">Видео снимци</string>
@@ -43,17 +41,12 @@
     <string name="portraits">Портрети</string>
     <string name="no_media_with_filters">Нема пронађених медија датотека са изабраним филтерима.</string>
     <string name="change_filters_underlined"><u>Измени филтере</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ова функција скрива фасциклу додавањем \'.nomedia\' фајла у њу, она ће такође сакрити све подфасцикле. Можете их видети притиском на опцију \'Прикажи скривене ставке\' у подешавањима. Настави\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Изузми родитеља уместо овог\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Скривене фасцикле</string>
     <string name="manage_hidden_folders">Управљај скривеним фасциклама</string>
     <string name="hidden_folders_placeholder">Изгледа да немате ни једну фасциклу скривену са \".nomedia\" датотеком.</string>
-    <string name="hidden_all_files">You have to grant the app All Files access to see hidden files, else it cannot work.</string>
     <string name="cant_unhide_folder">Уколико фасцикла или нека од фасцикли које је садржавају имају тачку на почетку имена, не могу се открити на овај начин. Морате да уклоните тачку из нјеног имена да бисте је открили.</string>
-    <!-- Include folders -->
     <string name="include_folders">Укључене фасцикле</string>
     <string name="manage_included_folders">Управљај укљученим фасциклама</string>
     <string name="add_folder">Додај фасциклу</string>
@@ -61,25 +54,12 @@
 \n
 \nДодавањем неких ставки овде нећете изузети неку другу фасциклу.</string>
     <string name="no_media_add_included">Није пронађена ниједна медијска датотека. Можете га решити тако што ћете ручно додати фасцикле које садрже медијске датотеке.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Промени величину одабраног и сачувај</string>
     <string name="width">Ширина</string>
     <string name="height">Висина</string>
     <string name="keep_aspect_ratio">Задржи пропорције</string>
     <string name="invalid_values">Унесите исправну резолуцију</string>
-    <string name="resize_multiple_images">Resize multiple images</string>
-    <string name="resize_factor">Resize factor</string>
-    <string name="resize_factor_info">Resize images to the given percentage, value must be within 10 and 90.</string>
-    <string name="resize_factor_error">Enter a number between 10 and 90</string>
-    <plurals name="failed_to_resize_images">
-        <item quantity="one">Failed to resize %d image</item>
-        <item quantity="other">Failed to resize %d images</item>
-    </plurals>
-    <string name="images_resized_successfully">Images resized successfully</string>
-    <!-- Editor -->
     <string name="editor">Едитор</string>
-    <string name="basic_editor">Basic Editor</string>
-    <string name="advanced_editor">Advanced Editor</string>
     <string name="rotate">Ротирај</string>
     <string name="invalid_image_path">Неисправна стаза слике</string>
     <string name="invalid_video_path">Неважећа путања видеа</string>
@@ -99,18 +79,11 @@
     <string name="rotate_left">Ротирај лево</string>
     <string name="rotate_right">Ротирај десно</string>
     <string name="rotate_one_eighty">Ротирај за 180º</string>
-    <string name="transform">Transform</string>
-    <string name="crop">Crop</string>
-    <string name="draw">Draw</string>
     <string name="flip">Заврти</string>
     <string name="flip_horizontally">Заврти хоризонтално</string>
     <string name="flip_vertically">Заврти вертикално</string>
     <string name="free_aspect_ratio">Слободна пропорција</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Друга пропорција</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Подеси као позадину</string>
     <string name="set_as_wallpaper_failed">Подешавање позадине неуспешно</string>
     <string name="set_as_wallpaper_with">Подеси као позадину са:</string>
@@ -122,7 +95,6 @@
     <string name="lock_screen">Закључај екран</string>
     <string name="home_and_lock_screen">Почетни и закључани екран</string>
     <string name="allow_changing_aspect_ratio">Дозволите промену односа ширине и висине</string>
-    <!-- Slideshow -->
     <string name="slideshow">Слајдшоу</string>
     <string name="interval">Интервал</string>
     <string name="include_photos">Садржи слике</string>
@@ -132,14 +104,10 @@
     <string name="move_backwards">Помери уназад</string>
     <string name="loop_slideshow">Понављај слајдшоу</string>
     <string name="animation">Анимација</string>
-    <string name="no_animation">None</string>
     <string name="fade">Увенути</string>
-    <string name="slide">Slide</string>
     <string name="slideshow_ended">Слајдшоу се завршио</string>
     <string name="no_media_for_slideshow">Нису пронађени медији за слајдшоу</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Групирај директне подфасцикле</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Групиши према</string>
     <string name="do_not_group_files">Не групиши датотеке</string>
     <string name="by_folder">Фасцикла</string>
@@ -153,10 +121,8 @@
     <string name="by_extension">Тип датотеке</string>
     <string name="show_file_count_section_header">Прикажи број датотека у заглављима одељка</string>
     <string name="grouping_and_sorting">Имајте на уму да су груписање и сортирање 2 различите ствари</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Фасцикла приказана у виџету:</string>
     <string name="show_folder_name">Прикажи име фасцикле</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Пуштај видео снимке аутоматски</string>
     <string name="remember_last_video_position">Запамти позицију задње пуштаног видеа</string>
     <string name="loop_videos">Пуштај видео снимке у недоглед</string>
@@ -208,8 +174,6 @@
     <string name="square">Квадрат</string>
     <string name="rounded_corners">Заобљени углови</string>
     <string name="export_favorite_paths">Извезите путање омиљених датотека</string>
-    <string name="import_favorite_paths">Import favorites</string>
-    <string name="paths_imported_successfully">Paths imported successfully</string>
     <string name="media_management_prompt">Да бисте били сигурни да све операције са датотекама раде поуздано, учините ову апликацију апликацијом за управљање медијима у подешавањима уређаја.</string>
     <string name="password_protect_excluded">Заштита лозинком искључена видљивост фасцикле</string>
     <string name="media_management_manual">Нешто је пошло наопако, идите на Подешавања уређаја – Апликације – Приступ посебним апликацијама – Апликације за управљање медијима и дозволите овој апликацији да управља медијима.</string>
@@ -218,18 +182,13 @@
     <string name="alternative_media_access">Алтернативно, можете дозволити приступ само медијским датотекама. У том случају нећете моћи да радите са скривеним датотекама.</string>
     <string name="media_only">Само медији</string>
     <string name="all_files">Све датотеке</string>
-    <string name="search_all_files">Search all files instead of folders on the main screen</string>
-    <string name="show_all_folders">Show a menu button for toggling Show All Folders Content quickly</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Сличице</string>
     <string name="fullscreen_media">Медији преко целог екрана</string>
     <string name="extended_details">Додатни детаљи</string>
     <string name="bottom_actions">Акције на дну</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Управљај са видљивим акцијама на дну</string>
     <string name="toggle_favorite">Укључите фаворит</string>
     <string name="toggle_file_visibility">Укључи/искључи видљивост датотеке</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Прилагођен</string>
     <string name="pesdk_transform_button_resetCrop">Ресетовање</string>
     <string name="pesdk_transform_button_squareCrop">Квадрат</string>
@@ -249,24 +208,11 @@
     <string name="pesdk_adjustments_button_whitesTool">Белци</string>
     <string name="pesdk_adjustments_button_temperatureTool">Температура</string>
     <string name="pesdk_adjustments_button_sharpnessTool">Оштрина</string>
-    <string name="pesdk_adjustments_button_reset">Reset</string>
     <string name="pesdk_focus_title_name">Концентрација</string>
-    <string name="pesdk_focus_title_disabled">None</string>
     <string name="pesdk_focus_button_radial">Радиал</string>
-    <string name="pesdk_focus_button_linear">Linear</string>
     <string name="pesdk_focus_button_mirrored">Огледало</string>
-    <string name="pesdk_focus_button_gaussian">Gaussian</string>
-    <string name="pesdk_text_title_input">Add text</string>
-    <string name="pesdk_text_title_name">Text</string>
-    <string name="pesdk_text_title_options">Text Options</string>
-    <string name="pesdk_text_title_textColor">Text Color</string>
-    <string name="pesdk_text_title_font">Font</string>
-    <string name="pesdk_text_button_add">Add</string>
     <string name="pesdk_text_button_edit">Уредити</string>
     <string name="pesdk_text_button_straighten">Исправити</string>
-    <string name="pesdk_text_button_font">Font</string>
-    <string name="pesdk_text_button_color">Color</string>
-    <string name="pesdk_text_button_backgroundColor">BG Color</string>
     <string name="pesdk_text_button_alignment">Поравнање</string>
     <string name="pesdk_text_button_bringToFront">Напред</string>
     <string name="pesdk_text_button_delete">Избриши</string>
@@ -276,9 +222,7 @@
     <string name="pesdk_brush_button_size">Величина</string>
     <string name="pesdk_brush_button_hardness">Тврдоћа</string>
     <string name="pesdk_brush_button_bringToFront">Напред</string>
-    <string name="pesdk_brush_button_delete">Delete</string>
     <string name="pesdk_brush_title_brushColor">Боја четке</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Затворити уређивач\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Да ли заиста желите да одбаците промене\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Да</string>
@@ -339,13 +283,8 @@
     <string name="pesdk_common_title_yellowColor">Жута</string>
     <string name="pesdk_common_title_oliveColor">Маслина</string>
     <string name="pesdk_common_title_greenColor">Зеленo</string>
-    <string name="pesdk_common_title_aquamarinColor">Aquamarin</string>
     <string name="pesdk_common_title_pipettableColor">Боја за пипетирање</string>
     <string name="vesdk_video_trim_title_name">Трим</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Закључао сам апликацију са шифром и заборавио шифру. Како да решим проблем\?</string>
     <string name="faq_2_text">Постоје 2 начина. Можете да обришете апликацију, или да нађете апликацију у подешавањима и кликнете на \"Обриши податке\". То ће ресетовати сва подешавања, али неће обрисати медија фајлове.</string>
     <string name="faq_3_title">Како да подесим да се неки албум увек појављује на врху\?</string>
@@ -353,7 +292,6 @@
     <string name="faq_4_title">Како да премотавам видео снимке\?</string>
     <string name="faq_4_text">То можете да урадите тако што ћете двапут куцнути на бочну страну екрана или куцнути текст тренутног или максималног трајања близу траке за претрагу. Ако омогућите отварање видео записа на посебном екрану у подешавањима апликације, можете да користите и хоризонталне покрете.</string>
     <string name="faq_5_title">Која је разлика између скривања и изузимања фасцикле\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Зашто се фасцикле са сликама музичких извођача или налепницама приказују\?</string>
     <string name="faq_6_text">Може се десити да се приказују неки необични албуми. Можете их лако изузети дугим притиском, а затим одабиром Изузми. У следећем дијалогу можете изабрати фасциклу родитеља, шансе су да ће спречити све остале албуме од приказивања.</string>
     <string name="faq_7_title">Фасцикла са сликама се не приказује, или не приказује све ставке. Шта да урадим\?</string>
@@ -379,8 +317,4 @@
     <string name="faq_17_text">То је престало да ради због системских промена које су стигле и са Андроид 11, апликација више не може да прегледа праве фасцикле, ослања се на такозвани МедиаСторе при преношењу података.</string>
     <string name="faq_18_title">Зашто видим огласе током репродукције видео записа\?</string>
     <string name="faq_18_text">Наше апликације немају никакве огласе. Ако их видите током репродукције видео записа, сигурно користите неки други видео плејер апликација. Покушајте да пронађете подразумевани видео плејер у поставкама уређаја, а затим на њему урадите \"Обриши подразумеване вредности\". Када се следећи пут позовете на неку намеру видео записа видећете одзивник за одабирач апликација, где можете да изаберете коју апликацију желите да користите.</string>
-    <!--
-        haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>
