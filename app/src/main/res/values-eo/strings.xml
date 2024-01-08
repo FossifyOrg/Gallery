@@ -23,30 +23,4 @@
     <string name="raw_images">RAW-bildoj</string>
     <string name="svgs">SVG-bildoj</string>
     <string name="portraits">Portretoj</string>
-    <string name="included_activity_placeholder">If you have some folders which contain media, but were not recognized by the app, you can add them manually here.
-\n
-\nAdding some items here will not exclude any other folder.</string>
-    <string name="pesdk_brush_button_color">Koloro</string>
-    <string name="pesdk_brush_button_size">Grando</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">Jes</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">Ne</string>
-    <string name="pesdk_overlay_asset_paper">Papero</string>
-    <string name="pesdk_overlay_asset_rain">Pluvo</string>
-    <string name="pesdk_common_button_undo">Malfari</string>
-    <string name="pesdk_common_button_redo">Refari</string>
-    <string name="pesdk_common_title_whiteColor">Blanka</string>
-    <string name="pesdk_common_title_grayColor">Griza</string>
-    <string name="pesdk_common_title_blackColor">Nigra</string>
-    <string name="pesdk_common_title_lightBlueColor">Helblua</string>
-    <string name="pesdk_common_title_blueColor">Blua</string>
-    <string name="pesdk_common_title_purpleColor">Purpura</string>
-    <string name="pesdk_common_title_orchidColor">Orkida</string>
-    <string name="pesdk_common_title_pinkColor">Roza</string>
-    <string name="pesdk_common_title_redColor">Ruĝa</string>
-    <string name="pesdk_common_title_orangeColor">Oranĝa</string>
-    <string name="pesdk_common_title_goldColor">Ora</string>
-    <string name="pesdk_common_title_yellowColor">Flava</string>
-    <string name="pesdk_common_title_oliveColor">Oliva</string>
-    <string name="pesdk_common_title_greenColor">Verda</string>
-    <string name="pesdk_common_title_aquamarinColor">Marblua</string>
-    </resources>
+</resources>

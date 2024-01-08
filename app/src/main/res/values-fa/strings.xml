@@ -41,8 +41,4 @@
     <string name="no_media_with_filters">هیچ پروندهٔ رسانه‌ای با پالایه‌های گزیده شده، یافت نشد.</string>
     <string name="change_filters_underlined"><u>تغییر پالایه‌ها</u></string>
     <string name="hide_folder_description">این تابع شاخه را با افزودن پروندهٔ «‎.nomedia» در آن پنهان می‌کند، این باعث پنهان شدن تمام زیرشاخه‌ها نیز خواهد شد. شما می‌توانید با تغییر حالت «نمایش موارد پنهان» در تنظیمات آن‌ها را ببینید. ادامه می‌دهید؟</string>
-    <string name="included_activity_placeholder">If you have some folders which contain media, but were not recognized by the app, you can add them manually here.
-\n
-\nAdding some items here will not exclude any other folder.</string>
-    <string name="faq_16_text">Starting with Android 11 you cannot hide or unhide files or folders anymore, you cannot see the hidden ones in gallery apps either. You will have to use some file manager for that.</string>
-    </resources>
+</resources>

@@ -19,9 +19,6 @@
     <string name="videos">भिडियोहरु</string>
     <string name="raw_images">RAW ईमेजहरु</string>
     <string name="add_folder">फोल्डर थप्नुहोस</string>
-    <string name="included_activity_placeholder">If you have some folders which contain media, but were not recognized by the app, you can add them manually here.
-\n
-\nAdding some items here will not exclude any other folder.</string>
     <string name="width">चाैडाई</string>
     <string name="height">उचाई</string>
     <string name="editor">सम्पादक</string>
@@ -46,29 +43,4 @@
     <string name="screen_rotation_system_setting">सिस्टम सेटिङ</string>
     <string name="speed">गति</string>
     <string name="show_image_file_types">तस्बिरको फाईल किसिम देखाउनुहोस</string>
-    <string name="pesdk_filter_asset_none">केहिहोईन</string>
-    <string name="pesdk_adjustments_button_brightnessTool">उज्यालोपन</string>
-    <string name="pesdk_adjustments_button_temperatureTool">तापक्रम</string>
-    <string name="pesdk_text_title_name">टेक्स</string>
-    <string name="pesdk_text_title_textColor">टेक्सको रङ</string>
-    <string name="pesdk_text_title_font">फन्ट</string>
-    <string name="pesdk_text_button_edit">सम्पादन</string>
-    <string name="pesdk_text_button_font">फन्ट</string>
-    <string name="pesdk_text_button_color">रङ</string>
-    <string name="pesdk_brush_button_delete">मेटाउनु</string>
-    <string name="pesdk_editor_title_name">सम्पादक</string>
-    <string name="pesdk_editor_cancel">रद्द</string>
-    <string name="pesdk_editor_accept">स्विकार</string>
-    <string name="pesdk_editor_save">बचत</string>
-    <string name="pesdk_common_title_transparentColor">पारदर्शी</string>
-    <string name="pesdk_common_title_whiteColor">सेतो</string>
-    <string name="pesdk_common_title_grayColor">खरानि</string>
-    <string name="pesdk_common_title_blackColor">कालो</string>
-    <string name="pesdk_common_title_blueColor">निलो</string>
-    <string name="pesdk_common_title_redColor">रातो</string>
-    <string name="pesdk_common_title_orangeColor">सुन्तला</string>
-    <string name="pesdk_common_title_goldColor">सुन</string>
-    <string name="pesdk_common_title_yellowColor">पहेलो</string>
-    <string name="pesdk_common_title_greenColor">हरियो</string>
-    <string name="faq_16_text">Starting with Android 11 you cannot hide or unhide files or folders anymore, you cannot see the hidden ones in gallery apps either. You will have to use some file manager for that.</string>
-    </resources>
+</resources>
