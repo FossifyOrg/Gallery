@@ -362,4 +362,7 @@
     <string name="faq_17_text">To również przestało działać z powodu zmian systemowych, które pojawiły się w Androidzie 11. Aplikacja nie może już przeglądać prawdziwych folderów i polega na tak zwanym MediaStore przy pobieraniu danych.</string>
     <string name="faq_18_title">Dlaczego widzę reklamy podczas odtwarzania wideo\?</string>
     <string name="faq_18_text">Nasze aplikacje nie mają żadnych reklam. Jeśli widzisz je podczas odtwarzania wideo, musisz używać odtwarzacza wideo innej aplikacji. Spróbuj znaleźć domyślny odtwarzacz wideo w ustawieniach urządzenia, a następnie wykonaj na nim „Wyczyść domyślne”. Następnym razem, gdy spróbujesz odtworzyć wideo, zobaczysz ekran wyboru aplikacji, gdzie możesz wybrać, którą chcesz użyć.</string>
+    <string name="pesdk_common_title_orchidColor">Orchid</string>
+    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
+    <string name="by_folder">Folder</string>
 </resources>
