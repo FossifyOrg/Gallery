@@ -344,4 +344,16 @@
     <string name="faq_17_text">Dit werkt ook niet meer sinds de aanpassingen in Android 11: deze app mag niet meer door de mappen op het apparaat navigeren, maar is voortaan afhankelijk van de MediaStore van Android bij het ophalen van bestandsgegevens.</string>
     <string name="faq_18_title">Waarom zie ik advertenties bij het afspelen van video\'s\?</string>
     <string name="faq_18_text">Onze apps bevatten geen advertenties. Indien er wél advertenties verschijnen bij video\'s, dan kan dat alleen vanuit een andere app zijn. Probeer uit te vinden welke app als standaard-videospeler is ingesteld, zoek de app in de systeeminstellingen op en klik op \"Standaardwaarden wissen\". Kies de volgende keer bij het afspelen van een video welke app er gebruikt moet worden.</string>
+    <string name="interval">Interval</string>
+    <string name="pesdk_filter_title_name">Filter</string>
+    <string name="pesdk_sticker_title_name">Sticker</string>
+    <string name="pesdk_sticker_category_name_custom">Uploads</string>
+    <string name="pesdk_adjustments_button_contrastTool">Contrast</string>
+    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
+    <string name="pesdk_focus_title_name">Focus</string>
+    <string name="pesdk_overlay_title_name">Bedekken</string>
+    <string name="pesdk_overlay_asset_vintage">Ouderwets</string>
+    <string name="volume">Volume</string>
+    <string name="wallpaper">Achtergrond</string>
+    <string name="pesdk_sticker_button_contrast">Contrast</string>
 </resources>
