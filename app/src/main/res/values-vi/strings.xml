@@ -306,8 +306,5 @@
     <string name="faq_14_text">Bạn có thể nhấn mục menu \"Tạm thời hiển thị các mục bị ẩn\" ở màn hình chính hoặc chuyển đổi \"Hiển thị các mục bị ẩn\" trong Cài đặt ứng dụng để xem mục bị ẩn. Nếu bạn muốn bỏ ẩn nó, chỉ cần nhấn và giữ \"Bỏ ẩn\". Các thư mục được ẩn bằng cách thêm tệp ẩn \".nomedia\" vào chúng, bạn cũng có thể xóa tệp bằng bất kỳ trình quản lý tệp nào. Note that hiding works recursively though, so if you hide a folder, all subfolders will become hidden too. So for unhiding the subfolders you have to unhide the parent folder.</string>
     <string name="faq_15_title">Tại sao ứng dụng chiếm quá nhiều dung lượng \?</string>
     <string name="faq_15_text">Bộ nhớ cache ứng dụng có thể mất tới 250MB, nó đảm bảo tải hình ảnh nhanh hơn. Nếu ứng dụng chiếm nhiều dung lượng hơn, rất có thể là do bạn có nhiều mục trong Thùng rác. Những tập tin đó được tính vào kích thước ứng dụng. Bạn có thể xóa thùng rác bằng cách mở nó và xóa tất cả các tệp hoặc từ Cài đặt ứng dụng. Mọi tệp trong Thùng rác sẽ tự động bị xóa sau 30 ngày.</string>
-    <string name="faq_16_title">What happened to file and folder hiding and why cannot I see hidden items anymore\?</string>
     <string name="faq_16_text">Bắt đầu với Android 11, bạn không thể ẩn hoặc hiện các tệp hoặc thư mục nữa, bạn cũng không thể nhìn thấy những tệp hoặc thư mục bị ẩn trong ứng dụng thư viện. Bạn sẽ phải sử dụng một số trình quản lý tệp cho điều đó.</string>
-    <string name="faq_17_title">Why cannot I include missing folders anymore\?</string>
-    <string name="faq_18_title">Why do I see ads during video playback\?</string>
-</resources>
+    </resources>

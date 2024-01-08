@@ -348,19 +348,12 @@
     <string name="faq_17_text">Eso dejó de funcionar debido a los cambios en el sistema que vinieron con Android 11 también, la aplicación no puede navegar por las carpetas reales más, se basa en el llamado MediaStore en la obtención de datos.</string>
     <string name="faq_18_title">¿Por qué veo anuncios durante la reproducción de vídeo\?</string>
     <string name="faq_18_text">Nuestras aplicaciones no tienen anuncios de ninguna clase. Si los ve durante la reproducción de video, entonces debe estar usando el reproductor de vídeo de otra aplicación. Pruebe encontrando su reproductor de video por defecto en los ajustes del dispositivo, luego realice un \"Borrar predeterminados\" en él. La siguiente vez que vaya a ver un vídeo verá un selector de aplicaciones, en el cual puede seleccionar que aplicación quiere usar para reproducirlo.</string>
-    <string name="pesdk_text_button_color">Color</string>
-    <string name="pesdk_brush_button_color">Color</string>
     <string name="faq_1_title">¿Cómo puedo hacer que la Galería Fossify sea la galería predeterminada del dispositivo?</string>
     <string name="wallpaper">Fondo de pantalla</string>
-    <string name="pesdk_editor_title_name">Editor</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">No</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="exclude_folder_description">Esto excluirá la selección junto con sus subcarpetas sólo de la Galería Fossify. Puede gestionar las carpetas excluidas en la Configuración.</string>
     <string name="excluded_activity_placeholder">Al excluir las carpetas, éstas y sus subcarpetas quedarán ocultas sólo en la Galería Fossify, pero seguirán siendo visibles en otras aplicaciones.
 \n
 \nSi desea ocultarlas también de otras aplicaciones, utilice la función Ocultar.</string>
-    <string name="editor">Editor</string>
-    <string name="pesdk_sticker_button_color">Color</string>
     <string name="faq_1_text">Primero tienes que encontrar la galería actualmente por defecto en la sección de Aplicaciones de la configuración de tu dispositivo, busca un botón que diga algo así como \"Abrir por defecto\", haz clic en él y luego selecciona \"Borrar valores predeterminados\". La próxima vez que intentes abrir una imagen o un vídeo deberías ver un selector de aplicaciones, donde puedes seleccionar Galería de Fossify y convertirla en la aplicación predeterminada.</string>
     <string name="faq_5_text">Excluir evita que la carpeta se muestre sólo en la Galería de Fossify, mientras que Ocultar funciona a nivel de sistema y oculta la carpeta de otras galerías también. Funciona mediante la creación de un archivo vacío \".nomedia\" en la carpeta dada, que luego se puede eliminar con cualquier gestor de archivos también. Ten en cuenta que algunos dispositivos no permiten ocultar carpetas como Cámara, Capturas de pantalla y Descargas.</string>
     <string name="pesdk_overlay_asset_vintage">Antiguo</string>

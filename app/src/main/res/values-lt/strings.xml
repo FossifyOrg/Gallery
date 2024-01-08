@@ -53,8 +53,6 @@
     <string name="flip">Apversti</string>
     <string name="flip_horizontally">Apversti horizontaliai</string>
     <string name="flip_vertically">Apversti vertikaliai</string>
-    <string name="free_aspect_ratio">Free</string>
-    <string name="other_aspect_ratio">Other</string>
     <string name="set_as_wallpaper">Nustatyti kaip darbalaukio foną</string>
     <string name="set_as_wallpaper_failed">Nustatyti darbalaukio fono nepavyko</string>
     <string name="set_as_wallpaper_with">Nustatyti kaip darbalaukio paveikslėlį su:</string>
@@ -100,8 +98,6 @@
     <string name="thumbnails">Miniatiūros</string>
     <string name="fullscreen_media">Viso ekrano medija</string>
     <string name="extended_details">Išsami informacija</string>
-    <string name="pesdk_editor_title_closeEditorAlert">Close Editor\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Do you really want to discard the changes\?</string>
     <string name="faq_2_title">Aš užrakinau programėlę su slaptažodžiu, bet pamiršau jį. Ką aš galiu padaryti\?</string>
     <string name="faq_2_text">"Tai galite išspręsti dviem būdais. Galite arba iš naujo įdiegti programėlę, arba rasti programėlę savo įrenginio nustatymuose ir pasirinkti  Išvalyti duomenis \". Jis iš naujo nustatys visus jūsų nustatymus, bet nepašalins jokių medijos bylų."</string>
     <string name="faq_3_title">Kaip aš galiu padaryti albumą visada rodomą viršuje\?</string>
@@ -117,13 +113,5 @@
 \n         Tai leis matyti tik tuos pasirinktus aplankus, nes abu atmetami ir įtraukti yra rekursyvūs, ir jei aplankas yra išskirtas ir įtrauktas, jis bus rodomas."</string>
     <string name="faq_10_title">Ar galiu apkarpyti vaizdus naudojant šią programėlę\?</string>
     <string name="faq_10_text">Taip, redaguodami vaizdus, galite juos apkarpyti, vilkdami vaizdo kampus. Galite patekti į redaktorių ilgai paspaudę vaizdo miniatiūrą ir pasirinkę Redaguoti arba iš viso ekrano rodinio pasirinkę Redaguoti.</string>
-    <string name="faq_11_title">Can I somehow group media file thumbnails\?</string>
-    <string name="faq_12_title">Sorting by Date Taken doesn\'t seem to work properly, how can I fix it\?</string>
-    <string name="faq_13_title">I see some color banding on the images. How can I improve the quality\?</string>
-    <string name="faq_14_title">I have hidden a file/folder. How can I unhide it\?</string>
-    <string name="faq_15_title">Why does the app take up so much space\?</string>
-    <string name="faq_16_title">What happened to file and folder hiding and why cannot I see hidden items anymore\?</string>
     <string name="faq_16_text">Nuo \"Android 11\" nebegalite paslėpti arba panaikinti failų ar aplankų paslėpimo, taip pat paslėptų failų ar aplankų negalite matyti galerijos programėlėse. Tam turėsite naudoti kokį nors failų tvarkytuvą.</string>
-    <string name="faq_17_title">Why cannot I include missing folders anymore\?</string>
-    <string name="faq_18_title">Why do I see ads during video playback\?</string>
-</resources>
+    </resources>

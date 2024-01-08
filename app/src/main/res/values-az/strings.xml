@@ -6,33 +6,4 @@
     <string name="hidden">(gizli)</string>
     <string name="pin_folder">Pin qovluğu</string>
     <string name="unpin_folder">Unpin qovluğu</string>
-    <string name="hide_folder_description">This function hides the folder by adding a \'.nomedia\' file into it, it will hide all subfolders too. You can see them by toggling the \'Show hidden items\' option in Settings. Continue\?</string>
-    <string name="exclude_folder_parent">Exclude a parent instead\?</string>
-    <string name="included_activity_placeholder">If you have some folders which contain media, but were not recognized by the app, you can add them manually here.
-\n
-\nAdding some items here will not exclude any other folder.</string>
-    <string name="free_aspect_ratio">Free</string>
-    <string name="other_aspect_ratio">Other</string>
-    <string name="setting_wallpaper">Setting wallpaper…</string>
-    <string name="pesdk_editor_title_closeEditorAlert">Close Editor\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Do you really want to discard the changes\?</string>
-    <string name="faq_2_title">I locked the app with a password, but I forgot it. What can I do\?</string>
-    <string name="faq_3_title">How can I make an album always appear at the top\?</string>
-    <string name="faq_4_title">How can I fast forward videos\?</string>
-    <string name="faq_5_title">What is the difference between hiding and excluding a folder\?</string>
-    <string name="faq_6_title">Why do folders with music cover art or stickers show up\?</string>
-    <string name="faq_7_title">A folder with images isn\'t showing up, or it doesn\'t show all items. What can I do\?</string>
-    <string name="faq_7_text">That can have multiple reasons, but solving it is easy. Just go in Settings -&gt; Manage Included Folders, select Plus and navigate to the required folder.</string>
-    <string name="faq_8_title">What if I want just a few particular folders visible\?</string>
-    <string name="faq_8_text">Adding a folder at the Included Folders doesn\'t automatically exclude anything. What you can do is go in Settings -&gt; Manage Excluded Folders, exclude the root folder \"/\", then add the desired folders at Settings -&gt; Manage Included Folders. That will make only the selected folders visible, as both excluding and including are recursive and if a folder is both excluded and included, it will show up.</string>
-    <string name="faq_10_title">Can I crop images with this app\?</string>
-    <string name="faq_11_title">Can I somehow group media file thumbnails\?</string>
-    <string name="faq_12_title">Sorting by Date Taken doesn\'t seem to work properly, how can I fix it\?</string>
-    <string name="faq_13_title">I see some color banding on the images. How can I improve the quality\?</string>
-    <string name="faq_14_title">I have hidden a file/folder. How can I unhide it\?</string>
-    <string name="faq_15_title">Why does the app take up so much space\?</string>
-    <string name="faq_16_title">What happened to file and folder hiding and why cannot I see hidden items anymore\?</string>
-    <string name="faq_16_text">Starting with Android 11 you cannot hide or unhide files or folders anymore, you cannot see the hidden ones in gallery apps either. You will have to use some file manager for that.</string>
-    <string name="faq_17_title">Why cannot I include missing folders anymore\?</string>
-    <string name="faq_18_title">Why do I see ads during video playback\?</string>
 </resources>
