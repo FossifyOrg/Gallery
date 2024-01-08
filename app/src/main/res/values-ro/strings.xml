@@ -40,7 +40,6 @@
     <string name="svgs">SVG-uri</string>
     <string name="portraits">Portrete</string>
     <string name="no_media_with_filters">Nu a fost găsit niciun fișier media cu filtrele selectate.</string>
-    <string name="change_filters_underlined"><u>Schimbă filtrele</u></string>
     <string name="hide_folder_description">Această funcție ascunde dosarul prin adăugarea unui fișier \'.nomedia\' în el, ascunzând și toate subdosarele. Le poţi vedea prin activarea opțiunii \'Afișați elementele ascunse\' din Setări. Continuați\?</string>
     <string name="exclude_folder_parent">Exclude dosarul părinte în schimb\?</string>
     <string name="hidden_folders">Dosare ascunse</string>

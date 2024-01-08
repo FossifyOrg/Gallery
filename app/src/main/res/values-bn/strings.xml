@@ -37,7 +37,6 @@
     <string name="svgs">এসভিজি সমূহ</string>
     <string name="portraits">পোট্রেইট</string>
     <string name="no_media_with_filters">এ নির্দিষ্ট ফিল্টারে কোন মিডিয়া ফাইল পাওয়া যায়নি।</string>
-    <string name="change_filters_underlined"><u>ফিল্টার পরিবর্তন করুন</u></string>
     <string name="hide_folder_description">This function hides the folder by adding a \'.nomedia\' file into it, it will hide all subfolders too. You can see them by toggling the \'Show hidden items\' option in Settings. Continue\?</string>
     <string name="exclude_folder_parent">Exclude a parent instead\?</string>
     <string name="hidden_folders">লুকানো ফোল্ডারগুলো</string>
@@ -240,7 +239,6 @@
     <string name="faq_5_title">What is the difference between hiding and excluding a folder\?</string>
     <string name="faq_6_title">Why do folders with music cover art or stickers show up\?</string>
     <string name="faq_7_title">A folder with images isn\'t showing up, or it doesn\'t show all items. What can I do\?</string>
-    <string name="faq_7_text">That can have multiple reasons, but solving it is easy. Just go in Settings -&gt; Manage Included Folders, select Plus and navigate to the required folder.</string>
     <string name="faq_8_title">What if I want just a few particular folders visible\?</string>
     <string name="faq_8_text">Adding a folder at the Included Folders doesn\'t automatically exclude anything. What you can do is go in Settings -&gt; Manage Excluded Folders, exclude the root folder \"/\", then add the desired folders at Settings -&gt; Manage Included Folders. That will make only the selected folders visible, as both excluding and including are recursive and if a folder is both excluded and included, it will show up.</string>
     <string name="faq_10_title">Can I crop images with this app\?</string>

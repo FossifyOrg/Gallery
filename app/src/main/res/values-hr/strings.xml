@@ -41,7 +41,6 @@
     <string name="svgs">SVG-ovi</string>
     <string name="portraits">Portreti</string>
     <string name="no_media_with_filters">Nije pronađena nijedna datoteka s odabranim filtrom.</string>
-    <string name="change_filters_underlined"><u>Promijeni filtar</u></string>
     <string name="hide_folder_description">Ova funkcija skriva mapu dodavanjem „.nomedia” datoteke u mapu. Također će sakriti i sve podmape. Možeš ih vidjeti uključivanjem opcije „Prikaži skrivene mape” u postavkama. Nastaviti\?</string>
     <string name="exclude_folder_parent">Isključiti glavnu mapu umjesto toga\?</string>
     <string name="hidden_folders">Skrivene mape</string>

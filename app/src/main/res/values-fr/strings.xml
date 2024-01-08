@@ -38,7 +38,6 @@
     <string name="raw_images">Images RAW</string>
     <string name="svgs">SVG</string>
     <string name="no_media_with_filters">Aucun fichier média trouvé avec les filtres sélectionnés.</string>
-    <string name="change_filters_underlined"><u>Modifier les filtres</u></string>
     <string name="hide_folder_description">Cette option cache le dossier en y ajoutant un fichier .nomedia, elle cachera aussi tous les sous-dossiers. Vous pouvez afficher ces dossiers avec l\'option "Afficher les fichiers cachés" dans les paramètres. Continuer \?</string>
     <string name="exclude_folder_description">Ceci exclura la sélection avec ses sous-dossiers de Fossify Gallery seulement. Vous pouvez gérer les dossiers exclus dans Paramètres.</string>
     <string name="exclude_folder_parent">Exclure un dossier parent \?</string>

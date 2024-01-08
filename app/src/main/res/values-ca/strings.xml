@@ -41,7 +41,6 @@
     <string name="svgs">SVG</string>
     <string name="portraits">Retrats</string>
     <string name="no_media_with_filters">No s\'ha trobat cap fitxer multimèdia amb els filtres seleccionats.</string>
-    <string name="change_filters_underlined"><u>Canvia els filtres</u></string>
     <string name="hide_folder_description">Aquesta funció oculta la carpeta agregant un fitxer «.nomedia» a dins d\'ella. També ocultarà les subcarpetes. Podeu veure-les canviant l\'opció «Mostra els elements ocults» a la configuració. Continuo\?</string>
     <string name="exclude_folder_parent">Voleu excloure la carpeta superior\?</string>
     <string name="hidden_folders">Carpetes ocultes</string>
@@ -214,7 +213,6 @@
     <string name="pesdk_transform_button_squareCrop">Quadrat</string>
     <string name="pesdk_transform_title_name">Transforma</string>
     <string name="pesdk_filter_title_name">Filtre</string>
-    <string name="pesdk_filter_asset_none">No</string>
     <string name="pesdk_adjustments_title_name">Ajusta</string>
     <string name="pesdk_adjustments_button_shadowTool">Ombres</string>
     <string name="pesdk_adjustments_button_exposureTool">Exposició</string>
@@ -227,7 +225,6 @@
     <string name="pesdk_adjustments_button_temperatureTool">Temperatura</string>
     <string name="pesdk_adjustments_button_sharpnessTool">Nitidesa</string>
     <string name="pesdk_adjustments_button_reset">Restaura</string>
-    <string name="pesdk_focus_title_disabled">No</string>
     <string name="pesdk_focus_button_linear">Lineal</string>
     <string name="pesdk_focus_button_mirrored">Emmirallat</string>
     <string name="pesdk_focus_button_gaussian">Gaussià</string>

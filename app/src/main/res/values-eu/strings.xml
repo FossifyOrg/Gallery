@@ -41,7 +41,6 @@
     <string name="svgs">SVGak</string>
     <string name="portraits">Erretratuak</string>
     <string name="no_media_with_filters">Hautatutako filtroa duen multimedia fitxategirik ez da aurkitu.</string>
-    <string name="change_filters_underlined"><u>Aldatu filtroak</u></string>
     <string name="hide_folder_description">Funtzio honek karpeta \'.nomedia\' fitxategi bat gehituz ezkutatzen du, azpikarpeta guztiak ere ezkutatuko ditu. Ezarpenetako \'Erakutsi ezkutatutako elementuak\' aukera aldatuz ikus ditzakezu. Jarraitu\?</string>
     <string name="exclude_folder_parent">Baztertu nagusia horren ordez\?</string>
     <string name="hidden_folders">Ezkutatutako karpetak</string>

@@ -40,7 +40,6 @@
     <string name="svgs">SVG</string>
     <string name="portraits">Ritratti</string>
     <string name="no_media_with_filters">Nessun file trovato con il filtro selezionato.</string>
-    <string name="change_filters_underlined"><u>Cambia filtro</u></string>
     <string name="hide_folder_description">Questa funzione nasconde la cartella aggiungendo un file .nomedia all\'interno, nasconderà anche tutte le sottocartelle. Si possono vedere attivando l\'opzione «Mostra cartelle nascoste» nelle impostazioni. Continuare\?</string>
     <string name="exclude_folder_description">In questo modo la selezione e le sue sottocartelle saranno escluse solo da Galleria Fossify. È possibile gestire le cartelle escluse nelle impostazioni.</string>
     <string name="exclude_folder_parent">Vuoi invece escluderne una superiore\?</string>

@@ -41,7 +41,6 @@
     <string name="svgs">SVG</string>
     <string name="portraits">Портрети</string>
     <string name="no_media_with_filters">С избраните филтри не са открити медийни файлове.</string>
-    <string name="change_filters_underlined"><u>Смени филтрите</u></string>
     <string name="hide_folder_description">Тази функция скрива папката чрез добавяне на \'.nomedia\' файл в нея; това също ще скрие и папките в нея. Можете да ги видите чрез превключване на \'Показване на скритите елементи\' в настройките. Напред\?</string>
     <string name="exclude_folder_parent">Вместо това, изключване на папката от горното ниво\?</string>
     <string name="hidden_folders">Скрити папки</string>

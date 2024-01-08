@@ -41,7 +41,6 @@
     <string name="svgs">SVG</string>
     <string name="portraits">人像</string>
     <string name="no_media_with_filters">選擇的篩選條件未發現媒體檔案。</string>
-    <string name="change_filters_underlined"><u>更改篩選條件</u></string>
     <string name="hide_folder_description">啟用此功能將會在選定資料夾中建立「.nomedia」檔案，使該資料夾及其所有子資料夾被隱藏。如果您想查看這些隱藏的資料夾，可以在設定中選擇「顯示隱藏項目」的選項。是否繼續？</string>
     <string name="exclude_folder_parent">是否排除上層資料夾？</string>
     <string name="hidden_folders">隱藏資料夾</string>

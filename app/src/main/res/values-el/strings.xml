@@ -41,7 +41,6 @@
     <string name="svgs">SVG</string>
     <string name="portraits">Πορτραίτα</string>
     <string name="no_media_with_filters">Δεν βρέθηκε κανένα αρχείο πολυμέσων με τα επιλεγμένα φίλτρα.</string>
-    <string name="change_filters_underlined"><u>Αλλαγή φίλτρων</u></string>
     <string name="hide_folder_description">Αυτή η λειτουργία κρύβει τον φάκελο προσθέτοντας ένα \".nomedia\" αρχείο μέσα του, θα κρύψει και όλους τους υποφακέλους επίσης. Μπορείτε να τους δείτε με την επιλογή του \'Εμφάνιση κρυφών δεδομένων\' στις Ρυθμίσεις. Συνέχεια\?</string>
     <string name="exclude_folder_parent">Να εξαιρεθεί μήπως ο γονικός φάκελος;</string>
     <string name="hidden_folders">Κρυφοί φάκελοι</string>
