@@ -40,6 +40,7 @@
     <string name="raw_images">Ảnh RAW</string>
     <string name="portraits">Chân dung</string>
     <string name="no_media_with_filters">Không có tập tin phương tiện nào được tìm thấy với các bộ lọc được chọn.</string>
+    <string name="change_filters_underlined"><u>Thay đổi bộ lọc</u></string>
     <string name="hide_folder_description">Chức năng này ẩn thư mục bằng cách thêm tệp \'.nomedia\' vào nó, nó cũng sẽ ẩn tất cả các thư mục con. Bạn có thể nhìn thấy chúng bằng cách bật tùy chọn \'Hiển thị các mục bị ẩn\' trong Cài đặt. Tiếp tục\?</string>
     <string name="exclude_folder_parent">Loại trừ thư mục mẹ thay thế\?</string>
     <string name="hidden_folders">Các thư mục ẩn</string>

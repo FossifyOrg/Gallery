@@ -39,11 +39,15 @@
     <string name="svgs">اس‌وی‌جی ها</string>
     <string name="portraits">پرتره‌ها</string>
     <string name="no_media_with_filters">هیچ پروندهٔ رسانه‌ای با پالایه‌های گزیده شده، یافت نشد.</string>
+    <string name="change_filters_underlined"><u>تغییر پالایه‌ها</u></string>
     <string name="hide_folder_description">این تابع شاخه را با افزودن پروندهٔ «‎.nomedia» در آن پنهان می‌کند، این باعث پنهان شدن تمام زیرشاخه‌ها نیز خواهد شد. شما می‌توانید با تغییر حالت «نمایش موارد پنهان» در تنظیمات آن‌ها را ببینید. ادامه می‌دهید؟</string>
     <string name="exclude_folder_parent">Exclude a parent instead\?</string>
     <string name="included_activity_placeholder">If you have some folders which contain media, but were not recognized by the app, you can add them manually here.
 \n
 \nAdding some items here will not exclude any other folder.</string>
+    <string name="free_aspect_ratio">Free</string>
+    <string name="other_aspect_ratio">Other</string>
+    <string name="setting_wallpaper">Setting wallpaper…</string>
     <string name="pesdk_editor_title_closeEditorAlert">Close Editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Do you really want to discard the changes\?</string>
     <string name="faq_2_title">I locked the app with a password, but I forgot it. What can I do\?</string>
@@ -52,6 +56,7 @@
     <string name="faq_5_title">What is the difference between hiding and excluding a folder\?</string>
     <string name="faq_6_title">Why do folders with music cover art or stickers show up\?</string>
     <string name="faq_7_title">A folder with images isn\'t showing up, or it doesn\'t show all items. What can I do\?</string>
+    <string name="faq_7_text">That can have multiple reasons, but solving it is easy. Just go in Settings -&gt; Manage Included Folders, select Plus and navigate to the required folder.</string>
     <string name="faq_8_title">What if I want just a few particular folders visible\?</string>
     <string name="faq_8_text">Adding a folder at the Included Folders doesn\'t automatically exclude anything. What you can do is go in Settings -&gt; Manage Excluded Folders, exclude the root folder \"/\", then add the desired folders at Settings -&gt; Manage Included Folders. That will make only the selected folders visible, as both excluding and including are recursive and if a folder is both excluded and included, it will show up.</string>
     <string name="faq_10_title">Can I crop images with this app\?</string>

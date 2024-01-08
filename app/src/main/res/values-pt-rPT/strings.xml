@@ -13,10 +13,12 @@
     <string name="unknown_location">Localização desconhecida</string>
     <string name="no_date_takens_found">Não foram encontrados dados para a data de captura</string>
     <string name="all_folders">Todas as pastas</string>
+    <string name="volume">Volume</string>
     <string name="videos">Vídeos</string>
     <string name="edit">Editar</string>
     <string name="use_default_orientation">Usar orientação padrão</string>
     <string name="pin_to_the_top">Fixar no topo</string>
+    <string name="gifs">GIFs</string>
     <string name="app_launcher_name">Galeria</string>
     <string name="hidden">(oculta)</string>
     <string name="reorder_by_dragging">Organizar pastas por arrasto</string>
@@ -27,6 +29,7 @@
     <string name="unpin_folder">Desafixar pasta</string>
     <string name="portraits">Retratos</string>
     <string name="pin_folder">Fixar pasta</string>
+    <string name="change_filters_underlined"><u>Alterar filtros</u></string>
     <string name="dates_fixed_successfully">Datas corrigidas com sucesso</string>
     <string name="show_on_map">Mostrar no mapa</string>
     <string name="folder_view">Alternar para a vista de pastas</string>
@@ -38,4 +41,5 @@
     <string name="unset_as_default_folder">Deixar de utilizar como pasta padrão</string>
     <string name="open_camera">Abrir câmara</string>
     <string name="show_all">Mostrar conteúdo de todas as pastas</string>
-    </resources>
+    <string name="svgs">SVGs</string>
+</resources>

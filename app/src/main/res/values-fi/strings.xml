@@ -41,6 +41,7 @@
     <string name="svgs">SVG:t</string>
     <string name="portraits">Potretit</string>
     <string name="no_media_with_filters">Mediaa ei löytynyt valituilla suotimilla.</string>
+    <string name="change_filters_underlined"><u>Muuta suotimia</u></string>
     <string name="hide_folder_description">Tämä piilottaa kansion ja alikansiot lisäämällä \'.nomedia\' tiedoston kansioon. Näet ne valitsemalla \'Näytä piilotetut kansiot\' asetuksissa. Jatketaanko\?</string>
     <string name="exclude_folder_parent">Poissulje yläkansio tämän sijaan\?</string>
     <string name="hidden_folders">Piilotetut kansiot</string>

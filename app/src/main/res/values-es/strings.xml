@@ -41,6 +41,7 @@
     <string name="svgs">SVG</string>
     <string name="portraits">Retratos</string>
     <string name="no_media_with_filters">No se han encontrado ficheros con los filtros seleccionados.</string>
+    <string name="change_filters_underlined"><u>Cambiar filtros</u></string>
     <string name="hide_folder_description">Esta función oculta la carpeta agregando un archivo \'.nomedia\' en ella, y también ocultará las subcarpetas. Puede mostrarlas modificando la opción \'Mostrar carpetas ocultas\' en los Ajustes. ¿Continuar\?</string>
     <string name="exclude_folder_parent">¿Excluir mejor la carpeta superior\?</string>
     <string name="hidden_folders">Carpetas ocultas</string>

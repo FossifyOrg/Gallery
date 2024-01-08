@@ -41,6 +41,7 @@
     <string name="svgs">SVG\'ler</string>
     <string name="portraits">Portreler</string>
     <string name="no_media_with_filters">Seçilen filtrelerle hiçbir medya dosyası bulunamadı.</string>
+    <string name="change_filters_underlined"><u>Filtreleri değiştir</u></string>
     <string name="hide_folder_description">Bu işlev, klasöre bir \'.nomedia\' dosyası ekleyerek gizler, tüm alt klasörleri de gizler. Ayarlar\'dan \'Gizli ögeleri göster\' seçeneğini değiştirerek onları görebilirsiniz. Devam edilsin mi\?</string>
     <string name="exclude_folder_parent">Bunun yerine bir üst dizin hariç tutulsun mu\?</string>
     <string name="hidden_folders">Gizli klasörler</string>

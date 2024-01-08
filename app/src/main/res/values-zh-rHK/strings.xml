@@ -32,6 +32,7 @@
     <string name="raw_images">RAW圖檔</string>
     <string name="svgs">SVG</string>
     <string name="no_media_with_filters">選擇的篩選條件未發現媒體檔案。</string>
+    <string name="change_filters_underlined"><u>更改篩選條件</u></string>
     <string name="hide_folder_description">這功能藉由添加一個\".nomedia\"檔案，來隱藏資料夾和所有子資料夾。您可以透過[設定]中的\"顯示隱藏的項目\"選項來查看。
 \n是否繼續\?</string>
     <string name="exclude_folder_parent">是否排除上層資料夾\?</string>

@@ -40,6 +40,7 @@
     <string name="svgs">SVG-vectorafbeeldingen</string>
     <string name="portraits">Portretten</string>
     <string name="no_media_with_filters">Er zijn geen bestanden gevonden met de huidige filters.</string>
+    <string name="change_filters_underlined"><u>Filters aanpassen</u></string>
     <string name="hide_folder_description">Deze functie verbergt de map door het bestand ’.nomedia’ toe te voegen. Alle onderliggende mappen zullen ook worden verborgen. Kies ’Verborgen mappen tonen’ in de instellingen om toch verborgen mappen te kunnen inzien. Doorgaan\?</string>
     <string name="exclude_folder_parent">In plaats hiervan de bovenliggende map uitsluiten\?</string>
     <string name="hidden_folders">Verborgen mappen</string>

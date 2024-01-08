@@ -41,6 +41,7 @@
     <string name="svgs">SVG\'er</string>
     <string name="portraits">Portrætter</string>
     <string name="no_media_with_filters">Der blev ikke fundet nogen filer med det valgte filter.</string>
+    <string name="change_filters_underlined"><u>Skift filter</u></string>
     <string name="hide_folder_description">Denne funktion skjuler mappen og dens eventuelle undermapper ved at oprette en \".nomedia\"-fil i den. Du kan se dem ved at klikke på \"Vis skjulte\" i indstillingerne. Fortsæt\?</string>
     <string name="exclude_folder_parent">Ekskluder en overliggende mappe i stedet\?</string>
     <string name="hidden_folders">Skjulte mapper</string>

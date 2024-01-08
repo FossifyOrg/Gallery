@@ -40,6 +40,7 @@
     <string name="svgs">СВГови</string>
     <string name="portraits">Портрети</string>
     <string name="no_media_with_filters">Нема пронађених медија датотека са изабраним филтерима.</string>
+    <string name="change_filters_underlined"><u>Измени филтере</u></string>
     <string name="hide_folder_description">Ова функција скрива фасциклу додавањем \'.nomedia\' фајла у њу, она ће такође сакрити све подфасцикле. Можете их видети притиском на опцију \'Прикажи скривене ставке\' у подешавањима. Настави\?</string>
     <string name="exclude_folder_parent">Изузми родитеља уместо овог\?</string>
     <string name="hidden_folders">Скривене фасцикле</string>

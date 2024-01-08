@@ -33,6 +33,7 @@
     <string name="svgs">SVG</string>
     <string name="portraits">세로 사진</string>
     <string name="no_media_with_filters">설정된 필터와 일치하는 컨텐츠가 존재하지 않습니다.</string>
+    <string name="change_filters_underlined"><u>필터 변경</u></string>
     <string name="hide_folder_description">현재 폴더에 \'.nomedia\' 파일을 생성하여 현재 및 모든 하위 폴더를 숨김니다. 숨김 처리된 모든 폴더는 설정의 \'숨김파일 보기\' 메뉴를 이용하여 다시 볼 수 있습니다. 계속 하시겠습니까\?</string>
     <string name="exclude_folder_parent">상위 폴더를 제외 하시겠습니까\?</string>
     <string name="hidden_folders">숨겨진 폴더</string>
@@ -160,6 +161,7 @@
     <string name="faq_5_title">What is the difference between hiding and excluding a folder\?</string>
     <string name="faq_6_title">Why do folders with music cover art or stickers show up\?</string>
     <string name="faq_7_title">A folder with images isn\'t showing up, or it doesn\'t show all items. What can I do\?</string>
+    <string name="faq_7_text">That can have multiple reasons, but solving it is easy. Just go in Settings -&gt; Manage Included Folders, select Plus and navigate to the required folder.</string>
     <string name="faq_8_title">What if I want just a few particular folders visible\?</string>
     <string name="faq_8_text">Adding a folder at the Included Folders doesn\'t automatically exclude anything. What you can do is go in Settings -&gt; Manage Excluded Folders, exclude the root folder \"/\", then add the desired folders at Settings -&gt; Manage Included Folders. That will make only the selected folders visible, as both excluding and including are recursive and if a folder is both excluded and included, it will show up.</string>
     <string name="faq_10_title">Can I crop images with this app\?</string>

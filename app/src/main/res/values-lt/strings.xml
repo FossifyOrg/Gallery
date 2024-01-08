@@ -24,6 +24,7 @@
     <string name="videos">Vaizdo įrašai</string>
     <string name="gifs">GIF\'ai</string>
     <string name="no_media_with_filters">Su pasirinktais filtrais nerasta medijos bylų.</string>
+    <string name="change_filters_underlined"><u>Pakeisti filtrus</u></string>
     <string name="hide_folder_description">Ši funkcija slepia aplanką, pridedant į jį \'. Nomedia \' bylą, jis taip pat slėps visus subaplankus. Galite juos peržiūrėti, perjunkite parinktį Rodyti paslėptus elementus \" skiltyje Nustatymai. Tęsti\?</string>
     <string name="exclude_folder_parent">Vietoj to išskirti tėvinį\?</string>
     <string name="hidden_folders">Paslėpti aplankai</string>
@@ -52,6 +53,8 @@
     <string name="flip">Apversti</string>
     <string name="flip_horizontally">Apversti horizontaliai</string>
     <string name="flip_vertically">Apversti vertikaliai</string>
+    <string name="free_aspect_ratio">Free</string>
+    <string name="other_aspect_ratio">Other</string>
     <string name="set_as_wallpaper">Nustatyti kaip darbalaukio foną</string>
     <string name="set_as_wallpaper_failed">Nustatyti darbalaukio fono nepavyko</string>
     <string name="set_as_wallpaper_with">Nustatyti kaip darbalaukio paveikslėlį su:</string>

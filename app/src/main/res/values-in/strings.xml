@@ -39,6 +39,7 @@
     <string name="svgs">SVG</string>
     <string name="portraits">Potret</string>
     <string name="no_media_with_filters">Tidak ditemukan berkas media yang sesuai dengan filter ini.</string>
+    <string name="change_filters_underlined"><u>Ubah filter</u></string>
     <string name="hide_folder_description">Fungsi ini menyembunyikan folder dengan menambahkan berkas \'.nomedia\' ke dalamnya, juga akan menyembunyikan semua subfoldernya. Anda bisa melihatnya dengan mengaktifkan opsi \'Tampilkan berkas tersembunyi\' di Pengaturan. Lanjutkan\?</string>
     <string name="exclude_folder_parent">Kecualikan folder induk\?</string>
     <string name="hidden_folders">Folder tersembunyi</string>

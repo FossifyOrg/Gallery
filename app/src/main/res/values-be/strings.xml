@@ -76,6 +76,7 @@
     <string name="images">Выявы</string>
     <string name="exclude_folder_parent">Выключыць аднаго з бацькоў\?</string>
     <string name="no_media_with_filters">З выбранымі фільтрамі не знойдзены медыяфайлы.</string>
+    <string name="change_filters_underlined"><u>Змяніць фільтры</u></string>
     <string name="hide_folder_description">Гэтая функцыя хавае тэчку, дадаючы ў яе файл\'.nomedia\' , ён таксама схавае ўсе укладзеныя папкі. Вы можаце ўбачыць іх, пераключыўшы опцыю \"Паказваць схаваныя элементы\" у наладах. Працягваць\?</string>
     <string name="hidden_folders">Схаваныя тэчкі</string>
     <string name="manage_hidden_folders">Кіраванне схаванымі папкамі</string>

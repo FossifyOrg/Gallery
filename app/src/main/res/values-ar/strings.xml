@@ -41,6 +41,7 @@
     <string name="svgs">صور الرسومات المتجهة (SVG)</string>
     <string name="portraits">صور البورتريه</string>
     <string name="no_media_with_filters">لم يتم العثور على ملفات وسائط مع الفلاتر المحددة.</string>
+    <string name="change_filters_underlined"><u>تغيير الفلاتر</u></string>
     <string name="hide_folder_description">تقوم هذه الوظيفة بإخفاء المجلد عن طريق إضافة ملف \'. nomedia \' إليه، وستقوم بإخفاء كل المجلدات الفرعية أيضًا. يمكنك رؤيتهم عن طريق تبديل خيار \'إظهار العناصر المخفية \' في الإعدادات. هل تريد المتابعة؟</string>
     <string name="exclude_folder_parent">استبعاد المجلد الأصل بدلاً من ذلك (المحدد)؟</string>
     <string name="hidden_folders">المجلدات المخفية</string>
