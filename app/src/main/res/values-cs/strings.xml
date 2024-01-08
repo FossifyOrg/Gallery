@@ -350,4 +350,18 @@
     <string name="faq_17_text">Toto přestalo fungovat kvůli systémovým změnám, které přišly s Androidem 11, aplikace již nemůže procházet skutečné složky, při načítání dat se spoléhá na tzv. MediaStore.</string>
     <string name="faq_18_title">Proč se mi během přehrávání videa zobrazují reklamy\?</string>
     <string name="faq_18_text">Naše aplikace žádné reklamy neobsahují. Pokud je vidíte během přehrávání videa, používáte na jeho přehrávání nějakou jinou aplikaci. Zkuste v nastavení zařízení najít svůj výchozí přehrávač videa a poté v něm použijte volbu „Vymazat výchozí“. Při příštím spuštění videa se zobrazí výzva k výběru aplikace, kde si můžete vybrat, jakou aplikaci chcete použít.</string>
+    <string name="editor">Editor</string>
+    <string name="pesdk_overlay_asset_vintage">Vintage</string>
+    <string name="faq_1_text">Nejprve musíte v nastavení zařízení v části Aplikace najít aktuálně výchozí galerii, vyhledat tlačítko s nápisem \"Otevřít ve výchozím nastavení\", kliknout na něj a vybrat možnost \"Vymazat výchozí nastavení\". Při dalším pokusu o otevření obrázku nebo videa by se měl zobrazit výběr aplikace, kde můžete vybrat Fossify Gallery a nastavit ji jako výchozí aplikaci.</string>
+    <string name="faq_5_text">Vyloučení zamezí zobrazení složky pouze v galerii Fossify, zatímco Skrýt funguje systémově a skryje složku i z ostatních galerií. Funguje tak, že v dané složce vytvoří prázdný soubor \".nomedia\", který pak můžete odstranit také pomocí libovolného správce souborů. Všimněte si, že některá zařízení neumožňují skrývání složek, jako je Fotoaparát, Snímky obrazovky a Stažené soubory.</string>
+    <string name="exclude_folder_description">Tento výběr spolu s podsložkami bude vyloučen pouze z Fossify Gallery. Vyloučené složky můžete spravovat v Nastavení.</string>
+    <string name="excluded_activity_placeholder">Vyloučením složek se tyto složky spolu s podsložkami skryjí pouze v aplikaci Fossify Gallery, v ostatních aplikacích budou stále viditelné.
+\n
+\nPokud je chcete skrýt i z jiných aplikací, použijte funkci Skrýt.</string>
+    <string name="wallpaper">Tapeta</string>
+    <string name="interval">Interval</string>
+    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
+    <string name="pesdk_text_title_name">Text</string>
+    <string name="pesdk_editor_title_name">Editor</string>
+    <string name="faq_1_title">Jak mohu nastavit Fossify Gallery jako výchozí galerii zařízení?</string>
 </resources>

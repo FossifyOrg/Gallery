@@ -1,0 +1,2 @@
+* Eliminada la biblioteca panorámica propietaria
+* Añadidas algunas traducciones
