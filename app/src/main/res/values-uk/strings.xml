@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Сортувати теки шляхом переміщення</string>
     <string name="reorder_by_dragging_pro">Сортувати теки шляхом переміщення (Pro)</string>
     <string name="restore_to_path">Відновлення в \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Фільтр мультимедійних файлів</string>
     <string name="images">Зображення</string>
     <string name="videos">Відео</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Портрети</string>
     <string name="no_media_with_filters">З вибраними фільтрами мультимедійні файли не знайдено.</string>
     <string name="change_filters_underlined"><u>Змінити фільтри</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ця функція приховує теку шляхом додавання в неї файлу \".nomedia\"; це також приховає і підтеки. Ви можете побачити приховані теки, обравши опцію \'Показати приховані елементи\' в \"Налаштуваннях\". Продовжити\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Виключити батьківську папку\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Приховані теки</string>
     <string name="manage_hidden_folders">Керування прихованими теками</string>
     <string name="hidden_folders_placeholder">Схоже, у вас немає тек, прихованих за допомогою файлу \".nomedia\".</string>
     <string name="hidden_all_files">Ви повинні надати доступ застосунку до всіх файлів, щоб бачити приховані файли, інакше це не може працювати.</string>
     <string name="cant_unhide_folder">Якщо тека або її батьківська тека має крапку перед її назвою, то вона прихована та не може стати неприхованою таким чином. Ви маєте вилучити крапку, перейменувавши її.</string>
-    <!-- Include folders -->
     <string name="include_folders">Включені папки</string>
     <string name="manage_included_folders">Керування включеними папками</string>
     <string name="add_folder">Додати теку</string>
@@ -61,7 +56,6 @@
 \n
 \nДодавання елементів сюди не виключить будь-яку іншу папку.</string>
     <string name="no_media_add_included">Жоден медіафайл не знайдено. Ви можете додати теки з медіафайлами вручну, щоб вирішити цю проблему.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Змінити розмір вибраного і зберегти</string>
     <string name="width">Ширина</string>
     <string name="height">Висота</string>
@@ -78,7 +72,6 @@
         <item quantity="other">Не вдалося змінити розмір %d зображень</item>
     </plurals>
     <string name="images_resized_successfully">Розмір зображень успішно змінено</string>
-    <!-- Editor -->
     <string name="editor">Редактор</string>
     <string name="basic_editor">Базовий редактор</string>
     <string name="advanced_editor">Розширений редактор</string>
@@ -108,11 +101,7 @@
     <string name="flip_horizontally">Віддзеркалити горизонтально</string>
     <string name="flip_vertically">Віддзеркалити вертикально</string>
     <string name="free_aspect_ratio">Вільне</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Інше</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Встановити як шпалери</string>
     <string name="set_as_wallpaper_failed">Не вдалося встановити шпалери</string>
     <string name="set_as_wallpaper_with">Встановити шпалери за допомогою:</string>
@@ -124,7 +113,6 @@
     <string name="lock_screen">Екран блокування</string>
     <string name="home_and_lock_screen">Домашній екран і екран блокування</string>
     <string name="allow_changing_aspect_ratio">Дозволити зміну співвідношення сторін</string>
-    <!-- Slideshow -->
     <string name="slideshow">Слайдшоу</string>
     <string name="interval">Інтервал</string>
     <string name="include_photos">Включити фото</string>
@@ -139,9 +127,7 @@
     <string name="slide">Зміщення</string>
     <string name="slideshow_ended">Слайдшоу закінчено</string>
     <string name="no_media_for_slideshow">Не знайдено медіафайлів для показу у слайдшоу</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Групувати безпосередні підтеки</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Групувати за</string>
     <string name="do_not_group_files">Не групувати файли</string>
     <string name="by_folder">текою</string>
@@ -155,10 +141,8 @@
     <string name="by_extension">розширенням</string>
     <string name="show_file_count_section_header">Показувати кількість файлів у заголовках розділів</string>
     <string name="grouping_and_sorting">Зверніть увагу, що групування і сортування - це два окремих поля</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Тека, що відображається на віджеті:</string>
     <string name="show_folder_name">Показувати ім\'я теки</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Відтворювати відео автоматично</string>
     <string name="remember_last_video_position">Запам\'ятовувати місце зупинки перегляду</string>
     <string name="loop_videos">Зациклити відео</string>
@@ -222,16 +206,13 @@
     <string name="all_files">Всі файли</string>
     <string name="search_all_files">Шукати всі файли замість папок на головному екрані</string>
     <string name="show_all_folders">Показати кнопку меню для швидкого перемикання \"Показати вміст усіх папок\"</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Мініатюри</string>
     <string name="fullscreen_media">Повноекранний перегляд</string>
     <string name="extended_details">Розширені подробиці</string>
     <string name="bottom_actions">Кнопки дій внизу екрана</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Керування видимими кнопками дій внизу екрана</string>
     <string name="toggle_favorite">Перемкнути улюблене</string>
     <string name="toggle_file_visibility">Перемкнути видимість файлу</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Довільний</string>
     <string name="pesdk_transform_button_resetCrop">Відміна</string>
     <string name="pesdk_transform_button_squareCrop">Квадрат</string>
@@ -344,10 +325,6 @@
     <string name="pesdk_common_title_aquamarinColor">Аквамариновий</string>
     <string name="pesdk_common_title_pipettableColor">Колір заливки</string>
     <string name="vesdk_video_trim_title_name">Обрізка</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Я заблокував додаток за допомогою пароля і забув його. Що я можу зробити\?</string>
     <string name="faq_2_text">Ви можете вирішити цю проблему двома способами: перевстановити застосунок або знайти його в розділі \"Застосунки\" налаштувань вашого пристрою та обрати \"Очистити дані\". Це скине усі ваші налаштування застосунка, але не видалить жодного медіа файлу.</string>
     <string name="faq_3_title">Як зробити альбом завжди доступним у верхній частині\?</string>
@@ -355,7 +332,6 @@
     <string name="faq_4_title">Як я можу швидко прокручувати відео\?</string>
     <string name="faq_4_text">Ви можете двічі натиснути збоку дисплея або натиснути на поточному чи максимальному значенні тривалості поруч з пошуковою планкою. Якщо в налаштуваннях додатка ви оберете опцію Відкривати відео в окремому вікні, то також зможете користуватися горизонтальними жестами.</string>
     <string name="faq_5_title">В чому полягає різниця між приховуванням та виключенням теки\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Чому відображаються теки з музичними обкладинками або стікерами\?</string>
     <string name="faq_6_text">Може так трапитися, що з\'являться деякі незвичні альбоми. Їх можна легко виключити довгим натисканням і вибором \"Виключити\". В наступному діалозі у вас буде можливість обрати батьківську папку. Швидше за все, це дозволить також запобігти появі інших пов\'язаних альбомів.</string>
     <string name="faq_7_title">Тека з зображеннями не відображається, що мені робити\?</string>
@@ -381,8 +357,4 @@
     <string name="faq_17_text">Це перестало працювати через системні зміни, які прийшли з Android 11. Додаток більше не може переглядати реальні теки, при отриманні даних він покладається на так званий MediaStore.</string>
     <string name="faq_18_title">Чому я бачу рекламу під час відтворення відео\?</string>
     <string name="faq_18_text">У наших додатках немає жодної реклами. Якщо ви бачите її під час відтворення відео, ви, мабуть, використовуєте інший відеопрогравач. Спробуйте знайти у налаштуваннях пристрою свій відеопрогравач за промовчанням, а далі виконайте на ньому «Очистити налаштування за промовчанням». Наступного разу, коли ви запустите певне відео, ви побачите вікно вибору додатку, який ви хочете використовувати.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

@@ -33,27 +33,19 @@
     <string name="reorder_by_dragging">Ordner durch Ziehen neu anordnen</string>
     <string name="reorder_by_dragging_pro">Ordner durch Ziehen neu anordnen (Pro)</string>
     <string name="restore_to_path">Wiederherstellung nach „%s“</string>
-    <!-- Filter -->
     <string name="filter_media">Medien filtern</string>
     <string name="images">Bilder</string>
-    <string name="videos">Videos</string>
-    <string name="gifs">GIFs</string>
     <string name="raw_images">RAW-Bilder</string>
-    <string name="svgs">SVGs</string>
     <string name="portraits">Porträts</string>
     <string name="no_media_with_filters">Keine Medien für die ausgewählten Filter gefunden.</string>
     <string name="change_filters_underlined"><u>Filter ändern</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Diese Funktion verbirgt den Ordner, indem sie in ihn eine .nomedia-Datei einfügt, sie verbirgt auch alle Unterordner. Du kannst sie wieder sehen, indem du in den Einstellungen die Option „Ausgeblendete Elemente anzeigen“ umschaltest. Weiter\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Stattdessen einen höherliegenden Ordner ausschließen\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Versteckte Ordner</string>
     <string name="manage_hidden_folders">Versteckte Ordner verwalten</string>
     <string name="hidden_folders_placeholder">Keinen mit einer .nomedia-Datei versteckten Ordner gefunden.</string>
     <string name="hidden_all_files">Du musst der App den Zugriff auf alle Dateien gewähren, um versteckte Dateien zu sehen, sonst funktioniert sie nicht.</string>
     <string name="cant_unhide_folder">Wenn ein Ordner oder einer seiner übergeordneten Ordner einen Punkt vor seinem Namen hat, ist er versteckt und kann somit nicht wieder angezeigt werden. Du musst den Punkt entfernen, indem du ihn umbenennst.</string>
-    <!-- Include folders -->
     <string name="include_folders">Einbezogene Ordner</string>
     <string name="manage_included_folders">Einbezogene Ordner verwalten</string>
     <string name="add_folder">Ordner hinzufügen</string>
@@ -61,7 +53,6 @@
 \n
 \nDas Hinzufügen einiger Elemente hier schließt keine anderen Ordner aus.</string>
     <string name="no_media_add_included">Es konnten keine Mediendateien gefunden werden. Das Problem kann behoben werden, indem die Ordner mit den Mediendateien manuell hinzugefügt werden.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Größe ändern und speichern</string>
     <string name="width">Breite</string>
     <string name="height">Höhe</string>
@@ -76,8 +67,6 @@
         <item quantity="other">Größenänderung bei %d Bildern fehlgeschlagen</item>
     </plurals>
     <string name="images_resized_successfully">Bildergröße erfolgreich geändert</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Einfacher Editor</string>
     <string name="advanced_editor">Fortgeschrittener Editor</string>
     <string name="rotate">Drehen</string>
@@ -106,11 +95,7 @@
     <string name="flip_horizontally">Horizontal spiegeln</string>
     <string name="flip_vertically">Vertikal spiegeln</string>
     <string name="free_aspect_ratio">Beliebiges</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Anderes</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Als Hintergrund festlegen</string>
     <string name="set_as_wallpaper_failed">Hintergrundbild festlegen fehlgeschlagen</string>
     <string name="set_as_wallpaper_with">Als Hintergrund festlegen mit:</string>
@@ -122,7 +107,6 @@
     <string name="lock_screen">Sperrbildschirm</string>
     <string name="home_and_lock_screen">Start- und Sperrbildschirm</string>
     <string name="allow_changing_aspect_ratio">Änderung des Seitenverhältnisses zulassen</string>
-    <!-- Slideshow -->
     <string name="slideshow">Diashow</string>
     <string name="interval">Intervall</string>
     <string name="include_photos">Bilder verwenden</string>
@@ -131,15 +115,12 @@
     <string name="random_order">Zufällige Reihenfolge</string>
     <string name="move_backwards">Rückwärts abspielen</string>
     <string name="loop_slideshow">Endlos abspielen</string>
-    <string name="animation">Animation</string>
     <string name="no_animation">Keine</string>
     <string name="fade">Verblassen</string>
     <string name="slide">Schieben</string>
     <string name="slideshow_ended">Diashow beendet</string>
     <string name="no_media_for_slideshow">Keine Medien für Diashow gefunden</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Direkte Unterordner gruppieren</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Gruppieren nach</string>
     <string name="do_not_group_files">Dateien nicht gruppieren</string>
     <string name="by_folder">Ordner</string>
@@ -153,10 +134,8 @@
     <string name="by_extension">Dateierweiterung</string>
     <string name="show_file_count_section_header">Anzahl der Dateien in den Abschnittsüberschriften anzeigen</string>
     <string name="grouping_and_sorting">Bitte beachten, dass Gruppieren und Sortieren zwei unterschiedliche Dinge sind</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Auf dem Widget angezeigter Ordner:</string>
     <string name="show_folder_name">Ordnernamen anzeigen</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Videos automatisch abspielen</string>
     <string name="remember_last_video_position">Letzte Videowiedergabeposition merken</string>
     <string name="loop_videos">Videos in Endlosschleife abspielen</string>
@@ -220,21 +199,17 @@
     <string name="all_files">Alle Dateien</string>
     <string name="search_all_files">Alle Dateien statt der Ordner auf dem Hauptbildschirm durchsuchen</string>
     <string name="show_all_folders">Menüschaltfläche einblenden für schnelles Umschalten „Alle Ordnerinhalte anzeigen“</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Vorschaubilder</string>
     <string name="fullscreen_media">Vollbildansicht von Medien</string>
     <string name="extended_details">Erweiterte Details</string>
     <string name="bottom_actions">Funktionen am unteren Bildschirmrand</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Funktionen auswählen</string>
     <string name="toggle_favorite">Favorit umschalten</string>
     <string name="toggle_file_visibility">Sichtbarkeit von Dateien umschalten</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Benutzerdefiniert</string>
     <string name="pesdk_transform_button_resetCrop">Zurücksetzen</string>
     <string name="pesdk_transform_button_squareCrop">Quadrat</string>
     <string name="pesdk_transform_title_name">Umwandeln</string>
-    <string name="pesdk_filter_title_name">Filter</string>
     <string name="pesdk_filter_asset_none">Kein</string>
     <string name="pesdk_adjustments_title_name">Anpassen</string>
     <string name="pesdk_adjustments_button_shadowTool">Schatten</string>
@@ -244,7 +219,6 @@
     <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
     <string name="pesdk_adjustments_button_saturationTool">Sättigung</string>
     <string name="pesdk_adjustments_button_clarityTool">Struktur</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Schwarz</string>
     <string name="pesdk_adjustments_button_whitesTool">Weiß</string>
     <string name="pesdk_adjustments_button_temperatureTool">Temperatur</string>
@@ -252,12 +226,9 @@
     <string name="pesdk_adjustments_button_reset">Zurücksetzen</string>
     <string name="pesdk_focus_title_name">Fokus</string>
     <string name="pesdk_focus_title_disabled">Kein</string>
-    <string name="pesdk_focus_button_radial">Radial</string>
-    <string name="pesdk_focus_button_linear">Linear</string>
     <string name="pesdk_focus_button_mirrored">Gespiegelt</string>
     <string name="pesdk_focus_button_gaussian">Gaußsch</string>
     <string name="pesdk_text_title_input">Text hinzufügen</string>
-    <string name="pesdk_text_title_name">Text</string>
     <string name="pesdk_text_title_options">Textoptionen</string>
     <string name="pesdk_text_title_textColor">Textfarbe</string>
     <string name="pesdk_text_title_font">Schriftart</string>
@@ -278,7 +249,6 @@
     <string name="pesdk_brush_button_bringToFront">Nach vorne</string>
     <string name="pesdk_brush_button_delete">Löschen</string>
     <string name="pesdk_brush_title_brushColor">Pinselfarbe</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Editor schließen\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Sollen die Änderungen wirklich verworfen werden\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Ja</string>
@@ -301,11 +271,8 @@
     <string name="pesdk_sticker_button_contrast">Kontrast</string>
     <string name="pesdk_sticker_button_saturation">Sättigung</string>
     <string name="pesdk_sticker_button_brightness">Helligkeit</string>
-    <string name="pesdk_sticker_category_name_custom">Uploads</string>
     <string name="pesdk_overlay_title_name">Überlagerung</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Abdunkeln</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Überlagerung</string>
     <string name="pesdk_overlay_button_blendModeLighten">Aufhellen</string>
     <string name="pesdk_overlay_button_blendModeMultiply">Multiplizieren</string>
@@ -318,7 +285,6 @@
     <string name="pesdk_overlay_asset_mosaic">Mosaik</string>
     <string name="pesdk_overlay_asset_paper">Papier</string>
     <string name="pesdk_overlay_asset_rain">Regen</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">H spiegeln</string>
     <string name="pesdk_common_button_flipV">V spiegeln</string>
     <string name="pesdk_common_button_undo">Rückgängig</string>
@@ -334,18 +300,11 @@
     <string name="pesdk_common_title_orchidColor">Orchidee</string>
     <string name="pesdk_common_title_pinkColor">Rosa</string>
     <string name="pesdk_common_title_redColor">Rot</string>
-    <string name="pesdk_common_title_orangeColor">Orange</string>
-    <string name="pesdk_common_title_goldColor">Gold</string>
     <string name="pesdk_common_title_yellowColor">Gelb</string>
     <string name="pesdk_common_title_oliveColor">Oliv</string>
     <string name="pesdk_common_title_greenColor">Grün</string>
-    <string name="pesdk_common_title_aquamarinColor">Aquamarin</string>
     <string name="pesdk_common_title_pipettableColor">Pipettierbare Farbe</string>
     <string name="vesdk_video_trim_title_name">Zuschneiden</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Ich habe die App mit einem Passwort geschützt und es vergessen. Was kann ich tun\?</string>
     <string name="faq_2_text">Es gibt zwei Möglichkeiten: Entweder man installiert die App neu oder sucht die App in den Geräteeinstellungen und wählt dort „Daten löschen“. Alle Einstellungen werden zurückgesetzt, alle Mediendateien bleiben unberührt.</string>
     <string name="faq_3_title">Wie kann ich ein Album immer zuoberst erscheinen lassen\?</string>
@@ -353,7 +312,6 @@
     <string name="faq_4_title">Wie kann ich in Videos vor- oder zurückspringen\?</string>
     <string name="faq_4_text">Das geht, indem man doppelt auf die Seite des Bildschirms drückt, oder indem man auf den Text nahe der Suchleiste drückt, der die aktuelle bzw. maximale Zeit anzeigt. Wenn in den App-Einstellungen die Funktion aktiviert ist, dass Videos in einem separaten Fenster geöffnet werden, kann man zudem horizontale Gesten verwenden.</string>
     <string name="faq_5_title">Was ist der Unterschied zwischen dem Verstecken und dem Ausschließen eines Ordners\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Wieso erscheinen Ordner mit Musikcover oder Aufkleber\?</string>
     <string name="faq_6_text">Es kann geschehen, dass manche ungewöhnlichen Alben erscheinen. Diese kann man ausschließen, indem man sie lange drückt und \'Ausschließen\' auswählt. Im nächsten Dialog kann man den übergeordneten Ordner auswählen, wodurch die anderen zugehörigen Alben auch nicht auftauchen sollten.</string>
     <string name="faq_7_title">Ein Ordner mit Bildern wird nicht angezeigt oder es werden nicht alle Bilder angezeigt. Was kann ich tun\?</string>
@@ -379,8 +337,4 @@
     <string name="faq_17_text">Das funktioniert seit den Systemänderungen durch Android 11 nicht mehr, da die App keine echten Ordner mehr durchsuchen kann, sondern sich beim Abrufen von Daten auf den sogenannten MediaStore verlässt.</string>
     <string name="faq_18_title">Warum sehe ich während der Videowiedergabe Werbung\?</string>
     <string name="faq_18_text">Unsere Apps enthalten keinerlei Werbung. Wenn während der Videowiedergabe trotzdem welche angezeigt wird, liegt das daran, dass man den Videoplayer einer anderen App verwendet. Man sollte versuchen, den Standard-Videoplayer in den Geräteeinstellungen zu finden, und dann „Standardeinstellungen löschen“ ausführen. Beim nächsten Aufruf eines Videos, wird eine Aufforderung zur Auswahl der App angezeigt, aus der man die gewünschte App auswählen kann.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

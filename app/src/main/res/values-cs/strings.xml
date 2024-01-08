@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Seřadit složky přetažením</string>
     <string name="reorder_by_dragging_pro">Seřadit složky přetažením (Pro)</string>
     <string name="restore_to_path">Obnovuje se do \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filtr médií</string>
     <string name="images">Obrázky</string>
     <string name="videos">Videa</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Portréty</string>
     <string name="no_media_with_filters">Se zvolenými filtry nebyly nalezeny žádné mediální soubory.</string>
     <string name="change_filters_underlined"><u>Změnit filtry</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Tato funkce skryje složku včetně podsložek přidáním souboru \'.nomedia\'. Zobrazíte je zvolením možnosti \'Zobrazit skryté položky\' v nastavení. Pokračovat\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Chcete vyloučit nadřazenou složku\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Skryté složky</string>
     <string name="manage_hidden_folders">Spravovat skryté složky</string>
     <string name="hidden_folders_placeholder">Zdá se, že nemáte žádné složky skryté pomocí souboru \".nomedia\".</string>
     <string name="hidden_all_files">Pro zobrazení skrytých souborů musíte aplikaci povolit přístup ke všem souborům.</string>
     <string name="cant_unhide_folder">Pokud má složka nebo nějaká z jejích nadřazených složek tečku před názvem, je skrytá a nelze její skrytí zrušit tímto způsobem. Musíte ji přejmenovat a tečku odstranit.</string>
-    <!-- Include folders -->
     <string name="include_folders">Zahrnuté složky</string>
     <string name="manage_included_folders">Spravovat zahrnuté složky</string>
     <string name="add_folder">Přidat složku</string>
@@ -61,7 +56,6 @@
 \n
 \nPřidání nových položek nezpůsobí vyloučení žádné jiné složky.</string>
     <string name="no_media_add_included">Nebyly nalezeny žádné mediální soubory. Můžete to napravit ručním přidáním složek, které obsahují média.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Změnit velikost a uložit</string>
     <string name="width">Šířka</string>
     <string name="height">Výška</string>
@@ -77,8 +71,6 @@
         <item quantity="other">Nepodařilo se změnit velikost %d obrázků</item>
     </plurals>
     <string name="images_resized_successfully">Velikost obrázků úspěšně změněna</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Základní editor</string>
     <string name="advanced_editor">Pokročilý editor</string>
     <string name="rotate">Otočit</string>
@@ -107,11 +99,7 @@
     <string name="flip_horizontally">Překlopit vodorovně</string>
     <string name="flip_vertically">Překlopit svisle</string>
     <string name="free_aspect_ratio">Volná</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Jiná</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Nastavit jako tapetu</string>
     <string name="set_as_wallpaper_failed">Nastavení tapety selhalo</string>
     <string name="set_as_wallpaper_with">Nastavit jako tapetu pomocí:</string>
@@ -123,9 +111,7 @@
     <string name="lock_screen">Zamykací obrazovka</string>
     <string name="home_and_lock_screen">Domovská a zamykací obrazovka</string>
     <string name="allow_changing_aspect_ratio">Povolit změnu poměru stran</string>
-    <!-- Slideshow -->
     <string name="slideshow">Prezentace</string>
-    <string name="interval">Interval</string>
     <string name="include_photos">Zahrnout fotografie</string>
     <string name="include_videos">Zahrnout videa</string>
     <string name="include_gifs">Zahrnout soubory GIF</string>
@@ -138,9 +124,7 @@
     <string name="slide">Posun</string>
     <string name="slideshow_ended">Prezentace skončila</string>
     <string name="no_media_for_slideshow">Nebyla nalezena žádná média pro prezentaci</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Sloučit přímé podsložky</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Seskupit podle</string>
     <string name="do_not_group_files">Neseskupovat</string>
     <string name="by_folder">Složky</string>
@@ -154,10 +138,8 @@
     <string name="by_extension">Přípony</string>
     <string name="show_file_count_section_header">Zobrazit počet souborů v záhlaví sekcí</string>
     <string name="grouping_and_sorting">Vezměte na vědomí, že seskupování a řazení jsou dvě nezávislé hodnoty</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Složka zobrazená na widgetu:</string>
     <string name="show_folder_name">Zobrazit název složky</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Přehrávat videa automaticky</string>
     <string name="remember_last_video_position">Zapamatovat pozici posledního přehraného videa</string>
     <string name="loop_videos">Přehrávat videa ve smyčce</string>
@@ -221,16 +203,13 @@
     <string name="all_files">Všechny soubory</string>
     <string name="search_all_files">Vyhledávat všechny soubory místo složek na hlavní obrazovce</string>
     <string name="show_all_folders">Zobrazit v nabídce tlačítko pro rychlé přepínání zobrazení obsahu všech složek</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniatury</string>
     <string name="fullscreen_media">Celoobrazovkový režim</string>
     <string name="extended_details">Rozšířené vlastnosti</string>
     <string name="bottom_actions">Spodní akční tlačítka</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Spravovat viditelná spodní akční tlačítka</string>
     <string name="toggle_favorite">Přepínač oblíbenosti</string>
     <string name="toggle_file_visibility">Přepínač viditelnosti souboru</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Vlastní</string>
     <string name="pesdk_transform_button_resetCrop">Obnovit</string>
     <string name="pesdk_transform_button_squareCrop">Čtverec</string>
@@ -245,7 +224,6 @@
     <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
     <string name="pesdk_adjustments_button_saturationTool">Sytost</string>
     <string name="pesdk_adjustments_button_clarityTool">Jasnost</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Černé</string>
     <string name="pesdk_adjustments_button_whitesTool">Bílé</string>
     <string name="pesdk_adjustments_button_temperatureTool">Teplota</string>
@@ -258,7 +236,6 @@
     <string name="pesdk_focus_button_mirrored">Zrcadlové</string>
     <string name="pesdk_focus_button_gaussian">Gaussián</string>
     <string name="pesdk_text_title_input">Přidat text</string>
-    <string name="pesdk_text_title_name">Text</string>
     <string name="pesdk_text_title_options">Nastavení textu</string>
     <string name="pesdk_text_title_textColor">Barva textu</string>
     <string name="pesdk_text_title_font">Písmo</string>
@@ -279,7 +256,6 @@
     <string name="pesdk_brush_button_bringToFront">Do popředí</string>
     <string name="pesdk_brush_button_delete">Smazat</string>
     <string name="pesdk_brush_title_brushColor">Barva štětce</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Zavřít editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Opravdu chcete zahodit změny\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Ano</string>
@@ -319,7 +295,6 @@
     <string name="pesdk_overlay_asset_mosaic">Mozaika</string>
     <string name="pesdk_overlay_asset_paper">Papír</string>
     <string name="pesdk_overlay_asset_rain">Déšť</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">Překlopit H</string>
     <string name="pesdk_common_button_flipV">Překlopit V</string>
     <string name="pesdk_common_button_undo">Zpět</string>
@@ -343,10 +318,6 @@
     <string name="pesdk_common_title_aquamarinColor">Akvamarín</string>
     <string name="pesdk_common_title_pipettableColor">Pipetovatelná barva</string>
     <string name="vesdk_video_trim_title_name">Střih</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Uzamknul jsem aplikaci heslem, ale zapomněl jsem ho. Co můžu udělat\?</string>
     <string name="faq_2_text">Můžete to vyřešit dvěma způsoby. Aplikaci můžete buď přeinstalovat nebo ji vyhledat v nastavení zařízení a zvolit „Vymazat data“. Obnoví se tím všechna Vaše nastavení a žádné mediální soubory nebudou odstraněny.</string>
     <string name="faq_3_title">Jak mohu dosáhnout, aby bylo dané album stále zobrazeno jako první\?</string>
@@ -354,7 +325,6 @@
     <string name="faq_4_title">Jak mohu video posunout rychle vpřed\?</string>
     <string name="faq_4_text">Můžete to udělat dvojitým klepnutím na stranu obrazovky nebo klepnutím na text aktuálního nebo celkového času videa poblíž ukazatele průběhu. Pokud v nastavení aplikace povolíte otevírání videí na samostatné obrazovce, můžete používat i horizontální gesta.</string>
     <string name="faq_5_title">Jaký je rozdíl mezi Skrytím a Vyloučením složky\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Proč se mi zobrazují složky s obaly hudebních alb nebo nálepkami\?</string>
     <string name="faq_6_text">Může se stát, že se vám zobrazí také neobvyklé složky. Můžete je ale jednoduše skrýt jejich vybráním pomocí dlouhého podržení a zvolením Vyloučit. Pokud na následujícím dialogu zvolíte vyloučení nadřazené složky, pravděpodobně budou vyloučeny i ostatní podobné složky.</string>
     <string name="faq_7_title">Složka s fotografiemi se mi nezobrazuje nebo ve složce nevidím všechny soubory. Co s tím\?</string>
@@ -380,8 +350,4 @@
     <string name="faq_17_text">Toto přestalo fungovat kvůli systémovým změnám, které přišly s Androidem 11, aplikace již nemůže procházet skutečné složky, při načítání dat se spoléhá na tzv. MediaStore.</string>
     <string name="faq_18_title">Proč se mi během přehrávání videa zobrazují reklamy\?</string>
     <string name="faq_18_text">Naše aplikace žádné reklamy neobsahují. Pokud je vidíte během přehrávání videa, používáte na jeho přehrávání nějakou jinou aplikaci. Zkuste v nastavení zařízení najít svůj výchozí přehrávač videa a poté v něm použijte volbu „Vymazat výchozí“. Při příštím spuštění videa se zobrazí výzva k výběru aplikace, kde si můžete vybrat, jakou aplikaci chcete použít.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

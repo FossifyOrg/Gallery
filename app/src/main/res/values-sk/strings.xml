@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Zmeniť poradie priečinkov presunutím</string>
     <string name="reorder_by_dragging_pro">Zmeniť poradie priečinkov presunutím (Pro)</string>
     <string name="restore_to_path">Obnovuje sa do \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filter médií</string>
     <string name="images">Obrázky</string>
     <string name="videos">Videá</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Portréty</string>
     <string name="no_media_with_filters">So zvolenými filtrami sa nenašli žiadne média súbory.</string>
     <string name="change_filters_underlined"><u>Zmeniť filtre</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Táto funkcia skryje priečinok pridaním súboru \'.nomedia\', skryté budú aj podpriečinky. Môžete ich vidieť zvolením možnosti \'Zobraziť skryté priečinky\' v nastaveniach. Pokračovať\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Chcete vylúčiť nadpriečinok\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Skryté priečinky</string>
     <string name="manage_hidden_folders">Spravovať skryté priečinky</string>
     <string name="hidden_folders_placeholder">Zdá sa, že nemáte žiadne priečinky skryté pomocou súboru \".nomedia\".</string>
     <string name="hidden_all_files">Na zobrazenie skrytých súborov musíte apke povoliť prístup ku všetkým súborom, ináč to fungovať nebude.</string>
     <string name="cant_unhide_folder">Ak priečinok, alebo niektorý z vyšších priečinkov obsahuje pred názvom bodku, je ukrytý a týmto spôsobom sa ho nedá odokryť. Na odstránenie bodky musíte priečinok premenovať.</string>
-    <!-- Include folders -->
     <string name="include_folders">Pridané priečinky</string>
     <string name="manage_included_folders">Spravovať pridané priečinky</string>
     <string name="add_folder">Pridať priečinok</string>
@@ -61,7 +56,6 @@
 \n
 \nPridanie nových položiek sem nevylúči žiadny iný priečinok.</string>
     <string name="no_media_add_included">Nenašli sa žiadne súbory s médiami. Viete to napraviť manuálnym pridaním priečinkov, ktoré obsahujú médiá.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Zmeniť veľkosť a uložiť</string>
     <string name="width">Šǐrka</string>
     <string name="height">Výška</string>
@@ -77,8 +71,6 @@
         <item quantity="other">Nepodarilo sa zmeniť veľkosť %d obrázkov</item>
     </plurals>
     <string name="images_resized_successfully">Veľkosť obrázkov bola zmenená úspešne</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Základný editor</string>
     <string name="advanced_editor">Pokročilý editor</string>
     <string name="rotate">Otočiť</string>
@@ -107,11 +99,7 @@
     <string name="flip_horizontally">Preklopiť vodorovne</string>
     <string name="flip_vertically">Preklopiť zvisle</string>
     <string name="free_aspect_ratio">Voľný</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Iný</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Nastaviť ako tapetu</string>
     <string name="set_as_wallpaper_failed">Nastavovanie ako tapeta zlyhalo</string>
     <string name="set_as_wallpaper_with">Nastaviť ako tapetu s:</string>
@@ -123,9 +111,7 @@
     <string name="lock_screen">Obrazovka uzamknutia</string>
     <string name="home_and_lock_screen">Plocha a obrazovka uzamknutia</string>
     <string name="allow_changing_aspect_ratio">Povoliť zmenu pomeru strán</string>
-    <!-- Slideshow -->
     <string name="slideshow">Prezentácia</string>
-    <string name="interval">Interval</string>
     <string name="include_photos">Zahrnúť fotky</string>
     <string name="include_videos">Zahrnúť videá</string>
     <string name="include_gifs">Zahrnúť GIFy</string>
@@ -138,9 +124,7 @@
     <string name="slide">Posúvanie</string>
     <string name="slideshow_ended">Prezentácia skončila</string>
     <string name="no_media_for_slideshow">Pre prezentáciu sa nenašli žiadne vhodné súbory</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Zlúčiť priame podpriečinky</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Zoskupiť podľa</string>
     <string name="do_not_group_files">Nezoskupovať súbory</string>
     <string name="by_folder">Priečinka</string>
@@ -154,10 +138,8 @@
     <string name="by_extension">Prípony</string>
     <string name="show_file_count_section_header">Zobraziť počet súborov pri hlavičkách skupín</string>
     <string name="grouping_and_sorting">Prosím vedzte, že radenie a zoskupovanie súborov sú 2 nezávislé hodnoty</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Priečinok zobrazený vo widgete:</string>
     <string name="show_folder_name">Zobraziť názov priečinka</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Spúšťať videá automaticky</string>
     <string name="remember_last_video_position">Zapamätať si pozíciu posledného prehraného videa</string>
     <string name="loop_videos">Automaticky reštartovať videá</string>
@@ -221,18 +203,14 @@
     <string name="all_files">Všetky súbory</string>
     <string name="search_all_files">Vyhľadávať medzi všetkými súbormi namiesto priečinkov na hlavnej obrazovke</string>
     <string name="show_all_folders">Zobraziť tlačidlo na menu pre rýchle prepínanie zobrazovania obsahu všetkých priečinkov</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Náhľady</string>
     <string name="fullscreen_media">Celoobrazovkový režim</string>
     <string name="extended_details">Rozšírené vlastnosti</string>
     <string name="bottom_actions">Spodné akčné tlačidlá</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Upraviť viditeľné spodné akčné tlačidlá</string>
     <string name="toggle_favorite">Prepnutie obľúbenosti</string>
     <string name="toggle_file_visibility">Prepnutie viditeľnosti súboru</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Vlastný</string>
-    <string name="pesdk_transform_button_resetCrop">Reset</string>
     <string name="pesdk_transform_button_squareCrop">Štvorec</string>
     <string name="pesdk_transform_title_name">Transformovať</string>
     <string name="pesdk_filter_title_name">Filtre</string>
@@ -245,20 +223,16 @@
     <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
     <string name="pesdk_adjustments_button_saturationTool">Sýtosť</string>
     <string name="pesdk_adjustments_button_clarityTool">Jasnosť</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Čierne</string>
     <string name="pesdk_adjustments_button_whitesTool">Biele</string>
     <string name="pesdk_adjustments_button_temperatureTool">Teplota</string>
     <string name="pesdk_adjustments_button_sharpnessTool">Ostrosť</string>
-    <string name="pesdk_adjustments_button_reset">Reset</string>
     <string name="pesdk_focus_title_name">Zaostrenie</string>
     <string name="pesdk_focus_title_disabled">Žiadne</string>
     <string name="pesdk_focus_button_radial">Lúčovité</string>
     <string name="pesdk_focus_button_linear">Lineárne</string>
     <string name="pesdk_focus_button_mirrored">Zrkadlovité</string>
-    <string name="pesdk_focus_button_gaussian">Gaussian</string>
     <string name="pesdk_text_title_input">Pridať text</string>
-    <string name="pesdk_text_title_name">Text</string>
     <string name="pesdk_text_title_options">Nastavenia textu</string>
     <string name="pesdk_text_title_textColor">Farba textu</string>
     <string name="pesdk_text_title_font">Písmo</string>
@@ -279,7 +253,6 @@
     <string name="pesdk_brush_button_bringToFront">Dopredu</string>
     <string name="pesdk_brush_button_delete">Vymazať</string>
     <string name="pesdk_brush_title_brushColor">Farba štetca</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Zavrieť editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Ozaj chcete zahodiť úpravy\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Áno</string>
@@ -306,7 +279,6 @@
     <string name="pesdk_overlay_title_name">Prekrytie</string>
     <string name="pesdk_overlay_button_blendModeNormal">Žiadne</string>
     <string name="pesdk_overlay_button_blendModeDarken">Stmavenie</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Prekrytie</string>
     <string name="pesdk_overlay_button_blendModeLighten">Osvetlenie</string>
     <string name="pesdk_overlay_button_blendModeMultiply">Znásobenie</string>
@@ -319,7 +291,6 @@
     <string name="pesdk_overlay_asset_mosaic">Mozaika</string>
     <string name="pesdk_overlay_asset_paper">Papier</string>
     <string name="pesdk_overlay_asset_rain">Dážď</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">Preklopiť H</string>
     <string name="pesdk_common_button_flipV">Preklopiť V</string>
     <string name="pesdk_common_button_undo">Späť</string>
@@ -340,13 +311,8 @@
     <string name="pesdk_common_title_yellowColor">Žltá</string>
     <string name="pesdk_common_title_oliveColor">Olivová</string>
     <string name="pesdk_common_title_greenColor">Zelená</string>
-    <string name="pesdk_common_title_aquamarinColor">Aquamarin</string>
     <string name="pesdk_common_title_pipettableColor">Pipetovateľná farba</string>
     <string name="vesdk_video_trim_title_name">Obrezať</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Uzamkol som apku heslom, ale zabudol som ho. Čo môžem spraviť\?</string>
     <string name="faq_2_text">Viete to vyriešǐť 2 spôsobmi. Môžete apku buď preinštalovať, alebo ju nájsť v nastaveniach zariadenia a zvoliť \"Vymazať údaje\". Vymaže to iba nastavenia, nie súbory.</string>
     <string name="faq_3_title">Ako môžem dosiahnuť, aby bol daný album stále zobrazený prvý\?</string>
@@ -354,7 +320,6 @@
     <string name="faq_4_title">Ako viem posunúť video rýchlo vpred\?</string>
     <string name="faq_4_text">Viete to dosiahnuť dvojitým kliknutím na boky obrazovky, alebo kliknutím na texty súčasnej, alebo maximálnej dĺžky videa, ktoré sú vedľa indikátora súčasného progresu. Ak v nastaveniach apky zapnete možnosť spúšťania videí na novej obrazovke, budete môcť použiť aj vodorovné gestá.</string>
     <string name="faq_5_title">Aký je rozdiel medzi Skrytím a Vylúčením priečinka\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Prečo sa mi zobrazujú priečinky s obalmi hudobných albumov, alebo nálepkami\?</string>
     <string name="faq_6_text">Môže sa stať, že sa vám zobrazia aj nezvyčajné priečinky. Viete ich ale jednoducho ukryť pomocou ich zvolenia dlhým podržaním a zvolením Vylúčiť. Ak na nasledovnom dialógu zvolíte vylúčenie rodičovského priečinka, pravdepodobne budú vylúčené aj ostatné, podobné priečinky.</string>
     <string name="faq_7_title">Priečinok s fotkami sa mi nezobrazuje, alebo priečinok nezobrazuje všetky položky. Čo s tým môžem urobiť\?</string>
@@ -380,8 +345,4 @@
     <string name="faq_17_text">Je to taktiež spôsobené zmenami súvisiacimi s Android 11, kedy apka už nevie prehliadať reálne priečinky. V získavaní súborov sa môže iba spoliehať na takzvaný MediaStore.</string>
     <string name="faq_18_title">Prečo sa mi počas prehrávania videí zobrazujú reklamy\?</string>
     <string name="faq_18_text">Naše apky nemajú vôbec žiadne reklamy. Ak sa vám zobrazujú počas prehrávania videí, používate prehrávač inej apky. Skúste v nastaveniach zariadenia nájsť predvolený prehrávač a použiť \"Odstrániť predvolené\". Pri ďalšom spustení videa uvidíte zoznam apiek, ktoré môžete na prehrávanie použiť.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

@@ -14,7 +14,6 @@
     <string name="other_folder">Outro cartafol</string>
     <string name="show_on_map">Mostrar no mapa</string>
     <string name="unknown_location">Localización descoñecida</string>
-    <string name="volume">Volume</string>
     <string name="brightness">Brillo</string>
     <string name="lock_orientation">Fixar orientación</string>
     <string name="unlock_orientation">Non fixar orientación</string>
@@ -33,17 +32,13 @@
     <string name="reorder_by_dragging">Reordealos cartafois arrastrando</string>
     <string name="reorder_by_dragging_pro">Reordealos cartafoles arrastrando (Pro)</string>
     <string name="restore_to_path">Restaurando a \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filtrar medios</string>
     <string name="images">Imaxes</string>
     <string name="videos">Vídeos</string>
-    <string name="gifs">Gifs</string>
     <string name="raw_images">Imaxes RAW</string>
-    <string name="svgs">SVGS</string>
     <string name="portraits">Retratos</string>
     <string name="no_media_with_filters">Non se atopou multimedia do tipo indicado polo filtro.</string>
     <string name="change_filters_underlined"><u>Cambiar filtro</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Esta función oculta o cartafol engadíndolle ficheiro \'.nomedia\', tamén ocultará os subcartafoles. Podes velos premendo a opción \'Mostrar elementos ocultos\' nos Axustes. Continuar?</string>
     <string name="exclude_folder_description">Isto só excluirá de Galería Fossify a selección e os seus subcartafoles. Podes xestionar os cartafoles excluídos nos Axustes.</string>
     <string name="exclude_folder_parent">Excluír o cartafol pai no seu lugar\?</string>
@@ -55,7 +50,6 @@
     <string name="hidden_folders_placeholder">Semella que non tes ningún cartafol oculto cun ficheiro \".nomedia\".</string>
     <string name="hidden_all_files">Tes que concederlle acceso á aplicación a todos os ficheiros para ver os ficheiros ocultos, se non, a aplicación non pode funcionar.</string>
     <string name="cant_unhide_folder">Se un cartafol ou algún dos seus cartoles nai ten un punto antes do nome fará que esté oculto, e non podes restablecelo así. Debes eliminar o punto cambiándolle o nome.</string>
-    <!-- Include folders -->
     <string name="include_folders">Cartafoles incluídos</string>
     <string name="manage_included_folders">Xestionar cartafoles incluídos</string>
     <string name="add_folder">Engadir cartafol</string>
@@ -63,7 +57,6 @@
 \n
 \nEngadindo aquí elementos non eliminarás outros.</string>
     <string name="no_media_add_included">Non se atopou ningún ficheiro multimedia. Podes solucionalo engadindo manualmente algúns cartafoles con eses ficheiros.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Selección da redimensión e gardar</string>
     <string name="width">Ancho</string>
     <string name="height">Alto</string>
@@ -78,8 +71,6 @@
         <item quantity="other">Fallou o escalado de %d imaxes</item>
     </plurals>
     <string name="images_resized_successfully">Escalado de imaxes correcto</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Editor básico</string>
     <string name="advanced_editor">Editor avanzado</string>
     <string name="rotate">Rotar</string>
@@ -108,10 +99,7 @@
     <string name="flip_horizontally">Virar horizontalmente</string>
     <string name="flip_vertically">Virar verticalmente</string>
     <string name="free_aspect_ratio">Libre</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Outro</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
     <string name="wallpaper">Fondo de pantalla</string>
     <string name="set_as_wallpaper">Establecer como fondo da pantalla</string>
     <string name="set_as_wallpaper_failed">Fallou establecer fondo da pantalla</string>
@@ -124,7 +112,6 @@
     <string name="lock_screen">Pantalla de bloqueo</string>
     <string name="home_and_lock_screen">Pantallas de inicio e bloqueo</string>
     <string name="allow_changing_aspect_ratio">Permite cambiala relación do aspecto</string>
-    <!-- Slideshow -->
     <string name="slideshow">Presentación</string>
     <string name="interval">Intervalo</string>
     <string name="include_photos">Incluír fotos</string>
@@ -139,9 +126,7 @@
     <string name="slide">Diapositiva</string>
     <string name="slideshow_ended">A presentación das diapositivas rematou</string>
     <string name="no_media_for_slideshow">Non se atoparon medios para a presentación das diapositivas</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Agrupar subcartafoles directos</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Agrupar por</string>
     <string name="do_not_group_files">Non agrupar ficheiros</string>
     <string name="by_folder">Cartafol</string>
@@ -155,10 +140,8 @@
     <string name="by_extension">Extensión</string>
     <string name="show_file_count_section_header">Mostralo reconto de ficheiros nas cabeceiras das seccións</string>
     <string name="grouping_and_sorting">Por favor, ten en conta que agrupar e ordenar son dous campos diferentes</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Cartafol a mostrar no widget:</string>
     <string name="show_folder_name">Mostrar nome de cartafol</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Reproducir vídeos automáticamente</string>
     <string name="remember_last_video_position">Lembrar a posición do vídeo na última vez</string>
     <string name="loop_videos">Víeos en bucle</string>
@@ -222,16 +205,13 @@
     <string name="all_files">Todolos ficheiros</string>
     <string name="search_all_files">Busca todos os ficheiros en lugar de cartafoles na pantalla principal</string>
     <string name="show_all_folders">Mostrar un botón de menú para alternar Mostralo contido de todolos cartafoles rapidamente</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturas</string>
     <string name="fullscreen_media">Medios a pantalla completa</string>
     <string name="extended_details">Detalles ampliados</string>
     <string name="bottom_actions">Accións do fondo</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Xestionar accións visibles do fondo</string>
     <string name="toggle_favorite">Engadir como favorito</string>
     <string name="toggle_file_visibility">Alternar visibilidade do ficheiro</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Persoalizado</string>
     <string name="pesdk_transform_button_resetCrop">Reiniciar</string>
     <string name="pesdk_transform_button_squareCrop">Cadrado</string>
@@ -246,7 +226,6 @@
     <string name="pesdk_adjustments_button_contrastTool">Contraste</string>
     <string name="pesdk_adjustments_button_saturationTool">Saturación</string>
     <string name="pesdk_adjustments_button_clarityTool">Claridade</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Negros</string>
     <string name="pesdk_adjustments_button_whitesTool">Brancos</string>
     <string name="pesdk_adjustments_button_temperatureTool">Temperatura</string>
@@ -280,7 +259,6 @@
     <string name="pesdk_brush_button_bringToFront">Á Fronte</string>
     <string name="pesdk_brush_button_delete">Borrar</string>
     <string name="pesdk_brush_title_brushColor">Cor do Pincel</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Pechalo Editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">De verdade queres desbotar os cambios\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Si</string>
@@ -305,7 +283,6 @@
     <string name="pesdk_sticker_button_brightness">Brillo</string>
     <string name="pesdk_sticker_category_name_custom">Cargas</string>
     <string name="pesdk_overlay_title_name">Superposición</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Escurecer</string>
     <string name="pesdk_overlay_button_blendModeScreen">Pantalla</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Superposición</string>
@@ -344,7 +321,6 @@
     <string name="pesdk_common_title_aquamarinColor">Augamariña</string>
     <string name="pesdk_common_title_pipettableColor">Escoller coa pipeta</string>
     <string name="vesdk_video_trim_title_name">Recortar</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Como fago para que Galería Fossify sexa a galería por defecto no móbil?</string>
     <string name="faq_1_text">Primeiro tes que atopar a galería por defecto actual na sección Aplicacións nos axustes do teu dispositivo, busca un botón que poña algo como \"Abrir por defecto\", preme nel, marca \"Restablecer por defecto\". A próxima vez que intentes abrir unha imaxe ou vídeo deberás escoller a aplicación para abrila, e aí podes elexir Galería Fossify e poñela como app por defecto.</string>
     <string name="faq_2_title">Protexín a aplicación cun contrasinal, pero esquecino. Que podo facer?</string>
@@ -380,8 +356,4 @@
     <string name="faq_17_text">Iso deixou de funcionar debido aos cambios no sistema que tamén viñeron con Android 11, a aplicación xa non pode navegar por cartafoles reais, depende da chamada MediaStore para obtelos datos.</string>
     <string name="faq_18_title">Por que vexo anuncios na reprodución dos vídeos\?</string>
     <string name="faq_18_text">As nosas aplicacións non teñen ningún tipo de anuncio. Se os ves durante a reprodución de vídeo, debes estar usando outras aplicacións de reprodutor de vídeo. Tenta atopar o teu reprodutor de vídeo predeterminado na configuración do dispositivo e, a continuación, fai un \"Borrar valores predeterminados\". A próxima vez que invoques algunha intención de vídeo, verás un indicador de selección de aplicacións, onde podes seleccionar a aplicación que queres usar.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

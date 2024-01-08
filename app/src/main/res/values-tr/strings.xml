@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Sürükleyerek klasörleri yeniden sırala</string>
     <string name="reorder_by_dragging_pro">Sürükleyerek klasörleri yeniden sırala (Pro)</string>
     <string name="restore_to_path">\'%s\' konumuna geri yükle</string>
-    <!-- Filter -->
     <string name="filter_media">Medyayı filtrele</string>
     <string name="images">Resimler</string>
     <string name="videos">Videolar</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Portreler</string>
     <string name="no_media_with_filters">Seçilen filtrelerle hiçbir medya dosyası bulunamadı.</string>
     <string name="change_filters_underlined"><u>Filtreleri değiştir</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Bu işlev, klasöre bir \'.nomedia\' dosyası ekleyerek gizler, tüm alt klasörleri de gizler. Ayarlar\'dan \'Gizli ögeleri göster\' seçeneğini değiştirerek onları görebilirsiniz. Devam edilsin mi\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Bunun yerine bir üst dizin hariç tutulsun mu\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Gizli klasörler</string>
     <string name="manage_hidden_folders">Gizli klasörleri yönet</string>
     <string name="hidden_folders_placeholder">\".nomedia\" dosyasıyla gizlenmiş herhangi bir klasörünüz yok gibi görünüyor.</string>
     <string name="hidden_all_files">Gizli dosyaları görmek için uygulamaya Tüm Dosyalar erişimi vermeniz gerekir, aksi takdirde çalışamaz.</string>
     <string name="cant_unhide_folder">Bir klasörün veya üst klasörlerinden birinin adından önce bir nokta varsa, bu klasör gizlidir ve bu şekilde gizliliği kaldırılamaz. Yeniden adlandırarak noktayı kaldırmanız gerekir.</string>
-    <!-- Include folders -->
     <string name="include_folders">Dahil edilen klasörler</string>
     <string name="manage_included_folders">Dahil edilen klasörleri yönet</string>
     <string name="add_folder">Klasör ekle</string>
@@ -61,7 +56,6 @@
 \n
 \nBuraya bazı ögeler eklemek başka bir klasörü hariç tutmaz.</string>
     <string name="no_media_add_included">Hiçbir medya dosyası bulunamadı. Medya dosyalarını içeren klasörleri elle ekleyerek çözebilirsiniz.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Seçimi yeniden boyutlandır ve kaydet</string>
     <string name="width">Genişlik</string>
     <string name="height">Yükseklik</string>
@@ -76,7 +70,6 @@
         <item quantity="other">%d resim yeniden boyutlandırılamadı</item>
     </plurals>
     <string name="images_resized_successfully">Resimler yeniden boyutlandırıldı</string>
-    <!-- Editor -->
     <string name="editor">Düzenleyici</string>
     <string name="basic_editor">Temel Düzenleyici</string>
     <string name="advanced_editor">Gelişmiş Düzenleyici</string>
@@ -106,11 +99,7 @@
     <string name="flip_horizontally">Yatay olarak çevir</string>
     <string name="flip_vertically">Dikey olarak çevir</string>
     <string name="free_aspect_ratio">Serbest</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Diğer</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Duvar kağıdı olarak ayarla</string>
     <string name="set_as_wallpaper_failed">Duvar kağıdı olarak ayarlanmadı</string>
     <string name="set_as_wallpaper_with">Şununla duvar kağıdı olarak ayarla:</string>
@@ -122,7 +111,6 @@
     <string name="lock_screen">Kilit ekranı</string>
     <string name="home_and_lock_screen">Ana ve kilit ekranı</string>
     <string name="allow_changing_aspect_ratio">En boy oranını değiştirmeye izin ver</string>
-    <!-- Slideshow -->
     <string name="slideshow">Slayt gösterisi</string>
     <string name="interval">Süre</string>
     <string name="include_photos">Fotoğrafları dahil et</string>
@@ -137,9 +125,7 @@
     <string name="slide">Kaydır</string>
     <string name="slideshow_ended">Slayt gösterisi sona erdi</string>
     <string name="no_media_for_slideshow">Slayt gösterisi için medya bulunamadı</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Doğrudan alt klasörleri gruplandır</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Gruplandırma</string>
     <string name="do_not_group_files">Dosyaları gruplandırma</string>
     <string name="by_folder">Klasör</string>
@@ -153,10 +139,8 @@
     <string name="by_extension">Uzantı</string>
     <string name="show_file_count_section_header">Bölüm başlıklarında dosya sayısını göster</string>
     <string name="grouping_and_sorting">Lütfen gruplandırmanın ve sıralamanın 2 bağımsız alan olduğunu unutmayın</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Widget\'ta gösterilen klasör:</string>
     <string name="show_folder_name">Klasör adını göster</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Videoları otomatik oynat</string>
     <string name="remember_last_video_position">Son video oynatma konumunu hatırla</string>
     <string name="loop_videos">Videoları tekrarla</string>
@@ -220,16 +204,13 @@
     <string name="all_files">Tüm dosyalar</string>
     <string name="search_all_files">Ana ekranda klasörler yerine tüm dosyaları ara</string>
     <string name="show_all_folders">Tüm Klasör İçeriğini Göster seçeneğini hızlıca değiştirmek için bir menü düğmesi göster</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Küçük resimler</string>
     <string name="fullscreen_media">Tam ekran medya</string>
     <string name="extended_details">Genişletilmiş ayrıntılar</string>
     <string name="bottom_actions">Alt eylemler</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Görünür alt eylemleri yönet</string>
     <string name="toggle_favorite">Favoriyi göster/gizle</string>
     <string name="toggle_file_visibility">Dosya görünürlüğünü aç/kapat</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Özel</string>
     <string name="pesdk_transform_button_resetCrop">Sıfırla</string>
     <string name="pesdk_transform_button_squareCrop">Kare</string>
@@ -303,7 +284,6 @@
     <string name="pesdk_sticker_button_brightness">Parlaklık</string>
     <string name="pesdk_sticker_category_name_custom">Yüklemeler</string>
     <string name="pesdk_overlay_title_name">Kaplama</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Karartma</string>
     <string name="pesdk_overlay_button_blendModeScreen">Örtme</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Kaplama</string>
@@ -342,10 +322,6 @@
     <string name="pesdk_common_title_aquamarinColor">Akuamarin</string>
     <string name="pesdk_common_title_pipettableColor">Pipetlenebilir renk</string>
     <string name="vesdk_video_trim_title_name">Kırp</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Uygulamayı bir şifre ile kilitledim ama unuttum. Ne yapabilirim\?</string>
     <string name="faq_2_text">Bunu 2 şekilde çözebilirsiniz. Uygulamayı yeniden kurabilir veya uygulamayı aygıt ayarlarınızdan bulabilir ve \"Verileri temizle\" seçeneğini seçebilirsiniz. Bu, tüm ayarlarınızı sıfırlayacak, herhangi bir medya dosyasını kaldırmayacaktır.</string>
     <string name="faq_3_title">Bir albümün her zaman en üstte görünmesini nasıl sağlayabilirim\?</string>
@@ -353,7 +329,6 @@
     <string name="faq_4_title">Videoları nasıl hızlıca ileri sarabilirim\?</string>
     <string name="faq_4_text">Ekranın yan tarafına iki kez dokunarak veya arama çubuğunun yanındaki geçerli veya maksimum süre metinlerine dokunarak bunu yapabilirsiniz. Videoları uygulama ayarlarından ayrı bir ekranda açmayı etkinleştirirseniz yatay hareketleri de kullanabilirsiniz.</string>
     <string name="faq_5_title">Klasörün gizlenmesi ve hariç tutulması arasındaki fark nedir\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Neden albüm resimlerini içeren klasörler görünüyor\?</string>
     <string name="faq_6_text">Bazı olağandışı albümlerin ortaya çıktığını göreceksiniz. Onları uzun süre basarak ve Hariç tut\'u seçerek kolayca hariç tutabilirsiniz. Bir sonraki iletişim kutusunda, üst klasörü seçebilirsiniz, ancak diğer ilgili albümlerin de gösterilmesini önleyecektir.</string>
     <string name="faq_7_title">Resimler içeren bir klasör görünmüyor, ne yapabilirim\?</string>
@@ -379,8 +354,4 @@
     <string name="faq_17_text">Bu, Android 11 ile birlikte gelen sistem değişiklikleri nedeniyle çalışmayı durdurdu, uygulama artık gerçek klasörlere göz atamıyor, verileri almak için MediaStore kullanıyor.</string>
     <string name="faq_18_title">Video oynatılırken neden reklam görüyorum\?</string>
     <string name="faq_18_text">Uygulamalarımızda hiçbir şekilde reklam yoktur. Video oynatılırken reklam görüyorsanız, başka bir uygulamanın video oynatıcısını kullanıyor olmalısınız. Aygıt ayarlarında öntanımlı video oynatıcınızı bulmayı deneyin, ardından \"Öntanımlıları temizle\" yapın. Bir dahaki sefere video oynatmayı istediğinizde, kullanmak istediğiniz uygulamayı seçebileceğiniz bir uygulama seçici istemi göreceksiniz.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

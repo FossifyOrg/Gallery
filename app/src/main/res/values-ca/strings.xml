@@ -33,7 +33,6 @@
     <string name="reorder_by_dragging">Reordeneu les carpetes arrossegant-les</string>
     <string name="reorder_by_dragging_pro">Reordeneu les carpetes arrossegant-les (Pro)</string>
     <string name="restore_to_path">S\'està restaurant a «%s»</string>
-    <!-- Filter -->
     <string name="filter_media">Filtre multimèdia</string>
     <string name="images">Imatges</string>
     <string name="videos">Vídeos</string>
@@ -43,17 +42,13 @@
     <string name="portraits">Retrats</string>
     <string name="no_media_with_filters">No s\'ha trobat cap fitxer multimèdia amb els filtres seleccionats.</string>
     <string name="change_filters_underlined"><u>Canvia els filtres</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Aquesta funció oculta la carpeta agregant un fitxer «.nomedia» a dins d\'ella. També ocultarà les subcarpetes. Podeu veure-les canviant l\'opció «Mostra els elements ocults» a la configuració. Continuo\?</string>
-    <string name="exclude_folder_description">This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.</string>
     <string name="exclude_folder_parent">Voleu excloure la carpeta superior\?</string>
-    <string name="excluded_activity_placeholder">Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.</string>
     <string name="hidden_folders">Carpetes ocultes</string>
     <string name="manage_hidden_folders">Gestiona les carpetes ocultes</string>
     <string name="hidden_folders_placeholder">Sembla que no teniu cap carpeta oculta amb el fitxer «.nomedia».</string>
     <string name="hidden_all_files">Cal concedir a l\'aplicació accés a tots els fitxers per veure els fitxers ocults, en cas contrari podria no funcionar.</string>
     <string name="cant_unhide_folder">Si una carpeta o una de les seves carpetes superiors té un punt abans del seu nom, està amagada i no es pot mostrar aquí. Heu d\'eliminar el punt canviant el seu nom.</string>
-    <!-- Include folders -->
     <string name="include_folders">Carpetes incloses</string>
     <string name="manage_included_folders">Gestiona les carpetes incloses</string>
     <string name="add_folder">Agrega una carpeta</string>
@@ -61,7 +56,6 @@
 \n
 \nSi aquí s\'afegeixen elements, no s\'exclourà cap altra carpeta.</string>
     <string name="no_media_add_included">No s\'ha trobat cap fitxer multimèdia. Podeu resoldre-ho afegint manualment les carpetes que contenen fitxers multimèdia.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Redimensiona la selecció i desa</string>
     <string name="width">Amplada</string>
     <string name="height">Alçada</string>
@@ -76,8 +70,6 @@
         <item quantity="other">Ha fallat en canviar de mida %d imatges</item>
     </plurals>
     <string name="images_resized_successfully">Les imatges s\'han canviat de mida correctament</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Editor bàsic</string>
     <string name="advanced_editor">Editor avançat</string>
     <string name="rotate">Gira</string>
@@ -106,11 +98,7 @@
     <string name="flip_horizontally">Inverteix horitzontalment</string>
     <string name="flip_vertically">Inverteix verticalment</string>
     <string name="free_aspect_ratio">Lliure</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Altres</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="wallpaper">Wallpaper</string>
     <string name="set_as_wallpaper">Estableix com a fons de pantalla</string>
     <string name="set_as_wallpaper_failed">Ha fallat en establir com a fons de pantalla</string>
     <string name="set_as_wallpaper_with">Estableix com a fons de pantalla amb:</string>
@@ -122,9 +110,7 @@
     <string name="lock_screen">Pantalla de bloqueig</string>
     <string name="home_and_lock_screen">Pantalla d\'inici i de bloqueig</string>
     <string name="allow_changing_aspect_ratio">Permet canviar la relació d\'aspecte</string>
-    <!-- Slideshow -->
     <string name="slideshow">Presentació de diapositives</string>
-    <string name="interval">Interval</string>
     <string name="include_photos">Inclou fotos</string>
     <string name="include_videos">Inclou vídeos</string>
     <string name="include_gifs">Inclou GIF</string>
@@ -137,9 +123,7 @@
     <string name="slide">Lliscament</string>
     <string name="slideshow_ended">S\'ha acabat la presentació de diapositives</string>
     <string name="no_media_for_slideshow">No s\'ha trobat cap contingut multimèdia per a la presentació de diapositives</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Agrupa les subcarpetes directes</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Agrupa per</string>
     <string name="do_not_group_files">No agrupis els fitxers</string>
     <string name="by_folder">Carpeta</string>
@@ -153,10 +137,8 @@
     <string name="by_extension">Extensió</string>
     <string name="show_file_count_section_header">Mostra el comptador de fitxers a les capçaleres de la secció</string>
     <string name="grouping_and_sorting">Tingueu en compte que l\'agrupació i la classificació són 2 camps independents</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Carpeta que es mostra al giny:</string>
     <string name="show_folder_name">Mostra el nom de la carpeta</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Reprodueix automàticament els vídeos</string>
     <string name="remember_last_video_position">Recorda la posició de la darrera reproducció de vídeo</string>
     <string name="loop_videos">Vídeos en bucle</string>
@@ -220,16 +202,13 @@
     <string name="all_files">Tots els fitxers</string>
     <string name="search_all_files">Cerca tots els fitxers en lloc de carpetes a la pantalla principal</string>
     <string name="show_all_folders">Mostra un botó de menú per commutar «Mostra el contingut de totes les carpetes ràpidament»</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniatures</string>
     <string name="fullscreen_media">Contingut multimèdia a pantalla completa</string>
     <string name="extended_details">Detalls ampliats</string>
     <string name="bottom_actions">Accions a la part inferior</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Gestió de les accions visibles de la part inferior</string>
     <string name="toggle_favorite">Commuta com a preferit</string>
     <string name="toggle_file_visibility">Commuta la visibilitat del fitxer</string>
-    <!-- New editor strings -->
     <string name="pesdk_transform_button_freeCrop">Personalitzat</string>
     <string name="pesdk_transform_button_resetCrop">Restaura</string>
     <string name="pesdk_transform_button_squareCrop">Quadrat</string>
@@ -241,23 +220,18 @@
     <string name="pesdk_adjustments_button_exposureTool">Exposició</string>
     <string name="pesdk_adjustments_button_highlightTool">Ressaltat</string>
     <string name="pesdk_adjustments_button_brightnessTool">Brillantor</string>
-    <string name="pesdk_adjustments_button_contrastTool">Contrast</string>
     <string name="pesdk_adjustments_button_saturationTool">Saturació</string>
     <string name="pesdk_adjustments_button_clarityTool">Claredat</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
     <string name="pesdk_adjustments_button_blacksTool">Negres</string>
     <string name="pesdk_adjustments_button_whitesTool">Blancs</string>
     <string name="pesdk_adjustments_button_temperatureTool">Temperatura</string>
     <string name="pesdk_adjustments_button_sharpnessTool">Nitidesa</string>
     <string name="pesdk_adjustments_button_reset">Restaura</string>
-    <string name="pesdk_focus_title_name">Focus</string>
     <string name="pesdk_focus_title_disabled">No</string>
-    <string name="pesdk_focus_button_radial">Radial</string>
     <string name="pesdk_focus_button_linear">Lineal</string>
     <string name="pesdk_focus_button_mirrored">Emmirallat</string>
     <string name="pesdk_focus_button_gaussian">Gaussià</string>
     <string name="pesdk_text_title_input">Afegeix text</string>
-    <string name="pesdk_text_title_name">Text</string>
     <string name="pesdk_text_title_options">Opcions del text</string>
     <string name="pesdk_text_title_textColor">Color del text</string>
     <string name="pesdk_text_title_font">Lletra</string>
@@ -265,24 +239,20 @@
     <string name="pesdk_text_button_edit">Edita</string>
     <string name="pesdk_text_button_straighten">Redreça</string>
     <string name="pesdk_text_button_font">Lletra</string>
-    <string name="pesdk_text_button_color">Color</string>
     <string name="pesdk_text_button_backgroundColor">Color de fons</string>
     <string name="pesdk_text_button_alignment">Alineació</string>
     <string name="pesdk_text_button_bringToFront">Al davant</string>
     <string name="pesdk_text_button_delete">Suprimeix</string>
     <string name="pesdk_text_text_editTextPlaceholder">El meu text</string>
     <string name="pesdk_brush_title_name">Pinzell</string>
-    <string name="pesdk_brush_button_color">Color</string>
     <string name="pesdk_brush_button_size">Mida</string>
     <string name="pesdk_brush_button_hardness">Duresa</string>
     <string name="pesdk_brush_button_bringToFront">Al davant</string>
     <string name="pesdk_brush_button_delete">Suprimeix</string>
     <string name="pesdk_brush_title_brushColor">Color del pinzell</string>
-    <string name="pesdk_editor_title_name">Editor</string>
     <string name="pesdk_editor_title_closeEditorAlert">Tanco l\'editor\?</string>
     <string name="pesdk_editor_text_closeEditorAlert">Realment voleu descartar els canvis\?</string>
     <string name="pesdk_editor_button_closeEditorAlertConfirmation">Sí</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">No</string>
     <string name="pesdk_editor_cancel">Cancel·la</string>
     <string name="pesdk_editor_accept">Accepta</string>
     <string name="pesdk_editor_save">Desa</string>
@@ -292,18 +262,15 @@
     <string name="pesdk_sticker_title_color">Color de l\'adhesiu</string>
     <string name="pesdk_sticker_title_options">Opcions de l\'adhesiu</string>
     <string name="pesdk_sticker_button_add">Afegeix</string>
-    <string name="pesdk_sticker_button_color">Color</string>
     <string name="pesdk_sticker_button_delete">Suprimeix</string>
     <string name="pesdk_sticker_button_bringToFront">Al davant</string>
     <string name="pesdk_sticker_button_straighten">Redreça</string>
     <string name="pesdk_sticker_button_replace">Substitueix</string>
     <string name="pesdk_sticker_button_opacity">Opacitat</string>
-    <string name="pesdk_sticker_button_contrast">Contrast</string>
     <string name="pesdk_sticker_button_saturation">Saturació</string>
     <string name="pesdk_sticker_button_brightness">Brillantor</string>
     <string name="pesdk_sticker_category_name_custom">Càrregues</string>
     <string name="pesdk_overlay_title_name">Superposició</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
     <string name="pesdk_overlay_button_blendModeDarken">Enfosqueix</string>
     <string name="pesdk_overlay_button_blendModeScreen">Pantalla</string>
     <string name="pesdk_overlay_button_blendModeOverlay">Superposició</string>
@@ -315,16 +282,12 @@
     <string name="pesdk_overlay_asset_none">Cap</string>
     <string name="pesdk_overlay_asset_golden">Daurat</string>
     <string name="pesdk_overlay_asset_lightleak1">Fuita de llum 1</string>
-    <string name="pesdk_overlay_asset_mosaic">Mosaic</string>
-    <string name="pesdk_overlay_asset_paper">Paper</string>
     <string name="pesdk_overlay_asset_rain">Pluja</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
     <string name="pesdk_common_button_flipH">Inverteix h</string>
     <string name="pesdk_common_button_flipV">Inverteix v</string>
     <string name="pesdk_common_button_undo">Desfés</string>
     <string name="pesdk_common_button_redo">Refés</string>
     <string name="pesdk_common_title_colorPicker">Selector de colors</string>
-    <string name="pesdk_common_title_transparentColor">Transparent</string>
     <string name="pesdk_common_title_whiteColor">Blanc</string>
     <string name="pesdk_common_title_grayColor">Gris</string>
     <string name="pesdk_common_title_blackColor">Negre</string>
@@ -342,10 +305,6 @@
     <string name="pesdk_common_title_aquamarinColor">Aiguamarina</string>
     <string name="pesdk_common_title_pipettableColor">Color que es pot triar amb una pipeta</string>
     <string name="vesdk_video_trim_title_name">Retalla</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
-    <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
-        The next time you will try opening an image or video you should see an app picker, where you can select Fossify Gallery and make it the default app.</string>
     <string name="faq_2_title">Vaig bloquejar l\'aplicació amb una contrasenya, però l\'he oblidat. Què puc fer\?</string>
     <string name="faq_2_text">Es pot resoldre de dues maneres. Podeu tornar a instal·lar l\'aplicació o trobar l\'aplicació a la configuració del dispositiu i seleccionar «Neteja les dades». Això reiniciarà totes les configuracions, no eliminarà cap fitxer multimèdia.</string>
     <string name="faq_3_title">Com puc fer que un àlbum sempre aparegui a la part superior\?</string>
@@ -353,7 +312,6 @@
     <string name="faq_4_title">Com puc avançar ràpidament els vídeos\?</string>
     <string name="faq_4_text">Podeu fer-ho tocant dues vegades la vora de la pantalla, o tocant els textos de durada actual o màxima a prop de la barra de cerca. Si activeu l\'obertura de vídeos en una pantalla separada a la configuració de l\'aplicació, també podreu fer servir gestos horitzontals.</string>
     <string name="faq_5_title">Quina és la diferència entre ocultar i excloure una carpeta\?</string>
-    <string name="faq_5_text">Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \".nomedia\" file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Per què apareixen les carpetes amb les portades de la música o adhesius\?</string>
     <string name="faq_6_text">Pot passar que veureu que apareixen alguns àlbums inusuals. Podeu excloure\'ls fàcilment prement-los prolongadament i seleccionant Excloure. Al diàleg següent, podeu seleccionar la carpeta principal, és probable que impedeixi que també apareguin altres àlbums relacionats.</string>
     <string name="faq_7_title">No apareix una carpeta amb imatges, o no mostra tots els elements. Què puc fer\?</string>
@@ -379,8 +337,4 @@
     <string name="faq_17_text">Això ha deixat de funcionar a causa dels canvis del sistema que també han vingut amb Android 11, l\'aplicació ja no pot navegar per carpetes reals, es basa en l\'anomenat MediaStore per obtenir dades.</string>
     <string name="faq_18_title">Per què veig anuncis comercials durant la reproducció de vídeo\?</string>
     <string name="faq_18_text">Les nostres aplicacions no tenen cap anunci. Si els veieu durant la reproducció de vídeo, estareu utilitzant una altra aplicació de reproducció de vídeo. Intenteu trobar el reproductor de vídeo predeterminat a la configuració del dispositiu i, a continuació, feu «Esborra els valors predeterminats». La pròxima vegada que invoqueu una acció de vídeo, veureu un missatge de selecció d\'aplicacions, on podreu seleccionar quina aplicació voleu utilitzar.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>
