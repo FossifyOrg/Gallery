@@ -34,7 +34,7 @@ If applicable, add screenshots to help explain your problem.
 **Device info (please complete the following information):**
  - Model: [e.g. Pixel 7]
  - OS: [e.g. Android 14]
- - Version [e.g. 6.28.1]
+ - App version [e.g. 6.28.1]
 
 **Additional context**
 Add any other context about the problem here.
