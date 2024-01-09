@@ -1,26 +1,46 @@
-# Simple Gallery
+# Fossify Gallery
 
-<img alt="Logo" src="graphics/icon.png" width="120" />
+<img alt="Logo" src="graphics/icon.webp" width="120" />
 
-Simple Gallery brings you all the photo viewing and editing features you have been missing on your Android in one stylish easy-to-use app. Browse, manage, crop and edit photos or videos faster than ever, recover accidentally deleted files or create hidden galleries for your most precious images and videos. And with advanced file-support and full customization, finally, your gallery works just the way you want.
+<a href="https://f-droid.org/en/packages/org.fossify.gallery/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on-en.svg" alt="Get it on F-Droid" height=80/></a>
 
-ADVANCED PHOTO EDITOR  
-Turn photo editing into child's play with Simple Gallery's improved file organizer and photo album. Intuitive gestures make it super easy to edit your images on the fly. Crop, flip, rotate and resize pictures or apply stylish filters to make them pop in an instant.
+Unleash memories, not personal data. Fossify Gallery is the ultimate photo and video app that's as powerful as it is private. No ads, no unnecessary permissions – just a seamless experience tailored for you.
 
-ALL THE FILES YOU NEED  
-Simple Gallery supports a huge variety of different file types including JPEG, PNG, MP4, MKV, RAW, SVG, GIF, Panoramic photos, videos and many more, so you enjoy full flexibility in your choice of format. Ever wonder "Can I use this format on my Android"? Now the answer is yes.
+**🖼️ PHOTO EDITING AT YOUR FINGERTIPS:**
 
-MAKE IT YOURS  
-Simple Gallery's highly customizable design allows you make the photo app look, feel and work just the way you want it to. From the UI to the function buttons on the bottom toolbar, Simple Gallery gives you the creative freedom you need in a gallery app.
+Enhance your photos with our basic yet powerful photo editor. Crop, resize, rotate, flip, draw, and apply stunning filters, all without compromising your privacy. Take control of your memories like never before.
 
-RECOVER DELETED PHOTOS & VIDEOS  
-Never worry about accidentally deleting that one precious photo or video you just can't replace. Simple Gallery allows you to quickly recover any deleted photo and videos, meaning on top of being the best media gallery for Android, Simple Gallery doubles as an amazing photo vault app.
+**🌐 PRIVACY FIRST, ALWAYS:**
 
-PROTECT YOUR PRIVATE PHOTOS, VIDEOS & FILES  
-Rest assured your photo album is safe. With Simple Gallery's superior security features you can use a pin, pattern or your device’s fingerprint scanner to limit who can view or edit selected photos and videos or access important files. You can even protect the app itself or place locks on specific functions of the file organizer.
+Your privacy matters. Ditch the data-hungry giants. Fossify Gallery puts you in control. Strip away EXIF metadata like GPS coordinates and camera details, keeping your memories yours, and yours alone.
 
-<div style="display:flex;">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.jpeg" width="30%">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.jpeg" width="30%">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.jpeg" width="30%">
+**🔒 SUPERIOR SECURITY:**
+
+Lock down your memories with pin, pattern, or fingerprint protection. Secure specific photos, videos, or the entire app – you decide who gets access. Peace of mind, guaranteed.
+
+**🔄 RECOVER WITH EASE:**
+
+Breathe easy, accidents happen! Fossify Gallery's built-in recycle bin lets you recover deleted photos and videos in seconds. No more lost treasures, just pure relief.
+
+**🎨 YOUR GALLERY, YOUR STYLE:**
+
+Customize the look, feel, and functionality to match your style. From UI themes to function buttons, Fossify Gallery gives you the creative freedom you crave.
+
+**📷 UNIVERSAL FORMAT FREEDOM:**
+
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, videos, and more – we've got your memories covered, in any format you choose. No restrictions, just limitless possibilities.
+
+**✨ MATERIAL DESIGN WITH DYNAMIC THEMES:**
+
+Experience the beauty of intuitive material design with dynamic themes. Want more? Dive into custom themes and make your gallery truly unique.
+
+➡️ Explore more Fossify apps: https://www.fossify.org<br>
+➡️ Open-Source Code: https://www.github.com/FossifyOrg<br>
+➡️ Join the community on Reddit: https://www.reddit.com/r/Fossify<br>
+➡️ Connect on Telegram: https://t.me/Fossify
+
+<div align="center">
+<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png" width="30%">
+<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png" width="30%">
+<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.png" width="30%">
 </div>

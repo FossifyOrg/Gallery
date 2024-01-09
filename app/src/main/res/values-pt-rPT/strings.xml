@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fix_date_taken">Corrigir data de captura</string>
+    <string name="set_as_default_folder">Utilizar como pasta padrão</string>
+    <string name="images">Imagens</string>
+    <string name="share_resized">Partilhar versão redimensionada</string>
+    <string name="filter_media">Filtrar multimédia</string>
+    <string name="no_media_with_filters">Não foram encontrados ficheiros de multimédia que cumpram os requisitos.</string>
+    <string name="lock_orientation">Bloquear orientação</string>
+    <string name="force_landscape">Impor modo de paisagem</string>
+    <string name="reorder_by_dragging_pro">Organizar pastas por arrasto (Pro)</string>
+    <string name="change_orientation">Mudar orientação</string>
+    <string name="unknown_location">Localização desconhecida</string>
+    <string name="no_date_takens_found">Não foram encontrados dados para a data de captura</string>
+    <string name="all_folders">Todas as pastas</string>
+    <string name="videos">Vídeos</string>
+    <string name="edit">Editar</string>
+    <string name="use_default_orientation">Usar orientação padrão</string>
+    <string name="pin_to_the_top">Fixar no topo</string>
+    <string name="app_launcher_name">Galeria</string>
+    <string name="hidden">(oculta)</string>
+    <string name="reorder_by_dragging">Organizar pastas por arrasto</string>
+    <string name="excluded">(excluída)</string>
+    <string name="unlock_orientation">Desbloquear orientação</string>
+    <string name="fixing">A corrigir…</string>
+    <string name="force_portrait">Impor modo de retrato</string>
+    <string name="unpin_folder">Desafixar pasta</string>
+    <string name="portraits">Retratos</string>
+    <string name="pin_folder">Fixar pasta</string>
+    <string name="change_filters_underlined"><u>Alterar filtros</u></string>
+    <string name="dates_fixed_successfully">Datas corrigidas com sucesso</string>
+    <string name="show_on_map">Mostrar no mapa</string>
+    <string name="folder_view">Alternar para a vista de pastas</string>
+    <string name="restore_to_path">A restaurar para \'%s\'</string>
+    <string name="raw_images">Imagens RAW</string>
+    <string name="switch_to_file_search">Trocar para pesquisa de ficheiros em todas as pastas visíveis</string>
+    <string name="other_folder">Outra pasta</string>
+    <string name="brightness">Brilho</string>
+    <string name="unset_as_default_folder">Deixar de utilizar como pasta padrão</string>
+    <string name="open_camera">Abrir câmara</string>
+    <string name="show_all">Mostrar conteúdo de todas as pastas</string>
+    </resources>

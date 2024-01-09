@@ -1,32 +1,27 @@
-Galerie Simple Pro est un coffre-fort de retouche photo et une application d'organisation de fichiers hors ligne hautement personnalisable, appréciée par des millions de personnes dans le monde entier pour sa grande expérience utilisateur intuitive. Utilisez la galerie photo pour retouche photo, récupérer des photos supprimées, protéger et masquer des photos, créer un dans ce galerie privée album photo secret et recadrer facilement des images et afficher une grande variété d'images et de formats vidéo différents, y compris RAW, SVG, GIF, panoramique et bien plus encore. Téléchargez cette galerie photo non invasive et gérez vos albums comme VOUS le souhaitez!
+Libérez vos souvenirs, pas vos données personnelles. Fossify Gallery est l'application photo et vidéo ultime qui est aussi puissante que privée. Pas de pubs, pas d'autorisations inutiles – juste une expérience transparente et sur mesure pour vous.
 
-ÉDITEUR DE PHOTOS AVANCÉ
-L'organisateur de fichiers et l'album photo Galerie Simple galerie photo facilitent la modification de vos images à la volée et retouche photo. Recadrez les photos, retournez-les, faites-les pivoter et redimensionnez-les ou appliquez les filtres que vous souhaitez.
+🖼️ LA RETOUCHE PHOTO À PORTÉE DE MAIN :
+Améliorez vos photos avec notre éditeur de photos basique mais puissant. Recadrez, redimensionnez, pivotez, retournez, dessinez et appliquez des filtres époustouflants, le tout sans compromettre votre vie privée. Prenez le contrôle de vos souvenirs comme jamais auparavant.
 
-SUPPORT POUR DE NOMBREUX TYPES DE FICHIERS
-Simple Gallery prend en charge une grande variété de différents types de fichiers, y compris JPEG, PNG, MP4, MKV, RAW, SVG, GIF, photos panoramiques, vidéos, et bien d’autres, de sorte que vous profitez d’une flexibilité totale dans votre choix de format. Jamais demandé "Puis-je utiliser ce format sur mon Android"? Maintenant, la réponse est oui.
+🌐 LA CONFIDENTIALITÉ AVANT TOUT, TOUJOURS :
+Votre vie privée compte. Laissez-tomber les géants avides de données. Fossify Gallery vous donne le contrôle. Retirez les métadonnées EXIF comme les coordonnées GPS et les détails de la caméra, pour garder vos souvenirs pour vous et vous seul.
 
-EN FAIRE VOTRE PROPRIÉTÉ
-Le design hautement personnalisable de Simple Gallery vous permet de rendre l’application photo à l’apparence, au toucher et au travail comme vous le souhaitez. De l’interface utilisateur aux boutons de fonction dans la barre d’outils du bas, Simple Gallery vous donne la liberté créative dont vous avez besoin dans une application de galerie.
+🔒 SÉCURITÉ SUPÉRIEURE :
+Verrouillez vos souvenirs avec un code PIN, un schéma ou une empreinte digitale. Sécurisez des photos et vidéos spécifiques, ou toute l'application – vous décidez qui a accès. Tranquillité d'esprit garantie.
 
-RÉCUPÉRER LES PHOTOS ET VIDÉOS SUPPRIMÉES
-Ne vous inquiétez jamais de supprimer accidentellement cette précieuse photo ou vidéo que vous ne pouvez pas remplacer. Simple Gallery vous permet de récupérer rapidement toutes les photos et vidéos supprimées, ce qui signifie en plus d’être la meilleure galerie de médias pour Android, Simple Gallery se double comme une application de coffre-fort photo incroyable.
+🔄 RESTAURATION FACILE :
+Respirez calmement, les accidents ça arrive ! La corbeille intégrée de Fossify Gallery vous permet de récupérer les photos et vidéos supprimées en quelques secondes. Plus de trésors perdus, juste un pur soulagement.
 
-PROTÉGEZ VOS PHOTOS, VIDÉOS ET FICHIERS PRIVÉS
-Soyez assuré que votre album photo est en sécurité. Avec les fonctionnalités de sécurité supérieures de Simple Gallery, vous pouvez utiliser une épingle, un motif ou le scanner d’empreintes digitales de votre appareil pour limiter qui peut voir ou modifier des photos et des vidéos sélectionnées ou accéder à des fichiers importants. Vous pouvez même protéger l’application elle-même ou placer des verrous sur des fonctions spécifiques de l’organisateur de fichiers.
+🎨 VOTRE GALERIE, VOTRE STYLE :
+Personnalisez l'apparence, l'atmosphère et les fonctionnalités pour qu'elles correspondent à votre style. Des thèmes de l'interface aux boutons de fonctions, Fossify Gallery vous donne la liberté créative dont vous rêvez.
 
-Il est livré avec la conception du matériel et un thème sombre par défaut, offrant une grande expérience utilisateur pour une utilisation facile. Le manque d’accès à Internet vous donne plus de confidentialité, de sécurité et de stabilité que d’autres applications.
+📷 LIBERTÉ DE FORMAT UNIVERSEL : 
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, vidéos, et bien plus – nous prenons en charge vos souvenirs, dans n'importe quel format de votre choix. Pas de restrictions, juste des possibilités illimitées.
 
-Ne contient pas d’annonces ou d’autorisations inutiles. Il est entièrement open-source et fournit des couleurs personnalisables. 
+✨ MATERIAL DESIGN AVEC THÈMES DYNAMIQUES :
+Découvrez la beauté du material design intuitif avec des thèmes dynamiques. Vous en voulez plus ? Plongez dans des thèmes personnalisés et rendez votre galerie vraiment unique.
 
-Découvrez la suite complète des outils Simples ici:
-https://www.simplemobiletools.com
-
-Facebook:
-https://www.facebook.com/simplemobiletools
-
-Reddit:
-https://www.reddit.com/r/SimpleMobileTools
-
-Telegram:
-https://t.me/SimpleMobileTools
+Explorez plus d'apps de Fossify : https ://www.fossify.org
+Code open-source : https ://www.github.com/FossifyOrg
+Rejoignez la communauté sur Reddit : https ://www.reddit.com/r/Fossify
+Restez connecté via Telegram : https ://t.me/Fossify

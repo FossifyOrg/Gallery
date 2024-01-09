@@ -1,2 +1,0 @@
- * Restored the All Files permission, mostly related to hidden files
- * Added some translation, stability and UX improvements

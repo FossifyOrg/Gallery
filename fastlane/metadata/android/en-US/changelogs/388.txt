@@ -1,2 +1,0 @@
- * Updated the advanced photo and video editor
- * Added some translation, stability, UX and UI improvements

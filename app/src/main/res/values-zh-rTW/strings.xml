@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">簡易相簿</string>
     <string name="app_launcher_name">相簿</string>
     <string name="edit">編輯</string>
     <string name="open_camera">開啟相機</string>
@@ -34,7 +33,6 @@
     <string name="reorder_by_dragging">透過拖曳來重新排序資料夾</string>
     <string name="reorder_by_dragging_pro">透過拖曳來重新排序資料夾 (專業版)</string>
     <string name="restore_to_path">還原到「%s」</string>
-    <!-- Filter -->
     <string name="filter_media">篩選媒體檔案</string>
     <string name="images">圖片</string>
     <string name="videos">影片</string>
@@ -44,19 +42,13 @@
     <string name="portraits">人像</string>
     <string name="no_media_with_filters">選擇的篩選條件未發現媒體檔案。</string>
     <string name="change_filters_underlined"><u>更改篩選條件</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">啟用此功能將會在選定資料夾中建立「.nomedia」檔案，使該資料夾及其所有子資料夾被隱藏。如果您想查看這些隱藏的資料夾，可以在設定中選擇「顯示隱藏項目」的選項。是否繼續？</string>
-    <string name="exclude_folder_description">此資料夾與子資料夾將只會都從簡易相簿中排除。您可以在設定中進行管理。</string>
     <string name="exclude_folder_parent">是否排除上層資料夾？</string>
-    <string name="excluded_activity_placeholder">[排除資料夾]只會將選擇的資料夾與子資料夾一起從簡易相簿中隱藏，它們仍會出現在其他應用程式中。
-\n
-\n如果您要在其他應用程式中也隱藏，請使用[隱藏]功能。</string>
     <string name="hidden_folders">隱藏資料夾</string>
     <string name="manage_hidden_folders">管理隱藏資料夾</string>
     <string name="hidden_folders_placeholder">看來沒有以「.nomedia」檔案來隱藏的資料夾。</string>
     <string name="hidden_all_files">為了讓您能夠查看隱藏的檔案，請務必開放「所有檔案存取」的權限給此應用程式，否則將無法正常使用。</string>
     <string name="cant_unhide_folder">若資料夾或其母資料夾的名稱前方有「.」，該資料夾將會被隱藏，而此情況下不能直接取消隱藏。您需要改變資料夾名稱以移除前方的「.」。</string>
-    <!-- Include folders -->
     <string name="include_folders">包含資料夾</string>
     <string name="manage_included_folders">管理包含資料夾</string>
     <string name="add_folder">增加資料夾</string>
@@ -64,7 +56,6 @@
 \n
 \n此處新增的項目不會將其他資料夾排除在外。</string>
     <string name="no_media_add_included">未發現媒體檔案。您可以手動加入包含媒體檔案的資料夾來解決。</string>
-    <!-- Resizing -->
     <string name="resize_and_save">縮放所選區域並儲存</string>
     <string name="width">寬度</string>
     <string name="height">高度</string>
@@ -78,7 +69,6 @@
         <item quantity="other">%d 張圖片大小調整失敗</item>
     </plurals>
     <string name="images_resized_successfully">圖片調整大小成功</string>
-    <!-- Editor -->
     <string name="editor">編輯器</string>
     <string name="basic_editor">基礎編輯器</string>
     <string name="advanced_editor">進階編輯器</string>
@@ -108,11 +98,7 @@
     <string name="flip_horizontally">水平翻轉</string>
     <string name="flip_vertically">垂直翻轉</string>
     <string name="free_aspect_ratio">自由</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">其它</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="simple_wallpaper">簡易桌布</string>
     <string name="set_as_wallpaper">設為桌布</string>
     <string name="set_as_wallpaper_failed">設為桌布失敗</string>
     <string name="set_as_wallpaper_with">用其他程式設為桌布:</string>
@@ -124,7 +110,6 @@
     <string name="lock_screen">鎖定畫面</string>
     <string name="home_and_lock_screen">主畫面及鎖定畫面</string>
     <string name="allow_changing_aspect_ratio">允許變更長寬比</string>
-    <!-- Slideshow -->
     <string name="slideshow">投影片</string>
     <string name="interval">間隔</string>
     <string name="include_photos">包含照片</string>
@@ -139,9 +124,7 @@
     <string name="slide">滑動</string>
     <string name="slideshow_ended">投影片結束</string>
     <string name="no_media_for_slideshow">找不到投影片的媒體檔案</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">歸類子資料夾</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">歸類</string>
     <string name="do_not_group_files">不歸類檔案</string>
     <string name="by_folder">資料夾</string>
@@ -155,10 +138,8 @@
     <string name="by_extension">副檔名</string>
     <string name="show_file_count_section_header">於分段標題顯示檔案數量</string>
     <string name="grouping_and_sorting">請注意，歸類和排序兩者是獨立的</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">在小工具顯示資料夾:</string>
     <string name="show_folder_name">顯示資料夾名稱</string>
-    <!-- Settings -->
     <string name="autoplay_videos">自動播放影片</string>
     <string name="remember_last_video_position">記住影片上次播放位置</string>
     <string name="loop_videos">影片循環播放</string>
@@ -222,131 +203,13 @@
     <string name="all_files">所有檔案</string>
     <string name="search_all_files">在主畫面搜尋所有檔案，而非資料夾</string>
     <string name="show_all_folders">顯示一個選單按鈕，快速切換「顯示所有資料夾內容」</string>
-    <!-- Setting sections -->
     <string name="thumbnails">縮圖</string>
     <string name="fullscreen_media">全螢幕媒體檔案</string>
     <string name="extended_details">詳細資訊</string>
     <string name="bottom_actions">底部操作</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">管理要顯示的底部操作</string>
     <string name="toggle_favorite">我的最愛</string>
     <string name="toggle_file_visibility">檔案顯示</string>
-    <!-- New editor strings -->
-    <string name="pesdk_transform_button_freeCrop">自訂</string>
-    <string name="pesdk_transform_button_resetCrop">重置</string>
-    <string name="pesdk_transform_button_squareCrop">正方形</string>
-    <string name="pesdk_transform_title_name">變形</string>
-    <string name="pesdk_filter_title_name">濾鏡</string>
-    <string name="pesdk_filter_asset_none">無</string>
-    <string name="pesdk_adjustments_title_name">調整</string>
-    <string name="pesdk_adjustments_button_shadowTool">暗部</string>
-    <string name="pesdk_adjustments_button_exposureTool">曝光</string>
-    <string name="pesdk_adjustments_button_highlightTool">高光</string>
-    <string name="pesdk_adjustments_button_brightnessTool">亮度</string>
-    <string name="pesdk_adjustments_button_contrastTool">對比</string>
-    <string name="pesdk_adjustments_button_saturationTool">飽和度</string>
-    <string name="pesdk_adjustments_button_clarityTool">清晰度</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
-    <string name="pesdk_adjustments_button_blacksTool">黑色</string>
-    <string name="pesdk_adjustments_button_whitesTool">白色</string>
-    <string name="pesdk_adjustments_button_temperatureTool">色溫</string>
-    <string name="pesdk_adjustments_button_sharpnessTool">銳利度</string>
-    <string name="pesdk_adjustments_button_reset">重置</string>
-    <string name="pesdk_focus_title_name">聚焦</string>
-    <string name="pesdk_focus_title_disabled">無</string>
-    <string name="pesdk_focus_button_radial">放射</string>
-    <string name="pesdk_focus_button_linear">線性</string>
-    <string name="pesdk_focus_button_mirrored">鏡像</string>
-    <string name="pesdk_focus_button_gaussian">高斯</string>
-    <string name="pesdk_text_title_input">Add text</string>
-    <string name="pesdk_text_title_name">文字</string>
-    <string name="pesdk_text_title_options">文字選項</string>
-    <string name="pesdk_text_title_textColor">文字顏色</string>
-    <string name="pesdk_text_title_font">字型</string>
-    <string name="pesdk_text_button_add">新增</string>
-    <string name="pesdk_text_button_edit">編輯</string>
-    <string name="pesdk_text_button_straighten">拉伸</string>
-    <string name="pesdk_text_button_font">字型</string>
-    <string name="pesdk_text_button_color">顏色</string>
-    <string name="pesdk_text_button_backgroundColor">背景顏色</string>
-    <string name="pesdk_text_button_alignment">對齊</string>
-    <string name="pesdk_text_button_bringToFront">移到最上層</string>
-    <string name="pesdk_text_button_delete">刪除</string>
-    <string name="pesdk_text_text_editTextPlaceholder">你的文字</string>
-    <string name="pesdk_brush_title_name">筆刷</string>
-    <string name="pesdk_brush_button_color">顏色</string>
-    <string name="pesdk_brush_button_size">尺寸</string>
-    <string name="pesdk_brush_button_hardness">硬度</string>
-    <string name="pesdk_brush_button_bringToFront">移到最上層</string>
-    <string name="pesdk_brush_button_delete">刪除</string>
-    <string name="pesdk_brush_title_brushColor">筆刷顏色</string>
-    <string name="pesdk_editor_title_name">編輯器</string>
-    <string name="pesdk_editor_title_closeEditorAlert">關閉編輯器？</string>
-    <string name="pesdk_editor_text_closeEditorAlert">確定捨棄所做的編輯？</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">是</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">否</string>
-    <string name="pesdk_editor_cancel">取消</string>
-    <string name="pesdk_editor_accept">接受</string>
-    <string name="pesdk_editor_save">儲存</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">輸出中…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">正在匯出 %s。</string>
-    <string name="pesdk_sticker_title_name">貼圖</string>
-    <string name="pesdk_sticker_title_color">貼圖顏色</string>
-    <string name="pesdk_sticker_title_options">貼圖選項</string>
-    <string name="pesdk_sticker_button_add">新增</string>
-    <string name="pesdk_sticker_button_color">顏色</string>
-    <string name="pesdk_sticker_button_delete">刪除</string>
-    <string name="pesdk_sticker_button_bringToFront">移到最上層</string>
-    <string name="pesdk_sticker_button_straighten">矯正</string>
-    <string name="pesdk_sticker_button_replace">更改</string>
-    <string name="pesdk_sticker_button_opacity">不透明度</string>
-    <string name="pesdk_sticker_button_contrast">對比</string>
-    <string name="pesdk_sticker_button_saturation">飽和度</string>
-    <string name="pesdk_sticker_button_brightness">亮度</string>
-    <string name="pesdk_sticker_category_name_custom">上傳</string>
-    <string name="pesdk_overlay_title_name">覆蓋</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
-    <string name="pesdk_overlay_button_blendModeDarken">變暗</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
-    <string name="pesdk_overlay_button_blendModeOverlay">覆蓋</string>
-    <string name="pesdk_overlay_button_blendModeLighten">變亮</string>
-    <string name="pesdk_overlay_button_blendModeMultiply">色彩增值</string>
-    <string name="pesdk_overlay_button_blendModeColorBurn">加深顏色</string>
-    <string name="pesdk_overlay_button_blendModeSoftLight">柔光</string>
-    <string name="pesdk_overlay_button_blendModeHardLight">實光</string>
-    <string name="pesdk_overlay_asset_none">無</string>
-    <string name="pesdk_overlay_asset_golden">金色</string>
-    <string name="pesdk_overlay_asset_lightleak1">光漏 1</string>
-    <string name="pesdk_overlay_asset_mosaic">馬賽克</string>
-    <string name="pesdk_overlay_asset_paper">紙質</string>
-    <string name="pesdk_overlay_asset_rain">雨</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
-    <string name="pesdk_common_button_flipH">水平翻轉</string>
-    <string name="pesdk_common_button_flipV">垂直翻轉</string>
-    <string name="pesdk_common_button_undo">復原</string>
-    <string name="pesdk_common_button_redo">取消復原</string>
-    <string name="pesdk_common_title_colorPicker">顏色挑選器</string>
-    <string name="pesdk_common_title_transparentColor">透明</string>
-    <string name="pesdk_common_title_whiteColor">白色</string>
-    <string name="pesdk_common_title_grayColor">灰色</string>
-    <string name="pesdk_common_title_blackColor">黑色</string>
-    <string name="pesdk_common_title_lightBlueColor">淺藍</string>
-    <string name="pesdk_common_title_blueColor">藍色</string>
-    <string name="pesdk_common_title_purpleColor">紫色</string>
-    <string name="pesdk_common_title_orchidColor">淡紫</string>
-    <string name="pesdk_common_title_pinkColor">粉紅</string>
-    <string name="pesdk_common_title_redColor">紅色</string>
-    <string name="pesdk_common_title_orangeColor">橘色</string>
-    <string name="pesdk_common_title_goldColor">金色</string>
-    <string name="pesdk_common_title_yellowColor">黃色</string>
-    <string name="pesdk_common_title_oliveColor">橄欖</string>
-    <string name="pesdk_common_title_greenColor">綠色</string>
-    <string name="pesdk_common_title_aquamarinColor">藍綠</string>
-    <string name="pesdk_common_title_pipettableColor">顏色吸取器</string>
-    <string name="vesdk_video_trim_title_name">修剪</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">如何將簡易相簿設為裝置的預設相簿？</string>
-    <string name="faq_1_text">首先開啟裝置的設定，在應用程式相關設定處找到目前的預設相簿。 選擇「預設為開啟」或類似的選項，然後按「清除預設值」。 之後開啟圖片或影片檔案時會出現選擇 APP 的畫面，此時即可將簡易相簿設為預設相簿。</string>
     <string name="faq_2_title">用密碼把這個 APP 上鎖後忘記密碼該怎麼辦？</string>
     <string name="faq_2_text">有兩種解決方法。一是重新安裝本 APP。一是在裝置的設定中找到本 APP，然後按「清除資料」（或「清除儲存空間」等類似的字眼），APP 的設定將會被重設，但不會移除任何媒體檔案。</string>
     <string name="faq_3_title">如何使某個相簿顯示在最頂端？</string>
@@ -354,7 +217,6 @@
     <string name="faq_4_title">如何快轉影片？</string>
     <string name="faq_4_text">按兩下螢幕邊邊，或者按一下進度條旁邊的目前播放時間／影片時長文字。若您在設定中啟用了「總是用新的水平手勢在獨立畫面開啟影片」，則您也可以使用水平手勢快轉。</string>
     <string name="faq_5_title">「隱藏」與「排除」資料夾的差別是？</string>
-    <string name="faq_5_text">「排除」只會使該資料夾在簡易相簿中隱藏；而「隱藏」則會影響整個系統，使其也會在其他的相簿 APP 中隱藏，其運作原理是在該資料夾中建立一個空的「.nomedia」檔案（您可使用任意檔案管理器移除此檔案）。另外，某些裝置不允許隱藏相片、螢幕擷圖、下載等資料夾。</string>
     <string name="faq_6_title">為何出現了音樂的封面圖或是貼圖的資料夾？</string>
     <string name="faq_6_text">有時候會出現一些異常的相簿。長按並點選排除可排除它們，在接下來的對話框選擇它們的上層資料夾的話，有機會避免相關的相簿出現。</string>
     <string name="faq_7_title">有個含有圖片的資料夾沒出現，抑或是沒有顯示所有項目時，該怎麼辦？</string>
@@ -380,8 +242,4 @@
     <string name="faq_17_text">因 Android 11 的系統變更，這項功能無法再運作。app 沒辦法瀏覽實際的資料夾，而是透過所謂的 MediaStorage 來擷取資料。</string>
     <string name="faq_18_title">為什麼我在播放影片時看到廣告？</string>
     <string name="faq_18_text">我們的應用程式完全沒有廣告。如果您在播放影片時看到它們，那麼您一定是在使用其他應用程式的影片播放器。嘗試在裝置設定中找到您的預設影片播放器，然後對其進行清除其預設值。下次您嘗試播放影片時，系統會提示您選擇應用程式，您可以在此選擇您想要使用的影片播放器。</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

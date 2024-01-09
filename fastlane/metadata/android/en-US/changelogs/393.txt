@@ -1,4 +1,0 @@
- * Improved video playback
- * Fixed some subfolder grouping related issues
- * Do not allow copying locked folders content without unlocking
- * Added some translation, stability, UX and UI improvements

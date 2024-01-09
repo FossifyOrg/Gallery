@@ -1,33 +1,27 @@
-Schlichte Galerie bringt alles zur Betrachtung und Bearbeitung von Fotos mit, was auf einem Android-Gerät in einer modernen, einfach zu verwendenden App fehlt. Schneller als je zuvor Fotos oder Videos durchsuchen, verwalten, zuschneiden und bearbeiten, versehentlich gelöschte Dateien wiederherstellen oder verborgene Galerien für die wertvollsten Bilder und Videos erstellen. Durch Unterstützung einer Vielzahl von Bilder- & Videoformaten und komplette Individualisierung, funktioniert die Galerie endlich so wie sie es soll.
+Entfessle Erinnerungen, nicht persönliche Daten. Fossify Galerie ist die ultimative Foto- und Video-App, die ebenso leistungsstark wie privat ist. Keine Werbung, keine unnötigen Berechtigungen – nur ein nahtloses, auf dich zugeschnittenes Erlebnis.
 
-FORTSCHRITTLICHE FOTOBEARBEITUNG
-Mit der verbesserten Dateiverwaltung und dem Fotoalbum in Schlichte Galerie die Fotobearbeitung in ein Kinderspiel verwandeln. Intuitive Gesten machen es superleicht, Bilder schnell zu bearbeiten. Bilder zuschneiden, spiegeln, drehen und ihre Größe ändern oder elegante Filter anwenden, um sie im Nu aufzuwerten.
+🖼️ FOTOBEARBEITUNG AUF TASTENDRUCK:
+Verbessere deine Fotos mit unserem einfachen, aber leistungsstarken Fotoeditor. Schneide, verändere die Größe, drehe, spiegele, zeichne und wende tolle Filter an, ohne deine Privatsphäre zu gefährden. Übernimm die Kontrolle über deine Erinnerungen wie nie zuvor.
 
-ALLE DATEITYPEN, DIE MAN BRAUCHT
-Schlichte Galerie unterstützt eine Vielzahl an verschiedenen Dateiformaten. JPEG, PNG, MP4, MKV, RAW, SVG, GIF, Panorama-Fotos, Videos und viele mehr. Man genießt die komplette Flexibilität, was die Wahl des Dateiformats anlangt. Wer sich jemals gefragt hat: „Kann ich dieses Format auf meinem Gerät verwenden?“ Die Antwort lautet „Ja“.
-Die App enthält keine Werbung und verlangt keine unnötigen Berechtigungen. Da die App auch keinen Internetzugang benötigt, ist deine Privatsphäre geschützt. 
+🌐 PRIVATSPHÄRE GEHT VOR, IMMER:
+Deine Privatsphäre ist wichtig. Lass die datenhungrigen Giganten links liegen. Mit Fossify Gallery hast du die Kontrolle. Entferne EXIF-Metadaten wie GPS-Koordinaten und Kameradetails und behalte deine Erinnerungen für dich allein.
 
-INDIVIDUALISIERUNG
-Das bis ins Feinste anpassbare Design von Schlichte Galerie ermöglicht die Anpassung von Aussehen, Erleben und Funktion in jeder gewünschten Weise. Von der Benutzeroberfläche bis zu den Funktionstasten in der unteren Werkzeugleiste verleiht Schlichte Galerie die kreative Freiheit, die in einer Foto-App nötig ist.
+🔒 ÜBERLEGENE SICHERHEIT:
+Schließe deine Erinnerungen mit Pin, Muster oder Fingerabdruck ab. Schütze bestimmte Fotos, Videos oder die gesamte App – du entscheidest, wer Zugriff erhält. Garantierter Seelenfrieden.
 
-GELÖSCHTE FOTOS & VIDEOS WIEDERHERSTELLEN
-Keine Sorge mehr, dass ein versehentlich gelöschtes, wertvolles Foto oder Video unwiederbringlich verloren ist. Schlichte Galerie ermöglicht die schnelle Wiederherstellung jedes gelöschten Fotos und Videos. Das bedeutet, dass Schlichte Galerie neben der besten Mediengalerie für Android auch eine herausragende Tresor-App für Fotos ist.
+🔄 WIEDERHERSTELLEN MIT LEICHTIGKEIT:
+Aufatmen, Unfälle passieren! Mit dem integrierten Papierkorb von Fossify Gallery kannst du gelöschte Fotos und Videos in Sekundenschnelle wiederherstellen. Keine verlorenen Schätze mehr, sondern pure Erleichterung.
 
-SCHUTZ FÜR PRIVATE FOTOS, VIDEOS & DATEIEN
-Sicher bleibt, das Fotoalbum ist sicher. Mit den ausgefeilten Sicherheitsfunktionen von Schlichte Galerie kann man eine PIN, ein Muster oder den Fingerabdruck-Scanner verwenden, um einzuschränken, wer bestimmte Fotos und Videos ansehen oder bearbeiten darf oder Zugriff auf wichtige Dateien erhält. Selbst die App selbst kann geschützt oder spezielle Funktionen der Dateiverwaltung mit Schlössern versehen werden.
+🎨 DEINE GALERIE, DEIN STIL:
+Passe das Aussehen, die Bedienung und die Funktionen an deinen Stil an. Von UI-Themen bis hin zu Funktionsschaltflächen – Fossify Gallery gibt dir die kreative Freiheit, nach der du dich sehnst.
 
-Die App ist standardmäßig mit Material-Design und einem dunklen Thema ausgestattet, bietet eine großartige Benutzererfahrung für die einfache Verwendung. Der fehlende Internetzugang bietet Ihnen mehr Privatsphäre, Sicherheit und Stabilität als andere Apps.
+📷 UNIVERSELLE FORMATFREIHEIT:
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, Videos und mehr – wir haben deine Erinnerungen in jedem Format, das du willst. Keine Einschränkungen, nur grenzenlose Möglichkeiten.
 
-Enthält keine Werbung oder unnötige Berechtigungen. Ist komplett Open-Source und bietet anpassbare Farben.
+✨ MATERIAL DESIGN MIT DYNAMISCHEN THEMEN:
+Erlebe die Schönheit des intuitiven Material Designs mit dynamischen Designs. Willst du mehr? Tauche ein in benutzerdefinierte Themen und mache deine Galerie wirklich einzigartig.
 
-Die komplette Suite von Simple Tools gibt es hier:
-https://www.simplemobiletools.com
-
-Facebook:
-https://www.facebook.com/simplemobiletools
-
-Reddit:
-https://www.reddit.com/r/SimpleMobileTools
-
-Telegram:
-https://t.me/SimpleMobileTools
+Entdecke weitere Apps von Fossify: https://www.fossify.org
+Open-Source-Code: https://www.github.com/FossifyOrg
+Tritt der Community auf Reddit bei: https://www.reddit.com/r/Fossify
+Verbinde dich auf Telegram: https://t.me/Fossify

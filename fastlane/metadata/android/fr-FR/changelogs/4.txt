@@ -1,0 +1,2 @@
+* Retrait de la bibliothèque non open-source de panorama
+* Ajout de traductions

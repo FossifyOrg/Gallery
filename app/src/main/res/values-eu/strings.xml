@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Galeria sinplea</string>
     <string name="app_launcher_name">Galeria</string>
     <string name="edit">Editatu</string>
     <string name="open_camera">Ireki kamera</string>
@@ -34,7 +33,6 @@
     <string name="reorder_by_dragging">Berrordenatu karpetak arrastatuz</string>
     <string name="reorder_by_dragging_pro">Berrordenatu karpetak arrastatuz (Pro)</string>
     <string name="restore_to_path">\'%s\'-ra leheneratzen</string>
-    <!-- Filter -->
     <string name="filter_media">Iragazi multimedia</string>
     <string name="images">Irudiak</string>
     <string name="videos">Bideoak</string>
@@ -44,19 +42,13 @@
     <string name="portraits">Erretratuak</string>
     <string name="no_media_with_filters">Hautatutako filtroa duen multimedia fitxategirik ez da aurkitu.</string>
     <string name="change_filters_underlined"><u>Aldatu filtroak</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Funtzio honek karpeta \'.nomedia\' fitxategi bat gehituz ezkutatzen du, azpikarpeta guztiak ere ezkutatuko ditu. Ezarpenetako \'Erakutsi ezkutatutako elementuak\' aukera aldatuz ikus ditzakezu. Jarraitu\?</string>
-    <string name="exclude_folder_description">Honek hautatutakoa bere azpikarpetekin baztertutako ditu Galeria Sinpletik soilik. Baztertutako karpetak ezarpenetan kudeatu ditzakezu.</string>
     <string name="exclude_folder_parent">Baztertu nagusia horren ordez\?</string>
-    <string name="excluded_activity_placeholder">Karpetak baztertzeak hauek eta beren azpikarpetak Galeria Sinplean soilik ezkutatuko ditu, beste aplikazioetan oraindik ikusgai egongo dira.
-\n
-\nBeste aplikazioetatik ere ezkutatu nahi badituzu, erabili Ezkutatu funtzioa.</string>
     <string name="hidden_folders">Ezkutatutako karpetak</string>
     <string name="manage_hidden_folders">Kudeatu ezkutatutako karpetak</string>
     <string name="hidden_folders_placeholder">Badirudi \".nomedia\" fitxategia duen ezkutatutako karpetarik ez duzula.</string>
     <string name="hidden_all_files">Ezkutuko fitxategiak ikusteko Fitxategi guztiak sarbidea eman behar diozu aplikazioari, bestela ezin izango du funtzionatu.</string>
     <string name="cant_unhide_folder">Karpeta batek edo bere karpeta nagusietako batek bere izenaren aurretik puntu bat badu, ezkutatuta egongo da eta ezin da horrela erakutsi. Puntua kendu behar duzu izena aldatuz.</string>
-    <!-- Include folders -->
     <string name="include_folders">Sartutako karpetak</string>
     <string name="manage_included_folders">Kudeatu sartutako karpetak</string>
     <string name="add_folder">Gehitu karpeta</string>
@@ -64,7 +56,6 @@
 \n
 \nHainbat elementu hemen gehitzeak ez du beste karpetarik baztertuko.</string>
     <string name="no_media_add_included">Multimedia fitxategirik ez da aurkitu. Fitxategi horiek dituzten karpetak eskuz gehituz konpondu dezakezu.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Aldatu hautatutakoaren tamaina eta gorde</string>
     <string name="width">Zabalera</string>
     <string name="height">Altuera</string>
@@ -79,7 +70,6 @@
         <item quantity="other">Ezin izan da %d irudiren tamaina aldatu</item>
     </plurals>
     <string name="images_resized_successfully">Irudien tamaina behar bezala aldatu da</string>
-    <!-- Editor -->
     <string name="editor">Editorea</string>
     <string name="basic_editor">Oinarrizko editorea</string>
     <string name="advanced_editor">Editore aurreratua</string>
@@ -109,11 +99,7 @@
     <string name="flip_horizontally">Irauli horizontalki</string>
     <string name="flip_vertically">Irauli bertikalki</string>
     <string name="free_aspect_ratio">Askea</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Bestelakoa</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Horma-paper sinplea</string>
     <string name="set_as_wallpaper">Ezarri horma-paper gisa</string>
     <string name="set_as_wallpaper_failed">Horma-paper gisa ezartzeak huts egin du</string>
     <string name="set_as_wallpaper_with">Ezarri horma-paper gis honekin:</string>
@@ -125,7 +111,6 @@
     <string name="lock_screen">Blokeatutako pantaila</string>
     <string name="home_and_lock_screen">Hasierako eta blokeatutako pantaila</string>
     <string name="allow_changing_aspect_ratio">Baimendu aspektu-erlazioa aldatzea</string>
-    <!-- Slideshow -->
     <string name="slideshow">Diaporama</string>
     <string name="interval">Tartea</string>
     <string name="include_photos">Sartu argazkiak</string>
@@ -140,9 +125,7 @@
     <string name="slide">Diapositiba</string>
     <string name="slideshow_ended">Diaporama bukatu da</string>
     <string name="no_media_for_slideshow">Diaporamarako multimediarik ez da aurkitu</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Taldekatu zuzeneko azpikarpetak</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Taldekatu</string>
     <string name="do_not_group_files">Ez taldekatu fitxategiak</string>
     <string name="by_folder">Karpeta</string>
@@ -156,10 +139,8 @@
     <string name="by_extension">Luzapena</string>
     <string name="show_file_count_section_header">Erakutsi fitxategien kopurua atalen goiburuetan</string>
     <string name="grouping_and_sorting">Kontuan hartu taldekatzea eta ordenatzea bi eremu independente direla</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Trepetan erakutsitako karpeta:</string>
     <string name="show_folder_name">Erakutsi karpetaren izena</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Erreproduzitu bideoak automatikoki</string>
     <string name="remember_last_video_position">Gogoratu azken bideoaren erreprodukzio-posizioa</string>
     <string name="loop_videos">Errepikatu bideoak</string>
@@ -223,131 +204,13 @@
     <string name="all_files">Fitxategi guztiak</string>
     <string name="search_all_files">Bilatu fitxategi guztiak karpetak ordez hasierako pantailan</string>
     <string name="show_all_folders">Erakutsi menu-botoia Erakutsi karpeta guztien edukira azkar aldatzeko</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniaturak</string>
     <string name="fullscreen_media">Pantaila osoko multimedia</string>
     <string name="extended_details">Xehetasun hedatuak</string>
     <string name="bottom_actions">Beheko ekintzak</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Kudeatu ikusgai dauden beheko ekintzak</string>
     <string name="toggle_favorite">Aldatu gogokoa</string>
     <string name="toggle_file_visibility">Aldatu fitxategien ikusgaitasuna</string>
-    <!-- New editor strings -->
-    <string name="pesdk_transform_button_freeCrop">Pertsonalizatu</string>
-    <string name="pesdk_transform_button_resetCrop">Berrezarri</string>
-    <string name="pesdk_transform_button_squareCrop">Karratua</string>
-    <string name="pesdk_transform_title_name">Eraldatu</string>
-    <string name="pesdk_filter_title_name">Filtroa</string>
-    <string name="pesdk_filter_asset_none">Bat ere ez</string>
-    <string name="pesdk_adjustments_title_name">Doitu</string>
-    <string name="pesdk_adjustments_button_shadowTool">Itzalak</string>
-    <string name="pesdk_adjustments_button_exposureTool">Esposizio</string>
-    <string name="pesdk_adjustments_button_highlightTool">Eremu distiratsuak</string>
-    <string name="pesdk_adjustments_button_brightnessTool">Distira</string>
-    <string name="pesdk_adjustments_button_contrastTool">Kontrastea</string>
-    <string name="pesdk_adjustments_button_saturationTool">Saturazioa</string>
-    <string name="pesdk_adjustments_button_clarityTool">Argitasuna</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
-    <string name="pesdk_adjustments_button_blacksTool">Beltzak</string>
-    <string name="pesdk_adjustments_button_whitesTool">Zuriak</string>
-    <string name="pesdk_adjustments_button_temperatureTool">Tenperatura</string>
-    <string name="pesdk_adjustments_button_sharpnessTool">Zorroztasuna</string>
-    <string name="pesdk_adjustments_button_reset">Berrezarri</string>
-    <string name="pesdk_focus_title_name">Fokatzea</string>
-    <string name="pesdk_focus_title_disabled">Bat ere ez</string>
-    <string name="pesdk_focus_button_radial">Erradiala</string>
-    <string name="pesdk_focus_button_linear">Lineala</string>
-    <string name="pesdk_focus_button_mirrored">Ispilua</string>
-    <string name="pesdk_focus_button_gaussian">Gaussiarra</string>
-    <string name="pesdk_text_title_input">Add text</string>
-    <string name="pesdk_text_title_name">Testua</string>
-    <string name="pesdk_text_title_options">Testu-aukerak</string>
-    <string name="pesdk_text_title_textColor">Testuaren kolorea</string>
-    <string name="pesdk_text_title_font">Letra-tipoa</string>
-    <string name="pesdk_text_button_add">Gehitu</string>
-    <string name="pesdk_text_button_edit">Editatu</string>
-    <string name="pesdk_text_button_straighten">Zuzendu</string>
-    <string name="pesdk_text_button_font">Letra-tipoa</string>
-    <string name="pesdk_text_button_color">Kolorea</string>
-    <string name="pesdk_text_button_backgroundColor">HP kolorea</string>
-    <string name="pesdk_text_button_alignment">Lerrokatzea</string>
-    <string name="pesdk_text_button_bringToFront">Aurrera</string>
-    <string name="pesdk_text_button_delete">Ezabatu</string>
-    <string name="pesdk_text_text_editTextPlaceholder">Zure testua</string>
-    <string name="pesdk_brush_title_name">Pintzela</string>
-    <string name="pesdk_brush_button_color">Kolorea</string>
-    <string name="pesdk_brush_button_size">Tamaina</string>
-    <string name="pesdk_brush_button_hardness">Gogortasuna</string>
-    <string name="pesdk_brush_button_bringToFront">Aurrera</string>
-    <string name="pesdk_brush_button_delete">Ezabatu</string>
-    <string name="pesdk_brush_title_brushColor">Pintzelaren kolorea</string>
-    <string name="pesdk_editor_title_name">Editorea</string>
-    <string name="pesdk_editor_title_closeEditorAlert">Itxi editorea\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Ziur zaude aldaketak baztertu nahi dituzula\?</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">Bai</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">Ez</string>
-    <string name="pesdk_editor_cancel">Utzi</string>
-    <string name="pesdk_editor_accept">Onartu</string>
-    <string name="pesdk_editor_save">Gorde</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">Esportatzen…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Esportatzen %s.</string>
-    <string name="pesdk_sticker_title_name">Eranskailua</string>
-    <string name="pesdk_sticker_title_color">Eranskailuaren kolorea</string>
-    <string name="pesdk_sticker_title_options">Eranskailu-aukerak</string>
-    <string name="pesdk_sticker_button_add">Gehitu</string>
-    <string name="pesdk_sticker_button_color">Kolorea</string>
-    <string name="pesdk_sticker_button_delete">Ezabatu</string>
-    <string name="pesdk_sticker_button_bringToFront">Aurrera</string>
-    <string name="pesdk_sticker_button_straighten">Zuzendu</string>
-    <string name="pesdk_sticker_button_replace">Ordeztu</string>
-    <string name="pesdk_sticker_button_opacity">Opakutasuna</string>
-    <string name="pesdk_sticker_button_contrast">Kontrastea</string>
-    <string name="pesdk_sticker_button_saturation">Saturazioa</string>
-    <string name="pesdk_sticker_button_brightness">Distira</string>
-    <string name="pesdk_sticker_category_name_custom">Igotakoak</string>
-    <string name="pesdk_overlay_title_name">Gainjarri</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normala</string>
-    <string name="pesdk_overlay_button_blendModeDarken">Ilundu</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Pantaila</string>
-    <string name="pesdk_overlay_button_blendModeOverlay">Gainjarri</string>
-    <string name="pesdk_overlay_button_blendModeLighten">Argitu</string>
-    <string name="pesdk_overlay_button_blendModeMultiply">Biderkatu</string>
-    <string name="pesdk_overlay_button_blendModeColorBurn">Kolore erreta</string>
-    <string name="pesdk_overlay_button_blendModeSoftLight">Argi leuna</string>
-    <string name="pesdk_overlay_button_blendModeHardLight">Argi gogorra</string>
-    <string name="pesdk_overlay_asset_none">Bat ere ez</string>
-    <string name="pesdk_overlay_asset_golden">Urrezkoa</string>
-    <string name="pesdk_overlay_asset_lightleak1">Argi-filtrazioa 1</string>
-    <string name="pesdk_overlay_asset_mosaic">Mosaikoa</string>
-    <string name="pesdk_overlay_asset_paper">Papera</string>
-    <string name="pesdk_overlay_asset_rain">Euria</string>
-    <string name="pesdk_overlay_asset_vintage">Antzinakoa</string>
-    <string name="pesdk_common_button_flipH">Biratu H</string>
-    <string name="pesdk_common_button_flipV">Biratu B</string>
-    <string name="pesdk_common_button_undo">Desegin</string>
-    <string name="pesdk_common_button_redo">Berregin</string>
-    <string name="pesdk_common_title_colorPicker">Kolore-hautatzailea</string>
-    <string name="pesdk_common_title_transparentColor">Gardena</string>
-    <string name="pesdk_common_title_whiteColor">Zuria</string>
-    <string name="pesdk_common_title_grayColor">Grisa</string>
-    <string name="pesdk_common_title_blackColor">Beltza</string>
-    <string name="pesdk_common_title_lightBlueColor">Urdin argia</string>
-    <string name="pesdk_common_title_blueColor">Urdina</string>
-    <string name="pesdk_common_title_purpleColor">Morea</string>
-    <string name="pesdk_common_title_orchidColor">Orkidea</string>
-    <string name="pesdk_common_title_pinkColor">Arrosa</string>
-    <string name="pesdk_common_title_redColor">Gorria</string>
-    <string name="pesdk_common_title_orangeColor">Laranja</string>
-    <string name="pesdk_common_title_goldColor">Urrezkoa</string>
-    <string name="pesdk_common_title_yellowColor">Horia</string>
-    <string name="pesdk_common_title_oliveColor">Oliba</string>
-    <string name="pesdk_common_title_greenColor">Berdea</string>
-    <string name="pesdk_common_title_aquamarinColor">Akuamarinoa</string>
-    <string name="pesdk_common_title_pipettableColor">Hautatu kolorea (pipeta)</string>
-    <string name="vesdk_video_trim_title_name">Moztu</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">Nola egin dezaket Simple Gallery gailuen galeria lehenetsia\?</string>
-    <string name="faq_1_text">Lehenik eta behin, orain lehenetsitako galeria aplikazioa aurkitu behar duzu zure gailuaren ezarpenetako Aplikazioak atalean, bilatu \"Ireki lehenespenez\" bezalako zerbait dioen botoi bat, egin klik gainean eta hautatu \"Garbitu lehenetsiak\". Irudi edo bideo bat irekitzen saiatuko zaren hurrengoan aplikazio-hautatzaile bat ikusiko duzu, non Simple Gallery hauta dezakezu eta aplikazio lehenetsia izan dezakezu.</string>
     <string name="faq_2_title">Aplikazioa pasahitz batez blokeatu dut, baina ahaztu egin zait. Zer egin dezaket\?</string>
     <string name="faq_2_text">Bi modutan konpondu dezakezu: aplikazioa berriro instala dezakezu edo aplikazioa zure gailuaren ezarpenetan aurkitu eta \"Garbitu datuak\" aukeratu. Zure ezarpen guztiak berrezarriko ditu, ez du multimedia fitxategirik kenduko.</string>
     <string name="faq_3_title">Nola egin dezaket album bat beti goian agertzeko\?</string>
@@ -355,7 +218,6 @@
     <string name="faq_4_title">Nola aurreratu ditzaket bideoak azkar\?</string>
     <string name="faq_4_text">Pantailaren alboa bitan sakatuz edo bilaketa-barratik gertu dauden uneko edo gehienezko iraupeneko testuak sakatuz egin dezakezu. Aplikazioaren ezarpenetan bideoak pantaila bereizi batean irekitzea gaitzen baduzu, keinu horizontalak ere erabil ditzakezu.</string>
     <string name="faq_5_title">Zein da karpeta bat ezkutatzearen eta baztertzearen arteko aldea\?</string>
-    <string name="faq_5_text">Baztertzeak karpeta Simple Galleryn soilik bistaratzea eragozten du, Ezkutatu sisteman funtzionatzen duen bitartean eta karpeta beste galerietatik ere ezkutatzen du. Emandako karpetan \".nomedia\" fitxategi huts bat sortuz funtzionatzen du, eta gero edozein fitxategi-kudeatzailerekin ere kendu dezakezu. Kontuan izan gailu batzuek ez dutela onartzen Kamera, Pantaila-argazkiak eta Deskargak bezalako karpetak ezkutatzen.</string>
     <string name="faq_6_title">Zergatik agertzen dira musikaren azala edo eranskailuak dituzten karpetak\?</string>
     <string name="faq_6_text">Gerta daiteke ezohiko album batzuk agertzea. Erraz bazter ditzakezu luze sakatuz eta Baztertu hautatuz. Hurrengo elkarrizketa-koadroan karpeta nagusia hauta dezakezu, litekeena da erlazionatutako beste albumak ere agertzea eragotziko duela.</string>
     <string name="faq_7_title">Irudiak dituen karpeta bat ez da agertzen edo ez ditu elementu guztiak erakusten. Zer egin dezaket\?</string>
@@ -381,8 +243,4 @@
     <string name="faq_17_text">Horrek funtzionatzeari utzi zion Android 11rekin ere etorri ziren sistema aldaketen ondorioz, aplikazioak ezin ditu jada benetako karpetak arakatu, MediaStore izenekoan oinarritzen da datuak eskuratzeko.</string>
     <string name="faq_18_title">Zergatik ikusten ditut iragarkiak bideoa erreproduzitzean\?</string>
     <string name="faq_18_text">Gure aplikazioek ez dute iragarkirik. Bideoak erreproduzitzerakoan ikusten badituzu, beste aplikazio batzuk erabili behar dituzu bideo-erreproduzitzailea. Saiatu zure bideo-erreproduzitzaile lehenetsia aurkitzen gailuaren ezarpenetan, eta egin ezazu \"Garbitu lehenetsiak\". Bideo-asmoren bat deitzen duzun hurrengoan aplikazio-hautatzaile baten gonbita ikusiko duzu, non erabili nahi duzun aplikazioa hauta dezakezun.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

@@ -1,1 +1,1 @@
-Une galerie pour voir des photos et vidéos sans publicité et modifier des photos
+Galerie avec éditeur de photos. Aucune pub, open-source, privé. Sans engagement.

@@ -1,2 +1,0 @@
- * Try displaying some WhatsApp folders by default
- * Added some translation, stability, UX and UI improvements

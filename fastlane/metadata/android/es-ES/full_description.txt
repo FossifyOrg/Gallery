@@ -1,32 +1,27 @@
-Galería Sencilla te trae todas las funciones de visualización y edición de fotos que te faltaban en tu Android en una aplicación elegante y fácil de usar. Navega, gestiona, recorta y edita fotos o vídeos más rápido que nunca, recupera archivos borrados accidentalmente o crea galerías ocultas para tus imágenes y vídeos más preciados. Y con el soporte avanzado de archivos y la personalización total, por fin tu galería funciona como tú quieres. 
- 
-EDITOR DE FOTOS AVANZADO 
-Convierte la edición de fotos en un juego de niños con el organizador de archivos y el álbum de fotos mejorados de Galería Sencilla. Los gestos intuitivos hacen que sea muy fácil editar tus imágenes sobre la marcha. Recorta, voltea, rota y cambia el tamaño de las imágenes o aplica elegantes filtros para hacerlas resaltar en un instante. 
- 
-TODOS LOS ARCHIVOS QUE NECESITAS 
-Galería Sencilla es compatible con una gran variedad de tipos de archivo, como JPEG, PNG, MP4, MKV, RAW, SVG, GIF, fotos panorámicas, vídeos y muchos más, por lo que disfrutarás de total flexibilidad a la hora de elegir el formato. ¿Alguna vez te has preguntado "puedo usar este formato en mi Android"? Ahora la respuesta es sí. 
- 
-HAZLO TUYO 
-El diseño altamente personalizable de Galería Sencilla te permite hacer que la aplicación de fotos se vea, se sienta y funcione justo como tú quieres. Desde la interfaz de usuario hasta los botones de función de la barra de herramientas inferior, Galería Sencilla te da la libertad creativa que necesitas en una aplicación de galería. 
- 
-RECUPERAR FOTOS Y VÍDEOS BORRADOS 
-No te preocupes por haber borrado accidentalmente esa preciosa foto o vídeo que no puedes reemplazar. Galería Sencilla te permite recuperar rápidamente cualquier foto o vídeo eliminado, lo que significa que, además de ser la mejor galería multimedia para Android, Galería Sencilla funciona también como una increíble aplicación para guardar fotos. 
- 
-PROTEGE TUS FOTOS, VÍDEOS Y ARCHIVOS PRIVADOS 
-Ten la seguridad de que tu álbum de fotos está a salvo. Con las funciones de seguridad superiores de Galería Sencilla puedes utilizar un pin, un patrón o el escáner de huellas dactilares de tu dispositivo para limitar quién puede ver o editar las fotos y vídeos seleccionados o acceder a los archivos importantes. Incluso puedes proteger la propia aplicación o colocar bloqueos en funciones específicas del organizador de archivos. 
- 
-Viene con material design y tema oscuro por defecto, proporciona una gran experiencia de usuario para un uso fácil. La falta de acceso a Internet le da más privacidad, seguridad y estabilidad que otras aplicaciones. 
- 
-No contiene anuncios ni permisos innecesarios. Es totalmente opensource, proporciona colores personalizables. 
- 
-Consulta el conjunto completo de Simple Tools aquí: 
-https://www.simplemobiletools.com 
+Libera recuerdos, sin datos personales. Fossify Gallery es la mejor aplicación de fotos y videos que es tan potente como privada. Sin anuncios, sin permisos innecesarios, solo una experiencia perfecta a su medida.
 
-Facebook: 
-https://www.facebook.com/simplemobiletools 
- 
-Reddit: 
-https://www.reddit.com/r/SimpleMobileTools 
- 
-Telegram: 
-https://t.me/SimpleMobileTools
+🖼️ EDICIÓN DE FOTOS AL ALCANCE DE TU MANO:
+Mejora tus fotos con nuestro editor de fotos básico pero potente. Recortar, cambiar el tamaño, rotar, voltear, dibujar y aplicar filtros impresionantes, todo sin comprometer su privacidad. Toma el control de tus recuerdos como nunca antes.
+
+🌐 PRIVACIDAD PRIMERO, SIEMPRE:
+Tu privacidad importa. Deshazte de los gigantes hambrientos de datos. Fossify Gallery te pone en control. Deshazte de los metadatos EXIF como coordenadas GPS y detalles de la cámara, manteniendo tus recuerdos tuyos y tuyos solo.
+
+🔒 SEGURIDAD SUPERIOR:
+Bloquea tus recuerdos con pin, patrón o protección de huellas dactilares. Protege fotos específicas, videos o toda la aplicación: tú decides quién tiene acceso. Tranquilidad, garantizada.
+
+🔄 RECUPERARSE CON FACILIDAD:
+¡Respira tranquilo, los accidentes ocurren! La papelera de reciclaje incorporada de Fossify Gallery le permite recuperar fotos y videos eliminados en segundos. No más tesoros perdidos, sólo puro alivio.
+
+🎨 TU GALERÍA, TU ESTILO:
+Personaliza el aspecto, la sensación y la funcionalidad para que coincida con tu estilo. Desde temas de interfaz de usuario hasta botones de función, Fossify Gallery te da la libertad creativa que anhelas.
+
+📷 FORMATO UNIVERSAL LIBERTAD:
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, videos y más: tenemos tus recuerdos cubiertos, en cualquier formato que elijas. Sin restricciones, sólo posibilidades ilimitadas.
+
+✨ DISEÑO DE MATERIALES CON TEMAS DINÁMICOS:
+Experimente la belleza del diseño intuitivo de materiales con temas dinámicos. ¿Quieres más? Sumérgete en temas personalizados y haz que tu galería sea verdaderamente única.
+
+Explore más aplicaciones de Fossify: https://www.fossify.org
+Código abierto: https://www.github.com/FossifyOrg
+Únete a la comunidad en Reddit: https://www.reddit.com/r/Fossify
+Conéctese con Telegram: https://t.me/Fossify

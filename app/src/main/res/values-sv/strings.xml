@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Gallery</string>
     <string name="app_launcher_name">Galleri</string>
     <string name="edit">Redigera</string>
     <string name="open_camera">Öppna kameran</string>
@@ -34,7 +33,6 @@
     <string name="reorder_by_dragging">Ändra mappordning genom att dra</string>
     <string name="reorder_by_dragging_pro">Ändra mappordning genom att dra (Pro)</string>
     <string name="restore_to_path">Återställ till \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filtrera media</string>
     <string name="images">Bilder</string>
     <string name="videos">Videor</string>
@@ -44,19 +42,13 @@
     <string name="portraits">Porträtt</string>
     <string name="no_media_with_filters">Inga mediafiler hittades med de valda filtren.</string>
     <string name="change_filters_underlined"><u>Ändra filter</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Denna funktion döljer mappen och alla dess undermappar genom att lägga till en \'.nomedia\'-fil i den. Du kan se dem genom att växla \'Visa dolda objekt\'-alternativet i Inställningar. Vill du fortsätta\?</string>
-    <string name="exclude_folder_description">Detta utesluter bara den markerade mappen och dess undermappar från Simple Gallery. Du kan hantera uteslutna mappar i Inställningar.</string>
     <string name="exclude_folder_parent">Vill du utesluta en överordnad mapp istället\?</string>
-    <string name="excluded_activity_placeholder">Uteslutning av mappar döljer bara dem och deras undermappar i Simple Gallery, de visas fortfarande i andra appar.
-\n
-\nAnvänd Dölj-funktionen om du även vill dölja dem från andra appar.</string>
     <string name="hidden_folders">Dolda mappar</string>
     <string name="manage_hidden_folders">Hantera dolda mappar</string>
     <string name="hidden_folders_placeholder">Det verkar som att inga mappar har dolts med \".nomedia\"-filer.</string>
     <string name="hidden_all_files">Du måste ge appen behörighet till alla filer för att se dolda filer, annars fungerar det inte.</string>
     <string name="cant_unhide_folder">Om en mapp eller en av dess överordnade mappar har en punkt före sitt namn, är den dold och kan inte döljas så här. Du måste ta bort punkten genom att byta namn på den.</string>
-    <!-- Include folders -->
     <string name="include_folders">Inkluderade mappar</string>
     <string name="manage_included_folders">Hantera inkluderade mappar</string>
     <string name="add_folder">Lägg till mapp</string>
@@ -64,7 +56,6 @@
 \n
 \nAtt lägga till några föremål här kommer inte att utseluta någon annan mapp.</string>
     <string name="no_media_add_included">Inga mediefiler hittades. Du kan lägga till de mappar som innehåller mediefiler manuellt.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Ändra storlek och spara</string>
     <string name="width">Bredd</string>
     <string name="height">Höjd</string>
@@ -79,7 +70,6 @@
         <item quantity="other">Misslyckades med att ändra storleken på %d bilder</item>
     </plurals>
     <string name="images_resized_successfully">Bilder har ändrat storlek</string>
-    <!-- Editor -->
     <string name="editor">Redigerare</string>
     <string name="basic_editor">Enkel redigerare</string>
     <string name="advanced_editor">Avancerad redigerare</string>
@@ -109,11 +99,7 @@
     <string name="flip_horizontally">Vänd horisontellt</string>
     <string name="flip_vertically">Vänd vertikalt</string>
     <string name="free_aspect_ratio">Fritt</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Annat</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Bakgrund</string>
     <string name="set_as_wallpaper">Använd som bakgrund</string>
     <string name="set_as_wallpaper_failed">Det gick inte att ställa in bakgrunden</string>
     <string name="set_as_wallpaper_with">Ställ in som bakgrund med:</string>
@@ -125,7 +111,6 @@
     <string name="lock_screen">Låsskärm</string>
     <string name="home_and_lock_screen">Startskärm och låsskärm</string>
     <string name="allow_changing_aspect_ratio">Tillåt ändring av bildförhållande</string>
-    <!-- Slideshow -->
     <string name="slideshow">Bildspel</string>
     <string name="interval">Intervall</string>
     <string name="include_photos">Inkludera foton</string>
@@ -140,9 +125,7 @@
     <string name="slide">Glid</string>
     <string name="slideshow_ended">Bildspelet har avslutats</string>
     <string name="no_media_for_slideshow">Ingen media hittades för bildspelet</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Gruppera direkta undermappar</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Gruppera efter</string>
     <string name="do_not_group_files">Gruppera inte filer</string>
     <string name="by_folder">Mapp</string>
@@ -156,10 +139,8 @@
     <string name="by_extension">Filnamnstillägg</string>
     <string name="show_file_count_section_header">Visa filantal vid avsnittsrubriker</string>
     <string name="grouping_and_sorting">Observera att gruppering och sortering är två oberoende funktioner</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Mapp som visas i widgeten:</string>
     <string name="show_folder_name">Visa mappnamnet</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Spela upp videor automatiskt</string>
     <string name="remember_last_video_position">Kom ihåg senaste videouppspelningsposition</string>
     <string name="loop_videos">Spela upp videor om och om igen</string>
@@ -223,131 +204,14 @@
     <string name="all_files">Alla filer</string>
     <string name="search_all_files">Sök alla filer istället för mappar på huvudskärmen</string>
     <string name="show_all_folders">Visa en menyknapp för att växla Visa Alla Mappars Innehåll snabbt</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Miniatyrer</string>
     <string name="fullscreen_media">Visning av media i helskärmsläge</string>
     <string name="extended_details">Utökad information</string>
     <string name="bottom_actions">Åtgärder längst ned på skärmen</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Hantera synliga åtgärder längst ned på skärmen</string>
     <string name="toggle_favorite">Växla favorit</string>
     <string name="toggle_file_visibility">Visa/dölj fil</string>
-    <!-- New editor strings -->
-    <string name="pesdk_transform_button_freeCrop">Anpassad</string>
-    <string name="pesdk_transform_button_resetCrop">Reset</string>
-    <string name="pesdk_transform_button_squareCrop">Fyrkant</string>
-    <string name="pesdk_transform_title_name">Transformera</string>
-    <string name="pesdk_filter_title_name">Filter</string>
-    <string name="pesdk_filter_asset_none">None</string>
-    <string name="pesdk_adjustments_title_name">Justera</string>
-    <string name="pesdk_adjustments_button_shadowTool">Skuggor</string>
-    <string name="pesdk_adjustments_button_exposureTool">Exponering</string>
-    <string name="pesdk_adjustments_button_highlightTool">Högdager</string>
-    <string name="pesdk_adjustments_button_brightnessTool">Ljusstyrka</string>
-    <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
-    <string name="pesdk_adjustments_button_saturationTool">Mättnad</string>
-    <string name="pesdk_adjustments_button_clarityTool">Klarhet</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
-    <string name="pesdk_adjustments_button_blacksTool">Svarta</string>
-    <string name="pesdk_adjustments_button_whitesTool">Vita</string>
-    <string name="pesdk_adjustments_button_temperatureTool">Temperatur</string>
-    <string name="pesdk_adjustments_button_sharpnessTool">Skärpa</string>
-    <string name="pesdk_adjustments_button_reset">Återställ</string>
-    <string name="pesdk_focus_title_name">Fokus</string>
-    <string name="pesdk_focus_title_disabled">Inget</string>
-    <string name="pesdk_focus_button_radial">Radiell</string>
-    <string name="pesdk_focus_button_linear">Linjär</string>
-    <string name="pesdk_focus_button_mirrored">Speglad</string>
-    <string name="pesdk_focus_button_gaussian">Gaussisk</string>
-    <string name="pesdk_text_title_input">Lägg till text</string>
-    <string name="pesdk_text_title_name">Text</string>
-    <string name="pesdk_text_title_options">Text Val</string>
-    <string name="pesdk_text_title_textColor">Text Färg</string>
-    <string name="pesdk_text_title_font">Font</string>
-    <string name="pesdk_text_button_add">Lägg till</string>
-    <string name="pesdk_text_button_edit">Redigera</string>
-    <string name="pesdk_text_button_straighten">Räta ut</string>
-    <string name="pesdk_text_button_font">Font</string>
-    <string name="pesdk_text_button_color">Färg</string>
-    <string name="pesdk_text_button_backgroundColor">BG Färg</string>
-    <string name="pesdk_text_button_alignment">Inriktning</string>
-    <string name="pesdk_text_button_bringToFront">Framtill</string>
-    <string name="pesdk_text_button_delete">Radera</string>
-    <string name="pesdk_text_text_editTextPlaceholder">Din text</string>
-    <string name="pesdk_brush_title_name">Pensel</string>
-    <string name="pesdk_brush_button_color">Färg</string>
-    <string name="pesdk_brush_button_size">Storlek</string>
-    <string name="pesdk_brush_button_hardness">Styrka</string>
-    <string name="pesdk_brush_button_bringToFront">Framtill</string>
-    <string name="pesdk_brush_button_delete">Delete</string>
-    <string name="pesdk_brush_title_brushColor">Pensel Färg</string>
-    <string name="pesdk_editor_title_name">Redigerare</string>
-    <string name="pesdk_editor_title_closeEditorAlert">Stäng Redigerare\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Vill du verkligen ignorera ändringarna\?</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">Ja</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">Nej</string>
-    <string name="pesdk_editor_cancel">Avbryt</string>
-    <string name="pesdk_editor_accept">Godkänn</string>
-    <string name="pesdk_editor_save">Spara</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">Exporterar…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Exporterar %s.</string>
-    <string name="pesdk_sticker_title_name">Klistermärke</string>
-    <string name="pesdk_sticker_title_color">Klistermärke Färg</string>
-    <string name="pesdk_sticker_title_options">Klistermärke Val</string>
-    <string name="pesdk_sticker_button_add">Lägg till</string>
-    <string name="pesdk_sticker_button_color">Färg</string>
-    <string name="pesdk_sticker_button_delete">Radera</string>
-    <string name="pesdk_sticker_button_bringToFront">Framtill</string>
-    <string name="pesdk_sticker_button_straighten">Räta ut</string>
-    <string name="pesdk_sticker_button_replace">Ersätt</string>
-    <string name="pesdk_sticker_button_opacity">Opacitet</string>
-    <string name="pesdk_sticker_button_contrast">Kontrast</string>
-    <string name="pesdk_sticker_button_saturation">Mättnad</string>
-    <string name="pesdk_sticker_button_brightness">Ljusstyrka</string>
-    <string name="pesdk_sticker_category_name_custom">Uppladdningar</string>
-    <string name="pesdk_overlay_title_name">Täck över</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
-    <string name="pesdk_overlay_button_blendModeDarken">Mörklägg</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Skärma</string>
-    <string name="pesdk_overlay_button_blendModeOverlay">Överlägg</string>
-    <string name="pesdk_overlay_button_blendModeLighten">Belys</string>
-    <string name="pesdk_overlay_button_blendModeMultiply">Multiplicera</string>
-    <string name="pesdk_overlay_button_blendModeColorBurn">Färg Bränn</string>
-    <string name="pesdk_overlay_button_blendModeSoftLight">Mjukt Ljus</string>
-    <string name="pesdk_overlay_button_blendModeHardLight">Hårt Ljus</string>
-    <string name="pesdk_overlay_asset_none">Inget</string>
-    <string name="pesdk_overlay_asset_golden">Gyllene</string>
-    <string name="pesdk_overlay_asset_lightleak1">Ljusläcka 1</string>
-    <string name="pesdk_overlay_asset_mosaic">Mosaik</string>
-    <string name="pesdk_overlay_asset_paper">Papper</string>
-    <string name="pesdk_overlay_asset_rain">Regn</string>
-    <string name="pesdk_overlay_asset_vintage">Klassisk</string>
-    <string name="pesdk_common_button_flipH">Vänd H</string>
-    <string name="pesdk_common_button_flipV">Vänd V</string>
-    <string name="pesdk_common_button_undo">Ångra</string>
-    <string name="pesdk_common_button_redo">Gör om</string>
-    <string name="pesdk_common_title_colorPicker">Välj Färg</string>
-    <string name="pesdk_common_title_transparentColor">Transparens</string>
-    <string name="pesdk_common_title_whiteColor">Vit</string>
-    <string name="pesdk_common_title_grayColor">Grå</string>
-    <string name="pesdk_common_title_blackColor">Svart</string>
-    <string name="pesdk_common_title_lightBlueColor">Ljusblå</string>
-    <string name="pesdk_common_title_blueColor">Blå</string>
-    <string name="pesdk_common_title_purpleColor">Lila</string>
-    <string name="pesdk_common_title_orchidColor">Orkide</string>
-    <string name="pesdk_common_title_pinkColor">Rosa</string>
-    <string name="pesdk_common_title_redColor">Röd</string>
-    <string name="pesdk_common_title_orangeColor">Orange</string>
-    <string name="pesdk_common_title_goldColor">Guld</string>
-    <string name="pesdk_common_title_yellowColor">Gul</string>
-    <string name="pesdk_common_title_oliveColor">Oliv</string>
-    <string name="pesdk_common_title_greenColor">Grön</string>
-    <string name="pesdk_common_title_aquamarinColor">Akvamarin</string>
-    <string name="pesdk_common_title_pipettableColor">Pipetterbar färg</string>
-    <string name="vesdk_video_trim_title_name">Trimma</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">Hur kan jag göra Simple Gallery till standardenhetsgalleri\?</string>
-    <string name="faq_1_text">Först måste du hitta det nuvarande standardgalleriet i avsnittet Appar i dina enhetsinställningar, leta efter en knapp som säger något i stil med \"Öppna som standard\", klicka på det och välj sedan \"Rensa standardinställningar\". Nästa gång du försöker öppna en bild eller video bör du se en appväljare, där du kan välja Simple Gallery och göra det till standardapp.</string>
+    <string name="faq_1_title">Hur kan jag göra Fossify Gallery till enhetens standardgalleri?</string>
     <string name="faq_2_title">Jag låste appen med ett lösenord, men jag glömde det. Vad kan jag göra\?</string>
     <string name="faq_2_text">Du kan lösa det på 2 sätt. Du kan antingen installera om appen eller hitta appen i dina enhetsinställningar och välja \"Rensa data\". Det kommer att återställa alla dina inställningar, det tar inte bort några mediefiler.</string>
     <string name="faq_3_title">Hur kan jag få ett album att alltid visas högst upp\?</string>
@@ -355,7 +219,6 @@
     <string name="faq_4_title">Hur kan jag snabbspola videor framåt\?</string>
     <string name="faq_4_text">Du kan göra det genom att dubbelklicka på sidan av skärmen eller trycka på texterna för nuvarande eller maxlängd nära sökfältet. Om du aktiverar öppning av videor på en separat skärm i appinställningarna kan du också använda horisontella gester.</string>
     <string name="faq_5_title">Vad är skillnaden mellan att dölja och utesluta en mapp\?</string>
-    <string name="faq_5_text">Uteslut förhindrar att mappen endast visas i Simple Gallery, medan Dölj fungerar systemmässigt och den döljer mappen från andra gallerier också. Det fungerar genom att skapa en tom \".nomedia\"-fil i den givna mappen, som du sedan kan ta bort med vilken filhanterare som helst. Observera att vissa enheter inte tillåter att dölja mappar som Kamera, Skärmdumpar och Nedladdningar.</string>
     <string name="faq_6_title">Varför dyker mappar med omslagsbilder eller klistermärken upp\?</string>
     <string name="faq_6_text">Det kan hända att du kommer att se några ovanliga album dyka upp. Du kan enkelt utesluta dem genom att trycka länge på dem och välja Uteslut. I nästa dialogruta kan du sedan välja den överordnade mappen, chansen är stor att den förhindrar att de andra relaterade albumen också dyker upp.</string>
     <string name="faq_7_title">En mapp med bilder visas inte, eller så visas inte alla objekt. Vad kan jag göra\?</string>
@@ -381,8 +244,4 @@
     <string name="faq_17_text">Det slutade fungera på grund av systemändringarna som kom med Android 11, appen kan inte bläddra i riktiga mappar längre, den förlitar sig på MediaStore för att hämta data.</string>
     <string name="faq_18_title">Varför ser jag annonser under videouppspelning\?</string>
     <string name="faq_18_text">Våra appar har inga som helst annonser. Om du ser dem under videouppspelning använder du någon annan videospelare. Försök att hitta din standardvideospelare i enhetsinställningarna och gör sedan en \"Rensa standardinställningar\" på den. Nästa gång du vill öppna en video kommer du att se ett appväljarfönster, där du kan välja vilken app du vill använda.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

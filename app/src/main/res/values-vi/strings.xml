@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Gallery</string>
     <string name="app_launcher_name">Thư viện</string>
     <string name="edit">Chỉnh sửa</string>
     <string name="open_camera">Mở Camera</string>
@@ -34,29 +33,20 @@
     <string name="reorder_by_dragging">Sắp xếp lại các thư mục bằng cách kéo</string>
     <string name="reorder_by_dragging_pro">Sắp xếp lại các thư mục bằng cách kéo (Phiên bản Pro)</string>
     <string name="restore_to_path">Đang khôi phục lại \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Lọc</string>
     <string name="images">Hình ảnh</string>
     <string name="videos">Video</string>
     <string name="gifs">Ảnh GIF</string>
     <string name="raw_images">Ảnh RAW</string>
-    <string name="svgs">SVGs</string>
     <string name="portraits">Chân dung</string>
     <string name="no_media_with_filters">Không có tập tin phương tiện nào được tìm thấy với các bộ lọc được chọn.</string>
     <string name="change_filters_underlined"><u>Thay đổi bộ lọc</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Chức năng này ẩn thư mục bằng cách thêm tệp \'.nomedia\' vào nó, nó cũng sẽ ẩn tất cả các thư mục con. Bạn có thể nhìn thấy chúng bằng cách bật tùy chọn \'Hiển thị các mục bị ẩn\' trong Cài đặt. Tiếp tục\?</string>
-    <string name="exclude_folder_description">Điều này sẽ loại trừ lựa chọn cùng với các thư mục con của nó khỏi Simple Gallery. Bạn có thể quản lý các thư mục loại trừ trong Cài đặt.</string>
     <string name="exclude_folder_parent">Loại trừ thư mục mẹ thay thế\?</string>
-    <string name="excluded_activity_placeholder">Các thư mục loại trừ sẽ làm cho chúng cùng với các thư mục con của chúng bị ẩn chỉ trong Simple Gallery, chúng vẫn sẽ hiển thị trong các ứng dụng khác.
-\n
-\nNếu bạn cũng muốn ẩn chúng khỏi các ứng dụng khác, hãy sử dụng chức năng Ẩn.</string>
     <string name="hidden_folders">Các thư mục ẩn</string>
     <string name="manage_hidden_folders">Quản lý thư mục ẩn</string>
     <string name="hidden_folders_placeholder">Có vẻ như bạn không có bất kỳ thư mục nào bị ẩn với tệp \".nomedia\".</string>
     <string name="hidden_all_files">Bạn phải cấp cho ứng dụng quyền truy cập Tất cả các tệp để xem các tệp ẩn, nếu không ứng dụng sẽ không thể hoạt động.</string>
-    <string name="cant_unhide_folder">If a folder or one of its parent folders has a dot before its name, it is hidden and cannot be unhidden like this. You have to remove the dot by renaming it.</string>
-    <!-- Include folders -->
     <string name="include_folders">Bao gồm các thư mục</string>
     <string name="manage_included_folders">Quản lý các thư mục được bao gồm</string>
     <string name="add_folder">Thêm thư mục</string>
@@ -64,7 +54,6 @@
 \n
 \nThêm một số mục ở đây sẽ không loại trừ bất kỳ thư mục nào khác.</string>
     <string name="no_media_add_included">Không có tập tin phương tiện được tìm thấy. Bạn có thể thêm các thư mục chứa tệp phương tiện theo cách thủ công.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Thay đổi kích thước mục đã chọn và lưu</string>
     <string name="width">Chiều rộng</string>
     <string name="height">Chiều cao</string>
@@ -75,11 +64,9 @@
     <string name="resize_factor_info">Thay đổi kích thước hình ảnh theo tỷ lệ phần trăm nhất định, giá trị phải nằm trong khoảng 10 và 90.</string>
     <string name="resize_factor_error">Nhập một số từ 10 đến 90</string>
     <plurals name="failed_to_resize_images">
-        <item quantity="one">Failed to resize %d image</item>
-        <item quantity="other">Failed to resize %d images</item>
+        <item quantity="other">Thay đổi kích thước %d ảnh thất bại</item>
     </plurals>
     <string name="images_resized_successfully">Thay đổi kích thước hình ảnh thành công</string>
-    <!-- Editor -->
     <string name="editor">Trình biên tập</string>
     <string name="basic_editor">Trình chỉnh sửa cơ bản</string>
     <string name="advanced_editor">Trình chỉnh sửa nâng cao</string>
@@ -109,11 +96,8 @@
     <string name="flip_horizontally">Lật theo chiều ngang</string>
     <string name="flip_vertically">Lật theo chiều dọc</string>
     <string name="free_aspect_ratio">Tự do</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Khác</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Hình nền</string>
+    <string name="wallpaper">Hình nền</string>
     <string name="set_as_wallpaper">Cài làm hình nền</string>
     <string name="set_as_wallpaper_failed">Thất bại</string>
     <string name="set_as_wallpaper_with">Đặt làm hình nền với:</string>
@@ -125,7 +109,6 @@
     <string name="lock_screen">Màn hình khóa</string>
     <string name="home_and_lock_screen">Màn hình chính và khóa</string>
     <string name="allow_changing_aspect_ratio">Cho phép thay đổi tỷ lệ khung hình</string>
-    <!-- Slideshow -->
     <string name="slideshow">Trình chiếu</string>
     <string name="interval">Khoảng thời gian</string>
     <string name="include_photos">Bao gồm hình ảnh</string>
@@ -140,9 +123,7 @@
     <string name="slide">Trượt</string>
     <string name="slideshow_ended">Trình chiếu kết thúc</string>
     <string name="no_media_for_slideshow">Không có tập tin phương tiện cho trình chiếu được tìm thấy</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Nhóm thư mục con trực tiếp</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Nhóm theo</string>
     <string name="do_not_group_files">Không nhóm các tệp</string>
     <string name="by_folder">Thư mục</string>
@@ -156,10 +137,8 @@
     <string name="by_extension">Phần mở rộng</string>
     <string name="show_file_count_section_header">Hiển thị số lượng tệp ở tiêu đề phần</string>
     <string name="grouping_and_sorting">Xin lưu ý rằng Nhóm và Sắp xếp là 2 trường độc lập</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Thư mục hiển thị trên widget:</string>
     <string name="show_folder_name">Hiển thị tên thư mục</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Phát video tự động</string>
     <string name="remember_last_video_position">Ghi nhớ vị trí phát video cuối cùng</string>
     <string name="loop_videos">Tự động phát video đầu khi hết video cuối</string>
@@ -213,149 +192,25 @@
     <string name="export_favorite_paths">Xuất yêu thích</string>
     <string name="import_favorite_paths">Nhập yêu thích</string>
     <string name="paths_imported_successfully">Đường dẫn được nhập thành công</string>
-    <string name="media_management_prompt">To make sure that all file operations work reliably, please make this app a Media management app in your device settings.</string>
+    <string name="media_management_prompt">Để đảm bảo rằng tất cả các thao tác với tệp hoạt động đáng tin cậy, vui lòng đặt ứng dụng này làm ứng dụng Quản lý phương tiện trong cài đặt thiết bị của bạn.</string>
     <string name="password_protect_excluded">Mật khẩu bảo vệ khả năng hiển thị thư mục bị loại trừ</string>
-    <string name="media_management_manual">Something went wrong, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="media_management_note">If the redirection does not work, please go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="media_management_alternative">If you do not want to do it, you can also go into your device Settings - Apps - Special app access - Media management apps and allow this app to manage media.</string>
-    <string name="alternative_media_access">Alternatively, you can allow accessing media files only. In that case you will not be able to work with hidden files though.</string>
-    <string name="media_only">Media only</string>
-    <string name="all_files">All files</string>
-    <string name="search_all_files">Search all files instead of folders on the main screen</string>
-    <string name="show_all_folders">Show a menu button for toggling Show All Folders Content quickly</string>
-    <!-- Setting sections -->
+    <string name="media_only">Chỉ phương tiện</string>
+    <string name="all_files">Tất cả các tập tin</string>
+    <string name="search_all_files">Tìm kiếm tất cả các tập tin thay vì thư mục trên màn hình chính</string>
     <string name="thumbnails">Hình thu nhỏ</string>
     <string name="fullscreen_media">Toàn màn hình</string>
     <string name="extended_details">Chi tiết mở rộng</string>
     <string name="bottom_actions">Hành động dưới cùng</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Quản lý các hành động dưới cùng có thể nhìn thấy</string>
     <string name="toggle_favorite">Chuyển đổi yêu thích</string>
     <string name="toggle_file_visibility">Ẩn/bỏ ẩn</string>
-    <!-- New editor strings -->
-    <string name="pesdk_transform_button_freeCrop">Tùy chỉnh</string>
-    <string name="pesdk_transform_button_resetCrop">Cài lại</string>
-    <string name="pesdk_transform_button_squareCrop">Hình vuông</string>
-    <string name="pesdk_transform_title_name">Biến đổi</string>
-    <string name="pesdk_filter_title_name">Bộ lọc</string>
-    <string name="pesdk_filter_asset_none">Không</string>
-    <string name="pesdk_adjustments_title_name">Điều chỉnh</string>
-    <string name="pesdk_adjustments_button_shadowTool">Đổ bóng</string>
-    <string name="pesdk_adjustments_button_exposureTool">Phơi sáng</string>
-    <string name="pesdk_adjustments_button_highlightTool">Làm nổi bật</string>
-    <string name="pesdk_adjustments_button_brightnessTool">Độ sáng</string>
-    <string name="pesdk_adjustments_button_contrastTool">Tương phản</string>
-    <string name="pesdk_adjustments_button_saturationTool">Độ bão hòa</string>
-    <string name="pesdk_adjustments_button_clarityTool">Sáng sủa</string>
-    <string name="pesdk_adjustments_button_gammaTool">Đồ thị gamma</string>
-    <string name="pesdk_adjustments_button_blacksTool">Đen</string>
-    <string name="pesdk_adjustments_button_whitesTool">Trắng</string>
-    <string name="pesdk_adjustments_button_temperatureTool">Nhiệt độ</string>
-    <string name="pesdk_adjustments_button_sharpnessTool">Độ sắc nét</string>
-    <string name="pesdk_adjustments_button_reset">Đặt lại</string>
-    <string name="pesdk_focus_title_name">Tiêu điểm</string>
-    <string name="pesdk_focus_title_disabled">Không</string>
-    <string name="pesdk_focus_button_radial">Xuyên tâm</string>
-    <string name="pesdk_focus_button_linear">Tuyến tính</string>
-    <string name="pesdk_focus_button_mirrored">Nhân đôi</string>
-    <string name="pesdk_focus_button_gaussian">Đường cong gauss</string>
-    <string name="pesdk_text_title_input">Add text</string>
-    <string name="pesdk_text_title_name">Văn bản</string>
-    <string name="pesdk_text_title_options">Tùy chọn văn bản</string>
-    <string name="pesdk_text_title_textColor">Màu văn bản</string>
-    <string name="pesdk_text_title_font">Font</string>
-    <string name="pesdk_text_button_add">Thêm</string>
-    <string name="pesdk_text_button_edit">Biên tập</string>
-    <string name="pesdk_text_button_straighten">Duỗi thẳng</string>
-    <string name="pesdk_text_button_font">Font</string>
-    <string name="pesdk_text_button_color">Màu sắc</string>
-    <string name="pesdk_text_button_backgroundColor">Màu BG</string>
-    <string name="pesdk_text_button_alignment">Căn chỉnh</string>
-    <string name="pesdk_text_button_bringToFront">Lên trước</string>
-    <string name="pesdk_text_button_delete">Xóa</string>
-    <string name="pesdk_text_text_editTextPlaceholder">Văn bản của bạn</string>
-    <string name="pesdk_brush_title_name">Cọ vẽ</string>
-    <string name="pesdk_brush_button_color">Màu sắc</string>
-    <string name="pesdk_brush_button_size">Kích thước</string>
-    <string name="pesdk_brush_button_hardness">Độ đậm</string>
-    <string name="pesdk_brush_button_bringToFront">Lên trước</string>
-    <string name="pesdk_brush_button_delete">Xóa bỏ</string>
-    <string name="pesdk_brush_title_brushColor">Màu cọ</string>
-    <string name="pesdk_editor_title_name">Trình biên tập</string>
-    <string name="pesdk_editor_title_closeEditorAlert">Đóng trình biên tập\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Do you really want to discard the changes\?</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">Có</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">Không</string>
-    <string name="pesdk_editor_cancel">Hủy bỏ</string>
-    <string name="pesdk_editor_accept">Chấp nhận</string>
-    <string name="pesdk_editor_save">Lưu</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">Exporting…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Exporting %s.</string>
-    <string name="pesdk_sticker_title_name">Sticker</string>
-    <string name="pesdk_sticker_title_color">Sticker Color</string>
-    <string name="pesdk_sticker_title_options">Sticker Options</string>
-    <string name="pesdk_sticker_button_add">Add</string>
-    <string name="pesdk_sticker_button_color">Color</string>
-    <string name="pesdk_sticker_button_delete">Delete</string>
-    <string name="pesdk_sticker_button_bringToFront">To Front</string>
-    <string name="pesdk_sticker_button_straighten">Straighten</string>
-    <string name="pesdk_sticker_button_replace">Replace</string>
-    <string name="pesdk_sticker_button_opacity">Opacity</string>
-    <string name="pesdk_sticker_button_contrast">Contrast</string>
-    <string name="pesdk_sticker_button_saturation">Saturation</string>
-    <string name="pesdk_sticker_button_brightness">Brightness</string>
-    <string name="pesdk_sticker_category_name_custom">Uploads</string>
-    <string name="pesdk_overlay_title_name">Overlay</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
-    <string name="pesdk_overlay_button_blendModeDarken">Darken</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
-    <string name="pesdk_overlay_button_blendModeOverlay">Overlay</string>
-    <string name="pesdk_overlay_button_blendModeLighten">Lighten</string>
-    <string name="pesdk_overlay_button_blendModeMultiply">Multiply</string>
-    <string name="pesdk_overlay_button_blendModeColorBurn">Color Burn</string>
-    <string name="pesdk_overlay_button_blendModeSoftLight">Soft Light</string>
-    <string name="pesdk_overlay_button_blendModeHardLight">Hard Light</string>
-    <string name="pesdk_overlay_asset_none">None</string>
-    <string name="pesdk_overlay_asset_golden">Golden</string>
-    <string name="pesdk_overlay_asset_lightleak1">Lightleak 1</string>
-    <string name="pesdk_overlay_asset_mosaic">Mosaic</string>
-    <string name="pesdk_overlay_asset_paper">Paper</string>
-    <string name="pesdk_overlay_asset_rain">Rain</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
-    <string name="pesdk_common_button_flipH">Lật H</string>
-    <string name="pesdk_common_button_flipV">Lật V</string>
-    <string name="pesdk_common_button_undo">Hoàn tác</string>
-    <string name="pesdk_common_button_redo">Lui lại</string>
-    <string name="pesdk_common_title_colorPicker">Bộ chọn màu</string>
-    <string name="pesdk_common_title_transparentColor">Trong suốt</string>
-    <string name="pesdk_common_title_whiteColor">Trắng</string>
-    <string name="pesdk_common_title_grayColor">Xám</string>
-    <string name="pesdk_common_title_blackColor">Đen</string>
-    <string name="pesdk_common_title_lightBlueColor">Màu xanh nhạt</string>
-    <string name="pesdk_common_title_blueColor">Màu xanh da trời</string>
-    <string name="pesdk_common_title_purpleColor">Màu tím</string>
-    <string name="pesdk_common_title_orchidColor">màu hoa lan</string>
-    <string name="pesdk_common_title_pinkColor">Hồng</string>
-    <string name="pesdk_common_title_redColor">Đỏ</string>
-    <string name="pesdk_common_title_orangeColor">Cam</string>
-    <string name="pesdk_common_title_goldColor">Vàng kim</string>
-    <string name="pesdk_common_title_yellowColor">Màu vàng</string>
-    <string name="pesdk_common_title_oliveColor">Xanh ô-liu</string>
-    <string name="pesdk_common_title_greenColor">Xanh lá</string>
-    <string name="pesdk_common_title_aquamarinColor">Xanh ngọc nước biển</string>
-    <string name="pesdk_common_title_pipettableColor">Màu sắc dễ thương</string>
-    <string name="vesdk_video_trim_title_name">Trim</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">Làm thế nào để đặt Simple Gallery thành thư viện mặc định\?</string>
-    <string name="faq_1_text">Trước tiên, bạn phải tìm thư viện hiện tại mặc định trong phần Ứng dụng trong Cài đặt thiết bị của bạn, tìm nút có nội dung như \"Mở theo mặc định\", nhấp vào đó, sau đó chọn \"Xóa mặc định\".          Lần tới, bạn hãy thử mở một hình ảnh hoặc video, bạn sẽ thấy một bộ chọn ứng dụng, nơi bạn có thể chọn Simple Gallery và biến nó thành ứng dụng mặc định.</string>
+    <string name="faq_1_text">Trước tiên, bạn phải tìm thư viện mặc định hiện tại trong phần Ứng dụng trong cài đặt thiết bị của mình, tìm nút có nội dung như \"Mở theo mặc định\", nhấp vào nút đó, sau đó chọn \"Xóa mặc định\". Lần tới khi thử mở hình ảnh hoặc video, bạn sẽ thấy bộ chọn ứng dụng, nơi bạn có thể chọn Thư viện Fossify và đặt nó làm ứng dụng mặc định.</string>
     <string name="faq_2_title">Tôi đã khóa ứng dụng bằng mật khẩu, nhưng tôi quên mất. Tôi có thể làm gì\?</string>
     <string name="faq_2_text">Bạn có thể giải quyết nó theo 2 cách. Bạn có thể cài đặt lại ứng dụng hoặc tìm ứng dụng trong cài đặt thiết bị của mình và chọn \"Xóa dữ liệu\". Nó sẽ thiết lập lại tất cả các cài đặt của bạn, nó sẽ không xóa bất kỳ tập tin phương tiện nào.</string>
     <string name="faq_3_title">Làm thế nào tôi có thể làm cho một album luôn xuất hiện ở đầu\?</string>
     <string name="faq_3_text">Bạn có thể nhấn và giữ album mong muốn và chọn biểu tượng Ghim ở menu hành động, nó sẽ ghim nó lên trên cùng. Bạn cũng có thể ghim nhiều thư mục, các mục được ghim sẽ được sắp xếp theo phương pháp sắp xếp mặc định.</string>
     <string name="faq_4_title">Làm cách nào tôi có tua video nhanh\?</string>
-    <string name="faq_4_text">You can do it by double tapping the side of the screen, or tapping the current or max duration texts near the seekbar. If you enable opening videos on a separate screen in the app settings, you can use horizontal gestures too.</string>
     <string name="faq_5_title">Sự khác biệt giữa ẩn và loại trừ một thư mục là gì\?</string>
-    <string name="faq_5_text">Loại trừ ngăn chỉ hiển thị thư mục trong Thư viện đơn giản, trong khi Ẩn hoạt động theo hệ thống và nó cũng ẩn thư mục khỏi các phòng trưng bày khác. Nó hoạt động bằng cách tạo một tệp \".nomedia\" trong thư mục đã cho, sau đó bạn cũng có thể xóa bằng bất kỳ trình quản lý tệp nào. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Tại sao hiển thị các thư mục với ảnh bìa hoặc nhãn dán\?</string>
     <string name="faq_6_text">Nó có thể xảy ra rằng bạn sẽ thấy một số album bất thường xuất hiện. Bạn có thể dễ dàng loại trừ chúng bằng cách nhấn giữ và chọn Loại trừ. Trong hộp thoại tiếp theo bạn có thể chọn thư mục mẹ sau đó, rất có thể nó sẽ ngăn các album liên quan khác xuất hiện.</string>
     <string name="faq_7_title">Một thư mục chứa hình ảnh không hiển thị hoặc không hiển thị tất cả các mục. Tôi có thể làm gì\?</string>
@@ -374,15 +229,5 @@
     <string name="faq_14_text">Bạn có thể nhấn mục menu \"Tạm thời hiển thị các mục bị ẩn\" ở màn hình chính hoặc chuyển đổi \"Hiển thị các mục bị ẩn\" trong Cài đặt ứng dụng để xem mục bị ẩn. Nếu bạn muốn bỏ ẩn nó, chỉ cần nhấn và giữ \"Bỏ ẩn\". Các thư mục được ẩn bằng cách thêm tệp ẩn \".nomedia\" vào chúng, bạn cũng có thể xóa tệp bằng bất kỳ trình quản lý tệp nào. Note that hiding works recursively though, so if you hide a folder, all subfolders will become hidden too. So for unhiding the subfolders you have to unhide the parent folder.</string>
     <string name="faq_15_title">Tại sao ứng dụng chiếm quá nhiều dung lượng \?</string>
     <string name="faq_15_text">Bộ nhớ cache ứng dụng có thể mất tới 250MB, nó đảm bảo tải hình ảnh nhanh hơn. Nếu ứng dụng chiếm nhiều dung lượng hơn, rất có thể là do bạn có nhiều mục trong Thùng rác. Những tập tin đó được tính vào kích thước ứng dụng. Bạn có thể xóa thùng rác bằng cách mở nó và xóa tất cả các tệp hoặc từ Cài đặt ứng dụng. Mọi tệp trong Thùng rác sẽ tự động bị xóa sau 30 ngày.</string>
-    <string name="faq_16_title">What happened to file and folder hiding and why cannot I see hidden items anymore\?</string>
     <string name="faq_16_text">Bắt đầu với Android 11, bạn không thể ẩn hoặc hiện các tệp hoặc thư mục nữa, bạn cũng không thể nhìn thấy những tệp hoặc thư mục bị ẩn trong ứng dụng thư viện. Bạn sẽ phải sử dụng một số trình quản lý tệp cho điều đó.</string>
-    <string name="faq_16_text_extra">Or you can also grant this gallery access to All Files through your device settings, that will allow us showing hidden items and make file operations more reliable in general.</string>
-    <string name="faq_17_title">Why cannot I include missing folders anymore\?</string>
-    <string name="faq_17_text">That stopped working due to the system changes that came with Android 11 too, the app cannot browse real folders anymore, it relies on the so called MediaStore at fetching data.</string>
-    <string name="faq_18_title">Why do I see ads during video playback\?</string>
-    <string name="faq_18_text">Our apps have no ads whatsoever. If you see them during video playback, you must be using some other apps video player. Try finding your default video player in the device settings, then do a \"Clear defaults\" on it. The next time you invoke some video intent you will see an app picker prompt, where you can select what app you want to use.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

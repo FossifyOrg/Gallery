@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Schlichte Galerie</string>
     <string name="app_launcher_name">Galerie</string>
     <string name="edit">Bearbeiten</string>
     <string name="open_camera">Kamera öffnen</string>
@@ -34,37 +33,26 @@
     <string name="reorder_by_dragging">Ordner durch Ziehen neu anordnen</string>
     <string name="reorder_by_dragging_pro">Ordner durch Ziehen neu anordnen (Pro)</string>
     <string name="restore_to_path">Wiederherstellung nach „%s“</string>
-    <!-- Filter -->
     <string name="filter_media">Medien filtern</string>
     <string name="images">Bilder</string>
-    <string name="videos">Videos</string>
-    <string name="gifs">GIFs</string>
     <string name="raw_images">RAW-Bilder</string>
-    <string name="svgs">SVGs</string>
     <string name="portraits">Porträts</string>
     <string name="no_media_with_filters">Keine Medien für die ausgewählten Filter gefunden.</string>
     <string name="change_filters_underlined"><u>Filter ändern</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Diese Funktion verbirgt den Ordner, indem sie in ihn eine .nomedia-Datei einfügt, sie verbirgt auch alle Unterordner. Du kannst sie wieder sehen, indem du in den Einstellungen die Option „Ausgeblendete Elemente anzeigen“ umschaltest. Weiter\?</string>
-    <string name="exclude_folder_description">Diese Funktion schließt die ausgewählten Ordner und deren Unterordner nur in dieser App aus. Ausgeschlossene Ordner können in den Einstellungen verwaltet werden.</string>
     <string name="exclude_folder_parent">Stattdessen einen höherliegenden Ordner ausschließen\?</string>
-    <string name="excluded_activity_placeholder">„Ordner ausschließen“ wird die gewählten Ordner und deren Unterordner nur in dieser App ausblenden. Andere Apps werden sie weiterhin anzeigen.
-\n
-\nWenn du Ordner auch für andere Apps verstecken willst, verwende die Funktion „Ordner verstecken“.</string>
     <string name="hidden_folders">Versteckte Ordner</string>
     <string name="manage_hidden_folders">Versteckte Ordner verwalten</string>
     <string name="hidden_folders_placeholder">Keinen mit einer .nomedia-Datei versteckten Ordner gefunden.</string>
     <string name="hidden_all_files">Du musst der App den Zugriff auf alle Dateien gewähren, um versteckte Dateien zu sehen, sonst funktioniert sie nicht.</string>
     <string name="cant_unhide_folder">Wenn ein Ordner oder einer seiner übergeordneten Ordner einen Punkt vor seinem Namen hat, ist er versteckt und kann somit nicht wieder angezeigt werden. Du musst den Punkt entfernen, indem du ihn umbenennst.</string>
-    <!-- Include folders -->
     <string name="include_folders">Einbezogene Ordner</string>
     <string name="manage_included_folders">Einbezogene Ordner verwalten</string>
     <string name="add_folder">Ordner hinzufügen</string>
-    <string name="included_activity_placeholder">Wenn du einige Ordner hast, die Medien enthalten, aber von der Anwendung nicht erkannt wurden, kannst du sie hier manuell hinzufügen.
+    <string name="included_activity_placeholder">Wenn du einige Ordner hast, die Medien enthalten, aber von der App nicht erkannt wurden, kannst du sie hier manuell hinzufügen.
 \n
 \nDas Hinzufügen einiger Elemente hier schließt keine anderen Ordner aus.</string>
     <string name="no_media_add_included">Es konnten keine Mediendateien gefunden werden. Das Problem kann behoben werden, indem die Ordner mit den Mediendateien manuell hinzugefügt werden.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Größe ändern und speichern</string>
     <string name="width">Breite</string>
     <string name="height">Höhe</string>
@@ -79,8 +67,6 @@
         <item quantity="other">Größenänderung bei %d Bildern fehlgeschlagen</item>
     </plurals>
     <string name="images_resized_successfully">Bildergröße erfolgreich geändert</string>
-    <!-- Editor -->
-    <string name="editor">Editor</string>
     <string name="basic_editor">Einfacher Editor</string>
     <string name="advanced_editor">Fortgeschrittener Editor</string>
     <string name="rotate">Drehen</string>
@@ -109,11 +95,7 @@
     <string name="flip_horizontally">Horizontal spiegeln</string>
     <string name="flip_vertically">Vertikal spiegeln</string>
     <string name="free_aspect_ratio">Beliebiges</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Anderes</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Schlichter Hintergrund</string>
     <string name="set_as_wallpaper">Als Hintergrund festlegen</string>
     <string name="set_as_wallpaper_failed">Hintergrundbild festlegen fehlgeschlagen</string>
     <string name="set_as_wallpaper_with">Als Hintergrund festlegen mit:</string>
@@ -125,7 +107,6 @@
     <string name="lock_screen">Sperrbildschirm</string>
     <string name="home_and_lock_screen">Start- und Sperrbildschirm</string>
     <string name="allow_changing_aspect_ratio">Änderung des Seitenverhältnisses zulassen</string>
-    <!-- Slideshow -->
     <string name="slideshow">Diashow</string>
     <string name="interval">Intervall</string>
     <string name="include_photos">Bilder verwenden</string>
@@ -134,15 +115,12 @@
     <string name="random_order">Zufällige Reihenfolge</string>
     <string name="move_backwards">Rückwärts abspielen</string>
     <string name="loop_slideshow">Endlos abspielen</string>
-    <string name="animation">Animation</string>
     <string name="no_animation">Keine</string>
     <string name="fade">Verblassen</string>
     <string name="slide">Schieben</string>
     <string name="slideshow_ended">Diashow beendet</string>
     <string name="no_media_for_slideshow">Keine Medien für Diashow gefunden</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Direkte Unterordner gruppieren</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Gruppieren nach</string>
     <string name="do_not_group_files">Dateien nicht gruppieren</string>
     <string name="by_folder">Ordner</string>
@@ -156,10 +134,8 @@
     <string name="by_extension">Dateierweiterung</string>
     <string name="show_file_count_section_header">Anzahl der Dateien in den Abschnittsüberschriften anzeigen</string>
     <string name="grouping_and_sorting">Bitte beachten, dass Gruppieren und Sortieren zwei unterschiedliche Dinge sind</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Auf dem Widget angezeigter Ordner:</string>
     <string name="show_folder_name">Ordnernamen anzeigen</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Videos automatisch abspielen</string>
     <string name="remember_last_video_position">Letzte Videowiedergabeposition merken</string>
     <string name="loop_videos">Videos in Endlosschleife abspielen</string>
@@ -215,139 +191,21 @@
     <string name="paths_imported_successfully">Pfade erfolgreich importiert</string>
     <string name="media_management_prompt">Um sicherzustellen, dass alle Dateivorgänge zuverlässig funktionieren, sollte diese App in den Geräteeinstellungen als Medienverwaltungs-App festgelegt werden.</string>
     <string name="password_protect_excluded">Passwortschutz für die Sichtbarkeit ausgeschlossener Ordner</string>
-    <string name="media_management_manual">Irgendetwas ist schief gelaufen. Öffne bitte die Geräteeinstellungen - Apps - Erweitert - Spezieller App-Zugriff - Apps zur Medienverwaltung und erlaube dieser Anwendung, Medien zu verwalten.</string>
+    <string name="media_management_manual">Irgendetwas ist schief gelaufen. Öffne bitte die Geräteeinstellungen - Apps - Erweitert - Spezieller App-Zugriff - Apps zur Medienverwaltung und erlaube dieser App, Medien zu verwalten.</string>
     <string name="media_management_note">Wenn die Umleitung nicht funktioniert, öffne bitte die Geräteeinstellungen - Apps - Spezieller App-Zugriff - Apps zur Medienverwaltung und erlaube dieser App die Medienverwaltung.</string>
-    <string name="media_management_alternative">Wenn du das nicht möchtest, kannst du auch in den Geräteeinstellungen - Apps - Spezieller App-Zugriff - Apps zur Medienverwaltung dieser Anwendung die Verwaltung von Medien erlauben.</string>
+    <string name="media_management_alternative">Wenn du das nicht möchtest, kannst du auch in den Geräteeinstellungen - Apps - Spezieller App-Zugriff - Apps zur Medienverwaltung dieser App die Verwaltung von Medien erlauben.</string>
     <string name="alternative_media_access">Alternativ kannst du auch nur den Zugriff auf Mediendateien zulassen. In diesem Fall kann allerdings nicht mit versteckten Dateien gearbeitet werden.</string>
     <string name="media_only">Nur Medien</string>
     <string name="all_files">Alle Dateien</string>
     <string name="search_all_files">Alle Dateien statt der Ordner auf dem Hauptbildschirm durchsuchen</string>
     <string name="show_all_folders">Menüschaltfläche einblenden für schnelles Umschalten „Alle Ordnerinhalte anzeigen“</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Vorschaubilder</string>
     <string name="fullscreen_media">Vollbildansicht von Medien</string>
     <string name="extended_details">Erweiterte Details</string>
     <string name="bottom_actions">Funktionen am unteren Bildschirmrand</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Funktionen auswählen</string>
     <string name="toggle_favorite">Favorit umschalten</string>
     <string name="toggle_file_visibility">Sichtbarkeit von Dateien umschalten</string>
-    <!-- New editor strings -->
-    <string name="pesdk_transform_button_freeCrop">Benutzerdefiniert</string>
-    <string name="pesdk_transform_button_resetCrop">Zurücksetzen</string>
-    <string name="pesdk_transform_button_squareCrop">Quadrat</string>
-    <string name="pesdk_transform_title_name">Umwandeln</string>
-    <string name="pesdk_filter_title_name">Filter</string>
-    <string name="pesdk_filter_asset_none">Kein</string>
-    <string name="pesdk_adjustments_title_name">Anpassen</string>
-    <string name="pesdk_adjustments_button_shadowTool">Schatten</string>
-    <string name="pesdk_adjustments_button_exposureTool">Belichtung</string>
-    <string name="pesdk_adjustments_button_highlightTool">Höhepunkte</string>
-    <string name="pesdk_adjustments_button_brightnessTool">Helligkeit</string>
-    <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
-    <string name="pesdk_adjustments_button_saturationTool">Sättigung</string>
-    <string name="pesdk_adjustments_button_clarityTool">Struktur</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
-    <string name="pesdk_adjustments_button_blacksTool">Schwarz</string>
-    <string name="pesdk_adjustments_button_whitesTool">Weiß</string>
-    <string name="pesdk_adjustments_button_temperatureTool">Temperatur</string>
-    <string name="pesdk_adjustments_button_sharpnessTool">Schärfe</string>
-    <string name="pesdk_adjustments_button_reset">Zurücksetzen</string>
-    <string name="pesdk_focus_title_name">Fokus</string>
-    <string name="pesdk_focus_title_disabled">Kein</string>
-    <string name="pesdk_focus_button_radial">Radial</string>
-    <string name="pesdk_focus_button_linear">Linear</string>
-    <string name="pesdk_focus_button_mirrored">Gespiegelt</string>
-    <string name="pesdk_focus_button_gaussian">Gaußsch</string>
-    <string name="pesdk_text_title_input">Text hinzufügen</string>
-    <string name="pesdk_text_title_name">Text</string>
-    <string name="pesdk_text_title_options">Textoptionen</string>
-    <string name="pesdk_text_title_textColor">Textfarbe</string>
-    <string name="pesdk_text_title_font">Schriftart</string>
-    <string name="pesdk_text_button_add">Hinzufügen</string>
-    <string name="pesdk_text_button_edit">Bearbeiten</string>
-    <string name="pesdk_text_button_straighten">Begradigen</string>
-    <string name="pesdk_text_button_font">Schrift</string>
-    <string name="pesdk_text_button_color">Farbe</string>
-    <string name="pesdk_text_button_backgroundColor">Hintergrundfarbe</string>
-    <string name="pesdk_text_button_alignment">Ausrichtung</string>
-    <string name="pesdk_text_button_bringToFront">Nach Vorne</string>
-    <string name="pesdk_text_button_delete">Löschen</string>
-    <string name="pesdk_text_text_editTextPlaceholder">Dein Text</string>
-    <string name="pesdk_brush_title_name">Pinsel</string>
-    <string name="pesdk_brush_button_color">Farbe</string>
-    <string name="pesdk_brush_button_size">Größe</string>
-    <string name="pesdk_brush_button_hardness">Stärke</string>
-    <string name="pesdk_brush_button_bringToFront">Nach vorne</string>
-    <string name="pesdk_brush_button_delete">Löschen</string>
-    <string name="pesdk_brush_title_brushColor">Pinselfarbe</string>
-    <string name="pesdk_editor_title_name">Editor</string>
-    <string name="pesdk_editor_title_closeEditorAlert">Editor schließen\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Sollen die Änderungen wirklich verworfen werden\?</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">Ja</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">Nein</string>
-    <string name="pesdk_editor_cancel">Abbrechen</string>
-    <string name="pesdk_editor_accept">Akzeptieren</string>
-    <string name="pesdk_editor_save">Speichern</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">Exportieren …</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Export von %s.</string>
-    <string name="pesdk_sticker_title_name">Aufkleber</string>
-    <string name="pesdk_sticker_title_color">Aufkleberfarbe</string>
-    <string name="pesdk_sticker_title_options">Aufkleber-Optionen</string>
-    <string name="pesdk_sticker_button_add">Hinzufügen</string>
-    <string name="pesdk_sticker_button_color">Farbe</string>
-    <string name="pesdk_sticker_button_delete">Löschen</string>
-    <string name="pesdk_sticker_button_bringToFront">In den Vordergrund</string>
-    <string name="pesdk_sticker_button_straighten">Glätten</string>
-    <string name="pesdk_sticker_button_replace">Ersetzen</string>
-    <string name="pesdk_sticker_button_opacity">Deckkraft</string>
-    <string name="pesdk_sticker_button_contrast">Kontrast</string>
-    <string name="pesdk_sticker_button_saturation">Sättigung</string>
-    <string name="pesdk_sticker_button_brightness">Helligkeit</string>
-    <string name="pesdk_sticker_category_name_custom">Uploads</string>
-    <string name="pesdk_overlay_title_name">Überlagerung</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
-    <string name="pesdk_overlay_button_blendModeDarken">Abdunkeln</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
-    <string name="pesdk_overlay_button_blendModeOverlay">Überlagerung</string>
-    <string name="pesdk_overlay_button_blendModeLighten">Aufhellen</string>
-    <string name="pesdk_overlay_button_blendModeMultiply">Multiplizieren</string>
-    <string name="pesdk_overlay_button_blendModeColorBurn">Farbbrennen</string>
-    <string name="pesdk_overlay_button_blendModeSoftLight">Weiches Licht</string>
-    <string name="pesdk_overlay_button_blendModeHardLight">Hartes Licht</string>
-    <string name="pesdk_overlay_asset_none">Keine</string>
-    <string name="pesdk_overlay_asset_golden">Goldene</string>
-    <string name="pesdk_overlay_asset_lightleak1">Lichtleck 1</string>
-    <string name="pesdk_overlay_asset_mosaic">Mosaik</string>
-    <string name="pesdk_overlay_asset_paper">Papier</string>
-    <string name="pesdk_overlay_asset_rain">Regen</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
-    <string name="pesdk_common_button_flipH">H spiegeln</string>
-    <string name="pesdk_common_button_flipV">V spiegeln</string>
-    <string name="pesdk_common_button_undo">Rückgängig</string>
-    <string name="pesdk_common_button_redo">Wiederholen</string>
-    <string name="pesdk_common_title_colorPicker">Farbauswahl</string>
-    <string name="pesdk_common_title_transparentColor">Durchsichtig</string>
-    <string name="pesdk_common_title_whiteColor">Weiß</string>
-    <string name="pesdk_common_title_grayColor">Grau</string>
-    <string name="pesdk_common_title_blackColor">Schwarz</string>
-    <string name="pesdk_common_title_lightBlueColor">Hellblau</string>
-    <string name="pesdk_common_title_blueColor">Blau</string>
-    <string name="pesdk_common_title_purpleColor">Violett</string>
-    <string name="pesdk_common_title_orchidColor">Orchidee</string>
-    <string name="pesdk_common_title_pinkColor">Rosa</string>
-    <string name="pesdk_common_title_redColor">Rot</string>
-    <string name="pesdk_common_title_orangeColor">Orange</string>
-    <string name="pesdk_common_title_goldColor">Gold</string>
-    <string name="pesdk_common_title_yellowColor">Gelb</string>
-    <string name="pesdk_common_title_oliveColor">Oliv</string>
-    <string name="pesdk_common_title_greenColor">Grün</string>
-    <string name="pesdk_common_title_aquamarinColor">Aquamarin</string>
-    <string name="pesdk_common_title_pipettableColor">Pipettierbare Farbe</string>
-    <string name="vesdk_video_trim_title_name">Zuschneiden</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">Wie kann ich Schlichte Galerie als Standardanwendung auswählen\?</string>
-    <string name="faq_1_text">Zunächst muss man unter „Apps“ in den Geräteeinstellungen die aktuelle Standardgalerie finden, dort nach einer Bedienfläche wie „Standardmäßig öffnen“ suchen, diese betätigen und „Standardeinstellungen löschen“ wählen. Beim nächsten Öffnen eines Bildes oder eines Videos, sollte ein Auswahlfenster erscheinen, in dem man Schlichte Galerie als Standard-Anwendung auswählen kann.</string>
     <string name="faq_2_title">Ich habe die App mit einem Passwort geschützt und es vergessen. Was kann ich tun\?</string>
     <string name="faq_2_text">Es gibt zwei Möglichkeiten: Entweder man installiert die App neu oder sucht die App in den Geräteeinstellungen und wählt dort „Daten löschen“. Alle Einstellungen werden zurückgesetzt, alle Mediendateien bleiben unberührt.</string>
     <string name="faq_3_title">Wie kann ich ein Album immer zuoberst erscheinen lassen\?</string>
@@ -355,7 +213,6 @@
     <string name="faq_4_title">Wie kann ich in Videos vor- oder zurückspringen\?</string>
     <string name="faq_4_text">Das geht, indem man doppelt auf die Seite des Bildschirms drückt, oder indem man auf den Text nahe der Suchleiste drückt, der die aktuelle bzw. maximale Zeit anzeigt. Wenn in den App-Einstellungen die Funktion aktiviert ist, dass Videos in einem separaten Fenster geöffnet werden, kann man zudem horizontale Gesten verwenden.</string>
     <string name="faq_5_title">Was ist der Unterschied zwischen dem Verstecken und dem Ausschließen eines Ordners\?</string>
-    <string name="faq_5_text">„Ausschließen“ verhindert, dass der Ordner nur in Schlichte Galerie angezeigt wird, während „Verstecken“ systemweit funktioniert und den Ordner auch vor anderen Galerien verbirgt. Dabei wird eine leere .nomedia-Datei im angegebenen Ordner erstellt, die man mit einem beliebigen Dateimanager auch wieder entfernen kann. Zu beachten ist, dass einige Geräte das Verstecken von Ordnern wie Kamera, Bildschirmfotos und Downloads nicht zulassen.</string>
     <string name="faq_6_title">Wieso erscheinen Ordner mit Musikcover oder Aufkleber\?</string>
     <string name="faq_6_text">Es kann geschehen, dass manche ungewöhnlichen Alben erscheinen. Diese kann man ausschließen, indem man sie lange drückt und \'Ausschließen\' auswählt. Im nächsten Dialog kann man den übergeordneten Ordner auswählen, wodurch die anderen zugehörigen Alben auch nicht auftauchen sollten.</string>
     <string name="faq_7_title">Ein Ordner mit Bildern wird nicht angezeigt oder es werden nicht alle Bilder angezeigt. Was kann ich tun\?</string>
@@ -371,18 +228,14 @@
     <string name="faq_13_title">Ich sehe Banding (streifiger Farbverlauf) auf den Bildern. Wie kann ich die Qualität verbessern\?</string>
     <string name="faq_13_text">Die jetzige Methode für die Anzeige von Bildern funktioniert in den allermeisten Fällen gut, aber für eine noch bessere Bildqualität kann die Einstellung „Bilder in der höchstmöglichen Qualität zeigen“ im Menü unter „Stark vergrößerbare Bilder“ gesetzt werden.</string>
     <string name="faq_14_title">Ich habe eine versteckte Datei bzw. einen versteckten Ordner. Wie kann ich diese/n sichtbar stellen\?</string>
-    <string name="faq_14_text">Man kann entweder auf den Menüpunkt „Ausgeblendete Elemente vorübergehend anzeigen“ auf dem Hauptbildschirm drücken oder „Versteckte Elemente anzeigen“ in den Anwendungseinstellungen einschalten, um das ausgeblendete Element zu sehen. Um es dauerhaft wieder einzublenden, drückt man einfach lange darauf und wählt „Nicht verstecken“. Ordner werden durch Hinzufügen einer versteckten .nomedia-Datei ausgeblendet; man kann die Datei auch mit einem beliebigen Dateiverwaltungsprogramm löschen. Bitte beachten, dass das Verstecken rekursiv funktioniert, d. h. wenn man einen Ordner versteckt, werden auch alle Unterordner versteckt. Um die Unterordner wieder sichtbar zu machen, muss man also den übergeordneten Ordner sichtbar machen.</string>
+    <string name="faq_14_text">Man kann entweder auf den Menüpunkt „Ausgeblendete Elemente vorübergehend anzeigen“ auf dem Hauptbildschirm drücken oder „Versteckte Elemente anzeigen“ in den Einstellungen einschalten, um das ausgeblendete Element zu sehen. Um es dauerhaft wieder einzublenden, drückt man einfach lange darauf und wählt „Nicht verstecken“. Ordner werden durch Hinzufügen einer versteckten .nomedia-Datei ausgeblendet; man kann die Datei auch mit einem beliebigen Dateiverwaltungsprogramm löschen. Bitte beachten, dass das Verstecken rekursiv funktioniert, d. h. wenn man einen Ordner versteckt, werden auch alle Unterordner versteckt. Um die Unterordner wieder sichtbar zu machen, muss man also den übergeordneten Ordner sichtbar machen.</string>
     <string name="faq_15_title">Warum beansprucht die App so viel Speicherplatz\?</string>
     <string name="faq_15_text">Der Cache der App kann bis zu 250 MB groß werden, er sorgt für schnelleres Laden der Bilder. Wenn die App darüber hinaus Speicherplatz beansprucht, liegt das wahrscheinlich an Dateien im Papierkorb. Diese Dateien werden dem Speicherplatz der App zugerechnet. Man kann den Papierkorb leeren, indem man ihn öffnet und alle Dateien darin löscht, oder den entsprechenden Menüeintrag in den Einstellungen wählt. Jede Datei im Papierkorb wird nach 30 Tagen automatisch gelöscht.</string>
     <string name="faq_16_title">Was ist mit dem Ausblenden von Dateien und Ordnern passiert und warum kann ich versteckte Elemente nicht mehr sehen\?</string>
-    <string name="faq_16_text">Ab Android 11 kann man keine Dateien oder Ordner mehr ein- oder ausblenden, auch in anderen Galerie-Anwendungen kann man die versteckten Dateien nicht mehr sehen. Dafür muss man jetzt ein Dateiverwaltungsprogramm verwenden.</string>
+    <string name="faq_16_text">Ab Android 11 kann man keine Dateien oder Ordner mehr ein- oder ausblenden, auch in anderen Galerie-Apps kann man die versteckten Dateien nicht mehr sehen. Dafür muss man jetzt ein Dateiverwaltungsprogramm verwenden.</string>
     <string name="faq_16_text_extra">Du kannst dieser Galerie auch über die Geräteeinstellungen Zugriff auf alle Dateien gewähren, damit versteckte Elemente anzeigt und die Dateioperationen im Allgemeinen zuverlässiger werden.</string>
     <string name="faq_17_title">Warum kann ich fehlende Ordner nicht mehr einbinden\?</string>
-    <string name="faq_17_text">Das funktioniert seit den Systemänderungen durch Android 11 nicht mehr, da die Anwendung keine echten Ordner mehr durchsuchen kann, sondern sich beim Abrufen von Daten auf den sogenannten MediaStore verlässt.</string>
+    <string name="faq_17_text">Das funktioniert seit den Systemänderungen durch Android 11 nicht mehr, da die App keine echten Ordner mehr durchsuchen kann, sondern sich beim Abrufen von Daten auf den sogenannten MediaStore verlässt.</string>
     <string name="faq_18_title">Warum sehe ich während der Videowiedergabe Werbung\?</string>
-    <string name="faq_18_text">Unsere Anwendungen enthalten keinerlei Werbung. Wenn während der Videowiedergabe trotzdem welche gezeigt wird, liegt das daran, dass man den Videoplayer einer anderen App verwendet. Man sollte versuchen, den Standard-Videoplayer in den Geräteeinstellungen zu finden, und dann „Standardeinstellungen löschen“ ausführen. Beim nächsten Aufruf eines Videos, wird eine Aufforderung zur Auswahl der Anwendung angezeigt, aus der man die gewünschte Anwendung auswählen kann.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
+    <string name="faq_18_text">Unsere Apps enthalten keinerlei Werbung. Wenn während der Videowiedergabe trotzdem welche angezeigt wird, liegt das daran, dass man den Videoplayer einer anderen App verwendet. Man sollte versuchen, den Standard-Videoplayer in den Geräteeinstellungen zu finden, und dann „Standardeinstellungen löschen“ ausführen. Beim nächsten Aufruf eines Videos, wird eine Aufforderung zur Auswahl der App angezeigt, aus der man die gewünschte App auswählen kann.</string>
 </resources>

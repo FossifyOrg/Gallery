@@ -1,54 +1,24 @@
-Galería sinxela Pro unha galería altamente personalizable. Organiza & edita as túas fotos, recupera ficheiros borrados desde a papeleira, protexe & oculta ficheiros e visualiza gran número de formatos de fotos & vídeo incluíndo RAW, SVG e moitos máis.
+Libera as lembranzas, non os datos personais. Galería Fossify é a aplicación de fotos e vídeos tan potente como privada. Sen publicidade, sen permisos innecesarios - só unha experiencia propia e a medida para ti.
 
-A app non ten publicidade nin permisos innesarios. Como tampouco require acceso a internet, a túa privacidade está protexida.
+🖼️ EDICIÓN DE FOTOS INCLUÍDA:
+Mellora as túas fotografías co editor básico pero poderoso. Cambiar tamaño, recortar, rotar, voltear, escribir e aplicar filtros abraiantes, todo sen comprometer a túa privacidade. Toma o control sobre as túas lembranzas como nunca antes puideches.
 
--------------------------------------------------
-GALERÍA SINXELA PRO – Características
--------------------------------------------------
+🌐 PRIMEIRO A PRIVACIDADE, SEMPRE:
+A túa privacidade importa. Esquece os xigantes famentos de datos. Galería Fossify devólveche o control. Elimina os metadatos EXIF ou coordenadas GPS das fotos, mantendo a privacidade das túas fotos.
 
-• Galería sen conexión a internet, publicidade nin ventás emerxentes
-• Editor de fotos Galería sinxela Pro – recorta, rota, cambia tamaño, debuxa, fitros, e máis
-• Non precisa acceso a internet, dándoche máis seguridade e privacidade
-• Non pide permisos innecesarios
-• Busca rápida de ficheiros de foto e vídeo
-• Abre e visualiza gran cantidade de formatos (RAW, SVG, panoramic etc)
-• Xestos intuitivos para editar e organizar os ficheiros
-• Múltiples filtros, agrupamento e orde dos ficheiros
-• Personaliza o aspecto de Galería sinxela Pro
-• Dispoñible en 32 idiomas
-• Marca ficheiros como favoritos para acceso rápido
-• Protexe fotos e vídeos cun patrón, PIN ou impresión dixital
-• Usa PIN, patrón e impresión dixital para protexer a apertura da app ou indicar funcións específicas
-• Recupera fotos e vídeos borrados desde a papeleira
-• Cambia a visibilidade dos ficheiros para ocultar fotos e vídeos
-• Crea presentacións personalizadas cos teus ficheiros
-• Mira a información detalladas dos ficheiros (resolución, valores EXIF etc)
-• Galería sinxela Pro é código aberto
-… e moito máis!
+🔄 RECUPERACIÓN DOADA:
+Todas nos equivocamos! Galería Fossify ten un caldeiro do lixo incluído desde onde poder recuperar fotos e vídeos eliminados. Non máis tesouros perdidos, un alivio.
 
-PHOTO GALLERY EDITOR
-Galería sinxela Pro permite editar as fotos no momento. Recorta, voltea, rota e redimensiona as túas fotos. Se te sintes inspirado tamén pode engadir filtros e debuxar nas imaxes!
+🎨 A TÚA GALERÍA, O TEU ESTILO:
+Personaliza a aparencia e funcións para adaptalas ao teu estilo. Desde elementos da interface a botóns con funcións, a Galería Fossify entrégache o control creativo.
 
-SOPORTA MOITOS TIPOS DE FICHEIROS
-Galería sinxela Pro soporta gran variedade de formatos como JPEG, PNG, MP4, MKV, RAW, SVG, Panoramicas, Vídeos panorámicos e moito máis. Non como outros.
+📷 LIBERDADE SOBRE O FORMATO:
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, vídeos, e moito máis - aseguramos as túas lembranzas, no formato que elixas. Sen restricións, con posibilidades ilimitadas.
 
-XESTOR DE FOTOS MOI PERSONALIZABLE
-Desde a interface ata a función dos botóns da barra de ferraentas, Simply Gallery Pro é moi personalizable e funciona do xeito que ti queres. Ningún outro xestor de galerías ten esta flexibilidade! Ao ser código aberto, está dipoñible en 32 idiomas!
+✨ MATERIAL DESIGN CON DECORADOS DINÁMICOS:
+Experimenta a beleza intiuitiva de Material Design cos decorados dinámicos. Queres máis? Sumérxete nos decorados personalizados e distingue a túa galería.
 
-RECUPERA FOTOS & VIDEOS ELIMINADOS
-¿Borraches sen querer unha foto ou vídeo? Non te apenes! Galería sinxela Pro ten unha función para recuperar facilmente vídeos e fotos borrados.
-
-PROTEXE & OCULTA FOTOS, VIDEOS & FICHEIROS
-Usando un prendedor, patrón ou a impresión dixital no escáner do dispositivo podes protexer e agochar fotos, vídeos e álbumes enteiros. Podes protexer a app ou establecer funcións específicas na app. Por exemplo, que non poidas eliminar un ficheiro sen o escáner da impresión dixital, axudandoche a protexer o borrado accidental.
-
-Aquí tes todas as Simple Tools:
-https://www.simplemobiletools.com
-
-Facebook:
-https://www.facebook.com/simplemobiletools
-
-Reddit:
-https://www.reddit.com/r/SimpleMobileTools
-
-Telegram:
-https://t.me/SimpleMobileTools
+Aprende máis acerca das aplicacións Fossify: : https://www.fossify.org
+Código Aberto: https://www.github.com/FossifyOrg
+Únete á comunidade en Reddit: https://www.reddit.com/r/Fossify
+Conecta en Telegram: https://t.me/Fossify

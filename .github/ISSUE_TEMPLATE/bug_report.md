@@ -13,7 +13,7 @@ assignees: ''
  - [ ]  I have read the FAQ and my problem isn't listed.
  - [ ]  I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise.
  - [ ]  This issue contains only one bug.
- - [ ]  I have read and understood the [contribution guidelines.](https://github.com/FossifyX/General-Discussion?tab=readme-ov-file#contribution-rules-for-developers)
+ - [ ]  I have read and understood the [contribution guidelines.](https://github.com/FossifyOrg/General-Discussion?tab=readme-ov-file#faq)
 
 **Describe the bug**
 A clear and concise description of what the bug is.
@@ -34,7 +34,7 @@ If applicable, add screenshots to help explain your problem.
 **Device info (please complete the following information):**
  - Model: [e.g. Pixel 7]
  - OS: [e.g. Android 14]
- - Version [e.g. 6.28.1]
+ - App version [e.g. 6.28.1]
 
 **Additional context**
 Add any other context about the problem here.

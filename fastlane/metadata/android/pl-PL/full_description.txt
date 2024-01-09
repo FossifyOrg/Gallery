@@ -1,32 +1,27 @@
-Prosta galeria oferuje Ci wszystkie funkcje przeglądania i edycji zdjęć, których brakowało w Twoim Androidzie w jednej stylowej, łatwej w użyciu aplikacji. Przeglądaj, zarządzaj, kadruj i edytuj szybciej niż kiedykolwiek, odzyskuj przypadkowo usunięte pliki lub twórz ukryte galerie dla swoich najcenniejszych obrazów i wideo. A dzięki zaawansowanej obsłudze plików i pełnej personalizacji Twoja galeria działa nareszcie tak, jak chcesz.
+Uwolnij wspomnienia, a nie dane osobowe. Fossify Gallery to najlepsza aplikacja do zdjęć i wideo, która jest tak potężna, jak i prywatna. Żadnych reklam, żadnych niepotrzebnych uprawnień — po prostu bezproblemowe doświadczenie dostosowane do Ciebie.
 
-ZAAWANSOWANY EDYTOR ZDJĘĆ
-Zmień edycję zdjęć w dziecinnie prostą dzięki ulepszonemu organizerowi plików i albumowi ze zdjęciami w Prostej galerii. Intuicyjne gesty bardzo ułatwiają edytowanie zdjęć w locie. Kadruj, odbijaj, obracaj i zmieniaj rozmiar zdjęć lub stosuj stylowe filtry, aby w jednej chwili nadać im niepowtarzalny wygląd.
+🖼️ EDYCJA ZDJĘĆ NA WYCIĄGNIĘCIE RĘKI:
+Ulepsz swoje zdjęcia za pomocą naszego podstawowego, jednak potężnego edytora zdjęć. Przycinaj, zmieniaj rozmiar, obracaj, odbijaj, rysuj i stosuj oszałamiające filtry, a wszystko to bez naruszania Twojej prywatności. Przejmij kontrolę nad swoimi wspomnieniami jak nigdy dotąd.
 
-WSZYSTKIE PLIKI, KTÓRYCH POTRZEBUJESZ
-Prosta galeria obsługuje szeroką gamę różnych formatów plików, w tym JPEG, PNG, MP4, MKV, RAW, SVG, GIF, zdjęcia panoramiczne, wideo oraz wiele innych, dzięki czemu możesz cieszyć się pełną elastycznością przy wyborze formatu. Czy kiedykolwiek zastanawiałeś(-aś) się: „Czy mogę używać tego formatu w moim Androidzie”? Teraz odpowiedź brzmi: „Tak”.
+🌐 PRYWATNOŚĆ NAJWAŻNIEJSZA, ZAWSZE:
+Twoja prywatność ma znaczenie. Porzuć żądnych danych gigantów. Fossify Gallery daje Ci kontrolę. Usuń metadane EXIF, takie jak współrzędne GPS i szczegóły aparatu, aby Twoje wspomnienia były tylko i wyłącznie Twoje.
 
-DOSTOSUJ JĄ DO SWOICH POTRZEB
-Wysoce konfigurowalna Prosta galeria pozwala Ci dostosować swój wygląd i działanie wedle własnego uznania. Od interfejsu do przycisków funkcyjnych na dolnym pasku, aplikacja zapewnia Ci swobodę twórczą, której potrzebujesz w aplikacji galerii.
+🔒 NAJWYŻSZY POZIOM BEZPIECZEŃSTWA:
+Zablokuj swoje wspomnienia za pomocą kodu PIN, wzoru lub odcisku palca. Zabezpiecz wybrane zdjęcia, wideo lub całą aplikację — Ty decydujesz, kto uzyska dostęp. Spokój ducha gwarantowany.
 
-ODZYSKUJ USUNIĘTE ZDJĘCIA I WIDEO
-Nigdy się nie martw o przypadkowe usunięcie tego jednego cennego zdjęcia lub wideo, którego po prostu nie możesz zastąpić. Prosta galeria pozwala Ci szybko odzyskać jakiekolwiek usunięte pliki, co oznacza, że oprócz tego, że jest najlepszą galerią multimediów na Androida, jest również niesamowitą aplikacją do przechowywania zdjęć.
+🔄 ŁATWE ODZYSKIWANIE:
+Spokojnie, wypadki się zdarzają! Wbudowany kosz w Fossify Gallery pozwala odzyskać usunięte zdjęcia i wideo w kilka sekund. Nigdy więcej utraconych skarbów, odetchnij z ulgą.
 
-CHROŃ SWOJE PRYWATNE ZDJĘCIA, WIDEO I PLIKI
-Bądź spokojny(-a) o bezpieczeństwo swojego albumu ze zdjęciami. Dzięki doskonałym funkcjom zabezpieczeń Prostej galerii możesz użyć pinezki, wzoru lub skanera linii papilarnych swojego urządzenia, aby ograniczyć, kto może wyświetlać lub edytować wybrane zdjęcia i wideo bądź uzyskiwać dostęp do ważnych plików. Możesz nawet chronić całą aplikację lub blokować określone funkcje organizera plików.
+🎨 TWOJA GALERIA, TWÓJ STYL:
+Dostosuj wygląd, działanie i funkcjonalność do swojego stylu. Od motywów interfejsu użytkownika po przyciski akcji, Fossify Gallery daje Ci twórczą swobodę, której pragniesz.
 
-Domyślnie jest wyposażona w Material Design i ciemny motyw, zapewniając doskonałe doświadczenie użytkownika dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje.
+📷 OBSŁUGA POWSZECHNYCH FORMATÓW:
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, wideo i wiele więcej — obsłużymy Twoje wspomnienia w dowolnym, wybranym przez Ciebie formacie. Bez ograniczeń, po prostu bez limitu możliwości.
 
-Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni otwartoźródłowa, zapewnia konfigurowalną kolorystykę.
+✨ MATERIAL DESIGN Z DYNAMICZNYMI MOTYWAMI:
+Doświadcz piękna intuicyjnego Material Design z dynamicznymi motywami. Chcesz więcej? Zanurz się w niestandardowych motywach i spraw, aby Twoja galeria była naprawdę wyjątkowa.
 
-Sprawdź pełen zestaw od Simple Tools tutaj:
-https://www.simplemobiletools.com
-
-Facebook:
-https://www.facebook.com/simplemobiletools
-
-Reddit:
-https://www.reddit.com/r/SimpleMobileTools
-
-Telegram:
-https://t.me/SimpleMobileTools
+Odkryj więcej aplikacji od Fossify: https://www.fossify.org
+Kod źródłowy: https://www.github.com/FossifyOrg
+Dołącz do społeczności na Reddicie: https://www.reddit.com/r/Fossify
+Połącz się na Telegramie: https://t.me/Fossify

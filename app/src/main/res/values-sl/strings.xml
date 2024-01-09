@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Enostavna galerija</string>
     <string name="app_launcher_name">Galerija</string>
     <string name="edit">Uredi</string>
     <string name="open_camera">Zaženi fotoaparat</string>
@@ -34,7 +33,6 @@
     <string name="reorder_by_dragging">Razporedi mape z vlečenjem</string>
     <string name="reorder_by_dragging_pro">Razporedi mape z vlečenjem (Pro)</string>
     <string name="restore_to_path">Obnovitev v \'%s\'</string>
-    <!-- Filter -->
     <string name="filter_media">Filtriranje datotek</string>
     <string name="images">Slike</string>
     <string name="videos">Video</string>
@@ -44,19 +42,12 @@
     <string name="portraits">Portreti</string>
     <string name="no_media_with_filters">Na podlagi izbranih filtrov ne najdem nobenih medijskih datotek.</string>
     <string name="change_filters_underlined"><u>Spremeni filtre</u></string>
-    <!-- Hide / Exclude -->
     <string name="hide_folder_description">Ta funkcija skrije mapo tako, da vanjo doda \'.nomedia\' datoteko, kar skrije tudi vse podmape. Ponovno jih lahko prikažete z uporabo možnosti \'Prikaži skrite elemente\' v Nastavitvah. Nadaljujem\?</string>
-    <string name="exclude_folder_description">Izbira bo skupaj s podmapami izključena zgolj iz te Galerije. Izključene mape lahko urejate v Nastavitvah.</string>
     <string name="exclude_folder_parent">Namesto tega izključim nadrejeno mapo\?</string>
-    <string name="excluded_activity_placeholder">Izključevanje map jih bo skupaj s podmapami skrilo zgolj v tej Galeriji, v ostalih aplikacijah bodo normalno vidne.
-\n
-\nČe jih želite skriti tudi v drugih aplikacijah, uporabite funkcijo Skrij.</string>
     <string name="hidden_folders">Skrite mape</string>
     <string name="manage_hidden_folders">Urejaj skrite mape</string>
     <string name="hidden_folders_placeholder">Kot kaže, ne obstajajo skrite mape z \".nomedia\" datoteko.</string>
     <string name="hidden_all_files">Dovoliti morate dostop do vseh datotek, da so vidne skrite datoteke, sicer ne bo delovalo.</string>
-    <string name="cant_unhide_folder">If a folder or one of its parent folders has a dot before its name, it is hidden and cannot be unhidden like this. You have to remove the dot by renaming it.</string>
-    <!-- Include folders -->
     <string name="include_folders">Vključene mape</string>
     <string name="manage_included_folders">Urejaj vključene mape</string>
     <string name="add_folder">Dodaj mapo</string>
@@ -64,22 +55,11 @@
 \n
 \nDodajanje novih elementov ne bo izključilo drugih.</string>
     <string name="no_media_add_included">Medijske datoteke niso bile najdene. To rešite, da mape z medijskimi datotekami dodate ročno.</string>
-    <!-- Resizing -->
     <string name="resize_and_save">Spremeni velikost izbora in shrani</string>
     <string name="width">Širina</string>
     <string name="height">Višina</string>
     <string name="keep_aspect_ratio">Obdrži razmerje stranic</string>
     <string name="invalid_values">Vnesite veljavno ločljivost</string>
-    <string name="resize_multiple_images">Resize multiple images</string>
-    <string name="resize_factor">Resize factor</string>
-    <string name="resize_factor_info">Resize images to the given percentage, value must be within 10 and 90.</string>
-    <string name="resize_factor_error">Enter a number between 10 and 90</string>
-    <plurals name="failed_to_resize_images">
-        <item quantity="one">Failed to resize %d image</item>
-        <item quantity="other">Failed to resize %d images</item>
-    </plurals>
-    <string name="images_resized_successfully">Images resized successfully</string>
-    <!-- Editor -->
     <string name="editor">Urejevalnik</string>
     <string name="basic_editor">Osnovni urejevalnik</string>
     <string name="advanced_editor">Napredni urejevalnik</string>
@@ -109,11 +89,7 @@
     <string name="flip_horizontally">Zrcali horizontalno</string>
     <string name="flip_vertically">Zrcali vertikalno</string>
     <string name="free_aspect_ratio">Prosto</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free -->
     <string name="other_aspect_ratio">Drugo</string>
-    <!-- available as an option: 1:1, 4:3, 16:9, free, other -->
-    <!-- Set wallpaper -->
-    <string name="simple_wallpaper">Simple ozadje</string>
     <string name="set_as_wallpaper">Nastavi kot ozadje</string>
     <string name="set_as_wallpaper_failed">Nastavljanje ozadja ni uspelo</string>
     <string name="set_as_wallpaper_with">Nastavi kot ozadje z:</string>
@@ -125,7 +101,6 @@
     <string name="lock_screen">Zaklenjen zaslon</string>
     <string name="home_and_lock_screen">Domač in zaklenjen zaslon</string>
     <string name="allow_changing_aspect_ratio">Omogočite spreminjanje razmerja stranic</string>
-    <!-- Slideshow -->
     <string name="slideshow">Diaprojekcija</string>
     <string name="interval">Razdalja</string>
     <string name="include_photos">Vključi fotografije</string>
@@ -135,14 +110,10 @@
     <string name="move_backwards">Premik nazaj</string>
     <string name="loop_slideshow">Ponavljaj diaprojekcijo</string>
     <string name="animation">Animacija</string>
-    <string name="no_animation">None</string>
     <string name="fade">Zbledi</string>
-    <string name="slide">Slide</string>
     <string name="slideshow_ended">Diaprojekcija se je zaključila</string>
     <string name="no_media_for_slideshow">Ne najdem datotek za diaprojekcijo</string>
-    <!-- View types -->
     <string name="group_direct_subfolders">Združi neposredne podmape</string>
-    <!-- Grouping at media thumbnails -->
     <string name="group_by">Združi po</string>
     <string name="do_not_group_files">Ne združuj datotek</string>
     <string name="by_folder">Mapa</string>
@@ -156,10 +127,8 @@
     <string name="by_extension">Končnica</string>
     <string name="show_file_count_section_header">Prikažite število datotek v glavi razdelka</string>
     <string name="grouping_and_sorting">Združevanje in sortiranje sta dve neodvisni polji</string>
-    <!-- Widgets -->
     <string name="folder_on_widget">Mapa uporabljena na pripomočku:</string>
     <string name="show_folder_name">Prikaži ime mape</string>
-    <!-- Settings -->
     <string name="autoplay_videos">Avtomatično predvajaj videoposnetke</string>
     <string name="remember_last_video_position">Zapomni si zadnji položaj predvajanja</string>
     <string name="loop_videos">Ponavljaj videoposnetke</string>
@@ -223,131 +192,13 @@
     <string name="all_files">Vse datoteke</string>
     <string name="search_all_files">Preišči vse datoteke namesto map na glavnem zaslonu</string>
     <string name="show_all_folders">Prikaži menijski gumb za hitri vklop prikaza vsebine map</string>
-    <!-- Setting sections -->
     <string name="thumbnails">Sličice</string>
     <string name="fullscreen_media">Celozaslonski prikaz</string>
     <string name="extended_details">Razširjene podrobnosti</string>
     <string name="bottom_actions">Akcije na dnu</string>
-    <!-- Bottom actions -->
     <string name="manage_bottom_actions">Urejaj vidne akcije na dnu</string>
     <string name="toggle_favorite">Preklopi priljubljene</string>
     <string name="toggle_file_visibility">Preklopi vidljivost datotek</string>
-    <!-- New editor strings -->
-    <string name="pesdk_transform_button_freeCrop">Prirejeno</string>
-    <string name="pesdk_transform_button_resetCrop">Reset</string>
-    <string name="pesdk_transform_button_squareCrop">Kvadrat</string>
-    <string name="pesdk_transform_title_name">Preobrazi</string>
-    <string name="pesdk_filter_title_name">Filter</string>
-    <string name="pesdk_filter_asset_none">Nič</string>
-    <string name="pesdk_adjustments_title_name">Prilagodi</string>
-    <string name="pesdk_adjustments_button_shadowTool">Sence</string>
-    <string name="pesdk_adjustments_button_exposureTool">Izpostavljenost</string>
-    <string name="pesdk_adjustments_button_highlightTool">Poudarki</string>
-    <string name="pesdk_adjustments_button_brightnessTool">Svetlost</string>
-    <string name="pesdk_adjustments_button_contrastTool">Kontrast</string>
-    <string name="pesdk_adjustments_button_saturationTool">Nasičenost</string>
-    <string name="pesdk_adjustments_button_clarityTool">Jasnost</string>
-    <string name="pesdk_adjustments_button_gammaTool">Gamma</string>
-    <string name="pesdk_adjustments_button_blacksTool">Črnine</string>
-    <string name="pesdk_adjustments_button_whitesTool">Beline</string>
-    <string name="pesdk_adjustments_button_temperatureTool">Temperatura</string>
-    <string name="pesdk_adjustments_button_sharpnessTool">Ostrina</string>
-    <string name="pesdk_adjustments_button_reset">Reset</string>
-    <string name="pesdk_focus_title_name">Fokus</string>
-    <string name="pesdk_focus_title_disabled">Brez</string>
-    <string name="pesdk_focus_button_radial">Radialno</string>
-    <string name="pesdk_focus_button_linear">Linearno</string>
-    <string name="pesdk_focus_button_mirrored">Zrcalno</string>
-    <string name="pesdk_focus_button_gaussian">Gaussian</string>
-    <string name="pesdk_text_title_input">Dodaj besedilo</string>
-    <string name="pesdk_text_title_name">Besedilo</string>
-    <string name="pesdk_text_title_options">Možnosti besedila</string>
-    <string name="pesdk_text_title_textColor">Barva besedila</string>
-    <string name="pesdk_text_title_font">Pisava</string>
-    <string name="pesdk_text_button_add">Dodaj</string>
-    <string name="pesdk_text_button_edit">Uredi</string>
-    <string name="pesdk_text_button_straighten">Ravnost</string>
-    <string name="pesdk_text_button_font">Pisava</string>
-    <string name="pesdk_text_button_color">Barva</string>
-    <string name="pesdk_text_button_backgroundColor">Barva ozadja</string>
-    <string name="pesdk_text_button_alignment">Poravnava</string>
-    <string name="pesdk_text_button_bringToFront">V ospredje</string>
-    <string name="pesdk_text_button_delete">Briši</string>
-    <string name="pesdk_text_text_editTextPlaceholder">Vaše besedilo</string>
-    <string name="pesdk_brush_title_name">Čopič</string>
-    <string name="pesdk_brush_button_color">Barva</string>
-    <string name="pesdk_brush_button_size">Velikost</string>
-    <string name="pesdk_brush_button_hardness">Trdota</string>
-    <string name="pesdk_brush_button_bringToFront">V ospredje</string>
-    <string name="pesdk_brush_button_delete">Briši</string>
-    <string name="pesdk_brush_title_brushColor">Barva čopiča</string>
-    <string name="pesdk_editor_title_name">Editor</string>
-    <string name="pesdk_editor_title_closeEditorAlert">Zapri urejevalnik\?</string>
-    <string name="pesdk_editor_text_closeEditorAlert">Ali res želite zavrniti spremembe\?</string>
-    <string name="pesdk_editor_button_closeEditorAlertConfirmation">Ja</string>
-    <string name="pesdk_editor_button_closeEditorAlertCancelation">Ne</string>
-    <string name="pesdk_editor_cancel">Prekliči</string>
-    <string name="pesdk_editor_accept">Sprejmi</string>
-    <string name="pesdk_editor_save">Shrani</string>
-    <string name="pesdk_editor_text_exportProgressUnknown">Izvažanje…</string>
-    <string name="pesdk_editor_text_exportProgress" formatted="false">Izvažanje %s.</string>
-    <string name="pesdk_sticker_title_name">Nalepka</string>
-    <string name="pesdk_sticker_title_color">Barva nalepke</string>
-    <string name="pesdk_sticker_title_options">Možnosti nalepke</string>
-    <string name="pesdk_sticker_button_add">Dodaj</string>
-    <string name="pesdk_sticker_button_color">Barva</string>
-    <string name="pesdk_sticker_button_delete">Izbriši</string>
-    <string name="pesdk_sticker_button_bringToFront">V ospredje</string>
-    <string name="pesdk_sticker_button_straighten">Izravnaj</string>
-    <string name="pesdk_sticker_button_replace">Zamenjaj</string>
-    <string name="pesdk_sticker_button_opacity">Prosojnost</string>
-    <string name="pesdk_sticker_button_contrast">Kontrast</string>
-    <string name="pesdk_sticker_button_saturation">Nasičenost</string>
-    <string name="pesdk_sticker_button_brightness">Svetlost</string>
-    <string name="pesdk_sticker_category_name_custom">Naloženo</string>
-    <string name="pesdk_overlay_title_name">Prekrivanje</string>
-    <string name="pesdk_overlay_button_blendModeNormal">Normal</string>
-    <string name="pesdk_overlay_button_blendModeDarken">Potemnitev</string>
-    <string name="pesdk_overlay_button_blendModeScreen">Screen</string>
-    <string name="pesdk_overlay_button_blendModeOverlay">Prekrivanje</string>
-    <string name="pesdk_overlay_button_blendModeLighten">Posvetlitev</string>
-    <string name="pesdk_overlay_button_blendModeMultiply">Pomnoži</string>
-    <string name="pesdk_overlay_button_blendModeColorBurn">Sežig barv</string>
-    <string name="pesdk_overlay_button_blendModeSoftLight">Mehka svetloba</string>
-    <string name="pesdk_overlay_button_blendModeHardLight">Močna svetloba</string>
-    <string name="pesdk_overlay_asset_none">Nič</string>
-    <string name="pesdk_overlay_asset_golden">Zlato</string>
-    <string name="pesdk_overlay_asset_lightleak1">Uhajanje svetlobe 1</string>
-    <string name="pesdk_overlay_asset_mosaic">Mozaik</string>
-    <string name="pesdk_overlay_asset_paper">Papir</string>
-    <string name="pesdk_overlay_asset_rain">Dež</string>
-    <string name="pesdk_overlay_asset_vintage">Vintage</string>
-    <string name="pesdk_common_button_flipH">Obrni H</string>
-    <string name="pesdk_common_button_flipV">Obrni V</string>
-    <string name="pesdk_common_button_undo">Razveljavi</string>
-    <string name="pesdk_common_button_redo">Uveljavi</string>
-    <string name="pesdk_common_title_colorPicker">Izbira barve</string>
-    <string name="pesdk_common_title_transparentColor">Prosojno</string>
-    <string name="pesdk_common_title_whiteColor">Belo</string>
-    <string name="pesdk_common_title_grayColor">Sivo</string>
-    <string name="pesdk_common_title_blackColor">Črno</string>
-    <string name="pesdk_common_title_lightBlueColor">Svetlo modro</string>
-    <string name="pesdk_common_title_blueColor">Modro</string>
-    <string name="pesdk_common_title_purpleColor">Vijolično</string>
-    <string name="pesdk_common_title_orchidColor">Orhideja</string>
-    <string name="pesdk_common_title_pinkColor">Roza</string>
-    <string name="pesdk_common_title_redColor">Rdeče</string>
-    <string name="pesdk_common_title_orangeColor">Oranžno</string>
-    <string name="pesdk_common_title_goldColor">Zlato</string>
-    <string name="pesdk_common_title_yellowColor">Rumeno</string>
-    <string name="pesdk_common_title_oliveColor">Olivno</string>
-    <string name="pesdk_common_title_greenColor">Zeleno</string>
-    <string name="pesdk_common_title_aquamarinColor">Mornarsko modro</string>
-    <string name="pesdk_common_title_pipettableColor">Pipetiraj barvo</string>
-    <string name="vesdk_video_trim_title_name">Obreži</string>
-    <!-- FAQ -->
-    <string name="faq_1_title">Kako naredim Simple galerijo za privzeto aplikacijo na napravi\?</string>
-    <string name="faq_1_text">Najprej morate najti trenutno privzeto aplikacijo za prikaz slik med aplikacijami v nastavitvah naprave, kjer poiščete gumb v smislu \"Odpri kot privzeto\", kliknite nanj in izberite \"Izbriši privzeto\". Ko boste naslednjič želeli odpreti fotografijo ali videoposnetek, bi se moral pokazati izbirnik, v katerem lahko izberete Simple galerijo in jo določite kot privzeto aplikacijo.</string>
     <string name="faq_2_title">Aplikacijo sem zaklenil z geslom, ki se ga ne spomnim več. Kaj lahko naredimo\?</string>
     <string name="faq_2_text">To lahko rešite na 2 načina. Lahko ali ponovno namestite aplikacijo ali pa jo poiščete v nastavitvah in kliknete \"Počisti podatke\". To bo ponastavilo vaše nastavitve, ne bo pa izbrisalo nobenih datotek.</string>
     <string name="faq_3_title">Kako nastaviti, da se določen album vedno prikaže na vrhu\?</string>
@@ -355,7 +206,6 @@
     <string name="faq_4_title">Ali lahko hitro predvajam videoposnetke\?</string>
     <string name="faq_4_text">To lahko storite tako, da dvakrat pritisnete stranski del zaslona ali pritisnete besedilo o trenutnem ali največjem trajanju v bližini iskalne vrstice. Če v nastavitvah aplikacije omogočite odpiranje videoposnetkov na ločenem zaslonu, lahko uporabite tudi vodoravne geste.</string>
     <string name="faq_5_title">Kakšna je razlika med skrivanjem in izključevanjem mape\?</string>
-    <string name="faq_5_text">Izključevanje mape jo skrije le v Simple galeriji, medtem ko jo skrivanje skrije tudi v ostalih aplikacijah oz. galerijah. Deluje tako, da kreira prazno \".nomedia\" datoteko v izbrani mapi, katero lahko odstranite tudi s katerimkoli urejevalnikom datotek. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.</string>
     <string name="faq_6_title">Zakaj se v galeriji prikažejo datoteke z naslovnicami glasbenih map ali nalepk\?</string>
     <string name="faq_6_text">Lahko se zgodi, da se vam prikažejo nepoznani albumi, ki vsebujejo tovrstne datoteke. Lahko jih preprosto skrijete tako, da z dolgim pritiskom na album prikličete meni in tam izberete Izključi. V naslednjem oknu lahko izberete tudi nadrejeno mapo, obstaja pa verjetnost, da bo to preprečilo tudi prikazovanje ostalih povezanih albumov.</string>
     <string name="faq_7_title">Mapa s slikami se ne prikaže. Kaj naj naredim\?</string>
@@ -381,8 +231,4 @@
     <string name="faq_17_text">To je prenehalo delovati zaradi sistemskih sprememb, ki jih je tudi prinesel Android 11. Aplikacija ne more več brskati po pravih mapah, temveč se pri pridobivanju podatkov zanaša na tako imenovano MediaStore.</string>
     <string name="faq_18_title">Zakaj vidim reklame med predvajanjem videa\?</string>
     <string name="faq_18_text">Naše aplikacije so brez reklam! Če jih vidite med predvajanjem videa, potem sigurno uporabljate nek drug video predvajalnik. Poskusite poiskati privzeti video predvajalnik v nastavitvah naprave. Nato v njenih opcijah pritisnite \"Počisti privzete nastavitve\". Ko boste naslednjič nameravali odpreti video, se bo prikazal poziv za izbiro aplikacije, kjer izberete željeno.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

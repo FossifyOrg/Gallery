@@ -1,2 +1,0 @@
- * Animate GIFs and WebP files at folders too, if set so
- * Added some translation, stability, UX and UI improvements
