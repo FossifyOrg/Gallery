@@ -2,6 +2,8 @@
 
 <img alt="Logo" src="graphics/icon.webp" width="120" />
 
+<a href="https://f-droid.org/pl/packages/org.fossify.gallery/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on-en.svg" alt="Get it on F-Droid" height=80/></a>
+
 Unleash memories, not personal data. Fossify Gallery is the ultimate photo and video app that's as powerful as it is private. No ads, no unnecessary permissions – just a seamless experience tailored for you.
 
 **🖼️ PHOTO EDITING AT YOUR FINGERTIPS:**
@@ -31,6 +33,11 @@ JPEG, PNG, MP4, MKV, RAW, SVG, GIF, videos, and more – we've got your memories
 **✨ MATERIAL DESIGN WITH DYNAMIC THEMES:**
 
 Experience the beauty of intuitive material design with dynamic themes. Want more? Dive into custom themes and make your gallery truly unique.
+
+➡️ Explore more Fossify apps: https://www.fossify.org<br>
+➡️ Open-Source Code: https://www.github.com/FossifyOrg<br>
+➡️ Join the community on Reddit: https://www.reddit.com/r/Fossify<br>
+➡️ Connect on Telegram: https://t.me/Fossify
 
 <div align="center">
 <img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png" width="30%">
