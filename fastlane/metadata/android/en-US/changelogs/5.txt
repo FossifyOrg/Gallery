@@ -1,0 +1,2 @@
+* Removed fake version message when using the editor.
+* Added some translations
