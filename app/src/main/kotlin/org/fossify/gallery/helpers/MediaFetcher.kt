@@ -77,7 +77,7 @@ class MediaFetcher(val context: Context) {
             }
         }
 
-        sortMedia(curMedia, context.config.getFolderSorting(curPath))
+        sortMedia(curMedia, context.config.getFolderSorting(curPath), curPath)
         return curMedia
     }
 
@@ -761,7 +761,24 @@ class MediaFetcher(val context: Context) {
         return sizes
     }
 
-    fun sortMedia(media: ArrayList<Medium>, sorting: Int) {
+    private fun moveCoverImageToFront(media: ArrayList<Medium>, path: String) {
+        // if there is a custom cover image (e.g. cover.png) move it to the front
+        getCustomCoverImage(path).ifPresent { coverFile ->
+            var coverMedium: Medium? = null
+            media.forEach { medium ->
+                medium as Medium
+                if (medium.path == coverFile.absolutePath) {
+                    coverMedium = medium
+                }
+            }
+            if (coverMedium != null) {
+                media.remove(coverMedium)
+                media.add(0, coverMedium!!)
+            }
+        }
+    }
+
+    fun sortMedia(media: ArrayList<Medium>, sorting: Int, curPath: String? = null) {
         if (sorting and SORT_BY_RANDOM != 0) {
             media.shuffle()
             return
@@ -796,6 +813,10 @@ class MediaFetcher(val context: Context) {
                 result *= -1
             }
             result
+        }
+
+        if (curPath != null) {
+            moveCoverImageToFront(media, curPath)
         }
     }
 
