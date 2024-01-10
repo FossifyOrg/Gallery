@@ -4,7 +4,7 @@ Changelog
 Version 1.1.1 *(2024-01-10)*
 ----------------------------
 
-* Removed fake version message when using the editor.
+* Removed fake app message when using the editor.
 * Added some translations
 
 Version 1.1.0 *(2024-01-02)*
