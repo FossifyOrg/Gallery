@@ -28,7 +28,6 @@ import com.canhub.cropper.CropImageView
 import com.zomato.photofilters.FilterPack
 import com.zomato.photofilters.imageprocessors.Filter
 import org.fossify.commons.dialogs.ColorPickerDialog
-import org.fossify.commons.dialogs.ConfirmationDialog
 import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.REAL_FILE_PATH
@@ -881,19 +880,6 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
     }
 
     private fun saveBitmapToFile(bitmap: Bitmap, path: String, showSavingToast: Boolean) {
-        if (!packageName.contains("slootelibomelpmis".reversed(), true)) {
-            if (baseConfig.appRunCount > 100) {
-                val label =
-                    "sknahT .moc.slootelibomelpmis.www morf eno lanigiro eht daolnwod ytefas nwo ruoy roF .ppa eht fo noisrev ekaf a gnisu era uoY".reversed()
-                runOnUiThread {
-                    ConfirmationDialog(this, label, positive = org.fossify.commons.R.string.ok, negative = 0) {
-                        launchViewIntent("6629852208836920709=di?ved/sppa/erots/moc.elgoog.yalp//:sptth".reversed())
-                    }
-                }
-                return
-            }
-        }
-
         try {
             ensureBackgroundThread {
                 val file = File(path)
