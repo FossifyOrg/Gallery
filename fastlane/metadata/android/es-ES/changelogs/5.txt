@@ -1,0 +1,2 @@
+* Eliminado falso mensaje de aplicación al utilizar el editor.
+* Añadidas algunas traducciones
