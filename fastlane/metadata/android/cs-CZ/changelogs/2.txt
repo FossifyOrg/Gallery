@@ -1,0 +1,1 @@
+* Added some translations, fixed privacy policy link.
