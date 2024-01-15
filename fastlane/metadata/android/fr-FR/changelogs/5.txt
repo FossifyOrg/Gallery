@@ -1,0 +1,2 @@
+* Retrait d'un faux message de l'application lors de l'utilisation de l'éditeur.
+* Ajout de traductions

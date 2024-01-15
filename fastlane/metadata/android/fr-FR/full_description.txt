@@ -15,13 +15,13 @@ Respirez calmement, les accidents ça arrive ! La corbeille intégrée de Foss
 🎨 VOTRE GALERIE, VOTRE STYLE :
 Personnalisez l'apparence, l'atmosphère et les fonctionnalités pour qu'elles correspondent à votre style. Des thèmes de l'interface aux boutons de fonctions, Fossify Gallery vous donne la liberté créative dont vous rêvez.
 
-📷 LIBERTÉ DE FORMAT UNIVERSEL : 
+📷 LIBERTÉ DE FORMAT UNIVERSEL :
 JPEG, PNG, MP4, MKV, RAW, SVG, GIF, vidéos, et bien plus – nous prenons en charge vos souvenirs, dans n'importe quel format de votre choix. Pas de restrictions, juste des possibilités illimitées.
 
 ✨ MATERIAL DESIGN AVEC THÈMES DYNAMIQUES :
 Découvrez la beauté du material design intuitif avec des thèmes dynamiques. Vous en voulez plus ? Plongez dans des thèmes personnalisés et rendez votre galerie vraiment unique.
 
-Explorez plus d'apps de Fossify : https ://www.fossify.org
-Code open-source : https ://www.github.com/FossifyOrg
-Rejoignez la communauté sur Reddit : https ://www.reddit.com/r/Fossify
-Restez connecté via Telegram : https ://t.me/Fossify
+Explorez plus d'apps de Fossify : https://www.fossify.org
+Code open-source : https://www.github.com/FossifyOrg
+Rejoignez la communauté sur Reddit : https://www.reddit.com/r/Fossify
+Restez connecté via Telegram : https://t.me/Fossify
