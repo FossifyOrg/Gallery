@@ -1,0 +1,2 @@
+* Löste inzoomning på högupplösta bilder
+* Lade till några översättningar
