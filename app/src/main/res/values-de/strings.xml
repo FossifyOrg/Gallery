@@ -191,9 +191,9 @@
     <string name="paths_imported_successfully">Pfade erfolgreich importiert</string>
     <string name="media_management_prompt">Um sicherzustellen, dass alle Dateivorgänge zuverlässig funktionieren, sollte diese App in den Geräteeinstellungen als Medienverwaltungs-App festgelegt werden.</string>
     <string name="password_protect_excluded">Passwortschutz für die Sichtbarkeit ausgeschlossener Ordner</string>
-    <string name="media_management_manual">Irgendetwas ist schief gelaufen. Öffne bitte die Geräteeinstellungen - Apps - Erweitert - Spezieller App-Zugriff - Apps zur Medienverwaltung und erlaube dieser App, Medien zu verwalten.</string>
-    <string name="media_management_note">Wenn die Umleitung nicht funktioniert, öffne bitte die Geräteeinstellungen - Apps - Spezieller App-Zugriff - Apps zur Medienverwaltung und erlaube dieser App die Medienverwaltung.</string>
-    <string name="media_management_alternative">Wenn du das nicht möchtest, kannst du auch in den Geräteeinstellungen - Apps - Spezieller App-Zugriff - Apps zur Medienverwaltung dieser App die Verwaltung von Medien erlauben.</string>
+    <string name="media_management_manual">Irgendetwas ist schief gelaufen, öffne bitte die Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung und erlaube dieser App, Medien zu verwalten.</string>
+    <string name="media_management_note">Wenn die Umleitung nicht funktioniert, öffne bitte die Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung und erlaube dieser App die Medienverwaltung.</string>
+    <string name="media_management_alternative">Wenn du das nicht möchtest, kannst du auch in den Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung dieser App die Verwaltung von Medien erlauben.</string>
     <string name="alternative_media_access">Alternativ kannst du auch nur den Zugriff auf Mediendateien zulassen. In diesem Fall kann allerdings nicht mit versteckten Dateien gearbeitet werden.</string>
     <string name="media_only">Nur Medien</string>
     <string name="all_files">Alle Dateien</string>
