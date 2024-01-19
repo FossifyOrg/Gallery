@@ -1,2 +1,2 @@
-* Retrait de la bibliothèque non open-source de panorama
-* Ajout de traductions
+* Suppression de la bibliothèque panoramique propriétaire
+* Ajout de quelques traductions
