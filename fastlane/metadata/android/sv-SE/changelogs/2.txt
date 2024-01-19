@@ -1,1 +1,1 @@
-* Lade till några översättningar, löste integritetspolicylänk.
+* Lade till några översättningar, åtgärdade integritetspolicylänk.
