@@ -247,4 +247,5 @@
     <string name="faq_17_text">Cette fonctionnalité ne fonctionne plus en raison des modifications apportées au système avec Android 11. L\'application ne peut plus parcourir les dossiers réels, elle s\'appuie sur le MediaStore pour récupérer les données.</string>
     <string name="faq_18_title">Pourquoi des publicités apparaissent pendant la lecture d\'une vidéo \?</string>
     <string name="faq_18_text">Nos applications ne comportent aucune publicité. Si vous en voyez pendant la lecture d\'une vidéo, vous devez sûrement utiliser le lecteur vidéo d\'une autre application. Essayez de trouver le lecteur vidéo par défaut dans les paramètres de votre appareil, puis faites "Supprimer les valeurs par défaut". Lors du prochain lancement d\'une vidéo, une invite de sélection d\'application s\'affichera, et vous pourrez choisir l\'application que vous souhaitez utiliser.</string>
+    <string name="volume">Volume</string>
 </resources>
