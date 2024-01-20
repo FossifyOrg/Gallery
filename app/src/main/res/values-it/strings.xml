@@ -250,4 +250,6 @@
     <string name="faq_17_text">Ciò ha smesso di funzionare a causa delle modifiche al sistema fornite anche con Android 11, l\'app non può più sfogliare le cartelle reali, si basa sul cosiddetto MediaStore per recuperare i dati.</string>
     <string name="faq_18_title">Perché vedo delle pubblicità durante la riproduzione del video\?</string>
     <string name="faq_18_text">Le nostre applicazioni non hanno alcun tipo di pubblicità. Se li vedi durante la riproduzione di video, è probabile che tu stia usando un altro lettore video. Prova a trovare il tuo lettore video predefinito nelle impostazioni del dispositivo, poi fai «Cancella predefinito» su di esso. La prossima volta che invocherai qualche intento video vedrai un prompt di selezione di app, dove potrai selezionare quale app vuoi usare.</string>
+    <string name="volume">Volume</string>
+    <string name="editor">Editor</string>
 </resources>

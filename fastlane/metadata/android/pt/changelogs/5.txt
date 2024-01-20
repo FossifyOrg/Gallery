@@ -1,0 +1,2 @@
+* Remoção de mensagem falsa quando se usa o editor.
+* Algumas traduções adicionadas

@@ -1,0 +1,2 @@
+* Suppression du faux message d'application lors de l'utilisation de l'éditeur.
+* Ajout de quelques traductions

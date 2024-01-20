@@ -1,4 +1,4 @@
-Entfessle Erinnerungen, nicht persönliche Daten. Fossify Galerie ist die ultimative Foto- und Video-App, die ebenso leistungsstark wie privat ist. Keine Werbung, keine unnötigen Berechtigungen – nur ein nahtloses, auf dich zugeschnittenes Erlebnis.
+Entfessle Erinnerungen, nicht persönliche Daten. Fossify Gallery ist die ultimative Foto- und Video-App, die ebenso leistungsstark wie privat ist. Keine Werbung, keine unnötigen Berechtigungen – nur ein nahtloses, auf dich zugeschnittenes Erlebnis.
 
 🖼️ FOTOBEARBEITUNG AUF TASTENDRUCK:
 Verbessere deine Fotos mit unserem einfachen, aber leistungsstarken Fotoeditor. Schneide, verändere die Größe, drehe, spiegele, zeichne und wende tolle Filter an, ohne deine Privatsphäre zu gefährden. Übernimm die Kontrolle über deine Erinnerungen wie nie zuvor.
@@ -13,13 +13,13 @@ Schließe deine Erinnerungen mit Pin, Muster oder Fingerabdruck ab. Schütze bes
 Aufatmen, Unfälle passieren! Mit dem integrierten Papierkorb von Fossify Gallery kannst du gelöschte Fotos und Videos in Sekundenschnelle wiederherstellen. Keine verlorenen Schätze mehr, sondern pure Erleichterung.
 
 🎨 DEINE GALERIE, DEIN STIL:
-Passe das Aussehen, die Bedienung und die Funktionen an deinen Stil an. Von UI-Themen bis hin zu Funktionsschaltflächen – Fossify Gallery gibt dir die kreative Freiheit, nach der du dich sehnst.
+Passe das Aussehen, die Bedienung und die Funktionen an deinen Stil an. Von UI-Farbschemas bis hin zu Funktionsschaltflächen – Fossify Gallery gibt dir die kreative Freiheit, nach der du dich sehnst.
 
 📷 UNIVERSELLE FORMATFREIHEIT:
 JPEG, PNG, MP4, MKV, RAW, SVG, GIF, Videos und mehr – wir haben deine Erinnerungen in jedem Format, das du willst. Keine Einschränkungen, nur grenzenlose Möglichkeiten.
 
-✨ MATERIAL DESIGN MIT DYNAMISCHEN THEMEN:
-Erlebe die Schönheit des intuitiven Material Designs mit dynamischen Designs. Willst du mehr? Tauche ein in benutzerdefinierte Themen und mache deine Galerie wirklich einzigartig.
+✨ MATERIAL DESIGN MIT DYNAMISCHEN FARBSCHEMAS:
+Erlebe die Schönheit des intuitiven Material Designs mit dynamischen Farbschemas. Willst du mehr? Tauche ein in benutzerdefinierte Designs und mache deine Galerie wirklich einzigartig.
 
 Entdecke weitere Apps von Fossify: https://www.fossify.org
 Open-Source-Code: https://www.github.com/FossifyOrg

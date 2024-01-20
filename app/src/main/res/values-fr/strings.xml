@@ -7,7 +7,7 @@
     <string name="excluded">(exclu)</string>
     <string name="pin_folder">Épingler le dossier</string>
     <string name="unpin_folder">Libérer le dossier</string>
-    <string name="pin_to_the_top">Épingler le dossier</string>
+    <string name="pin_to_the_top">Épingler en haut</string>
     <string name="show_all">Affichage Dossiers</string>
     <string name="all_folders">Dossiers</string>
     <string name="folder_view">Affichage Galerie</string>
@@ -220,7 +220,7 @@
     <string name="faq_3_text">Vous devez simplement effectuer un appui prolongé sur le dossier en question et choisir "Épingler en haut" dans le menu d\'actions. Vous pouvez en épingler plusieurs. Les éléments épinglés seront alors triés selon l\'ordre par défaut.</string>
     <string name="faq_4_title">Comment avancer rapidement dans les vidéos \?</string>
     <string name="faq_4_text">Appuyez deux fois sur le côté de l\'écran, ou appuyez sur la valeur de durée actuelle ou maximale près de la barre de recherche. Si vous activez l\'ouverture des vidéos sur un écran séparé dans les paramètres de l\'application, vous pouvez également utiliser des gestes horizontaux.</string>
-    <string name="faq_5_title">Quelle est la différence entre cacher et exclure un dossier \?</string>
+    <string name="faq_5_title">Quelle est la différence entre le masquage et l\'exclusion d\'un dossier ?</string>
     <string name="faq_5_text">Exclure empêche l\'affichage du dossier seulement dans la galerie Fossify, tandis que Masquer fonctionne selon le système et il cache le dossier d\'autres galeries aussi. Il fonctionne en créant un fichier vide « .nomedia » dans le dossier donné, que vous pouvez ensuite supprimer avec n\'importe quel gestionnaire de fichier aussi. Notez que certains appareils ne permettent pas de cacher des dossiers comme Appareil photo, Captures d\'écran et Téléchargements.</string>
     <string name="faq_6_title">Pourquoi des dossiers avec des pochettes d\'albums musicaux ou des miniatures d\'images sont affichés ?</string>
     <string name="faq_6_text">Il est possible que des dossiers qui ne devraient pas être affichés le soient. Vous pouvez les exclure facilement en les sélectionnant par un appui prolongé, puis en choisissant l\'option "Exclure le dossier", après quoi vous pouvez aussi sélectionner le dossier parent, ce qui devrait éviter l\'apparition de dossiers similaires.</string>
@@ -247,4 +247,5 @@
     <string name="faq_17_text">Cette fonctionnalité ne fonctionne plus en raison des modifications apportées au système avec Android 11. L\'application ne peut plus parcourir les dossiers réels, elle s\'appuie sur le MediaStore pour récupérer les données.</string>
     <string name="faq_18_title">Pourquoi des publicités apparaissent pendant la lecture d\'une vidéo \?</string>
     <string name="faq_18_text">Nos applications ne comportent aucune publicité. Si vous en voyez pendant la lecture d\'une vidéo, vous devez sûrement utiliser le lecteur vidéo d\'une autre application. Essayez de trouver le lecteur vidéo par défaut dans les paramètres de votre appareil, puis faites "Supprimer les valeurs par défaut". Lors du prochain lancement d\'une vidéo, une invite de sélection d\'application s\'affichera, et vous pourrez choisir l\'application que vous souhaitez utiliser.</string>
+    <string name="volume">Volume</string>
 </resources>

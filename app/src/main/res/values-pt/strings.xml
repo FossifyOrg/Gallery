@@ -240,5 +240,16 @@
     <string name="faq_17_text">Isso parou de funcionar devido às mudanças no sistema que vieram com o Android 11, o aplicativo não pode mais navegar em pastas reais, ele depende do chamado MediaStore para buscar dados.</string>
     <string name="faq_18_title">Por que vejo anúncios durante a reprodução de vídeo\?</string>
     <string name="faq_18_text">As nossas aplicações não têm anúncios. Se você vê-os durante a reprodução de um vídeo, deve estar a usar outra aplicação . Tente encontrar o reprodutor de vídeo padrão nas definições do dispositivo e, em seguida, faça um \"Limpar dados\". Da próxima vez quiser reproduzir um vídeo, surgirá uma opção para escolher a aplicação utilizada.</string>
-
+    <string name="faq_1_text">Primeiro, tens que encontrar a galeria padrão no menu de Aplicações nas Definições do teu dispositivo, procura por uma opção que diga algo como \"Abrir como padrão\", clica nesta opção e seleciona \"Remover padrões\". Da próxima vez que tentares abrir uma imagem ou um vídeo, deves aparecer um selecionador de aplicações onde podes escolher a Galeria Fossify e torna-la a aplicação de galeria padrão.</string>
+    <string name="editor">Editor</string>
+    <string name="exclude_folder_description">Isto excluirá a seleção juntamente com as suas sub-pastas apenas da Galeria Fossify. Podes gerir as pastas excluídas na Preferências.</string>
+    <string name="excluded_activity_placeholder">Excluir pastas vai escondê-las juntamente com as suas sub-pastas apenas na Galeria Fossify, elas continuaram visíveis noutras aplicações.
+\n
+\nSe quiseres escondê-las igualmente noutras aplicações, usa a função Hide.</string>
+    <string name="cant_unhide_folder">Se uma pasta ou alguma das pastas que contêm esta tiver um ponto antes do seu nome, esta pasta está escondida e não pode ser revelada desta forma. Tens que remover o ponto dando um novo nome à pasta.</string>
+    <string name="resize_factor_info">Redimensionar as imagens por um dada percentagem, o valor deve ser entre 10 e 90.</string>
+    <string name="faq_1_title">Como posso tornar a Galeria Fossify a galeria padrão do meu dispositivo?</string>
+    <string name="faq_5_text">Excluir esconde a pasta apenas na Galeria Fossify, enquanto que a função Hide funciona em todos o sistema e esconde a pasta igualmente noutras aplicações. Esta opção cria um ficheiro vazio \".nomedia\" na pasta em questão, o qual pode ser removido com um gestor de ficheiros. Repara que alguns dispositivos não permite esconder ficheiros com as pastas Camera, Captura de Ecra e Transferências.</string>
+    <string name="volume">Volume</string>
+    <string name="wallpaper">Papel de Parede</string>
 </resources>

@@ -191,9 +191,9 @@
     <string name="paths_imported_successfully">Pfade erfolgreich importiert</string>
     <string name="media_management_prompt">Um sicherzustellen, dass alle Dateivorgänge zuverlässig funktionieren, sollte diese App in den Geräteeinstellungen als Medienverwaltungs-App festgelegt werden.</string>
     <string name="password_protect_excluded">Passwortschutz für die Sichtbarkeit ausgeschlossener Ordner</string>
-    <string name="media_management_manual">Irgendetwas ist schief gelaufen. Öffne bitte die Geräteeinstellungen - Apps - Erweitert - Spezieller App-Zugriff - Apps zur Medienverwaltung und erlaube dieser App, Medien zu verwalten.</string>
-    <string name="media_management_note">Wenn die Umleitung nicht funktioniert, öffne bitte die Geräteeinstellungen - Apps - Spezieller App-Zugriff - Apps zur Medienverwaltung und erlaube dieser App die Medienverwaltung.</string>
-    <string name="media_management_alternative">Wenn du das nicht möchtest, kannst du auch in den Geräteeinstellungen - Apps - Spezieller App-Zugriff - Apps zur Medienverwaltung dieser App die Verwaltung von Medien erlauben.</string>
+    <string name="media_management_manual">Irgendetwas ist schief gelaufen, öffne bitte die Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung und erlaube dieser App, Medien zu verwalten.</string>
+    <string name="media_management_note">Wenn die Umleitung nicht funktioniert, öffne bitte die Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung und erlaube dieser App die Medienverwaltung.</string>
+    <string name="media_management_alternative">Wenn du das nicht möchtest, kannst du auch in den Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung dieser App die Verwaltung von Medien erlauben.</string>
     <string name="alternative_media_access">Alternativ kannst du auch nur den Zugriff auf Mediendateien zulassen. In diesem Fall kann allerdings nicht mit versteckten Dateien gearbeitet werden.</string>
     <string name="media_only">Nur Medien</string>
     <string name="all_files">Alle Dateien</string>
@@ -237,5 +237,18 @@
     <string name="faq_17_title">Warum kann ich fehlende Ordner nicht mehr einbinden\?</string>
     <string name="faq_17_text">Das funktioniert seit den Systemänderungen durch Android 11 nicht mehr, da die App keine echten Ordner mehr durchsuchen kann, sondern sich beim Abrufen von Daten auf den sogenannten MediaStore verlässt.</string>
     <string name="faq_18_title">Warum sehe ich während der Videowiedergabe Werbung\?</string>
-    <string name="faq_18_text">Unsere Apps enthalten keinerlei Werbung. Wenn während der Videowiedergabe trotzdem welche angezeigt wird, liegt das daran, dass man den Videoplayer einer anderen App verwendet. Man sollte versuchen, den Standard-Videoplayer in den Geräteeinstellungen zu finden, und dann „Standardeinstellungen löschen“ ausführen. Beim nächsten Aufruf eines Videos, wird eine Aufforderung zur Auswahl der App angezeigt, aus der man die gewünschte App auswählen kann.</string>
+    <string name="faq_18_text">Unsere Apps enthalten keinerlei Werbung. Wenn während der Videowiedergabe trotzdem welche angezeigt wird, liegt das daran, dass du den Videoplayer einer anderen App verwendest. Du solltest versuchen, den Standard-Videoplayer in den Geräteeinstellungen zu finden, und dann „Standardeinstellungen löschen“ ausführen. Beim nächsten Aufruf eines Videos, sollte eine App-Auswahl angezeigt werden, aus der du die gewünschte App auswählen kann.</string>
+    <string name="faq_1_title">Wie kann ich Fossify Gallery zur Standard-Gerätegalerie machen?</string>
+    <string name="faq_5_text">„Ausschließen“ verhindert, dass der Ordner nur in Fossify Gallery angezeigt wird, während „Verstecken“ systemweit funktioniert und den Ordner auch vor anderen Galerien verbirgt. Dabei wird eine leere .nomedia-Datei im angegebenen Ordner erstellt, die man mit einem beliebigen Dateimanager auch wieder entfernen kann. Zu beachten ist, dass einige Geräte das Verstecken von Ordnern wie Camera, Screenshots und Downloads nicht zulassen.</string>
+    <string name="svgs">SVGs</string>
+    <string name="faq_1_text">Als Erstes musst du in den Geräteeinstellungen unter \"Apps\" die derzeitige Standardgalerie finden. Suche nach einer Schaltfläche mit der Aufschrift „Standardmäßig öffnen“, klicke darauf und wähle dann „Standardeinstellungen löschen“ aus. Beim nächsten Öffnen eines Bildes oder Videos, sollte eine App-Auswahl angezeigt werden, in der du Fossify Gallery auswählen und zur Standard-App machen kannst.</string>
+    <string name="exclude_folder_description">Dadurch werden die ausgewählten Ordner mitsamt ihren Unterordnern von Fossify Gallery ausgeschlossen. Ausgeschlossene Ordner können in den Einstellungen verwaltet werden.</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="animation">Animation</string>
+    <string name="gifs">GIFs</string>
+    <string name="videos">Videos</string>
+    <string name="excluded_activity_placeholder">Durch das Ausschließen von Ordnern werden diese zusammen mit ihren Unterordnern nur in Fossify Gallery ausgeblendet, in anderen Anwendungen sind sie weiterhin sichtbar.
+\n
+\nWenn du Ordner auch für andere Apps verstecken willst, verwende die Funktion „Ordner verstecken“.</string>
+    <string name="editor">Editor</string>
 </resources>

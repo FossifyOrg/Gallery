@@ -243,4 +243,12 @@
     <string name="faq_17_text">Horrek funtzionatzeari utzi zion Android 11rekin ere etorri ziren sistema aldaketen ondorioz, aplikazioak ezin ditu jada benetako karpetak arakatu, MediaStore izenekoan oinarritzen da datuak eskuratzeko.</string>
     <string name="faq_18_title">Zergatik ikusten ditut iragarkiak bideoa erreproduzitzean\?</string>
     <string name="faq_18_text">Gure aplikazioek ez dute iragarkirik. Bideoak erreproduzitzerakoan ikusten badituzu, beste aplikazio batzuk erabili behar dituzu bideo-erreproduzitzailea. Saiatu zure bideo-erreproduzitzaile lehenetsia aurkitzen gailuaren ezarpenetan, eta egin ezazu \"Garbitu lehenetsiak\". Bideo-asmoren bat deitzen duzun hurrengoan aplikazio-hautatzaile baten gonbita ikusiko duzu, non erabili nahi duzun aplikazioa hauta dezakezun.</string>
+    <string name="exclude_folder_description">Horrek hautapena baztertuko du bere azpikarpetekin batera Fossify Gallery-tik soilik. Baztertutako karpetak Ezarpenak atalean kudea ditzakezu.</string>
+    <string name="wallpaper">Horma-papera</string>
+    <string name="excluded_activity_placeholder">Karpetak baztertuz gero, Fossify Gallery-n bakarrik ezkutatuta dauden azpikarpetekin batera egingo dira; beste aplikazio batzuetan ere ikusgai egongo dira.
+\n
+\nBeste aplikazio batzuetatik ere ezkutatu nahi badituzu, erabili Ezkutatu funtzioa.</string>
+    <string name="faq_1_title">Nola egin dezaket Fossify Gallery gailuaren galeria lehenetsia?</string>
+    <string name="faq_1_text">Lehenik eta behin, lehenetsitako galeria aurkitu behar duzu zure gailuaren ezarpenetako Aplikazioak atalean, bilatu \"Ireki lehenespenez\" bezalako zerbait dioen botoi bat, egin klik gainean eta hautatu \"Garbitu lehenetsiak\". Irudi edo bideo bat irekitzen saiatuko zaren hurrengoan aplikazio-hautatzaile bat ikusi beharko zenuke, non Fossify Gallery hautatu eta aplikazio lehenetsia izan dezakezu.</string>
+    <string name="faq_5_text">Baztertzeak karpeta Fossify Galerian soilik bistaratzea eragozten du, Ezkutatu sisteman funtzionatzen duen bitartean eta karpeta beste galerietatik ere ezkutatzen du. Emandako karpetan \".nomedia\" fitxategi huts bat sortuz funtzionatzen du, eta gero edozein fitxategi-kudeatzailerekin ere kendu dezakezu. Kontuan izan gailu batzuek ez dutela onartzen Kamera, Pantaila-argazkiak eta Deskargak bezalako karpetak ezkutatzen.</string>
 </resources>

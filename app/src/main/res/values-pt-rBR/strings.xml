@@ -214,7 +214,7 @@
     <string name="faq_3_text">Faça um toque longo na pasta em questão, e depois toque no ícone de alfinete na parte superior da tela, isto irá fixá-la no topo. Você também pode fixar várias pastas; os itens fixados serão classificados pelo método de ordenação padrão.</string>
     <string name="faq_4_title">Como faço para avançar rapidamente um vídeo (fast forward)\?</string>
     <string name="faq_4_text">Você pode fazer isso tocando duas vezes na lateral da tela ou tocando nos textos atuais ou de duração máxima próximos à barra de busca. Se você ativar a abertura de vídeos em uma tela separada nas configurações do aplicativo, também poderá usar gestos horizontais.</string>
-    <string name="faq_5_title">Qual é a diferença entre ocultar e ignorar uma pasta\?</string>
+    <string name="faq_5_title">Qual é a diferença entre ocultar e excluir uma pasta?</string>
     <string name="faq_6_title">Porque pastas com capas de CD de música ou figurinhas aparecem na lista\?</string>
     <string name="faq_6_text">Pode acontecer de que algumas pastas incomuns apareçam. Você pode utilizar a opção Ignorar nestas pastas, adicionando-as a lista de pastas ignoradas. Uma maneira de fazer isso é realizar um toque longo em uma destas pastas, selecionar a opção Ignorar e, em seguida, selecionar a pasta pai.</string>
     <string name="faq_7_title">Uma das minhas pastas não aparece, ou nem todos os seus itens são exibidos. O que posso fazer\?</string>
@@ -240,4 +240,12 @@
     <string name="faq_17_text">Isso parou de funcionar devido a mudanças de sistema do Android 11, pois o aplicativo não pode mais gerenciar pastas verdadeiras, precisa utilizar algo chamado MediaStore para obter os dados.</string>
     <string name="faq_18_title">Por que estou vendo anúncios durante o playback do vídeo\?</string>
     <string name="faq_18_text">Nossos aplicativos não mostram anúncios, nunca. Se você encontrar algum durante um playback de vídeo, deve estar utilizando o reprodutor de vídeo de outro aplicativo. Tente encontrar o seu reprodutor de vídeo padrão nas configurações de dispositivo e clique em \"Limpar padrões\". Na próxima vez que tentar assistir a um vídeo, poderá escolhar o reprodutor que desejar.</string>
+    <string name="faq_1_title">Como posso tornar a Galeria Fossify a galeria padrão do dispositivo?</string>
+    <string name="exclude_folder_description">Isso excluirá a seleção junto com suas subpastas apenas da Galeria Fossify. Você pode gerenciar pastas excluídas em Configurações.</string>
+    <string name="excluded_activity_placeholder">A exclusão de pastas fará com que elas fiquem ocultas junto com suas subpastas apenas na Galeria Fossify, elas ainda estarão visíveis em outros aplicativos.
+\n
+\nSe você quiser ocultá-los também de outros aplicativos, use a função Ocultar.</string>
+    <string name="wallpaper">Papel de parede</string>
+    <string name="faq_1_text">Primeiro você precisa encontrar a galeria padrão atual na seção Aplicativos das configurações do seu dispositivo, procurar um botão que diz algo como \"Abrir por padrão\", clicar nele e selecionar \"Limpar padrões\". Na próxima vez que você tentar abrir uma imagem ou vídeo, você verá um seletor de aplicativos, onde poderá selecionar Galeria Fossify e torná-la o aplicativo padrão.</string>
+    <string name="faq_5_text">Excluir impede a exibição da pasta apenas na Galeria Fossify, enquanto Ocultar funciona em nível de sistema e oculta a pasta de outras galerias também. Ele funciona criando um arquivo “.nomedia” vazio na pasta fornecida, que você também pode remover com qualquer gerenciador de arquivos. Observe que alguns dispositivos não permitem ocultar pastas como Câmera, Capturas de tela e Downloads.</string>
 </resources>

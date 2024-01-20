@@ -1,0 +1,2 @@
+* Tog bort meddelande om falsk app vid användning av redigeraren.
+* Lade till några översättningar
