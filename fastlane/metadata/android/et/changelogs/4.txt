@@ -1,0 +1,2 @@
+* Eemaldasime suletud lähtekoodiga panoraamfotode teegi
+* Lisasime mõned tõlked

@@ -1,0 +1,2 @@
+* Parandasime vead suure resolutsiooniga piltide suumimisel
+* Lisasime mõned tõlked
