@@ -11,4 +11,6 @@
     <string name="brightness">Luminositate</string>
     <string name="open_camera">Aperir le camera</string>
     <string name="show_all">Monstrar le contento de tote le dossieres</string>
+    <string name="images">Imagines</string>
+    <string name="videos">Videos</string>
 </resources>
