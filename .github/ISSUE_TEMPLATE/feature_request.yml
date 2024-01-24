@@ -24,7 +24,7 @@ body:
           required: true
         - label: "This issue contains only one feature request."
           required: true
-        - label: "I have read and understood the [contribution guidelines](https://github.com/FossifyOrg/Gallery/CONTRIBUTING.md)."
+        - label: "I have read and understood the [contribution guidelines](https://github.com/FossifyOrg/Gallery/blob/master/CONTRIBUTING.md)."
           required: true
         - label: "I optionally [donated](https://fossify.org/donate) to support the Fossify mission."
           required: false

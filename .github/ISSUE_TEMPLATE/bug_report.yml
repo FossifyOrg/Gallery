@@ -26,7 +26,7 @@ body:
           required: true
         - label: "This issue contains only one bug."
           required: true
-        - label: "I have read and understood the [contribution guidelines](https://github.com/FossifyOrg/Gallery/CONTRIBUTING.md)."
+        - label: "I have read and understood the [contribution guidelines](https://github.com/FossifyOrg/Gallery/blob/master/CONTRIBUTING.md)."
           required: true
 
   - type: input
