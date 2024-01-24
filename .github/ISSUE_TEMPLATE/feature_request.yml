@@ -1,0 +1,56 @@
+name: Feature request
+description: Suggest an idea for this project
+labels: [ "feature request", "needs triage" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Hi there 👋
+        Thanks for helping us improve Fossify Gallery by suggesting a feature!
+        Please fill in as much information as possible about your feature request to avoid unnecessary and time-consuming back-and-forth communication.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I made sure that there are **no existing issues** - [open](https://github.com/FossifyOrg/Gallery/issues) or [closed](https://github.com/FossifyOrg/Gallery/issues?q=is%3Aissue+is%3Aclosed) - to which I could contribute my information."
+          required: true
+        - label: "I made sure that there are **no existing discussions** - [open](https://github.com/FossifyOrg/Gallery/discussions) or [closed](https://github.com/FossifyOrg/Gallery/discussions?discussions_q=is%3Aclosed) - to which I could contribute my information."
+          required: true
+        - label: "I have read the FAQs inside the app (Menu -> About -> FAQs) and my problem isn't listed."
+          required: true
+        - label: "**I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise.**"
+          required: true
+        - label: "This issue contains only one feature request."
+          required: true
+        - label: "I have read and understood the [contribution guidelines](https://github.com/FossifyOrg/Gallery/CONTRIBUTING.md)."
+          required: true
+        - label: "I optionally [donated](https://fossify.org/donate) to support the Fossify mission."
+          required: false
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature description
+      description: |
+        Explain how you want the app's look or behavior to change to suit your needs.
+        
+        ⚠️ Please **DO NOT** add links to SimpleMobileTools issues as they can be deleted at any time. Instead, copy-paste any useful information manually.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-is-the-feature-requested
+    attributes:
+      label: Why do you want this feature?
+      description: |
+        Describe any problem or limitation you come across while using the app which would be solved by this feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: Any other information you'd like to include, for instance sketches, mockups, pictures of rabbits, etc.
