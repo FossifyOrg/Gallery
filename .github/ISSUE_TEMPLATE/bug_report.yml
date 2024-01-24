@@ -1,0 +1,129 @@
+name: Bug report
+description: Create a bug report to help us improve
+labels: [ "bug", "needs triage" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Hi there 👋
+        Thanks for helping us improve Fossify Gallery by reporting a bug!
+        Please fill in as much information as possible about your bug to avoid unnecessary and time-consuming back-and-forth communication.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I can reproduce the bug with the latest version given [here](https://github.com/FossifyOrg/Gallery/releases/latest)."
+          required: true
+        - label: "I made sure that there are **no existing issues** - [open](https://github.com/FossifyOrg/Gallery/issues) or [closed](https://github.com/FossifyOrg/Gallery/issues?q=is%3Aissue+is%3Aclosed) - to which I could contribute my information."
+          required: true
+        - label: "I made sure that there are **no existing discussions** - [open](https://github.com/FossifyOrg/Gallery/discussions) or [closed](https://github.com/FossifyOrg/Gallery/discussions?discussions_q=is%3Aclosed) - to which I could contribute my information."
+          required: true
+        - label: "I have read the FAQs inside the app (Menu -> About -> FAQs) and my problem isn't listed."
+          required: true
+        - label: "**I have taken the time to fill in all the required details. I understand that the bug report will be dismissed otherwise.**"
+          required: true
+        - label: "This issue contains only one bug."
+          required: true
+        - label: "I have read and understood the [contribution guidelines](https://github.com/FossifyOrg/Gallery/CONTRIBUTING.md)."
+          required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Affected app version
+      description: "Which app version were you using when you found the bug?"
+      placeholder: "x.x.x - Go to App Main Menu > About > Version."
+    validations:
+      required: true
+
+  - type: input
+    id: device-os-info
+    attributes:
+      label: Affected Android/Custom ROM version
+      description: |
+        What operating system and version are you using when you encounter the bug?
+      placeholder: "Example: Android 12 / LineageOS 18.1"
+    validations:
+      required: true
+
+  - type: input
+    id: device-model-info
+    attributes:
+      label: Affected device model
+      description: |
+        What device model are you using when you encountered the bug?
+      placeholder: "Example: Pixel 8 Pro / Samsung Galaxy S20"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: download
+    attributes:
+      label: How did you install the app?
+      options:
+        - F-Droid / IzzyOnDroid
+        - Google Play Store
+        - GitHub releases
+        - Built from source
+        - Third-party website
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce the bug
+      description: |
+        What did you do for the bug to show up?
+
+        If you can't cause the bug to show up again reliably (and hence don't have a proper set of steps to give us), please still try to give as many details as possible on how you think you encountered the bug.
+
+        ⚠️ Please **DO NOT** add links to SimpleMobileTools issues as they can be deleted at any time. Instead, copy-paste any useful information or instructions manually.
+
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: |
+        Tell us what you expect to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: |
+        Tell us what happens with the steps given above.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screen-media
+    attributes:
+      label: Screenshots/Screen recordings
+      description: |
+        A picture or video is worth a thousand words.
+
+        If applicable, drag and drop screenshots or a screen recording to help explain your problem. If your file is too big for Github to accept, try to compress it (ZIP file), or feel free to paste a link to an image/video hoster here instead.
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: |
+        Please provide any additional information or context that may be relevant, for example:
+        * any file or media that led to this bug
+        * any crash logs (if you know how to get one)
+        * the affected device is rooted, a foldable or a TV
+        * you have disabled all animations on your device
+        * your rabbit chewed your network cable
+        * ...
+
