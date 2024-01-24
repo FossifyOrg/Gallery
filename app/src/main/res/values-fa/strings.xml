@@ -41,4 +41,7 @@
     <string name="no_media_with_filters">هیچ پروندهٔ رسانه‌ای با پالایه‌های گزیده شده، یافت نشد.</string>
     <string name="change_filters_underlined"><u>تغییر پالایه‌ها</u></string>
     <string name="hide_folder_description">این تابع شاخه را با افزودن پروندهٔ «‎.nomedia» در آن پنهان می‌کند، این باعث پنهان شدن تمام زیرشاخه‌ها نیز خواهد شد. شما می‌توانید با تغییر حالت «نمایش موارد پنهان» در تنظیمات آن‌ها را ببینید. ادامه می‌دهید؟</string>
+    <string name="crop_thumbnails">تصویر بند‌انگشتی را مربعی برش بزن</string>
+    <string name="autoplay_videos">پخش خودکار ویدیو‌ها</string>
+    <string name="remember_last_video_position">آخرین موقعیت پخش ویدیو را به‌ خاطر بسپار</string>
 </resources>
