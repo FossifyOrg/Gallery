@@ -35,7 +35,7 @@
     <string name="restore_to_path">Възстановяване в \'%s\'</string>
     <string name="filter_media">Филтър на медия</string>
     <string name="images">Изображения</string>
-    <string name="videos">Видеа</string>
+    <string name="videos">Видеоклипове</string>
     <string name="gifs">GIF</string>
     <string name="raw_images">RAW</string>
     <string name="svgs">SVG</string>
