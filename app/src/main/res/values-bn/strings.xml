@@ -15,12 +15,12 @@
     <string name="unknown_location">অজানা স্থান</string>
     <string name="volume">শব্দ</string>
     <string name="brightness">উজ্জ্বলতা</string>
-    <string name="lock_orientation">ওরিয়েন্টেশন বন্ধ</string>
+    <string name="lock_orientation">ওরিয়েন্টেশন লক করুন</string>
     <string name="unlock_orientation">ওরিয়েন্টেশন খুলুন</string>
-    <string name="change_orientation">ওরিয়েন্টেশন পরিবর্তন</string>
+    <string name="change_orientation">ওরিয়েন্টেশন পরিবর্তন করুন</string>
     <string name="force_portrait">পোট্রেট ওরিয়েন্টেশন</string>
     <string name="force_landscape">অবতল ওরিয়েন্টেশন</string>
-    <string name="use_default_orientation">ডিফল্ট ওরিয়েন্টেশন</string>
+    <string name="use_default_orientation">ডিফল্ট ওরিয়েন্টেশন ব্যবহার করুন</string>
     <string name="fix_date_taken">তারিখ ঠিক করুন</string>
     <string name="fixing">ঠিক করা হচ্ছে…</string>
     <string name="dates_fixed_successfully">তারিখ সফলভাবে ঠিক করা হয়েছে</string>
