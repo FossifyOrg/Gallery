@@ -6,7 +6,7 @@ module.exports = async ({github, context}) => {
     const IGNORE_KEY = '<!-- IGNORE IMAGE MINIFY -->';
     const IGNORE_ALT_NAME_END = 'ignoreImageMinify';
     // Targeted maximum height
-    const IMG_MAX_HEIGHT_PX = 600;
+    const IMG_MAX_HEIGHT_PX = 400;
     // maximum width of GitHub issues/comments
     const IMG_MAX_WIDTH_PX = 800;
     // all images that have a lower aspect ratio (-> have a smaller width) than this will be minimized
