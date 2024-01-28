@@ -244,4 +244,5 @@
     <string name="faq_17_text">Det slutade fungera på grund av systemändringarna som kom med Android 11, appen kan inte bläddra i riktiga mappar längre, den förlitar sig på MediaStore för att hämta data.</string>
     <string name="faq_18_title">Varför ser jag annonser under videouppspelning\?</string>
     <string name="faq_18_text">Våra appar har inga som helst annonser. Om du ser dem under videouppspelning använder du någon annan videospelare. Försök att hitta din standardvideospelare i enhetsinställningarna och gör sedan en \"Rensa standardinställningar\" på den. Nästa gång du vill öppna en video kommer du att se ett appväljarfönster, där du kan välja vilken app du vill använda.</string>
+    <string name="wallpaper">Bakgrund</string>
 </resources>

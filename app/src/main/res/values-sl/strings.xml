@@ -231,4 +231,26 @@
     <string name="faq_17_text">To je prenehalo delovati zaradi sistemskih sprememb, ki jih je tudi prinesel Android 11. Aplikacija ne more več brskati po pravih mapah, temveč se pri pridobivanju podatkov zanaša na tako imenovano MediaStore.</string>
     <string name="faq_18_title">Zakaj vidim reklame med predvajanjem videa\?</string>
     <string name="faq_18_text">Naše aplikacije so brez reklam! Če jih vidite med predvajanjem videa, potem sigurno uporabljate nek drug video predvajalnik. Poskusite poiskati privzeti video predvajalnik v nastavitvah naprave. Nato v njenih opcijah pritisnite \"Počisti privzete nastavitve\". Ko boste naslednjič nameravali odpreti video, se bo prikazal poziv za izbiro aplikacije, kjer izberete željeno.</string>
+    <string name="cant_unhide_folder">Če ima mapa ali ena od njenih nadrejenih map pred imenom piko, je skrita in je ni mogoče odkriti na ta način. Piko morate odstraniti tako, da mapo preimenujete.</string>
+    <string name="faq_1_title">Kako lahko Galerijo Fossify nastavim kot privzeto galerijo naprave?</string>
+    <string name="images_resized_successfully">Spreminjanje velikosti slik je bilo uspešno</string>
+    <string name="resize_multiple_images">Spremeni velikost več slik</string>
+    <string name="resize_factor">Faktor spremembe velikosti</string>
+    <string name="resize_factor_info">Spremeni velikost slik na dani odstotek, vrednost mora biti med 10 in 90.</string>
+    <string name="resize_factor_error">Vnesite število med 10 in 90</string>
+    <string name="no_animation">Brez</string>
+    <string name="excluded_activity_placeholder">Izključene mape bodo skrite samo v Galeriji Fossify, v drugih aplikacijah pa bodo še vedno vidne.
+\n
+\nČe jih želite skriti tudi pred drugimi aplikacijami, uporabite funkcijo Skrij.</string>
+    <plurals name="failed_to_resize_images">
+        <item quantity="one">Ni uspelo spremeniti velikosti %d slike</item>
+        <item quantity="two">Ni uspelo spremeniti velikosti %d slik</item>
+        <item quantity="few">Ni uspelo spremeniti velikosti %d slik</item>
+        <item quantity="other">Ni uspelo spremeniti velikosti %d slik</item>
+    </plurals>
+    <string name="wallpaper">Ozadje</string>
+    <string name="faq_1_text">Najprej morate v razdelku Aplikacije v nastavitvah naprave poiskati trenutno privzeto galerijo, poiskati gumb z napisom \"Odpri privzeto\", ga klikniti in izbrati možnost \"Izbriši privzete nastavitve\". Ko boste naslednjič poskušali odpreti sliko ali videoposnetek, se vam bo prikazal izbirnik aplikacij, v katerem lahko izberete Fossify Gallery in jo spremenite v privzeto aplikacijo.</string>
+    <string name="slide">Diapozitiv</string>
+    <string name="faq_5_text">Funkcija Izključi prepreči prikaz mape samo v galeriji Fossify, medtem ko funkcija Skrij deluje sistemsko in skrije mapo tudi iz drugih galerij. Deluje tako, da v dani mapi ustvari prazno datoteko \".nomedia\", ki jo lahko nato odstranite tudi s katerim koli upraviteljem datotek. Upoštevajte, da nekatere naprave ne omogočajo skrivanja map, kot so Kamera, Posnetki zaslona in Prenosi.</string>
+    <string name="exclude_folder_description">Izbrano skupaj z njenimi podmapami boste izključili samo iz Galerije Fossify. Izključene mape lahko upravljate v nastavitvah.</string>
 </resources>

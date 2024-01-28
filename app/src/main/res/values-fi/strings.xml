@@ -243,4 +243,5 @@
     <string name="faq_17_text">Se lakkasi toimimasta Android 11:n mukana tulleiden järjestelmämuutosten vuoksi. Sovellus ei voi enää selata oikeita kansioita, vaan se luottaa niin sanottuun MediaStoreen tietojen hakemisessa.</string>
     <string name="faq_18_title">Miksi näen mainoksia videon toiston aikana\?</string>
     <string name="faq_18_text">Sovelluksissamme ei ole lainkaan mainoksia. Jos näet niitä videon toiston aikana, sinun täytyy käyttää jotain muuta sovellusta videosoittimena. Yritä etsiä oletusarvoinen videosoittimesi laitteen asetuksista ja tee sitten ”Tyhjenä oletusasetukset” sille. Seuraavan kerran, kun kutsut jonkin videon aikomuksen, näet sovelluksen valintakehotuksen, jossa voit valita, mitä sovellusta haluat käyttää.</string>
+    <string name="wallpaper">Taustakuva</string>
 </resources>

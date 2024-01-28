@@ -210,7 +210,7 @@
     <string name="toggle_favorite">Favoriet in-/uitschakelen</string>
     <string name="toggle_file_visibility">Bestand tonen/verbergen</string>
     <string name="faq_2_title">Ik heb de app beveiligd met een wachtwoord, maar ben het wachtwoord nu vergeten. Wat kan ik doen\?</string>
-    <string name="faq_2_text">Deïnstalleer en herinstalleer de app, of ga naar de app in de Android-instellingen via \"Apps (en meldingen)\" -&gt; \"App-info\" en kies via \"Opslagruimte\" voor \"Gegevens wissen\". Hiermee worden alleen de instellingen van deze app gewist.</string>
+    <string name="faq_2_text">De-installeer en herinstalleer de app, of ga naar de app in de Android-instellingen via \"Apps (en meldingen)\" -&gt; \"App-info\" en kies via \"Opslagruimte\" voor \"Gegevens wissen\". Hiermee worden alleen de instellingen van deze app gewist.</string>
     <string name="faq_3_title">Hoe kan ik een map bovenaan vastzetten\?</string>
     <string name="faq_3_text">Druk lang op het map en kies vervolgens de punaise in het actiemenu. Als er meerdere mappen zijn vastgezet, zullen deze worden weergeven op basis van de standaardsortering.</string>
     <string name="faq_4_title">Hoe kan ik terug- of vooruitspoelen in video’s\?</string>

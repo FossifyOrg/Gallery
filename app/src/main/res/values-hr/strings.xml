@@ -15,13 +15,13 @@
     <string name="show_on_map">Prikaži na karti</string>
     <string name="unknown_location">Nepoznata lokacija</string>
     <string name="volume">Glasnoća</string>
-    <string name="brightness">Svjetlina</string>
+    <string name="brightness">Svjetlost</string>
     <string name="lock_orientation">Zaključaj položaj</string>
     <string name="unlock_orientation">Otključaj položaj</string>
     <string name="change_orientation">Promijeni položaj</string>
     <string name="force_portrait">Prisili uspravni format</string>
-    <string name="force_landscape">Prisili ležeći format</string>
-    <string name="use_default_orientation">Koristi standardni položaj slike</string>
+    <string name="force_landscape">Prisili položeni format</string>
+    <string name="use_default_orientation">Koristi standardni položaj</string>
     <string name="fix_date_taken">Ispravi vrijednost datuma snimanja</string>
     <string name="fixing">Ispravlja se…</string>
     <string name="dates_fixed_successfully">Datumi uspješno ispravljeni</string>
@@ -29,19 +29,19 @@
     <string name="share_resized">Dijeli verziju promijenjene veličine</string>
     <string name="switch_to_file_search">Prijeđi na pretraživanje datoteka u svim vidljivim mapama</string>
     <string name="set_as_default_folder">Postavi kao standardnu mapu</string>
-    <string name="unset_as_default_folder">Poništi postavljanje kao standardne mape</string>
+    <string name="unset_as_default_folder">Poništi postavljanje kao standardnu mapu</string>
     <string name="reorder_by_dragging">Promijeni redoslijed mapa povlačenjem</string>
     <string name="reorder_by_dragging_pro">Promijeni redoslijed mapa povlačenjem (Pro)</string>
     <string name="restore_to_path">Obnavlja se u „%s”</string>
     <string name="filter_media">Filtar medija</string>
     <string name="images">Slike</string>
-    <string name="videos">Video</string>
+    <string name="videos">Videa</string>
     <string name="gifs">GIF-ovi</string>
     <string name="raw_images">RAW slike</string>
     <string name="svgs">SVG-ovi</string>
     <string name="portraits">Portreti</string>
     <string name="no_media_with_filters">Nije pronađena nijedna datoteka s odabranim filtrom.</string>
-    <string name="change_filters_underlined"><u>Promijeni filtar</u></string>
+    <string name="change_filters_underlined"><u>Promijeni filtre</u></string>
     <string name="hide_folder_description">Ova funkcija skriva mapu dodavanjem „.nomedia” datoteke u mapu. Također će sakriti i sve podmape. Možeš ih vidjeti uključivanjem opcije „Prikaži skrivene mape” u postavkama. Nastaviti\?</string>
     <string name="exclude_folder_parent">Isključiti glavnu mapu umjesto toga\?</string>
     <string name="hidden_folders">Skrivene mape</string>
@@ -101,13 +101,13 @@
     <string name="flip_vertically">Preokreni okomito</string>
     <string name="free_aspect_ratio">Slobodan</string>
     <string name="other_aspect_ratio">Drugi</string>
-    <string name="set_as_wallpaper">Postavi kao pozadinu</string>
-    <string name="set_as_wallpaper_failed">Postavljanje pozadine neuspjelo</string>
-    <string name="set_as_wallpaper_with">Postavi kao pozadinu pomoću:</string>
-    <string name="setting_wallpaper">Postavljanje pozadine…</string>
-    <string name="wallpaper_set_successfully">Postavljanje pozadine uspješno</string>
+    <string name="set_as_wallpaper">Postavi kao sliku pozadine</string>
+    <string name="set_as_wallpaper_failed">Postavljanje kao slike pozadine neuspjelo</string>
+    <string name="set_as_wallpaper_with">Postavi kao sliku pozadine pomoću:</string>
+    <string name="setting_wallpaper">Postavljanje slike pozadine …</string>
+    <string name="wallpaper_set_successfully">Slika pozadine je uspješno postavljena</string>
     <string name="portrait_aspect_ratio">Uspravni omjer slike</string>
-    <string name="landscape_aspect_ratio">Ležeći omjer slike</string>
+    <string name="landscape_aspect_ratio">Položeni omjer slike</string>
     <string name="home_screen">Početni ekran</string>
     <string name="lock_screen">Zaključaj ekran</string>
     <string name="home_and_lock_screen">Početni i zaključani ekran</string>
@@ -127,7 +127,7 @@
     <string name="no_media_for_slideshow">Nema datoteka za dijaprojekciju</string>
     <string name="group_direct_subfolders">Grupiraj izravne podmape</string>
     <string name="group_by">Grupiraj prema</string>
-    <string name="do_not_group_files">Nemoj grupirati ove datoteke</string>
+    <string name="do_not_group_files">Nemoj grupirati datoteke</string>
     <string name="by_folder">Mapi</string>
     <string name="by_last_modified">Zadnjoj promjeni</string>
     <string name="by_last_modified_daily">Zadnjoj promjeni (dnevno)</string>
@@ -136,7 +136,7 @@
     <string name="by_date_taken_daily">Datumu snimanja (dnevno)</string>
     <string name="by_date_taken_monthly">Datumu snimanja (mjesečno)</string>
     <string name="by_file_type">Vrsti datoteke</string>
-    <string name="by_extension">Datotečnom nastavku</string>
+    <string name="by_extension">Ekstenziji</string>
     <string name="show_file_count_section_header">Prikaži broj datoteka u zaglavljima odjeljaka</string>
     <string name="grouping_and_sorting">Imaj na umu da su grupiranje i razvrstavanje dva neovisna polja</string>
     <string name="folder_on_widget">Mapa prikazana na widgetu:</string>
@@ -145,8 +145,8 @@
     <string name="remember_last_video_position">Zapamti poziciju zadnjeg reproduciranog videa</string>
     <string name="loop_videos">Ponavljaj videa</string>
     <string name="animate_gifs">Animiraj GIF-ove u prikazu sličica</string>
-    <string name="max_brightness">Maksimalna svjetlina u cjeloekranskom prikazu medija</string>
-    <string name="crop_thumbnails">Izreži sličice u kvadrate</string>
+    <string name="max_brightness">Maksimalna svjetlost u cjeloekranskom prikazu medija</string>
+    <string name="crop_thumbnails">Obreži sličice u kvadrate</string>
     <string name="show_thumbnail_video_duration">Prikaži trajanje videa</string>
     <string name="screen_rotation_by">Okreni medij u cjeloekranskom prikazu za</string>
     <string name="screen_rotation_system_setting">Postavke sustava</string>
@@ -214,7 +214,7 @@
     <string name="faq_2_title">Zaključao/la sam aplikaciju lozinkom, ali sam je zaboravio/la. Što mogu učiniti\?</string>
     <string name="faq_2_text">Problem možeš riješiti na dva načina. Ponovo instalirati aplikaciju ili pronađi aplikaciju u postavkama uređaja i odaberi opciju „Izbriši podatke”. Navedeno će obnoviti sve postavke, ali neće ukloniti nikoje medijske datoteke.</string>
     <string name="faq_3_title">Kako mogu postaviti album uvijek na vrh\?</string>
-    <string name="faq_3_text">Dugo pritisnu željeni album i odaberi ikonu za prikvačivanje u izborniku radnji, koji će ga pričvrstiti na vrh. Možeš prikvačiti više mapa odjednom, prikvačene stavke će se razvrstati prema zadanom načinu razvrstavanja.</string>
+    <string name="faq_3_text">Dugo pritisni željeni album i odaberi ikonu za prikvačivanje u izborniku radnji. Na taj način će se album prikvačiti na vrh. Možeš prikvačiti više mapa odjednom, prikvačene stavke će se razvrstati prema standardnom načinu razvrstavanja.</string>
     <string name="faq_4_title">Kako mogu premotati video prema naprijed\?</string>
     <string name="faq_4_text">To možeš učiniti dvostrukim dodirom strane ekrana ili dodirom na tekstove trenutačnog ili maksimalnog trajanja u blizini trake prematanja. Ako aktiviraš otvaranje videoa u zasebnom ekranu u postavkama aplikacije, možeš koristiti i vodoravne geste.</string>
     <string name="faq_5_title">Koja je razlika između skrivanja i isključivanja mape\?</string>
@@ -242,5 +242,12 @@
     <string name="faq_17_title">Zašto više ne mogu uključiti nedostajuće mape\?</string>
     <string name="faq_17_text">To je prestalo raditi zbog promjena sustava koje su uvedene s Androidom 11. Aplikacija više ne može pregledavati stvarne mape, oslanja se na takozvani MediaStore za dohvaćanje podataka.</string>
     <string name="faq_18_title">Zašto vidim oglase tijekom reprodukcije videa\?</string>
-    <string name="faq_18_text">Naše aplikacije ne sadrže oglase. Ako ih vidiš tijekom reprodukcije videa, vjerojatno koristiš neki drugi video player. Pokušaj pronaći zadani video player u postavkama uređaja, a zatim na njemu izvrši „Očisti zadane postavke“. Sljedeći put kada pozoveš neku namjeru gledanja videa, vidjet ćeš upit za biranje aplikacija u kojem možeš odabrati aplikaciju koju želiš koristiti.</string>
+    <string name="faq_18_text">Naše aplikacije ne sadrže oglase. Ako ih vidiš tijekom reprodukcije videa, vjerojatno koristiš neki drugi video player. Pokušaj pronaći standardni video player u postavkama uređaja, a zatim na njemu izvrši „Očisti standardne postavke“. Sljedeći put kada pozoveš neku namjeru gledanja videa, vidjet ćeš upit za biranje aplikacija u kojem možeš odabrati aplikaciju koju želiš koristiti.</string>
+    <string name="faq_1_title">Kako mogu odrediti Fossify Gallery kao standardnu galeriju uređaja?</string>
+    <string name="wallpaper">Slika pozadine</string>
+    <string name="exclude_folder_description">Ovo će isključiti odabir zajedno s njegovim podmapama samo iz Fossify galerije. Isključenim mapama možeš upravljati u postavkama.</string>
+    <string name="excluded_activity_placeholder">Isključivanje mapa će ih sakriti zajedno s njihovim podmapama samo u Fossify galeriji, i dalje će biti vidljive u drugim aplikacijama.
+\n
+\nAko ih želiš sakriti i od drugih aplikacija, koristi funkciju „Sakrij”.</string>
+    <string name="slide">Prijelaz</string>
 </resources>
