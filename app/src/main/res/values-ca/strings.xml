@@ -67,6 +67,7 @@
     <string name="resize_factor_error">Introduïu un número entre 10 i 90</string>
     <plurals name="failed_to_resize_images">
         <item quantity="one">Ha fallat en canviar de mida %d imatge</item>
+        <item quantity="many">Ha fallat en canviar de mida %d imatges</item>
         <item quantity="other">Ha fallat en canviar de mida %d imatges</item>
     </plurals>
     <string name="images_resized_successfully">Les imatges s\'han canviat de mida correctament</string>
@@ -241,4 +242,14 @@
     <string name="faq_17_text">Això ha deixat de funcionar a causa dels canvis del sistema que també han vingut amb Android 11, l\'aplicació ja no pot navegar per carpetes reals, es basa en l\'anomenat MediaStore per obtenir dades.</string>
     <string name="faq_18_title">Per què veig anuncis comercials durant la reproducció de vídeo\?</string>
     <string name="faq_18_text">Les nostres aplicacions no tenen cap anunci. Si els veieu durant la reproducció de vídeo, estareu utilitzant una altra aplicació de reproducció de vídeo. Intenteu trobar el reproductor de vídeo predeterminat a la configuració del dispositiu i, a continuació, feu «Esborra els valors predeterminats». La pròxima vegada que invoqueu una acció de vídeo, veureu un missatge de selecció d\'aplicacions, on podreu seleccionar quina aplicació voleu utilitzar.</string>
+    <string name="faq_1_title">Com puc fer que la Fossify Gallery sigui la galeria predeterminada del dispositiu?</string>
+    <string name="editor">Editor</string>
+    <string name="wallpaper">Fons de pantalla</string>
+    <string name="faq_5_text">Exclou impedeix mostrar la carpeta només a Fossify Gallery, mentre que Oculta funciona a nivell del sistema i també oculta la carpeta d\'altres galeries. Funciona creant un fitxer «.nomedia» buit a la carpeta indicada, que després podreu eliminar amb qualsevol gestor de fitxers. Tingueu en compte que alguns dispositius no permeten amagar carpetes com ara Camera/Càmera, Screenshots/Captures de pantalla o Downloads/Descàrregues.</string>
+    <string name="exclude_folder_description">Això exclourà la selecció juntament amb les seves subcarpetes només de la Fossify Gallery. Podeu gestionar les carpetes excloses a la configuració.</string>
+    <string name="excluded_activity_placeholder">L\'exclusió de les carpetes es farà juntament amb les seves subcarpetes amagades només a la Fossify Gallery, però encara seran visibles en les altres aplicacions.
+\n
+\nSi també voleu amagar-les de les altres apps, utilitzeu la funció Amagar.</string>
+    <string name="faq_1_text">Primer heu de trobar la galeria predeterminada a la secció d\'Aplicacions de la configuració del dispositiu, busqueu un botó que digui alguna cosa com «Obre per defecte», feu-hi clic i seleccioneu «Neteja els valors per defecte». La propera vegada que intenteu obrir una imatge o un vídeo veureu un selector d\'aplicacions, on podreu seleccionar Fossify Gallery i convertir-la en l\'aplicació predeterminada.</string>
+    <string name="interval">Interval</string>
 </resources>
