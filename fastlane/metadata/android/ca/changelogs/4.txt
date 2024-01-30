@@ -1,0 +1,2 @@
+* S'ha eliminat la biblioteca propietària de panorames
+* S'han afegit algunes traduccions
