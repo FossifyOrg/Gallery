@@ -243,4 +243,12 @@
     <string name="faq_17_text">Ez már nem működik egy az Android 11-gyel érkezett rendszermódosítás miatt, az alkalmazás már nem tallózhatja a tényleges mappákat, az ún. MediaStore-ra támaszkodik az adatok lekéréséhez.</string>
     <string name="faq_18_title">Miért látok reklámokat videólejátszás során\?</string>
     <string name="faq_18_text">Az alkalmazásainkban egyáltalán nincsenek reklámok. Ha videólejátszás során látja őket, akkor valamilyen külső videólejátszót használhat. Próbálja megkeresni az alapértelmezett videólejátszót az eszközbeállításokban, majd futtassa az „Alapértelmezések törlése” lehetőséget. Amikor legközelebb videót játszana le, akkor az alkalmazásválasztót fogja látni, és kiválaszthatja a használandó alkalmazást.</string>
+    <string name="exclude_folder_description">Ez a kiválasztást az almappákkal együtt zárja ki a Fossify Galériából. A kizárt mappákat a Beállítások menüpontban kezelheti.</string>
+    <string name="faq_1_title">Hogyan állíthatom be a Fossify Galériát az alapértelmezett eszközgalériává?</string>
+    <string name="faq_5_text">A Kizárás megakadályozza, hogy a mappa csak a Fossify Galériában jelenjen meg, míg az Elrejtés rendszerszinten működik, és elrejti a mappát más galériák elől is. Úgy működik, hogy az adott mappában egy üres \".nomedia\" fájlt hoz létre, amelyet aztán bármelyik fájlkezelővel eltávolíthat. Vegye figyelembe, hogy egyes eszközök nem teszik lehetővé az olyan mappák elrejtését, mint a Kamera, a Képernyőképek és a Letöltések.</string>
+    <string name="excluded_activity_placeholder">A kizárt mappák az almappákkal együttesen csak a Fossify Galériában maradnak elrejtve, más alkalmazásokban továbbra is láthatók lesznek.
+\n
+\nHa el szeretné rejteni őket más alkalmazások elől is, használja az Elrejtés funkciót.</string>
+    <string name="wallpaper">Háttérkép</string>
+    <string name="faq_1_text">Először meg kell találnia az aktuálisan alapértelmezett galériát az Alkalmazások részében az eszközbeállítások között, keressen egy gombot, amely olyasmit ír, hogy \"Alapértelmezés szerinti megnyitás\", kattintson rá, majd válassza ki az \"Alapértelmezések törlése\" lehetőséget. Amikor legközelebb megpróbál megnyitni egy képet vagy videót, látnia kell egy alkalmazásválasztót, ahol kiválaszthatja a Fossify Galériát, és beállíthatja alapértelmezett alkalmazásnak.</string>
 </resources>
