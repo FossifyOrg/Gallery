@@ -1,2 +1,2 @@
 * Arranxo do zoom en imaxes de alta resolución
-* Engadida algunha tradución
+* Engadidas varias traducións

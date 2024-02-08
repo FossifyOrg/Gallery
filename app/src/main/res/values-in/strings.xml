@@ -20,7 +20,7 @@
     <string name="change_orientation">Ubah orientasi</string>
     <string name="force_portrait">Paksa potret</string>
     <string name="force_landscape">Paksa lanskap</string>
-    <string name="use_default_orientation">Gunakan orientasi default</string>
+    <string name="use_default_orientation">Gunakan orientasi bawaan</string>
     <string name="fix_date_taken">Perbaiki Tanggal Diambil</string>
     <string name="fixing">Memperbaiki…</string>
     <string name="dates_fixed_successfully">Tanggal berhasil diperbaiki</string>
@@ -198,7 +198,7 @@
     <string name="faq_3_text">Anda bisa menekan lama album tersebut dan pilih ikon Pin di menu tindakan, hal tersebut akan membuat album tetap berada di bagian paling atas daftar. Anda juga bisa menyematkan beberapa folder, item yang di-pin akan diurutkan berdasarkan metode urutan default.</string>
     <string name="faq_4_title">Bagaimana cara mempercepat laju video\?</string>
     <string name="faq_4_text">Anda dapat melakukannya dengan mengetuk dua kali sisi layar, atau mengetuk teks durasi saat ini atau durasi maksimal di dekat seekbar. Jika Anda mengaktifkan pembukaan video pada layar terpisah dalam pengaturan aplikasi, Anda juga dapat menggunakan gerakan horizontal.</string>
-    <string name="faq_5_title">Apa perbedaan antara menyembunyikan dan mengecualikan folder\?</string>
+    <string name="faq_5_title">Apa perbedaan antara menyembunyikan dan mengecualikan sebuah folder?</string>
     <string name="faq_6_title">Mengapa folder dengan gambar album musik atau stiker muncul\?</string>
     <string name="faq_6_text">Kadang anda melihat beberapa album yang tidak biasa muncul. Anda bisa dengan mudah menyembunyikannya dengan menekan lama dan pilih Kecualikan. Pada dialog berikutnya, anda lalu bisa memilih folder induk, yang akan mencegah album terkait muncul kembali.</string>
     <string name="faq_7_title">Ada folder berisi gambar namun tidak muncul, apa yang harus dilakukan\?</string>
@@ -224,4 +224,30 @@
     <string name="faq_17_text">Itu berhenti bekerja karena perubahan sistem yang datang dengan Android 11 juga, aplikasinya tidak dapat menelusuri folder nyata lagi, itu bergantung pada apa yang disebut MediaStore dalam mengambil data.</string>
     <string name="faq_18_title">Mengapa saya melihat iklan selama pemutaran video\?</string>
     <string name="faq_18_text">Aplikasi kami tidak memiliki iklan apa pun. Jika Anda melihatnya selama pemutaran video, Anda harus menggunakan beberapa pemutar video aplikasi lain. Coba temukan pemutar video default Anda di pengaturan perangkat, lalu lakukan \"Hapus default\" di atasnya. Saat berikutnya Anda memanggil beberapa maksud video, Anda akan melihat permintaan pemilih aplikasi, di mana Anda dapat memilih aplikasi apa yang ingin Anda gunakan.</string>
+    <string name="volume">Volume</string>
+    <string name="filter_media">Saring media</string>
+    <string name="exclude_folder_description">Tindakan ini akan mengecualikan pilihan beserta subfoldernya dari Galeri Fossify saja. Anda dapat mengelola folder yang dikecualikan di Pengaturan.</string>
+    <string name="excluded_activity_placeholder">Mengecualikan folder akan membuat folder tersebut bersama dengan subfoldernya tersembunyi hanya di Galeri Fossify, tetapi akan tetap terlihat di aplikasi lain.
+\n
+\nJika Anda ingin menyembunyikannya dari aplikasi lain, gunakan fungsi Sembunyikan.</string>
+    <string name="transform">Ubah</string>
+    <string name="draw">Gambar</string>
+    <string name="slideshow">Tampilan slide</string>
+    <string name="faq_1_title">Bagaimana cara menjadikan Galeri Fossify sebagai galeri bawaan untuk perangkat saya?</string>
+    <string name="resize_multiple_images">Ubah ukuran beberapa gambar sekaligus</string>
+    <string name="resize_factor_info">Ubah ukuran gambar sesuai persentase yang diberikan, nilainya harus antara 10 dan 90.</string>
+    <string name="faq_1_text">Pertama, Anda harus menemukan galeri bawaan saat ini di bagian Aplikasi pada pengaturan perangkat Anda, cari tombol yang bertuliskan \"Buka secara default\", klik tombol tersebut, lalu pilih \"Hapus default\". Saat berikutnya Anda akan mencoba membuka gambar atau video, Anda akan melihat pemilih aplikasi, di mana Anda dapat memilih Galeri Fossify dan menjadikannya aplikasi bawaan.</string>
+    <string name="faq_5_text">Kecualikan mencegah menampilkan folder hanya di Galeri Fossify, sementara Sembunyikan bekerja secara sistem dan menyembunyikan folder dari galeri lain juga. Ia bekerja dengan membuat berkas kosong bertajuk \".nomedia\" di folder yang ditentukan, yang kemudian dapat Anda hapus dengan pengelola berkas apa pun. Perhatikan bahwa beberapa perangkat tidak mengizinkan penyembunyian folder seperti Kamera, Tangkapan Layar, dan Unduhan.</string>
+    <string name="resize_factor">Ubah ukuran faktor</string>
+    <string name="resize_factor_error">Masukkan sebuah angka antara 10 dan 90</string>
+    <plurals name="failed_to_resize_images">
+        <item quantity="other">Gagal mengubah ukuran %d gambar</item>
+    </plurals>
+    <string name="images_resized_successfully">Ukuran gambar berhasil diubah</string>
+    <string name="crop">Potong</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="interval">Selang waktu</string>
+    <string name="slide">Geser</string>
+    <string name="by_folder">Folder</string>
+    <string name="cant_unhide_folder">Jika folder atau salah satu folder induknya memiliki titik di depan namanya, maka folder tersebut tersembunyi dan tidak dapat dimunculkan seperti ini. Anda harus menghapus titik dengan mengganti namanya.</string>
 </resources>

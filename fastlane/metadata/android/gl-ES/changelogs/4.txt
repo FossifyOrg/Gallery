@@ -1,2 +1,2 @@
 * Eliminación da biblioteca panorama non-libre
-* Engadida algunha tradución
+* Engadidas algunhas traducións

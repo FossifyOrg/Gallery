@@ -250,4 +250,6 @@
 \n
 \nAko ih želiš sakriti i od drugih aplikacija, koristi funkciju „Sakrij”.</string>
     <string name="slide">Prijelaz</string>
+    <string name="faq_1_text">Najprije moraš pronaći trenutačno zadanu galeriju u odjeljku aplikacija u postavkama tvog uređaja. Potraži gumb koji kaže nešto poput „Standardno otvori”, pritisni ga, a zatim odaberi „Očisti standardne postavke“. Kada sljedeći put pokušaš otvoriti sliku ili video vidjet ćeš birač aplikacija, gdje možeš odabrati aplikaciju „Fossify galerija” i postaviti je kao standardnu aplikaciju.</string>
+    <string name="faq_5_text">Opcija „Isključi” sprječava prikazivanje mape samo u Fossify galeriji, dok opcija „Sakrij” funkcionira za cijeli sustav te skriva mapu i od drugih galerija. Radi tako što stvara praznu datoteku „.nomedia” u zadnoj mapi, koju zatim možeš ukloniti s bilo kojim upravljačem datoteka. Imaj na umu da neki uređaji ne dopuštaju skrivanje mapa kao što su Kamera, Slike ekrana i Preuzimanja.</string>
 </resources>
