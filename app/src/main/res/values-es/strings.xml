@@ -36,7 +36,7 @@
     <string name="filter_media">Filtro de medios</string>
     <string name="images">Imágenes</string>
     <string name="videos">Vídeos</string>
-    <string name="gifs">Imagenes con animación</string>
+    <string name="gifs">Imágenes con animación</string>
     <string name="raw_images">Imágenes RAW</string>
     <string name="svgs">SVG</string>
     <string name="portraits">Retratos</string>
@@ -130,7 +130,7 @@
     <string name="do_not_group_files">No agrupar</string>
     <string name="by_folder">Carpeta</string>
     <string name="by_last_modified">Fecha de modificación</string>
-    <string name="by_last_modified_daily">Fecha de modificacion (Día)</string>
+    <string name="by_last_modified_daily">Fecha de modificación (Día)</string>
     <string name="by_last_modified_monthly">Fecha de modificación (Mes)</string>
     <string name="by_date_taken">Fecha de creación</string>
     <string name="by_date_taken_daily">Fecha de creación (día)</string>
@@ -211,7 +211,7 @@
     <string name="manage_bottom_actions">Administrar los botones de la parte inferior</string>
     <string name="toggle_favorite">Alternar favorito</string>
     <string name="toggle_file_visibility">Alternar visibilidad del archivo</string>
-    <string name="faq_2_title">He protegido la aplicación con una contraseña, pero la he olvidado. ¿Que puedo hacer\?</string>
+    <string name="faq_2_title">He protegido la aplicación con una contraseña, pero la he olvidado. ¿Qué puedo hacer\?</string>
     <string name="faq_2_text">Puede resolverlo de 2 maneras. Puede reinstalar la aplicación o encontrar la aplicación en la configuración de su dispositivo y seleccionar \"Borrar datos \". Restablecerá todas sus configuraciones, no eliminará ningún archivo multimedia.</string>
     <string name="faq_3_title">¿Cómo puedo hacer que un álbum siempre aparezca en la parte superior\?</string>
     <string name="faq_3_text">Puede mantener pulsado el álbum deseado y seleccionar el icono Pin en el menú de acción, que lo fijará en la parte superior. También puede anclar varias carpetas, los artículos fijados se ordenarán por el método de clasificación predeterminado.</string>
