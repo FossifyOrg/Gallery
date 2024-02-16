@@ -49,4 +49,14 @@
     <string name="restore_to_path">بازگرداندن به \'%s\'</string>
     <string name="toggle_favorite">نمایش دادن یا ندادن برگزیده ها</string>
     <string name="exclude_folder_description">این کار پوشه انتخاب شده را با زیر پوشه های آن تنها از گالری Fossify مستثنی می کند. شما می توانید پوشه های مستثنی شده را در تنظیمات مدیریت کنید.</string>
+    <string name="add_folder">افزودن پوشه</string>
+    <string name="width">پهنا</string>
+    <string name="height">درازا</string>
+    <string name="keep_aspect_ratio">نسبت ابعاد را حفظ کنید</string>
+    <string name="hidden_folders">پوشه های پنهان</string>
+    <string name="manage_hidden_folders">مدیریت پوشه های پنهان</string>
+    <string name="hidden_folders_placeholder">به نظر می رسد که هیچ پوشه ای که با فایل “.nomedia” پنهان شده باشد ندارید.</string>
+    <string name="include_folders">پوشه های شامل شده</string>
+    <string name="manage_included_folders">مدیریت پوشه های شامل شده</string>
+    <string name="resize_factor_error">شماره بین 10 تا 90 را وارد کنید</string>
 </resources>
