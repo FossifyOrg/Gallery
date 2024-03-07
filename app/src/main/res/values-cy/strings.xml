@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="share_resized">Rhannu fersiwn wedi\'i ailfeintio</string>
+    <string name="app_launcher_name">Oriel</string>
+    <string name="edit">Golygu</string>
+    <string name="open_camera">Agor camera</string>
+    <string name="hidden">(cudd)</string>
+    <string name="show_all">Dangos cynnwys o bob ffolder</string>
+    <string name="excluded">(wedi\'i allgáu)</string>
+    <string name="pin_folder">Pinio\'r ffolder</string>
+    <string name="unpin_folder">Dadbinio\'r ffolder</string>
+    <string name="all_folders">Pob ffolder</string>
+    <string name="other_folder">Ffolder arall</string>
+    <string name="show_on_map">Dangos ar fap</string>
+    <string name="unknown_location">Lleoliad anhysbys</string>
+    <string name="volume">Uchder sain</string>
+    <string name="brightness">Disgleirdeb</string>
+    <string name="lock_orientation">Cloi\'r gorweddiad</string>
+    <string name="unlock_orientation">Datgloi\'r gorweddiad</string>
+    <string name="change_orientation">Newid y gorweddiad</string>
+    <string name="force_portrait">Gorfodi darlun</string>
+    <string name="force_landscape">Gorfodi tirwedd</string>
+    <string name="use_default_orientation">Defnyddio gorweddiad diofyn</string>
+    <string name="fix_date_taken">Cywiro gwerth Dyddiad Wedi\'i Gymryd</string>
+    <string name="fixing">Yn cywiro…</string>
+    <string name="dates_fixed_successfully">Dyddiadau wedi\'u cywiro\'n llwyddiannus</string>
+    <string name="set_as_default_folder">Gosod fel ffolder ddiofyn</string>
+    <string name="unset_as_default_folder">Dad-osod fel ffolder ddiofyn</string>
+    <string name="filter_media">Hidlo cyfryngau</string>
+    <string name="images">Delweddau</string>
+    <string name="videos">Fideos</string>
+    <string name="raw_images">delweddau RAW</string>
+</resources>
