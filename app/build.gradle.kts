@@ -75,6 +75,10 @@ android {
         targetCompatibility = currentJavaVersionFromLibs
     }
 
+    dependenciesInfo {
+        includeInApk = false
+    }
+
     tasks.withType<KotlinCompile> {
         kotlinOptions.jvmTarget = project.libs.versions.app.build.kotlinJVMTarget.get()
     }
