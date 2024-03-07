@@ -406,7 +406,9 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         }
 
         window.decorView.setOnSystemUiVisibilityChangeListener { visibility ->
-            mIsFullScreen = if (isNougatPlus() && isInMultiWindowMode) {
+            mIsFullScreen = if (isUpsideDownCakePlus()) {
+                visibility and View.SYSTEM_UI_FLAG_LOW_PROFILE != 0
+            } else if (isNougatPlus() && isInMultiWindowMode) {
                 visibility and View.SYSTEM_UI_FLAG_LOW_PROFILE != 0
             } else if (visibility and View.SYSTEM_UI_FLAG_LOW_PROFILE == 0) {
                 false
