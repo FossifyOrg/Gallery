@@ -11,7 +11,7 @@
     <string name="show_all">Ansicht: Alle Medien</string>
     <string name="all_folders">Alle Medien</string>
     <string name="folder_view">Ansicht: Als Ordner</string>
-    <string name="other_folder">Ordner wählen</string>
+    <string name="other_folder">Ordnerwahl</string>
     <string name="show_on_map">Auf Karte zeigen</string>
     <string name="unknown_location">Adresse nicht bekannt</string>
     <string name="volume">Lautstärke</string>
