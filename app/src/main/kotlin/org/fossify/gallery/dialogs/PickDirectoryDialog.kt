@@ -159,6 +159,7 @@ class PickDirectoryDialog(
                 }
 
                 activity.runOnUiThread {
+                    allDirectories.clear()
                     gotDirectories(activity.addTempFolderIfNeeded(it))
                 }
             }
