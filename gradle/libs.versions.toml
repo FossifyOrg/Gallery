@@ -68,6 +68,7 @@ awebp = { module = "com.github.penfeizhou.android.animation:awebp", version.ref 
 glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glideCompiler" }
 zjupure-webpdecoder = { module = "com.github.zjupure:webpdecoder", version.ref = "zjupureWebpdecoder" }
 picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
+avif-integration = { group = "com.github.bumptech.glide", name = "avif-integration", version.ref = "glideCompiler" }
 [bundles]
 room = [
     "androidx-room-ktx",
