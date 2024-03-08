@@ -15,7 +15,7 @@
     <string name="show_on_map">Exibir no mapa</string>
     <string name="unknown_location">Localização desconhecida</string>
     <string name="brightness">Brilho</string>
-    <string name="lock_orientation">Travar orientação</string>
+    <string name="lock_orientation">Bloquear orientação</string>
     <string name="unlock_orientation">Destravar orientação</string>
     <string name="change_orientation">Alterar orientação</string>
     <string name="force_portrait">Forçar modo retrato</string>
@@ -248,4 +248,7 @@
     <string name="wallpaper">Papel de parede</string>
     <string name="faq_1_text">Primeiro você precisa encontrar a galeria padrão atual na seção Aplicativos das configurações do seu dispositivo, procurar um botão que diz algo como \"Abrir por padrão\", clicar nele e selecionar \"Limpar padrões\". Na próxima vez que você tentar abrir uma imagem ou vídeo, você verá um seletor de aplicativos, onde poderá selecionar Galeria Fossify e torná-la o aplicativo padrão.</string>
     <string name="faq_5_text">Excluir impede a exibição da pasta apenas na Galeria Fossify, enquanto Ocultar funciona em nível de sistema e oculta a pasta de outras galerias também. Ele funciona criando um arquivo “.nomedia” vazio na pasta fornecida, que você também pode remover com qualquer gerenciador de arquivos. Observe que alguns dispositivos não permitem ocultar pastas como Câmera, Capturas de tela e Downloads.</string>
+    <string name="gifs">GIFs</string>
+    <string name="svgs">SVGs</string>
+    <string name="volume">Volume</string>
 </resources>
