@@ -18,6 +18,7 @@ import androidx.media3.datasource.ContentDataSource
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DataSpec
 import androidx.media3.datasource.FileDataSource
+import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.SeekParameters
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
@@ -32,10 +33,7 @@ import org.fossify.gallery.databinding.PagerVideoItemBinding
 import org.fossify.gallery.extensions.config
 import org.fossify.gallery.extensions.hasNavBar
 import org.fossify.gallery.extensions.parseFileChannel
-import org.fossify.gallery.helpers.Config
-import org.fossify.gallery.helpers.FAST_FORWARD_VIDEO_MS
-import org.fossify.gallery.helpers.MEDIUM
-import org.fossify.gallery.helpers.SHOULD_INIT_FRAGMENT
+import org.fossify.gallery.helpers.*
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.views.MediaSideScroll
 import java.io.File
@@ -378,9 +376,15 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
 
         mPlayOnPrepared = true
 
+        val loadControl = DefaultLoadControl.Builder()
+            .setBufferDurationsMs(EXOPLAYER_MIN_BUFFER_MS, EXOPLAYER_MAX_BUFFER_MS, EXOPLAYER_MIN_BUFFER_MS, EXOPLAYER_MIN_BUFFER_MS)
+            .setPrioritizeTimeOverSizeThresholds(true)
+            .build()
+
         mExoPlayer = ExoPlayer.Builder(requireContext())
             .setMediaSourceFactory(DefaultMediaSourceFactory(requireContext()))
             .setSeekParameters(SeekParameters.CLOSEST_SYNC)
+            .setLoadControl(loadControl)
             .build()
             .apply {
                 if (mConfig.loopVideos && listener?.isSlideShowActive() == false) {
@@ -408,7 +412,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             override fun onPositionDiscontinuity(
                 oldPosition: Player.PositionInfo,
                 newPosition: Player.PositionInfo,
-                @Player.DiscontinuityReason reason: Int
+                @Player.DiscontinuityReason reason: Int,
             ) {
                 // Reset progress views when video loops.
                 if (reason == Player.DISCONTINUITY_REASON_AUTO_TRANSITION) {
