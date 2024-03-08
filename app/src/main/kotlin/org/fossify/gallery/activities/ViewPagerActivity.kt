@@ -10,14 +10,12 @@ import android.content.pm.ActivityInfo
 import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.content.res.Configuration
-import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Icon
 import android.os.Bundle
 import android.os.Handler
-import android.provider.MediaStore.Images
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
@@ -59,7 +57,10 @@ import kotlin.math.min
 
 @Suppress("UNCHECKED_CAST")
 class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, ViewPagerFragment.FragmentListener {
-    private val REQUEST_VIEW_VIDEO = 1
+    companion object {
+        private const val REQUEST_VIEW_VIDEO = 1
+        private const val SAVED_PATH = "current_path"
+    }
 
     private var mPath = ""
     private var mDirectory = ""
@@ -98,7 +99,9 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
         handlePermission(getPermissionToRequest()) {
             if (it) {
-                initViewPager()
+                initViewPager(
+                    savedPath = savedInstanceState?.getString(SAVED_PATH).orEmpty()
+                )
             } else {
                 toast(org.fossify.commons.R.string.no_storage_permissions)
                 finish()
@@ -284,22 +287,18 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         (binding.mediumViewerAppbar.layoutParams as RelativeLayout.LayoutParams).topMargin = statusBarHeight
     }
 
-    private fun initViewPager() {
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(SAVED_PATH, getCurrentPath())
+    }
+
+    private fun initViewPager(savedPath: String) {
         val uri = intent.data
         if (uri != null) {
-            var cursor: Cursor? = null
-            try {
-                val proj = arrayOf(Images.Media.DATA)
-                cursor = contentResolver.query(uri, proj, null, null, null)
-                if (cursor?.moveToFirst() == true) {
-                    mPath = cursor.getStringValue(Images.Media.DATA)
-                }
-            } finally {
-                cursor?.close()
-            }
+            mPath = savedPath.ifEmpty { getDataColumn(uri).orEmpty() }
         } else {
             try {
-                mPath = intent.getStringExtra(PATH) ?: ""
+                mPath = savedPath.ifEmpty { intent.getStringExtra(PATH).orEmpty() }
 
                 // make sure "Open Recycle Bin" works well with "Show all folders content"
                 mShowAll = config.showAll && (mPath.isNotEmpty() && !mPath.startsWith(recycleBinPath))
@@ -310,7 +309,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
             }
         }
 
-        if (intent.extras?.containsKey(REAL_FILE_PATH) == true) {
+        if (savedPath.isEmpty() && intent.extras?.containsKey(REAL_FILE_PATH) == true) {
             mPath = intent.extras!!.getString(REAL_FILE_PATH)!!
         }
 
@@ -1028,7 +1027,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                         model: Any,
                         target: Target<Bitmap>,
                         dataSource: DataSource,
-                        isFirstResource: Boolean
+                        isFirstResource: Boolean,
                     ): Boolean {
                         printHelper.printBitmap(path.getFilenameFromPath(), bitmap)
                         return false
