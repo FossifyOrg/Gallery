@@ -1,0 +1,6 @@
+* Fixed crash when playing videos.
+* Fixed slideshow on Android 14.
+* Added support for AVIF.
+* Fixed position reset after device rotation.
+* Fixed zooming screenshots when one to one double tap zoom enabled.
+* Added some translations
