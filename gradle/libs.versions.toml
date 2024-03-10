@@ -29,7 +29,7 @@ media3Exoplayer = "1.2.1"
 okhttp = "4.12.0"
 okio = "3.0.0"
 picasso = "2.71828"
-subsamplingScaleImageView = "9c43e61fdb"
+subsamplingScaleImageView = "d705c3c4ad"
 #build
 app-build-compileSDKVersion = "34"
 app-build-targetSDK = "33"
