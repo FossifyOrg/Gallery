@@ -245,4 +245,9 @@
     <string name="faq_18_title">Varför ser jag annonser under videouppspelning\?</string>
     <string name="faq_18_text">Våra appar har inga som helst annonser. Om du ser dem under videouppspelning använder du någon annan videospelare. Försök att hitta din standardvideospelare i enhetsinställningarna och gör sedan en \"Rensa standardinställningar\" på den. Nästa gång du vill öppna en video kommer du att se ett appväljarfönster, där du kan välja vilken app du vill använda.</string>
     <string name="wallpaper">Bakgrund</string>
+    <string name="excluded_activity_placeholder">Att exkludera mappar kommer göra de och deras undermappar dolda i Fossify Gallery, de kommer dock fortfarande vara synliga i andra appar.
+\n
+\nOn du vill dölja de från andra appar, använd Döljfunktionen.</string>
+    <string name="exclude_folder_description">Detta kommer att bara exkludera de valda mapparna och deras undermappar från Fossify Gallery. Du kan hantera exkludeerade mappar i Inställningar.</string>
+    <string name="faq_1_text">Först måste du hitta din enhets standardgalleri app i appsektionen i enhetsinställningarna. Leta efter efter en knapp som säger \"Systemstandard\", trycl på den och välj sedan rensa inställningar. Nästa gång du öppnar en bild eller videofil bör du se en appväljare där du kan väljs Fossify Galleri som göra den till systemstandard.</string>
 </resources>
