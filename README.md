@@ -22,7 +22,7 @@ Breathe easy, accidents happen! Fossify Gallery's built-in recycle bin lets you 
 Customize the look, feel, and functionality to match your style. From UI themes to function buttons, Fossify Gallery gives you the creative freedom you crave.
 
 **📷 UNIVERSAL FORMAT FREEDOM:**  
-JPEG, PNG, MP4, MKV, RAW, SVG, GIF, videos, and more – we've got your memories covered, in any format you choose. No restrictions, just limitless possibilities.
+JPEG, PNG, MP4, MKV, RAW, SVG, GIF, AVIF, videos, and more – we've got your memories covered, in any format you choose. No restrictions, just limitless possibilities.
 
 **✨ MATERIAL DESIGN WITH DYNAMIC THEMES:**  
 Experience the beauty of intuitive material design with dynamic themes. Want more? Dive into custom themes and make your gallery truly unique.
