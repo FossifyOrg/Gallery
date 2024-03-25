@@ -33,15 +33,15 @@
     <string name="reorder_by_dragging">Sürükleyerek klasörleri yeniden sırala</string>
     <string name="reorder_by_dragging_pro">Sürükleyerek klasörleri yeniden sırala (Pro)</string>
     <string name="restore_to_path">\'%s\' konumuna geri yükle</string>
-    <string name="filter_media">Medyayı filtrele</string>
+    <string name="filter_media">Medyayı süzgeçle</string>
     <string name="images">Resimler</string>
     <string name="videos">Videolar</string>
-    <string name="gifs">GIF\'ler</string>
+    <string name="gifs">GIFler</string>
     <string name="raw_images">RAW resimler</string>
-    <string name="svgs">SVG\'ler</string>
+    <string name="svgs">SVGler</string>
     <string name="portraits">Portreler</string>
-    <string name="no_media_with_filters">Seçilen filtrelerle hiçbir medya dosyası bulunamadı.</string>
-    <string name="change_filters_underlined"><u>Filtreleri değiştir</u></string>
+    <string name="no_media_with_filters">Seçilen süzgeçlerle hiçbir medya dosyası bulunamadı.</string>
+    <string name="change_filters_underlined"><u>Süzgeçleri değiştir</u></string>
     <string name="hide_folder_description">Bu işlev, klasöre bir \'.nomedia\' dosyası ekleyerek gizler, tüm alt klasörleri de gizler. Ayarlar\'dan \'Gizli ögeleri göster\' seçeneğini değiştirerek onları görebilirsiniz. Devam edilsin mi\?</string>
     <string name="exclude_folder_description">Bu, alt klasörleriyle birlikte seçimi yalnızca Fossify Galeriden hariç tutacaktır. Hariç tutulan klasörleri Ayarlar\'dan yönetebilirsiniz.</string>
     <string name="exclude_folder_parent">Bunun yerine bir üst dizin hariç tutulsun mu\?</string>
@@ -51,7 +51,7 @@
     <string name="hidden_folders">Gizli klasörler</string>
     <string name="manage_hidden_folders">Gizli klasörleri yönet</string>
     <string name="hidden_folders_placeholder">\".nomedia\" dosyasıyla gizlenmiş herhangi bir klasörünüz yok gibi görünüyor.</string>
-    <string name="hidden_all_files">Gizli dosyaları görmek için uygulamaya Tüm Dosyalar erişimi vermeniz gerekir, aksi takdirde çalışamaz.</string>
+    <string name="hidden_all_files">Gizli dosyaları görmek için uygulamaya Tüm Dosyalar erişimi vermeniz gerekir, aksi takdirde çalışmaz.</string>
     <string name="cant_unhide_folder">Bir klasörün veya üst klasörlerinden birinin adından önce bir nokta varsa, bu klasör gizlidir ve bu şekilde gizliliği kaldırılamaz. Yeniden adlandırarak noktayı kaldırmanız gerekir.</string>
     <string name="include_folders">Dahil edilen klasörler</string>
     <string name="manage_included_folders">Dahil edilen klasörleri yönet</string>
@@ -71,7 +71,7 @@
     <string name="resize_factor_error">10 ile 90 arasında bir sayı girin</string>
     <plurals name="failed_to_resize_images">
         <item quantity="one">%d resim yeniden boyutlandırılamadı</item>
-        <item quantity="other">%d resim yeniden boyutlandırılamadı</item>
+        <item quantity="other">%d resimler yeniden boyutlandırılamadı</item>
     </plurals>
     <string name="images_resized_successfully">Resimler yeniden boyutlandırıldı</string>
     <string name="editor">Düzenleyici</string>
@@ -102,7 +102,7 @@
     <string name="flip">Çevir</string>
     <string name="flip_horizontally">Yatay olarak çevir</string>
     <string name="flip_vertically">Dikey olarak çevir</string>
-    <string name="free_aspect_ratio">Serbest</string>
+    <string name="free_aspect_ratio">Ücretsiz</string>
     <string name="other_aspect_ratio">Diğer</string>
     <string name="wallpaper">Duvar kağıdı</string>
     <string name="set_as_wallpaper">Duvar kağıdı olarak ayarla</string>
@@ -120,7 +120,7 @@
     <string name="interval">Süre</string>
     <string name="include_photos">Fotoğrafları dahil et</string>
     <string name="include_videos">Videoları dahil et</string>
-    <string name="include_gifs">GIF\'leri dahil et</string>
+    <string name="include_gifs">GIFleri dahil et</string>
     <string name="random_order">Rastgele sırala</string>
     <string name="move_backwards">Geriye doğru git</string>
     <string name="loop_slideshow">Slayt gösterisini tekrarla</string>
@@ -144,12 +144,12 @@
     <string name="by_extension">Uzantı</string>
     <string name="show_file_count_section_header">Bölüm başlıklarında dosya sayısını göster</string>
     <string name="grouping_and_sorting">Lütfen gruplandırmanın ve sıralamanın 2 bağımsız alan olduğunu unutmayın</string>
-    <string name="folder_on_widget">Widget\'ta gösterilen klasör:</string>
+    <string name="folder_on_widget">Bileşende gösterilen klasör:</string>
     <string name="show_folder_name">Klasör adını göster</string>
     <string name="autoplay_videos">Videoları otomatik oynat</string>
     <string name="remember_last_video_position">Son video oynatma konumunu hatırla</string>
     <string name="loop_videos">Videoları tekrarla</string>
-    <string name="animate_gifs">Küçük resimlerdeki GIF\'leri hareketlendir</string>
+    <string name="animate_gifs">Küçük resimlerdeki GIFleri hareketlendir</string>
     <string name="max_brightness">Tam ekran medya görüntülerken maksimum parlaklık</string>
     <string name="crop_thumbnails">Küçük resimleri karelere kırp</string>
     <string name="show_thumbnail_video_duration">Video sürelerini göster</string>
