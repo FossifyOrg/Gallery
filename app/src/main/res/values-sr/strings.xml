@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">Галерија</string>
-    <string name="edit">Уредити</string>
+    <string name="edit">Уреди</string>
     <string name="open_camera">Отвори камеру</string>
     <string name="hidden">(скривено)</string>
     <string name="pin_folder">Прикачи фасциклу</string>
