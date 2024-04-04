@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">相簿</string>
+    <string name="app_launcher_name">圖片庫</string>
     <string name="edit">編輯</string>
     <string name="open_camera">開啟相機</string>
     <string name="hidden">(隱藏)</string>
-    <string name="excluded">(已排除)</string>
+    <string name="excluded">(排除)</string>
     <string name="pin_folder">釘選資料夾</string>
     <string name="unpin_folder">取消釘選資料夾</string>
-    <string name="pin_to_the_top">釘選在頂端</string>
+    <string name="pin_to_the_top">釘選至頂部</string>
     <string name="show_all">顯示全部資料夾內容</string>
     <string name="all_folders">全部資料夾</string>
-    <string name="folder_view">切換成資料夾檢視</string>
+    <string name="folder_view">切換為資料夾檢視</string>
     <string name="other_folder">其他資料夾</string>
     <string name="show_on_map">在地圖上顯示</string>
     <string name="unknown_location">未知的位置</string>
@@ -23,11 +23,11 @@
     <string name="force_landscape">強制橫向</string>
     <string name="use_default_orientation">使用預設方向</string>
     <string name="fix_date_taken">修復拍攝日期數值</string>
-    <string name="fixing">修復中…</string>
-    <string name="dates_fixed_successfully">日期修復成功</string>
+    <string name="fixing">正在修復…</string>
+    <string name="dates_fixed_successfully">日期修復完成</string>
     <string name="no_date_takens_found">未發現拍攝日期數值</string>
-    <string name="share_resized">分享調整大小的版本</string>
-    <string name="switch_to_file_search">檔案搜尋目標切換成全部的可見資料夾</string>
+    <string name="share_resized">分享調整大小後的版本</string>
+    <string name="switch_to_file_search">搜尋所有可見資料夾</string>
     <string name="set_as_default_folder">設為預設資料夾</string>
     <string name="unset_as_default_folder">取消設為預設資料夾</string>
     <string name="reorder_by_dragging">透過拖曳來重新排序資料夾</string>
@@ -61,7 +61,7 @@
     <string name="height">高度</string>
     <string name="keep_aspect_ratio">保持長寬比</string>
     <string name="invalid_values">請輸入有效的解析度</string>
-    <string name="resize_multiple_images">批量調整圖片大小</string>
+    <string name="resize_multiple_images">批次調整圖片大小</string>
     <string name="resize_factor">調整比例</string>
     <string name="resize_factor_info">請將圖片大小調整至指定百分比，數值範圍為 10 到 90。</string>
     <string name="resize_factor_error">請輸入 10 到 90 之間的數值</string>
@@ -102,7 +102,7 @@
     <string name="set_as_wallpaper">設為桌布</string>
     <string name="set_as_wallpaper_failed">設為桌布失敗</string>
     <string name="set_as_wallpaper_with">用其他程式設為桌布:</string>
-    <string name="setting_wallpaper">桌布設定中…</string>
+    <string name="setting_wallpaper">正在設定桌布…</string>
     <string name="wallpaper_set_successfully">成功設為桌布</string>
     <string name="portrait_aspect_ratio">直向長寬比</string>
     <string name="landscape_aspect_ratio">橫向長寬比</string>
@@ -242,4 +242,5 @@
     <string name="faq_17_text">因 Android 11 的系統變更，這項功能無法再運作。app 沒辦法瀏覽實際的資料夾，而是透過所謂的 MediaStorage 來擷取資料。</string>
     <string name="faq_18_title">為什麼我在播放影片時看到廣告？</string>
     <string name="faq_18_text">我們的應用程式完全沒有廣告。如果您在播放影片時看到它們，那麼您一定是在使用其他應用程式的影片播放器。嘗試在裝置設定中找到您的預設影片播放器，然後對其進行清除其預設值。下次您嘗試播放影片時，系統會提示您選擇應用程式，您可以在此選擇您想要使用的影片播放器。</string>
+    <string name="wallpaper">桌布</string>
 </resources>
