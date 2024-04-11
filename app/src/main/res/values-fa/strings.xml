@@ -45,9 +45,9 @@
     <string name="autoplay_videos">پخش خودکار ویدیو‌ها</string>
     <string name="remember_last_video_position">آخرین موقعیت پخش ویدیو را به‌ خاطر بسپار</string>
     <string name="excluded">(شامل نمی‌شود)</string>
-    <string name="exclude_folder_parent">در عوض یک پوشه منشا را مستثنی می‌کنید؟</string>
+    <string name="exclude_folder_parent">در عوض یک پوشه منشا را مستثنا می‌کنید؟</string>
     <string name="restore_to_path">بازگرداندن به \'%s\'</string>
-    <string name="toggle_favorite">نمایش دادن یا ندادن برگزیده ها</string>
+    <string name="toggle_favorite">نمایش دادن یا ندادن برگزیده‌ها</string>
     <string name="exclude_folder_description">این کار پوشه انتخاب شده را با زیر پوشه های آن تنها از گالری Fossify مستثنی می کند. شما می توانید پوشه های مستثنی شده را در تنظیمات مدیریت کنید.</string>
     <string name="add_folder">افزودن پوشه</string>
     <string name="width">پهنا</string>
