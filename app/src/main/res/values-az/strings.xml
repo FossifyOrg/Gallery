@@ -6,4 +6,5 @@
     <string name="hidden">(gizli)</string>
     <string name="pin_folder">Pin qovluğu</string>
     <string name="unpin_folder">Unpin qovluğu</string>
+    <string name="toggle_favorite">Sevimlini göstər/gizlət</string>
 </resources>

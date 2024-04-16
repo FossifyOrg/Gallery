@@ -243,7 +243,7 @@
     <string name="svgs">SVGs</string>
     <string name="faq_1_text">Als Erstes musst du in den Geräteeinstellungen unter \"Apps\" die derzeitige Standardgalerie finden. Suche nach einer Schaltfläche mit der Aufschrift „Standardmäßig öffnen“, klicke darauf und wähle dann „Standardeinstellungen löschen“ aus. Beim nächsten Öffnen eines Bildes oder Videos, sollte eine App-Auswahl angezeigt werden, in der du Fossify Gallery auswählen und zur Standard-App machen kannst.</string>
     <string name="exclude_folder_description">Dadurch werden die ausgewählten Ordner mitsamt ihren Unterordnern von Fossify Gallery ausgeschlossen. Ausgeschlossene Ordner können in den Einstellungen verwaltet werden.</string>
-    <string name="wallpaper">Wallpaper</string>
+    <string name="wallpaper">Hintergrundbild</string>
     <string name="animation">Animation</string>
     <string name="gifs">GIFs</string>
     <string name="videos">Videos</string>

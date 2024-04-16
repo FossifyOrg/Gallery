@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Galeria Fossify</string>
+    <string name="app_launcher_name">Galeria</string>
     <string name="edit">Editar</string>
     <string name="open_camera">Abrir câmera</string>
     <string name="hidden">(oculto)</string>
@@ -26,7 +26,7 @@
     <string name="dates_fixed_successfully">Datas corrigidas com sucesso</string>
     <string name="no_date_takens_found">Nenhum valor de data foi encontrado</string>
     <string name="share_resized">Compartilhar uma versão redimensionada</string>
-    <string name="switch_to_file_search">Alternar para a pesquisa de arquivos em todas as pastas visíveis</string>
+    <string name="switch_to_file_search">Alternar para pesquisa de arquivos em todas as pastas visíveis</string>
     <string name="set_as_default_folder">Definir como pasta padrão</string>
     <string name="unset_as_default_folder">Indefinir como pasta padrão</string>
     <string name="reorder_by_dragging">Reordenar as pastas ao arrastar</string>
@@ -60,7 +60,7 @@
     <string name="invalid_values">Digite uma resolução válida</string>
     <string name="resize_multiple_images">Redimensionar várias imagens</string>
     <string name="resize_factor">Fator de redimensionamento</string>
-    <string name="resize_factor_info">Redimensiona as imagens para a porcentagem fornecida; o valor deve estar entre 10 e 90.</string>
+    <string name="resize_factor_info">Redimensiona imagens para porcentagem fornecida; o valor deve estar entre 10 e 90.</string>
     <string name="resize_factor_error">Digite um número entre 10 e 90</string>
     <plurals name="failed_to_resize_images">
         <item quantity="one">Falha ao redimensionar %d imagem</item>
@@ -134,7 +134,7 @@
     <string name="by_date_taken_monthly">Data da foto (por mês)</string>
     <string name="by_file_type">Tipo de arquivo</string>
     <string name="by_extension">Extensão</string>
-    <string name="show_file_count_section_header">Mostra a contagem de arquivos nos cabeçalhos das seções</string>
+    <string name="show_file_count_section_header">Mostrar contagem de arquivos nos cabeçalhos das seções</string>
     <string name="grouping_and_sorting">Por favor, lembre-se que o agrupamento e classificação são configurados por dois campos independentes</string>
     <string name="folder_on_widget">Pasta exibida no widget:</string>
     <string name="show_folder_name">Exibir nome da pasta</string>
@@ -251,4 +251,5 @@
     <string name="gifs">GIFs</string>
     <string name="svgs">SVGs</string>
     <string name="volume">Volume</string>
+    <string name="editor">Editor</string>
 </resources>

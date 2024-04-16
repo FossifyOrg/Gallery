@@ -25,7 +25,7 @@
     <string name="no_image_editor_found">Рэдактар малюнкаў не знойдзены</string>
     <string name="show_highest_quality">Паказаць выявы ў максімальна магчымай якасці</string>
     <string name="show_recycle_bin_last">Паказаць сметніцу ў якасці апошняга элемента на галоўным экране</string>
-    <string name="allow_down_gesture">Дазволіць закрыццё поўнаэкраннага рэжыму жэстам уніз</string>
+    <string name="allow_down_gesture">Дазволіць закрыццё поўнаэкраннага рэжыму жэстам ўніз</string>
     <string name="allow_one_to_one_zoom">Дазволіць павелічэнне 1:1 двума падвойнымі націсканнямі</string>
     <string name="show_notch">Пакажыце выемку, калі яна ёсць</string>
     <string name="faq_3_title">Як я магу зрабіць так, каб альбом заўсёды з\'яўляўся ўверсе\?</string>
@@ -71,13 +71,13 @@
     <string name="exclude_folder_parent">Выключыць аднаго з бацькоў\?</string>
     <string name="no_media_with_filters">З выбранымі фільтрамі не знойдзены медыяфайлы.</string>
     <string name="change_filters_underlined"><u>Змяніць фільтры</u></string>
-    <string name="hide_folder_description">Гэтая функцыя хавае тэчку, дадаючы ў яе файл\'.nomedia\' , ён таксама схавае ўсе укладзеныя тэчкі. Вы можаце ўбачыць іх, пераключыўшы опцыю \"Паказваць схаваныя элементы\" ў наладах. Працягваць?</string>
+    <string name="hide_folder_description">Гэтая функцыя хавае тэчку, дадаючы ў яе файл\".nomedia\"; ён таксама схавае ўсе ўкладзеныя тэчкі. Вы можаце ўбачыць іх, пераключыўшы опцыю \"Паказваць схаваныя элементы\" ў наладах. Працягваць?</string>
     <string name="hidden_folders">Схаваныя тэчкі</string>
     <string name="manage_hidden_folders">Кіраванне схаванымі папкамі</string>
     <string name="include_folders">Ўключаныя тэчкі</string>
     <string name="manage_included_folders">Кіраванне ўключанымі папкамі</string>
     <string name="add_folder">Дадаць папку</string>
-    <string name="included_activity_placeholder">Калі ў вас ёсць некалькі тэчак, якія ўтрымліваюць носьбіты, але не былі распазнаныя дадаткам, вы можаце дадаць іх уручную тут.
+    <string name="included_activity_placeholder">Калі ў вас ёсць некалькі тэчак, якія ўтрымліваюць носьбіты, але не былі распазнаныя дадаткам, вы можаце дадаць іх ўручную тут.
 \n
 \nДаданне некаторых элементаў сюды не прывядзе да выключэння якой-небудзь іншай тэчкі.</string>
     <string name="hidden_folders_placeholder">Здаецца, у вас няма тэчак, схаваных з файлам \".nomedia\".</string>
@@ -152,7 +152,7 @@
     <string name="by_folder">Папка</string>
     <string name="by_file_type">Тып файла</string>
     <string name="by_extension">Пашырэнне</string>
-    <string name="show_file_count_section_header">Паказаць колькасць файлаў у загалоўках раздзелаў</string>
+    <string name="show_file_count_section_header">Паказаць колькасць файлаў ў загалоўках раздзелаў</string>
     <string name="grouping_and_sorting">Звярніце ўвагу, што групоўка і сартаванне - гэта 2 незалежныя палі</string>
     <string name="folder_on_widget">Папка, якая адлюстроўваецца ў віджэце:</string>
     <string name="show_media_count">Паказваць колькасць мультымедыя папкі ў галоўным праглядзе</string>
@@ -164,11 +164,11 @@
     <string name="by_date_taken_monthly">Дата здымкі (месяц)</string>
     <string name="show_extended_details">Паказаць пашыраныя звесткі на поўнаэкранным рэжыме</string>
     <string name="manage_extended_details">Кіраванне пашыранымі дэталямі</string>
-    <string name="one_finger_zoom">Дазволіць маштабаванне адным пальцам у поўнаэкранным рэжыме</string>
+    <string name="one_finger_zoom">Дазволіць маштабаванне адным пальцам ў поўнаэкранным рэжыме</string>
     <string name="allow_instant_change">Дазвольце імгненна мяняць медыя, націскаючы па баках экрана</string>
     <string name="allow_deep_zooming_images">Дазволіць глыбокае маштабаванне малюнкаў</string>
     <string name="hide_extended_details">Схаваць пашыраныя звесткі, калі радок стану схаваны</string>
-    <string name="show_at_bottom">Паказаць некаторыя кнопкі дзеянняў унізе экрана</string>
+    <string name="show_at_bottom">Паказаць некаторыя кнопкі дзеянняў ўнізе экрана</string>
     <string name="show_folder_name">Паказваць назву папкі</string>
     <string name="autoplay_videos">Аўтаматычнае прайграванне відэа</string>
     <string name="remember_last_video_position">Запомніць апошнюю пазіцыю прайгравання відэа</string>
@@ -178,7 +178,7 @@
     <string name="screen_rotation_system_setting">Налада сістэмы</string>
     <string name="screen_rotation_device_rotation">Паварот прылады</string>
     <string name="screen_rotation_aspect_ratio">Суадносіны бакоў</string>
-    <string name="black_background_at_fullscreen">Чорны фон у поўнаэкранным рэжыме</string>
+    <string name="black_background_at_fullscreen">Чорны фон ў поўнаэкранным рэжыме</string>
     <string name="scroll_thumbnails_horizontally">Пракруціць эскізы па гарызанталі</string>
     <string name="max_brightness">Максімальная яркасць пры праглядзе поўнаэкраннага мультымедыя</string>
     <string name="hide_system_ui_at_fullscreen">Аўтаматычна хаваць сістэмны інтэрфейс у поўнаэкранным рэжыме</string>
@@ -246,4 +246,11 @@
     <string name="faq_17_title">Чаму я больш не магу ўключыць адсутныя папкі\?</string>
     <string name="faq_18_text">Ў нашых праграмах наогул няма рэкламы. Калі вы бачыце іх падчас прайгравання відэа, вы, павінна быць, карыстаецеся відэаплэер якой-небудзь іншай праграмы. Паспрабуйце знайсці свой відэаплэер па змаўчанні ў наладах прылады, затым выканаеце для яго \"ачысціць налады па змаўчанні\". Ў наступны раз, калі вы выклічаце якое-небудзь відэа-намер, вы ўбачыце запрашэнне выбару праграмы, ў якой вы можаце выбраць, якое дадатак вы хочаце выкарыстоўваць.</string>
     <string name="exclude_folder_description">Гэта выключыць абраны фрагмент разам з ягонымі падтэчкамі толькі з галерэі Fossify. Кіраваць выключанымі тэчкамі можна ў наладах.</string>
+    <string name="excluded_activity_placeholder">Выключэнне папак зробіць іх, разам з іх ўкладзенымі папкамі, схаванымі толькі ў галерэі Fossify, яны па-ранейшаму будуць бачныя ў іншых праграмах.
+\n
+\nКалі вы хочаце схаваць іх і ад іншых прыкладанняў, скарыстайцеся функцыяй «Схаваць».</string>
+    <string name="faq_1_title">Як зрабіць галерэю Fossify галерэяй па змаўчанні на прыладзе?</string>
+    <string name="faq_5_text">«Выключыць» прадухіляе паказ папкі толькі ў галерэі Fossify, а «Схаваць» працуе з сістэмай і таксама хавае папку ад іншых галерэй. Ён працуе шляхам стварэння пустога файла \".nomedia\" ў гэтай тэчцы, які потым можна выдаліць з дапамогай любога файлавага мэнэджара. Звярніце ўвагу, што некаторыя прылады не дазваляюць хаваць такія папкі, як камера, скрыншоты і загрузкі.</string>
+    <string name="wallpaper">Шпалеры</string>
+    <string name="faq_1_text">Спачатку вам трэба знайсці бягучую галерэю па змаўчанні ў раздзеле «Праграмы» налад вашай прылады, знайсці кнопку з надпісам «Адкрыць па змаўчанні», націснуць на яе, а затым выбраць «Ачысціць налады па змаўчанні». Ў наступны раз, калі вы паспрабуеце адкрыць малюнак або відэа, вы павінны ўбачыць інструмент выбару праграм, ў якім вы зможаце выбраць галерэю Fossify і зрабіць яе праграмай па змаўчанні.</string>
 </resources>
