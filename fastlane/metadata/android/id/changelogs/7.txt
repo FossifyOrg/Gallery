@@ -1,0 +1,2 @@
+* Memperbaiki gambar kecil hitam untuk beberapa gambar.
+* Menambahkan beberapa terjemahan
