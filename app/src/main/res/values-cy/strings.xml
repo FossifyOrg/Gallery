@@ -65,4 +65,5 @@
     <string name="set_as_wallpaper_failed">Wedi methu gosod fel papur wal</string>
     <string name="set_as_wallpaper_with">Gosod fel papur wal gyda:</string>
     <string name="setting_wallpaper">Yn gosod y papur wal…</string>
+    <string name="group_by">Grwpio yn ôl</string>
 </resources>
