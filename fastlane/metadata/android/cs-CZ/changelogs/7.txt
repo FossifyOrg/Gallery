@@ -1,0 +1,2 @@
+* Opraveny černé náhledy u některých obrázků.
+* Přidány překlady
