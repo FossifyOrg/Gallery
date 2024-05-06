@@ -1,2 +1,2 @@
-* Eliminado falso mensaje de aplicación al utilizar el editor.
-* Añadidas algunas traducciones
+* Se eliminó el mensaje incorrecto de la aplicación al usar el editor.
+* Se agregaron algunas traducciones

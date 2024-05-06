@@ -1,6 +1,22 @@
 Changelog
 ==========
 
+Version 1.1.3 *(2024-04-16)*
+----------------------------
+
+* Fixed black thumbnails for some images.
+* Added some translations
+
+Version 1.1.2 *(2024-03-10)*
+----------------------------
+
+* Fixed crash when playing videos.
+* Fixed slideshow on Android 14.
+* Added support for AVIF.
+* Fixed position reset after device rotation.
+* Fixed zooming screenshots when one to one double tap zoom enabled.
+* Added some translations
+
 Version 1.1.1 *(2024-01-10)*
 ----------------------------
 

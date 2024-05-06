@@ -1,5 +1,6 @@
 package org.fossify.gallery.extensions
 
+import android.annotation.SuppressLint
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Context
@@ -472,8 +473,15 @@ fun Context.getFolderNameFromPath(path: String): String {
 }
 
 fun Context.loadImage(
-    type: Int, path: String, target: MySquareImageView, horizontalScroll: Boolean, animateGifs: Boolean, cropThumbnails: Boolean,
-    roundCorners: Int, signature: ObjectKey, skipMemoryCacheAtPaths: ArrayList<String>? = null
+    type: Int,
+    path: String,
+    target: MySquareImageView,
+    horizontalScroll: Boolean,
+    animateGifs: Boolean,
+    cropThumbnails: Boolean,
+    roundCorners: Int,
+    signature: ObjectKey,
+    skipMemoryCacheAtPaths: ArrayList<String>? = null,
 ) {
     target.isHorizontalScrolling = horizontalScroll
     if (type == TYPE_SVGS) {
@@ -505,6 +513,7 @@ fun Context.getPathLocation(path: String): Int {
     }
 }
 
+@SuppressLint("CheckResult")
 fun Context.loadImageBase(
     path: String,
     target: MySquareImageView,
@@ -514,7 +523,7 @@ fun Context.loadImageBase(
     skipMemoryCacheAtPaths: ArrayList<String>? = null,
     animate: Boolean = false,
     tryLoadingWithPicasso: Boolean = false,
-    crossFadeDuration: Int = 300
+    crossFadeDuration: Int = THUMBNAIL_FADE_DURATION_MS,
 ) {
     val options = RequestOptions()
         .signature(signature)
@@ -531,8 +540,9 @@ fun Context.loadImageBase(
         options.optionalTransform(WebpDrawable::class.java, WebpDrawableTransformation(FitCenter()))
     }
 
-    // animation is only supported without rounded corners
-    if (animate && roundCorners == ROUNDED_CORNERS_NONE) {
+    // animation is only supported without rounded corners and the file must be a GIF or WEBP.
+    // Glide doesn't support animated AVIF: https://bumptech.github.io/glide/int/avif.html
+    if (animate && roundCorners == ROUNDED_CORNERS_NONE && (path.isGif() || path.isWebP())) {
         // this is required to make glide cache aware of changes
         options.decode(Drawable::class.java)
     } else {
@@ -572,7 +582,7 @@ fun Context.loadImageBase(
                 model: Any,
                 targetBitmap: Target<Drawable>,
                 dataSource: DataSource,
-                isFirstResource: Boolean
+                isFirstResource: Boolean,
             ): Boolean {
                 return false
             }
@@ -582,7 +592,14 @@ fun Context.loadImageBase(
     builder.into(target)
 }
 
-fun Context.loadSVG(path: String, target: MySquareImageView, cropThumbnails: Boolean, roundCorners: Int, signature: ObjectKey) {
+fun Context.loadSVG(
+    path: String,
+    target: MySquareImageView,
+    cropThumbnails: Boolean,
+    roundCorners: Int,
+    signature: ObjectKey,
+    crossFadeDuration: Int = THUMBNAIL_FADE_DURATION_MS,
+) {
     target.scaleType = if (cropThumbnails) ImageView.ScaleType.CENTER_CROP else ImageView.ScaleType.FIT_CENTER
 
     val options = RequestOptions().signature(signature)
@@ -591,7 +608,7 @@ fun Context.loadSVG(path: String, target: MySquareImageView, cropThumbnails: Boo
         .listener(SvgSoftwareLayerSetter())
         .load(path)
         .apply(options)
-        .transition(DrawableTransitionOptions.withCrossFade())
+        .transition(DrawableTransitionOptions.withCrossFade(crossFadeDuration))
 
     if (roundCorners != ROUNDED_CORNERS_NONE) {
         val cornerSize =
@@ -636,7 +653,7 @@ fun Context.getCachedDirectories(
     getImagesOnly: Boolean = false,
     forceShowHidden: Boolean = false,
     forceShowExcluded: Boolean = false,
-    callback: (ArrayList<Directory>) -> Unit
+    callback: (ArrayList<Directory>) -> Unit,
 ) {
     ensureBackgroundThread {
         try {
@@ -988,8 +1005,13 @@ fun Context.addPathToDB(path: String) {
 }
 
 fun Context.createDirectoryFromMedia(
-    path: String, curMedia: ArrayList<Medium>, albumCovers: ArrayList<AlbumCover>, hiddenString: String,
-    includedFolders: MutableSet<String>, getProperFileSize: Boolean, noMediaFolders: ArrayList<String>
+    path: String,
+    curMedia: ArrayList<Medium>,
+    albumCovers: ArrayList<AlbumCover>,
+    hiddenString: String,
+    includedFolders: MutableSet<String>,
+    getProperFileSize: Boolean,
+    noMediaFolders: ArrayList<String>,
 ): Directory {
     val OTGPath = config.OTGPath
     val grouped = MediaFetcher(this).groupMedia(curMedia, path)

@@ -1,0 +1,2 @@
+* Fixed black thumbnails for some images.
+* Added some translations
