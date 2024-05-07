@@ -48,6 +48,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private var mIsPanorama = false
     private var mIsFragmentVisible = false
     private var mIsDragged = false
+    private var mIsLongPressed = false
     private var mWasVideoStarted = false
     private var mWasPlayerInited = false
     private var mWasLastPositionRestored = false
@@ -57,7 +58,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private var mDuration = 0
     private var mPositionWhenInit = 0
     private var mPositionAtPause = 0L
-    private var mLastPlaybackSpeedSaved = 0F
+    private var mLastPlaybackSpeedSaved = 1f
+    private var mLongTouchDownY = 0f
     var mIsPlaying = false
 
     private var mExoPlayer: ExoPlayer? = null
@@ -148,7 +150,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 override fun onLongPress(e: MotionEvent) {
                     if (mWasVideoStarted) {
                         mLastPlaybackSpeedSaved = mExoPlayer?.playbackParameters!!.speed
-                        handleLongTap(e.action)
+                        mLongTouchDownY = e.rawY
+                        mIsLongPressed = true
                     }
                 }
             })
@@ -162,9 +165,12 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 if (videoSurfaceFrame.controller.state.zoom == 1f) {
                     handleEvent(event)
                 }
-                if (event.action == MotionEvent.ACTION_UP && mLastPlaybackSpeedSaved != 0F) {
-                    handleLongTap(event.action)
-                    mLastPlaybackSpeedSaved = 0F
+                if (event.action == MotionEvent.ACTION_MOVE && mIsLongPressed) {
+                    handlePlaybackSpeed(event)
+                }
+                if ((event.action == MotionEvent.ACTION_UP || event.action == MotionEvent.ACTION_CANCEL) && mIsLongPressed) {
+                    mIsLongPressed = false
+                    mLastPlaybackSpeedSaved = mExoPlayer?.playbackParameters!!.speed
                 }
 
                 gestureDetector.onTouchEvent(event)
@@ -466,12 +472,11 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         }
     }
 
-    private fun handleLongTap(event: Int) {
-        if (event == MotionEvent.ACTION_DOWN) {
-            mExoPlayer?.setPlaybackSpeed(2.0f)
-        } else if (event == MotionEvent.ACTION_UP) {
-            mExoPlayer?.setPlaybackSpeed(mLastPlaybackSpeedSaved)
-        }
+    private fun handlePlaybackSpeed(event: MotionEvent) {
+        val diffY = mLongTouchDownY - event.rawY
+        val speed = (diffY * 0.002f + mLastPlaybackSpeedSaved).coerceIn(0.25f, 5f)
+        val roundedSpeed = (speed / 0.25f + 0.125f).toInt() * 0.25f
+        mExoPlayer?.setPlaybackSpeed(roundedSpeed)
     }
 
     private fun checkExtendedDetails() {
