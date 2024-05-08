@@ -18,16 +18,51 @@
         android:src="@drawable/ic_prev_outline_vector"
         android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/video_toggle_play_pause"
-        android:layout_width="@dimen/video_player_play_pause_size"
+    <RelativeLayout
+        android:id="@+id/toggle_play_pause_icon_holder"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/video_player_play_pause_size"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_margin"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:padding="@dimen/small_margin"
-        android:src="@drawable/ic_pause_outline_vector"
-        android:visibility="invisible" />
+        android:layout_marginTop="@dimen/activity_margin">
+
+        <TextView
+            android:id="@+id/video_playback_speed_slow"
+            android:layout_width="@dimen/video_player_playback_speed_width"
+            android:layout_height="@dimen/video_player_playback_speed_height"
+            android:layout_centerVertical="true"
+            android:background="@drawable/darkened_automatic_circle_background"
+            android:gravity="center"
+            android:paddingLeft="@dimen/small_margin"
+            android:paddingRight="@dimen/small_margin"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            tools:text="x1.00" />
+
+        <ImageView
+            android:id="@+id/video_toggle_play_pause"
+            android:layout_width="@dimen/video_player_play_pause_size"
+            android:layout_height="@dimen/video_player_play_pause_size"
+            android:layout_toEndOf="@id/video_playback_speed_slow"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/small_margin"
+            android:src="@drawable/ic_pause_outline_vector"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/video_playback_speed_fast"
+            android:layout_width="@dimen/video_player_playback_speed_width"
+            android:layout_height="@dimen/video_player_playback_speed_height"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/video_toggle_play_pause"
+            android:background="@drawable/darkened_automatic_circle_background"
+            android:gravity="center"
+            android:paddingLeft="@dimen/small_margin"
+            android:paddingRight="@dimen/small_margin"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            tools:text="1.00x" />
+
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/video_next_file"
@@ -45,7 +80,7 @@
         android:id="@+id/video_curr_time"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_below="@+id/video_toggle_play_pause"
+        android:layout_below="@+id/toggle_play_pause_icon_holder"
         android:layout_alignTop="@+id/video_seekbar"
         android:layout_alignBottom="@+id/video_seekbar"
         android:layout_alignParentStart="true"
@@ -62,7 +97,7 @@
         android:id="@+id/video_seekbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/video_toggle_play_pause"
+        android:layout_below="@+id/toggle_play_pause_icon_holder"
         android:layout_toStartOf="@+id/video_duration"
         android:layout_toEndOf="@+id/video_curr_time"
         android:paddingTop="@dimen/activity_margin"
@@ -72,7 +107,7 @@
         android:id="@+id/video_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/video_toggle_play_pause"
+        android:layout_below="@+id/toggle_play_pause_icon_holder"
         android:layout_alignTop="@+id/video_seekbar"
         android:layout_alignBottom="@+id/video_seekbar"
         android:layout_alignParentEnd="true"

@@ -81,7 +81,9 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private lateinit var mConfig: Config
     private lateinit var mTextureView: TextureView
     private lateinit var mCurrTimeView: TextView
+    private lateinit var mPlaybackSlowButton: TextView
     private lateinit var mPlayPauseButton: ImageView
+    private lateinit var mPlaybackFastButton: TextView
     private lateinit var mSeekBar: SeekBar
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -107,9 +109,17 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 }
             }
 
+            mPlaybackSlowButton = bottomVideoTimeHolder.videoPlaybackSpeedSlow
+            mPlaybackSlowButton.setOnClickListener {
+                togglePlaybackSpeed()
+            }
             mPlayPauseButton = bottomVideoTimeHolder.videoTogglePlayPause
             mPlayPauseButton.setOnClickListener {
                 togglePlayPause()
+            }
+            mPlaybackFastButton = bottomVideoTimeHolder.videoPlaybackSpeedFast
+            mPlaybackFastButton.setOnClickListener {
+                togglePlaybackSpeed()
             }
 
             mSeekBar = bottomVideoTimeHolder.videoSeekbar
@@ -477,6 +487,19 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         val speed = (diffY * 0.002f + mLastPlaybackSpeedSaved).coerceIn(0.25f, 5f)
         val roundedSpeed = (speed / 0.25f + 0.125f).toInt() * 0.25f
         mExoPlayer?.setPlaybackSpeed(roundedSpeed)
+
+        if (roundedSpeed < 1.0f) {
+            mPlaybackSlowButton.text = String.format("x%.2f", roundedSpeed) // "x" + roundedSpeed.toString()
+            mPlaybackSlowButton.beVisible()
+            mPlaybackFastButton.beInvisible()
+        } else if (roundedSpeed > 1.0f) {
+            mPlaybackFastButton.text = String.format("%.2fx", roundedSpeed) // roundedSpeed.toString() + "x"
+            mPlaybackFastButton.beVisible()
+            mPlaybackSlowButton.beInvisible()
+        } else {
+            mPlaybackSlowButton.beInvisible()
+            mPlaybackFastButton.beInvisible()
+        }
     }
 
     private fun checkExtendedDetails() {
@@ -645,6 +668,19 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         }
 
         mIsDragged = false
+    }
+
+    private fun togglePlaybackSpeed() {
+        if (activity == null || !isAdded) {
+            return
+        }
+        resetPlaybackSpeed()
+    }
+
+    private fun resetPlaybackSpeed() {
+        mExoPlayer?.setPlaybackSpeed(1.0f)
+        mPlaybackSlowButton.beInvisible()
+        mPlaybackFastButton.beInvisible()
     }
 
     private fun togglePlayPause() {
