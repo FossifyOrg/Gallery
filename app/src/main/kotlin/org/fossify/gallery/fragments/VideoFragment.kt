@@ -485,7 +485,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
 
     private fun handlePlaybackSpeed(event: MotionEvent) {
         val diffY = mLongTouchDownY - event.rawY
-        val speed = (diffY * 0.002f + mLastPlaybackSpeedSaved).coerceIn(0.25f, 5f)
+        val speed = (diffY * 0.004f + mLastPlaybackSpeedSaved).coerceIn(0.25f, 5f)
         val roundedSpeed = (speed / 0.25f + 0.125f).toInt() * 0.25f
         mExoPlayer?.setPlaybackSpeed(roundedSpeed)
 
