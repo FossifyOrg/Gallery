@@ -418,6 +418,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 if (mConfig.loopVideos && listener?.isSlideShowActive() == false) {
                     repeatMode = Player.REPEAT_MODE_ONE
                 }
+                setPlaybackSpeed(getDefaultPlaybackSpeed())
                 setMediaSource(mediaSource)
                 setAudioAttributes(
                     AudioAttributes
@@ -489,14 +490,15 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         mExoPlayer?.setPlaybackSpeed(roundedSpeed)
 
         if (roundedSpeed < 1.0f) {
-            mPlaybackSlowButton.text = String.format("x%.2f", roundedSpeed) // "x" + roundedSpeed.toString()
+            mPlaybackSlowButton.text = String.format("x%.2f", roundedSpeed)
             mPlaybackSlowButton.beVisible()
             mPlaybackFastButton.beInvisible()
-        } else if (roundedSpeed > 1.0f) {
-            mPlaybackFastButton.text = String.format("%.2fx", roundedSpeed) // roundedSpeed.toString() + "x"
+        } else {
+            mPlaybackFastButton.text = String.format("%.2fx", roundedSpeed)
             mPlaybackFastButton.beVisible()
             mPlaybackSlowButton.beInvisible()
-        } else {
+        }
+        if (roundedSpeed == getDefaultPlaybackSpeed()) {
             mPlaybackSlowButton.beInvisible()
             mPlaybackFastButton.beInvisible()
         }
@@ -599,6 +601,22 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         return requireContext().realScreenSize.y - height - actionsHeight - fullscreenOffset
     }
 
+    private fun getDefaultPlaybackSpeed(): Float {
+        return when (mConfig.defaultPlaybackSpeed) {
+            PLAYBACK_SPEED_1 -> 0.25f
+            PLAYBACK_SPEED_2 -> 0.5f
+            PLAYBACK_SPEED_3 -> 0.75f
+            PLAYBACK_SPEED_4 -> 1.0f
+            PLAYBACK_SPEED_5 -> 1.25f
+            PLAYBACK_SPEED_6 -> 1.5f
+            PLAYBACK_SPEED_7 -> 1.75f
+            PLAYBACK_SPEED_8 -> 2.0f
+            PLAYBACK_SPEED_9 -> 3.0f
+            PLAYBACK_SPEED_10 -> 4.0f
+            else -> 5.0f
+        }
+    }
+
     private fun skip(forward: Boolean) {
         if (mIsPanorama) {
             return
@@ -678,7 +696,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     }
 
     private fun resetPlaybackSpeed() {
-        mExoPlayer?.setPlaybackSpeed(1.0f)
+        mExoPlayer?.setPlaybackSpeed(getDefaultPlaybackSpeed())
         mPlaybackSlowButton.beInvisible()
         mPlaybackFastButton.beInvisible()
     }
