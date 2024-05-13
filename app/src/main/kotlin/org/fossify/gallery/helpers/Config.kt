@@ -169,9 +169,9 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(MAX_BRIGHTNESS, false)
         set(maxBrightness) = prefs.edit().putBoolean(MAX_BRIGHTNESS, maxBrightness).apply()
 
-    var defaultPlaybackSpeed: Int
-        get() = prefs.getInt(DEFAULT_PLAYBACK_SPEED, PLAYBACK_SPEED_4)
-        set(defaultPlaybackSpeed) = prefs.edit().putInt(DEFAULT_PLAYBACK_SPEED, defaultPlaybackSpeed).apply()
+    var playbackSpeed: Float
+        get() = prefs.getFloat(PLAYBACK_SPEED, 1f)
+        set(playbackSpeed) = prefs.edit().putFloat(PLAYBACK_SPEED, playbackSpeed).apply()
 
     var cropThumbnails: Boolean
         get() = prefs.getBoolean(CROP_THUMBNAILS, true)

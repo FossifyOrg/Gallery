@@ -65,7 +65,6 @@ class SettingsActivity : SimpleActivity() {
         setupLoopVideos()
         setupOpenVideosOnSeparateScreen()
         setupMaxBrightness()
-        setupDefaultPlaybackSpeed()
         setupCropThumbnails()
         setupAnimateGifs()
         setupDarkBackground()
@@ -303,46 +302,6 @@ class SettingsActivity : SimpleActivity() {
             config.maxBrightness = binding.settingsMaxBrightness.isChecked
         }
     }
-
-    private fun setupDefaultPlaybackSpeed() {
-        binding.settingsDefaultPlaybackSpeed.text = getDefaultPlaybackSpeedText()
-        binding.settingsDefaultPlaybackSpeedHolder.setOnClickListener {
-            val items = arrayListOf(
-                RadioItem(PLAYBACK_SPEED_1, getString(R.string.default_playback_speed_1)),
-                RadioItem(PLAYBACK_SPEED_2, getString(R.string.default_playback_speed_2)),
-                RadioItem(PLAYBACK_SPEED_3, getString(R.string.default_playback_speed_3)),
-                RadioItem(PLAYBACK_SPEED_4, getString(R.string.default_playback_speed_4)),
-                RadioItem(PLAYBACK_SPEED_5, getString(R.string.default_playback_speed_5)),
-                RadioItem(PLAYBACK_SPEED_6, getString(R.string.default_playback_speed_6)),
-                RadioItem(PLAYBACK_SPEED_7, getString(R.string.default_playback_speed_7)),
-                RadioItem(PLAYBACK_SPEED_8, getString(R.string.default_playback_speed_8)),
-                RadioItem(PLAYBACK_SPEED_9, getString(R.string.default_playback_speed_9)),
-                RadioItem(PLAYBACK_SPEED_10, getString(R.string.default_playback_speed_10)),
-                RadioItem(PLAYBACK_SPEED_11, getString(R.string.default_playback_speed_11))
-            )
-
-            RadioGroupDialog(this@SettingsActivity, items, config.defaultPlaybackSpeed) {
-                config.defaultPlaybackSpeed = it as Int
-                binding.settingsDefaultPlaybackSpeed.text = getDefaultPlaybackSpeedText()
-            }
-        }
-    }
-
-    private fun getDefaultPlaybackSpeedText() = getString(
-        when (config.defaultPlaybackSpeed) {
-            PLAYBACK_SPEED_1 -> R.string.default_playback_speed_1
-            PLAYBACK_SPEED_2 -> R.string.default_playback_speed_2
-            PLAYBACK_SPEED_3 -> R.string.default_playback_speed_3
-            PLAYBACK_SPEED_4 -> R.string.default_playback_speed_4
-            PLAYBACK_SPEED_5 -> R.string.default_playback_speed_5
-            PLAYBACK_SPEED_6 -> R.string.default_playback_speed_6
-            PLAYBACK_SPEED_7 -> R.string.default_playback_speed_7
-            PLAYBACK_SPEED_8 -> R.string.default_playback_speed_8
-            PLAYBACK_SPEED_9 -> R.string.default_playback_speed_9
-            PLAYBACK_SPEED_10 -> R.string.default_playback_speed_10
-            else -> R.string.default_playback_speed_11
-        }
-    )
 
     private fun setupCropThumbnails() {
         binding.settingsCropThumbnails.isChecked = config.cropThumbnails
@@ -923,7 +882,6 @@ class SettingsActivity : SimpleActivity() {
                 put(SCROLL_HORIZONTALLY, config.scrollHorizontally)
                 put(ENABLE_PULL_TO_REFRESH, config.enablePullToRefresh)
                 put(MAX_BRIGHTNESS, config.maxBrightness)
-                put(DEFAULT_PLAYBACK_SPEED, config.defaultPlaybackSpeed)
                 put(BLACK_BACKGROUND, config.blackBackground)
                 put(HIDE_SYSTEM_UI, config.hideSystemUI)
                 put(ALLOW_INSTANT_CHANGE, config.allowInstantChange)
@@ -1068,7 +1026,6 @@ class SettingsActivity : SimpleActivity() {
                 SCROLL_HORIZONTALLY -> config.scrollHorizontally = value.toBoolean()
                 ENABLE_PULL_TO_REFRESH -> config.enablePullToRefresh = value.toBoolean()
                 MAX_BRIGHTNESS -> config.maxBrightness = value.toBoolean()
-                DEFAULT_PLAYBACK_SPEED -> config.defaultPlaybackSpeed = value.toInt()
                 BLACK_BACKGROUND -> config.blackBackground = value.toBoolean()
                 HIDE_SYSTEM_UI -> config.hideSystemUI = value.toBoolean()
                 ALLOW_INSTANT_CHANGE -> config.allowInstantChange = value.toBoolean()

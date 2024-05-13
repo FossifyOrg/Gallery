@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.*
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -48,7 +49,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private var mIsPanorama = false
     private var mIsFragmentVisible = false
     private var mIsDragged = false
-    private var mIsLongPressed = false
     private var mWasVideoStarted = false
     private var mWasPlayerInited = false
     private var mWasLastPositionRestored = false
@@ -58,8 +58,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private var mDuration = 0
     private var mPositionWhenInit = 0
     private var mPositionAtPause = 0L
-    private var mLastPlaybackSpeedSaved = 1f
-    private var mLongTouchDownY = 0f
     var mIsPlaying = false
 
     private var mExoPlayer: ExoPlayer? = null
@@ -81,9 +79,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private lateinit var mConfig: Config
     private lateinit var mTextureView: TextureView
     private lateinit var mCurrTimeView: TextView
-    private lateinit var mPlaybackSlowButton: TextView
     private lateinit var mPlayPauseButton: ImageView
-    private lateinit var mPlaybackFastButton: TextView
     private lateinit var mSeekBar: SeekBar
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -109,17 +105,9 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 }
             }
 
-            mPlaybackSlowButton = bottomVideoTimeHolder.videoPlaybackSpeedSlow
-            mPlaybackSlowButton.setOnClickListener {
-                togglePlaybackSpeed()
-            }
             mPlayPauseButton = bottomVideoTimeHolder.videoTogglePlayPause
             mPlayPauseButton.setOnClickListener {
                 togglePlayPause()
-            }
-            mPlaybackFastButton = bottomVideoTimeHolder.videoPlaybackSpeedFast
-            mPlaybackFastButton.setOnClickListener {
-                togglePlaybackSpeed()
             }
 
             mSeekBar = bottomVideoTimeHolder.videoSeekbar
@@ -149,20 +137,13 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                         clickedX >= viewWidth - instantWidth -> listener?.goToNextItem()
                         else -> toggleFullscreen()
                     }
+                    Log.d("AAA", "Test7")
                     return true
                 }
 
                 override fun onDoubleTap(e: MotionEvent): Boolean {
                     handleDoubleTap(e.rawX)
                     return true
-                }
-
-                override fun onLongPress(e: MotionEvent) {
-                    if (mWasVideoStarted) {
-                        mLastPlaybackSpeedSaved = mExoPlayer?.playbackParameters!!.speed
-                        mLongTouchDownY = e.rawY
-                        mIsLongPressed = true
-                    }
                 }
             })
 
@@ -174,13 +155,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             videoSurfaceFrame.setOnTouchListener { view, event ->
                 if (videoSurfaceFrame.controller.state.zoom == 1f) {
                     handleEvent(event)
-                }
-                if (event.action == MotionEvent.ACTION_MOVE && mIsLongPressed) {
-                    handlePlaybackSpeed(event)
-                }
-                if ((event.action == MotionEvent.ACTION_UP || event.action == MotionEvent.ACTION_CANCEL) && mIsLongPressed) {
-                    mIsLongPressed = false
-                    mLastPlaybackSpeedSaved = mExoPlayer?.playbackParameters!!.speed
                 }
 
                 gestureDetector.onTouchEvent(event)
@@ -319,11 +293,13 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         binding.videoSurfaceFrame.onGlobalLayout {
             binding.videoSurfaceFrame.controller.resetState()
         }
+        Log.d("AAA", "Test1")
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt(PROGRESS, mCurrTime)
+        Log.d("AAA", "Test2")
     }
 
     private fun storeStateVariables() {
@@ -344,6 +320,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 mConfig.saveLastVideoPosition(mMedium.path, mPositionAtPause.toInt() / 1000)
             }
         }
+        Log.d("AAA", "Test3")
     }
 
     private fun restoreLastVideoSavedPosition() {
@@ -418,7 +395,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 if (mConfig.loopVideos && listener?.isSlideShowActive() == false) {
                     repeatMode = Player.REPEAT_MODE_ONE
                 }
-                setPlaybackSpeed(getDefaultPlaybackSpeed())
+                setPlaybackSpeed(mConfig.playbackSpeed)
                 setMediaSource(mediaSource)
                 setAudioAttributes(
                     AudioAttributes
@@ -455,6 +432,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                     Player.STATE_READY -> videoPrepared()
                     Player.STATE_ENDED -> videoCompleted()
                 }
+                Log.d("AAA", "Test4")
             }
 
             override fun onVideoSizeChanged(videoSize: VideoSize) {
@@ -480,27 +458,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             x <= instantWidth -> doSkip(false)
             x >= viewWidth - instantWidth -> doSkip(true)
             else -> togglePlayPause()
-        }
-    }
-
-    private fun handlePlaybackSpeed(event: MotionEvent) {
-        val diffY = mLongTouchDownY - event.rawY
-        val speed = (diffY * 0.004f + mLastPlaybackSpeedSaved).coerceIn(0.25f, 5f)
-        val roundedSpeed = (speed / 0.25f + 0.125f).toInt() * 0.25f
-        mExoPlayer?.setPlaybackSpeed(roundedSpeed)
-
-        if (roundedSpeed < 1.0f) {
-            mPlaybackSlowButton.text = String.format("x%.2f", roundedSpeed)
-            mPlaybackSlowButton.beVisible()
-            mPlaybackFastButton.beInvisible()
-        } else {
-            mPlaybackFastButton.text = String.format("%.2fx", roundedSpeed)
-            mPlaybackFastButton.beVisible()
-            mPlaybackSlowButton.beInvisible()
-        }
-        if (roundedSpeed == getDefaultPlaybackSpeed()) {
-            mPlaybackSlowButton.beInvisible()
-            mPlaybackFastButton.beInvisible()
         }
     }
 
@@ -601,22 +558,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         return requireContext().realScreenSize.y - height - actionsHeight - fullscreenOffset
     }
 
-    private fun getDefaultPlaybackSpeed(): Float {
-        return when (mConfig.defaultPlaybackSpeed) {
-            PLAYBACK_SPEED_1 -> 0.25f
-            PLAYBACK_SPEED_2 -> 0.5f
-            PLAYBACK_SPEED_3 -> 0.75f
-            PLAYBACK_SPEED_4 -> 1.0f
-            PLAYBACK_SPEED_5 -> 1.25f
-            PLAYBACK_SPEED_6 -> 1.5f
-            PLAYBACK_SPEED_7 -> 1.75f
-            PLAYBACK_SPEED_8 -> 2.0f
-            PLAYBACK_SPEED_9 -> 3.0f
-            PLAYBACK_SPEED_10 -> 4.0f
-            else -> 5.0f
-        }
-    }
-
     private fun skip(forward: Boolean) {
         if (mIsPanorama) {
             return
@@ -688,19 +629,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         mIsDragged = false
     }
 
-    private fun togglePlaybackSpeed() {
-        if (activity == null || !isAdded) {
-            return
-        }
-        resetPlaybackSpeed()
-    }
-
-    private fun resetPlaybackSpeed() {
-        mExoPlayer?.setPlaybackSpeed(getDefaultPlaybackSpeed())
-        mPlaybackSlowButton.beInvisible()
-        mPlaybackFastButton.beInvisible()
-    }
-
     private fun togglePlayPause() {
         if (activity == null || !isAdded) {
             return
@@ -749,6 +677,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         }
         mExoPlayer?.playWhenReady = true
         activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        Log.d("AAA", "Test5")
     }
 
     private fun pauseVideo() {

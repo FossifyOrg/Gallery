@@ -19,7 +19,7 @@ const val LOOP_VIDEOS = "loop_videos"
 const val OPEN_VIDEOS_ON_SEPARATE_SCREEN = "open_videos_on_separate_screen"
 const val ANIMATE_GIFS = "animate_gifs"
 const val MAX_BRIGHTNESS = "max_brightness"
-const val DEFAULT_PLAYBACK_SPEED = "default_playback_speed"
+const val PLAYBACK_SPEED = "playback_speed"
 const val CROP_THUMBNAILS = "crop_thumbnails"
 const val SHOW_THUMBNAIL_VIDEO_DURATION = "show_thumbnail_video_duration"
 const val SCREEN_ROTATION = "screen_rotation"
@@ -158,19 +158,6 @@ const val SKIP_AUTHENTICATION = "skip_authentication"
 const val ROTATE_BY_SYSTEM_SETTING = 0
 const val ROTATE_BY_DEVICE_ROTATION = 1
 const val ROTATE_BY_ASPECT_RATIO = 2
-
-// default playback speed
-const val PLAYBACK_SPEED_1 = 1
-const val PLAYBACK_SPEED_2 = 2
-const val PLAYBACK_SPEED_3 = 3
-const val PLAYBACK_SPEED_4 = 4
-const val PLAYBACK_SPEED_5 = 5
-const val PLAYBACK_SPEED_6 = 6
-const val PLAYBACK_SPEED_7 = 7
-const val PLAYBACK_SPEED_8 = 8
-const val PLAYBACK_SPEED_9 = 9
-const val PLAYBACK_SPEED_10 = 10
-const val PLAYBACK_SPEED_11 = 11
 
 // file loading priority
 const val PRIORITY_SPEED = 0
