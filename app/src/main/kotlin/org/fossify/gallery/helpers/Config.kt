@@ -173,6 +173,10 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getFloat(PLAYBACK_SPEED, 1f)
         set(playbackSpeed) = prefs.edit().putFloat(PLAYBACK_SPEED, playbackSpeed).apply()
 
+    var playbackSpeedProgress: Int
+        get() = prefs.getInt(PLAYBACK_SPEED_PROGRESS, -1)
+        set(playbackSpeedProgress) = prefs.edit().putInt(PLAYBACK_SPEED_PROGRESS, playbackSpeedProgress).apply()
+
     var cropThumbnails: Boolean
         get() = prefs.getBoolean(CROP_THUMBNAILS, true)
         set(cropThumbnails) = prefs.edit().putBoolean(CROP_THUMBNAILS, cropThumbnails).apply()

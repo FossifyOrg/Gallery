@@ -19,6 +19,45 @@
         android:visibility="invisible" />
 
     <ImageView
+        android:id="@+id/video_playback_speed_click_area"
+        android:layout_width="@dimen/video_player_play_pause_size"
+        android:layout_height="@dimen/video_player_play_pause_size"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/video_playback_speed_area_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/normal_margin"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/video_playback_speed_icon"
+        android:layout_width="@dimen/video_player_play_pause_size"
+        android:layout_height="@dimen/video_player_play_pause_size"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/normal_margin"
+        android:src="@drawable/ic_playback_speed_vector"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/video_playback_speed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/video_playback_speed_text_height"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/video_playback_speed_text_margin"
+        android:layout_marginTop="@dimen/video_playback_speed_text_margin_top"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin"
+        android:shadowColor="@color/default_background_color"
+        android:shadowRadius="2"
+        android:textColor="@android:color/white"
+        tools:text="1x" />
+
+    <ImageView
         android:id="@+id/video_toggle_play_pause"
         android:layout_width="@dimen/video_player_play_pause_size"
         android:layout_height="@dimen/video_player_play_pause_size"

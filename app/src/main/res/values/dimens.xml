@@ -11,6 +11,10 @@
     <dimen name="tmb_shadow_height">70dp</dimen>
     <dimen name="media_side_slider_width">60dp</dimen>
     <dimen name="video_player_play_pause_size">60dp</dimen>
+    <dimen name="video_playback_speed_area_margin">20dp</dimen>
+    <dimen name="video_playback_speed_text_height">30dp</dimen>
+    <dimen name="video_playback_speed_text_margin">34dp</dimen>
+    <dimen name="video_playback_speed_text_margin_top">30dp</dimen>
     <dimen name="list_view_folder_thumbnail_size">72dp</dimen>
     <dimen name="bottom_actions_height">64dp</dimen>
     <dimen name="bottom_actions_height_double">128dp</dimen>
@@ -27,4 +31,5 @@
     <dimen name="lock_padding">30dp</dimen>
     <dimen name="sample_thumbnail_size">180dp</dimen>
     <dimen name="directory_picker_dialog_min_height">180dp</dimen>
+    <dimen name="smaller_icon_size">36dp</dimen>
 </resources>

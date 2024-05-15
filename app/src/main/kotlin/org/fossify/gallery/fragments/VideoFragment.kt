@@ -1,5 +1,6 @@
 package org.fossify.gallery.fragments
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.graphics.Point
 import android.graphics.SurfaceTexture
@@ -7,7 +8,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
-import android.util.Log
 import android.view.*
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -35,13 +35,15 @@ import org.fossify.gallery.extensions.config
 import org.fossify.gallery.extensions.hasNavBar
 import org.fossify.gallery.extensions.parseFileChannel
 import org.fossify.gallery.helpers.*
+import org.fossify.gallery.interfaces.PlaybackSpeedListener
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.views.MediaSideScroll
 import java.io.File
 import java.io.FileInputStream
+import java.text.DecimalFormat
 
 @UnstableApi
-class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, SeekBar.OnSeekBarChangeListener {
+class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, SeekBar.OnSeekBarChangeListener, PlaybackSpeedListener {
     private val PROGRESS = "progress"
 
     private var mIsFullscreen = false
@@ -95,6 +97,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             bottomVideoTimeHolder.videoDuration.setOnClickListener { skip(true) }
             videoHolder.setOnClickListener { toggleFullscreen() }
             videoPreview.setOnClickListener { toggleFullscreen() }
+            bottomVideoTimeHolder.videoPlaybackSpeedClickArea.setOnClickListener { showPlaybackSpeedPicker() }
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
             videoPlayOutline.setOnClickListener {
@@ -137,7 +140,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                         clickedX >= viewWidth - instantWidth -> listener?.goToNextItem()
                         else -> toggleFullscreen()
                     }
-                    Log.d("AAA", "Test7")
                     return true
                 }
 
@@ -293,13 +295,11 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         binding.videoSurfaceFrame.onGlobalLayout {
             binding.videoSurfaceFrame.controller.resetState()
         }
-        Log.d("AAA", "Test1")
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt(PROGRESS, mCurrTime)
-        Log.d("AAA", "Test2")
     }
 
     private fun storeStateVariables() {
@@ -320,7 +320,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 mConfig.saveLastVideoPosition(mMedium.path, mPositionAtPause.toInt() / 1000)
             }
         }
-        Log.d("AAA", "Test3")
     }
 
     private fun restoreLastVideoSavedPosition() {
@@ -432,7 +431,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                     Player.STATE_READY -> videoPrepared()
                     Player.STATE_ENDED -> videoCompleted()
                 }
-                Log.d("AAA", "Test4")
             }
 
             override fun onVideoSizeChanged(videoSize: VideoSize) {
@@ -528,7 +526,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         arrayOf(
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoDuration,
-            binding.bottomVideoTimeHolder.videoTogglePlayPause
+            binding.bottomVideoTimeHolder.videoTogglePlayPause,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea
         ).forEach {
             it.isClickable = !mIsFullscreen
         }
@@ -543,6 +542,26 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 }
             }
         }
+    }
+
+    private fun showPlaybackSpeedPicker() {
+        val fragment = PlaybackSpeedFragment()
+        childFragmentManager.beginTransaction().add(fragment, fragment::class.java.simpleName).commit()
+        fragment.setListener(this)
+    }
+
+    override fun updatePlaybackSpeed(speed: Float) {
+        val isSlow = speed < 1f
+        if (isSlow != binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag as? Boolean) {
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag = isSlow
+
+            val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.setImageDrawable(resources.getDrawable(drawableId))
+        }
+
+        @SuppressLint("SetTextI18n")
+        binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(speed)}x"
+        mExoPlayer?.setPlaybackSpeed(speed)
     }
 
     private fun getExtendedDetailsY(height: Int): Float {
@@ -669,6 +688,9 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         if (!mWasVideoStarted) {
             binding.videoPlayOutline.beGone()
             mPlayPauseButton.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"
         }
 
         mWasVideoStarted = true
@@ -677,7 +699,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         }
         mExoPlayer?.playWhenReady = true
         activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        Log.d("AAA", "Test5")
     }
 
     private fun pauseVideo() {
