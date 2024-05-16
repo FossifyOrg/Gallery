@@ -766,6 +766,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 mExoPlayer?.seekTo(mPositionAtPause)
                 mPositionAtPause = 0L
             }
+            updatePlaybackSpeed(mConfig.playbackSpeed)
             playVideo()
         }
         mWasPlayerInited = true

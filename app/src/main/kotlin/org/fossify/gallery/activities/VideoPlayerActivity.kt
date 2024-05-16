@@ -313,6 +313,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             binding.bottomVideoTimeHolder.videoSeekbar.max = mDuration
             binding.bottomVideoTimeHolder.videoDuration.text = mDuration.getFormattedDuration()
             setPosition(mCurrTime)
+            updatePlaybackSpeed(config.playbackSpeed)
 
             if (config.rememberLastVideoPosition) {
                 setLastVideoSavedPosition()
