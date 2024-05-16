@@ -690,6 +690,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             mPlayPauseButton.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedBackground.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"
         }
 
