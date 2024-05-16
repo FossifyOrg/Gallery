@@ -1,5 +1,6 @@
 package org.fossify.gallery.activities
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -30,10 +31,13 @@ import org.fossify.commons.extensions.*
 import org.fossify.gallery.R
 import org.fossify.gallery.databinding.ActivityVideoPlayerBinding
 import org.fossify.gallery.extensions.*
+import org.fossify.gallery.fragments.PlaybackSpeedFragment
 import org.fossify.gallery.helpers.*
+import org.fossify.gallery.interfaces.PlaybackSpeedListener
+import java.text.DecimalFormat
 
 @UnstableApi
-open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListener, TextureView.SurfaceTextureListener {
+open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListener, TextureView.SurfaceTextureListener, PlaybackSpeedListener {
     private val PLAY_WHEN_READY_DRAG_DELAY = 100L
 
     private var mIsFullscreen = false
@@ -181,6 +185,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         binding.bottomVideoTimeHolder.videoCurrTime.setOnClickListener { doSkip(false) }
         binding.bottomVideoTimeHolder.videoDuration.setOnClickListener { doSkip(true) }
         binding.bottomVideoTimeHolder.videoTogglePlayPause.setOnClickListener { togglePlayPause() }
+        binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea.setOnClickListener { showPlaybackSpeedPicker() }
         binding.videoSurfaceFrame.setOnClickListener { toggleFullscreen() }
         binding.videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
@@ -256,6 +261,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             .setLoadControl(loadControl)
             .build()
             .apply {
+                setPlaybackSpeed(config.playbackSpeed)
                 setMediaSource(mediaSource)
                 setAudioAttributes(
                     AudioAttributes
@@ -299,6 +305,10 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private fun videoPrepared() {
         if (!mWasVideoStarted) {
             binding.bottomVideoTimeHolder.videoTogglePlayPause.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedBackground.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(config.playbackSpeed)}x"
             mDuration = (mExoPlayer!!.duration / 1000).toInt()
             binding.bottomVideoTimeHolder.videoSeekbar.max = mDuration
             binding.bottomVideoTimeHolder.videoDuration.text = mDuration.getFormattedDuration()
@@ -468,6 +478,10 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             binding.bottomVideoTimeHolder.videoPrevFile,
             binding.bottomVideoTimeHolder.videoTogglePlayPause,
             binding.bottomVideoTimeHolder.videoNextFile,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedBackground,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedText,
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoSeekbar,
             binding.bottomVideoTimeHolder.videoDuration,
@@ -480,6 +494,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         arrayOf(
             binding.bottomVideoTimeHolder.videoPrevFile,
             binding.bottomVideoTimeHolder.videoNextFile,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea,
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoDuration,
         ).forEach {
@@ -491,6 +506,26 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         }.withEndAction {
             binding.videoAppbar.beVisibleIf(newAlpha == 1f)
         }.start()
+    }
+
+    private fun showPlaybackSpeedPicker() {
+        val fragment = PlaybackSpeedFragment()
+        fragment.show(supportFragmentManager, PlaybackSpeedFragment::class.java.simpleName)
+        fragment.setListener(this)
+    }
+
+    override fun updatePlaybackSpeed(speed: Float) {
+        val isSlow = speed < 1f
+        if (isSlow != binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag as? Boolean) {
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag = isSlow
+
+            val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
+            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.setImageDrawable(resources.getDrawable(drawableId))
+        }
+
+        @SuppressLint("SetTextI18n")
+        binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(speed)}x"
+        mExoPlayer?.setPlaybackSpeed(speed)
     }
 
     private fun initTimeHolder() {
