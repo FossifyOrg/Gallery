@@ -66,4 +66,20 @@
     <string name="set_as_wallpaper_with">Gosod fel papur wal gyda:</string>
     <string name="setting_wallpaper">Yn gosod y papur wal…</string>
     <string name="group_by">Grwpio yn ôl</string>
+    <string name="no_animation">Dim</string>
+    <string name="lock_screen">Cloi\'r sgrin</string>
+    <string name="include_videos">Ychwanegu fideos</string>
+    <string name="portraits">Portreadau</string>
+    <string name="slideshow">Fel sleidiau</string>
+    <string name="interval">Ysbaid</string>
+    <string name="animation">Animeiddio</string>
+    <string name="fade">Pylu</string>
+    <string name="slide">Llithro</string>
+    <string name="by_folder">Ffolder</string>
+    <string name="by_extension">Estyniad</string>
+    <string name="home_screen">Sgrin gartref</string>
+    <string name="include_gifs">Ychwanegu GIFs</string>
+    <string name="speed">Cyflymder</string>
+    <string name="square">Sgwâr</string>
+    <string name="thumbnails">Mân-luniau</string>
 </resources>
