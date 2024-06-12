@@ -82,4 +82,15 @@
     <string name="speed">Cyflymder</string>
     <string name="square">Sgwâr</string>
     <string name="thumbnails">Mân-luniau</string>
+    <string name="pin_to_the_top">Pinio i\'r brig</string>
+    <string name="manage_extended_details">Rheoli manylion uwch</string>
+    <string name="show_extended_details">Dangos manylion uwch dros cyfryngau sgrin lawn</string>
+    <string name="hide_extended_details">Cuddio manylion uwch pan fydd y bar statws yn cael ei guddio</string>
+    <string name="show_recycle_bin">Dangos y Bin Ailgylchu ar sgrin y ffolderi</string>
+    <string name="show_recycle_bin_last">Dangos y Bin Ailgylchu fel eitem ddiwethaf ar y prif sgrin</string>
+    <string name="extended_details">Manylion uwch</string>
+    <string name="manage_bottom_actions">Rheoli gweithredoedd­ gwaelod gweladwy</string>
+    <string name="include_photos">Cynnwys lluniau</string>
+    <string name="random_order">Trefn hap</string>
+    <string name="delete_empty_folders">Dileu ffolderi gwag ar ôl dileu eu cynnwys</string>
 </resources>
