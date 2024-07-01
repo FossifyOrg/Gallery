@@ -32,7 +32,7 @@
     <string name="unset_as_default_folder">Отключить как папку по умолчанию</string>
     <string name="reorder_by_dragging">Сортировка папок перетаскиванием</string>
     <string name="reorder_by_dragging_pro">Сортировка папок перетаскиванием (Pro)</string>
-    <string name="restore_to_path">Восстановление в \"%s\"</string>
+    <string name="restore_to_path">Восстановление в «%s»</string>
     <string name="filter_media">Фильтр медиа</string>
     <string name="images">Изображения</string>
     <string name="videos">Видео</string>
@@ -42,11 +42,11 @@
     <string name="portraits">Портреты</string>
     <string name="no_media_with_filters">При заданных фильтрах медиафайлы не найдены.</string>
     <string name="change_filters_underlined"><u>Изменить фильтры</u></string>
-    <string name="hide_folder_description">Эта функция скрывает папку, добавляя в неё файл \".nomedia\". Также будут скрыты все подпапки. Можно показать их, переключая \"Показывать скрытые папки\" в настройках. Продолжить\?</string>
+    <string name="hide_folder_description">Эта функция скрывает папку, добавляя в неё файл «.nomedia». Также будут скрыты все подпапки. Можно показать их, переключая «Показывать скрытые папки» в настройках. Продолжить?</string>
     <string name="exclude_folder_parent">Исключить только родительскую папку\?</string>
     <string name="hidden_folders">Скрытые папки</string>
     <string name="manage_hidden_folders">Управление скрытыми папками</string>
-    <string name="hidden_folders_placeholder">Похоже, у вас нет папок, скрытых файлом \".nomedia\".</string>
+    <string name="hidden_folders_placeholder">Похоже, у вас нет папок, скрытых файлом «.nomedia».</string>
     <string name="hidden_all_files">Чтобы видеть скрытые файлы, необходимо предоставить приложению доступ ко всем файлам.</string>
     <string name="cant_unhide_folder">Если папка или одна из её родительских папок имеет точку перед именем, то она является скрытой и не может быть показана таким образом. Необходимо удалить точку, переименовав папку.</string>
     <string name="include_folders">Включённые папки</string>
@@ -249,7 +249,7 @@
     <string name="faq_1_title">Как сделать Fossify Gallery галереей устройства по умолчанию?</string>
     <string name="excluded_activity_placeholder">Исключение папок скроет их вместе с подпапками только в Fossify Gallery, но они по-прежнему будут видны в других приложениях.
 \n
-\nЕсли вы хотите скрыть их и от других приложений, используйте функцию \"Скрыть\".</string>
+\nЕсли вы хотите скрыть их и от других приложений, используйте функцию «Скрыть».</string>
     <string name="faq_5_text">Исключение предотвращает отображение папки только в Fossify Gallery, в то время как функция \"Скрыть\" работает системно и скрывает папку и от других галерей. Скрытие выполняется путём создания специального пустого файла-маркера \".nomedia\" в данной папке, который затем можно удалить с помощью любого файлового менеджера. Обратите внимание, что некоторые устройства не позволяют скрывать такие папки, как \"Камера\", \"Снимки экрана\" и \"Загрузки\".</string>
     <string name="wallpaper">Обои</string>
     <string name="exclude_folder_description">Это исключит выбранные папки с их подпапками только из Fossify Gallery. Управление исключёнными папками можно найти в настройках.</string>
