@@ -206,4 +206,8 @@
     <string name="toggle_favorite">Favoritt av/på</string>
     <string name="toggle_file_visibility">Filsynlighet av/på</string>
     <string name="faq_16_text">Fra og med Android 11 kan du ikke lenger skjule/vise filer eller mapper, du kan heller ikke se de skjulte i galleriapper pga. systemrestriksjoner. Du må bruke en filbehandlingsapp for det.</string>
+    <string name="excluded_activity_placeholder">Ekskludering av mapper vil gjøre dem sammen med deres undermapper, skjulte bare i Fossify Gallery. De vil fortsatt være synlige i andre apper.
+\n
+\nHvis du vil skjule dem fra andre apper også, bruk Skjul-funksjonen.</string>
+    <string name="exclude_folder_description">Dette vil ekskludere valgte sammen med undermapper, bare fra Fossify Gallery. Ekskluderte mapper kan håndteres i Innstillinger.</string>
 </resources>

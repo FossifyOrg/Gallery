@@ -2,7 +2,7 @@
 <resources>
     <string name="app_launcher_name">Galerij</string>
     <string name="edit">Bewerken</string>
-    <string name="open_camera">Camera</string>
+    <string name="open_camera">Camera openen</string>
     <string name="hidden">(verborgen)</string>
     <string name="excluded">(uitgesloten)</string>
     <string name="pin_folder">Map vastzetten</string>
@@ -13,7 +13,7 @@
     <string name="folder_view">Mapweergave</string>
     <string name="other_folder">Andere map</string>
     <string name="show_on_map">Op kaart tonen</string>
-    <string name="unknown_location">Locatie onbekend</string>
+    <string name="unknown_location">Onbekende locatie</string>
     <string name="brightness">Helderheid</string>
     <string name="lock_orientation">Schermoriëntatie vergrendelen</string>
     <string name="unlock_orientation">Schermoriëntatie ontgrendelen</string>
@@ -22,22 +22,22 @@
     <string name="force_landscape">Landschapsmodus forceren</string>
     <string name="use_default_orientation">Standaardmodus gebruiken</string>
     <string name="fix_date_taken">Opnamedatum corrigeren</string>
-    <string name="fixing">Corrigeren…</string>
-    <string name="dates_fixed_successfully">Datums zijn gecorrigeerd</string>
+    <string name="fixing">Aanpassen…</string>
+    <string name="dates_fixed_successfully">Datums succesvol aangepast</string>
     <string name="no_date_takens_found">Geen opnamedatums gevonden</string>
     <string name="share_resized">Verkleinde versie delen</string>
     <string name="switch_to_file_search">Naar bestanden in alle zichtbare mappen zoeken</string>
     <string name="set_as_default_folder">Als standaardmap instellen</string>
-    <string name="unset_as_default_folder">Standaardmap herstellen</string>
-    <string name="reorder_by_dragging">Volgorde mappen bepalen met sleepgebaren</string>
-    <string name="reorder_by_dragging_pro">Volgorde mappen bepalen met sleepgebaren (Pro)</string>
+    <string name="unset_as_default_folder">Niet als standaardmap gebruiken</string>
+    <string name="reorder_by_dragging">Mappen sorteren met sleepgebaren</string>
+    <string name="reorder_by_dragging_pro">Mappen sorteren met sleepgebaren (Pro)</string>
     <string name="restore_to_path">Herstellen naar \'%s\'</string>
     <string name="filter_media">Media filteren</string>
     <string name="images">Afbeeldingen</string>
     <string name="videos">Video\'s</string>
-    <string name="gifs">GIF-bestanden</string>
+    <string name="gifs">GIFs</string>
     <string name="raw_images">RAW-afbeeldingen</string>
-    <string name="svgs">SVG-vectorafbeeldingen</string>
+    <string name="svgs">SVGs</string>
     <string name="portraits">Portretten</string>
     <string name="no_media_with_filters">Er zijn geen bestanden gevonden met de huidige filters.</string>
     <string name="change_filters_underlined"><u>Filters aanpassen</u></string>
