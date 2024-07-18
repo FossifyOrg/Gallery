@@ -192,7 +192,7 @@
     <string name="import_favorite_paths">Importér favoritter</string>
     <string name="paths_imported_successfully">Stier blev importeret</string>
     <string name="media_management_prompt">For at sikre at alle filhandlinger fungerer pålideligt, skal du gøre denne app en mediestyringsapp i dine enhedsindstillinger.</string>
-    <string name="password_protect_excluded">Beskyt synligheden af udelukkede mapper med adgangskode</string>
+    <string name="password_protect_excluded">Beskyt synligheden af ekskluderede mapper med adgangskode</string>
     <string name="media_management_manual">Noget gik galt, gå ind på din enhed Indstillinger - Apps - Særlig app-adgang - Mediehåndteringsapps, og tillad denne app at håndtere medier.</string>
     <string name="media_management_note">Hvis omdirigeringen ikke virker, skal du gå ind i enheden Indstillinger - Apps - Særlig app-adgang - Mediehåndteringsapps og tillade denne app at håndtere medier.</string>
     <string name="media_management_alternative">Hvis du ikke ønsker at gøre dette, kan du også gå ind i din enhed - Indstillinger - Apps - Særlig appadgang - Mediehåndteringsapps og tillade denne app at håndtere medier.</string>
@@ -240,6 +240,15 @@
     <string name="faq_17_text">Det holdt op med at virke på grund af systemændringerne, der fulgte med Android 11, appen kan ikke længere gennemse rigtige mapper, den er afhængig af den såkaldte MediaStore til at hente data.</string>
     <string name="faq_18_title">Hvorfor ser jeg reklamer under videoafspilning\?</string>
     <string name="faq_18_text">Vores apps har ingen reklamer overhovedet. Hvis du ser dem under videoafspilning, bruger du videoafspilleren fra en anden app. Prøv at finde din standard videoafspiller i enhedens indstillinger, og vælg \"Ryd standarder\" på den. Næste gang du forsøger at åbne en videofil, vil du se en prompt, hvor du kan vælge hvilken app du vil bruge.</string>
-    <string name="faq_5_text">Ekskluder forhindrer kun visning af mappen i Fossify Galleri, mens Skjul fungerer systemmæssigt, og den skjuler også mappen fra andre gallerier. Det fungerer ved at oprette en tom \".nomedia\" -fil i den givne mappe, som du derefter også kan fjerne med enhver filhåndtering. Bemærk, at nogle enheder ikke tillader at skjule mapper som kamera, skærmbilleder og downloads.</string>
+    <string name="faq_5_text">Ekskludering forhindrer kun visning af mappen i Fossify Galleri, mens Skjul fungerer systemmæssigt, og den skjuler også mappen fra andre gallerier. Det fungerer ved at oprette en tom \".nomedia\" -fil i den givne mappe, som du derefter også kan fjerne med enhver filhåndtering. Bemærk, at nogle enheder ikke tillader at skjule mapper som kamera, skærmbilleder og downloads.</string>
     <string name="faq_1_text">Først skal du finde det aktuelle standardgalleri i afsnittet Apps i dine enhedsindstillinger, kigge efter en knap, der siger noget som \"Åbn som standard\", klikke på den og derefter vælge \"Ryd standardindstillinger\". Næste gang du prøver at åbne et billede eller en video, skal du se en appvælger, hvor du kan vælge Fossify Galleri og gøre det til standardappen.</string>
+    <string name="faq_1_title">Hvordan kan jeg gøre Fossify Galleri til enhedens standardgalleri?</string>
+    <string name="excluded_activity_placeholder">Hvis du udelukker mapper, bliver de sammen med deres undermapper kun skjult i Fossify Galleri. De vil stadig være synlige i andre applikationer.
+\n
+\nHvis du også ønsker at skjule dem for andre apps, skal du bruge funktionen Skjul.</string>
+    <string name="cant_unhide_folder">Hvis en mappe eller en af dens overordnede mapper har en prik foran sit navn, er den skjult og kan ikke vises igen på denne måde. Du skal fjerne prikken ved at omdøbe den.</string>
+    <string name="exclude_folder_description">Dette ekskluderer kun markeringen sammen med dens undermapper fra Fossify Galleri. Du kan administrere ekskluderede mapper i indstillinger.</string>
+    <string name="editor">Editor</string>
+    <string name="wallpaper">Baggrund</string>
+    <string name="animation">Animation</string>
 </resources>
