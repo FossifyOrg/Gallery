@@ -213,7 +213,7 @@
     <string name="toggle_favorite">Engadir como favorito</string>
     <string name="toggle_file_visibility">Alternar visibilidade do ficheiro</string>
     <string name="faq_1_title">Como fago para que Galería Fossify sexa a galería por defecto no móbil?</string>
-    <string name="faq_1_text">Primeiro tes que atopar a galería por defecto actual na sección Aplicacións nos axustes do teu dispositivo, busca un botón que poña algo como \"Abrir por defecto\", preme nel, marca \"Restablecer por defecto\". A próxima vez que intentes abrir unha imaxe ou vídeo deberás escoller a aplicación para abrila, e aí podes elexir Galería Fossify e poñela como app por defecto.</string>
+    <string name="faq_1_text">Primeiro tes que atopar a galería predeterminada actual na sección Aplicacións nos axustes do teu dispositivo, busca un botón que poña algo como \"Abrir por defecto\", preme nel, marca \"Restablecer predeterminada\". A próxima vez que intentes abrir unha imaxe ou vídeo deberás escoller a aplicación para abrila, e aí podes elixir Galería Fossify e poñela como app predeterminada.</string>
     <string name="faq_2_title">Protexín a aplicación cun contrasinal, pero esquecino. Que podo facer?</string>
     <string name="faq_2_text">Podes solucionalo de dous xeitos. Ou ben reinstalar a aplicación ou buscar a aplicación nos axustes do dispositivo e escoller \"Limpar datos\". Restablecerá todos os seus axustes, mais non eliminará ficheiros de medios.</string>
     <string name="faq_3_title">Como podo facer que un álbum apareza sempre arriba de todo\?</string>
