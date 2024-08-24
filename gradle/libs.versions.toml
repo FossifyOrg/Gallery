@@ -1,8 +1,8 @@
 [versions]
 #jetbrains
-kotlin = "1.9.22"
+kotlin = "1.9.24"
 #KSP
-ksp = "1.9.22-1.0.17"
+ksp = "1.9.24-1.0.20"
 #AndroidX
 androidx-swiperefreshlayout = "1.1.0"
 androidx-constraintlayout = "2.1.4"
@@ -11,7 +11,7 @@ exif = "1.0.1"
 #Room
 room = "2.6.1"
 #Fossify
-commons = "88a349fe1d"
+commons = "0c8d33952e"
 #Gradle4
 gradlePlugins-agp = "8.5.0"
 #Other
@@ -25,7 +25,7 @@ gestureviews = "e706487a14"
 androidsvgAar = "1.4"
 imagefilters = "1.0.7"
 sanselan = "0.97-incubator"
-media3Exoplayer = "1.2.1"
+media3Exoplayer = "1.4.0"
 okhttp = "4.12.0"
 okio = "3.0.0"
 picasso = "2.71828"
