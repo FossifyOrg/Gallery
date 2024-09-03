@@ -542,6 +542,7 @@ fun Context.loadImageBase(
 
     // animation is only supported without rounded corners and the file must be a GIF or WEBP.
     // Glide doesn't support animated AVIF: https://bumptech.github.io/glide/int/avif.html
+    // TODO: animate JXL
     if (animate && roundCorners == ROUNDED_CORNERS_NONE && (path.isGif() || path.isWebP())) {
         // this is required to make glide cache aware of changes
         options.decode(Drawable::class.java)
