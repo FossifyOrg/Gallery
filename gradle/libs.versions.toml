@@ -32,7 +32,7 @@ picasso = "2.71828"
 subsamplingScaleImageView = "d705c3c4ad"
 #build
 app-build-compileSDKVersion = "34"
-app-build-targetSDK = "33"
+app-build-targetSDK = "34"
 app-build-minimumSDK = "23"
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
