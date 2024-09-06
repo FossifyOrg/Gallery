@@ -567,4 +567,8 @@ class Config(context: Context) : BaseConfig(context) {
     var lastExportedFavoritesFolder: String
         get() = prefs.getString(LAST_EXPORTED_FAVORITES_FOLDER, "")!!
         set(lastExportedFavoritesFolder) = prefs.edit().putString(LAST_EXPORTED_FAVORITES_FOLDER, lastExportedFavoritesFolder).apply()
+
+    var showPermissionRationale: Boolean
+        get() = prefs.getBoolean(SHOW_PERMISSION_RATIONALE, false)
+        set(showPermissionRationale) = prefs.edit().putBoolean(SHOW_PERMISSION_RATIONALE, showPermissionRationale).apply()
 }

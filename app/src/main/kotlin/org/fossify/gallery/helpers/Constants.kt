@@ -98,6 +98,7 @@ const val CUSTOM_FOLDERS_ORDER = "custom_folders_order"
 const val AVOID_SHOWING_ALL_FILES_PROMPT = "avoid_showing_all_files_prompt"
 const val SEARCH_ALL_FILES_BY_DEFAULT = "search_all_files_by_default"
 const val LAST_EXPORTED_FAVORITES_FOLDER = "last_exported_favorites_folder"
+const val SHOW_PERMISSION_RATIONALE = "show_permission_rationale"
 
 // slideshow
 const val SLIDESHOW_INTERVAL = "slideshow_interval"
@@ -249,8 +250,6 @@ const val FOLDER_STYLE_ROUNDED_CORNERS = 2
 const val THUMBNAIL_FADE_DURATION_MS = 150
 
 fun getPermissionToRequest() = if (isTiramisuPlus()) PERMISSION_READ_MEDIA_IMAGES else PERMISSION_WRITE_STORAGE
-
-fun getRequiredPermission() = if (isUpsideDownCakePlus()) PERMISSION_READ_MEDIA_VISUAL_USER_SELECTED else getPermissionToRequest()
 
 fun getPermissionsToRequest(): Collection<Int> {
     val permissions = mutableListOf(getPermissionToRequest())

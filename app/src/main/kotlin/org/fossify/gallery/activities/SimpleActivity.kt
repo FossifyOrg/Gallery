@@ -5,20 +5,24 @@ import android.net.Uri
 import android.provider.MediaStore.Images
 import android.provider.MediaStore.Video
 import android.view.WindowManager
+import androidx.appcompat.app.AlertDialog
 import org.fossify.commons.activities.BaseSimpleActivity
 import org.fossify.commons.dialogs.FilePickerDialog
-import org.fossify.commons.extensions.getParentPath
-import org.fossify.commons.extensions.getRealPathFromURI
-import org.fossify.commons.extensions.scanPathRecursively
+import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isPiePlus
 import org.fossify.gallery.R
+import org.fossify.gallery.dialogs.StoragePermissionRequiredDialog
 import org.fossify.gallery.extensions.addPathToDB
 import org.fossify.gallery.extensions.config
 import org.fossify.gallery.extensions.updateDirectoryPath
+import org.fossify.gallery.helpers.getPermissionsToRequest
 
 open class SimpleActivity : BaseSimpleActivity() {
-    val observer = object : ContentObserver(null) {
+
+    private var dialog: AlertDialog? = null
+
+    private val observer = object : ContentObserver(null) {
         override fun onChange(selfChange: Boolean, uri: Uri?) {
             super.onChange(selfChange, uri)
             if (uri != null) {
@@ -93,5 +97,45 @@ open class SimpleActivity : BaseSimpleActivity() {
                 scanPathRecursively(it)
             }
         }
+    }
+
+    protected fun requestMediaPermissions(enableRationale: Boolean = false, onGranted: () -> Unit) {
+        when {
+            hasAllPermissions(getPermissionsToRequest()) -> onGranted()
+            config.showPermissionRationale -> {
+                if (enableRationale) {
+                    showPermissionRationale()
+                } else {
+                    onPermissionDenied()
+                }
+            }
+
+            else -> {
+                handlePartialMediaPermissions(getPermissionsToRequest(), force = true) { granted ->
+                    if (granted) {
+                        onGranted()
+                    } else {
+                        config.showPermissionRationale = true
+                        showPermissionRationale()
+                    }
+                }
+            }
+        }
+    }
+
+    private fun showPermissionRationale() {
+        dialog?.dismiss()
+        StoragePermissionRequiredDialog(
+            activity = this,
+            onOkay = ::openDeviceSettings,
+            onCancel = ::onPermissionDenied
+        ) { dialog ->
+            this.dialog = dialog
+        }
+    }
+
+    private fun onPermissionDenied() {
+        toast(org.fossify.commons.R.string.no_storage_permissions)
+        finish()
     }
 }

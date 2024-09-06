@@ -46,13 +46,8 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
 
         setupOptionsMenu()
         refreshMenuItems()
-        handlePermission(getPermissionToRequest()) {
-            if (it) {
-                checkIntent(savedInstanceState)
-            } else {
-                toast(org.fossify.commons.R.string.no_storage_permissions)
-                finish()
-            }
+        requestMediaPermissions {
+            checkIntent(savedInstanceState)
         }
     }
 
