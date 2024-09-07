@@ -254,4 +254,5 @@
     <string name="faq_18_text">Nasze aplikacje nie mają żadnych reklam. Jeśli widzisz je podczas odtwarzania wideo, musisz używać odtwarzacza wideo innej aplikacji. Spróbuj znaleźć domyślny odtwarzacz wideo w ustawieniach urządzenia, a następnie wykonaj na nim „Wyczyść domyślne”. Następnym razem, gdy spróbujesz odtworzyć wideo, zobaczysz ekran wyboru aplikacji, gdzie możesz wybrać, którą chcesz użyć.</string>
     <string name="by_folder">Folder</string>
     <string name="full_storage_permission_required">Fossify Gallery potrzebuje pełnego dostępu, aby wyświetlać wszystkie Twoje zdjęcia i wideo. Przejdź do Ustawień &gt; Uprawnienia &gt; Zdjęcia i filmy &gt; Zezwalaj.</string>
+    <string name="playback_speed">Prędkość odtwarzania</string>
 </resources>
