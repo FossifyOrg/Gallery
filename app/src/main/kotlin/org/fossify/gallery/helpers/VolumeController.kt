@@ -14,7 +14,7 @@ class VolumeController(
     private val onVolumeChanged: (isMuted: Boolean) -> Unit
 ) {
     private var audioManager = context.audioManager
-    private var savedVolume = audioManager.getStreamMaxVolume(streamType) / 2
+    private var savedVolume = audioManager.getStreamMaxVolume(streamType)
 
     private val currentVolume: Int
         get() = audioManager.getStreamVolume(streamType)
