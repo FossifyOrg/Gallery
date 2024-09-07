@@ -185,7 +185,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         binding.bottomVideoTimeHolder.videoCurrTime.setOnClickListener { doSkip(false) }
         binding.bottomVideoTimeHolder.videoDuration.setOnClickListener { doSkip(true) }
         binding.bottomVideoTimeHolder.videoTogglePlayPause.setOnClickListener { togglePlayPause() }
-        binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea.setOnClickListener { showPlaybackSpeedPicker() }
+        binding.bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
         binding.videoSurfaceFrame.setOnClickListener { toggleFullscreen() }
         binding.videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
@@ -305,10 +305,8 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private fun videoPrepared() {
         if (!mWasVideoStarted) {
             binding.bottomVideoTimeHolder.videoTogglePlayPause.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedBackground.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(config.playbackSpeed)}x"
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(config.playbackSpeed)}x"
             mDuration = (mExoPlayer!!.duration / 1000).toInt()
             binding.bottomVideoTimeHolder.videoSeekbar.max = mDuration
             binding.bottomVideoTimeHolder.videoDuration.text = mDuration.getFormattedDuration()
@@ -479,10 +477,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             binding.bottomVideoTimeHolder.videoPrevFile,
             binding.bottomVideoTimeHolder.videoTogglePlayPause,
             binding.bottomVideoTimeHolder.videoNextFile,
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedBackground,
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea,
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon,
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedText,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed,
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoSeekbar,
             binding.bottomVideoTimeHolder.videoDuration,
@@ -495,7 +490,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         arrayOf(
             binding.bottomVideoTimeHolder.videoPrevFile,
             binding.bottomVideoTimeHolder.videoNextFile,
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea,
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed,
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoDuration,
         ).forEach {
@@ -517,15 +512,16 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
 
     override fun updatePlaybackSpeed(speed: Float) {
         val isSlow = speed < 1f
-        if (isSlow != binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag as? Boolean) {
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag = isSlow
+        if (isSlow != binding.bottomVideoTimeHolder.videoPlaybackSpeed.tag as? Boolean) {
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed.tag = isSlow
 
             val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.setImageDrawable(resources.getDrawable(drawableId))
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed
+                .setCompoundDrawablesRelativeWithIntrinsicBounds(resources.getDrawable(drawableId), null, null, null)
         }
 
         @SuppressLint("SetTextI18n")
-        binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(speed)}x"
+        binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(speed)}x"
         mExoPlayer?.setPlaybackSpeed(speed)
     }
 

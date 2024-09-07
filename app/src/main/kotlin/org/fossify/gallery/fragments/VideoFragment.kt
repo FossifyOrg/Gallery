@@ -97,7 +97,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             bottomVideoTimeHolder.videoDuration.setOnClickListener { skip(true) }
             videoHolder.setOnClickListener { toggleFullscreen() }
             videoPreview.setOnClickListener { toggleFullscreen() }
-            bottomVideoTimeHolder.videoPlaybackSpeedClickArea.setOnClickListener { showPlaybackSpeedPicker() }
+            bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
             videoPlayOutline.setOnClickListener {
@@ -527,7 +527,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoDuration,
             binding.bottomVideoTimeHolder.videoTogglePlayPause,
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed
         ).forEach {
             it.isClickable = !mIsFullscreen
         }
@@ -552,15 +552,16 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
 
     override fun updatePlaybackSpeed(speed: Float) {
         val isSlow = speed < 1f
-        if (isSlow != binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag as? Boolean) {
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.tag = isSlow
+        if (isSlow != binding.bottomVideoTimeHolder.videoPlaybackSpeed.tag as? Boolean) {
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed.tag = isSlow
 
             val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.setImageDrawable(resources.getDrawable(drawableId))
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed
+                .setCompoundDrawablesRelativeWithIntrinsicBounds(resources.getDrawable(drawableId), null, null, null)
         }
 
         @SuppressLint("SetTextI18n")
-        binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(speed)}x"
+        binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(speed)}x"
         mExoPlayer?.setPlaybackSpeed(speed)
     }
 
@@ -688,10 +689,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         if (!mWasVideoStarted) {
             binding.videoPlayOutline.beGone()
             mPlayPauseButton.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedClickArea.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedIcon.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedBackground.beVisible()
-            binding.bottomVideoTimeHolder.videoPlaybackSpeedText.text = "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"
         }
 
         mWasVideoStarted = true
