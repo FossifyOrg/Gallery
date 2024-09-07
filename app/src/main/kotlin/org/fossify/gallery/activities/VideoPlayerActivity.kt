@@ -16,6 +16,7 @@ import android.util.DisplayMetrics
 import android.view.*
 import android.widget.RelativeLayout
 import android.widget.SeekBar
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.media3.common.*
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.ContentDataSource
@@ -60,6 +61,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private var mVideoSize = Point(0, 0)
     private var mTimerHandler = Handler()
     private var mPlayWhenReadyHandler = Handler()
+    private var mVolumeController: VolumeController? = null
 
     private var mIgnoreCloseDown = false
 
@@ -117,6 +119,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             binding.bottomVideoTimeHolder.videoSeekbar.progress = 0
             mTimerHandler.removeCallbacksAndMessages(null)
             mPlayWhenReadyHandler.removeCallbacksAndMessages(null)
+            mVolumeController?.destroy()
         }
     }
 
@@ -186,6 +189,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         binding.bottomVideoTimeHolder.videoDuration.setOnClickListener { doSkip(true) }
         binding.bottomVideoTimeHolder.videoTogglePlayPause.setOnClickListener { togglePlayPause() }
         binding.bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
+        binding.bottomVideoTimeHolder.videoToggleMute.setOnClickListener { mVolumeController?.toggleMute() }
         binding.videoSurfaceFrame.setOnClickListener { toggleFullscreen() }
         binding.videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
@@ -235,6 +239,12 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         }
 
         mDragThreshold = DRAG_THRESHOLD * resources.displayMetrics.density
+        mVolumeController = VolumeController(this) { isMuted ->
+            val icon = if (isMuted) R.drawable.ic_vector_speaker_off else R.drawable.ic_vector_speaker_on
+            binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
+                AppCompatResources.getDrawable(this, icon)
+            )
+        }
     }
 
     private fun initExoPlayer() {
@@ -306,6 +316,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         if (!mWasVideoStarted) {
             binding.bottomVideoTimeHolder.videoTogglePlayPause.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
+            binding.bottomVideoTimeHolder.videoToggleMute.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(config.playbackSpeed)}x"
             mDuration = (mExoPlayer!!.duration / 1000).toInt()
             binding.bottomVideoTimeHolder.videoSeekbar.max = mDuration
@@ -478,6 +489,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             binding.bottomVideoTimeHolder.videoTogglePlayPause,
             binding.bottomVideoTimeHolder.videoNextFile,
             binding.bottomVideoTimeHolder.videoPlaybackSpeed,
+            binding.bottomVideoTimeHolder.videoToggleMute,
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoSeekbar,
             binding.bottomVideoTimeHolder.videoDuration,
@@ -491,6 +503,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             binding.bottomVideoTimeHolder.videoPrevFile,
             binding.bottomVideoTimeHolder.videoNextFile,
             binding.bottomVideoTimeHolder.videoPlaybackSpeed,
+            binding.bottomVideoTimeHolder.videoToggleMute,
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoDuration,
         ).forEach {

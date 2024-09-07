@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.media3.common.*
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.ContentDataSource
@@ -84,6 +85,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private lateinit var mPlayPauseButton: ImageView
     private lateinit var mSeekBar: SeekBar
 
+    private var mVolumeController: VolumeController? = null
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val context = requireContext()
         val activity = requireActivity()
@@ -98,6 +101,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             videoHolder.setOnClickListener { toggleFullscreen() }
             videoPreview.setOnClickListener { toggleFullscreen() }
             bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
+            bottomVideoTimeHolder.videoToggleMute.setOnClickListener { mVolumeController?.toggleMute() }
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
             videoPlayOutline.setOnClickListener {
@@ -238,6 +242,13 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         setupVideoDuration()
         if (mStoredRememberLastVideoPosition) {
             restoreLastVideoSavedPosition()
+        }
+
+        mVolumeController = VolumeController(context) { isMuted ->
+            val icon = if (isMuted) R.drawable.ic_vector_speaker_off else R.drawable.ic_vector_speaker_on
+            binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
+                AppCompatResources.getDrawable(context, icon)
+            )
         }
 
         return mView
@@ -527,7 +538,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             binding.bottomVideoTimeHolder.videoCurrTime,
             binding.bottomVideoTimeHolder.videoDuration,
             binding.bottomVideoTimeHolder.videoTogglePlayPause,
-            binding.bottomVideoTimeHolder.videoPlaybackSpeed
+            binding.bottomVideoTimeHolder.videoPlaybackSpeed,
+            binding.bottomVideoTimeHolder.videoToggleMute
         ).forEach {
             it.isClickable = !mIsFullscreen
         }
@@ -689,6 +701,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         if (!mWasVideoStarted) {
             binding.videoPlayOutline.beGone()
             mPlayPauseButton.beVisible()
+            binding.bottomVideoTimeHolder.videoToggleMute.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"
         }
@@ -790,6 +803,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private fun cleanup() {
         pauseVideo()
         releaseExoPlayer()
+        mVolumeController?.destroy()
 
         if (mWasFragmentInit) {
             mCurrTimeView.text = 0.getFormattedDuration()

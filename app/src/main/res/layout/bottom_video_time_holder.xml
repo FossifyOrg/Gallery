@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/video_playback_speed"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/video_player_button_width"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/big_margin"
         android:background="@drawable/darkened_automatic_circle_background"
@@ -17,7 +17,6 @@
         android:gravity="center"
         android:paddingHorizontal="@dimen/normal_margin"
         android:paddingVertical="@dimen/medium_margin"
-        android:shadowColor="@color/default_background_color"
         android:textColor="@android:color/white"
         android:visibility="gone"
         app:drawableStartCompat="@drawable/ic_playback_speed_vector"
@@ -112,5 +111,21 @@
         app:layout_constraintTop_toBottomOf="@+id/video_toggle_play_pause"
         app:layout_constraintTop_toTopOf="@+id/video_seekbar"
         tools:text="00:00" />
+
+    <ImageView
+        android:id="@+id/video_toggle_mute"
+        android:layout_width="@dimen/video_player_button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:background="@drawable/darkened_automatic_circle_background"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/normal_margin"
+        android:paddingVertical="@dimen/medium_margin"
+        android:src="@drawable/ic_vector_speaker_on"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/video_toggle_play_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/video_toggle_play_pause"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

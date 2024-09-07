@@ -11,6 +11,7 @@
     <dimen name="tmb_shadow_height">70dp</dimen>
     <dimen name="media_side_slider_width">60dp</dimen>
     <dimen name="video_player_play_pause_size">60dp</dimen>
+    <dimen name="video_player_button_width">68dp</dimen>
     <dimen name="list_view_folder_thumbnail_size">72dp</dimen>
     <dimen name="bottom_actions_height">64dp</dimen>
     <dimen name="bottom_actions_height_double">128dp</dimen>
