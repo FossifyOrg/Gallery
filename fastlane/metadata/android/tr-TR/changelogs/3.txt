@@ -1,0 +1,2 @@
+* Yüksek çözünürlüklü görüntülerde yakınlaştırma düzeltildi
+* Bazı çeviriler eklendi

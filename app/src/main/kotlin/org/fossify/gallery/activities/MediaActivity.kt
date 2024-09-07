@@ -15,7 +15,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
-import org.fossify.commons.dialogs.ConfirmationDialog
 import org.fossify.commons.dialogs.CreateNewFolderDialog
 import org.fossify.commons.dialogs.RadioGroupDialog
 import org.fossify.commons.extensions.*
@@ -370,35 +369,30 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun tryLoadGallery() {
-        handlePermission(getPermissionToRequest()) {
-            if (it) {
-                val dirName = when {
-                    mPath == FAVORITES -> getString(org.fossify.commons.R.string.favorites)
-                    mPath == RECYCLE_BIN -> getString(org.fossify.commons.R.string.recycle_bin)
-                    mPath == config.OTGPath -> getString(org.fossify.commons.R.string.usb)
-                    else -> getHumanizedFilename(mPath)
-                }
-
-                val searchHint = if (mShowAll) {
-                    getString(org.fossify.commons.R.string.search_files)
-                } else {
-                    getString(org.fossify.commons.R.string.search_in_placeholder, dirName)
-                }
-
-                binding.mediaMenu.updateHintText(searchHint)
-                if (!mShowAll) {
-                    binding.mediaMenu.toggleForceArrowBackIcon(true)
-                    binding.mediaMenu.onNavigateBackClickListener = {
-                        onBackPressed()
-                    }
-                }
-
-                getMedia()
-                setupLayoutManager()
-            } else {
-                toast(org.fossify.commons.R.string.no_storage_permissions)
-                finish()
+        requestMediaPermissions {
+            val dirName = when (mPath) {
+                FAVORITES -> getString(org.fossify.commons.R.string.favorites)
+                RECYCLE_BIN -> getString(org.fossify.commons.R.string.recycle_bin)
+                config.OTGPath -> getString(org.fossify.commons.R.string.usb)
+                else -> getHumanizedFilename(mPath)
             }
+
+            val searchHint = if (mShowAll) {
+                getString(org.fossify.commons.R.string.search_files)
+            } else {
+                getString(org.fossify.commons.R.string.search_in_placeholder, dirName)
+            }
+
+            binding.mediaMenu.updateHintText(searchHint)
+            if (!mShowAll) {
+                binding.mediaMenu.toggleForceArrowBackIcon(true)
+                binding.mediaMenu.onNavigateBackClickListener = {
+                    onBackPressed()
+                }
+            }
+
+            getMedia()
+            setupLayoutManager()
         }
     }
 

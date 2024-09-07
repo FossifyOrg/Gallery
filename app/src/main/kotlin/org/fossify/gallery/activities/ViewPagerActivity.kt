@@ -97,15 +97,10 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         checkNotchSupport()
         (MediaActivity.mMedia.clone() as ArrayList<ThumbnailItem>).filterIsInstanceTo(mMediaFiles, Medium::class.java)
 
-        handlePermission(getPermissionToRequest()) {
-            if (it) {
-                initViewPager(
-                    savedPath = savedInstanceState?.getString(SAVED_PATH).orEmpty()
-                )
-            } else {
-                toast(org.fossify.commons.R.string.no_storage_permissions)
-                finish()
-            }
+        requestMediaPermissions {
+            initViewPager(
+                savedPath = savedInstanceState?.getString(SAVED_PATH).orEmpty()
+            )
         }
 
         initFavorites()

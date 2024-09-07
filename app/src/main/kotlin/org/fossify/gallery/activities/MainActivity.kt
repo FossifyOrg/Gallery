@@ -158,27 +158,15 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         }
 
         // just request the permission, tryLoadGallery will then trigger in onResume
-        handleMediaPermissions { success ->
-            if (!success) {
-                toast(org.fossify.commons.R.string.no_storage_permissions)
-                finish()
-            }
-        }
+        handleMediaPermissions()
     }
 
-    private fun handleMediaPermissions(callback: (granted: Boolean) -> Unit) {
-        handlePermission(getPermissionToRequest()) { granted ->
-            callback(granted)
-            if (granted && isRPlus()) {
-                handlePermission(PERMISSION_MEDIA_LOCATION) {}
-                if (isTiramisuPlus()) {
-                    handlePermission(PERMISSION_READ_MEDIA_VIDEO) {}
-                }
-
-                if (!mWasMediaManagementPromptShown) {
-                    mWasMediaManagementPromptShown = true
-                    handleMediaManagementPrompt { }
-                }
+    private fun handleMediaPermissions(callback: (() -> Unit)? = null) {
+        requestMediaPermissions(enableRationale = true) {
+            callback?.invoke()
+            if (isRPlus() && !mWasMediaManagementPromptShown) {
+                mWasMediaManagementPromptShown = true
+                handleMediaManagementPrompt { }
             }
         }
     }
@@ -497,32 +485,27 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
 
     private fun tryLoadGallery() {
         // avoid calling anything right after granting the permission, it will be called from onResume()
-        val wasMissingPermission = config.appRunCount == 1 && !hasPermission(getPermissionToRequest())
-        handleMediaPermissions { success ->
-            if (success) {
-                if (wasMissingPermission) {
-                    return@handleMediaPermissions
-                }
-
-                if (!mWasDefaultFolderChecked) {
-                    openDefaultFolder()
-                    mWasDefaultFolderChecked = true
-                }
-
-                checkOTGPath()
-                checkDefaultSpamFolders()
-
-                if (config.showAll) {
-                    showAllMedia()
-                } else {
-                    getDirectories()
-                }
-
-                setupLayoutManager()
-            } else {
-                toast(org.fossify.commons.R.string.no_storage_permissions)
-                finish()
+        val wasMissingPermission = config.appRunCount == 1 && !hasAllPermissions(getPermissionsToRequest())
+        handleMediaPermissions {
+            if (wasMissingPermission) {
+                return@handleMediaPermissions
             }
+
+            if (!mWasDefaultFolderChecked) {
+                openDefaultFolder()
+                mWasDefaultFolderChecked = true
+            }
+
+            checkOTGPath()
+            checkDefaultSpamFolders()
+
+            if (config.showAll) {
+                showAllMedia()
+            } else {
+                getDirectories()
+            }
+
+            setupLayoutManager()
         }
     }
 

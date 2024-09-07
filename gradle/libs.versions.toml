@@ -1,8 +1,8 @@
 [versions]
 #jetbrains
-kotlin = "1.9.22"
+kotlin = "1.9.24"
 #KSP
-ksp = "1.9.22-1.0.17"
+ksp = "1.9.24-1.0.20"
 #AndroidX
 androidx-swiperefreshlayout = "1.1.0"
 androidx-constraintlayout = "2.1.4"
@@ -11,9 +11,9 @@ exif = "1.0.1"
 #Room
 room = "2.6.1"
 #Fossify
-commons = "88a349fe1d"
+commons = "0c8d33952e"
 #Gradle4
-gradlePlugins-agp = "8.3.2"
+gradlePlugins-agp = "8.5.0"
 #Other
 androidGifDrawable = "1.2.25"
 androidImageCropper = "4.5.0"
@@ -25,14 +25,14 @@ gestureviews = "e706487a14"
 androidsvgAar = "1.4"
 imagefilters = "1.0.7"
 sanselan = "0.97-incubator"
-media3Exoplayer = "1.2.1"
+media3Exoplayer = "1.4.0"
 okhttp = "4.12.0"
 okio = "3.0.0"
 picasso = "2.71828"
 subsamplingScaleImageView = "d705c3c4ad"
 #build
 app-build-compileSDKVersion = "34"
-app-build-targetSDK = "33"
+app-build-targetSDK = "34"
 app-build-minimumSDK = "23"
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
@@ -69,6 +69,7 @@ glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glid
 zjupure-webpdecoder = { module = "com.github.zjupure:webpdecoder", version.ref = "zjupureWebpdecoder" }
 picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 avif-integration = { group = "com.github.bumptech.glide", name = "avif-integration", version.ref = "glideCompiler" }
+jxl-integration = { group = "io.github.awxkee", name = "jxl-coder-glide", version = "2.2.0" }
 [bundles]
 room = [
     "androidx-room-ktx",
