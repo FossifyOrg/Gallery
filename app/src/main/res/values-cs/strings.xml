@@ -253,4 +253,5 @@
     <string name="interval">Interval</string>
     <string name="faq_1_title">Jak mohu nastavit Fossify Gallery jako výchozí galerii zařízení?</string>
     <string name="full_storage_permission_required">Galerie Fossify potřebuje plný přístup ke zobrazení všech vašich fotek a videí. Přejděte do Nastavení &gt; Oprávnění &gt; Fotky a videa &gt; Povolit vše.</string>
+    <string name="playback_speed">Rychlost přehrávání</string>
 </resources>
