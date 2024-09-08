@@ -251,4 +251,5 @@
 \n
 \nWenn du Ordner auch für andere Apps verstecken willst, verwende die Funktion „Ordner verstecken“.</string>
     <string name="editor">Editor</string>
+    <string name="playback_speed">Wiedergabegeschwindigkeit</string>
 </resources>
