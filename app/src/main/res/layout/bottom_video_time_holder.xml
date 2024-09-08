@@ -9,12 +9,13 @@
 
     <TextView
         android:id="@+id/video_playback_speed"
-        android:layout_width="@dimen/video_player_button_width"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/big_margin"
         android:background="@drawable/darkened_automatic_circle_background"
         android:drawablePadding="@dimen/tiny_margin"
         android:gravity="center"
+        android:minWidth="@dimen/video_player_button_width"
         android:paddingHorizontal="@dimen/normal_margin"
         android:paddingVertical="@dimen/medium_margin"
         android:textColor="@android:color/white"
@@ -114,11 +115,12 @@
 
     <ImageView
         android:id="@+id/video_toggle_mute"
-        android:layout_width="@dimen/video_player_button_width"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/big_margin"
         android:background="@drawable/darkened_automatic_circle_background"
         android:gravity="center"
+        android:minWidth="@dimen/video_player_button_width"
         android:paddingHorizontal="@dimen/normal_margin"
         android:paddingVertical="@dimen/medium_margin"
         android:src="@drawable/ic_vector_speaker_on"
