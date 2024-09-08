@@ -182,7 +182,7 @@ class Config(context: Context) : BaseConfig(context) {
         set(cropThumbnails) = prefs.edit().putBoolean(CROP_THUMBNAILS, cropThumbnails).apply()
 
     var showThumbnailVideoDuration: Boolean
-        get() = prefs.getBoolean(SHOW_THUMBNAIL_VIDEO_DURATION, false)
+        get() = prefs.getBoolean(SHOW_THUMBNAIL_VIDEO_DURATION, true)
         set(showThumbnailVideoDuration) = prefs.edit().putBoolean(SHOW_THUMBNAIL_VIDEO_DURATION, showThumbnailVideoDuration).apply()
 
     var showThumbnailFileTypes: Boolean
