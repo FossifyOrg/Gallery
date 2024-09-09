@@ -357,7 +357,7 @@ class Config(context: Context) : BaseConfig(context) {
         set(showExtendedDetails) = prefs.edit().putBoolean(SHOW_EXTENDED_DETAILS, showExtendedDetails).apply()
 
     var hideExtendedDetails: Boolean
-        get() = prefs.getBoolean(HIDE_EXTENDED_DETAILS, false)
+        get() = prefs.getBoolean(HIDE_EXTENDED_DETAILS, true)
         set(hideExtendedDetails) = prefs.edit().putBoolean(HIDE_EXTENDED_DETAILS, hideExtendedDetails).apply()
 
     var extendedDetails: Int
