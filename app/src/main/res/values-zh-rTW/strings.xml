@@ -208,7 +208,7 @@
     <string name="extended_details">詳細資訊</string>
     <string name="bottom_actions">底部操作</string>
     <string name="manage_bottom_actions">管理要顯示的底部操作</string>
-    <string name="toggle_favorite">我的最愛</string>
+    <string name="toggle_favorite">切換我的最愛</string>
     <string name="toggle_file_visibility">檔案顯示</string>
     <string name="faq_2_title">用密碼把這個 APP 上鎖後忘記密碼該怎麼辦？</string>
     <string name="faq_2_text">有兩種解決方法。一是重新安裝本 APP。一是在裝置的設定中找到本 APP，然後按「清除資料」（或「清除儲存空間」等類似的字眼），APP 的設定將會被重設，但不會移除任何媒體檔案。</string>
