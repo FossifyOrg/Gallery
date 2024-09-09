@@ -252,4 +252,5 @@
     <string name="faq_5_text">排除是指僅在 Fossify Gallery 中不顯示該資料夾，而隱藏則是系統級別的操作，它也會將資料夾隱藏於其他相簿。這是通過在指定資料夾創建一個名為「.nomedia」的空檔案來實現的，您也可以使用任何檔案管理器刪除它。請注意，有些裝置不允許隱藏像是相機、截圖和下載等資料夾。</string>
     <string name="full_storage_permission_required">Fossify 圖庫需要完整存取權限才能顯示您所有的照片與影片。請到「設定」→「隱私權」→「應用程式權限」→「相片和影片」→「一律全部允許」。</string>
     <string name="playback_speed">播放速度</string>
+    <string name="failed_to_load_media">載入媒體失敗。</string>
 </resources>
