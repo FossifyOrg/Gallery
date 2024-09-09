@@ -255,4 +255,5 @@
     <string name="by_folder">Folder</string>
     <string name="full_storage_permission_required">Fossify Gallery potrzebuje pełnego dostępu, aby wyświetlać wszystkie Twoje zdjęcia i wideo. Przejdź do Ustawień &gt; Uprawnienia &gt; Zdjęcia i filmy &gt; Zezwalaj.</string>
     <string name="playback_speed">Prędkość odtwarzania</string>
+    <string name="failed_to_load_media">Nie udało się załadować multimediów.</string>
 </resources>
