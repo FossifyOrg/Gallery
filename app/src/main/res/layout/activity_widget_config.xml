@@ -25,9 +25,9 @@
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground">
 
-                <org.fossify.commons.views.MyAppCompatCheckbox
+                <org.fossify.commons.views.MyMaterialSwitch
                     android:id="@+id/folder_picker_show_folder_name"
-                    style="@style/SettingsCheckboxStyle"
+                    style="@style/SettingsSwitchStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/show_folder_name" />
@@ -41,7 +41,7 @@
                 android:layout_below="@+id/folder_picker_show_folder_name_holder"
                 android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginBottom="@dimen/normal_margin"
-                android:paddingStart="@dimen/activity_margin"
+                android:paddingHorizontal="@dimen/settings_label_start_margin"
                 android:text="@string/folder_on_widget" />
 
             <org.fossify.commons.views.MyTextView
@@ -49,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/folder_picker_label"
-                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginStart="@dimen/settings_label_start_margin"
                 android:background="@drawable/button_background"
                 android:padding="@dimen/normal_margin"
                 tools:text="@string/internal" />
