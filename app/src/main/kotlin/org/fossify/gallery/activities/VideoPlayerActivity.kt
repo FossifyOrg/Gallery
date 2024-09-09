@@ -530,7 +530,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
 
             val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
             binding.bottomVideoTimeHolder.videoPlaybackSpeed
-                .setCompoundDrawablesRelativeWithIntrinsicBounds(resources.getDrawable(drawableId), null, null, null)
+                .setDrawablesRelativeWithIntrinsicBounds(AppCompatResources.getDrawable(this, drawableId))
         }
 
         @SuppressLint("SetTextI18n")
