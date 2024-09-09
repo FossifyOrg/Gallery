@@ -619,7 +619,13 @@ class MediaAdapter(
 
             playPortraitOutline?.beVisibleIf(medium.isVideo() || medium.isPortrait())
             if (medium.isVideo()) {
-                playPortraitOutline?.setImageResource(org.fossify.commons.R.drawable.ic_play_vector)
+                playPortraitOutline?.setImageResource(
+                    if (isListViewType) {
+                        org.fossify.commons.R.drawable.ic_play_outline_vector
+                    } else {
+                        org.fossify.commons.R.drawable.ic_play_vector
+                    }
+                )
                 playPortraitOutline?.beVisible()
             } else if (medium.isPortrait()) {
                 playPortraitOutline?.setImageResource(R.drawable.ic_portrait_photo_vector)
@@ -648,6 +654,9 @@ class MediaAdapter(
                 videoDuration?.text = medium.videoDuration.getFormattedDuration()
             }
             videoDuration?.beVisibleIf(showVideoDuration)
+            if (isListViewType) {
+                videoDuration?.setTextColor(textColor)
+            }
 
             mediumCheck.beVisibleIf(isSelected)
             if (isSelected) {

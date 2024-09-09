@@ -10,7 +10,8 @@
     <org.fossify.commons.views.MySquareImageView
         android:id="@+id/medium_thumbnail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:src="@mipmap/ic_launcher" />
 
     <ImageView
         android:id="@+id/favorite"
@@ -23,7 +24,8 @@
         android:gravity="end"
         android:padding="@dimen/small_margin"
         android:src="@drawable/ic_star_vector"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:visibility="visible" />
 
     <RelativeLayout
         android:id="@+id/play_icon_holder"
@@ -42,7 +44,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_margin="0dp"
-            android:visibility="gone" />
+            android:visibility="gone"
+            tools:src="@drawable/ic_play_vector"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/video_duration"
@@ -56,7 +60,8 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/normal_text_size"
             android:visibility="gone"
-            tools:text="02:34" />
+            tools:text="02:34"
+            tools:visibility="visible" />
 
     </RelativeLayout>
 
@@ -72,7 +77,8 @@
         android:contentDescription="@null"
         android:padding="@dimen/tiny_margin"
         android:src="@drawable/ic_check_vector"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/medium_name"
