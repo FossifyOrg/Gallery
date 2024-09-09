@@ -50,6 +50,10 @@
         android:id="@+id/bottom_video_time_holder"
         layout="@layout/bottom_video_time_holder" />
 
+    <include
+        android:id="@+id/error_message_holder"
+        layout="@layout/layout_media_load_error" />
+
     <TextView
         android:id="@+id/slide_info"
         android:layout_width="wrap_content"

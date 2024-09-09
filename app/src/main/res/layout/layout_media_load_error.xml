@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/error_message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginHorizontal="@dimen/bigger_margin"
+    android:layout_toStartOf="@id/instant_next_item"
+    android:layout_toEndOf="@id/instant_prev_item"
+    android:alpha="0"
+    android:text="@string/failed_to_load_media"
+    android:textAlignment="center"
+    android:visibility="gone"
+    app:drawableTopCompat="@drawable/ic_vector_warning_colored"
+    tools:alpha="1"
+    tools:visibility="visible" />

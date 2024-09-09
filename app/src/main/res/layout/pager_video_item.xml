@@ -43,6 +43,10 @@
         android:padding="20dp"
         android:src="@drawable/ic_play_outline_vector" />
 
+    <include
+        android:id="@+id/error_message_holder"
+        layout="@layout/layout_media_load_error" />
+
     <ImageView
         android:id="@+id/panorama_outline"
         android:layout_width="@dimen/play_outline_size_big"

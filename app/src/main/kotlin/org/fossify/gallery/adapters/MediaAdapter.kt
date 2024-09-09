@@ -9,7 +9,9 @@ import android.os.Looper
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.allViews
 import com.bumptech.glide.Glide
 import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
@@ -681,7 +683,19 @@ class MediaAdapter(
 
             if (loadImageInstantly) {
                 activity.loadImage(
-                    medium.type, path, mediumThumbnail, scrollHorizontally, animateGifs, cropThumbnails, roundedCorners, medium.getKey(), rotatedImagePaths
+                    type = medium.type,
+                    path = path,
+                    target = mediumThumbnail,
+                    horizontalScroll = scrollHorizontally,
+                    animateGifs = animateGifs,
+                    cropThumbnails = cropThumbnails,
+                    roundCorners = roundedCorners,
+                    signature = medium.getKey(),
+                    skipMemoryCacheAtPaths = rotatedImagePaths,
+                    onError = {
+                        mediumThumbnail.scaleType = ImageView.ScaleType.CENTER
+                        mediumThumbnail.setImageDrawable(AppCompatResources.getDrawable(activity, R.drawable.ic_vector_warning_colored))
+                    }
                 )
             } else {
                 mediumThumbnail.setImageDrawable(null)
@@ -690,8 +704,19 @@ class MediaAdapter(
                     val isVisible = visibleItemPaths.contains(medium.path)
                     if (isVisible) {
                         activity.loadImage(
-                            medium.type, path, mediumThumbnail, scrollHorizontally, animateGifs, cropThumbnails, roundedCorners,
-                            medium.getKey(), rotatedImagePaths
+                            type = medium.type,
+                            path = path,
+                            target = mediumThumbnail,
+                            horizontalScroll = scrollHorizontally,
+                            animateGifs = animateGifs,
+                            cropThumbnails = cropThumbnails,
+                            roundCorners = roundedCorners,
+                            signature = medium.getKey(),
+                            skipMemoryCacheAtPaths = rotatedImagePaths,
+                            onError = {
+                                mediumThumbnail.scaleType = ImageView.ScaleType.CENTER
+                                mediumThumbnail.setImageDrawable(AppCompatResources.getDrawable(activity, R.drawable.ic_vector_warning_colored))
+                            }
                         )
                     }
                 }, IMAGE_LOAD_DELAY)

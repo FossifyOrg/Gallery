@@ -518,6 +518,11 @@ class PhotoFragment : ViewPagerFragment() {
                         loadImage()
                         // TODO: Implement panorama using a FOSS library
                         // checkIfPanorama()
+                    } else {
+                        binding.errorMessageHolder.errorMessage.apply {
+                            setTextColor(if (context.config.blackBackground) Color.WHITE else context.getProperTextColor())
+                            fadeIn()
+                        }
                     }
                 }
             })

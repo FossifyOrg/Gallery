@@ -482,13 +482,29 @@ fun Context.loadImage(
     roundCorners: Int,
     signature: ObjectKey,
     skipMemoryCacheAtPaths: ArrayList<String>? = null,
+    onError: (() -> Unit)? = null
 ) {
     target.isHorizontalScrolling = horizontalScroll
     if (type == TYPE_SVGS) {
-        loadSVG(path, target, cropThumbnails, roundCorners, signature)
+        loadSVG(
+            path = path,
+            target = target,
+            cropThumbnails = cropThumbnails,
+            roundCorners = roundCorners,
+            signature = signature
+        )
     } else {
-        val tryLoadingWithPicasso = type == TYPE_IMAGES && path.isPng()
-        loadImageBase(path, target, cropThumbnails, roundCorners, signature, skipMemoryCacheAtPaths, animateGifs, tryLoadingWithPicasso)
+        loadImageBase(
+            path = path,
+            target = target,
+            cropThumbnails = cropThumbnails,
+            roundCorners = roundCorners,
+            signature = signature,
+            skipMemoryCacheAtPaths = skipMemoryCacheAtPaths,
+            animate = animateGifs,
+            tryLoadingWithPicasso = type == TYPE_IMAGES && path.isPng(),
+            onError = onError
+        )
     }
 }
 
@@ -524,6 +540,7 @@ fun Context.loadImageBase(
     animate: Boolean = false,
     tryLoadingWithPicasso: Boolean = false,
     crossFadeDuration: Int = THUMBNAIL_FADE_DURATION_MS,
+    onError: (() -> Unit)? = null
 ) {
     val options = RequestOptions()
         .signature(signature)
@@ -571,24 +588,25 @@ fun Context.loadImageBase(
         .set(WebpDownsampler.USE_SYSTEM_DECODER, false) // CVE-2023-4863
         .transition(DrawableTransitionOptions.withCrossFade(crossFadeDuration))
 
-    if (tryLoadingWithPicasso) {
-        builder = builder.listener(object : RequestListener<Drawable> {
-            override fun onLoadFailed(e: GlideException?, model: Any?, targetBitmap: Target<Drawable>, isFirstResource: Boolean): Boolean {
+    builder = builder.listener(object : RequestListener<Drawable> {
+        override fun onLoadFailed(e: GlideException?, model: Any?, targetBitmap: Target<Drawable>, isFirstResource: Boolean): Boolean {
+            if (tryLoadingWithPicasso) {
                 tryLoadingWithPicasso(path, target, cropThumbnails, roundCorners, signature)
-                return true
+            } else {
+                onError?.invoke()
             }
 
-            override fun onResourceReady(
-                resource: Drawable,
-                model: Any,
-                targetBitmap: Target<Drawable>,
-                dataSource: DataSource,
-                isFirstResource: Boolean,
-            ): Boolean {
-                return false
-            }
-        })
-    }
+            return true
+        }
+
+        override fun onResourceReady(
+            resource: Drawable,
+            model: Any,
+            targetBitmap: Target<Drawable>,
+            dataSource: DataSource,
+            isFirstResource: Boolean,
+        ) = false
+    })
 
     builder.into(target)
 }

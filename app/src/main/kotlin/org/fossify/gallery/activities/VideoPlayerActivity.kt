@@ -309,6 +309,18 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
                 mVideoSize.y = videoSize.height
                 setVideoSize()
             }
+
+            override fun onPlayerErrorChanged(error: PlaybackException?) {
+                binding.errorMessageHolder.errorMessage.apply {
+                    if (error != null) {
+                        text = error.localizedMessage ?: getString(R.string.failed_to_load_media)
+                        setTextColor(if (context.config.blackBackground) Color.WHITE else context.getProperTextColor())
+                        fadeIn()
+                    } else {
+                        beGone()
+                    }
+                }
+            }
         })
     }
 

@@ -16,7 +16,8 @@
     <org.fossify.commons.views.MySquareImageView
         android:id="@+id/medium_thumbnail"
         android:layout_width="@dimen/list_view_folder_thumbnail_size"
-        android:layout_height="@dimen/list_view_folder_thumbnail_size" />
+        android:layout_height="@dimen/list_view_folder_thumbnail_size"
+        tools:src="@mipmap/ic_launcher" />
 
     <ImageView
         android:id="@+id/favorite"

@@ -2,6 +2,7 @@ package org.fossify.gallery.fragments
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
+import android.graphics.Color
 import android.graphics.Point
 import android.graphics.SurfaceTexture
 import android.net.Uri
@@ -448,6 +449,20 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                 mVideoSize.x = videoSize.width
                 mVideoSize.y = (videoSize.height / videoSize.pixelWidthHeightRatio).toInt()
                 setVideoSize()
+            }
+
+            override fun onPlayerErrorChanged(error: PlaybackException?) {
+                binding.errorMessageHolder.errorMessage.apply {
+                    if (error != null) {
+                        binding.videoPlayOutline.beGone()
+                        text = error.localizedMessage ?: getString(R.string.failed_to_load_media)
+                        setTextColor(if (context.config.blackBackground) Color.WHITE else context.getProperTextColor())
+                        fadeIn()
+                    } else {
+                        beGone()
+                        binding.videoPlayOutline.beVisible()
+                    }
+                }
             }
         })
     }
