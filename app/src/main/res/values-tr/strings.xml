@@ -253,4 +253,5 @@
     <string name="faq_18_text">Uygulamalarımızda hiçbir şekilde reklam yoktur. Video oynatılırken reklam görüyorsanız, başka bir uygulamanın video oynatıcısını kullanıyor olmalısınız. Aygıt ayarlarında öntanımlı video oynatıcınızı bulmayı deneyin, ardından \"Öntanımlıları temizle\" yapın. Bir dahaki sefere video oynatmayı istediğinizde, kullanmak istediğiniz uygulamayı seçebileceğiniz bir uygulama seçici istemi göreceksiniz.</string>
     <string name="full_storage_permission_required">Fossify Galeri tüm fotoğraf ve videolarınızı görüntülemek için tam erişime ihtiyaç duyar. Ayarlar &gt; İzinler &gt; Fotoğraf ve videolar &gt; Tümüne izin ver bölümüne gidin.</string>
     <string name="playback_speed">Oynatma hızı</string>
+    <string name="failed_to_load_media">Medya yüklenemedi.</string>
 </resources>
