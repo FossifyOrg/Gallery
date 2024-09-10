@@ -252,4 +252,5 @@
     <string name="faq_18_text">本应用不存在任何广告。如果您在视频播放期间看到了广告，那么您大概率是通过其他的视频播放器打开了视频。请在本设备的设置页面中找到默认视频播放器，然后再选择“清除默认应用设置”之类的选项。这样在您下次打开视频时，系统将提示您选择您想要的视频播放应用。</string>
     <string name="full_storage_permission_required">Fossify 图库需要完全访问权限才能显示您的所有照片和视频。前往“设置”&gt;“权限”&gt;“照片和视频”&gt;“全部允许”。</string>
     <string name="playback_speed">播放速度</string>
+    <string name="failed_to_load_media">加载媒体失败。</string>
 </resources>
