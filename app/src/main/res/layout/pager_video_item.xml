@@ -67,7 +67,8 @@
         android:textColor="@color/theme_dark_text_color"
         android:textSize="@dimen/smaller_text_size"
         android:visibility="gone"
-        tools:text="My video\nAnother line" />
+        tools:text="Big buck bunny.mp4\n948.52 MB\n1920 x 1080 (2.1MP)\n10 April 2008, 08:30 AM"
+        tools:visibility="visible" />
 
     <include
         android:id="@+id/bottom_video_time_holder"

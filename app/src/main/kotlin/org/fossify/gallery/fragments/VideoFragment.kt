@@ -15,6 +15,7 @@ import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.children
 import androidx.media3.common.*
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.ContentDataSource
@@ -597,7 +598,10 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         val fullscreenOffset = smallMargin + if (mIsFullscreen) 0 else requireContext().navigationBarHeight
         var actionsHeight = 0f
         if (!mIsFullscreen) {
-            actionsHeight += resources.getDimension(R.dimen.video_player_play_pause_size)
+            if (binding.bottomVideoTimeHolder.root.children.any { isVisible }) {
+                actionsHeight += binding.bottomVideoTimeHolder.root.height
+            }
+
             if (mConfig.bottomActions) {
                 actionsHeight += resources.getDimension(R.dimen.bottom_actions_height)
             }
