@@ -101,4 +101,5 @@
     <string name="by_file_type">Tipo de ficheiro</string>
     <string name="show_folder_name">Mostrar nome de pasta</string>
     <string name="allow_photo_gestures">Permitir o controlo de brilho da foto através de gestos verticais</string>
+    <string name="toggle_favorite">Alternar favorito</string>
 </resources>
