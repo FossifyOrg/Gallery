@@ -251,4 +251,7 @@
     <string name="faq_1_title">Nola egin dezaket Fossify Gallery gailuaren galeria lehenetsia?</string>
     <string name="faq_1_text">Lehenik eta behin, lehenetsitako galeria aurkitu behar duzu zure gailuaren ezarpenetako Aplikazioak atalean, bilatu \"Ireki lehenespenez\" bezalako zerbait dioen botoi bat, egin klik gainean eta hautatu \"Garbitu lehenetsiak\". Irudi edo bideo bat irekitzen saiatuko zaren hurrengoan aplikazio-hautatzaile bat ikusi beharko zenuke, non Fossify Gallery hautatu eta aplikazio lehenetsia izan dezakezu.</string>
     <string name="faq_5_text">Baztertzeak karpeta Fossify Galerian soilik bistaratzea eragozten du, Ezkutatu sisteman funtzionatzen duen bitartean eta karpeta beste galerietatik ere ezkutatzen du. Emandako karpetan \".nomedia\" fitxategi huts bat sortuz funtzionatzen du, eta gero edozein fitxategi-kudeatzailerekin ere kendu dezakezu. Kontuan izan gailu batzuek ez dutela onartzen Kamera, Pantaila-argazkiak eta Deskargak bezalako karpetak ezkutatzen.</string>
+    <string name="full_storage_permission_required">Fossify Galeriak baimen guztiak behar ditu zure argazki eta bideo guztiak erakusteko. Joan Ezarpenak &gt; Baimenak &gt; Argazki eta bideaok &gt; Baimendu guztia aukerara.</string>
+    <string name="failed_to_load_media">Errorea gertatu da fitxategia kargatzean.</string>
+    <string name="playback_speed">Jotzeko abiadura</string>
 </resources>
