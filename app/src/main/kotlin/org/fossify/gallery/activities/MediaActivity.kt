@@ -50,7 +50,6 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     private var mShowAll = false
     private var mLoadedInitialPhotos = false
     private var mWasFullscreenViewOpen = false
-    private var mWasUpgradedFromFreeShown = false
     private var mLastSearchedText = ""
     private var mLatestMediaId = 0L
     private var mLatestMediaDateId = 0L
@@ -229,6 +228,10 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         if (binding.mediaMenu.isSearchOpen) {
             binding.mediaMenu.closeSearch()
         } else {
+            if (config.showAll) {
+                appLockManager.lock()
+            }
+
             super.onBackPressed()
         }
     }

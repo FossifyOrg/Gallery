@@ -57,12 +57,9 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     private var mIsThirdPartyIntent = false
     private var mIsGettingDirs = false
     private var mLoadedInitialPhotos = false
-    private var mIsPasswordProtectionPending = false
-    private var mWasProtectionHandled = false
     private var mShouldStopFetching = false
     private var mWasDefaultFolderChecked = false
     private var mWasMediaManagementPromptShown = false
-    private var mWasUpgradedFromFreeShown = false
     private var mLatestMediaId = 0L
     private var mLatestMediaDateId = 0L
     private var mCurrentPathPrefix = ""                 // used at "Group direct subfolders" for navigation
@@ -123,8 +120,6 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         binding.directoriesRefreshLayout.setOnRefreshListener { getDirectories() }
         storeStateVariables()
         checkWhatsNewDialog()
-
-        mIsPasswordProtectionPending = config.isAppPasswordProtectionOn
         setupLatestMediaId()
 
         if (!config.wereFavoritesPinned) {
@@ -228,19 +223,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
 
         if (!binding.mainMenu.isSearchOpen) {
             refreshMenuItems()
-            if (mIsPasswordProtectionPending && !mWasProtectionHandled) {
-                handleAppPasswordProtection {
-                    mWasProtectionHandled = it
-                    if (it) {
-                        mIsPasswordProtectionPending = false
-                        tryLoadGallery()
-                    } else {
-                        finish()
-                    }
-                }
-            } else {
-                tryLoadGallery()
-            }
+            tryLoadGallery()
         }
 
         if (config.searchAllFilesByDefault) {
@@ -303,6 +286,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
                 setupAdapter(mDirs)
             }
         } else {
+            appLockManager.lock()
             super.onBackPressed()
         }
     }
@@ -402,16 +386,6 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
             }
             return@setOnMenuItemClickListener true
         }
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putBoolean(WAS_PROTECTION_HANDLED, mWasProtectionHandled)
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        mWasProtectionHandled = savedInstanceState.getBoolean(WAS_PROTECTION_HANDLED, false)
     }
 
     private fun updateMenuColors() {
