@@ -8,6 +8,9 @@ import okhttp3.Response
 import org.fossify.commons.FossifyApp
 
 class App : FossifyApp() {
+
+    override val isAppLockFeatureAvailable = true
+
     override fun onCreate() {
         super.onCreate()
         Reprint.initialize(this)
