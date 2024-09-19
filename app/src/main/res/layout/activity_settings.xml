@@ -65,7 +65,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_use_english_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -186,7 +186,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_show_hidden_items_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -201,7 +201,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_search_all_files_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -227,7 +227,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_autoplay_videos_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -242,7 +242,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_remember_last_video_position_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -257,7 +257,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_loop_videos_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -272,7 +272,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_open_videos_on_separate_screen_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -287,7 +287,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_allow_video_gestures_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -313,7 +313,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_crop_thumbnails_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -328,7 +328,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_animate_gifs_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -392,7 +392,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_scroll_horizontally_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -407,7 +407,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_enable_pull_to_refresh_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -433,7 +433,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_max_brightness_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -448,7 +448,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_black_background_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -463,7 +463,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_hide_system_ui_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -478,7 +478,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_allow_instant_change_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -493,7 +493,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_allow_photo_gestures_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -508,7 +508,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_allow_down_gesture_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -523,7 +523,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_show_notch_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -572,7 +572,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_allow_zooming_images_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -587,7 +587,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_allow_rotating_with_gestures_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -602,7 +602,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_show_highest_quality_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -617,7 +617,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_allow_one_to_one_zoom_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -643,7 +643,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_show_extended_details_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -658,7 +658,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_hide_extended_details_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -699,7 +699,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_app_password_protection_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -714,7 +714,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_hidden_item_password_protection_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -729,7 +729,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_excluded_item_password_protection_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -744,7 +744,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_file_deletion_password_protection_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -770,7 +770,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_delete_empty_folders_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -785,7 +785,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_keep_last_modified_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -800,7 +800,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_skip_delete_confirmation_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -826,7 +826,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_bottom_actions_checkbox_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -867,7 +867,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_use_recycle_bin_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -882,7 +882,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_show_recycle_bin_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -897,7 +897,7 @@
 
             <RelativeLayout
                 android:id="@+id/settings_show_recycle_bin_last_holder"
-                style="@style/SettingsHolderCheckboxStyle"
+                style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
