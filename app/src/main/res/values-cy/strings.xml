@@ -128,4 +128,14 @@
     <string name="screen_rotation_aspect_ratio">Cymhareb agwedd</string>
     <string name="media_only">Cyfryngau yn unig</string>
     <string name="toggle_favorite">Hoffi</string>
+    <string name="invalid_image_path">Llwybr delwedd annilys</string>
+    <string name="home_and_lock_screen">Sgrin gartref a chlo</string>
+    <string name="invalid_video_path">Llwybr fideo annilys</string>
+    <string name="slideshow_ended">Daeth y sleidsioe i ben</string>
+    <string name="do_not_group_files">Peidio â grwpio ffeiliau</string>
+    <string name="show_thumbnail_video_duration">Dangos hyd fideo</string>
+    <string name="deep_zoomable_images">Galluogi chwyddo dwfn ar ddelweddau</string>
+    <string name="show_highest_quality">Dangos delweddau yn yr ansawdd uchaf posibl</string>
+    <string name="mark_favorite_items">Dynodi ffefrynnau</string>
+    <string name="thumbnail_spacing">Bylchiad rhwng cryno-luniau</string>
 </resources>
