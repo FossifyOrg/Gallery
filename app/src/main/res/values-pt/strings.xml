@@ -252,4 +252,7 @@
     <string name="faq_5_text">Excluir esconde a pasta apenas na Galeria Fossify, enquanto que a função Hide funciona em todos o sistema e esconde a pasta igualmente noutras aplicações. Esta opção cria um ficheiro vazio \".nomedia\" na pasta em questão, o qual pode ser removido com um gestor de ficheiros. Repara que alguns dispositivos não permite esconder ficheiros com as pastas Camera, Captura de Ecra e Transferências.</string>
     <string name="volume">Volume</string>
     <string name="wallpaper">Papel de Parede</string>
+    <string name="failed_to_load_media">Erro ao carregar os dados.</string>
+    <string name="playback_speed">Velocidade de reprodução</string>
+    <string name="full_storage_permission_required">Fossify Gallery precisa de acessso total para mostrar as fotos e os vídeos. Aceda a Definições &gt; Permissões &gt; Fotos e vídeos &gt; Permitir.</string>
 </resources>

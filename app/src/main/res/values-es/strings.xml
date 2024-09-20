@@ -252,4 +252,7 @@
     <string name="faq_1_text">Primero tienes que encontrar la galería actualmente por defecto en la sección de Aplicaciones de la configuración de tu dispositivo, busca un botón que diga algo así como \"Abrir por defecto\", haz clic en él y luego selecciona \"Borrar valores predeterminados\". La próxima vez que intentes abrir una imagen o un vídeo deberías ver un selector de aplicaciones, donde puedes seleccionar Galería de Fossify y convertirla en la aplicación predeterminada.</string>
     <string name="faq_5_text">Excluir evita que la carpeta se muestre sólo en la Galería de Fossify, mientras que Ocultar funciona a nivel de sistema y oculta la carpeta de otras galerías también. Funciona mediante la creación de un archivo vacío \".nomedia\" en la carpeta dada, que luego se puede eliminar con cualquier gestor de archivos también. Ten en cuenta que algunos dispositivos no permiten ocultar carpetas como Cámara, Capturas de pantalla y Descargas.</string>
     <string name="editor">Editor</string>
+    <string name="full_storage_permission_required">La galería de Fossify necesita acceso total para mostrar todas tus fotos y videos. Ve a Configuración &gt; Permisos &gt; Fotos y videos &gt; Permitir todo.</string>
+    <string name="playback_speed">Velocidad de reproducción</string>
+    <string name="failed_to_load_media">Error al cargar el medio.</string>
 </resources>

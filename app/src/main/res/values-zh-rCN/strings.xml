@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">相册</string>
+    <string name="app_launcher_name">图库</string>
     <string name="edit">编辑</string>
     <string name="open_camera">打开相机</string>
     <string name="hidden">(隐藏)</string>
@@ -250,4 +250,7 @@
     <string name="faq_17_text">由于安卓 11 对系统进行了调整，此功能也已经失效。本应用无法在安卓 11 环境中浏览实际的文件夹，它现在必须通过系统的 MediaStore 函数来获取数据。</string>
     <string name="faq_18_title">为什么我在视频播放期间会看到广告？</string>
     <string name="faq_18_text">本应用不存在任何广告。如果您在视频播放期间看到了广告，那么您大概率是通过其他的视频播放器打开了视频。请在本设备的设置页面中找到默认视频播放器，然后再选择“清除默认应用设置”之类的选项。这样在您下次打开视频时，系统将提示您选择您想要的视频播放应用。</string>
+    <string name="full_storage_permission_required">Fossify 图库需要完全访问权限才能显示您的所有照片和视频。前往“设置”&gt;“权限”&gt;“照片和视频”&gt;“全部允许”。</string>
+    <string name="playback_speed">播放速度</string>
+    <string name="failed_to_load_media">加载媒体失败。</string>
 </resources>

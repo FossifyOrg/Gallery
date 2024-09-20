@@ -214,4 +214,26 @@
     <string name="faq_18_text">Aplicațiile noastre nu au niciun fel de reclame. Dacă le vedeți în timpul redării video, înseamnă că utilizați un alt player video. Încercați să găsiți playerul video implicit în setările dispozitivului, apoi efectuați o operațiune de \"Curăţare a valorilor implicite\" pentru acesta. Data viitoare când veți apela la o intenție video, veți vedea o fereastră de selectare a aplicației, unde puteți selecta aplicația pe care doriți să o utilizați.</string>
     <string name="exclude_folder_description">Acest lucru va exclude selecția împreună cu subfolderele sale numai din Galeria Fossify. Puteți gestiona folderele excluse în Setări.</string>
     <string name="excluded">(exclus)</string>
+    <string name="editor">Editor</string>
+    <string name="all_files">Toate fișierele</string>
+    <string name="media_only">Doar fișiere media</string>
+    <string name="resize_factor_error">Introduceți un număr intre 10 și 90</string>
+    <string name="images_resized_successfully">Imagini redimensionate cu succes</string>
+    <string name="basic_editor">Editor standard</string>
+    <string name="resize_multiple_images">Redimensionează multiple imagini</string>
+    <string name="resize_factor">Factor dimensional</string>
+    <string name="resize_factor_info">Redimensionază imaginile la procentajul menționat, valoarea trebuie să fie intre 10 și 90.</string>
+    <string name="transform">Transformă</string>
+    <string name="slideshow">Diaporamă</string>
+    <string name="draw">Desenare</string>
+    <string name="advanced_editor">Editor avansat</string>
+    <string name="flip">Răstoarnă</string>
+    <string name="wallpaper">Imagine de fundal</string>
+    <string name="interval">Interval</string>
+    <string name="import_favorite_paths">Importă favorite</string>
+    <string name="paths_imported_successfully">Căi importate cu succes</string>
+    <string name="search_all_files">Caută toate fișierele nu doar dosarele de pe ecran</string>
+    <string name="faq_1_title">Cum pot face ca Galeria Fossify să fie galeria implicită a dispozitivului?</string>
+    <string name="crop">Decupare</string>
+    <string name="slide">Glisare</string>
 </resources>

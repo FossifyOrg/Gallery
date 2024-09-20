@@ -252,4 +252,7 @@
 \nSi també voleu amagar-les de les altres apps, utilitzeu la funció Amagar.</string>
     <string name="faq_1_text">Primer heu de trobar la galeria predeterminada a la secció d\'Aplicacions de la configuració del dispositiu, busqueu un botó que digui alguna cosa com «Obre per defecte», feu-hi clic i seleccioneu «Neteja els valors per defecte». La pròxima vegada que intenteu obrir una imatge o un vídeo veureu un selector d\'aplicacions, on podreu seleccionar Fossify Gallery i convertir-la en l\'aplicació predeterminada.</string>
     <string name="interval">Interval</string>
+    <string name="full_storage_permission_required">La Fossify Gallery necessita d\'accés complet accés a totes les vostres fotografies i vídeos. Aneu a Configuració &gt; Permisos &gt; Fotos i vídeos &gt; Permet-ho tot.</string>
+    <string name="playback_speed">Velocitat de reproducció</string>
+    <string name="failed_to_load_media">Ha fallat en carregar elements multimèdia.</string>
 </resources>

@@ -252,4 +252,7 @@
     <string name="faq_18_text">Le nostre applicazioni non hanno alcun tipo di pubblicità. Se li vedi durante la riproduzione di video, è probabile che tu stia usando un altro lettore video. Prova a trovare il tuo lettore video predefinito nelle impostazioni del dispositivo, poi fai «Cancella predefinito» su di esso. La prossima volta che invocherai qualche intento video vedrai un prompt di selezione di app, dove potrai selezionare quale app vuoi usare.</string>
     <string name="volume">Volume</string>
     <string name="editor">Editor</string>
+    <string name="full_storage_permission_required">Galleria Fossify ha bisogno dell\'accesso completo per visualizzare tutte le foto e i video. Vai su Impostazioni &gt; Autorizzazioni &gt; Foto e video &gt; Consenti tutti.</string>
+    <string name="playback_speed">Velocità di riproduzione</string>
+    <string name="failed_to_load_media">Impossibile caricare i media.</string>
 </resources>

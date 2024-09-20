@@ -251,4 +251,7 @@
 \nGebruik de functie Verbergen om ze ook in andere apps te verbergen.</string>
     <string name="faq_5_text">Met \"Uitsluiten\" wordt het tonen van de map alleen binnen Fossify Galerij voorkomen, terwijl \"Verbergen\" de map ook zal verbergen voor andere galerij-apps. Met \"Verbergen\" wordt een bestand genaamd \".nomedia\" in de te verbergen map aangemaakt (het verwijderen van dit bestand uit de map maakt het verbergen ongedaan). Op sommige apparaten is het echter niet mogelijk om specifieke mappen, zoals Camera, Screenshots en Downloads, te verbergen.</string>
     <string name="faq_1_text">Zoek eerst de huidige standaard-app voor foto’s en video’s in de Android-instellingen (via \"Apps\" of Apps en meldingen\"). Klik bij de App-info op \"Standaardwaarden wissen\" (soms onder \"Standaard openen\"). Bij het openen van een foto of video zal de volgende keer een keuzescherm verschijnen, waarin Fossify Galerij als standaard-app kan worden ingesteld.</string>
+    <string name="full_storage_permission_required">Fossify Galerij heeft volledige toegang nodig al je foto\'s en video\'s te kunnen tonen. Ga naar de app-instellingen &gt; Rechten &gt; Foto\'s en video\'s &gt; Alles toestaan.</string>
+    <string name="playback_speed">Afspeelsnelheid</string>
+    <string name="failed_to_load_media">Fout bij het laden van het bestand.</string>
 </resources>

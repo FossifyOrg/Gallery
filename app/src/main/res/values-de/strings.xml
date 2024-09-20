@@ -251,4 +251,7 @@
 \n
 \nWenn du Ordner auch für andere Apps verstecken willst, verwende die Funktion „Ordner verstecken“.</string>
     <string name="editor">Editor</string>
+    <string name="playback_speed">Wiedergabegeschwindigkeit</string>
+    <string name="full_storage_permission_required">Fossify Gallery benötigt vollen Zugriff, um alle Fotos und Videos anzuzeigen. Gehe zu Einstellungen &gt; Berechtigungen &gt; Fotos und Videos &gt; Zugelassen.</string>
+    <string name="failed_to_load_media">Medien konnten nicht geladen werden.</string>
 </resources>

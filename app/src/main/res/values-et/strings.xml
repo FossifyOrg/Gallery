@@ -251,4 +251,7 @@
     <string name="exclude_folder_description">Järgnevaga välistad valiku koos alamkaustadega vaid Fossify galeriist. Välistatud kaustu saad hallata seadistustest.</string>
     <string name="wallpaper">Taustapilt</string>
     <string name="faq_1_text">Esmalt palun otsi oma nutiseadme seadistuste alajaotusest Rakendused hetkel vaikmisi kasutusel olev galeriirakendus. Selle alt leia valik, mille nimi võib olla midagi sellist nagu „Vaikimisi rakendus“. Klõpsi sellel ning vali „Eelmalda vaikeseadistused“. Kui järgmine kord püüad vaadata pilte või videosid, siis avaneb rakenduste valija, kust saad Fossify Galerii määrata vaikimisi kasutatavaks galeriirakenduseks.</string>
+    <string name="full_storage_permission_required">Fossify Galerii vajab kõikide sinu fotode ja videote näitamiseks täisõigusi. Ava Seadistused &gt; Õigused &gt; Fotod ja videod &gt; Luba kõik.</string>
+    <string name="playback_speed">Taasesituse kiirus</string>
+    <string name="failed_to_load_media">Meedia laadimine ei õnnestunud.</string>
 </resources>

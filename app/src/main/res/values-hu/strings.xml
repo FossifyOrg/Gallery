@@ -251,4 +251,6 @@
 \nHa el szeretné rejteni őket más alkalmazások elől is, használja az Elrejtés funkciót.</string>
     <string name="wallpaper">Háttérkép</string>
     <string name="faq_1_text">Először meg kell találnia az aktuálisan alapértelmezett galériát az Alkalmazások részében az eszközbeállítások között, keressen egy gombot, amely olyasmit ír, hogy \"Alapértelmezés szerinti megnyitás\", kattintson rá, majd válassza ki az \"Alapértelmezések törlése\" lehetőséget. Amikor legközelebb megpróbál megnyitni egy képet vagy videót, látnia kell egy alkalmazásválasztót, ahol kiválaszthatja a Fossify Galériát, és beállíthatja alapértelmezett alkalmazásnak.</string>
+    <string name="full_storage_permission_required">A Fossify Galéria teljes hozzáférést igényel az összes fénykép és videó megjelenítéséhez. Válassza a Beállítások &gt; Engedélyek &gt; Fényképek és videók &gt; Mindent engedélyez.</string>
+    <string name="playback_speed">Lejátszási sebesség</string>
 </resources>
