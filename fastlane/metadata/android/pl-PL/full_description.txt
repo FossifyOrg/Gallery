@@ -16,7 +16,7 @@ Spokojnie, wypadki się zdarzają! Wbudowany kosz w Fossify Gallery pozwala odzy
 Dostosuj wygląd, działanie i funkcjonalność do swojego stylu. Od motywów interfejsu użytkownika po przyciski akcji, Fossify Gallery daje Ci twórczą swobodę, której pragniesz.
 
 📷 OBSŁUGA POWSZECHNYCH FORMATÓW:
-JPEG, PNG, MP4, MKV, RAW, SVG, GIF, wideo i wiele więcej — obsłużymy Twoje wspomnienia w dowolnym, wybranym przez Ciebie formacie. Bez ograniczeń, po prostu bez limitu możliwości.
+JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, wideo i wiele więcej — obsłużymy Twoje wspomnienia w dowolnym, wybranym przez Ciebie formacie. Bez ograniczeń, po prostu bez limitu możliwości.
 
 ✨ MATERIAL DESIGN Z DYNAMICZNYMI MOTYWAMI:
 Doświadcz piękna intuicyjnego Material Design z dynamicznymi motywami. Chcesz więcej? Zanurz się w niestandardowych motywach i spraw, aby Twoja galeria była naprawdę wyjątkowa.
