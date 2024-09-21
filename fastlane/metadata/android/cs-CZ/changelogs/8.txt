@@ -1,0 +1,9 @@
+* Přidána počáteční podpora pro formát JPEG XL
+* Aktualizována cílová verze Androidu na 14
+* Přidána možnost ovládání rychlosti přehrávání videa
+* Přidána možnost ztlumení videí
+* Zaškrtávací políčka nahrazena přepínači
+* Přidán indikátor chyb pro selhání načtení médií
+* Vylepšena logika uzamykání aplikací a uživatelského rozhraní
+* Další menší opravy chyb a vylepšení
+* Přidány další překlady
