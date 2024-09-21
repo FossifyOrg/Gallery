@@ -1,0 +1,9 @@
+* Añadido soporte inicial para el formato JPEG XL
+* Actualización de la versión de Android a 14
+* Añadida opción para controlar la velocidad de reproducción de vídeo
+* Añadida opción para silenciar vídeos
+* Reemplazado casillas de verificación con los interruptores
+* Añadido indicador de error para fallos de carga de medios
+* Mejora de la lógica de bloqueo de la aplicación y la interfaz de usuario
+* Otras mejoras y correcciones de errores menores
+* Añadidas más traducciones
