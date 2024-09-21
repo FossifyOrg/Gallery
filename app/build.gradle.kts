@@ -95,6 +95,13 @@ android {
             excludes += "META-INF/library_release.kotlin_module"
         }
     }
+
+    bundle {
+        language {
+            @Suppress("UnstableApiUsage")
+            enableSplit = false
+        }
+    }
 }
 
 dependencies {
