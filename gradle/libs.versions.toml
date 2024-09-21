@@ -39,8 +39,8 @@ app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
 #versioning
 app-version-appId = "org.fossify.gallery"
-app-version-versionCode = "7"
-app-version-versionName = "1.1.3"
+app-version-versionCode = "8"
+app-version-versionName = "1.2.0"
 [libraries]
 #AndroidX
 androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3Exoplayer" }
