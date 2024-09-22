@@ -13,7 +13,7 @@ class FilterThumbnailsManager {
 
     fun processThumbs(): ArrayList<FilterItem> {
         for (filterItem in filterThumbnails) {
-            filterItem.bitmap = filterItem.filter.processFilter(Bitmap.createBitmap(filterItem.bitmap))
+            filterItem.bitmap = filterItem.filter.processFilter(Bitmap.createBitmap(filterItem.bitmap))!!
             processedThumbnails.add(filterItem)
         }
         return processedThumbnails
