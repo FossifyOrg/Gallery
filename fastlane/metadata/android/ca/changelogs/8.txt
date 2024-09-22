@@ -1,0 +1,9 @@
+* Afegida la implementació del format JPEG XL
+* Actualitzada la versió de destí de l'Android a 14
+* Afegida una opció per a controlar la velocitat de reproducció del vídeo
+* Afegida una opció per a silenciar els vídeos
+* Substitució de caselles de selecció per commutadors
+* Afegit un indicador d'error per a les fallades de càrrega de multimèdia
+* Millora la lògica de bloqueig de l'aplicació i la interfície d'usuari
+* Altres correccions d'errors i millores menors
+* Afegides més traduccions

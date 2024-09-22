@@ -16,7 +16,7 @@ Respireu, hi ha accidents! La paperera de reciclatge integrada de la Galeria Fos
 Personalitzeu l'aspecte, el comportament i la funcionalitat perquè coincideixi amb el vostre estil. Des de temes d'interfície d'usuari fins a botons de funció, la Fossify Gallery us dona la llibertat creativa que anheleu.
 
 📷 LLIBERTAT DE FORMATS UNIVERSALS:
-JPEG, PNG, MP4, MKV, RAW, SVG, GIF, vídeos i més. Tenim els vostres records coberts, en qualsevol format que trieu. Sense restriccions, només possibilitats il·limitades.
+JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, vídeos i més. Tenim els vostres records coberts, en qualsevol format que trieu. Sense restriccions, només possibilitats il·limitades.
 
 ✨ MATERIAL DESIGN AMB TEMES DINÀMICS:
 Experimenteu la bellesa del «material design» intuïtiu amb temes dinàmics. En voleu més? Submergiu-vos en els temes personalitzats i feu que la galeria sigui realment única.
