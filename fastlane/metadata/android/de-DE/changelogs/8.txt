@@ -1,0 +1,9 @@
+* Initiale Unterstützung für das JPEG-XL-Format hinzugefügt
+* Android-Targeting auf Version 14 aktualisiert
+* Option zur Geschwindigkeitssteuerung der Videowiedergabe hinzugefügt
+* Option zum Stummschalten von Videos hinzugefügt
+* Checkboxen durch Schalter ersetzt
+* Fehleranzeige für fehlerhaftes Laden von Medien hinzugefügt
+* Verbesserte Logik der App-Sperre und Bedienoberfläche
+* Weitere kleinere Fehlerkorrekturen und Verbesserungen
+* Weitere Übersetzungen hinzugefügt
