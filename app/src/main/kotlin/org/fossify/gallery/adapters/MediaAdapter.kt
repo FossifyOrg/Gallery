@@ -4,8 +4,6 @@ import android.content.Intent
 import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.graphics.drawable.Icon
-import android.os.Handler
-import android.os.Looper
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
@@ -38,11 +36,8 @@ import org.fossify.gallery.models.ThumbnailSection
 class MediaAdapter(
     activity: BaseSimpleActivity, var media: ArrayList<ThumbnailItem>, val listener: MediaOperationsListener?, val isAGetIntent: Boolean,
     val allowMultiplePicks: Boolean, val path: String, recyclerView: MyRecyclerView, itemClick: (Any) -> Unit
-) :
-    MyRecyclerViewAdapter(activity, recyclerView, itemClick), RecyclerViewFastScroller.OnPopupTextUpdate {
+) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), RecyclerViewFastScroller.OnPopupTextUpdate {
 
-    private val INSTANT_LOAD_DURATION = 2000L
-    private val IMAGE_LOAD_DELAY = 100L
     private val ITEM_SECTION = 0
     private val ITEM_MEDIUM_VIDEO_PORTRAIT = 1
     private val ITEM_MEDIUM_PHOTO = 2
@@ -50,10 +45,7 @@ class MediaAdapter(
     private val config = activity.config
     private val viewType = config.getFolderViewType(if (config.showAll) SHOW_ALL else path)
     private val isListViewType = viewType == VIEW_TYPE_LIST
-    private var visibleItemPaths = ArrayList<String>()
     private var rotatedImagePaths = ArrayList<String>()
-    private var loadImageInstantly = false
-    private var delayHandler = Handler(Looper.getMainLooper())
     private var currentMediaHash = media.hashCode()
     private val hasOTGConnected = activity.hasOTGConnected()
 
@@ -69,7 +61,6 @@ class MediaAdapter(
 
     init {
         setupDragListener(true)
-        enableInstantLoad()
     }
 
     override fun getActionMenuId() = R.menu.cab_media
@@ -97,10 +88,6 @@ class MediaAdapter(
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val tmbItem = media.getOrNull(position) ?: return
-        if (tmbItem is Medium) {
-            visibleItemPaths.add(tmbItem.path)
-        }
-
         val allowLongPress = (!isAGetIntent || allowMultiplePicks) && tmbItem is Medium
         holder.bindView(tmbItem, tmbItem is Medium, allowLongPress) { itemView, adapterPosition ->
             if (tmbItem is Medium) {
@@ -197,7 +184,6 @@ class MediaAdapter(
         super.onViewRecycled(holder)
         if (!activity.isDestroyed) {
             val itemView = holder.itemView
-            visibleItemPaths.remove(itemView.allViews.firstOrNull { it.id == R.id.medium_name }?.tag)
             val tmb = itemView.allViews.firstOrNull { it.id == R.id.medium_thumbnail }
             if (tmb != null) {
                 Glide.with(activity).clear(tmb)
@@ -254,7 +240,6 @@ class MediaAdapter(
                     activity.updateDBMediaPath(firstPath, it)
 
                     activity.runOnUiThread {
-                        enableInstantLoad()
                         listener?.refreshItems()
                         finishActMode()
                     }
@@ -262,7 +247,6 @@ class MediaAdapter(
             }
         } else {
             RenameDialog(activity, getSelectedPaths(), true) {
-                enableInstantLoad()
                 listener?.refreshItems()
                 finishActMode()
             }
@@ -572,7 +556,6 @@ class MediaAdapter(
         if (thumbnailItems.hashCode() != currentMediaHash) {
             currentMediaHash = thumbnailItems.hashCode()
             media = thumbnailItems
-            enableInstantLoad()
             notifyDataSetChanged()
             finishActMode()
         }
@@ -580,7 +563,6 @@ class MediaAdapter(
 
     fun updateDisplayFilenames(displayFilenames: Boolean) {
         this.displayFilenames = displayFilenames
-        enableInstantLoad()
         notifyDataSetChanged()
     }
 
@@ -597,13 +579,6 @@ class MediaAdapter(
     fun updateShowFileTypes(showFileTypes: Boolean) {
         this.showFileTypes = showFileTypes
         notifyDataSetChanged()
-    }
-
-    private fun enableInstantLoad() {
-        loadImageInstantly = true
-        delayHandler.postDelayed({
-            loadImageInstantly = false
-        }, INSTANT_LOAD_DURATION)
     }
 
     private fun setupThumbnail(view: View, medium: Medium) {
@@ -681,46 +656,21 @@ class MediaAdapter(
                 else -> ROUNDED_CORNERS_NONE
             }
 
-            if (loadImageInstantly) {
-                activity.loadImage(
-                    type = medium.type,
-                    path = path,
-                    target = mediumThumbnail,
-                    horizontalScroll = scrollHorizontally,
-                    animateGifs = animateGifs,
-                    cropThumbnails = cropThumbnails,
-                    roundCorners = roundedCorners,
-                    signature = medium.getKey(),
-                    skipMemoryCacheAtPaths = rotatedImagePaths,
-                    onError = {
-                        mediumThumbnail.scaleType = ImageView.ScaleType.CENTER
-                        mediumThumbnail.setImageDrawable(AppCompatResources.getDrawable(activity, R.drawable.ic_vector_warning_colored))
-                    }
-                )
-            } else {
-                mediumThumbnail.setImageDrawable(null)
-                mediumThumbnail.isHorizontalScrolling = scrollHorizontally
-                delayHandler.postDelayed({
-                    val isVisible = visibleItemPaths.contains(medium.path)
-                    if (isVisible) {
-                        activity.loadImage(
-                            type = medium.type,
-                            path = path,
-                            target = mediumThumbnail,
-                            horizontalScroll = scrollHorizontally,
-                            animateGifs = animateGifs,
-                            cropThumbnails = cropThumbnails,
-                            roundCorners = roundedCorners,
-                            signature = medium.getKey(),
-                            skipMemoryCacheAtPaths = rotatedImagePaths,
-                            onError = {
-                                mediumThumbnail.scaleType = ImageView.ScaleType.CENTER
-                                mediumThumbnail.setImageDrawable(AppCompatResources.getDrawable(activity, R.drawable.ic_vector_warning_colored))
-                            }
-                        )
-                    }
-                }, IMAGE_LOAD_DELAY)
-            }
+            activity.loadImage(
+                type = medium.type,
+                path = path,
+                target = mediumThumbnail,
+                horizontalScroll = scrollHorizontally,
+                animateGifs = animateGifs,
+                cropThumbnails = cropThumbnails,
+                roundCorners = roundedCorners,
+                signature = medium.getKey(),
+                skipMemoryCacheAtPaths = rotatedImagePaths,
+                onError = {
+                    mediumThumbnail.scaleType = ImageView.ScaleType.CENTER
+                    mediumThumbnail.setImageDrawable(AppCompatResources.getDrawable(activity, R.drawable.ic_vector_warning_colored))
+                }
+            )
 
             if (isListViewType) {
                 mediumName.setTextColor(textColor)

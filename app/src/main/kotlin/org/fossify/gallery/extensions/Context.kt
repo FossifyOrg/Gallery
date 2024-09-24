@@ -28,7 +28,6 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.FitCenter
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
@@ -586,7 +585,7 @@ fun Context.loadImageBase(
         .load(path)
         .apply(options)
         .set(WebpDownsampler.USE_SYSTEM_DECODER, false) // CVE-2023-4863
-        .transition(DrawableTransitionOptions.withCrossFade(crossFadeDuration))
+        .transition(getOptionalCrossFadeTransition(crossFadeDuration))
 
     builder = builder.listener(object : RequestListener<Drawable> {
         override fun onLoadFailed(e: GlideException?, model: Any?, targetBitmap: Target<Drawable>, isFirstResource: Boolean): Boolean {
@@ -627,7 +626,7 @@ fun Context.loadSVG(
         .listener(SvgSoftwareLayerSetter())
         .load(path)
         .apply(options)
-        .transition(DrawableTransitionOptions.withCrossFade(crossFadeDuration))
+        .transition(getOptionalCrossFadeTransition(crossFadeDuration))
 
     if (roundCorners != ROUNDED_CORNERS_NONE) {
         val cornerSize =
