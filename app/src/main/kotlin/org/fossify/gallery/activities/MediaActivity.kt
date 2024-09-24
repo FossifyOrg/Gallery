@@ -164,6 +164,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             timeFormat = getTimeFormat()
         }
 
+        binding.loadingIndicator.setIndicatorColor(getProperPrimaryColor())
         binding.mediaEmptyTextPlaceholder.setTextColor(getProperTextColor())
         binding.mediaEmptyTextPlaceholder2.setTextColor(getProperPrimaryColor())
         binding.mediaEmptyTextPlaceholder2.bringToFront()
@@ -394,6 +395,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
                 }
             }
 
+            binding.loadingIndicator.show()
             getMedia()
             setupLayoutManager()
         }
@@ -858,6 +860,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         mMedia = media
 
         runOnUiThread {
+            binding.loadingIndicator.hide()
             binding.mediaRefreshLayout.isRefreshing = false
             binding.mediaEmptyTextPlaceholder.beVisibleIf(media.isEmpty() && !isFromCache)
             binding.mediaEmptyTextPlaceholder2.beVisibleIf(media.isEmpty() && !isFromCache)
