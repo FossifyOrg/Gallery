@@ -821,6 +821,14 @@ class DirectoryAdapter(
                     else -> ROUNDED_CORNERS_BIG
                 }
 
+                dirThumbnail.setBackgroundResource(
+                    when (roundedCorners) {
+                        ROUNDED_CORNERS_SMALL -> R.drawable.placeholder_rounded_small
+                        ROUNDED_CORNERS_BIG -> R.drawable.placeholder_rounded_big
+                        else -> R.drawable.placeholder_square
+                    }
+                )
+
                 activity.loadImage(
                     type = thumbnailType,
                     path = directory.tmb,
