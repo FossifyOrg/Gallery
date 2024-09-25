@@ -23,6 +23,7 @@ apng = "2.28.0"
 awebp = "2.28.0"
 glideCompiler = "4.16.0"
 zjupureWebpdecoder = "2.6.4.16.0"
+jxlDecoder = "2.3.0.1"
 gestureviews = "e706487a14"
 androidsvgAar = "1.4"
 androidphotofilters = "193f2ae509"
@@ -71,6 +72,7 @@ glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glid
 zjupure-webpdecoder = { module = "com.github.zjupure:webpdecoder", version.ref = "zjupureWebpdecoder" }
 picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 avif-integration = { group = "com.github.bumptech.glide", name = "avif-integration", version.ref = "glideCompiler" }
+jxl-integration = { group = "io.github.awxkee", name = "jxl-coder-glide", version.ref = "jxlDecoder" }
 [bundles]
 room = [
     "androidx-room-ktx",
