@@ -49,7 +49,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     private var mAllowPickingMultiple = false
     private var mShowAll = false
     private var mLoadedInitialPhotos = false
-    private var mShowLoadingIndicator = false
+    private var mShowLoadingIndicator = true
     private var mWasFullscreenViewOpen = false
     private var mLastSearchedText = ""
     private var mLatestMediaId = 0L

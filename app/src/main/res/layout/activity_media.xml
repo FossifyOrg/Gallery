@@ -20,7 +20,7 @@
         android:visibility="gone"
         app:hideAnimationBehavior="inward"
         app:showAnimationBehavior="outward"
-        app:showDelay="300"
+        app:showDelay="500"
         tools:visibility="visible" />
 
     <RelativeLayout
