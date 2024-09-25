@@ -1,0 +1,824 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:Activity.kt$(hide &amp;&amp; filename.startsWith('.')) || (!hide &amp;&amp; !filename.startsWith('.'))</ID>
+    <ID>ComplexCondition:Context.kt$animate &amp;&amp; roundCorners == ROUNDED_CORNERS_NONE &amp;&amp; (path.isGif() || path.isWebP())</ID>
+    <ID>ComplexCondition:DirectoryAdapter.kt$DirectoryAdapter$!config.useRecycleBin || config.tempSkipRecycleBin || (isOneItemSelected() &amp;&amp; fileDirItem.areFavorites())</ID>
+    <ID>ComplexCondition:MainActivity.kt$MainActivity$!config.wasOTGHandled &amp;&amp; hasPermission(getPermissionToRequest()) &amp;&amp; hasOTGConnected() &amp;&amp; config.OTGPath.isEmpty()</ID>
+    <ID>ComplexCondition:MainActivity.kt$MainActivity$(!defaultDir.exists() || !defaultDir.isDirectory) &amp;&amp; (config.defaultFolder != RECYCLE_BIN &amp;&amp; config.defaultFolder != FAVORITES)</ID>
+    <ID>ComplexCondition:MediaActivity.kt$MediaActivity$mMedia.isEmpty() || !isRandomSorting || (isRandomSorting &amp;&amp; !mWasFullscreenViewOpen)</ID>
+    <ID>ComplexCondition:MediaAdapter.kt$MediaAdapter$showFileTypes &amp;&amp; (medium.isGIF() || medium.isRaw() || medium.isSVG())</ID>
+    <ID>ComplexCondition:MediaFetcher.kt$MediaFetcher$!isImage &amp;&amp; !isVideo &amp;&amp; !isGif &amp;&amp; !isRaw &amp;&amp; !isSvg</ID>
+    <ID>ComplexCondition:MediaFetcher.kt$MediaFetcher$curPath != FAVORITES &amp;&amp; curPath != RECYCLE_BIN &amp;&amp; isRPlus() &amp;&amp; !isExternalStorageManager()</ID>
+    <ID>ComplexCondition:MediaFetcher.kt$MediaFetcher$currentGrouping and GROUP_BY_LAST_MODIFIED_DAILY != 0 || currentGrouping and GROUP_BY_LAST_MODIFIED_MONTHLY != 0 || currentGrouping and GROUP_BY_DATE_TAKEN_DAILY != 0 || currentGrouping and GROUP_BY_DATE_TAKEN_MONTHLY != 0</ID>
+    <ID>ComplexCondition:MediaFetcher.kt$MediaFetcher$isImage || isVideo || isGif || isRaw</ID>
+    <ID>ComplexCondition:MediaSideScroll.kt$MediaSideScroll$(percent == 100 &amp;&amp; event.rawY &gt; mLastTouchY) || (percent == -100 &amp;&amp; event.rawY &lt; mLastTouchY)</ID>
+    <ID>ComplexCondition:PhotoFragment.kt$PhotoFragment$isRPlus() &amp;&amp; !isExternalStorageManager() &amp;&amp; mMedium.path.startsWith("/storage/") &amp;&amp; mMedium.isHidden()</ID>
+    <ID>ComplexCondition:PhotoFragment.kt$PhotoFragment$mIsFragmentVisible &amp;&amp; context?.config?.allowZoomingImages == true &amp;&amp; (mMedium.isImage() || mMedium.isPortrait()) &amp;&amp; !mIsSubsamplingVisible</ID>
+    <ID>ComplexCondition:PhotoFragment.kt$PhotoFragment$mStoredShowExtendedDetails &amp;&amp; isVisible() &amp;&amp; context != null &amp;&amp; resources != null</ID>
+    <ID>ComplexCondition:PhotoVideoActivity.kt$PhotoVideoActivity$realPath != mUri.toString() &amp;&amp; realPath.isNotEmpty() &amp;&amp; mUri!!.authority != "mms" &amp;&amp; filename.contains('.') &amp;&amp; getDoesFilePathExist(realPath)</ID>
+    <ID>ComplexCondition:PicassoRegionDecoder.kt$PicassoRegionDecoder$(rect.width() &gt; rect.height() &amp;&amp; screenWidth &gt; screenHeight) || (rect.height() &gt; rect.width() &amp;&amp; screenHeight &gt; screenWidth)</ID>
+    <ID>ComplexCondition:SettingsActivity.kt$SettingsActivity$requestCode == PICK_IMPORT_SOURCE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
+    <ID>ComplexCondition:SettingsActivity.kt$SettingsActivity$requestCode == SELECT_EXPORT_FAVORITES_FILE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
+    <ID>ComplexCondition:SettingsActivity.kt$SettingsActivity$requestCode == SELECT_IMPORT_FAVORITES_FILE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
+    <ID>ComplexCondition:VideoFragment.kt$VideoFragment$activity == null || mConfig.openVideosOnSeparateScreen || mIsPanorama || mExoPlayer != null</ID>
+    <ID>ComplexCondition:VideoFragment.kt$VideoFragment$mStoredShowExtendedDetails &amp;&amp; isVisible() &amp;&amp; context != null &amp;&amp; resources != null</ID>
+    <ID>ComplexCondition:VideoFragment.kt$VideoFragment$mWasFragmentInit &amp;&amp; menuVisible &amp;&amp; mConfig.autoplayVideos &amp;&amp; !mConfig.openVideosOnSeparateScreen</ID>
+    <ID>ComplexCondition:VideoPlayerActivity.kt$VideoPlayerActivity$config.allowDownGesture &amp;&amp; !mIgnoreCloseDown &amp;&amp; Math.abs(diffY) &gt; Math.abs(diffX) &amp;&amp; diffY &lt; -mCloseDownThreshold &amp;&amp; downGestureDuration &lt; MAX_CLOSE_DOWN_GESTURE_DURATION &amp;&amp; binding.videoSurfaceFrame.controller.state.zoom == 1f</ID>
+    <ID>ComplexCondition:VideoPlayerActivity.kt$VideoPlayerActivity$mIsDragged || (Math.abs(diffX) &gt; mDragThreshold &amp;&amp; Math.abs(diffX) &gt; Math.abs(diffY)) &amp;&amp; binding.videoSurfaceFrame.controller.state.zoom == 1f</ID>
+    <ID>ComplexCondition:ViewPagerFragment.kt$ViewPagerFragment$!mIgnoreCloseDown &amp;&amp; (Math.abs(diffY) &gt; Math.abs(diffX)) &amp;&amp; (diffY &lt; -mCloseDownThreshold) &amp;&amp; downGestureDuration &lt; MAX_CLOSE_DOWN_GESTURE_DURATION &amp;&amp; context?.config?.allowDownGesture == true</ID>
+    <ID>CyclomaticComplexMethod:Activity.kt$fun AppCompatActivity.fixDateTaken( paths: ArrayList&lt;String&gt;, showToasts: Boolean, hasRescanned: Boolean = false, callback: (() -&gt; Unit)? = null )</ID>
+    <ID>CyclomaticComplexMethod:Context.kt$@Suppress("UNCHECKED_CAST") fun Context.getSortedDirectories(source: ArrayList&lt;Directory&gt;): ArrayList&lt;Directory&gt;</ID>
+    <ID>CyclomaticComplexMethod:Context.kt$fun Context.getCachedDirectories( getVideosOnly: Boolean = false, getImagesOnly: Boolean = false, forceShowHidden: Boolean = false, forceShowExcluded: Boolean = false, callback: (ArrayList&lt;Directory&gt;) -&gt; Unit, )</ID>
+    <ID>CyclomaticComplexMethod:Context.kt$fun Context.getCachedMedia(path: String, getVideosOnly: Boolean = false, getImagesOnly: Boolean = false, callback: (ArrayList&lt;ThumbnailItem&gt;) -&gt; Unit)</ID>
+    <ID>CyclomaticComplexMethod:Context.kt$fun Context.getDirectParentSubfolders(dirs: ArrayList&lt;Directory&gt;, currentPathPrefix: String): ArrayList&lt;Directory&gt;</ID>
+    <ID>CyclomaticComplexMethod:DirectoryAdapter.kt$DirectoryAdapter$override fun actionItemPressed(id: Int)</ID>
+    <ID>CyclomaticComplexMethod:DirectoryAdapter.kt$DirectoryAdapter$private fun copyMoveTo(selectedPaths: Collection&lt;String&gt;, isCopyOperation: Boolean)</ID>
+    <ID>CyclomaticComplexMethod:DirectoryAdapter.kt$DirectoryAdapter$private fun setupView(view: View, directory: Directory, holder: ViewHolder)</ID>
+    <ID>CyclomaticComplexMethod:EditActivity.kt$EditActivity$private fun initEditActivity()</ID>
+    <ID>CyclomaticComplexMethod:EditActivity.kt$EditActivity$private fun updatePrimaryActionButtons()</ID>
+    <ID>CyclomaticComplexMethod:MainActivity.kt$MainActivity$override fun deleteFolders(folders: ArrayList&lt;File&gt;)</ID>
+    <ID>CyclomaticComplexMethod:MainActivity.kt$MainActivity$private fun checkInvalidDirectories(dirs: ArrayList&lt;Directory&gt;)</ID>
+    <ID>CyclomaticComplexMethod:MainActivity.kt$MainActivity$private fun gotDirectories(newDirs: ArrayList&lt;Directory&gt;)</ID>
+    <ID>CyclomaticComplexMethod:MainActivity.kt$MainActivity$private fun setupOptionsMenu()</ID>
+    <ID>CyclomaticComplexMethod:ManageBottomActionsDialog.kt$ManageBottomActionsDialog$private fun dialogConfirmed()</ID>
+    <ID>CyclomaticComplexMethod:MediaActivity.kt$MediaActivity$override fun onResume()</ID>
+    <ID>CyclomaticComplexMethod:MediaActivity.kt$MediaActivity$private fun setupOptionsMenu()</ID>
+    <ID>CyclomaticComplexMethod:MediaAdapter.kt$MediaAdapter$override fun actionItemPressed(id: Int)</ID>
+    <ID>CyclomaticComplexMethod:MediaAdapter.kt$MediaAdapter$private fun setupThumbnail(view: View, medium: Medium)</ID>
+    <ID>CyclomaticComplexMethod:MediaFetcher.kt$MediaFetcher$fun getAndroid11FolderMedia( isPickImage: Boolean, isPickVideo: Boolean, favoritePaths: ArrayList&lt;String&gt;, getFavoritePathsOnly: Boolean, getProperDateTaken: Boolean, dateTakens: HashMap&lt;String, Long&gt; ): HashMap&lt;String, ArrayList&lt;Medium&gt;&gt;</ID>
+    <ID>CyclomaticComplexMethod:MediaFetcher.kt$MediaFetcher$fun getFilesFrom( curPath: String, isPickImage: Boolean, isPickVideo: Boolean, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt;, android11Files: HashMap&lt;String, ArrayList&lt;Medium&gt;&gt;? ): ArrayList&lt;Medium&gt;</ID>
+    <ID>CyclomaticComplexMethod:MediaFetcher.kt$MediaFetcher$fun groupMedia(media: ArrayList&lt;Medium&gt;, path: String): ArrayList&lt;ThumbnailItem&gt;</ID>
+    <ID>CyclomaticComplexMethod:MediaFetcher.kt$MediaFetcher$private fun getMediaInFolder( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt; ): ArrayList&lt;Medium&gt;</ID>
+    <ID>CyclomaticComplexMethod:MediaFetcher.kt$MediaFetcher$private fun getMediaOnOTG( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean ): ArrayList&lt;Medium&gt;</ID>
+    <ID>CyclomaticComplexMethod:MediaSideScroll.kt$MediaSideScroll$override fun onTouchEvent(event: MotionEvent): Boolean</ID>
+    <ID>CyclomaticComplexMethod:PhotoFragment.kt$PhotoFragment$override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
+    <ID>CyclomaticComplexMethod:PhotoVideoActivity.kt$PhotoVideoActivity$private fun checkIntent(savedInstanceState: Bundle? = null)</ID>
+    <ID>CyclomaticComplexMethod:PickDirectoryDialog.kt$PickDirectoryDialog$private fun gotDirectories(newDirs: ArrayList&lt;Directory&gt;)</ID>
+    <ID>CyclomaticComplexMethod:SettingsActivity.kt$SettingsActivity$private fun parseFile(inputStream: InputStream?)</ID>
+    <ID>CyclomaticComplexMethod:String.kt$fun String.shouldFolderBeVisible( excludedPaths: MutableSet&lt;String&gt;, includedPaths: MutableSet&lt;String&gt;, showHidden: Boolean, folderNoMediaStatuses: HashMap&lt;String, Boolean&gt;, callback: (path: String, hasNoMedia: Boolean) -&gt; Unit ): Boolean</ID>
+    <ID>CyclomaticComplexMethod:VideoFragment.kt$VideoFragment$override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
+    <ID>CyclomaticComplexMethod:VideoPlayerActivity.kt$VideoPlayerActivity$private fun handleEvent(event: MotionEvent)</ID>
+    <ID>CyclomaticComplexMethod:ViewPagerActivity.kt$ViewPagerActivity$fun refreshMenuItems()</ID>
+    <ID>CyclomaticComplexMethod:ViewPagerActivity.kt$ViewPagerActivity$private fun initContinue()</ID>
+    <ID>CyclomaticComplexMethod:ViewPagerActivity.kt$ViewPagerActivity$private fun setupOptionsMenu()</ID>
+    <ID>CyclomaticComplexMethod:ViewPagerFragment.kt$ViewPagerFragment$fun getMediumExtendedDetails(medium: Medium): String</ID>
+    <ID>EmptyCatchBlock:Activity.kt${ }</ID>
+    <ID>EmptyCatchBlock:Context.kt${ }</ID>
+    <ID>EmptyCatchBlock:EditActivity.kt$EditActivity${ }</ID>
+    <ID>EmptyCatchBlock:MainActivity.kt$MainActivity${ }</ID>
+    <ID>EmptyCatchBlock:MediaActivity.kt$MediaActivity${ }</ID>
+    <ID>EmptyCatchBlock:MediaFetcher.kt$MediaFetcher${ }</ID>
+    <ID>EmptyCatchBlock:MyWidgetProvider.kt$MyWidgetProvider${ }</ID>
+    <ID>EmptyCatchBlock:PhotoVideoActivity.kt$PhotoVideoActivity${ }</ID>
+    <ID>EmptyCatchBlock:ViewPagerActivity.kt$ViewPagerActivity${ }</ID>
+    <ID>EmptyFunctionBlock:App.kt$App.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:DefaultPageTransformer.kt$DefaultPageTransformer${}</ID>
+    <ID>EmptyFunctionBlock:DirectoryAdapter.kt$DirectoryAdapter${}</ID>
+    <ID>EmptyFunctionBlock:ManageFoldersAdapter.kt$ManageFoldersAdapter${}</ID>
+    <ID>EmptyFunctionBlock:ManageHiddenFoldersAdapter.kt$ManageHiddenFoldersAdapter${}</ID>
+    <ID>EmptyFunctionBlock:MediaAdapter.kt$MediaAdapter${}</ID>
+    <ID>EmptyFunctionBlock:PhotoVideoActivity.kt$PhotoVideoActivity${}</ID>
+    <ID>EmptyFunctionBlock:RotateTransformation.kt$RotateTransformation${}</ID>
+    <ID>EmptyFunctionBlock:SearchActivity.kt$SearchActivity${}</ID>
+    <ID>EmptyFunctionBlock:VideoFragment.kt$VideoFragment${}</ID>
+    <ID>EmptyFunctionBlock:VideoPlayerActivity.kt$VideoPlayerActivity${}</ID>
+    <ID>EmptyFunctionBlock:ViewPagerActivity.kt$ViewPagerActivity${}</ID>
+    <ID>EmptyFunctionBlock:ViewPagerActivity.kt$ViewPagerActivity.&lt;no name provided&gt;${}</ID>
+    <ID>ForbiddenComment:Context.kt$// TODO: animate JXL</ID>
+    <ID>ForbiddenComment:PhotoFragment.kt$PhotoFragment$// TODO: Implement panorama using a FOSS library</ID>
+    <ID>ForbiddenComment:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$// TODO: Implement panorama using a FOSS library</ID>
+    <ID>ForbiddenComment:VideoFragment.kt$VideoFragment$// checkIfPanorama() TODO: Implement panorama using a FOSS library</ID>
+    <ID>ImplicitDefaultLocale:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$String.format("%.2f", value)</ID>
+    <ID>InstanceOfCheckForException:Activity.kt$e !is IOException</ID>
+    <ID>LargeClass:DirectoryAdapter.kt$DirectoryAdapter : MyRecyclerViewAdapterItemTouchHelperContractOnPopupTextUpdate</ID>
+    <ID>LargeClass:EditActivity.kt$EditActivity : SimpleActivityOnCropImageCompleteListener</ID>
+    <ID>LargeClass:MainActivity.kt$MainActivity : SimpleActivityDirectoryOperationsListener</ID>
+    <ID>LargeClass:MediaActivity.kt$MediaActivity : SimpleActivityMediaOperationsListener</ID>
+    <ID>LargeClass:MediaFetcher.kt$MediaFetcher</ID>
+    <ID>LargeClass:PhotoFragment.kt$PhotoFragment : ViewPagerFragment</ID>
+    <ID>LargeClass:SettingsActivity.kt$SettingsActivity : SimpleActivity</ID>
+    <ID>LargeClass:VideoFragment.kt$VideoFragment : ViewPagerFragmentSurfaceTextureListenerOnSeekBarChangeListenerPlaybackSpeedListener</ID>
+    <ID>LargeClass:ViewPagerActivity.kt$ViewPagerActivity : SimpleActivityOnPageChangeListenerFragmentListener</ID>
+    <ID>LongMethod:Activity.kt$fun AppCompatActivity.fixDateTaken( paths: ArrayList&lt;String&gt;, showToasts: Boolean, hasRescanned: Boolean = false, callback: (() -&gt; Unit)? = null )</ID>
+    <ID>LongMethod:Activity.kt$fun BaseSimpleActivity.restoreRecycleBinPaths(paths: ArrayList&lt;String&gt;, callback: () -&gt; Unit)</ID>
+    <ID>LongMethod:Context.kt$@Suppress("UNCHECKED_CAST") fun Context.getSortedDirectories(source: ArrayList&lt;Directory&gt;): ArrayList&lt;Directory&gt;</ID>
+    <ID>LongMethod:Context.kt$fun Context.getCachedDirectories( getVideosOnly: Boolean = false, getImagesOnly: Boolean = false, forceShowHidden: Boolean = false, forceShowExcluded: Boolean = false, callback: (ArrayList&lt;Directory&gt;) -&gt; Unit, )</ID>
+    <ID>LongMethod:Context.kt$fun Context.getCachedMedia(path: String, getVideosOnly: Boolean = false, getImagesOnly: Boolean = false, callback: (ArrayList&lt;ThumbnailItem&gt;) -&gt; Unit)</ID>
+    <ID>LongMethod:DirectoryAdapter.kt$DirectoryAdapter$private fun setupView(view: View, directory: Directory, holder: ViewHolder)</ID>
+    <ID>LongMethod:EditActivity.kt$EditActivity$private fun updatePrimaryActionButtons()</ID>
+    <ID>LongMethod:MainActivity.kt$MainActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:MainActivity.kt$MainActivity$private fun gotDirectories(newDirs: ArrayList&lt;Directory&gt;)</ID>
+    <ID>LongMethod:MediaAdapter.kt$MediaAdapter$private fun setupThumbnail(view: View, medium: Medium)</ID>
+    <ID>LongMethod:MediaFetcher.kt$MediaFetcher$fun getAndroid11FolderMedia( isPickImage: Boolean, isPickVideo: Boolean, favoritePaths: ArrayList&lt;String&gt;, getFavoritePathsOnly: Boolean, getProperDateTaken: Boolean, dateTakens: HashMap&lt;String, Long&gt; ): HashMap&lt;String, ArrayList&lt;Medium&gt;&gt;</ID>
+    <ID>LongMethod:MediaFetcher.kt$MediaFetcher$private fun getMediaInFolder( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt; ): ArrayList&lt;Medium&gt;</ID>
+    <ID>LongMethod:PhotoFragment.kt$PhotoFragment$override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
+    <ID>LongMethod:PhotoVideoActivity.kt$PhotoVideoActivity$private fun checkIntent(savedInstanceState: Bundle? = null)</ID>
+    <ID>LongMethod:SettingsActivity.kt$SettingsActivity$private fun parseFile(inputStream: InputStream?)</ID>
+    <ID>LongMethod:SettingsActivity.kt$SettingsActivity$private fun setupExportSettings()</ID>
+    <ID>LongMethod:SettingsActivity.kt$SettingsActivity$private fun setupSettingItems()</ID>
+    <ID>LongMethod:VideoFragment.kt$VideoFragment$override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
+    <ID>LongMethod:VideoPlayerActivity.kt$VideoPlayerActivity$private fun handleEvent(event: MotionEvent)</ID>
+    <ID>LongMethod:ViewPagerActivity.kt$ViewPagerActivity$private fun initBottomActionButtons()</ID>
+    <ID>LongMethod:ViewPagerActivity.kt$ViewPagerActivity$private fun initContinue()</ID>
+    <ID>LongParameterList:Context.kt$( path: String, curMedia: ArrayList&lt;Medium&gt;, albumCovers: ArrayList&lt;AlbumCover&gt;, hiddenString: String, includedFolders: MutableSet&lt;String&gt;, getProperFileSize: Boolean, noMediaFolders: ArrayList&lt;String&gt;, )</ID>
+    <ID>LongParameterList:Context.kt$( path: String, target: MySquareImageView, cropThumbnails: Boolean, roundCorners: Int, signature: ObjectKey, crossFadeDuration: Int = THUMBNAIL_FADE_DURATION_MS, )</ID>
+    <ID>LongParameterList:Context.kt$( path: String, target: MySquareImageView, cropThumbnails: Boolean, roundCorners: Int, signature: ObjectKey, skipMemoryCacheAtPaths: ArrayList&lt;String&gt;? = null, animate: Boolean = false, tryLoadingWithPicasso: Boolean = false, crossFadeDuration: Int = THUMBNAIL_FADE_DURATION_MS, onError: (() -&gt; Unit)? = null )</ID>
+    <ID>LongParameterList:Context.kt$( type: Int, path: String, target: MySquareImageView, horizontalScroll: Boolean, animateGifs: Boolean, cropThumbnails: Boolean, roundCorners: Int, signature: ObjectKey, skipMemoryCacheAtPaths: ArrayList&lt;String&gt;? = null, onError: (() -&gt; Unit)? = null )</ID>
+    <ID>LongParameterList:Context.kt$(path: String, fc: FileChannel, level: Int, start: Long, end: Long, callback: () -&gt; Unit)</ID>
+    <ID>LongParameterList:DirectoryAdapter.kt$DirectoryAdapter$( activity: BaseSimpleActivity, var dirs: ArrayList&lt;Directory&gt;, val listener: DirectoryOperationsListener?, recyclerView: MyRecyclerView, val isPickIntent: Boolean, val swipeRefreshLayout: SwipeRefreshLayout? = null, itemClick: (Any) -&gt; Unit )</ID>
+    <ID>LongParameterList:DirectoryDao.kt$DirectoryDao$(path: String, thumbnail: String, mediaCnt: Int, lastModified: Long, dateTaken: Long, size: Long, mediaTypes: Int, sortValue: String)</ID>
+    <ID>LongParameterList:MediaAdapter.kt$MediaAdapter$( activity: BaseSimpleActivity, var media: ArrayList&lt;ThumbnailItem&gt;, val listener: MediaOperationsListener?, val isAGetIntent: Boolean, val allowMultiplePicks: Boolean, val path: String, recyclerView: MyRecyclerView, itemClick: (Any) -&gt; Unit )</ID>
+    <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( curPath: String, isPickImage: Boolean, isPickVideo: Boolean, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt;, android11Files: HashMap&lt;String, ArrayList&lt;Medium&gt;&gt;? )</ID>
+    <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean )</ID>
+    <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt; )</ID>
+    <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( isPickImage: Boolean, isPickVideo: Boolean, favoritePaths: ArrayList&lt;String&gt;, getFavoritePathsOnly: Boolean, getProperDateTaken: Boolean, dateTakens: HashMap&lt;String, Long&gt; )</ID>
+    <ID>LongParameterList:MediaSideScroll.kt$MediaSideScroll$( activity: Activity, slideInfoView: TextView, isBrightness: Boolean, parentView: ViewGroup?, singleTap: (x: Float, y: Float) -&gt; Unit, doubleTap: ((x: Float, y: Float) -&gt; Unit)? = null )</ID>
+    <ID>LongParameterList:PickDirectoryDialog.kt$PickDirectoryDialog$( val activity: BaseSimpleActivity, val sourcePath: String, showOtherFolderButton: Boolean, val showFavoritesBin: Boolean, val isPickingCopyMoveDestination: Boolean, val isPickingFolderForWidget: Boolean, val callback: (path: String) -&gt; Unit )</ID>
+    <ID>LoopWithTooManyJumpStatements:Activity.kt$for</ID>
+    <ID>LoopWithTooManyJumpStatements:Context.kt$for</ID>
+    <ID>LoopWithTooManyJumpStatements:MediaFetcher.kt$MediaFetcher$for</ID>
+    <ID>LoopWithTooManyJumpStatements:String.kt$for</ID>
+    <ID>LoopWithTooManyJumpStatements:String.kt$while</ID>
+    <ID>MagicNumber:Activity.kt$10</ID>
+    <ID>MagicNumber:Activity.kt$1000</ID>
+    <ID>MagicNumber:Activity.kt$11</ID>
+    <ID>MagicNumber:Activity.kt$360</ID>
+    <ID>MagicNumber:Activity.kt$4</ID>
+    <ID>MagicNumber:Activity.kt$5</ID>
+    <ID>MagicNumber:Activity.kt$50</ID>
+    <ID>MagicNumber:Activity.kt$90</ID>
+    <ID>MagicNumber:ChangeFileThumbnailStyleDialog.kt$ChangeFileThumbnailStyleDialog$16</ID>
+    <ID>MagicNumber:ChangeFileThumbnailStyleDialog.kt$ChangeFileThumbnailStyleDialog$32</ID>
+    <ID>MagicNumber:ChangeFileThumbnailStyleDialog.kt$ChangeFileThumbnailStyleDialog$4</ID>
+    <ID>MagicNumber:ChangeFileThumbnailStyleDialog.kt$ChangeFileThumbnailStyleDialog$64</ID>
+    <ID>MagicNumber:ChangeFileThumbnailStyleDialog.kt$ChangeFileThumbnailStyleDialog$8</ID>
+    <ID>MagicNumber:ChangeFolderThumbnailStyleDialog.kt$ChangeFolderThumbnailStyleDialog$36</ID>
+    <ID>MagicNumber:Config.kt$Config$0.05f</ID>
+    <ID>MagicNumber:Config.kt$Config$0.5f</ID>
+    <ID>MagicNumber:Config.kt$Config$50</ID>
+    <ID>MagicNumber:Context.kt$1000L</ID>
+    <ID>MagicNumber:Context.kt$1024</ID>
+    <ID>MagicNumber:Context.kt$50</ID>
+    <ID>MagicNumber:Context.kt$8</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$0.03f</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$100</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$100f</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$16f</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$180</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$3f</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$4f</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$90</ID>
+    <ID>MagicNumber:EditActivity.kt$EditActivity$9f</ID>
+    <ID>MagicNumber:EditorDrawCanvas.kt$EditorDrawCanvas$100f</ID>
+    <ID>MagicNumber:EditorDrawCanvas.kt$EditorDrawCanvas$40f</ID>
+    <ID>MagicNumber:FilterThumbnailsManager.kt$FilterThumbnailsManager$10</ID>
+    <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$10</ID>
+    <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$4</ID>
+    <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$5</ID>
+    <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$6</ID>
+    <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$7</ID>
+    <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$8</ID>
+    <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$9</ID>
+    <ID>MagicNumber:IsoTypeReader.kt$IsoTypeReader$32</ID>
+    <ID>MagicNumber:IsoTypeReader.kt$IsoTypeReader$4</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$1000</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$30</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$3000L</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$50</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$500</ID>
+    <ID>MagicNumber:MediaActivity.kt$MediaActivity$3000L</ID>
+    <ID>MagicNumber:MediaAdapter.kt$MediaAdapter$180</ID>
+    <ID>MagicNumber:MediaAdapter.kt$MediaAdapter$270</ID>
+    <ID>MagicNumber:MediaAdapter.kt$MediaAdapter$90</ID>
+    <ID>MagicNumber:MediaFetcher.kt$MediaFetcher$10</ID>
+    <ID>MagicNumber:MediaFetcher.kt$MediaFetcher$1000</ID>
+    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$100</ID>
+    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$1000L</ID>
+    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$100f</ID>
+    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$2.55</ID>
+    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$255f</ID>
+    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$3</ID>
+    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$70</ID>
+    <ID>MagicNumber:OtherAspectRatioDialog.kt$OtherAspectRatioDialog$16f</ID>
+    <ID>MagicNumber:OtherAspectRatioDialog.kt$OtherAspectRatioDialog$19f</ID>
+    <ID>MagicNumber:OtherAspectRatioDialog.kt$OtherAspectRatioDialog$3f</ID>
+    <ID>MagicNumber:OtherAspectRatioDialog.kt$OtherAspectRatioDialog$4f</ID>
+    <ID>MagicNumber:OtherAspectRatioDialog.kt$OtherAspectRatioDialog$5f</ID>
+    <ID>MagicNumber:OtherAspectRatioDialog.kt$OtherAspectRatioDialog$9f</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$0.01</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$100</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$100L</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$10f</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$180</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$270</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$300</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$360</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$400</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$4096</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$50</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$7</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment$90</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$270</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$360</ID>
+    <ID>MagicNumber:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$90</ID>
+    <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$0.05f</ID>
+    <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$0.25f</ID>
+    <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$100</ID>
+    <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$3f</ID>
+    <ID>MagicNumber:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$0.6f</ID>
+    <ID>MagicNumber:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$10</ID>
+    <ID>MagicNumber:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$100</ID>
+    <ID>MagicNumber:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$90</ID>
+    <ID>MagicNumber:SetWallpaperActivity.kt$SetWallpaperActivity$90</ID>
+    <ID>MagicNumber:VideoFragment.kt$VideoFragment$1000</ID>
+    <ID>MagicNumber:VideoFragment.kt$VideoFragment$1000L</ID>
+    <ID>MagicNumber:VideoFragment.kt$VideoFragment$1000f</ID>
+    <ID>MagicNumber:VideoFragment.kt$VideoFragment$7</ID>
+    <ID>MagicNumber:VideoFragment.kt$VideoFragment.&lt;no name provided&gt;$1000</ID>
+    <ID>MagicNumber:VideoFragment.kt$VideoFragment.&lt;no name provided&gt;$7</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$0.5</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$0.8</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$1000</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$1000L</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$1000f</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100L</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100f</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$7</ID>
+    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity.&lt;no name provided&gt;$1000</ID>
+    <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$1000L</ID>
+    <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$180</ID>
+    <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$5</ID>
+    <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$90</ID>
+    <ID>MagicNumber:ViewPagerFragment.kt$ViewPagerFragment$1000L</ID>
+    <ID>MagicNumber:ViewPagerFragment.kt$ViewPagerFragment$100f</ID>
+    <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100</ID>
+    <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100f</ID>
+    <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$255f</ID>
+    <ID>MaxLineLength:Activity.kt$LICENSE_PICASSO</ID>
+    <ID>MaxLineLength:Activity.kt$copyMoveFilesTo(fileDirItems, source.trimEnd('/'), destination, isCopyOperation, true, config.shouldShowHidden, callback)</ID>
+    <ID>MaxLineLength:Activity.kt$faqItems.add(0, FAQItem(R.string.faq_16_title, "${getString(R.string.faq_16_text)} ${getString(R.string.faq_16_text_extra)}"))</ID>
+    <ID>MaxLineLength:Activity.kt$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_10_title_commons, org.fossify.commons.R.string.faq_10_text_commons))</ID>
+    <ID>MaxLineLength:Activity.kt$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_2_title_commons, org.fossify.commons.R.string.faq_2_text_commons))</ID>
+    <ID>MaxLineLength:Activity.kt$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_6_title_commons, org.fossify.commons.R.string.faq_6_text_commons))</ID>
+    <ID>MaxLineLength:Activity.kt$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_7_title_commons, org.fossify.commons.R.string.faq_7_text_commons))</ID>
+    <ID>MaxLineLength:Activity.kt$fun</ID>
+    <ID>MaxLineLength:Activity.kt$mediaDB.updateDeleted(destination.removePrefix(recycleBinPath), 0, "$RECYCLE_BIN${source.removePrefix(recycleBinPath)}")</ID>
+    <ID>MaxLineLength:Activity.kt$return (realDisplayMetrics.widthPixels - displayMetrics.widthPixels &gt; 0) || (realDisplayMetrics.heightPixels - displayMetrics.heightPixels &gt; 0)</ID>
+    <ID>MaxLineLength:Activity.kt$toast(if (didUpdateFile) R.string.dates_fixed_successfully else org.fossify.commons.R.string.unknown_error_occurred)</ID>
+    <ID>MaxLineLength:Activity.kt$val</ID>
+    <ID>MaxLineLength:Activity.kt$}</ID>
+    <ID>MaxLineLength:AllFilesPermissionDialog.kt$AllFilesPermissionDialog$val activity: BaseSimpleActivity</ID>
+    <ID>MaxLineLength:ChangeFileThumbnailStyleDialog.kt$ChangeFileThumbnailStyleDialog$dialogFileStyleShowThumbnailFileTypesHolder.setOnClickListener { dialogFileStyleShowThumbnailFileTypes.toggle() }</ID>
+    <ID>MaxLineLength:ChangeFileThumbnailStyleDialog.kt$ChangeFileThumbnailStyleDialog$dialogFileStyleShowThumbnailVideoDurationHolder.setOnClickListener { dialogFileStyleShowThumbnailVideoDuration.toggle() }</ID>
+    <ID>MaxLineLength:ChangeFolderThumbnailStyleDialog.kt$ChangeFolderThumbnailStyleDialog$class</ID>
+    <ID>MaxLineLength:ChangeFolderThumbnailStyleDialog.kt$ChangeFolderThumbnailStyleDialog$val cornerRadius = root.resources.getDimension(org.fossify.commons.R.dimen.rounded_corner_radius_big).toInt()</ID>
+    <ID>MaxLineLength:ChangeFolderThumbnailStyleDialog.kt$ChangeFolderThumbnailStyleDialog$val useRoundedCornersLayout = binding.dialogRadioFolderStyle.checkedRadioButtonId == R.id.dialog_radio_folder_rounded_corners</ID>
+    <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$binding.sortingDialogOrderDivider.beVisibleIf(binding.sortingDialogNumericSorting.isVisible() || binding.sortingDialogUseForThisFolder.isVisible())</ID>
+    <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$sortingDialogNumericSorting.beVisibleIf(showFolderCheckbox &amp;&amp; (currSorting and SORT_BY_NAME != 0 || currSorting and SORT_BY_PATH != 0))</ID>
+    <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$sortingDialogOrderDivider.beVisibleIf(showFolderCheckbox || (currSorting and SORT_BY_NAME != 0 || currSorting and SORT_BY_PATH != 0))</ID>
+    <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$val hideSortOrder = checkedId == binding.sortingDialogRadioCustom.id || checkedId == binding.sortingDialogRadioRandom.id</ID>
+    <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$val isSortingByNameOrPath = checkedId == binding.sortingDialogRadioName.id || checkedId == binding.sortingDialogRadioPath.id</ID>
+    <ID>MaxLineLength:ChangeViewTypeDialog.kt$ChangeViewTypeDialog$class</ID>
+    <ID>MaxLineLength:ChangeViewTypeDialog.kt$ChangeViewTypeDialog$val</ID>
+    <ID>MaxLineLength:Config.kt$Config$fun getFolderViewType(path: String)</ID>
+    <ID>MaxLineLength:Config.kt$Config$fun getLastVideoPosition(path: String)</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(allowRotatingWithGestures) = prefs.edit().putBoolean(ALLOW_ROTATING_WITH_GESTURES, allowRotatingWithGestures).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(avoidShowingAllFilesPrompt) = prefs.edit().putBoolean(AVOID_SHOWING_ALL_FILES_PROMPT, avoidShowingAllFilesPrompt).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(excludedFolders) = prefs.edit().remove(EXCLUDED_FOLDERS).putStringSet(EXCLUDED_FOLDERS, excludedFolders).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(includedFolders) = prefs.edit().remove(INCLUDED_FOLDERS).putStringSet(INCLUDED_FOLDERS, includedFolders).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(isExcludedPasswordProtectionOn) = prefs.edit().putBoolean(EXCLUDED_PASSWORD_PROTECTION, isExcludedPasswordProtectionOn).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(lastEditorCropAspectRatio) = prefs.edit().putInt(LAST_EDITOR_CROP_ASPECT_RATIO, lastEditorCropAspectRatio).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(lastEditorCropOtherAspectRatioX) = prefs.edit().putFloat(LAST_EDITOR_CROP_OTHER_ASPECT_RATIO_X, lastEditorCropOtherAspectRatioX).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(lastEditorCropOtherAspectRatioY) = prefs.edit().putFloat(LAST_EDITOR_CROP_OTHER_ASPECT_RATIO_Y, lastEditorCropOtherAspectRatioY).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(lastExportedFavoritesFolder) = prefs.edit().putString(LAST_EXPORTED_FAVORITES_FOLDER, lastExportedFavoritesFolder).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(openVideosOnSeparateScreen) = prefs.edit().putBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, openVideosOnSeparateScreen).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(searchAllFilesByDefault) = prefs.edit().putBoolean(SEARCH_ALL_FILES_BY_DEFAULT, searchAllFilesByDefault).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(showPermissionRationale) = prefs.edit().putBoolean(SHOW_PERMISSION_RATIONALE, showPermissionRationale).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(showRecycleBinAtFolders) = prefs.edit().putBoolean(SHOW_RECYCLE_BIN_AT_FOLDERS, showRecycleBinAtFolders).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(showThumbnailVideoDuration) = prefs.edit().putBoolean(SHOW_THUMBNAIL_VIDEO_DURATION, showThumbnailVideoDuration).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(tempSkipDeleteConfirmation) = prefs.edit().putBoolean(TEMP_SKIP_DELETE_CONFIRMATION, tempSkipDeleteConfirmation).apply()</ID>
+    <ID>MaxLineLength:Config.kt$Config$set(temporarilyShowExcluded) = prefs.edit().putBoolean(TEMPORARILY_SHOW_EXCLUDED, temporarilyShowExcluded).apply()</ID>
+    <ID>MaxLineLength:Constants.kt$const val DEFAULT_BOTTOM_ACTIONS = BOTTOM_ACTION_TOGGLE_FAVORITE or BOTTOM_ACTION_EDIT or BOTTOM_ACTION_SHARE or BOTTOM_ACTION_DELETE</ID>
+    <ID>MaxLineLength:Context.kt$// but /storage/emulated/0/Pictures is empty, still Pictures with the first folders thumbnails and proper other info</ID>
+    <ID>MaxLineLength:Context.kt$&lt;no name provided&gt;$override</ID>
+    <ID>MaxLineLength:Context.kt$AlphanumericComparator().compare(o1.sortValue.lowercase(Locale.getDefault()), o2.sortValue.lowercase(Locale.getDefault()))</ID>
+    <ID>MaxLineLength:Context.kt$GetMediaAsynctask</ID>
+    <ID>MaxLineLength:Context.kt$MultiTransformation(WebpDrawableTransformation(CenterCrop()), WebpDrawableTransformation(roundedCornersTransform))</ID>
+    <ID>MaxLineLength:Context.kt$allDirs.firstOrNull { parentDirs.firstOrNull { it.path.equals(currentPathPrefix, true) } == null &amp;&amp; it.path.equals(currentPathPrefix, true) }</ID>
+    <ID>MaxLineLength:Context.kt$dirsToCheck.filter { !it.areFavorites() &amp;&amp; !it.isRecycleBin() &amp;&amp; !getDoesFilePathExist(it.path, OTGPath) &amp;&amp; it.path != config.tempFolderPath }</ID>
+    <ID>MaxLineLength:Context.kt$fun</ID>
+    <ID>MaxLineLength:Context.kt$if</ID>
+    <ID>MaxLineLength:Context.kt$if (roundCorners == ROUNDED_CORNERS_SMALL) org.fossify.commons.R.dimen.rounded_corner_radius_small else org.fossify.commons.R.dimen.rounded_corner_radius_big</ID>
+    <ID>MaxLineLength:Context.kt$it.path</ID>
+    <ID>MaxLineLength:Context.kt$null</ID>
+    <ID>MaxLineLength:Context.kt$o1.sortValue.normalizeString().lowercase(Locale.getDefault()).compareTo(o2.sortValue.normalizeString().lowercase(Locale.getDefault()))</ID>
+    <ID>MaxLineLength:Context.kt$return</ID>
+    <ID>MaxLineLength:Context.kt$return Directory(null, path, thumbnail!!, dirName, curMedia.size, lastModified, dateTaken, size, getPathLocation(path), mediaTypes, sortValue)</ID>
+    <ID>MaxLineLength:Context.kt$sorting and SORT_BY_DATE_MODIFIED != 0 -&gt; (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)</ID>
+    <ID>MaxLineLength:Context.kt$sorting and SORT_BY_SIZE != 0 -&gt; (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)</ID>
+    <ID>MaxLineLength:Context.kt$val</ID>
+    <ID>MaxLineLength:Context.kt$val dateTaken = if (isSortingAscending) Math.min(firstItem.taken, lastItem.taken) else Math.max(firstItem.taken, lastItem.taken)</ID>
+    <ID>MaxLineLength:Context.kt$val directory = createDirectoryFromMedia(path, curMedia, albumCovers, hiddenString, includedFolders, getProperFileSize, noMediaFolders)</ID>
+    <ID>MaxLineLength:Context.kt$val lastModified = if (isSortingAscending) Math.min(firstItem.modified, lastItem.modified) else Math.max(firstItem.modified, lastItem.modified)</ID>
+    <ID>MaxLineLength:Context.kt$val newFolder = Directory(null, tempFolderPath, "", tempFolderPath.getFilenameFromPath(), 0, 0, 0, 0L, getPathLocation(tempFolderPath), 0, "")</ID>
+    <ID>MaxLineLength:Context.kt$}</ID>
+    <ID>MaxLineLength:CustomAspectRatioDialog.kt$CustomAspectRatioDialog$val activity: BaseSimpleActivity</ID>
+    <ID>MaxLineLength:DateTakensDao.kt$DateTakensDao$@Query("SELECT full_path, filename, parent_path, date_taken, last_fixed, last_modified FROM date_takens WHERE parent_path = :path COLLATE NOCASE")</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$(!isRPlus() || isExternalStorageManager()) &amp;&amp; selectedPaths.any { !it.doesThisOrParentHaveNoMedia(HashMap(), null) }</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$(!isRPlus() || isExternalStorageManager()) &amp;&amp; selectedPaths.any { it.doesThisOrParentHaveNoMedia(HashMap(), null) }</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$activity.directoryDB.updateDirectoryAfterRename(firstDir.tmb, firstDir.name, firstDir.path, sourcePath)</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$activity: BaseSimpleActivity</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$dirLocation.setImageResource(if (directory.location == LOCATION_SD) org.fossify.commons.R.drawable.ic_sd_card_vector else org.fossify.commons.R.drawable.ic_usb_vector)</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$dirThumbnail.setImageDrawable(AppCompatResources.getDrawable(activity, R.drawable.ic_vector_warning_colored))</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$findItem(R.id.cab_empty_disable_recycle_bin).isVisible = isOneItemSelected &amp;&amp; selectedPaths.first() == RECYCLE_BIN</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$findItem(R.id.cab_rename).isVisible = !selectedPaths.contains(FAVORITES) &amp;&amp; !selectedPaths.contains(RECYCLE_BIN)</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$override fun onChange(position: Int)</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$paths.filter { config.isFolderProtected(it) &amp;&amp; config.getFolderProtectionType(it) == tabToShow &amp;&amp; config.getFolderProtectionHash(it) == hashToCheck }</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$private</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$private fun getAlbumCoversWithout(path: String)</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$selectedPaths.filter { it != FAVORITES &amp;&amp; it != RECYCLE_BIN &amp;&amp; (selectedPaths.size == 1 || !config.isFolderProtected(it)) }</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$val</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$val paths = getSelectedPaths().filter { !activity.isAStorageRootFolder(it) &amp;&amp; !config.isFolderProtected(it) } as ArrayList&lt;String&gt;</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$val removeDir = directory.path.doesThisOrParentHaveNoMedia(HashMap(), null) &amp;&amp; !includedFolders.contains(directory.path)</ID>
+    <ID>MaxLineLength:DirectoryAdapter.kt$DirectoryAdapter$val warning = resources.getQuantityString(org.fossify.commons.R.plurals.delete_warning, itemsCnt, itemsCnt)</ID>
+    <ID>MaxLineLength:DirectoryDao.kt$DirectoryDao$@Query("SELECT path, thumbnail, filename, media_count, last_modified, date_taken, size, location, media_types, sort_value FROM directories")</ID>
+    <ID>MaxLineLength:DirectoryDao.kt$DirectoryDao$@Query("UPDATE OR REPLACE directories SET thumbnail = :thumbnail, media_count = :mediaCnt, last_modified = :lastModified, date_taken = :dateTaken, size = :size, media_types = :mediaTypes, sort_value = :sortValue WHERE path = :path COLLATE NOCASE")</ID>
+    <ID>MaxLineLength:DirectoryDao.kt$DirectoryDao$@Query("UPDATE directories SET thumbnail = :thumbnail, filename = :name, path = :newPath WHERE path = :oldPath COLLATE NOCASE")</ID>
+    <ID>MaxLineLength:DirectoryDao.kt$DirectoryDao$fun</ID>
+    <ID>MaxLineLength:DirectoryItemBinding.kt$GridDirectoryItemRoundedCornersBinding$class</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$(binding.bottomEditorCropRotateActions.root.layoutParams as RelativeLayout.LayoutParams).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 1)</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$binding.bottomEditorDrawActions.bottomDrawWidth.setColors(getProperTextColor(), getProperPrimaryColor(), getProperBackgroundColor())</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$if</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$if (intent.extras?.containsKey(REAL_FILE_PATH) == true) intent.getStringExtra(REAL_FILE_PATH)?.getParentPath() else internalStoragePath</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$intent.extras?.containsKey(MediaStore.EXTRA_OUTPUT) == true &amp;&amp; intent.extras!!.get(MediaStore.EXTRA_OUTPUT) is Uri -&gt; intent.extras!!.get(MediaStore.EXTRA_OUTPUT) as Uri</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$newPath = "$internalStoragePath/${getCurrentFormattedDateTime()}.${saveUri.toString().getFilenameExtension()}"</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$private fun getFiltersAdapter()</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$val layoutManager = binding.bottomEditorFilterActions.bottomActionsFilterList.layoutManager as LinearLayoutManager</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$val originalBitmap = Glide.with(applicationContext).asBitmap().load(uri).submit(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get()</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity$}</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity.&lt;no name provided&gt;$if</ID>
+    <ID>MaxLineLength:EditActivity.kt$EditActivity.&lt;no name provided&gt;$override</ID>
+    <ID>MaxLineLength:ExcludeFolderDialog.kt$ExcludeFolderDialog$radioGroup!!.addView(radioButton, RadioGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))</ID>
+    <ID>MaxLineLength:ExcludeFolderDialog.kt$ExcludeFolderDialog$val path = if (alternativePaths.isEmpty()) selectedPaths[0] else alternativePaths[radioGroup!!.checkedRadioButtonId]</ID>
+    <ID>MaxLineLength:ExcludedFoldersActivity.kt$ExcludedFoldersActivity$updateMaterialActivityViews(binding.manageFoldersCoordinator, binding.manageFoldersList, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
+    <ID>MaxLineLength:FavoritesDao.kt$FavoritesDao$@Query("SELECT favorites.full_path FROM favorites INNER JOIN media ON favorites.full_path = media.full_path WHERE media.deleted_ts = 0")</ID>
+    <ID>MaxLineLength:FavoritesDao.kt$FavoritesDao$@Query("UPDATE OR REPLACE favorites SET filename = :newFilename, full_path = :newFullPath, parent_path = :newParentPath WHERE full_path = :oldPath COLLATE NOCASE")</ID>
+    <ID>MaxLineLength:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$database.execSQL("CREATE TABLE IF NOT EXISTS `date_takens` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `full_path` TEXT NOT NULL, `filename` TEXT NOT NULL, `parent_path` TEXT NOT NULL, `date_taken` INTEGER NOT NULL, `last_fixed` INTEGER NOT NULL)")</ID>
+    <ID>MaxLineLength:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$database.execSQL("CREATE TABLE IF NOT EXISTS `favorites` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `full_path` TEXT NOT NULL, `filename` TEXT NOT NULL, `parent_path` TEXT NOT NULL)")</ID>
+    <ID>MaxLineLength:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$database.execSQL("CREATE TABLE IF NOT EXISTS `widgets` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `widget_id` INTEGER NOT NULL, `folder_path` TEXT NOT NULL)")</ID>
+    <ID>MaxLineLength:GetMediaAsynctask.kt$GetMediaAsynctask$mPath</ID>
+    <ID>MaxLineLength:GetMediaAsynctask.kt$GetMediaAsynctask$val foldersToScan = mediaFetcher.getFoldersToScan().filter { it != RECYCLE_BIN &amp;&amp; it != FAVORITES &amp;&amp; !context.config.isFolderProtected(it) }</ID>
+    <ID>MaxLineLength:GrantAllFilesDialog.kt$GrantAllFilesDialog$.</ID>
+    <ID>MaxLineLength:GridSpacingItemDecoration.kt$GridSpacingItemDecoration$override</ID>
+    <ID>MaxLineLength:HiddenFoldersActivity.kt$HiddenFoldersActivity$updateMaterialActivityViews(binding.manageFoldersCoordinator, binding.manageFoldersList, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
+    <ID>MaxLineLength:IncludedFoldersActivity.kt$IncludedFoldersActivity$updateMaterialActivityViews(binding.manageFoldersCoordinator, binding.manageFoldersList, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
+    <ID>MaxLineLength:InstantItemSwitch.kt$InstantItemSwitch$if</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$(binding.directoriesRefreshLayout.layoutParams as RelativeLayout.LayoutParams).addRule(RelativeLayout.BELOW, R.id.directories_switch_searching)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$// exclude probably unwanted folders, for example facebook stickers are split between hundreds of separate folders like</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$// recyclerview sometimes becomes empty at init/update, triggering an invisible refresh like this seems to work fine</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$// update directories and media files in the local db, delete invalid items. Intentionally creating a new thread</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$// we are looping through the already displayed folders looking for changes, do not do anything if nothing changed</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$binding.directoriesRefreshLayout.layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$createDirectoryFromMedia(directory.path, curMedia, albumCovers, hiddenString, includedFolders, getProperFileSize, noMediaFolders)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$dirsToShow</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$findItem(R.id.stop_showing_hidden).isVisible = (!isRPlus() || isExternalStorageManager()) &amp;&amp; config.temporarilyShowHidden</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$folders.asSequence().filter { it.isDirectory }.map { FileDirItem(it.absolutePath, it.name, true) }.toMutableList() as ArrayList&lt;FileDirItem&gt;</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$folders.filter { !it.absolutePath.isDownloadsFolder() &amp;&amp; it.isDirectory &amp;&amp; it.toFileDirItem(this).getProperFileCount(this, true) == 0 }</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$getStorageDirectories().firstOrNull { it.trimEnd('/') != internalStoragePath &amp;&amp; it.trimEnd('/') != sdCardPath }</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$if</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$if (config.useRecycleBin &amp;&amp; !config.tempSkipRecycleBin) org.fossify.commons.R.plurals.moving_items_into_bin else org.fossify.commons.R.plurals.delete_items</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$intent.extras?.containsKey(MediaStore.EXTRA_OUTPUT) == true &amp;&amp; intent.flags and Intent.FLAG_GRANT_WRITE_URI_PERMISSION != 0</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$mIsThirdPartyIntent</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$private</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$private fun isImageType(intent: Intent)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$private fun isPickImageIntent(intent: Intent)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$private fun isPickVideoIntent(intent: Intent)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$private fun isVideoType(intent: Intent)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$private var mOpenedSubfolders = arrayListOf("") // used at "Group direct subfolders" for navigating Up with the back button</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$resultData.extras?.containsKey(PICKED_PATHS) == true -&gt; fillPickedPaths(resultData, resultIntent)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$toast(String.format(getString(org.fossify.commons.R.string.deleting_folder), config.tempFolderPath), Toast.LENGTH_LONG)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$toast(String.format(getString(org.fossify.commons.R.string.deleting_folder), fileDirItems.first().name))</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$val android11Files = mLastMediaFetcher?.getAndroid11FolderMedia(getImagesOnly, getVideosOnly, favoritePaths, false, true, dateTakens)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$val filesToDelete = mediaDB.getOldRecycleBinItems(System.currentTimeMillis() - MONTH_MILLISECONDS)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$val newDir = createDirectoryFromMedia(folder, newMedia, albumCovers, hiddenString, includedFolders, getProperFileSize, noMediaFolders)</ID>
+    <ID>MaxLineLength:ManageFoldersAdapter.kt$ManageFoldersAdapter$activity: BaseSimpleActivity</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$binding.mediaRefreshLayout.layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$binding.mediaRefreshLayout.layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$findItem(R.id.stop_showing_hidden).isVisible = (!isRPlus() || isExternalStorageManager()) &amp;&amp; config.temporarilyShowHidden</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$this</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$updateMaterialActivityViews(binding.mediaCoordinator, binding.mediaGrid, useTransparentNavigation = !config.scrollHorizontally, useTopSearchMenu = true)</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$val deletingItems = resources.getQuantityString(org.fossify.commons.R.plurals.deleting_items, filtered.size, filtered.size)</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$val movingItems = resources.getQuantityString(org.fossify.commons.R.plurals.moving_items_into_bin, filtered.size, filtered.size)</ID>
+    <ID>MaxLineLength:MediaActivity.kt$MediaActivity$val newGridDecoration = GridSpacingItemDecoration(spanCount, spacing, config.scrollHorizontally, config.fileRoundedCorners, media, useGridPosition)</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$activity: BaseSimpleActivity</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$findItem(R.id.cab_confirm_selection).isVisible = isAGetIntent &amp;&amp; allowMultiplePicks &amp;&amp; selectedKeys.isNotEmpty()</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$findItem(R.id.cab_restore_recycle_bin_files).isVisible = selectedPaths.all { it.startsWith(activity.recycleBinPath) }</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$if (config.useRecycleBin &amp;&amp; !config.tempSkipRecycleBin &amp;&amp; !isRecycleBin) org.fossify.commons.R.string.move_to_recycle_bin_confirmation else org.fossify.commons.R.string.deletion_confirmation</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$mediumThumbnail.setImageDrawable(AppCompatResources.getDrawable(activity, R.drawable.ic_vector_warning_colored))</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$menu.findItem(R.id.cab_add_to_favorites).isVisible = selectedItems.none { it.getIsInRecycleBin() } &amp;&amp; selectedItems.any { !it.isFavorite }</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$menu.findItem(R.id.cab_hide).isVisible = (!isRPlus() || isExternalStorageManager()) &amp;&amp; !isInRecycleBin &amp;&amp; selectedItems.any { !it.isHidden() }</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$menu.findItem(R.id.cab_remove_from_favorites).isVisible = selectedItems.none { it.getIsInRecycleBin() } &amp;&amp; selectedItems.any { it.isFavorite }</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$menu.findItem(R.id.cab_unhide).isVisible = (!isRPlus() || isExternalStorageManager()) &amp;&amp; !isInRecycleBin &amp;&amp; selectedItems.any { it.isHidden() }</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$private fun getItemWithKey(key: Int): Medium?</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$val SAFPath = selectedPaths.firstOrNull { activity.needsStupidWritePermissions(it) } ?: getFirstSelectedItemPath() ?: return</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$val deleteItemsString = resources.getQuantityString(org.fossify.commons.R.plurals.delete_items, itemsCnt, itemsCnt)</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$val isSDOrOtgRootFolder = activity.isAStorageRootFolder(firstPath.getParentPath()) &amp;&amp; !firstPath.startsWith(activity.internalStoragePath)</ID>
+    <ID>MaxLineLength:MediaAdapter.kt$MediaAdapter$val sdk30SAFPath = selectedPaths.firstOrNull { activity.isAccessibleWithSAFSdk30(it) } ?: getFirstSelectedItemPath() ?: return@handleSAFDialog</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$AlphanumericComparator().compare(o1.name.normalizeString().lowercase(Locale.getDefault()), o2.name.normalizeString().lowercase(Locale.getDefault()))</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$AlphanumericComparator().compare(o1.path.lowercase(Locale.getDefault()), o2.path.lowercase(Locale.getDefault()))</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$FAVORITES -&gt; favoritePaths.filter { showHidden || !it.contains("/.") }.map { File(it) }.toMutableList() as ArrayList&lt;File&gt;</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$Medium(null, filename, path, path.getParentPath(), lastModified, dateTaken, size, type, videoDuration, isFavorite, 0L, mediaStoreId)</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$curPath</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$curPath: String</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$favoritePaths</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$file.uri.toString().replaceFirst("${context.config.OTGTreeUri}/document/${context.config.OTGPartition}%3A", "${context.config.OTGPath}/")</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$getAndroid11FolderMedia(isPickImage, isPickVideo, favoritePaths, true, getProperDateTaken, dateTakens.clone() as HashMap&lt;String, Long&gt;)</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$grouping and GROUP_BY_LAST_MODIFIED_DAILY != 0 || grouping and GROUP_BY_DATE_TAKEN_DAILY != 0</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$grouping and GROUP_BY_LAST_MODIFIED_MONTHLY != 0 || grouping and GROUP_BY_DATE_TAKEN_MONTHLY != 0 -&gt; formatDate(key, false)</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$it</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$lastModifieds: HashMap&lt;String, Long&gt;</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$o1.name.normalizeString().lowercase(Locale.getDefault()).compareTo(o2.name.normalizeString().lowercase(Locale.getDefault()))</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val cover = portraitFiles.firstOrNull { it.name.contains("cover", true) } ?: portraitFiles.firstOrNull()</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val files = getAndroid11FolderMedia(isPickImage, isPickVideo, favoritePaths, false, getProperDateTaken, dateTakens)</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val foldersToScan = config.everShownFolders.filter { it == FAVORITES || it == RECYCLE_BIN || context.getDoesFilePathExist(it, OTGPath) }.toHashSet()</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val medium = Medium(null, filename, path, file.parent, lastModified, dateTaken, size, type, videoDuration, isFavorite, 0L, 0L)</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val medium = Medium(null, filename, path, folder, dateModified, dateTaken, size, type, videoDuration, isFavorite, 0L, 0L)</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val newMedia = getMediaOnOTG(curPath, isPickImage, isPickVideo, filterMedia, favoritePaths, getVideoDurations)</ID>
+    <ID>MaxLineLength:MediaFetcher.kt$MediaFetcher$val videoDuration = Math.round(cursor.getIntValue(MediaStore.MediaColumns.DURATION) / 1000.toDouble()).toInt()</ID>
+    <ID>MaxLineLength:MediaSideScroll.kt$MediaSideScroll$activity: Activity</ID>
+    <ID>MaxLineLength:Medium.kt$Medium$fun isHeic()</ID>
+    <ID>MaxLineLength:MediumDao.kt$MediumDao$@Query("SELECT filename, full_path, parent_path, last_modified, date_taken, size, type, video_duration, is_favorite, deleted_ts, media_store_id FROM media WHERE deleted_ts != 0")</ID>
+    <ID>MaxLineLength:MediumDao.kt$MediumDao$@Query("SELECT filename, full_path, parent_path, last_modified, date_taken, size, type, video_duration, is_favorite, deleted_ts, media_store_id FROM media WHERE deleted_ts &lt; :timestmap AND deleted_ts != 0")</ID>
+    <ID>MaxLineLength:MediumDao.kt$MediumDao$@Query("SELECT filename, full_path, parent_path, last_modified, date_taken, size, type, video_duration, is_favorite, deleted_ts, media_store_id FROM media WHERE deleted_ts = 0 AND is_favorite = 1")</ID>
+    <ID>MaxLineLength:MediumDao.kt$MediumDao$@Query("SELECT filename, full_path, parent_path, last_modified, date_taken, size, type, video_duration, is_favorite, deleted_ts, media_store_id FROM media WHERE deleted_ts = 0 AND parent_path = :path COLLATE NOCASE")</ID>
+    <ID>MaxLineLength:MediumDao.kt$MediumDao$@Query("UPDATE OR REPLACE media SET filename = :newFilename, full_path = :newFullPath, parent_path = :newParentPath WHERE full_path = :oldPath COLLATE NOCASE")</ID>
+    <ID>MaxLineLength:MediumDao.kt$MediumDao$@Query("UPDATE OR REPLACE media SET full_path = :newPath, deleted_ts = :deletedTS WHERE full_path = :oldPath COLLATE NOCASE")</ID>
+    <ID>MaxLineLength:MyPagerAdapter.kt$MyPagerAdapter$class</ID>
+    <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$override</ID>
+    <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$val pendingIntent = PendingIntent.getActivity(context, widget.widgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)</ID>
+    <ID>MaxLineLength:NewPhotoFetcher.kt$NewPhotoFetcher$if</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$if</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$mIsFullscreen = requireActivity().window.decorView.systemUiVisibility and View.SYSTEM_UI_FLAG_FULLSCREEN == View.SYSTEM_UI_FLAG_FULLSCREEN</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$orient = exif2.getTag(ExifInterface.TAG_ORIENTATION)?.getValueAsInt(defaultOrientation) ?: defaultOrientation</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$resources.getDimension(R.dimen.portrait_photos_stripe_height).toInt()</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$val actionsHeight = if (requireContext().config.bottomActions &amp;&amp; !mIsFullscreen) resources.getDimension(R.dimen.bottom_actions_height) else 0f</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$val imageParser = JpegImageParser().getXmpXml(ByteSourceInputStream(it, mMedium.name), HashMap&lt;String, Any&gt;())</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$var bottomMargin = requireContext().navigationBarHeight + resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment$var pathToLoad = if (getFilePathToShow().startsWith("content://")) getFilePathToShow() else "file://${getFilePathToShow()}"</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$binding.gesturesView.controller.settings.isZoomEnabled = mMedium.isRaw() || mCurrentRotationDegrees != 0 || allowZoomingImages == false</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$override</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$setTextColor(if (context.config.blackBackground) Color.WHITE else context.getProperTextColor())</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$val useHeight = if (mImageOrientation == ORIENTATION_ROTATE_90 || mImageOrientation == ORIENTATION_ROTATE_270) sWidth else sHeight</ID>
+    <ID>MaxLineLength:PhotoFragment.kt$PhotoFragment.&lt;no name provided&gt;$val useWidth = if (mImageOrientation == ORIENTATION_ROTATE_90 || mImageOrientation == ORIENTATION_ROTATE_270) sHeight else sWidth</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$binding.bottomActions.bottomEdit.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_EDIT != 0 &amp;&amp; mMedium?.isImage() == true)</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$binding.bottomActions.bottomSetAs.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_SET_AS != 0 &amp;&amp; mMedium?.isImage() == true)</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$binding.bottomActions.root.layoutParams.height = resources.getDimension(R.dimen.bottom_actions_height).toInt() + navigationBarHeight</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$binding.fragmentViewerToolbar.title = Html.fromHtml("&lt;font color='${Color.WHITE.toHex()}'&gt;${mMedium!!.name}&lt;/font&gt;")</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$findItem(R.id.menu_edit).isVisible = mMedium?.isImage() == true &amp;&amp; mUri?.scheme == "file" &amp;&amp; visibleBottomActions and BOTTOM_ACTION_EDIT == 0</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$findItem(R.id.menu_properties).isVisible = mUri?.scheme == "file" &amp;&amp; visibleBottomActions and BOTTOM_ACTION_PROPERTIES == 0</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$findItem(R.id.menu_set_as).isVisible = mMedium?.isImage() == true &amp;&amp; visibleBottomActions and BOTTOM_ACTION_SET_AS == 0</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$if</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$mMedium = Medium(null, filename, mUri.toString(), mUri!!.path!!.getParentPath(), 0, 0, file.length(), type, 0, false, 0L, 0)</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$navigationIcon = resources.getColoredDrawableWithColor(org.fossify.commons.R.drawable.ic_arrow_left_vector, Color.WHITE)</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$overflowIcon = resources.getColoredDrawableWithColor(org.fossify.commons.R.drawable.ic_three_dots_vector, Color.WHITE)</ID>
+    <ID>MaxLineLength:PhotoVideoActivity.kt$PhotoVideoActivity$val isFileFolderHidden = (File(realPath).isHidden || File(realPath.getParentPath(), NOMEDIA).exists() || realPath.contains("/."))</ID>
+    <ID>MaxLineLength:PicassoRegionDecoder.kt$PicassoRegionDecoder$if</ID>
+    <ID>MaxLineLength:PicassoRegionDecoder.kt$PicassoRegionDecoder$return bitmap ?: throw RuntimeException("Region decoder returned null bitmap - image format may not be supported")</ID>
+    <ID>MaxLineLength:PickDirectoryDialog.kt$PickDirectoryDialog$activity</ID>
+    <ID>MaxLineLength:PickDirectoryDialog.kt$PickDirectoryDialog$orientation = if (activity.config.scrollHorizontally &amp;&amp; isGridViewType) RecyclerView.HORIZONTAL else RecyclerView.VERTICAL</ID>
+    <ID>MaxLineLength:PickDirectoryDialog.kt$PickDirectoryDialog$val</ID>
+    <ID>MaxLineLength:PickDirectoryDialog.kt$PickDirectoryDialog$}</ID>
+    <ID>MaxLineLength:PickMediumDialog.kt$PickMediumDialog$activity</ID>
+    <ID>MaxLineLength:PickMediumDialog.kt$PickMediumDialog$orientation = if (config.scrollHorizontally &amp;&amp; isGridViewType) RecyclerView.HORIZONTAL else RecyclerView.VERTICAL</ID>
+    <ID>MaxLineLength:PickMediumDialog.kt$PickMediumDialog$val</ID>
+    <ID>MaxLineLength:PickMediumDialog.kt$PickMediumDialog$val newGridDecoration = GridSpacingItemDecoration(spanCount, spacing, config.scrollHorizontally, config.fileRoundedCorners, media, useGridPosition)</ID>
+    <ID>MaxLineLength:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$val background = ResourcesCompat.getDrawable(resources, org.fossify.commons.R.drawable.bottom_sheet_bg, requireContext().theme)</ID>
+    <ID>MaxLineLength:PortraitPhotosAdapter.kt$PortraitPhotosAdapter$class</ID>
+    <ID>MaxLineLength:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$toast(resources.getQuantityString(R.plurals.failed_to_resize_images, failureCount, failureCount))</ID>
+    <ID>MaxLineLength:ResizeWithPathDialog.kt$ResizeWithPathDialog$class</ID>
+    <ID>MaxLineLength:ResizeWithPathDialog.kt$ResizeWithPathDialog$val title = String.format(activity.getString(org.fossify.commons.R.string.file_already_exists_overwrite), newFilename)</ID>
+    <ID>MaxLineLength:SaveAsDialog.kt$SaveAsDialog$val activity: BaseSimpleActivity</ID>
+    <ID>MaxLineLength:SaveAsDialog.kt$SaveAsDialog$val title = String.format(activity.getString(org.fossify.commons.R.string.file_already_exists_overwrite), newFilename)</ID>
+    <ID>MaxLineLength:SearchActivity.kt$SearchActivity$binding.searchGrid.layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)</ID>
+    <ID>MaxLineLength:SearchActivity.kt$SearchActivity$binding.searchGrid.layoutParams = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT)</ID>
+    <ID>MaxLineLength:SearchActivity.kt$SearchActivity$updateMaterialActivityViews(binding.searchCoordinator, binding.searchGrid, useTransparentNavigation = true, useTopSearchMenu = true)</ID>
+    <ID>MaxLineLength:SearchActivity.kt$SearchActivity$val decoration = GridSpacingItemDecoration(spanCount, spacing, config.scrollHorizontally, config.fileRoundedCorners, media, true)</ID>
+    <ID>MaxLineLength:SearchActivity.kt$SearchActivity$val deletingItems = resources.getQuantityString(org.fossify.commons.R.plurals.deleting_items, filtered.size, filtered.size)</ID>
+    <ID>MaxLineLength:SearchActivity.kt$SearchActivity$val movingItems = resources.getQuantityString(org.fossify.commons.R.plurals.moving_items_into_bin, filtered.size, filtered.size)</ID>
+    <ID>MaxLineLength:SetWallpaperActivity.kt$SetWallpaperActivity$RadioItem(WallpaperManager.FLAG_SYSTEM or WallpaperManager.FLAG_LOCK, getString(R.string.home_and_lock_screen))</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$"${getString(R.string.manage_included_folders)} (${getString(org.fossify.commons.R.string.no_permission)})"</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$"${getString(org.fossify.commons.R.string.show_hidden_items)} (${getString(org.fossify.commons.R.string.no_permission)})"</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$LAST_EDITOR_CROP_OTHER_ASPECT_RATIO_X -&gt; config.lastEditorCropOtherAspectRatioX = value.toString().toFloat()</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$LAST_EDITOR_CROP_OTHER_ASPECT_RATIO_Y -&gt; config.lastEditorCropOtherAspectRatioY = value.toString().toFloat()</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$binding.settingsExcludedItemPasswordProtectionHolder.beGoneIf(binding.settingsHiddenItemPasswordProtectionHolder.isVisible())</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$binding.settingsUseEnglishHolder.beVisibleIf((config.wasUseEnglishToggled || Locale.getDefault().language != "en") &amp;&amp; !isTiramisuPlus())</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$if</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$org.fossify.commons.R.string.fingerprint_setup_successfully</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$toast(if (configValues.size &gt; 0) org.fossify.commons.R.string.settings_imported_successfully else org.fossify.commons.R.string.no_entries_for_importing)</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$toast(if (importedItems &gt; 0) org.fossify.commons.R.string.importing_successful else org.fossify.commons.R.string.no_entries_for_importing)</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$updateMaterialActivityViews(binding.settingsCoordinator, binding.settingsHolder, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
+    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$}</ID>
+    <ID>MaxLineLength:SlideshowDialog.kt$SlideshowDialog$intervalHint.hint = activity.getString(org.fossify.commons.R.string.seconds_raw).replaceFirstChar { it.uppercaseChar() }</ID>
+    <ID>MaxLineLength:String.kt$folderNoMediaStatuses.getOrElse("$this/$NOMEDIA") { false } || ((!isRPlus() || isExternalStorageManager()) &amp;&amp; File(this, NOMEDIA).exists())</ID>
+    <ID>MaxLineLength:String.kt$fun String.isDownloadsFolder()</ID>
+    <ID>MaxLineLength:String.kt$val noMediaExists = folderNoMediaStatuses.getOrElse(pathToCheck, { false }) || File(pathToCheck).exists()</ID>
+    <ID>MaxLineLength:SvgModule.kt$SvgModule$registry.register(SVG::class.java, PictureDrawable::class.java, SvgDrawableTranscoder()).append(InputStream::class.java, SVG::class.java, SvgDecoder())</ID>
+    <ID>MaxLineLength:SvgSoftwareLayerSetter.kt$SvgSoftwareLayerSetter$override</ID>
+    <ID>MaxLineLength:VideoFragment.kt$VideoFragment$.</ID>
+    <ID>MaxLineLength:VideoFragment.kt$VideoFragment$binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"</ID>
+    <ID>MaxLineLength:VideoFragment.kt$VideoFragment$class</ID>
+    <ID>MaxLineLength:VideoFragment.kt$VideoFragment$if</ID>
+    <ID>MaxLineLength:VideoFragment.kt$VideoFragment$mConfig = requireContext().config</ID>
+    <ID>MaxLineLength:VideoFragment.kt$VideoFragment$mIsFullscreen = activity.window.decorView.systemUiVisibility and View.SYSTEM_UI_FLAG_FULLSCREEN == View.SYSTEM_UI_FLAG_FULLSCREEN</ID>
+    <ID>MaxLineLength:VideoFragment.kt$VideoFragment$val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$.</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$binding.bottomVideoTimeHolder.videoPlaybackSpeed.text = "${DecimalFormat("#.##").format(config.playbackSpeed)}x"</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$binding.bottomVideoTimeHolder.videoTogglePlayPause.setImageResource(org.fossify.commons.R.drawable.ic_pause_outline_vector)</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$binding.bottomVideoTimeHolder.videoTogglePlayPause.setImageResource(org.fossify.commons.R.drawable.ic_play_outline_vector)</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$binding.videoBrightnessController</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$binding.videoVolumeController</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$if</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$navigationIcon = resources.getColoredDrawableWithColor(org.fossify.commons.R.drawable.ic_arrow_left_vector, Color.WHITE)</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$open</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$overflowIcon = resources.getColoredDrawableWithColor(org.fossify.commons.R.drawable.ic_three_dots_vector, Color.WHITE)</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity$val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector</ID>
+    <ID>MaxLineLength:VideoPlayerActivity.kt$VideoPlayerActivity.&lt;no name provided&gt;$override</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$!currentMedium.isFavorite &amp;&amp; visibleBottomActions and BOTTOM_ACTION_TOGGLE_FAVORITE == 0 &amp;&amp; !currentMedium.getIsInRecycleBin()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$(!isRPlus() || isExternalStorageManager()) &amp;&amp; !currentMedium.isHidden() &amp;&amp; visibleBottomActions and BOTTOM_ACTION_TOGGLE_VISIBILITY == 0 &amp;&amp; !currentMedium.getIsInRecycleBin()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$(!isRPlus() || isExternalStorageManager()) &amp;&amp; currentMedium.isHidden() &amp;&amp; visibleBottomActions and BOTTOM_ACTION_TOGGLE_VISIBILITY == 0 &amp;&amp; !currentMedium.getIsInRecycleBin()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$// show the selected image asap, while loading the rest in the background to allow swiping between them. Might be needed at third party intents</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$GetMediaAsynctask</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomChangeOrientation.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_CHANGE_ORIENTATION != 0)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomChangeOrientation.setOnLongClickListener { toast(R.string.change_orientation); true }</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomEdit.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_EDIT != 0 &amp;&amp; currentMedium?.isSVG() == false)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomFavorite.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_TOGGLE_FAVORITE != 0 &amp;&amp; currentMedium?.getIsInRecycleBin() == false)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomProperties.setOnLongClickListener { toast(org.fossify.commons.R.string.properties); true }</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomRename.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_RENAME != 0 &amp;&amp; currentMedium?.getIsInRecycleBin() == false)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomResize.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_RESIZE != 0 &amp;&amp; currentMedium?.isImage() == true)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomRotate.beVisibleIf(config.visibleBottomActions and BOTTOM_ACTION_ROTATE != 0 &amp;&amp; getCurrentMedium()?.isImage() == true)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.bottomToggleFileVisibility.beVisibleIf(visibleBottomActions and BOTTOM_ACTION_TOGGLE_VISIBILITY != 0)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$binding.bottomActions.root.layoutParams.height = resources.getDimension(R.dimen.bottom_actions_height).toInt() + navigationBarHeight</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$currentMedium.isFavorite &amp;&amp; visibleBottomActions and BOTTOM_ACTION_TOGGLE_FAVORITE == 0 &amp;&amp; !currentMedium.getIsInRecycleBin()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$findItem(R.id.menu_change_orientation).isVisible = rotationDegrees == 0 &amp;&amp; visibleBottomActions and BOTTOM_ACTION_CHANGE_ORIENTATION == 0</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$findItem(R.id.menu_edit).isVisible = visibleBottomActions and BOTTOM_ACTION_EDIT == 0 &amp;&amp; !currentMedium.isSVG()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$findItem(R.id.menu_rename).isVisible = visibleBottomActions and BOTTOM_ACTION_RENAME == 0 &amp;&amp; !currentMedium.getIsInRecycleBin()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$findItem(R.id.menu_resize).isVisible = visibleBottomActions and BOTTOM_ACTION_RESIZE == 0 &amp;&amp; currentMedium.isImage()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$findItem(R.id.menu_rotate).isVisible = currentMedium.isImage() &amp;&amp; visibleBottomActions and BOTTOM_ACTION_ROTATE == 0</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$flipSides = orientation == ExifInterface.ORIENTATION_ROTATE_90 || orientation == ExifInterface.ORIENTATION_ROTATE_270</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$if (medium.isFavorite) org.fossify.commons.R.drawable.ic_star_vector else org.fossify.commons.R.drawable.ic_star_outline_vector</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$if (medium.isHidden()) org.fossify.commons.R.drawable.ic_unhide_vector else org.fossify.commons.R.drawable.ic_hide_vector</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$it.isImage() || it.isPortrait() || (config.slideshowIncludeVideos &amp;&amp; it.isVideo() || (config.slideshowIncludeGIFs &amp;&amp; it.isGIF()))</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$navigationIcon = resources.getColoredDrawableWithColor(org.fossify.commons.R.drawable.ic_arrow_left_vector, Color.WHITE)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$overflowIcon = resources.getColoredDrawableWithColor(org.fossify.commons.R.drawable.ic_three_dots_vector, Color.WHITE)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$private</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$private fun getCurrentFragment()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$private fun getCurrentMedia()</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$toast(if (currentMedium?.isHidden() == true) org.fossify.commons.R.string.unhide else org.fossify.commons.R.string.hide); true</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$val isSDOrOtgRootFolder = isAStorageRootFolder(oldPath.getParentPath()) &amp;&amp; !oldPath.startsWith(internalStoragePath)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$val medium = Medium(null, filename, mPath, parent, ts, ts, File(mPath).length(), type, duration, isFavorite, 0, 0L)</ID>
+    <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity.&lt;no name provided&gt;$override</ID>
+    <ID>MaxLineLength:ViewPagerFragment.kt$ViewPagerFragment$context!!.getResolution(file.absolutePath)?.formatAsResolution().let { if (it?.isNotEmpty() == true) details.appendLine(it) }</ID>
+    <ID>MaxLineLength:ViewPagerFragment.kt$ViewPagerFragment$fun getPathToLoad(medium: Medium)</ID>
+    <ID>MaxLineLength:ViewPagerFragment.kt$ViewPagerFragment$if</ID>
+    <ID>MaxLineLength:WidgetConfigureActivity.kt$WidgetConfigureActivity$if</ID>
+    <ID>NestedBlockDepth:Context.kt$fun Context.getDirectParentSubfolders(dirs: ArrayList&lt;Directory&gt;, currentPathPrefix: String): ArrayList&lt;Directory&gt;</ID>
+    <ID>NestedBlockDepth:Context.kt$fun Context.getNoMediaFoldersSync(): ArrayList&lt;String&gt;</ID>
+    <ID>NestedBlockDepth:Context.kt$fun Context.parseFileChannel(path: String, fc: FileChannel, level: Int, start: Long, end: Long, callback: () -&gt; Unit)</ID>
+    <ID>NestedBlockDepth:Context.kt$fun Context.updateSubfolderCounts(children: ArrayList&lt;Directory&gt;, parentDirs: ArrayList&lt;Directory&gt;)</ID>
+    <ID>NestedBlockDepth:EditActivity.kt$EditActivity$override fun onCropImageComplete(view: CropImageView, result: CropImageView.CropResult)</ID>
+    <ID>NestedBlockDepth:MainActivity.kt$MainActivity$override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?)</ID>
+    <ID>NestedBlockDepth:MainActivity.kt$MainActivity$private fun getFoldersWithMedia(path: String): HashSet&lt;String&gt;</ID>
+    <ID>NestedBlockDepth:MainActivity.kt$MainActivity$private fun gotDirectories(newDirs: ArrayList&lt;Directory&gt;)</ID>
+    <ID>NestedBlockDepth:MediaFetcher.kt$MediaFetcher$fun getFilesFrom( curPath: String, isPickImage: Boolean, isPickVideo: Boolean, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt;, android11Files: HashMap&lt;String, ArrayList&lt;Medium&gt;&gt;? ): ArrayList&lt;Medium&gt;</ID>
+    <ID>NestedBlockDepth:MediaFetcher.kt$MediaFetcher$private fun getLatestFileFolders(): LinkedHashSet&lt;String&gt;</ID>
+    <ID>NestedBlockDepth:MediaFetcher.kt$MediaFetcher$private fun getMediaInFolder( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt; ): ArrayList&lt;Medium&gt;</ID>
+    <ID>NestedBlockDepth:MediaFetcher.kt$MediaFetcher$private fun parseCursor(cursor: Cursor): LinkedHashSet&lt;String&gt;</ID>
+    <ID>NestedBlockDepth:MediaSideScroll.kt$MediaSideScroll$override fun onTouchEvent(event: MotionEvent): Boolean</ID>
+    <ID>NestedBlockDepth:PhotoFragment.kt$PhotoFragment$override fun fullscreenToggled(isFullscreen: Boolean)</ID>
+    <ID>NestedBlockDepth:PhotoVideoActivity.kt$PhotoVideoActivity$private fun checkIntent(savedInstanceState: Bundle? = null)</ID>
+    <ID>NestedBlockDepth:SettingsActivity.kt$SettingsActivity$private fun parseFile(inputStream: InputStream?)</ID>
+    <ID>NestedBlockDepth:String.kt$fun String.shouldFolderBeVisible( excludedPaths: MutableSet&lt;String&gt;, includedPaths: MutableSet&lt;String&gt;, showHidden: Boolean, folderNoMediaStatuses: HashMap&lt;String, Boolean&gt;, callback: (path: String, hasNoMedia: Boolean) -&gt; Unit ): Boolean</ID>
+    <ID>NestedBlockDepth:VideoPlayerActivity.kt$VideoPlayerActivity$private fun handleEvent(event: MotionEvent)</ID>
+    <ID>NestedBlockDepth:ViewPagerActivity.kt$ViewPagerActivity$private fun getPositionInList(items: MutableList&lt;Medium&gt;): Int</ID>
+    <ID>ReturnCount:Context.kt$@Suppress("UNCHECKED_CAST") fun Context.getSortedDirectories(source: ArrayList&lt;Directory&gt;): ArrayList&lt;Directory&gt;</ID>
+    <ID>ReturnCount:Context.kt$fun Context.getDirectorySortingValue(media: ArrayList&lt;Medium&gt;, path: String, name: String, size: Long): String</ID>
+    <ID>ReturnCount:ExcludeFolderDialog.kt$ExcludeFolderDialog$private fun getAlternativePathsList(): List&lt;String&gt;</ID>
+    <ID>ReturnCount:InstantItemSwitch.kt$InstantItemSwitch$override fun onTouchEvent(event: MotionEvent): Boolean</ID>
+    <ID>ReturnCount:MediaFetcher.kt$MediaFetcher$fun groupMedia(media: ArrayList&lt;Medium&gt;, path: String): ArrayList&lt;ThumbnailItem&gt;</ID>
+    <ID>ReturnCount:MediaSideScroll.kt$MediaSideScroll$override fun onTouchEvent(event: MotionEvent): Boolean</ID>
+    <ID>ReturnCount:PhotoFragment.kt$PhotoFragment$override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
+    <ID>ReturnCount:PhotoVideoActivity.kt$PhotoVideoActivity$private fun checkIntent(savedInstanceState: Bundle? = null)</ID>
+    <ID>ReturnCount:String.kt$fun String.shouldFolderBeVisible( excludedPaths: MutableSet&lt;String&gt;, includedPaths: MutableSet&lt;String&gt;, showHidden: Boolean, folderNoMediaStatuses: HashMap&lt;String, Boolean&gt;, callback: (path: String, hasNoMedia: Boolean) -&gt; Unit ): Boolean</ID>
+    <ID>ReturnCount:ViewPagerActivity.kt$ViewPagerActivity$private fun getPositionInList(items: MutableList&lt;Medium&gt;): Int</ID>
+    <ID>ReturnCount:ViewPagerActivity.kt$ViewPagerActivity$private fun initViewPager(savedPath: String)</ID>
+    <ID>ReturnCount:ViewPagerActivity.kt$ViewPagerActivity$private fun isShowHiddenFlagNeeded(): Boolean</ID>
+    <ID>ReturnCount:ViewPagerFragment.kt$ViewPagerFragment$fun getMediumExtendedDetails(medium: Medium): String</ID>
+    <ID>SpreadOperator:Context.kt$(*mediaToDelete.toTypedArray())</ID>
+    <ID>SpreadOperator:MainActivity.kt$MainActivity$(*mediaToDelete.toTypedArray())</ID>
+    <ID>SwallowedException:Activity.kt$e: Exception</ID>
+    <ID>SwallowedException:Activity.kt$e: OutOfMemoryError</ID>
+    <ID>SwallowedException:Context.kt$e: Exception</ID>
+    <ID>SwallowedException:EditActivity.kt$EditActivity$e: Exception</ID>
+    <ID>SwallowedException:EditActivity.kt$EditActivity$e: OutOfMemoryError</ID>
+    <ID>SwallowedException:IsoTypeReader.kt$IsoTypeReader$e: UnsupportedEncodingException</ID>
+    <ID>SwallowedException:MainActivity.kt$MainActivity$e: Exception</ID>
+    <ID>SwallowedException:MediaActivity.kt$MediaActivity$e: Exception</ID>
+    <ID>SwallowedException:MediaFetcher.kt$MediaFetcher$e: Exception</ID>
+    <ID>SwallowedException:MediaSideScroll.kt$MediaSideScroll$e: Settings.SettingNotFoundException</ID>
+    <ID>SwallowedException:MyWidgetProvider.kt$MyWidgetProvider$e: Exception</ID>
+    <ID>SwallowedException:PhotoFragment.kt$PhotoFragment$e: Exception</ID>
+    <ID>SwallowedException:PhotoFragment.kt$PhotoFragment$e: OutOfMemoryError</ID>
+    <ID>SwallowedException:PhotoVideoActivity.kt$PhotoVideoActivity$e: Exception</ID>
+    <ID>SwallowedException:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$e: OutOfMemoryError</ID>
+    <ID>SwallowedException:SetWallpaperActivity.kt$SetWallpaperActivity$e: OutOfMemoryError</ID>
+    <ID>SwallowedException:SettingsActivity.kt$SettingsActivity$e: ActivityNotFoundException</ID>
+    <ID>SwallowedException:String.kt$e: IOException</ID>
+    <ID>SwallowedException:ViewPagerActivity.kt$ViewPagerActivity$e: ActivityNotFoundException</ID>
+    <ID>SwallowedException:ViewPagerActivity.kt$ViewPagerActivity$e: Exception</ID>
+    <ID>SwallowedException:ViewPagerActivity.kt$ViewPagerActivity.&lt;no name provided&gt;$e: Exception</ID>
+    <ID>SwallowedException:ViewPagerFragment.kt$ViewPagerFragment$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Activity.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Context.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DirectoryAdapter.kt$DirectoryAdapter$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EditActivity.kt$EditActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MainActivity.kt$MainActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MediaActivity.kt$MediaActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MediaFetcher.kt$MediaFetcher$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MyWidgetProvider.kt$MyWidgetProvider$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PhotoFragment.kt$PhotoFragment$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PhotoVideoActivity.kt$PhotoVideoActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SettingsActivity.kt$SettingsActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:VideoFragment.kt$VideoFragment$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:VideoPlayerActivity.kt$VideoPlayerActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ViewPagerActivity.kt$ViewPagerActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ViewPagerActivity.kt$ViewPagerActivity.&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ViewPagerFragment.kt$ViewPagerFragment$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:PicassoRegionDecoder.kt$PicassoRegionDecoder$throw RuntimeException("Region decoder returned null bitmap - image format may not be supported")</ID>
+    <ID>TooManyFunctions:Activity.kt$org.fossify.gallery.extensions.Activity.kt</ID>
+    <ID>TooManyFunctions:Config.kt$Config : BaseConfig</ID>
+    <ID>TooManyFunctions:Context.kt$org.fossify.gallery.extensions.Context.kt</ID>
+    <ID>TooManyFunctions:DirectoryAdapter.kt$DirectoryAdapter : MyRecyclerViewAdapterItemTouchHelperContractOnPopupTextUpdate</ID>
+    <ID>TooManyFunctions:EditActivity.kt$EditActivity : SimpleActivityOnCropImageCompleteListener</ID>
+    <ID>TooManyFunctions:EditorDrawCanvas.kt$EditorDrawCanvas : View</ID>
+    <ID>TooManyFunctions:MainActivity.kt$MainActivity : SimpleActivityDirectoryOperationsListener</ID>
+    <ID>TooManyFunctions:ManageFoldersAdapter.kt$ManageFoldersAdapter : MyRecyclerViewAdapter</ID>
+    <ID>TooManyFunctions:ManageHiddenFoldersAdapter.kt$ManageHiddenFoldersAdapter : MyRecyclerViewAdapter</ID>
+    <ID>TooManyFunctions:MediaActivity.kt$MediaActivity : SimpleActivityMediaOperationsListener</ID>
+    <ID>TooManyFunctions:MediaAdapter.kt$MediaAdapter : MyRecyclerViewAdapterOnPopupTextUpdate</ID>
+    <ID>TooManyFunctions:MediaFetcher.kt$MediaFetcher</ID>
+    <ID>TooManyFunctions:Medium.kt$Medium : SerializableThumbnailItem</ID>
+    <ID>TooManyFunctions:MediumDao.kt$MediumDao</ID>
+    <ID>TooManyFunctions:PhotoFragment.kt$PhotoFragment : ViewPagerFragment</ID>
+    <ID>TooManyFunctions:PhotoVideoActivity.kt$PhotoVideoActivity : SimpleActivityFragmentListener</ID>
+    <ID>TooManyFunctions:SearchActivity.kt$SearchActivity : SimpleActivityMediaOperationsListener</ID>
+    <ID>TooManyFunctions:SettingsActivity.kt$SettingsActivity : SimpleActivity</ID>
+    <ID>TooManyFunctions:VideoFragment.kt$VideoFragment : ViewPagerFragmentSurfaceTextureListenerOnSeekBarChangeListenerPlaybackSpeedListener</ID>
+    <ID>TooManyFunctions:VideoPlayerActivity.kt$VideoPlayerActivity : SimpleActivityOnSeekBarChangeListenerSurfaceTextureListenerPlaybackSpeedListener</ID>
+    <ID>TooManyFunctions:ViewPagerActivity.kt$ViewPagerActivity : SimpleActivityOnPageChangeListenerFragmentListener</ID>
+    <ID>TooManyFunctions:WidgetConfigureActivity.kt$WidgetConfigureActivity : SimpleActivity</ID>
+    <ID>UnusedParameter:Activity.kt$toggleActionBarVisibility: Boolean</ID>
+    <ID>UnusedPrivateMember:PhotoFragment.kt$PhotoFragment$private fun checkIfPanorama()</ID>
+    <ID>UnusedPrivateMember:VideoFragment.kt$VideoFragment$private fun checkIfPanorama()</ID>
+    <ID>UnusedPrivateProperty:MyPagerAdapter.kt$MyPagerAdapter$pos</ID>
+    <ID>UnusedPrivateProperty:PhotoFragment.kt$PhotoFragment$i</ID>
+    <ID>UnusedPrivateProperty:String.kt$i</ID>
+    <ID>UtilityClassWithPublicConstructor:ExifInterface.kt$ExifInterfaceAttributes</ID>
+    <ID>VariableNaming:Activity.kt$val BATCH_SIZE = 50</ID>
+    <ID>VariableNaming:Activity.kt$val OTGPath = config.OTGPath</ID>
+    <ID>VariableNaming:Context.kt$val FILE_CHANNEL_CONTAINERS = arrayListOf("moov", "trak", "mdia", "minf", "udta", "stbl")</ID>
+    <ID>VariableNaming:Context.kt$val OTGPath = config.OTGPath</ID>
+    <ID>VariableNaming:DirectoryAdapter.kt$DirectoryAdapter$val SAFPath = getFirstSelectedItemPath() ?: return</ID>
+    <ID>VariableNaming:MainActivity.kt$MainActivity$val OTGPath = config.OTGPath</ID>
+    <ID>VariableNaming:MediaActivity.kt$MediaActivity$private val LAST_MEDIA_CHECK_PERIOD = 3000L</ID>
+    <ID>VariableNaming:MediaAdapter.kt$MediaAdapter$private val ITEM_MEDIUM_PHOTO = 2</ID>
+    <ID>VariableNaming:MediaAdapter.kt$MediaAdapter$private val ITEM_MEDIUM_VIDEO_PORTRAIT = 1</ID>
+    <ID>VariableNaming:MediaAdapter.kt$MediaAdapter$private val ITEM_SECTION = 0</ID>
+    <ID>VariableNaming:MediaAdapter.kt$MediaAdapter$val SAFPath = selectedPaths.firstOrNull { activity.needsStupidWritePermissions(it) } ?: getFirstSelectedItemPath() ?: return</ID>
+    <ID>VariableNaming:MediaFetcher.kt$MediaFetcher$val OTGPath = config.OTGPath</ID>
+    <ID>VariableNaming:MediaFetcher.kt$MediaFetcher$val OTGPath = context.config.OTGPath</ID>
+    <ID>VariableNaming:MediaSideScroll.kt$MediaSideScroll$private val SLIDE_INFO_FADE_DELAY = 1000L</ID>
+    <ID>VariableNaming:PhotoFragment.kt$PhotoFragment$// devices with good displays, but the rest of the hardware not good enough for them private val WEIRD_DEVICES = arrayListOf( "motorola xt1685", "google nexus 5x" )</ID>
+    <ID>VariableNaming:PhotoFragment.kt$PhotoFragment$private val DEFAULT_DOUBLE_TAP_ZOOM = 2f</ID>
+    <ID>VariableNaming:PhotoFragment.kt$PhotoFragment$private val SAME_ASPECT_RATIO_THRESHOLD = 0.01</ID>
+    <ID>VariableNaming:PhotoFragment.kt$PhotoFragment$private val ZOOMABLE_VIEW_LOAD_DELAY = 100L</ID>
+    <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val HALF_PROGRESS = MAX_PROGRESS / 2</ID>
+    <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val MAX_PLAYBACK_SPEED = 3f</ID>
+    <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val MAX_PROGRESS = (MAX_PLAYBACK_SPEED * 100 + MIN_PLAYBACK_SPEED * 100).toInt()</ID>
+    <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val MIN_PLAYBACK_SPEED = 0.25f</ID>
+    <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val STEP = 0.05f</ID>
+    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val PICK_IMAGE = 1</ID>
+    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_LANDSCAPE = 1</ID>
+    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_PORTRAIT = 0</ID>
+    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_SQUARE = 2</ID>
+    <ID>VariableNaming:VideoFragment.kt$VideoFragment$private val PROGRESS = "progress"</ID>
+    <ID>VariableNaming:VideoPlayerActivity.kt$VideoPlayerActivity$private val PLAY_WHEN_READY_DRAG_DELAY = 100L</ID>
+    <ID>WildcardImport:Activity.kt$import java.io.*</ID>
+    <ID>WildcardImport:Activity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:Activity.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:ArrayList.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ChangeFolderThumbnailStyleDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ChangeFolderThumbnailStyleDialog.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ChangeGroupingDialog.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ChangeSortingDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ChangeSortingDialog.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:Config.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:Constants.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:Context.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:Context.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:Context.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:Context.kt$import org.fossify.gallery.interfaces.*</ID>
+    <ID>WildcardImport:Context.kt$import org.fossify.gallery.models.*</ID>
+    <ID>WildcardImport:Directory.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:Directory.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:DirectoryAdapter.kt$import org.fossify.commons.dialogs.*</ID>
+    <ID>WildcardImport:DirectoryAdapter.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:DirectoryAdapter.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:DirectoryAdapter.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:DirectoryAdapter.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:EditActivity.kt$import java.io.*</ID>
+    <ID>WildcardImport:EditActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:EditActivity.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:EditorDrawCanvas.kt$import android.graphics.*</ID>
+    <ID>WildcardImport:ExcludedFoldersActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ExportFavoritesDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:FilterMediaDialog.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:GalleryDatabase.kt$import org.fossify.gallery.interfaces.*</ID>
+    <ID>WildcardImport:GalleryDatabase.kt$import org.fossify.gallery.models.*</ID>
+    <ID>WildcardImport:GetMediaAsynctask.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import java.io.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ManageBottomActionsDialog.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ManageExtendedDetailsDialog.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ManageFoldersAdapter.kt$import android.view.*</ID>
+    <ID>WildcardImport:MediaActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:MediaActivity.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:MediaActivity.kt$import org.fossify.gallery.dialogs.*</ID>
+    <ID>WildcardImport:MediaActivity.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:MediaActivity.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:MediaAdapter.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:MediaAdapter.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:MediaAdapter.kt$import org.fossify.gallery.databinding.*</ID>
+    <ID>WildcardImport:MediaAdapter.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:MediaAdapter.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:MediaFetcher.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:MediaFetcher.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:MediaFetcher.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:Medium.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:Medium.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:Medium.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:Medium.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:MediumDao.kt$import androidx.room.*</ID>
+    <ID>WildcardImport:PhotoFragment.kt$import androidx.exifinterface.media.ExifInterface.*</ID>
+    <ID>WildcardImport:PhotoFragment.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:PhotoFragment.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:PhotoVideoActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:PhotoVideoActivity.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:PhotoVideoActivity.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:PhotoVideoActivity.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:PicassoRegionDecoder.kt$import android.graphics.*</ID>
+    <ID>WildcardImport:PicassoRoundedCornersTransformation.kt$import android.graphics.*</ID>
+    <ID>WildcardImport:PickDirectoryDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:PickDirectoryDialog.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:PlaybackSpeedFragment.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ResizeDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ResizeMultipleImagesDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ResizeWithPathDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:SaveAsDialog.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:SearchActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:SearchActivity.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:SettingsActivity.kt$import org.fossify.commons.dialogs.*</ID>
+    <ID>WildcardImport:SettingsActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:SettingsActivity.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:SettingsActivity.kt$import org.fossify.gallery.dialogs.*</ID>
+    <ID>WildcardImport:SettingsActivity.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:SettingsActivity.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:SimpleActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:VideoFragment.kt$import android.view.*</ID>
+    <ID>WildcardImport:VideoFragment.kt$import androidx.media3.common.*</ID>
+    <ID>WildcardImport:VideoFragment.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:VideoFragment.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:VideoPlayerActivity.kt$import android.view.*</ID>
+    <ID>WildcardImport:VideoPlayerActivity.kt$import androidx.media3.common.*</ID>
+    <ID>WildcardImport:VideoPlayerActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:VideoPlayerActivity.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:VideoPlayerActivity.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ViewPagerActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ViewPagerActivity.kt$import org.fossify.commons.helpers.*</ID>
+    <ID>WildcardImport:ViewPagerActivity.kt$import org.fossify.gallery.extensions.*</ID>
+    <ID>WildcardImport:ViewPagerActivity.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:ViewPagerFragment.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:ViewPagerFragment.kt$import org.fossify.gallery.helpers.*</ID>
+    <ID>WildcardImport:WidgetConfigureActivity.kt$import org.fossify.commons.extensions.*</ID>
+    <ID>WildcardImport:WidgetConfigureActivity.kt$import org.fossify.gallery.extensions.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
