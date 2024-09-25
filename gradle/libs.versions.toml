@@ -3,6 +3,8 @@
 kotlin = "1.9.25"
 #KSP
 ksp = "1.9.25-1.0.20"
+#Detekt
+detekt = "1.23.3"
 #AndroidX
 androidx-swiperefreshlayout = "1.1.0"
 androidx-constraintlayout = "2.1.4"
@@ -78,3 +80,4 @@ room = [
 android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }

@@ -1,0 +1,11 @@
+name: PR
+
+on:
+    pull_request:
+        branches: [ $default-branch ]
+
+jobs:
+    call-pr-workflow:
+        uses: FossifyOrg/.github/.github/workflows/pr.yml@main
+        with:
+            test_task: ":app:testFossDebugUnitTest"
