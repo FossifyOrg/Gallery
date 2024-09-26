@@ -558,7 +558,6 @@ fun Context.loadImageBase(
 
     // animation is only supported without rounded corners and the file must be a GIF or WEBP.
     // Glide doesn't support animated AVIF: https://bumptech.github.io/glide/int/avif.html
-    // TODO: animate JXL
     if (animate && roundCorners == ROUNDED_CORNERS_NONE && (path.isGif() || path.isWebP())) {
         // this is required to make glide cache aware of changes
         options.decode(Drawable::class.java)
@@ -629,8 +628,11 @@ fun Context.loadSVG(
         .transition(getOptionalCrossFadeTransition(crossFadeDuration))
 
     if (roundCorners != ROUNDED_CORNERS_NONE) {
-        val cornerSize =
-            if (roundCorners == ROUNDED_CORNERS_SMALL) org.fossify.commons.R.dimen.rounded_corner_radius_small else org.fossify.commons.R.dimen.rounded_corner_radius_big
+        val cornerSize = when (roundCorners) {
+            ROUNDED_CORNERS_SMALL -> org.fossify.commons.R.dimen.rounded_corner_radius_small
+            else -> org.fossify.commons.R.dimen.rounded_corner_radius_big
+        }
+
         val cornerRadius = resources.getDimension(cornerSize).toInt()
         builder = builder.transform(CenterCrop(), RoundedCorners(cornerRadius))
     }
