@@ -2,7 +2,7 @@ name: Testing build (on PR)
 
 on:
     pull_request:
-        branches: [ $default-branch ]
+        branches: [ master ]
         types: [ labeled, opened, synchronize, reopened ]
 
 jobs:
