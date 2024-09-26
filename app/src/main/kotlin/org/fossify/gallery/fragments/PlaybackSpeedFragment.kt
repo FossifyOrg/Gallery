@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import org.fossify.commons.extensions.*
 import org.fossify.commons.views.MySeekBar
@@ -49,6 +51,7 @@ class PlaybackSpeedFragment : BottomSheetDialogFragment() {
             initSeekbar(playbackSpeedSeekbar, playbackSpeedLabel, config)
         }
 
+        (dialog as? BottomSheetDialog)?.behavior?.state = BottomSheetBehavior.STATE_EXPANDED
         return binding.root
     }
 
