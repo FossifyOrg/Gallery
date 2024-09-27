@@ -1,6 +1,5 @@
 package org.fossify.gallery.activities
 
-import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
@@ -8,7 +7,6 @@ import android.graphics.Bitmap.CompressFormat
 import android.graphics.Color
 import android.graphics.Point
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
@@ -32,7 +30,6 @@ import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.REAL_FILE_PATH
 import org.fossify.commons.helpers.ensureBackgroundThread
-import org.fossify.commons.helpers.isNougatPlus
 import org.fossify.commons.models.FileDirItem
 import org.fossify.gallery.BuildConfig
 import org.fossify.gallery.R
@@ -312,7 +309,6 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
     private fun saveImage() {
         setOldExif()
 
@@ -355,14 +351,11 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
     private fun setOldExif() {
         var inputStream: InputStream? = null
         try {
-            if (isNougatPlus()) {
-                inputStream = contentResolver.openInputStream(uri!!)
-                oldExif = ExifInterface(inputStream!!)
-            }
+            inputStream = contentResolver.openInputStream(uri!!)
+            oldExif = ExifInterface(inputStream!!)
         } catch (e: Exception) {
         } finally {
             inputStream?.close()
@@ -904,7 +897,6 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
     private fun saveBitmap(file: File, bitmap: Bitmap, out: OutputStream, showSavingToast: Boolean) {
         if (showSavingToast) {
             toast(org.fossify.commons.R.string.saving)
@@ -918,10 +910,8 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
         }
 
         try {
-            if (isNougatPlus()) {
-                val newExif = ExifInterface(file.absolutePath)
-                oldExif?.copyNonDimensionAttributesTo(newExif)
-            }
+            val newExif = ExifInterface(file.absolutePath)
+            oldExif?.copyNonDimensionAttributesTo(newExif)
         } catch (e: Exception) {
         }
 

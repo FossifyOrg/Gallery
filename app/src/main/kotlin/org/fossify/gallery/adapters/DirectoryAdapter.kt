@@ -5,7 +5,6 @@ import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Icon
-import android.os.Build
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MotionEvent
@@ -13,7 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
-import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -23,9 +21,43 @@ import com.google.gson.Gson
 import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
 import org.fossify.commons.activities.BaseSimpleActivity
 import org.fossify.commons.adapters.MyRecyclerViewAdapter
-import org.fossify.commons.dialogs.*
-import org.fossify.commons.extensions.*
-import org.fossify.commons.helpers.*
+import org.fossify.commons.dialogs.ConfirmationDialog
+import org.fossify.commons.dialogs.FolderLockingNoticeDialog
+import org.fossify.commons.dialogs.PropertiesDialog
+import org.fossify.commons.dialogs.RenameItemDialog
+import org.fossify.commons.dialogs.RenameItemsDialog
+import org.fossify.commons.dialogs.SecurityDialog
+import org.fossify.commons.extensions.applyColorFilter
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.containsNoMedia
+import org.fossify.commons.extensions.convertToBitmap
+import org.fossify.commons.extensions.doesThisOrParentHaveNoMedia
+import org.fossify.commons.extensions.getContrastColor
+import org.fossify.commons.extensions.getFilenameFromPath
+import org.fossify.commons.extensions.getProperBackgroundColor
+import org.fossify.commons.extensions.getTimeFormat
+import org.fossify.commons.extensions.handleDeletePasswordProtection
+import org.fossify.commons.extensions.handleLockedFolderOpening
+import org.fossify.commons.extensions.isAStorageRootFolder
+import org.fossify.commons.extensions.isExternalStorageManager
+import org.fossify.commons.extensions.isGif
+import org.fossify.commons.extensions.isImageFast
+import org.fossify.commons.extensions.isMediaFile
+import org.fossify.commons.extensions.isRawFast
+import org.fossify.commons.extensions.isSvg
+import org.fossify.commons.extensions.isVideoFast
+import org.fossify.commons.extensions.isVisible
+import org.fossify.commons.extensions.rescanPaths
+import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.toast
+import org.fossify.commons.helpers.FAVORITES
+import org.fossify.commons.helpers.SHOW_ALL_TABS
+import org.fossify.commons.helpers.SORT_BY_CUSTOM
+import org.fossify.commons.helpers.VIEW_TYPE_LIST
+import org.fossify.commons.helpers.ensureBackgroundThread
+import org.fossify.commons.helpers.isRPlus
 import org.fossify.commons.interfaces.ItemMoveCallback
 import org.fossify.commons.interfaces.ItemTouchHelperContract
 import org.fossify.commons.interfaces.StartReorderDragListener
@@ -39,8 +71,38 @@ import org.fossify.gallery.databinding.DirectoryItemListBinding
 import org.fossify.gallery.dialogs.ConfirmDeleteFolderDialog
 import org.fossify.gallery.dialogs.ExcludeFolderDialog
 import org.fossify.gallery.dialogs.PickMediumDialog
-import org.fossify.gallery.extensions.*
-import org.fossify.gallery.helpers.*
+import org.fossify.gallery.extensions.addNoMedia
+import org.fossify.gallery.extensions.checkAppendingHidden
+import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.directoryDB
+import org.fossify.gallery.extensions.emptyAndDisableTheRecycleBin
+import org.fossify.gallery.extensions.emptyTheRecycleBin
+import org.fossify.gallery.extensions.favoritesDB
+import org.fossify.gallery.extensions.fixDateTaken
+import org.fossify.gallery.extensions.getShortcutImage
+import org.fossify.gallery.extensions.isThisOrParentFolderHidden
+import org.fossify.gallery.extensions.loadImage
+import org.fossify.gallery.extensions.mediaDB
+import org.fossify.gallery.extensions.removeNoMedia
+import org.fossify.gallery.extensions.showRecycleBinEmptyingDialog
+import org.fossify.gallery.extensions.tryCopyMoveFilesTo
+import org.fossify.gallery.helpers.DIRECTORY
+import org.fossify.gallery.helpers.FOLDER_MEDIA_CNT_BRACKETS
+import org.fossify.gallery.helpers.FOLDER_MEDIA_CNT_LINE
+import org.fossify.gallery.helpers.FOLDER_STYLE_ROUNDED_CORNERS
+import org.fossify.gallery.helpers.FOLDER_STYLE_SQUARE
+import org.fossify.gallery.helpers.LOCATION_INTERNAL
+import org.fossify.gallery.helpers.LOCATION_SD
+import org.fossify.gallery.helpers.PATH
+import org.fossify.gallery.helpers.RECYCLE_BIN
+import org.fossify.gallery.helpers.ROUNDED_CORNERS_BIG
+import org.fossify.gallery.helpers.ROUNDED_CORNERS_NONE
+import org.fossify.gallery.helpers.ROUNDED_CORNERS_SMALL
+import org.fossify.gallery.helpers.TYPE_GIFS
+import org.fossify.gallery.helpers.TYPE_IMAGES
+import org.fossify.gallery.helpers.TYPE_RAWS
+import org.fossify.gallery.helpers.TYPE_SVGS
+import org.fossify.gallery.helpers.TYPE_VIDEOS
 import org.fossify.gallery.interfaces.DirectoryOperationsListener
 import org.fossify.gallery.models.AlbumCover
 import org.fossify.gallery.models.Directory
@@ -48,10 +110,16 @@ import java.io.File
 import java.util.Collections
 
 class DirectoryAdapter(
-    activity: BaseSimpleActivity, var dirs: ArrayList<Directory>, val listener: DirectoryOperationsListener?, recyclerView: MyRecyclerView,
-    val isPickIntent: Boolean, val swipeRefreshLayout: SwipeRefreshLayout? = null, itemClick: (Any) -> Unit
+    activity: BaseSimpleActivity,
+    var dirs: ArrayList<Directory>,
+    val listener: DirectoryOperationsListener?,
+    recyclerView: MyRecyclerView,
+    val isPickIntent: Boolean,
+    val swipeRefreshLayout: SwipeRefreshLayout? = null,
+    itemClick: (Any) -> Unit
 ) :
-    MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
+    MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract,
+    RecyclerViewFastScroller.OnPopupTextUpdate {
 
     private val config = activity.config
     private val isListViewType = config.viewTypeFolders == VIEW_TYPE_LIST
@@ -119,7 +187,7 @@ class DirectoryAdapter(
             findItem(R.id.cab_empty_recycle_bin).isVisible = isOneItemSelected && selectedPaths.first() == RECYCLE_BIN
             findItem(R.id.cab_empty_disable_recycle_bin).isVisible = isOneItemSelected && selectedPaths.first() == RECYCLE_BIN
 
-            findItem(R.id.cab_create_shortcut).isVisible = isOreoPlus() && isOneItemSelected
+            findItem(R.id.cab_create_shortcut).isVisible = isOneItemSelected
 
             checkHideBtnVisibility(this, selectedPaths)
             checkPinBtnVisibility(this, selectedPaths)
@@ -549,10 +617,6 @@ class DirectoryAdapter(
     }
 
     private fun tryCreateShortcut() {
-        if (!isOreoPlus()) {
-            return
-        }
-
         activity.handleLockedFolderOpening(getFirstSelectedItemPath() ?: "") { success ->
             if (success) {
                 createShortcut()
@@ -560,7 +624,6 @@ class DirectoryAdapter(
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     private fun createShortcut() {
         val manager = activity.getSystemService(ShortcutManager::class.java)
         if (manager.isRequestPinShortcutSupported) {

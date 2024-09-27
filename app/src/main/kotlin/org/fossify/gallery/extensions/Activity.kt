@@ -1,6 +1,5 @@
 package org.fossify.gallery.extensions
 
-import android.annotation.TargetApi
 import android.app.Activity
 import android.content.ContentProviderOperation
 import android.content.ContentValues
@@ -12,7 +11,6 @@ import android.graphics.Point
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
-import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import android.provider.MediaStore.Files
@@ -689,7 +687,6 @@ fun BaseSimpleActivity.saveRotatedImageToFile(oldPath: String, newPath: String, 
     }
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 fun Activity.tryRotateByExif(path: String, degrees: Int, showToasts: Boolean, callback: () -> Unit): Boolean {
     return try {
         val file = File(path)
@@ -830,10 +827,8 @@ fun BaseSimpleActivity.launchResizeImageDialog(path: String, callback: (() -> Un
 
 fun BaseSimpleActivity.resizeImage(oldPath: String, newPath: String, size: Point, callback: (success: Boolean) -> Unit) {
     var oldExif: ExifInterface? = null
-    if (isNougatPlus()) {
-        val inputStream = contentResolver.openInputStream(Uri.fromFile(File(oldPath)))
-        oldExif = ExifInterface(inputStream!!)
-    }
+    val inputStream = contentResolver.openInputStream(Uri.fromFile(File(oldPath)))
+    oldExif = ExifInterface(inputStream!!)
 
     val newBitmap = Glide.with(applicationContext).asBitmap().load(oldPath).submit(size.x, size.y).get()
 
@@ -845,10 +840,8 @@ fun BaseSimpleActivity.resizeImage(oldPath: String, newPath: String, size: Point
                 try {
                     newBitmap.compress(newFile.absolutePath.getCompressionFormat(), 90, out)
 
-                    if (isNougatPlus()) {
-                        val newExif = ExifInterface(newFile.absolutePath)
-                        oldExif?.copyNonDimensionAttributesTo(newExif)
-                    }
+                    val newExif = ExifInterface(newFile.absolutePath)
+                    oldExif.copyNonDimensionAttributesTo(newExif)
                 } catch (ignored: Exception) {
                 }
 
@@ -907,10 +900,9 @@ fun Activity.getShortcutImage(tmb: String, drawable: Drawable, callback: () -> U
     }
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 fun Activity.showFileOnMap(path: String) {
     val exif = try {
-        if (path.startsWith("content://") && isNougatPlus()) {
+        if (path.startsWith("content://")) {
             ExifInterface(contentResolver.openInputStream(Uri.parse(path))!!)
         } else {
             ExifInterface(path)

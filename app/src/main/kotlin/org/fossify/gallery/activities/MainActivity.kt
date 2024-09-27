@@ -16,8 +16,62 @@ import androidx.recyclerview.widget.RecyclerView
 import org.fossify.commons.dialogs.CreateNewFolderDialog
 import org.fossify.commons.dialogs.FilePickerDialog
 import org.fossify.commons.dialogs.RadioGroupDialog
-import org.fossify.commons.extensions.*
-import org.fossify.commons.helpers.*
+import org.fossify.commons.extensions.appLaunched
+import org.fossify.commons.extensions.appLockManager
+import org.fossify.commons.extensions.areSystemAnimationsEnabled
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.checkWhatsNew
+import org.fossify.commons.extensions.deleteFiles
+import org.fossify.commons.extensions.getDoesFilePathExist
+import org.fossify.commons.extensions.getFileCount
+import org.fossify.commons.extensions.getFilePublicUri
+import org.fossify.commons.extensions.getFilenameFromPath
+import org.fossify.commons.extensions.getLatestMediaByDateId
+import org.fossify.commons.extensions.getLatestMediaId
+import org.fossify.commons.extensions.getMimeType
+import org.fossify.commons.extensions.getProperBackgroundColor
+import org.fossify.commons.extensions.getProperPrimaryColor
+import org.fossify.commons.extensions.getProperSize
+import org.fossify.commons.extensions.getProperTextColor
+import org.fossify.commons.extensions.getStorageDirectories
+import org.fossify.commons.extensions.getTimeFormat
+import org.fossify.commons.extensions.handleHiddenFolderPasswordProtection
+import org.fossify.commons.extensions.handleLockedFolderOpening
+import org.fossify.commons.extensions.hasAllPermissions
+import org.fossify.commons.extensions.hasOTGConnected
+import org.fossify.commons.extensions.hasPermission
+import org.fossify.commons.extensions.hideKeyboard
+import org.fossify.commons.extensions.internalStoragePath
+import org.fossify.commons.extensions.isExternalStorageManager
+import org.fossify.commons.extensions.isGif
+import org.fossify.commons.extensions.isGone
+import org.fossify.commons.extensions.isImageFast
+import org.fossify.commons.extensions.isMediaFile
+import org.fossify.commons.extensions.isPathOnOTG
+import org.fossify.commons.extensions.isRawFast
+import org.fossify.commons.extensions.isSvg
+import org.fossify.commons.extensions.isVideoFast
+import org.fossify.commons.extensions.launchMoreAppsFromUsIntent
+import org.fossify.commons.extensions.recycleBinPath
+import org.fossify.commons.extensions.sdCardPath
+import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.toFileDirItem
+import org.fossify.commons.extensions.toast
+import org.fossify.commons.extensions.underlineText
+import org.fossify.commons.extensions.viewBinding
+import org.fossify.commons.helpers.DAY_SECONDS
+import org.fossify.commons.helpers.FAVORITES
+import org.fossify.commons.helpers.PERMISSION_READ_STORAGE
+import org.fossify.commons.helpers.SORT_BY_DATE_MODIFIED
+import org.fossify.commons.helpers.SORT_BY_DATE_TAKEN
+import org.fossify.commons.helpers.SORT_BY_SIZE
+import org.fossify.commons.helpers.SORT_USE_NUMERIC_VALUE
+import org.fossify.commons.helpers.VIEW_TYPE_GRID
+import org.fossify.commons.helpers.VIEW_TYPE_LIST
+import org.fossify.commons.helpers.ensureBackgroundThread
+import org.fossify.commons.helpers.isRPlus
 import org.fossify.commons.models.FileDirItem
 import org.fossify.commons.models.RadioItem
 import org.fossify.commons.models.Release
@@ -32,13 +86,70 @@ import org.fossify.gallery.dialogs.ChangeSortingDialog
 import org.fossify.gallery.dialogs.ChangeViewTypeDialog
 import org.fossify.gallery.dialogs.FilterMediaDialog
 import org.fossify.gallery.dialogs.GrantAllFilesDialog
-import org.fossify.gallery.extensions.*
-import org.fossify.gallery.helpers.*
+import org.fossify.gallery.extensions.addTempFolderIfNeeded
+import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.createDirectoryFromMedia
+import org.fossify.gallery.extensions.directoryDB
+import org.fossify.gallery.extensions.getCachedDirectories
+import org.fossify.gallery.extensions.getCachedMedia
+import org.fossify.gallery.extensions.getDirectorySortingValue
+import org.fossify.gallery.extensions.getDirsToShow
+import org.fossify.gallery.extensions.getDistinctPath
+import org.fossify.gallery.extensions.getFavoritePaths
+import org.fossify.gallery.extensions.getNoMediaFoldersSync
+import org.fossify.gallery.extensions.getOTGFolderChildrenNames
+import org.fossify.gallery.extensions.getSortedDirectories
+import org.fossify.gallery.extensions.handleExcludedFolderPasswordProtection
+import org.fossify.gallery.extensions.handleMediaManagementPrompt
+import org.fossify.gallery.extensions.isDownloadsFolder
+import org.fossify.gallery.extensions.launchAbout
+import org.fossify.gallery.extensions.launchCamera
+import org.fossify.gallery.extensions.launchSettings
+import org.fossify.gallery.extensions.mediaDB
+import org.fossify.gallery.extensions.movePathsInRecycleBin
+import org.fossify.gallery.extensions.movePinnedDirectoriesToFront
+import org.fossify.gallery.extensions.openRecycleBin
+import org.fossify.gallery.extensions.removeInvalidDBDirectories
+import org.fossify.gallery.extensions.storeDirectoryItems
+import org.fossify.gallery.extensions.tryDeleteFileDirItem
+import org.fossify.gallery.extensions.updateDBDirectory
+import org.fossify.gallery.extensions.updateWidgets
+import org.fossify.gallery.helpers.DIRECTORY
+import org.fossify.gallery.helpers.GET_ANY_INTENT
+import org.fossify.gallery.helpers.GET_IMAGE_INTENT
+import org.fossify.gallery.helpers.GET_VIDEO_INTENT
+import org.fossify.gallery.helpers.GROUP_BY_DATE_TAKEN_DAILY
+import org.fossify.gallery.helpers.GROUP_BY_DATE_TAKEN_MONTHLY
+import org.fossify.gallery.helpers.GROUP_BY_LAST_MODIFIED_DAILY
+import org.fossify.gallery.helpers.GROUP_BY_LAST_MODIFIED_MONTHLY
+import org.fossify.gallery.helpers.GROUP_DESCENDING
+import org.fossify.gallery.helpers.LOCATION_INTERNAL
+import org.fossify.gallery.helpers.MAX_COLUMN_COUNT
+import org.fossify.gallery.helpers.MONTH_MILLISECONDS
+import org.fossify.gallery.helpers.MediaFetcher
+import org.fossify.gallery.helpers.PICKED_PATHS
+import org.fossify.gallery.helpers.RECYCLE_BIN
+import org.fossify.gallery.helpers.SET_WALLPAPER_INTENT
+import org.fossify.gallery.helpers.SHOW_ALL
+import org.fossify.gallery.helpers.SHOW_TEMP_HIDDEN_DURATION
+import org.fossify.gallery.helpers.SKIP_AUTHENTICATION
+import org.fossify.gallery.helpers.TYPE_GIFS
+import org.fossify.gallery.helpers.TYPE_IMAGES
+import org.fossify.gallery.helpers.TYPE_RAWS
+import org.fossify.gallery.helpers.TYPE_SVGS
+import org.fossify.gallery.helpers.TYPE_VIDEOS
+import org.fossify.gallery.helpers.getDefaultFileFilter
+import org.fossify.gallery.helpers.getPermissionToRequest
+import org.fossify.gallery.helpers.getPermissionsToRequest
 import org.fossify.gallery.interfaces.DirectoryOperationsListener
 import org.fossify.gallery.jobs.NewPhotoFetcher
 import org.fossify.gallery.models.Directory
 import org.fossify.gallery.models.Medium
-import java.io.*
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileNotFoundException
+import java.io.InputStream
+import java.io.OutputStream
 
 class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     companion object {
@@ -407,11 +518,9 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     }
 
     private fun startNewPhotoFetcher() {
-        if (isNougatPlus()) {
-            val photoFetcher = NewPhotoFetcher()
-            if (!photoFetcher.isScheduled(applicationContext)) {
-                photoFetcher.scheduleJob(applicationContext)
-            }
+        val photoFetcher = NewPhotoFetcher()
+        if (!photoFetcher.isScheduled(applicationContext)) {
+            photoFetcher.scheduleJob(applicationContext)
         }
     }
 

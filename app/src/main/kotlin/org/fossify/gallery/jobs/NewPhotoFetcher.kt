@@ -1,6 +1,5 @@
 package org.fossify.gallery.jobs
 
-import android.annotation.TargetApi
 import android.app.job.JobInfo
 import android.app.job.JobInfo.TriggerContentUri
 import android.app.job.JobParameters
@@ -10,7 +9,6 @@ import android.content.ComponentName
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
-import android.os.Build
 import android.os.Handler
 import android.provider.MediaStore
 import android.provider.MediaStore.Images
@@ -22,7 +20,6 @@ import org.fossify.gallery.extensions.addPathToDB
 import org.fossify.gallery.extensions.updateDirectoryPath
 
 // based on https://developer.android.com/reference/android/app/job/JobInfo.Builder.html#addTriggerContentUri(android.app.job.JobInfo.TriggerContentUri)
-@TargetApi(Build.VERSION_CODES.N)
 class NewPhotoFetcher : JobService() {
     companion object {
         const val PHOTO_VIDEO_CONTENT_JOB = 1

@@ -13,7 +13,6 @@ import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.ensureBackgroundThread
-import org.fossify.commons.helpers.isNougatPlus
 import org.fossify.commons.models.RadioItem
 import org.fossify.gallery.R
 import org.fossify.gallery.databinding.ActivitySetWallpaperBinding
@@ -127,18 +126,14 @@ class SetWallpaperActivity : SimpleActivity(), CropImageView.OnCropImageComplete
     }
 
     private fun confirmWallpaper() {
-        if (isNougatPlus()) {
-            val items = arrayListOf(
-                RadioItem(WallpaperManager.FLAG_SYSTEM, getString(R.string.home_screen)),
-                RadioItem(WallpaperManager.FLAG_LOCK, getString(R.string.lock_screen)),
-                RadioItem(WallpaperManager.FLAG_SYSTEM or WallpaperManager.FLAG_LOCK, getString(R.string.home_and_lock_screen))
-            )
+        val items = arrayListOf(
+            RadioItem(WallpaperManager.FLAG_SYSTEM, getString(R.string.home_screen)),
+            RadioItem(WallpaperManager.FLAG_LOCK, getString(R.string.lock_screen)),
+            RadioItem(WallpaperManager.FLAG_SYSTEM or WallpaperManager.FLAG_LOCK, getString(R.string.home_and_lock_screen))
+        )
 
-            RadioGroupDialog(this, items) {
-                wallpaperFlag = it as Int
-                binding.cropImageView.croppedImageAsync()
-            }
-        } else {
+        RadioGroupDialog(this, items) {
+            wallpaperFlag = it as Int
             binding.cropImageView.croppedImageAsync()
         }
     }
@@ -156,11 +151,7 @@ class SetWallpaperActivity : SimpleActivity(), CropImageView.OnCropImageComplete
                 val wantedWidth = (bitmap.width * ratio).toInt()
                 try {
                     val scaledBitmap = Bitmap.createScaledBitmap(bitmap, wantedWidth, wantedHeight, true)
-                    if (isNougatPlus()) {
-                        wallpaperManager.setBitmap(scaledBitmap, null, true, wallpaperFlag)
-                    } else {
-                        wallpaperManager.setBitmap(scaledBitmap)
-                    }
+                    wallpaperManager.setBitmap(scaledBitmap, null, true, wallpaperFlag)
                     setResult(Activity.RESULT_OK)
                 } catch (e: OutOfMemoryError) {
                     toast(org.fossify.commons.R.string.out_of_memory_error)
