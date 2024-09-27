@@ -256,4 +256,7 @@
     <string name="full_storage_permission_required">Галерея Fossify потребує повного доступу, щоб показувати всі ваші фотографії та відео. Перейдіть до Налаштування &gt; Дозволи &gt; Фото та відео &gt; Дозволити все.</string>
     <string name="playback_speed">Швидкість відтворення</string>
     <string name="failed_to_load_media">Не вдалося завантажити медіа.</string>
+    <string name="media_exceeds_device_capabilities">Файл перевищує місткість пристрою.</string>
+    <string name="unsupported_format">Непідтримуваний формат.</string>
+    <string name="file_is_malformed_or_corrupted">Файл неправильно сформовано або пошкоджено.</string>
 </resources>
