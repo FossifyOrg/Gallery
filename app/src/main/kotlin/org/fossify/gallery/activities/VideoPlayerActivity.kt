@@ -311,7 +311,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             override fun onPlayerErrorChanged(error: PlaybackException?) {
                 binding.errorMessageHolder.errorMessage.apply {
                     if (error != null) {
-                        text = error.localizedMessage ?: getString(R.string.failed_to_load_media)
+                        text = error.getFriendlyMessage(context)
                         setTextColor(if (context.config.blackBackground) Color.WHITE else context.getProperTextColor())
                         fadeIn()
                     } else {

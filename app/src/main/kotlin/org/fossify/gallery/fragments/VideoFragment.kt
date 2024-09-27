@@ -452,7 +452,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
                     if (error != null) {
                         binding.videoPreview.beGone()
                         binding.videoPlayOutline.beGone()
-                        text = error.localizedMessage ?: getString(R.string.failed_to_load_media)
+                        text = error.getFriendlyMessage(context)
                         setTextColor(if (context.config.blackBackground) Color.WHITE else context.getProperTextColor())
                         fadeIn()
                     } else {
