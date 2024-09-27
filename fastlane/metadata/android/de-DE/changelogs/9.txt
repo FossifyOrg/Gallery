@@ -1,0 +1,10 @@
+* Android-Targeting auf Version 14 aktualisiert
+* Option zur Geschwindigkeitssteuerung der Videowiedergabet
+* Option zum Stummschalten von Videos
+* Checkboxen durch Schalter ersetzt
+* Fehleranzeige für fehlerhaftes Laden von Medient
+* Verbesserte Scrollleistung und Bedienoberfläche
+* Verbesserte Logik der App-Sperre und Bedienoberfläche
+* Initiale Unterstützung für das JPEG-XL-Format (erhöhte App-Größe)
+* Weitere kleinere Fehlerkorrekturen und Verbesserungen
+* Weitere Übersetzungen hinzugefügt
