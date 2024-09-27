@@ -256,4 +256,7 @@
     <string name="full_storage_permission_required">Fossify Gallery potrzebuje pełnego dostępu, aby wyświetlać wszystkie Twoje zdjęcia i wideo. Przejdź do Ustawień &gt; Uprawnienia &gt; Zdjęcia i filmy &gt; Zezwalaj.</string>
     <string name="playback_speed">Prędkość odtwarzania</string>
     <string name="failed_to_load_media">Nie udało się załadować multimediów.</string>
+    <string name="media_exceeds_device_capabilities">Plik przekracza możliwości urządzenia.</string>
+    <string name="unsupported_format">Nieobsługiwany format.</string>
+    <string name="file_is_malformed_or_corrupted">Plik jest wadliwy lub uszkodzony.</string>
 </resources>
