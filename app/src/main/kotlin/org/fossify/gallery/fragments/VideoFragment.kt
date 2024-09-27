@@ -450,6 +450,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             override fun onPlayerErrorChanged(error: PlaybackException?) {
                 binding.errorMessageHolder.errorMessage.apply {
                     if (error != null) {
+                        binding.videoPreview.beGone()
                         binding.videoPlayOutline.beGone()
                         text = error.localizedMessage ?: getString(R.string.failed_to_load_media)
                         setTextColor(if (context.config.blackBackground) Color.WHITE else context.getProperTextColor())
