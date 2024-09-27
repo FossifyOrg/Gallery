@@ -61,7 +61,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private var mVideoSize = Point(0, 0)
     private var mTimerHandler = Handler()
     private var mPlayWhenReadyHandler = Handler()
-    private var mVolumeController: VolumeController? = null
 
     private var mIgnoreCloseDown = false
 
@@ -119,7 +118,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
             binding.bottomVideoTimeHolder.videoSeekbar.progress = 0
             mTimerHandler.removeCallbacksAndMessages(null)
             mPlayWhenReadyHandler.removeCallbacksAndMessages(null)
-            mVolumeController?.destroy()
         }
     }
 
@@ -189,7 +187,11 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         binding.bottomVideoTimeHolder.videoDuration.setOnClickListener { doSkip(true) }
         binding.bottomVideoTimeHolder.videoTogglePlayPause.setOnClickListener { togglePlayPause() }
         binding.bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
-        binding.bottomVideoTimeHolder.videoToggleMute.setOnClickListener { mVolumeController?.toggleMute() }
+        binding.bottomVideoTimeHolder.videoToggleMute.setOnClickListener {
+            config.muteVideos = !config.muteVideos
+            updatePlayerMuteState()
+        }
+
         binding.videoSurfaceFrame.setOnClickListener { toggleFullscreen() }
         binding.videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
@@ -239,12 +241,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         }
 
         mDragThreshold = DRAG_THRESHOLD * resources.displayMetrics.density
-        mVolumeController = VolumeController(this) { isMuted ->
-            val icon = if (isMuted) R.drawable.ic_vector_speaker_off else R.drawable.ic_vector_speaker_on
-            binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
-                AppCompatResources.getDrawable(this, icon)
-            )
-        }
     }
 
     private fun initExoPlayer() {
@@ -285,6 +281,8 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
                 prepare()
                 initListeners()
             }
+
+        updatePlayerMuteState()
     }
 
     private fun ExoPlayer.initListeners() {
@@ -395,6 +393,21 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         } else {
             pauseVideo()
         }
+    }
+
+    private fun updatePlayerMuteState() {
+        val isMuted = config.muteVideos
+        val drawableId = if (isMuted) {
+            mExoPlayer?.mute()
+            R.drawable.ic_vector_speaker_off
+        } else {
+            mExoPlayer?.unmute()
+            R.drawable.ic_vector_speaker_on
+        }
+
+        binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
+            AppCompatResources.getDrawable(this, drawableId)
+        )
     }
 
     private fun setPosition(seconds: Int) {

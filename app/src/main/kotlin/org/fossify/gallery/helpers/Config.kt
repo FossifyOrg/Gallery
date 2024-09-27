@@ -205,6 +205,10 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(LOOP_VIDEOS, false)
         set(loop) = prefs.edit().putBoolean(LOOP_VIDEOS, loop).apply()
 
+    var muteVideos: Boolean
+        get() = prefs.getBoolean(MUTE_VIDEOS, false)
+        set(muteVideos) = prefs.edit().putBoolean(MUTE_VIDEOS, muteVideos).apply()
+
     var openVideosOnSeparateScreen: Boolean
         get() = prefs.getBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, false)
         set(openVideosOnSeparateScreen) = prefs.edit().putBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, openVideosOnSeparateScreen).apply()

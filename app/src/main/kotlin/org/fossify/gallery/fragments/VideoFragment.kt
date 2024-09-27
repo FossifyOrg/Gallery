@@ -34,9 +34,7 @@ import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.gallery.R
 import org.fossify.gallery.activities.VideoActivity
 import org.fossify.gallery.databinding.PagerVideoItemBinding
-import org.fossify.gallery.extensions.config
-import org.fossify.gallery.extensions.hasNavBar
-import org.fossify.gallery.extensions.parseFileChannel
+import org.fossify.gallery.extensions.*
 import org.fossify.gallery.helpers.*
 import org.fossify.gallery.interfaces.PlaybackSpeedListener
 import org.fossify.gallery.models.Medium
@@ -87,8 +85,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private lateinit var mPlayPauseButton: ImageView
     private lateinit var mSeekBar: SeekBar
 
-    private var mVolumeController: VolumeController? = null
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val context = requireContext()
         val activity = requireActivity()
@@ -103,7 +99,11 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
             videoHolder.setOnClickListener { toggleFullscreen() }
             videoPreview.setOnClickListener { toggleFullscreen() }
             bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
-            bottomVideoTimeHolder.videoToggleMute.setOnClickListener { mVolumeController?.toggleMute() }
+            bottomVideoTimeHolder.videoToggleMute.setOnClickListener {
+                mConfig.muteVideos = !mConfig.muteVideos
+                updatePlayerMuteState()
+            }
+
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
             videoPlayOutline.setOnClickListener {
@@ -244,13 +244,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         setupVideoDuration()
         if (mStoredRememberLastVideoPosition) {
             restoreLastVideoSavedPosition()
-        }
-
-        mVolumeController = VolumeController(context) { isMuted ->
-            val icon = if (isMuted) R.drawable.ic_vector_speaker_off else R.drawable.ic_vector_speaker_on
-            binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
-                AppCompatResources.getDrawable(context, icon)
-            )
         }
 
         return mView
@@ -423,6 +416,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
 
                 initListeners()
             }
+
+        updatePlayerMuteState()
     }
 
     private fun ExoPlayer.initListeners() {
@@ -692,6 +687,22 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
         }
     }
 
+    private fun updatePlayerMuteState() {
+        val context = context ?: return
+        val isMuted = mConfig.muteVideos
+        val drawableId = if (isMuted) {
+            mExoPlayer?.mute()
+            R.drawable.ic_vector_speaker_off
+        } else {
+            mExoPlayer?.unmute()
+            R.drawable.ic_vector_speaker_on
+        }
+
+        binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
+            AppCompatResources.getDrawable(context, drawableId)
+        )
+    }
+
     fun playVideo() {
         if (mExoPlayer == null) {
             initExoPlayer()
@@ -822,7 +833,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener, S
     private fun cleanup() {
         pauseVideo()
         releaseExoPlayer()
-        mVolumeController?.destroy()
 
         if (mWasFragmentInit) {
             mCurrTimeView.text = 0.getFormattedDuration()
