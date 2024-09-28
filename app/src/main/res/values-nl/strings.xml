@@ -254,4 +254,7 @@
     <string name="full_storage_permission_required">Fossify Galerij heeft volledige toegang nodig al je foto\'s en video\'s te kunnen tonen. Ga naar de app-instellingen &gt; Rechten &gt; Foto\'s en video\'s &gt; Alles toestaan.</string>
     <string name="playback_speed">Afspeelsnelheid</string>
     <string name="failed_to_load_media">Fout bij het laden van het bestand.</string>
+    <string name="file_is_malformed_or_corrupted">Bestand is onvolledig of beschadigd.</string>
+    <string name="unsupported_format">Niet-ondersteund formaat.</string>
+    <string name="media_exceeds_device_capabilities">Het apparaat voldoet niet aan de eisen voor dit bestand.</string>
 </resources>
