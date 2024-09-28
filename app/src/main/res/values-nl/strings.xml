@@ -256,5 +256,5 @@
     <string name="failed_to_load_media">Fout bij het laden van het bestand.</string>
     <string name="file_is_malformed_or_corrupted">Bestand is onvolledig of beschadigd.</string>
     <string name="unsupported_format">Niet-ondersteund formaat.</string>
-    <string name="media_exceeds_device_capabilities">Het apparaat voldoet niet aan de eisen voor dit bestand.</string>
+    <string name="media_exceeds_device_capabilities">Dit apparaat kan deze video niet afspelen.</string>
 </resources>
