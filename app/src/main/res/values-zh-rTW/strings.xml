@@ -253,4 +253,7 @@
     <string name="full_storage_permission_required">Fossify 圖庫需要完整存取權限才能顯示您所有的照片與影片。請到「設定」→「隱私權」→「應用程式權限」→「相片和影片」→「一律全部允許」。</string>
     <string name="playback_speed">播放速度</string>
     <string name="failed_to_load_media">載入媒體失敗。</string>
+    <string name="file_is_malformed_or_corrupted">檔案格式錯誤或損毀。</string>
+    <string name="media_exceeds_device_capabilities">媒體超出裝置的播放能力。</string>
+    <string name="unsupported_format">不支援的格式。</string>
 </resources>
