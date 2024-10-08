@@ -1,0 +1,10 @@
+* Muutsime põhiversiooniks Android 14
+* Lisasime võimaluse juhtida taasesituse kiirust
+* Lisasime võimaluse summutada videote heli
+* Asendasime märkeruudud lülititega
+* Lisasime veateate kui meedia laadimisel tekib probleeme
+* Parandasime kerimise jõudlust ja vastavat kasutajaliidest
+* Parandasime rakenduse lukustuse loogikat ja kasutajaliidest
+* Lisasime JPEG XL vormingu esialgse toe (rakendus läks sellega ka suuremaks)
+* Muud väiksemad veaparandused ja kohendused
+* Lisasime tõlkeid

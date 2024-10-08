@@ -254,4 +254,7 @@
     <string name="full_storage_permission_required">Fossify Galeri tüm fotoğraf ve videolarınızı görüntülemek için tam erişime ihtiyaç duyar. Ayarlar &gt; İzinler &gt; Fotoğraf ve videolar &gt; Tümüne izin ver bölümüne gidin.</string>
     <string name="playback_speed">Oynatma hızı</string>
     <string name="failed_to_load_media">Medya yüklenemedi.</string>
+    <string name="file_is_malformed_or_corrupted">Dosya hatalı biçimlendirilmiş veya bozuk.</string>
+    <string name="media_exceeds_device_capabilities">Medya aygıt kapasitesini aşıyor.</string>
+    <string name="unsupported_format">Desteklenmeyen biçim.</string>
 </resources>

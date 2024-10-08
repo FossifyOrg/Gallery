@@ -1,2 +1,2 @@
 * Corregidas las miniaturas negras de algunas imágenes.
-* Añadidas algunas traducciones.
+* Añadidas algunas traducciones

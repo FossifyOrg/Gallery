@@ -254,4 +254,7 @@
     <string name="full_storage_permission_required">A Fossify Galéria teljes hozzáférést igényel az összes fénykép és videó megjelenítéséhez. Válassza a Beállítások &gt; Engedélyek &gt; Fényképek és videók &gt; Mindent engedélyez.</string>
     <string name="playback_speed">Lejátszási sebesség</string>
     <string name="failed_to_load_media">A média betöltése sikertelen.</string>
+    <string name="media_exceeds_device_capabilities">A médiafájl meghaladja az eszköz képességeit.</string>
+    <string name="file_is_malformed_or_corrupted">Hibás vagy sérült fájl.</string>
+    <string name="unsupported_format">Nem támogatott formátum.</string>
 </resources>
