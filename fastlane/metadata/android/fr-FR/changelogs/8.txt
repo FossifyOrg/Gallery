@@ -1,0 +1,9 @@
+* Ajout de la prise en charge initiale du format JPEG XL
+* Mise à jour de la version Android cible à 14
+* Ajout d'une option pour contrôler la vitesse de lecture des vidéos
+* Ajout d'une option pour couper le son des vidéos
+* Remplacement des cases à cocher par des interrupteurs
+* Ajout d'un indicateur d'erreur pour les échecs de chargement des médias
+* Amélioration de la logique de verrouillage de l'application et de l'interface utilisateur
+* Autres corrections de bugs mineurs et améliorations
+* Ajout de nouvelles traductions

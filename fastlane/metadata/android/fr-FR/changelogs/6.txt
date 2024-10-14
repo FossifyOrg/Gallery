@@ -1,0 +1,6 @@
+* Correction d'un crash lors de la lecture de vidéos.
+* Correction du diaporama sur Android 14.
+* Ajout de la prise en charge d'AVIF.
+* Correction de la réinitialisation de la position après la rotation de l'appareil.
+* Correction du zoom sur les captures d'écran lorsque le double appui zoom est activé.
+* Ajout de quelques traductions
