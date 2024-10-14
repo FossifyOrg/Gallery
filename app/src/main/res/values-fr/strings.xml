@@ -252,4 +252,8 @@
     <string name="portraits">Portraits</string>
     <string name="by_extension">Extension</string>
     <string name="animation">Animation</string>
+    <string name="full_storage_permission_required">La Galerie Fossify a besoin d\'un accès complet pour afficher toutes vos photos et vidéos. Allez dans Paramètres &gt; Autorisations &gt; Photos et vidéos &gt; Autoriser tout.</string>
+    <string name="file_is_malformed_or_corrupted">Le fichier est altéré ou corrompu.</string>
+    <string name="media_exceeds_device_capabilities">Le support dépasse les capacités de l\'appareil.</string>
+    <string name="unsupported_format">Format non pris en charge.</string>
 </resources>
