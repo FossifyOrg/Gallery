@@ -256,4 +256,7 @@
     <string name="playback_speed">Скорость воспроизведения</string>
     <string name="failed_to_load_media">Невозможно загрузить медиафайлы.</string>
     <string name="full_storage_permission_required">Fossify Gallery необходим полный доступ для отображения всех ваших фотографий и видео. Откройте \"Настройки\" → \"Разрешения\" → \"Фото и видео\" → \"Разрешить все\".</string>
+    <string name="unsupported_format">Неподдерживаемый формат.</string>
+    <string name="file_is_malformed_or_corrupted">Файл имеет неправильный формат или повреждён.</string>
+    <string name="media_exceeds_device_capabilities">Медиафайл превосходит возможности устройства.</string>
 </resources>

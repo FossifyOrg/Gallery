@@ -252,4 +252,10 @@
     <string name="slide">Prijelaz</string>
     <string name="faq_1_text">Najprije moraš pronaći trenutačno zadanu galeriju u odjeljku aplikacija u postavkama tvog uređaja. Potraži gumb koji kaže nešto poput „Standardno otvori”, pritisni ga, a zatim odaberi „Očisti standardne postavke“. Kada sljedeći put pokušaš otvoriti sliku ili video vidjet ćeš birač aplikacija, gdje možeš odabrati aplikaciju „Fossify galerija” i postaviti je kao standardnu aplikaciju.</string>
     <string name="faq_5_text">Opcija „Isključi” sprječava prikazivanje mape samo u Fossify galeriji, dok opcija „Sakrij” funkcionira za cijeli sustav te skriva mapu i od drugih galerija. Radi tako što stvara praznu datoteku „.nomedia” u zadnoj mapi, koju zatim možeš ukloniti s bilo kojim upravljačem datoteka. Imaj na umu da neki uređaji ne dopuštaju skrivanje mapa kao što su Kamera, Slike ekrana i Preuzimanja.</string>
+    <string name="full_storage_permission_required">Fossify galerija treba puni pristup za prikaz svih tvojih fotografija i videa. Idi na Postavke &gt; Dozvole &gt; Fotografije i videa &gt; Dozvoli sve.</string>
+    <string name="playback_speed">Brzina reprodukcije</string>
+    <string name="unsupported_format">Nepodržan format.</string>
+    <string name="file_is_malformed_or_corrupted">Datoteka je neispravna ili oštećena.</string>
+    <string name="media_exceeds_device_capabilities">Medij premašuje mogućnosti uređaja.</string>
+    <string name="failed_to_load_media">Neuspjelo učitavanje medija.</string>
 </resources>

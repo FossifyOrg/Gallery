@@ -254,4 +254,7 @@
     <string name="playback_speed">Wiedergabegeschwindigkeit</string>
     <string name="full_storage_permission_required">Fossify Gallery benötigt vollen Zugriff, um alle Fotos und Videos anzuzeigen. Gehe zu Einstellungen &gt; Berechtigungen &gt; Fotos und Videos &gt; Zugelassen.</string>
     <string name="failed_to_load_media">Medien konnten nicht geladen werden.</string>
+    <string name="unsupported_format">Nicht unterstütztes Format.</string>
+    <string name="file_is_malformed_or_corrupted">Datei ist fehlerhaft oder beschädigt.</string>
+    <string name="media_exceeds_device_capabilities">Medien überschreiten die Gerätekapazitäten.</string>
 </resources>

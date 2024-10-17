@@ -16,7 +16,7 @@ Andas lugnt, olyckor sker. Fossify Gallerys inbyggda papperskorg låter dig att 
 Anpassa utseendet, känslan och funktionaliteten för att matcha din stil. Från användargränssnitt till knappar, Fossify Gallery ger din kreativa frihet som du suktar.
 
 📷 VÄLJ DITT FILFORMAT:
-JPEG, PNG, MP4, MKV, RAW, SVG, GIF, videor och mer – vi har dina minnen skyddade i vilket du format än väljer. Inga begränsningar, bara obegränsade möjligheter.
+JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, videor och mer – vi har dina minnen skyddade i vilket du format än väljer. Inga begränsningar, bara obegränsade möjligheter.
 
 ✨ MATERIAL DESIGN MED DYNAMISKA TEMAN:
 Upplev skönheten med den intuitiva material designen med dynamiska teman. Sugen på mer? Djupdyk i anpassade teman och gör ditt galleri unikt.

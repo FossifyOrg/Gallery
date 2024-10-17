@@ -1,2 +1,2 @@
-* Corregido el zoom en imágenes de alta resolución
-* Añadidas algunas traducciones
+* Se corrigió el zoom en imágenes de alta resolución.
+* Se agregaron algunas traducciones

@@ -1,0 +1,2 @@
+* Correction des vignettes noires pour certaines images.
+* Ajout de quelques traductions

@@ -1,0 +1,9 @@
+* Versió d'Android de destinació actualitzada a 14
+* Opció afegida per controlar la velocitat de reproducció de vídeo
+* Afegida l'opció de silenciar vídeos
+* Caselles de verificació reemplaçades per commutadors
+* Indicador d'error afegit per a fallades de càrrega de multimèdia
+* Millora el rendiment i la interfície de desplaçament
+* Millora la lògica i la interfície de bloqueig d'aplicacions
+* Afegit suport inicial del format JPEG XL (augmenta la mida de l'aplicació)
+* Altres correccions [...]

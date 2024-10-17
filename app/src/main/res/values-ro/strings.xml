@@ -236,4 +236,8 @@
     <string name="faq_1_title">Cum pot face ca Galeria Fossify să fie galeria implicită a dispozitivului?</string>
     <string name="crop">Decupare</string>
     <string name="slide">Glisare</string>
+    <string name="hidden_all_files">Trebuie să acorzi aplicației acces la Toate fișierele pentru a vedea fișierele ascunse, altfel nu poate funcționa.</string>
+    <string name="excluded_activity_placeholder">Excluderea dosarelor se va face împreună cu sub-dosarele lor ascunse doar în Fossify Gallery, ele vor fi în continuare vizibile în alte aplicații.\n\nDacă dorești să le ascunzi și de alte aplicații, utilizează funcția Ascundere.</string>
+    <string name="cant_unhide_folder">Dacă un dosar sau unul dintre dosarele părinte are un punct înaintea numelui său, acesta este ascuns și nu poate fi dezvăluit astfel. Trebuie să elimini punctul redenumindu-l.</string>
+    <string name="full_storage_permission_required">Fossify Gallery are nevoie de acces complet pentru a fișa toate fotografiile și videoclipurile. Accesează Setări &gt; Permisiuni &gt; Fotografii și videoclipuri &gt; Permite toate.</string>
 </resources>
