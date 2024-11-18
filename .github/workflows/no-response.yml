@@ -18,5 +18,7 @@ jobs:
           only-labels: 'waiting for author'
           stale-issue-label: 'waiting for author'
           stale-pr-label: 'waiting for author'
+          remove-stale-when-updated: false
+          ignore-updates: true
           close-issue-message: This issue has been automatically closed due to inactivity. We requested additional information but have not received a response from the original author. Without the requested details, we cannot proceed. If you have or find the information needed, please comment so we can reopen the issue.
           close-pr-message: This pull request has been automatically closed due to inactivity. We requested additional information but have not received a response from the original author. Without the requested details, we cannot proceed. If you have the needed information or updates, please reopen the PR or comment so we can continue the review.
