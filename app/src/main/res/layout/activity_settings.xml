@@ -492,6 +492,21 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/settings_keep_screen_on_fullscreen_photos_holder"
+                style="@style/SettingsHolderSwitchStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyMaterialSwitch
+                    android:id="@+id/settings_keep_screen_on_fullscreen_photos"
+                    style="@style/SettingsSwitchStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keep_screen_on_fullscreen_photos" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/settings_allow_photo_gestures_holder"
                 style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
