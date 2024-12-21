@@ -1,0 +1,6 @@
+* Tuairteála seasta agus físeáin á imirt.
+* Taispeántas sleamhnán seasta ar Android 14.
+* Tacaíocht bhreise do AVIF.
+* Athshocrú seasamh seasta tar éis uainíocht gléas.
+* Gabhálacha scáileáin súmála seasta nuair a bheidh súmáil sconna dúbailte duine le duine cumasaithe.
+* Cuireadh roinnt aistriúcháin leis

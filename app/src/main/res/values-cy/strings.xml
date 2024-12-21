@@ -163,4 +163,18 @@
     <string name="reorder_by_dragging">Aildrefnu ffolderi drwy lusgo</string>
     <string name="paths_imported_successfully">Wedi mewnforio\'r llwybrau\'n llwyddiannus</string>
     <string name="toggle_file_visibility">Newid gwelededd y ffeil</string>
+    <string name="no_media_with_filters">Ni chanfuwyd unrhyw ffeiliau cyfryngau gyda\'r hidlyddion a ddewiswyd.</string>
+    <string name="show_media_count">Dangos nifer y cyfryngau mewn ffolderi ar y prif olyg</string>
+    <string name="allow_changing_aspect_ratio">Caniatáu i newid cymhareb yr agwedd</string>
+    <string name="by_last_modified">Wedi\'i addasu yn ddiwethaf</string>
+    <string name="by_last_modified_daily">Wedi\'i addasu yn ddiwethaf (dyddiol)</string>
+    <string name="folder_on_widget">Ffolder sydd yn cael ei ddangos ar y teclyn:</string>
+    <string name="by_last_modified_monthly">Wedi\'i addasu yn ddiwethaf (misol)</string>
+    <string name="show_file_count_section_header">Dangos nifer y ffeiliau mewn penawdau</string>
+    <string name="show_at_bottom">Dangos rhai botymau gweithredu ar waelod y sgrin</string>
+    <string name="unsupported_format">Fformat heb ei cefnogi.</string>
+    <string name="show_file_count_brackets">Dangos nifer y ffeiliau mewn cromfach</string>
+    <string name="allow_down_gesture">Caniatáu cau\'r olyg sgrin lawn gydag ystum i lawr</string>
+    <string name="avoid_showing_invalid_files">Osgoi dangos ffeiliau annilys</string>
+    <string name="show_file_count_line">Dangos nifer y ffeiliau ar ei linell ei hunan</string>
 </resources>

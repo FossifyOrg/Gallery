@@ -254,4 +254,7 @@
     <string name="full_storage_permission_required">Fossify Galeriak baimen guztiak behar ditu zure argazki eta bideo guztiak erakusteko. Joan Ezarpenak &gt; Baimenak &gt; Argazki eta bideaok &gt; Baimendu guztia aukerara.</string>
     <string name="failed_to_load_media">Errorea gertatu da fitxategia kargatzean.</string>
     <string name="playback_speed">Jotzeko abiadura</string>
+    <string name="file_is_malformed_or_corrupted">Fitxategia ez da zuzena edo kaltetuta dago.</string>
+    <string name="media_exceeds_device_capabilities">Mediek gailuaren ezaugarriak gainditzen dituzte.</string>
+    <string name="unsupported_format">Fitxategi ezin da erakutsi.</string>
 </resources>

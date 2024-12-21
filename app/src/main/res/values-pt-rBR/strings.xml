@@ -252,4 +252,7 @@
     <string name="svgs">SVGs</string>
     <string name="volume">Volume</string>
     <string name="editor">Editor</string>
+    <string name="unsupported_format">Formato não suportado.</string>
+    <string name="media_exceeds_device_capabilities">A mídia excede as capacidades do dispositivo.</string>
+    <string name="failed_to_load_media">Falha ao carregar mídia.</string>
 </resources>
