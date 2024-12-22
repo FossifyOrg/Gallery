@@ -5,12 +5,12 @@
     <string name="open_camera">Abrir câmara</string>
     <string name="hidden">(oculta)</string>
     <string name="excluded">(excluída)</string>
-    <string name="pin_folder">Fixar pasta</string>
+    <string name="pin_folder">Afixar pasta</string>
     <string name="unpin_folder">Desafixar pasta</string>
     <string name="pin_to_the_top">Fixar no topo</string>
     <string name="show_all">Mostrar conteúdo de todas as pastas</string>
     <string name="all_folders">Todas as pastas</string>
-    <string name="folder_view">Alternar para a vista de pastas</string>
+    <string name="folder_view">Trocar para vista de pastas</string>
     <string name="other_folder">Outra pasta</string>
     <string name="show_on_map">Mostrar no mapa</string>
     <string name="unknown_location">Localização desconhecida</string>
@@ -24,7 +24,7 @@
     <string name="fix_date_taken">Corrigir data de captura</string>
     <string name="fixing">A corrigir…</string>
     <string name="dates_fixed_successfully">Dados corrigidos com sucesso</string>
-    <string name="no_date_takens_found">Não foram encontrados dados para a data de captura</string>
+    <string name="no_date_takens_found">Data de captura não encontrada</string>
     <string name="share_resized">Partilhar foto redimensionada</string>
     <string name="switch_to_file_search">Trocar para pesquisa de ficheiros em todas as pastas visíveis</string>
     <string name="set_as_default_folder">Utilizar como pasta padrão</string>
@@ -41,7 +41,7 @@
     <string name="portraits">Retratos</string>
     <string name="no_media_with_filters">Não foram encontrados ficheiros que cumpram os requisitos.</string>
     <string name="change_filters_underlined"><u>Alterar filtros</u></string>
-    <string name="hide_folder_description">Esta função oculta a pasta, adicionando-lhe um ficheiro \'.nomedia\' e ocultará também todas as subpastas nela existentes. Pode ver as pastas com a opção \'Mostrar pastas ocultas\'. Continuar\?</string>
+    <string name="hide_folder_description">Esta função oculta a pasta, adicionando-lhe um ficheiro \'.nomedia\' e ocultará também todas as sub-pastas existentes. Pode ver as pastas com a opção \'Mostrar pastas ocultas\'. Continuar?</string>
     <string name="exclude_folder_parent">Excluir antes a pasta superior\?</string>
     <string name="hidden_folders">Pastas ocultas</string>
     <string name="manage_hidden_folders">Gerir pastas ocultas</string>
@@ -122,7 +122,7 @@
     <string name="slide">Deslizar</string>
     <string name="slideshow_ended">Apresentação terminada</string>
     <string name="no_media_for_slideshow">Não foram encontrados ficheiros para a apresentação</string>
-    <string name="group_direct_subfolders">Agrupar subpastas</string>
+    <string name="group_direct_subfolders">Agrupar sub-pastas</string>
     <string name="group_by">Agrupar por</string>
     <string name="do_not_group_files">Não agrupar ficheiros</string>
     <string name="by_folder">Pasta</string>
@@ -134,7 +134,7 @@
     <string name="by_date_taken_monthly">Tirada em (por mês)</string>
     <string name="by_file_type">Tipo de ficheiro</string>
     <string name="by_extension">Extensão</string>
-    <string name="show_file_count_section_header">Mostrar contagem no título da secção</string>
+    <string name="show_file_count_section_header">Mostrar número de ficheiros no título da secção</string>
     <string name="grouping_and_sorting">Tenha em atenção de que agrupamento e ordenação são campos independentes</string>
     <string name="folder_on_widget">Pasta mostrada no widget:</string>
     <string name="show_folder_name">Mostrar nome da pasta</string>
@@ -176,7 +176,7 @@
     <string name="speed">Velocidade</string>
     <string name="compromise">Qualidade</string>
     <string name="avoid_showing_invalid_files">Não mostrar ficheiros inválidos</string>
-    <string name="show_image_file_types">Mostrar o tipo da imagem</string>
+    <string name="show_image_file_types">Mostrar tipo de imagem</string>
     <string name="allow_zooming_videos">Permitir ampliação de vídeos com dois toques</string>
     <string name="folder_thumbnail_style">Estilo de miniatura das pastas</string>
     <string name="file_thumbnail_style">Estilo de miniaturas dos ficheiros</string>
@@ -208,14 +208,14 @@
     <string name="manage_bottom_actions">Gerir exibição dos botões de ação</string>
     <string name="toggle_favorite">Alternar favorito</string>
     <string name="toggle_file_visibility">Alternar visibilidade dos ficheiros</string>
-    <string name="faq_2_title">Bloqueei a aplicação com uma palavra-passe mas agora esqueci-me dela. O que posso fazer\?</string>
-    <string name="faq_2_text">Existem duas soluções. Reinstala a aplicação ou, nas Definições do sistema –&gt; Gerir aplicações –&gt; Informações da aplicação, seleccone Limpar dados. Reiniciará assim todas as suas definições na aplicação mas não apagará os seus ficheiros multimedia.</string>
+    <string name="faq_2_title">Bloqueei a aplicação com palavra-passe mas agora esqueci-me dela. O que posso fazer?</string>
+    <string name="faq_2_text">Existem duas soluções. Reinstale a aplicação ou nas Definiçõe –&gt; Gerir aplicações –&gt; Informações da aplicação, selecione Limpar dados. Reiniciará assim todas as suas definições na aplicação mas não apagará os seus ficheiros multimedia.</string>
     <string name="faq_3_title">Como posso fazer para que um álbum seja sempre mostrado no topo\?</string>
-    <string name="faq_3_text">Prima longamente o álbum, seleccione Fixar no topo a partir do menu e será apresentado no topo. Pode também fixar diversas pastas em simultâneo. A ordem de apresentação é a da ordenação padrão.</string>
-    <string name="faq_4_title">Como posso fazer avançar rápido os videos\?</string>
+    <string name="faq_3_text">Prima longamente no álbum e seleccione Fixar no topo. Pode também afixar diversas pastas em simultâneo. A ordem de apresentação é a da ordenação padrão.</string>
+    <string name="faq_4_title">Como posso avançar rapidamente os videos?</string>
     <string name="faq_4_text">Dando dois toques nas margens ecrã ou então dando um toque em cima da indicação de duração junto à barra de pesquisa. E, se a opção de abrir videos noutro ecrã estiver habilitada, pode também fazê-lo por gestos.</string>
     <string name="faq_5_title">Qual a diferença entre ocultar e excluir uma pasta\?</string>
-    <string name="faq_6_title">Porque são apresentadas capas de albuns ou stickers\?</string>
+    <string name="faq_6_title">Porque são mostradas as pastas com imagens de álbuns ou stickers?</string>
     <string name="faq_6_text">Pode dar-se o caso de alguns items invulgares aparecerem. Consegue exclui-los premindo longamente e seleccionando Excluir. Na caixa de diálogo seguinte, escolha a pasta superior na hierarquia. Provavelmente, isso irá impedir que outros itens semelhantes sejam apresentados também.</string>
     <string name="faq_7_title">Uma pasta com imagens não é apresentada ou não mostra todos os itens lá contidos. O que posso fazer\?</string>
     <string name="faq_7_text">Pode haver diversos motivos mas a solução é simples. Em Definições–&gt; Gerir Pastas Incluídas, seleccione \'+\' e siga até à pasta pretendida.</string>
@@ -240,19 +240,20 @@
     <string name="faq_17_text">Isso parou de funcionar devido às mudanças no sistema que vieram com o Android 11, o aplicativo não pode mais navegar em pastas reais, ele depende do chamado MediaStore para buscar dados.</string>
     <string name="faq_18_title">Por que vejo anúncios durante a reprodução de vídeo\?</string>
     <string name="faq_18_text">As nossas aplicações não têm anúncios. Se você vê-os durante a reprodução de um vídeo, deve estar a usar outra aplicação . Tente encontrar o reprodutor de vídeo padrão nas definições do dispositivo e, em seguida, faça um \"Limpar dados\". Da próxima vez quiser reproduzir um vídeo, surgirá uma opção para escolher a aplicação utilizada.</string>
-    <string name="faq_1_text">Primeiro, tens que encontrar a galeria padrão no menu de Aplicações nas Definições do teu dispositivo, procura por uma opção que diga algo como \"Abrir como padrão\", clica nesta opção e seleciona \"Remover padrões\". Da próxima vez que tentares abrir uma imagem ou um vídeo, deves aparecer um selecionador de aplicações onde podes escolher a Galeria Fossify e torna-la a aplicação de galeria padrão.</string>
+    <string name="faq_1_text">Primeiro, tem que encontrar a galeria padrão na secção Aplicações das Definições do dispositivo, procure por uma opção que diga algo como \"Abrir como padrão\", toque nesta opção e selecione \"Limpar predefinições\". Da próxima vez que tentar abrir uma imagem ou vídeo, deve aparecer um seletor de aplicações, no qual pode escolher Galeria Fossify paia utilizar por omissão.</string>
     <string name="editor">Editor</string>
-    <string name="exclude_folder_description">Isto excluirá a seleção juntamente com as suas sub-pastas apenas da Galeria Fossify. Podes gerir as pastas excluídas na Preferências.</string>
-    <string name="excluded_activity_placeholder">Excluir pastas vai escondê-las juntamente com as suas sub-pastas apenas na Galeria Fossify, elas continuaram visíveis noutras aplicações.
-\n
-\nSe quiseres escondê-las igualmente noutras aplicações, usa a função Hide.</string>
-    <string name="cant_unhide_folder">Se uma pasta ou alguma das pastas que contêm esta tiver um ponto antes do seu nome, esta pasta está escondida e não pode ser revelada desta forma. Tens que remover o ponto dando um novo nome à pasta.</string>
+    <string name="exclude_folder_description">Isto excluirá a seleção juntamente com as suas sub-pastas apenas da Galeria Fossify. Pode gerir as pastas excluídas na Definições.</string>
+    <string name="excluded_activity_placeholder">Excluir pastas oculta a pasta e as sub-pastas na Galeria Fossify. No entanto , as pastas serão mostradas nas outras aplicações.\n\nSe quiser ocultar globalmente, utilize a função Ocultar.</string>
+    <string name="cant_unhide_folder">Se uma pasta ou alguma das pastas superiores tiverem um ficheiro .nomedia, esta pasta estará oculta e não pode ser mostrada desta forma. Tem que eliminar o ficheiro primeiro.</string>
     <string name="resize_factor_info">Redimensionar as imagens por um dada percentagem, o valor deve ser entre 10 e 90.</string>
     <string name="faq_1_title">Como posso tornar a Galeria Fossify a galeria padrão do meu dispositivo?</string>
-    <string name="faq_5_text">Excluir esconde a pasta apenas na Galeria Fossify, enquanto que a função Hide funciona em todos o sistema e esconde a pasta igualmente noutras aplicações. Esta opção cria um ficheiro vazio \".nomedia\" na pasta em questão, o qual pode ser removido com um gestor de ficheiros. Repara que alguns dispositivos não permite esconder ficheiros com as pastas Camera, Captura de Ecra e Transferências.</string>
+    <string name="faq_5_text">Excluir oculta a pasta na Galeria Fossify mas a função Ocultar funciona globalmente e esconde a pasta de todas as aplicações. Esta opção cria um ficheiro \".nomedia\" na pasta, o qual pode ser eliminado com um gestor de ficheiros. Tenha em atenção de que alguns dispositivos não permitem esconder algumas pastas tais como, por exemplo, as pastas Camera, Screenshot e Downloads.</string>
     <string name="volume">Volume</string>
     <string name="wallpaper">Papel de Parede</string>
     <string name="failed_to_load_media">Erro ao carregar os dados.</string>
     <string name="playback_speed">Velocidade de reprodução</string>
-    <string name="full_storage_permission_required">Fossify Gallery precisa de acessso total para mostrar as fotos e os vídeos. Aceda a Definições &gt; Permissões &gt; Fotos e vídeos &gt; Permitir.</string>
+    <string name="full_storage_permission_required">Fossify Gallery precisa de acesso total para mostrar as fotos e os vídeos. Aceda a Definições &gt; Permissões &gt; Fotos e vídeos &gt; Permitir.</string>
+    <string name="file_is_malformed_or_corrupted">Ficheiro inválido ou danificado.</string>
+    <string name="media_exceeds_device_capabilities">O ficheiro excede as capacidades do dispositivo.</string>
+    <string name="unsupported_format">Formato não suportado.</string>
 </resources>
