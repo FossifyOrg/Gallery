@@ -143,7 +143,7 @@
     <string name="by_extension">扩展名</string>
     <string name="show_file_count_section_header">在栏目标题上显示文件数</string>
     <string name="grouping_and_sorting">请注意：分组和排序是两种相互独立的文件组织方式</string>
-    <string name="folder_on_widget">显示在挂件中的文件夹：</string>
+    <string name="folder_on_widget">显示在微件中的文件夹：</string>
     <string name="show_folder_name">显示文件夹名称</string>
     <string name="autoplay_videos">自动播放视频</string>
     <string name="remember_last_video_position">记住视频上一次播放时的位置</string>

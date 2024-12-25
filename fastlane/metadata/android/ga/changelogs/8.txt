@@ -1,0 +1,9 @@
+* Cuireadh tacaíocht tosaigh leis le haghaidh formáid JPEG XL
+* Sprioc-leagan Android nuashonraithe go 14
+* Rogha breise chun luas athsheinm físe a rialú
+* Rogha breise chun físeáin a bhalbhú
+* ticbhoscaí athsholáthair le lasca
+* Táscaire earráide curtha leis maidir le teipeanna ualaigh meán
+* Loighic glasála app agus comhéadan úsáideora feabhsaithe
+* Ceartúcháin agus feabhsuithe beaga eile ar fhabht
+* Cuireadh tuilleadh aistriúcháin leis

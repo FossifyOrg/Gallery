@@ -227,7 +227,7 @@
     <string name="faq_10_title">Kas ma saan selle rakendusega pilte kärpida\?</string>
     <string name="faq_10_text">Jah, sa saad pilte redaktoris kärpida, lohistades pildi nurki. Redaktorisse pääseb, kui vajutate pikalt pildi pisipildile ja valite käsu Edit või valite täisekraani vaates käsu Edit.</string>
     <string name="faq_11_title">Kas ma saan kuidagi rühmitada meediafailide pisipilte\?</string>
-    <string name="faq_11_text">Muidugi, kasutage pisipiltide vaates lihtsalt menüüelementi \"Group by\". Saate grupeerida faile mitme kriteeriumi, sealhulgas pildistamise kuupäeva järgi. Kui kasutate funktsiooni \"Show all folders content\" saate neid kaustade järgi rühmitada.</string>
+    <string name="faq_11_text">Muidugi, kasuta pisipiltide vaates lihtsalt menüüvalikut „Rühmituse alus“. Saad grupeerida faile mitme kriteeriumi, sealhulgas pildistamise kuupäeva järgi. Kui kasutad funktsiooni „Näita kõikide kaustade sisu“ saad neid kaustade järgi rühmitada.</string>
     <string name="faq_12_title">Sorteerimine võetud kuupäeva järgi ei tundu korralikult toimivat, kuidas seda parandada\?</string>
     <string name="faq_12_text">Tõenäoliselt on selle põhjuseks kuskilt kopeeritud failid. Saate selle parandada, valides faili pisipildid ja valides \"Fix Date Taken väärtus\".</string>
     <string name="faq_13_title">Ma näen piltidel mõningaid värviribasid. Kuidas ma saan kvaliteeti parandada\?</string>
