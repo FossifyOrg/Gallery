@@ -257,5 +257,5 @@
     <string name="media_exceeds_device_capabilities">Le support dépasse les capacités de l\'appareil.</string>
     <string name="unsupported_format">Format non pris en charge.</string>
     <string name="playback_speed">Vitesse de lecture</string>
-    <string name="failed_to_load_media">Échec du chargement du média.</string>
+    <string name="failed_to_load_media">Échec de chargement du média.</string>
 </resources>
