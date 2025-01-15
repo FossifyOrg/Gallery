@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_launcher_name">ગેલેરી</string>
+    <string name="edit">ફેરફાર કરો</string>
+    <string name="open_camera">કેમેરા ખોલો</string>
+    <string name="hidden">(ચૂપૈલું)</string>
+    <string name="excluded">(બાકાત)</string>
+    <string name="pin_folder">ફોલ્ડર પિન કરો</string>
+    <string name="unpin_folder">ફોલ્ડર નું પિન કાઢી નાંખો</string>
+    <string name="pin_to_the_top">એકદમ ઉપર પિન કરો</string>
+</resources>
