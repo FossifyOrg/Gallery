@@ -112,7 +112,7 @@ body:
       description: |
         A picture or video is worth a thousand words.
 
-        If applicable, drag and drop screenshots or a screen recording to help explain your problem. If your file is too big for Github to accept, try to compress it (ZIP file), or feel free to paste a link to an image/video hoster here instead.
+        If applicable, drag and drop screenshots or a screen recording to help explain your problem. If your file is too big for Github to accept, try to compress it (ZIP file), or feel free to paste a link to an image/video instead.
 
   - type: textarea
     id: additional-information
