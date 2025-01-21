@@ -26,8 +26,6 @@ body:
           required: true
         - label: "I have read and understood the [contribution guidelines](https://github.com/FossifyOrg/Gallery/blob/master/CONTRIBUTING.md)."
           required: true
-        - label: "I optionally [donated](https://fossify.org/donate) to support the Fossify mission."
-          required: false
 
   - type: textarea
     id: feature-description
