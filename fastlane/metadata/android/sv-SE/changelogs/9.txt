@@ -1,10 +1,10 @@
 * Uppdaterad målandriodversion till 14
 * Lade till funktion att ändra videors tillbakaspolningshastighet
-* Lade till funktiuon att tysta videor
+* Lade till funktion att tysta videor
 * Ersatte kryssrutor med brytare
 * Lade till felmeddelande när media misslyckas att ladda
 * Förbättrade skrollningsfunktion och gränssnitt
-* Förbättrare applåsningsfunktion och gränssnitt
+* Förbättrade applåsningsfunktion och gränssnitt
 * Initialt stöd för JPEG XL-format (ökad appstorlek)
 * Fixat småbuggar och mindre förbättringar
 * Fler översättningar
