@@ -51,7 +51,7 @@ import org.fossify.gallery.models.FilterItem
 import java.io.*
 import kotlin.math.max
 
-class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener {
+class EditActivity : SimpleActivity() {
     companion object {
         init {
             System.loadLibrary("NativeImageProcessor")
@@ -256,7 +256,6 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
         binding.editorDrawCanvas.beGone()
         binding.cropImageView.apply {
             beVisible()
-            setOnCropImageCompleteListener(this@EditActivity)
             setImageUriAsync(uri)
             guidelines = CropImageView.Guidelines.ON
 
@@ -405,7 +404,7 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
                 binding.cropImageView.isVisible() -> {
                     isSharingBitmap = true
                     runOnUiThread {
-                        binding.cropImageView.croppedImageAsync()
+                        cropImageAsync()
                     }
                 }
 
@@ -815,10 +814,6 @@ class EditActivity : SimpleActivity(), CropImageView.OnCropImageCompleteListener
         } else {
             Point(rect.height(), rect.width())
         }
-    }
-
-    override fun onCropImageComplete(view: CropImageView, result: CropImageView.CropResult) {
-        onCropImageComplete(result.bitmap, result.error)
     }
 
     private fun onCropImageComplete(bitmap: Bitmap?, error: Exception?) {
