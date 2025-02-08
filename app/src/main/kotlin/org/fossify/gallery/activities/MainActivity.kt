@@ -599,10 +599,10 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
 
         mShouldStopFetching = true
         mIsGettingDirs = true
-        val getImagesOnly = mIsPickImageIntent || mIsGetImageContentIntent
-        val getVideosOnly = mIsPickVideoIntent || mIsGetVideoContentIntent
+        val getImages = mIsPickImageIntent || mIsGetImageContentIntent
+        val getVideos = mIsPickVideoIntent || mIsGetVideoContentIntent
 
-        getCachedDirectories(getVideosOnly, getImagesOnly) {
+        getCachedDirectories(getVideos && !getImages, getImages && !getVideos) {
             gotDirectories(addTempFolderIfNeeded(it))
         }
     }
@@ -890,10 +890,10 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     private fun isGetContentIntent(intent: Intent) = intent.action == Intent.ACTION_GET_CONTENT && intent.type != null
 
     private fun isGetImageContentIntent(intent: Intent) = isGetContentIntent(intent) &&
-        (intent.type!!.startsWith("image/") || intent.type == Images.Media.CONTENT_TYPE)
+        (intent.type!!.split(",", "|").any { it.startsWith("image/") } || intent.type == Images.Media.CONTENT_TYPE)
 
     private fun isGetVideoContentIntent(intent: Intent) = isGetContentIntent(intent) &&
-        (intent.type!!.startsWith("video/") || intent.type == Video.Media.CONTENT_TYPE)
+        (intent.type!!.split(",", "|").any { it.startsWith("video/") } || intent.type == Video.Media.CONTENT_TYPE)
 
     private fun isGetAnyContentIntent(intent: Intent) = isGetContentIntent(intent) && intent.type == "*/*"
 
