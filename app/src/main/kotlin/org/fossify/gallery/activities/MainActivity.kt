@@ -889,11 +889,15 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
 
     private fun isGetContentIntent(intent: Intent) = intent.action == Intent.ACTION_GET_CONTENT && intent.type != null
 
+    private fun anyExtraMimeTypeStartingWith(intent: Intent, mimeTypePrefix: String): Boolean {
+        return intent.getStringArrayExtra(Intent.EXTRA_MIME_TYPES)?.any { it.startsWith(mimeTypePrefix) } ?: false
+    }
+
     private fun isGetImageContentIntent(intent: Intent) = isGetContentIntent(intent) &&
-        (intent.type!!.split(",", "|").any { it.startsWith("image/") } || intent.type == Images.Media.CONTENT_TYPE)
+        (intent.type!!.startsWith("image/") || intent.type == Images.Media.CONTENT_TYPE || anyExtraMimeTypeStartingWith(intent, "image/"))
 
     private fun isGetVideoContentIntent(intent: Intent) = isGetContentIntent(intent) &&
-        (intent.type!!.split(",", "|").any { it.startsWith("video/") } || intent.type == Video.Media.CONTENT_TYPE)
+        (intent.type!!.startsWith("video/") || intent.type == Video.Media.CONTENT_TYPE || anyExtraMimeTypeStartingWith(intent, "video/"))
 
     private fun isGetAnyContentIntent(intent: Intent) = isGetContentIntent(intent) && intent.type == "*/*"
 
