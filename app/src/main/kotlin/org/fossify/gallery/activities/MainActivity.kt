@@ -1007,8 +1007,10 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         // cached folders have been loaded, recheck folders one by one starting with the first displayed
         mLastMediaFetcher?.shouldStop = true
         mLastMediaFetcher = MediaFetcher(applicationContext)
-        val getImagesOnly = mIsPickImageIntent || mIsGetImageContentIntent
-        val getVideosOnly = mIsPickVideoIntent || mIsGetVideoContentIntent
+        val getImages = mIsPickImageIntent || mIsGetImageContentIntent
+        val getVideos = mIsPickVideoIntent || mIsGetVideoContentIntent
+        val getImagesOnly = getImages && !getVideos
+        val getVideosOnly = getVideos && !getImages
         val favoritePaths = getFavoritePaths()
         val hiddenString = getString(R.string.hidden)
         val albumCovers = config.parseAlbumCovers()
