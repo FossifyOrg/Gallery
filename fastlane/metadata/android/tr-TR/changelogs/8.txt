@@ -1,0 +1,9 @@
+* JPEG XL biçimi için ilk destek eklendi
+* Hedef Android sürümünü 14'e güncelledi
+* Video oynatma hızını kontrol etmek için seçenek eklendi
+* Videoları sessize almak için seçenek eklendi
+* Onay kutuları düğmelerle değiştirildi
+* Ortam yükleme hataları için hata göstergesi eklendi
+* Geliştirilmiş uygulama kilit mantığı ve arayüzü eklendi
+* Diğer küçük hata düzeltmeleri ve iyileştirmeleri
+* Daha fazla çeviri eklendi
