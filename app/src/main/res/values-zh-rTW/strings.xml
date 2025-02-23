@@ -52,9 +52,7 @@
     <string name="include_folders">包含資料夾</string>
     <string name="manage_included_folders">管理包含的資料夾</string>
     <string name="add_folder">新增資料夾</string>
-    <string name="included_activity_placeholder">如要新增包含媒體文件但未被應用程式辨識的資料夾，可在此處手動新增。
-\n
-\n新增項目不會排除其他資料夾。</string>
+    <string name="included_activity_placeholder">如要新增包含媒體檔案但未被應用程式辨識的資料夾，可在此處手動新增。 \n \n新增項目不會排除其他資料夾。</string>
     <string name="no_media_add_included">未發現媒體檔案。您可以手動加入包含媒體檔案的資料夾來解決。</string>
     <string name="resize_and_save">調整選取項目尺寸並儲存</string>
     <string name="width">寬度</string>
@@ -210,8 +208,8 @@
     <string name="manage_bottom_actions">管理要顯示的底部操作</string>
     <string name="toggle_favorite">切換我的最愛</string>
     <string name="toggle_file_visibility">檔案顯示</string>
-    <string name="faq_2_title">用密碼把這個 APP 上鎖後忘記密碼該怎麼辦？</string>
-    <string name="faq_2_text">有兩種解決方法。一是重新安裝本 APP。一是在裝置的設定中找到本 APP，然後按「清除資料」（或「清除儲存空間」等類似的字眼），APP 的設定將會被重設，但不會移除任何媒體檔案。</string>
+    <string name="faq_2_title">用密碼把這個 app 上鎖後忘記密碼該怎麼辦？</string>
+    <string name="faq_2_text">有兩種解決方法。一是重新安裝本 app。一是在裝置的設定中找到本 app，然後按「清除資料」（或「清除儲存空間」等類似的字眼），app 的設定將會被重設，但不會移除任何媒體檔案。</string>
     <string name="faq_3_title">如何使某個相簿顯示在最頂端？</string>
     <string name="faq_3_text">長按該相簿，接著按圖釘圖示或選單中的「釘選在頂端」。您可以同時釘選數個相簿，它們將會依照預設排序方式排序。</string>
     <string name="faq_4_title">如何快轉影片？</string>
@@ -223,7 +221,7 @@
     <string name="faq_7_text">可能有很多種原因，但解法很簡單。前往「設定」 -&gt; 「管理包含資料夾」、按加號（+）、選擇該資料夾即可。</string>
     <string name="faq_8_title">如果只想顯示特定資料夾呢？</string>
     <string name="faq_8_text">如果只將某資料夾加入至「包含資料夾」的話，其他的資料夾並不會被自動排除。請前往「設定」-&gt;「管理排除資料夾」、將根資料夾「/」排除，並在「設定」-&gt;「管理包含資料夾」中加入欲顯示的資料夾。 這樣就只會顯示所選的資料夾，因為排除與包含都是遞迴的，所以若某資料夾同時被包含及排除，其將會顯示。</string>
-    <string name="faq_10_title">這個 APP 可以裁剪圖片嗎？</string>
+    <string name="faq_10_title">這個 app 可以裁剪圖片嗎？</string>
     <string name="faq_10_text">可以，在編輯工具中拖動圖片的角落即可裁剪圖片。對縮圖長按並選擇編輯，或者在全螢幕檢視時選擇編輯皆可進入編輯工具。</string>
     <string name="faq_11_title">有辦法分類縮圖嗎？</string>
     <string name="faq_11_text">可以，在檢視縮圖時使用選單中的「分組方式」即可，有多種分類方式可供選擇，包含拍攝日期等。若使用了「資料夾內容全部顯示」功能，則也可以依資料夾來分類。</string>
@@ -233,7 +231,7 @@
     <string name="faq_13_text">目前顯示圖片的方式在大多數情況下都能正常運作，但若想要更好的畫質，可以啟用「設定」-&gt;「可強制放大的圖片」段落中的「以最高品質顯示圖片」。</string>
     <string name="faq_14_title">如何取消隱藏檔案／資料夾？</string>
     <string name="faq_14_text">按主畫面選單中的「暫時顯示隱藏的檔案」或設定中的「顯示隱藏的項目」就能看到隱藏的項目。若要取消隱藏，長按並選擇「取消隱藏」即可。資料夾隱藏的原理是在其內新增一個「.nomedia」檔案，因此可用任意檔案管理器將其刪除。檔案／資料夾是以遞迴的方式被隱藏的，因此若某資料夾被隱藏，其子資料夾也會被隱藏。若要取消隱藏子資料夾，其上層資料夾需先被取消隱藏。</string>
-    <string name="faq_15_title">這個 APP 怎麼佔用了這麼多空間？</string>
+    <string name="faq_15_title">這個 app 怎麼佔用了這麼多空間？</string>
     <string name="faq_15_text">應用程式快取可協助圖片載入更快，最高僅佔 250 MB。如果此應用程式佔用超過 250 MB 空間，可能是回收桶中的檔案仍在佔用空間。您可刪除回收桶中的所有檔案，或在設定中快速清除。檔案進入回收桶的 30 天後將自動刪除。</string>
     <string name="faq_16_title">檔案／資料夾隱藏怎麼了？為什麼我看不到隱藏的項目了？</string>
     <string name="faq_16_text">自 Android 11 開始，因系統限制，無法隱藏或解除隱藏檔案或資料夾，也無法在相簿 app 中看到已隱藏的項目。請使用檔案管理程式達成上述操作。</string>
