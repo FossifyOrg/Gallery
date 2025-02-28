@@ -147,7 +147,7 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
                     override fun onStateChanged(state: State) {
-                        if(!mIsTouched){
+                        if (!mIsTouched) {
                             mInitialZoom = state.zoom
                         }
                         mCurrentGestureViewZoom = state.zoom
@@ -156,7 +156,7 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.setOnTouchListener { v, event ->
                     mIsTouched = true
-                    if (Math.abs(mCurrentGestureViewZoom -mInitialZoom)< MAX_ZOOM_DIFFERENCE) {
+                    if (Math.abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
                         handleEvent(event)
                     }
                     false
