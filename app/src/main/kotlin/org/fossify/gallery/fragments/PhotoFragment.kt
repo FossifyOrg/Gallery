@@ -128,7 +128,6 @@ class PhotoFragment : ViewPagerFragment() {
     private var mScreenHeight = 0
     private var mCurrentGestureViewZoom = 1f
     private var mIsTouched = false
-    private var mInitialZoom = 1f
 
     private var mStoredShowExtendedDetails = false
     private var mStoredHideExtendedDetails = false
@@ -186,7 +185,11 @@ class PhotoFragment : ViewPagerFragment() {
                 gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
                     override fun onStateChanged(state: State) {
                         if (!mIsTouched) {
-                            mInitialZoom = state.zoom
+                            gesturesView.controller.settings.apply {
+                                if (hasImageSize() && hasViewportSize()) {
+                                    doubleTapZoom = (viewportWidth.toFloat() / imageWidth).coerceAtLeast(viewportHeight.toFloat() / imageHeight)
+                                }
+                            }
                         }
                         mCurrentGestureViewZoom = state.zoom
                     }
@@ -194,7 +197,7 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.setOnTouchListener { v, event ->
                     mIsTouched = true
-                    if (Math.abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                    if (mCurrentGestureViewZoom == 1f) {
                         handleEvent(event)
                     }
                     false
