@@ -900,6 +900,7 @@ class PhotoFragment : ViewPagerFragment() {
             binding.subsamplingView.rotateBy(degrees)
         } else {
             mCurrentRotationDegrees = (mCurrentRotationDegrees + degrees) % 360
+            binding.gesturesView.controller.state.rotateTo(mCurrentRotationDegrees.toFloat(), 0f, 0f)
             mLoadZoomableViewHandler.removeCallbacksAndMessages(null)
             mIsSubsamplingVisible = false
             loadBitmap()
