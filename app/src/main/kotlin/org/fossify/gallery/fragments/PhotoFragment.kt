@@ -89,6 +89,7 @@ class PhotoFragment : ViewPagerFragment() {
     private var mScreenWidth = 0
     private var mScreenHeight = 0
     private var mCurrentGestureViewZoom = 1f
+    private var mIsTouched = false
 
     private var mStoredShowExtendedDetails = false
     private var mStoredHideExtendedDetails = false
@@ -145,11 +146,20 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
                     override fun onStateChanged(state: State) {
+                        if (!mIsTouched) {
+                            gesturesView.controller.settings.apply {
+                                if (hasImageSize() && hasViewportSize()) {
+                                    doubleTapZoom = (viewportWidth.toFloat() / imageWidth).coerceAtLeast(viewportHeight.toFloat() / imageHeight)
+                                }
+                            }
+
+                        }
                         mCurrentGestureViewZoom = state.zoom
                     }
                 })
 
                 gesturesView.setOnTouchListener { v, event ->
+                    mIsTouched = true
                     if (mCurrentGestureViewZoom == 1f) {
                         handleEvent(event)
                     }
@@ -827,6 +837,7 @@ class PhotoFragment : ViewPagerFragment() {
             binding.subsamplingView.rotateBy(degrees)
         } else {
             mCurrentRotationDegrees = (mCurrentRotationDegrees + degrees) % 360
+            binding.gesturesView.controller.state.rotateTo(mCurrentRotationDegrees.toFloat(), 0f, 0f)
             mLoadZoomableViewHandler.removeCallbacksAndMessages(null)
             mIsSubsamplingVisible = false
             loadBitmap()
