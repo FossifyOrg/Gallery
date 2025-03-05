@@ -57,6 +57,11 @@
         android:title="@string/unhide"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/menu_copy_to_clipboard"
+        android:showAsAction="never"
+        android:title="@string/copy_to_clipboard"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_copy_to"
         android:showAsAction="never"
         android:title="@string/copy_to"
