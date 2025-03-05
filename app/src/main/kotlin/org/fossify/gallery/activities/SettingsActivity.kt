@@ -76,6 +76,7 @@ class SettingsActivity : SimpleActivity() {
         setupAppPasswordProtection()
         setupFileDeletionPasswordProtection()
         setupDeleteEmptyFolders()
+        setupKeepScreenOn()
         setupAllowPhotoGestures()
         setupAllowVideoGestures()
         setupAllowDownGesture()
@@ -443,6 +444,14 @@ class SettingsActivity : SimpleActivity() {
         binding.settingsDeleteEmptyFoldersHolder.setOnClickListener {
             binding.settingsDeleteEmptyFolders.toggle()
             config.deleteEmptyFolders = binding.settingsDeleteEmptyFolders.isChecked
+        }
+    }
+
+    private fun setupKeepScreenOn() {
+        binding.settingsKeepScreenOnFullscreenPhotos.isChecked = config.keepScreenOn
+        binding.settingsKeepScreenOnFullscreenPhotosHolder.setOnClickListener {
+            binding.settingsKeepScreenOnFullscreenPhotos.toggle()
+            config.keepScreenOn = binding.settingsKeepScreenOnFullscreenPhotos.isChecked
         }
     }
 
@@ -884,6 +893,7 @@ class SettingsActivity : SimpleActivity() {
                 put(BLACK_BACKGROUND, config.blackBackground)
                 put(HIDE_SYSTEM_UI, config.hideSystemUI)
                 put(ALLOW_INSTANT_CHANGE, config.allowInstantChange)
+                put(KEEP_SCREEN_ON, config.keepScreenOn)
                 put(ALLOW_PHOTO_GESTURES, config.allowPhotoGestures)
                 put(ALLOW_DOWN_GESTURE, config.allowDownGesture)
                 put(ALLOW_ROTATING_WITH_GESTURES, config.allowRotatingWithGestures)
@@ -1027,6 +1037,7 @@ class SettingsActivity : SimpleActivity() {
                 BLACK_BACKGROUND -> config.blackBackground = value.toBoolean()
                 HIDE_SYSTEM_UI -> config.hideSystemUI = value.toBoolean()
                 ALLOW_INSTANT_CHANGE -> config.allowInstantChange = value.toBoolean()
+                KEEP_SCREEN_ON -> config.keepScreenOn = value.toBoolean()
                 ALLOW_PHOTO_GESTURES -> config.allowPhotoGestures = value.toBoolean()
                 ALLOW_DOWN_GESTURE -> config.allowDownGesture = value.toBoolean()
                 ALLOW_ROTATING_WITH_GESTURES -> config.allowRotatingWithGestures = value.toBoolean()

@@ -162,6 +162,7 @@
     <string name="scroll_thumbnails_horizontally">Przewijaj miniaturki w poziomie</string>
     <string name="hide_system_ui_at_fullscreen">Automatycznie ukrywaj interfejs systemu dla multimediów na pełnym ekranie</string>
     <string name="delete_empty_folders">Usuwaj puste foldery po usunięciu ich zawartości</string>
+    <string name="keep_screen_on_fullscreen_photos">Pozostawiaj ekran włączony podczas oglądania obrazów na pełnym ekranie</string>
     <string name="allow_photo_gestures">Zezwalaj na kontrolowanie jasności obrazów pionowymi gestami</string>
     <string name="allow_video_gestures">Zezwalaj na kontrolowanie głośności i jasności wideo pionowymi gestami</string>
     <string name="show_media_count">Pokazuj liczbę multimediów w folderze w widoku głównym</string>
