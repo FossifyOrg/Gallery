@@ -599,10 +599,10 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
 
         mShouldStopFetching = true
         mIsGettingDirs = true
-        val getImagesOnly = mIsPickImageIntent || mIsGetImageContentIntent
-        val getVideosOnly = mIsPickVideoIntent || mIsGetVideoContentIntent
+        val getImages = mIsPickImageIntent || mIsGetImageContentIntent
+        val getVideos = mIsPickVideoIntent || mIsGetVideoContentIntent
 
-        getCachedDirectories(getVideosOnly, getImagesOnly) {
+        getCachedDirectories(getVideos && !getImages, getImages && !getVideos) {
             gotDirectories(addTempFolderIfNeeded(it))
         }
     }
@@ -889,11 +889,15 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
 
     private fun isGetContentIntent(intent: Intent) = intent.action == Intent.ACTION_GET_CONTENT && intent.type != null
 
+    private fun anyExtraMimeTypeStartingWith(intent: Intent, mimeTypePrefix: String): Boolean {
+        return intent.getStringArrayExtra(Intent.EXTRA_MIME_TYPES)?.any { it.startsWith(mimeTypePrefix) } ?: false
+    }
+
     private fun isGetImageContentIntent(intent: Intent) = isGetContentIntent(intent) &&
-        (intent.type!!.startsWith("image/") || intent.type == Images.Media.CONTENT_TYPE)
+        (intent.type!!.startsWith("image/") || intent.type == Images.Media.CONTENT_TYPE || anyExtraMimeTypeStartingWith(intent, "image/"))
 
     private fun isGetVideoContentIntent(intent: Intent) = isGetContentIntent(intent) &&
-        (intent.type!!.startsWith("video/") || intent.type == Video.Media.CONTENT_TYPE)
+        (intent.type!!.startsWith("video/") || intent.type == Video.Media.CONTENT_TYPE || anyExtraMimeTypeStartingWith(intent, "video/"))
 
     private fun isGetAnyContentIntent(intent: Intent) = isGetContentIntent(intent) && intent.type == "*/*"
 
@@ -1007,8 +1011,10 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         // cached folders have been loaded, recheck folders one by one starting with the first displayed
         mLastMediaFetcher?.shouldStop = true
         mLastMediaFetcher = MediaFetcher(applicationContext)
-        val getImagesOnly = mIsPickImageIntent || mIsGetImageContentIntent
-        val getVideosOnly = mIsPickVideoIntent || mIsGetVideoContentIntent
+        val getImages = mIsPickImageIntent || mIsGetImageContentIntent
+        val getVideos = mIsPickVideoIntent || mIsGetVideoContentIntent
+        val getImagesOnly = getImages && !getVideos
+        val getVideosOnly = getVideos && !getImages
         val favoritePaths = getFavoritePaths()
         val hiddenString = getString(R.string.hidden)
         val albumCovers = config.parseAlbumCovers()
