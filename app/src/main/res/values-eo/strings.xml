@@ -26,4 +26,7 @@
     <string name="thumbnails">Miniaturoj</string>
     <string name="toggle_favorite">Baskuligi plej ŝatatan</string>
     <string name="playback_speed">Legada rapideco</string>
+    <string name="excluded">(ekskluzivita)</string>
+    <string name="show_all">Montri enhavon de ĉiuj dosierujoj</string>
+    <string name="folder_view">Ŝanĝiĝi al dosieruja vido</string>
 </resources>
