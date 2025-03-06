@@ -16,9 +16,9 @@
     <string name="lock_orientation">Ŝlosi orientiĝon</string>
     <string name="unlock_orientation">Malŝlosi orientiĝon</string>
     <string name="change_orientation">Ŝanĝi orientiĝon</string>
-    <string name="fixing">Riparante…</string>
+    <string name="fixing">Korektado…</string>
     <string name="images">Bildoj</string>
-    <string name="videos">Filmoj</string>
+    <string name="videos">Filmetoj</string>
     <string name="gifs">GIF-filmetoj</string>
     <string name="raw_images">RAW-bildoj</string>
     <string name="svgs">SVG-bildoj</string>
@@ -30,4 +30,23 @@
     <string name="show_all">Montri enhavon de ĉiuj dosierujoj</string>
     <string name="folder_view">Ŝanĝiĝi al dosieruja vido</string>
     <string name="force_portrait">Ĉiam uzi vertikalan orientiĝon</string>
+    <string name="full_storage_permission_required">Fossify Galerio bezonas tutan atingon por montri viajn fotojn kaj filmetojn. Iru al Agordoj &gt; Permesoj &gt; Fotoj kaj filmetoj &gt; Permesi ĉion.</string>
+    <string name="use_default_orientation">Uzi defaŭltan orientiĝon</string>
+    <string name="no_date_takens_found">Neniu prenodato estis trovita</string>
+    <string name="force_landscape">Ĉiam uzi horizontalan orientiĝon</string>
+    <string name="fix_date_taken">Korekti prenodaton</string>
+    <string name="dates_fixed_successfully">Datoj sukcese korektitaj</string>
+    <string name="share_resized">Kunhavigi regrandigitan version</string>
+    <string name="exclude_folder_parent">Anstataŭe ekskluzivi patron?</string>
+    <string name="no_media_with_filters">Neniu aŭdvidaĵo estis trovita kun la elektitaj filtroj.</string>
+    <string name="change_filters_underlined"><u>Ŝanĝi filtrojn</u></string>
+    <string name="switch_to_file_search">Ŝanĝiĝi al serĉo je ĉiuj videblaj dosierujoj</string>
+    <string name="set_as_default_folder">Difini kiel defaŭlta dosierujo</string>
+    <string name="unset_as_default_folder">Maldifini kiel defaŭlta dosierujo</string>
+    <string name="reorder_by_dragging">Reordigi dosierujojn per treni</string>
+    <string name="reorder_by_dragging_pro">Reordigi dosierujojn per treni (Pro)</string>
+    <string name="restore_to_path">Restaŭrado al \"%s\"</string>
+    <string name="filter_media">Filtri aŭdvidaĵojn</string>
+    <string name="hide_folder_description">Ĉi tiu funkcio kaŝas dosierujon per aldoni al ĝi dosieron nomitan \".nomedia\", kaj ankaŭ kaŝas ĉiujn subdosierujojn. Vi povos vidi ilin per baskuligi la opcion \"Montri kaŝitajn elementojn\" en la agordoj. Ĉu vi ŝatus adi?</string>
+    <string name="exclude_folder_description">Tio ĉi ekskluzivos la elekton kaj ĝiajn subdosierujojn el nur Fossify Galario. Vi povas administri ekskluzivitajn dosierujojn en la agordoj.</string>
 </resources>
