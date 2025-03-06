@@ -49,4 +49,35 @@
     <string name="filter_media">Filtri aŭdvidaĵojn</string>
     <string name="hide_folder_description">Ĉi tiu funkcio kaŝas dosierujon per aldoni al ĝi dosieron nomitan \".nomedia\", kaj ankaŭ kaŝas ĉiujn subdosierujojn. Vi povos vidi ilin per baskuligi la opcion \"Montri kaŝitajn elementojn\" en la agordoj. Ĉu vi ŝatus adi?</string>
     <string name="exclude_folder_description">Tio ĉi ekskluzivos la elekton kaj ĝiajn subdosierujojn el nur Fossify Galario. Vi povas administri ekskluzivitajn dosierujojn en la agordoj.</string>
+    <string name="keep_aspect_ratio">Gardi bildformaton</string>
+    <string name="invalid_values">Bonvolu enigi validan distingivon</string>
+    <string name="resize_multiple_images">Regrandigi multajn bildojn</string>
+    <string name="resize_factor">Regrandiga faktoro</string>
+    <string name="included_activity_placeholder">Se vi havas dosierujojn kun aŭdvidaĵoj kiuj ne estis rekonataj pro la aplikaĵo, vi povas permane aldoni ilin ĉi tie.\n\nAldoni elementojn ĉi tie ne ekskluzivos iun ajn alian dosierujon.</string>
+    <string name="resize_factor_error">Enigu nombron inter 10 kaj 90</string>
+    <string name="hidden_folders">Kaŝitaj dosierujoj</string>
+    <string name="hidden_folders_placeholder">Ŝajnas, ke vi havas neniun kaŝitan dosierujon kun \".nomedia\"-dosiero.</string>
+    <string name="manage_included_folders">Administri inkluzivitajn dosierujojn</string>
+    <string name="resize_and_save">Regrandigi elekton kaj konservi</string>
+    <string name="width">Larĝo</string>
+    <string name="height">Alto</string>
+    <string name="resize_factor_info">Regrandigi bildojn al donata procento, kiu devas esti inter 10 kaj 90.</string>
+    <string name="basic_editor">Simple redaktilo</string>
+    <string name="manage_hidden_folders">Administri kaŝitajn dosierujojn</string>
+    <string name="advanced_editor">Altnivela redaktilo</string>
+    <string name="rotate">Turni</string>
+    <string name="invalid_image_path">Nevalida vojo de bildo</string>
+    <string name="excluded_activity_placeholder">Ekskluzivi dosierujojn kaŝos ilin kaj iliajn subdosierujojn nur en Fossify Galerio, sed ili restos videble en aliaj aplikaĵoj.\n\nSe vi ankaŭ volas kaŝi ilin en aliaj aplikaĵoj, uzu la funkcion Kaŝi.</string>
+    <string name="hidden_all_files">Endas koncedi al la aplikaĵo atingon al ĉiuj dosieroj por vidi kaŝitajn dosierojn, aŭ ĝi ne funkcios.</string>
+    <string name="cant_unhide_folder">Se dosierujo aŭ ties patro havas punkton antaŭ sia nomo, ĝi estas kaŝita kaj ne povas esti malkaŝita ĉi tiel. Vi devas forigi la punkton per renomi ĝin.</string>
+    <string name="include_folders">Inkluzivitaj dosierujoj</string>
+    <string name="add_folder">Aldoni dosierujon</string>
+    <string name="no_media_add_included">Neniu aŭdvidaĵa dosiero estis trovita. Vi povas tion solvi per aldoni permane dosierujojn kun aŭdvidaĵoj.</string>
+    <string name="invalid_video_path">Nevalida vojo de filmeto</string>
+    <string name="images_resized_successfully">Bildoj sukcese regrandigitaj</string>
+    <string name="editor">Redaktilo</string>
+    <plurals name="failed_to_resize_images">
+        <item quantity="one">Malsukcesis regrandigi %d bildon</item>
+        <item quantity="other">Malsukcesis regrandigi %d bildojn</item>
+    </plurals>
 </resources>
