@@ -29,4 +29,5 @@
     <string name="excluded">(ekskluzivita)</string>
     <string name="show_all">Montri enhavon de ĉiuj dosierujoj</string>
     <string name="folder_view">Ŝanĝiĝi al dosieruja vido</string>
+    <string name="force_portrait">Ĉiam uzi vertikalan orientiĝon</string>
 </resources>
