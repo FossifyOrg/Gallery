@@ -213,7 +213,7 @@
     <string name="toggle_favorite">Activer/désactiver le favori</string>
     <string name="toggle_file_visibility">Visibilité du fichier</string>
     <string name="faq_1_title">Comment puis-je faire de Fossify Gallery la galerie par défaut ?</string>
-    <string name="faq_1_text">D\'abord, vous devez trouver la galerie actuellement par défaut dans la section Applis de vos paramètres de périphérique, cherchez un bouton qui dit quelque chose comme « Ouvrir par défaut », cliquez dessus, puis sélectionnez « Par défaut de clavier ». La prochaine fois que vous tenterez d\'ouvrir une image ou une vidéo, vous devriez voir un récupérateur d\'application, où vous pouvez sélectionner Fossify Gallery et en faire l\'application par défaut.</string>
+    <string name="faq_1_text">D\'abord, vous devez trouver la galerie actuellement par défaut dans la section Applications de vos paramètres de périphérique, cherchez un bouton qui dit quelque chose comme \"Ouvrir par défaut\", cliquez dessus, puis sélectionnez \"Effacer les valeurs par défaut\". La prochaine fois que vous tenterez d\'ouvrir une image ou une vidéo, vous devriez voir apparaître un sélecteur d\'application, où vous pouvez sélectionner Fossify Gallery et en faire l\'application par défaut.</string>
     <string name="faq_2_title">J\'ai verrouillé l\'application avec un mot de passe et je ne m\'en rappelle plus. Que faire \?</string>
     <string name="faq_2_text">Il y a deux façons de procéder. Soit vous réinstallez l\'application, soit vous recherchez l\'application dans les paramètres de l\'appareil et appuyez sur "Supprimer les données". Ceci réinitialisera seulement les paramètres de l\'application et ne supprimera pas vos fichiers.</string>
     <string name="faq_3_title">Comment faire pour qu\'un dossier soit toujours affiché tout en haut \?</string>
@@ -221,7 +221,7 @@
     <string name="faq_4_title">Comment avancer rapidement dans les vidéos \?</string>
     <string name="faq_4_text">Appuyez deux fois sur le côté de l\'écran, ou appuyez sur la valeur de durée actuelle ou maximale près de la barre de recherche. Si vous activez l\'ouverture des vidéos sur un écran séparé dans les paramètres de l\'application, vous pouvez également utiliser des gestes horizontaux.</string>
     <string name="faq_5_title">Quelle est la différence entre le masquage et l\'exclusion d\'un dossier ?</string>
-    <string name="faq_5_text">Exclure empêche l\'affichage du dossier seulement dans la galerie Fossify, tandis que Masquer fonctionne selon le système et il cache le dossier d\'autres galeries aussi. Il fonctionne en créant un fichier vide « .nomedia » dans le dossier donné, que vous pouvez ensuite supprimer avec n\'importe quel gestionnaire de fichier aussi. Notez que certains appareils ne permettent pas de cacher des dossiers comme Appareil photo, Captures d\'écran et Téléchargements.</string>
+    <string name="faq_5_text">Exclure empêche l\'affichage du dossier seulement dans la galerie Fossify, tandis que Masquer fonctionne selon le système et cache le dossier d\'autres galeries également. Il fonctionne en créant un fichier vide \".nomedia\" dans le dossier donné, que vous pouvez ensuite supprimer avec n\'importe quel gestionnaire de fichier aussi. Notez que certains appareils ne permettent pas de cacher des dossiers comme Appareil photo, Captures d\'écran et Téléchargements.</string>
     <string name="faq_6_title">Pourquoi des dossiers avec des pochettes d\'albums musicaux ou des miniatures d\'images sont affichés ?</string>
     <string name="faq_6_text">Il est possible que des dossiers qui ne devraient pas être affichés le soient. Vous pouvez les exclure facilement en les sélectionnant par un appui prolongé, puis en choisissant l\'option "Exclure le dossier", après quoi vous pouvez aussi sélectionner le dossier parent, ce qui devrait éviter l\'apparition de dossiers similaires.</string>
     <string name="faq_7_title">Un dossier avec des images n\'apparaît pas. Que faire \?</string>
@@ -256,4 +256,6 @@
     <string name="file_is_malformed_or_corrupted">Le fichier est altéré ou corrompu.</string>
     <string name="media_exceeds_device_capabilities">Le support dépasse les capacités de l\'appareil.</string>
     <string name="unsupported_format">Format non pris en charge.</string>
+    <string name="playback_speed">Vitesse de lecture</string>
+    <string name="failed_to_load_media">Échec de chargement du média.</string>
 </resources>

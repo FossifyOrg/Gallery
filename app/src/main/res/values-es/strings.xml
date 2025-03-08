@@ -3,7 +3,7 @@
     <string name="app_launcher_name">Galería</string>
     <string name="edit">Editar</string>
     <string name="open_camera">Abrir la cámara</string>
-    <string name="hidden">(Oculto)</string>
+    <string name="hidden">(oculto)</string>
     <string name="excluded">(no incluido)</string>
     <string name="pin_folder">Fijar carpeta</string>
     <string name="unpin_folder">No fijar carpeta</string>
@@ -22,7 +22,7 @@
     <string name="force_portrait">Forzar retrato</string>
     <string name="force_landscape">Forzar paisaje</string>
     <string name="use_default_orientation">Usar la orientación por defecto</string>
-    <string name="fix_date_taken">Fijar la fecha toma</string>
+    <string name="fix_date_taken">Arreglar fecha de la toma</string>
     <string name="fixing">Fijando…</string>
     <string name="dates_fixed_successfully">Fecha fijada correctamente</string>
     <string name="no_date_takens_found">No se han encontrado valores de fechas tomadas</string>
@@ -229,7 +229,7 @@
     <string name="faq_11_title">¿Puedo de alguna manera agrupar miniaturas de archivos multimedia\?</string>
     <string name="faq_11_text">Claro, solo use el elemento de menú \"Agrupar por \" mientras esté en la vista de miniaturas. Puede agrupar archivos según varios criterios, incluida la Fecha de toma. Si usa la función \"Mostrar todo el contenido de las carpetas\" también puede agruparlas por carpetas.</string>
     <string name="faq_12_title">La ordenación por fecha tomada no parece funcionar correctamente, ¿cómo puedo solucionarlo\?</string>
-    <string name="faq_12_text">Lo más probable es que sea causado por los archivos que se copian de algún lugar. Puede solucionarlo seleccionando las miniaturas de archivo y seleccionando \"Fijar fecha de toma\".</string>
+    <string name="faq_12_text">Lo más probable es que sea causado por los archivos que se copian de algún lugar. Puedes arreglarlo seleccionando las miniaturas de archivo y seleccionando \"Arreglar fecha de la toma\".</string>
     <string name="faq_13_title">Veo algunas bandas de color en las imágenes. ¿Cómo puedo mejorar la calidad\?</string>
     <string name="faq_13_text">La solución actual para mostrar imágenes funciona bien en la gran mayoría de los casos, pero si desea una calidad de imagen aún mejor, puede habilitar \"Mostrar imágenes con la mayor calidad posible\" en la configuración de la aplicación, en la sección \"Imágenes ampliables con zoom\".</string>
     <string name="faq_14_title">He ocultado un archivo/carpeta. ¿Cómo puedo desocultarlo\?</string>
