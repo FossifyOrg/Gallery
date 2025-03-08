@@ -80,4 +80,5 @@
         <item quantity="one">Malsukcesis regrandigi %d bildon</item>
         <item quantity="other">Malsukcesis regrandigi %d bildojn</item>
     </plurals>
+    <string name="image_editing_failed">Malsukcesis la redakto de bildo</string>
 </resources>
