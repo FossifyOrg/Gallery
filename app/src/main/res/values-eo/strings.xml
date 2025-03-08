@@ -81,4 +81,30 @@
         <item quantity="other">Malsukcesis regrandigi %d bildojn</item>
     </plurals>
     <string name="image_editing_failed">Malsukcesis la redakto de bildo</string>
+    <string name="image_editing_cancelled">Redakto de bildo nuligita</string>
+    <string name="video_editing_cancelled">Redakto de filmeto nuligita</string>
+    <string name="error_saving_file">Ne povis superskribi la fontan dosieron</string>
+    <string name="transform">Transformi</string>
+    <string name="draw">Desegni</string>
+    <string name="flip">Renversi</string>
+    <string name="set_as_wallpaper_failed">Malsukcesis difini kiel ekranfono</string>
+    <string name="free_aspect_ratio">Libera</string>
+    <string name="other_aspect_ratio">Alia</string>
+    <string name="wallpaper">Ekranfono</string>
+    <string name="set_as_wallpaper">Difini kiel ekranfono</string>
+    <string name="flip_vertically">Renversi vertikale</string>
+    <string name="flip_horizontally">Renversi horizontale</string>
+    <string name="video_editing_failed">Malsukcesis la redakto de filmeto</string>
+    <string name="file_edited_successfully">Dosiero sukcese redaktita</string>
+    <string name="edit_video_with">Redakti filmeton per:</string>
+    <string name="no_image_editor_found">Neniu bildoredaktilo estis trovita</string>
+    <string name="no_video_editor_found">Neniu filmoredaktilo estis trovita</string>
+    <string name="unknown_file_location">Nekonata dosierloko</string>
+    <string name="image_edited_successfully">Bildo sukcese redaktita</string>
+    <string name="video_edited_successfully">Filmeto sukcese redaktita</string>
+    <string name="edit_image_with">Redakti bildon per:</string>
+    <string name="rotate_right">Turni dekstre</string>
+    <string name="rotate_one_eighty">Turni 180°</string>
+    <string name="crop">Tondi</string>
+    <string name="rotate_left">Turni maldekstre</string>
 </resources>
