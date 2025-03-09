@@ -137,4 +137,12 @@
     <string name="group_by">Grupigi per</string>
     <string name="slideshow_ended">La bildserio finiĝis</string>
     <string name="do_not_group_files">Ne grupigi dosierojn</string>
+    <string name="by_file_type">Dosiertipo</string>
+    <string name="by_date_taken">Kreodato</string>
+    <string name="by_date_taken_daily">Kreodato (tage)</string>
+    <string name="by_date_taken_monthly">Kreodato (monate)</string>
+    <string name="by_extension">Dosiersufikso</string>
+    <string name="grouping_and_sorting">Bonvolu rimarki, ke grupigado kaj ordigado estas du apartaj kampoj</string>
+    <string name="folder_on_widget">Dosierujo montrita en la fenestraĵo:</string>
+    <string name="show_file_count_section_header">Montri nombron de dosieroj en sekciokapoj</string>
 </resources>
