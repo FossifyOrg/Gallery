@@ -150,4 +150,11 @@
     <string name="loop_videos">Ripeti filmetojn</string>
     <string name="animate_gifs">Ŝalti animacion de GIF-aj bildetoj</string>
     <string name="show_folder_name">Montri nomon de dosierujo</string>
+    <string name="max_brightness">Maksimuma heleco dum montrado de plenekranaj aŭdvidaĵoj</string>
+    <string name="crop_thumbnails">Kvadrate tondi bildetojn</string>
+    <string name="screen_rotation_device_rotation">Orientiĝo de aparato</string>
+    <string name="screen_rotation_aspect_ratio">Bildformato</string>
+    <string name="screen_rotation_by">Turni plenekranajn aŭdvidaĵojn laŭ</string>
+    <string name="screen_rotation_system_setting">Sistema agordo</string>
+    <string name="show_thumbnail_video_duration">Montri daŭrojn de filmetoj</string>
 </resources>
