@@ -145,4 +145,9 @@
     <string name="grouping_and_sorting">Bonvolu rimarki, ke grupigado kaj ordigado estas du apartaj kampoj</string>
     <string name="folder_on_widget">Dosierujo montrita en la fenestraĵo:</string>
     <string name="show_file_count_section_header">Montri nombron de dosieroj en sekciokapoj</string>
+    <string name="autoplay_videos">Aŭtomate legi filmetojn</string>
+    <string name="remember_last_video_position">Memori lastan pozicion de legado de filmeto</string>
+    <string name="loop_videos">Ripeti filmetojn</string>
+    <string name="animate_gifs">Ŝalti animacion de GIF-aj bildetoj</string>
+    <string name="show_folder_name">Montri nomon de dosierujo</string>
 </resources>
