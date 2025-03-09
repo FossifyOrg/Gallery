@@ -1,0 +1,2 @@
+* Rimossa la libreria panorama proprietaria
+* Aggiunte alcune traduzioni

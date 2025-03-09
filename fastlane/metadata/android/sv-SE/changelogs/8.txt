@@ -1,9 +1,9 @@
-*Initialt stöd för JPEG XL-format
-*Updaterade målandroidversion till 14
-*Lade till funktion att ändra videors tillbakaspolingshastighet
-*Lade till funktion att tysta videor
-*Ersatte kryssrutor med brytare
-*Lade till ett felmeddelande när media inte lyckas ladda
-*Förbättrade applåsningsfunktionen och användargränssnitt
-*Fixade småbuggar och små förbättringar
-*Lade till fler översättningar
+* Initialt stöd för JPEG XL-format
+* Uppdaterade målandroidversion till 14
+* Lade till funktion att ändra videors tillbakaspolingshastighet
+* Lade till funktion att tysta videor
+* Ersatte kryssrutor med brytare
+* Lade till ett felmeddelande när media inte lyckas ladda
+* Förbättrade applåsningsfunktionen och användargränssnitt
+* Fixade småbuggar och små förbättringar
+* Lade till fler översättningar
