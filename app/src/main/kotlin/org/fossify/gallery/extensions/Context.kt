@@ -37,7 +37,6 @@ import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.*
 import org.fossify.commons.views.MySquareImageView
 import org.fossify.gallery.R
-import org.fossify.gallery.SORT_BY_COUNT
 import org.fossify.gallery.asynctasks.GetMediaAsynctask
 import org.fossify.gallery.databases.GalleryDatabase
 import org.fossify.gallery.helpers.*

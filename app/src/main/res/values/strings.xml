@@ -289,7 +289,4 @@
         Haven't found some strings? There's more at
         https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
     -->
-
-    <!-- Replace with strings.xml from Commons, then delete these lines. -->
-    <string name="number_of_items">Number of items</string>
 </resources>
