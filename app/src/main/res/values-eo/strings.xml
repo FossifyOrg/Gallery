@@ -157,4 +157,8 @@
     <string name="screen_rotation_by">Turni plenekranajn aŭdvidaĵojn laŭ</string>
     <string name="screen_rotation_system_setting">Sistema agordo</string>
     <string name="show_thumbnail_video_duration">Montri daŭrojn de filmetoj</string>
+    <string name="delete_empty_folders">Forigi malplenajn dosierujojn post forigi ilian enhavon</string>
+    <string name="black_background_at_fullscreen">Nigra fono por plenekranaj aŭdvidaĵoj</string>
+    <string name="scroll_thumbnails_horizontally">Rulumi bildetojn horizontale</string>
+    <string name="hide_system_ui_at_fullscreen">Aŭtomate kaŝi sisteman interfacon por plenekranaj aŭdvidaĵoj</string>
 </resources>
