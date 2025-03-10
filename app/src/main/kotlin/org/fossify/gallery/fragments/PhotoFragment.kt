@@ -1,10 +1,7 @@
 package org.fossify.gallery.fragments
 
 import android.content.res.Configuration
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.Color
-import android.graphics.Matrix
+import android.graphics.*
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.PictureDrawable
@@ -13,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -20,6 +18,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.exifinterface.media.ExifInterface.*
 import com.alexvasilkov.gestures.GestureController
+import com.alexvasilkov.gestures.GravityUtils
 import com.alexvasilkov.gestures.State
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
@@ -43,6 +42,7 @@ import it.sephiroth.android.library.exif2.ExifInterface
 import org.apache.sanselan.common.byteSources.ByteSourceInputStream
 import org.apache.sanselan.formats.jpeg.JpegImageParser
 import org.fossify.commons.activities.BaseSimpleActivity
+import org.fossify.commons.compose.theme.md_blue
 import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isRPlus
@@ -62,6 +62,7 @@ import pl.droidsonroids.gif.InputSource
 import java.io.File
 import java.io.FileOutputStream
 import java.util.Locale
+import kotlin.math.abs
 import kotlin.math.ceil
 
 class PhotoFragment : ViewPagerFragment() {
@@ -90,6 +91,7 @@ class PhotoFragment : ViewPagerFragment() {
     private var mScreenHeight = 0
     private var mCurrentGestureViewZoom = 1f
     private var mIsTouched = false
+    private var mInitialZoom = 1f
 
     private var mStoredShowExtendedDetails = false
     private var mStoredHideExtendedDetails = false
@@ -126,6 +128,8 @@ class PhotoFragment : ViewPagerFragment() {
             instantPrevItem.parentView = container
             instantNextItem.parentView = container
 
+            gesturesView.controller.settings.isRotationEnabled = true
+
             photoBrightnessController.initialize(activity, slideInfo, true, container, singleTap = { x, y ->
                 mView.apply {
                     if (subsamplingView.isVisible()) {
@@ -146,21 +150,27 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
                     override fun onStateChanged(state: State) {
-                        if (!mIsTouched) {
+                        mCurrentGestureViewZoom = state.zoom
+                        val rotation = normalizeAngle(state.rotation.toInt())
+                        if (!mIsTouched || (State.equals((state.rotation % 90.0F), 0.0F) && !State.equals(
+                                rotation.toFloat(),
+                                mCurrentRotationDegrees.toFloat()
+                            ))
+                        ) {
                             gesturesView.controller.settings.apply {
                                 if (hasImageSize() && hasViewportSize()) {
-                                    doubleTapZoom = (viewportWidth.toFloat() / imageWidth).coerceAtLeast(viewportHeight.toFloat() / imageHeight)
+                                    mCurrentRotationDegrees = normalizeAngle(rotation)
+                                    val fitZoom = getFitZoom(mCurrentRotationDegrees)
+                                    mInitialZoom = fitZoom
                                 }
                             }
-
                         }
-                        mCurrentGestureViewZoom = state.zoom
                     }
                 })
 
                 gesturesView.setOnTouchListener { v, event ->
                     mIsTouched = true
-                    if (mCurrentGestureViewZoom == 1f) {
+                    if (abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
                         handleEvent(event)
                     }
                     false
@@ -837,10 +847,45 @@ class PhotoFragment : ViewPagerFragment() {
             binding.subsamplingView.rotateBy(degrees)
         } else {
             mCurrentRotationDegrees = (mCurrentRotationDegrees + degrees) % 360
-            binding.gesturesView.controller.state.rotateTo(mCurrentRotationDegrees.toFloat(), 0f, 0f)
             mLoadZoomableViewHandler.removeCallbacksAndMessages(null)
             mIsSubsamplingVisible = false
-            loadBitmap()
+            val path = getFilePathToShow()
+            if (path.isWebP()) {
+                rotateGestureView()
+            } else {
+                loadBitmap()
+            }
+        }
+    }
+
+    private fun rotateGestureView() {
+        val state = binding.gesturesView.controller.state
+        binding.gesturesView.controller.settings.apply {
+            if (hasImageSize() && hasViewportSize()) {
+                val fitZoom = getFitZoom(mCurrentRotationDegrees)
+                val point = Point()
+                GravityUtils.getDefaultPivot(binding.gesturesView.controller.settings, point)
+                state.rotateTo(mCurrentRotationDegrees.toFloat(), point.x.toFloat(), point.y.toFloat())
+                if (abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                    state.zoomTo(fitZoom, point.x.toFloat(), point.y.toFloat())
+                }
+                mInitialZoom = fitZoom
+                binding.gesturesView.controller.updateState()
+            }
+        }
+    }
+
+    private fun getFitZoom(rotation: Int): Float {
+        binding.gesturesView.controller.settings.apply {
+            val fitZoom: Float
+            if (State.equals(rotation.toFloat(), 90F) || State.equals(rotation.toFloat(), 270F)) {
+                fitZoom = (viewportWidth.toFloat() / imageHeight).coerceAtMost(viewportHeight.toFloat() / imageWidth)
+                doubleTapZoom = (viewportWidth.toFloat() / imageHeight).coerceAtLeast(viewportHeight.toFloat() / imageWidth)
+            } else {
+                fitZoom = (viewportWidth.toFloat() / imageWidth).coerceAtMost(viewportHeight.toFloat() / imageHeight)
+                doubleTapZoom = (viewportWidth.toFloat() / imageWidth).coerceAtLeast(viewportHeight.toFloat() / imageHeight)
+            }
+            return fitZoom
         }
     }
 
@@ -912,5 +957,9 @@ class PhotoFragment : ViewPagerFragment() {
         val fullscreenOffset = smallMargin + if (mIsFullscreen) 0 else requireContext().navigationBarHeight
         val actionsHeight = if (requireContext().config.bottomActions && !mIsFullscreen) resources.getDimension(R.dimen.bottom_actions_height) else 0f
         return requireContext().realScreenSize.y - height - actionsHeight - fullscreenOffset
+    }
+
+    fun normalizeAngle(angle: Int): Int {
+        return ((angle % 360) + 360) % 360
     }
 }
