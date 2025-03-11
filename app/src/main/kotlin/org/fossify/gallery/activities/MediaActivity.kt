@@ -1,14 +1,13 @@
 package org.fossify.gallery.activities
 
-import android.app.Activity
 import android.app.WallpaperManager
 import android.content.Intent
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import androidx.core.net.toUri
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -318,7 +317,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         if (requestCode == REQUEST_EDIT_IMAGE) {
-            if (resultCode == Activity.RESULT_OK && resultData != null) {
+            if (resultCode == RESULT_OK && resultData != null) {
                 mMedia.clear()
                 refreshItems()
             }
@@ -944,7 +943,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
                     ) {
                         try {
                             WallpaperManager.getInstance(applicationContext).setBitmap(resource)
-                            setResult(Activity.RESULT_OK)
+                            setResult(RESULT_OK)
                         } catch (ignored: IOException) {
                         }
 
@@ -953,8 +952,8 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
                 })
         } else if (mIsGetImageIntent || mIsGetVideoIntent || mIsGetAnyIntent) {
             Intent().apply {
-                data = Uri.parse(path)
-                setResult(Activity.RESULT_OK, this)
+                data = path.toUri()
+                setResult(RESULT_OK, this)
             }
             finish()
         } else {
@@ -1091,7 +1090,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     override fun selectedPaths(paths: ArrayList<String>) {
         Intent().apply {
             putExtra(PICKED_PATHS, paths)
-            setResult(Activity.RESULT_OK, this)
+            setResult(RESULT_OK, this)
         }
         finish()
     }

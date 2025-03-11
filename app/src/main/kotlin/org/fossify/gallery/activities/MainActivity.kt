@@ -401,7 +401,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
             if (mCurrentPathPrefix.isEmpty()) {
                 super.onBackPressed()
             } else {
-                mOpenedSubfolders.removeLast()
+                mOpenedSubfolders.removeAt(mOpenedSubfolders.lastIndex)
                 mCurrentPathPrefix = mOpenedSubfolders.last()
                 setupAdapter(mDirs)
             }
