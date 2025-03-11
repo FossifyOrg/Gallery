@@ -33,22 +33,89 @@ import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.signature.ObjectKey
 import com.squareup.picasso.Picasso
-import org.fossify.commons.extensions.*
-import org.fossify.commons.helpers.*
+import org.fossify.commons.extensions.doesThisOrParentHaveNoMedia
+import org.fossify.commons.extensions.getDocumentFile
+import org.fossify.commons.extensions.getDoesFilePathExist
+import org.fossify.commons.extensions.getDuration
+import org.fossify.commons.extensions.getFilenameFromPath
+import org.fossify.commons.extensions.getLongValue
+import org.fossify.commons.extensions.getOTGPublicPath
+import org.fossify.commons.extensions.getParentPath
+import org.fossify.commons.extensions.getStringValue
+import org.fossify.commons.extensions.humanizePath
+import org.fossify.commons.extensions.internalStoragePath
+import org.fossify.commons.extensions.isGif
+import org.fossify.commons.extensions.isPathOnOTG
+import org.fossify.commons.extensions.isPathOnSD
+import org.fossify.commons.extensions.isPng
+import org.fossify.commons.extensions.isPortrait
+import org.fossify.commons.extensions.isRawFast
+import org.fossify.commons.extensions.isSvg
+import org.fossify.commons.extensions.isVideoFast
+import org.fossify.commons.extensions.isWebP
+import org.fossify.commons.extensions.normalizeString
+import org.fossify.commons.extensions.otgPath
+import org.fossify.commons.extensions.recycleBinPath
+import org.fossify.commons.extensions.sdCardPath
+import org.fossify.commons.extensions.toast
+import org.fossify.commons.helpers.AlphanumericComparator
+import org.fossify.commons.helpers.FAVORITES
+import org.fossify.commons.helpers.NOMEDIA
+import org.fossify.commons.helpers.SORT_BY_COUNT
+import org.fossify.commons.helpers.SORT_BY_CUSTOM
+import org.fossify.commons.helpers.SORT_BY_DATE_MODIFIED
+import org.fossify.commons.helpers.SORT_BY_DATE_TAKEN
+import org.fossify.commons.helpers.SORT_BY_NAME
+import org.fossify.commons.helpers.SORT_BY_PATH
+import org.fossify.commons.helpers.SORT_BY_RANDOM
+import org.fossify.commons.helpers.SORT_BY_SIZE
+import org.fossify.commons.helpers.SORT_DESCENDING
+import org.fossify.commons.helpers.SORT_USE_NUMERIC_VALUE
+import org.fossify.commons.helpers.ensureBackgroundThread
+import org.fossify.commons.helpers.sumByLong
 import org.fossify.commons.views.MySquareImageView
 import org.fossify.gallery.R
 import org.fossify.gallery.asynctasks.GetMediaAsynctask
 import org.fossify.gallery.databases.GalleryDatabase
-import org.fossify.gallery.helpers.*
-import org.fossify.gallery.interfaces.*
-import org.fossify.gallery.models.*
+import org.fossify.gallery.helpers.Config
+import org.fossify.gallery.helpers.GROUP_BY_DATE_TAKEN_DAILY
+import org.fossify.gallery.helpers.GROUP_BY_DATE_TAKEN_MONTHLY
+import org.fossify.gallery.helpers.GROUP_BY_LAST_MODIFIED_DAILY
+import org.fossify.gallery.helpers.GROUP_BY_LAST_MODIFIED_MONTHLY
+import org.fossify.gallery.helpers.IsoTypeReader
+import org.fossify.gallery.helpers.LOCATION_INTERNAL
+import org.fossify.gallery.helpers.LOCATION_OTG
+import org.fossify.gallery.helpers.LOCATION_SD
+import org.fossify.gallery.helpers.MediaFetcher
+import org.fossify.gallery.helpers.MyWidgetProvider
+import org.fossify.gallery.helpers.PicassoRoundedCornersTransformation
+import org.fossify.gallery.helpers.RECYCLE_BIN
+import org.fossify.gallery.helpers.ROUNDED_CORNERS_NONE
+import org.fossify.gallery.helpers.ROUNDED_CORNERS_SMALL
+import org.fossify.gallery.helpers.SHOW_ALL
+import org.fossify.gallery.helpers.THUMBNAIL_FADE_DURATION_MS
+import org.fossify.gallery.helpers.TYPE_GIFS
+import org.fossify.gallery.helpers.TYPE_IMAGES
+import org.fossify.gallery.helpers.TYPE_PORTRAITS
+import org.fossify.gallery.helpers.TYPE_RAWS
+import org.fossify.gallery.helpers.TYPE_SVGS
+import org.fossify.gallery.helpers.TYPE_VIDEOS
+import org.fossify.gallery.interfaces.DateTakensDao
+import org.fossify.gallery.interfaces.DirectoryDao
+import org.fossify.gallery.interfaces.FavoritesDao
+import org.fossify.gallery.interfaces.MediumDao
+import org.fossify.gallery.interfaces.WidgetsDao
+import org.fossify.gallery.models.AlbumCover
+import org.fossify.gallery.models.Directory
+import org.fossify.gallery.models.Favorite
+import org.fossify.gallery.models.Medium
+import org.fossify.gallery.models.ThumbnailItem
 import org.fossify.gallery.svg.SvgSoftwareLayerSetter
 import java.io.File
 import java.io.FileInputStream
 import java.nio.ByteBuffer
 import java.nio.channels.FileChannel
 import java.util.Locale
-import kotlin.collections.set
 import kotlin.math.max
 
 val Context.audioManager get() = getSystemService(Context.AUDIO_SERVICE) as AudioManager
@@ -163,11 +230,6 @@ fun Context.getSortedDirectories(source: ArrayList<Directory>): ArrayList<Direct
                     o1.sortValue.lowercase(Locale.getDefault()).compareTo(o2.sortValue.lowercase(Locale.getDefault()))
                 }
             }
-
-            sorting and SORT_BY_PATH != 0 -> AlphanumericComparator().compare(
-                o1.sortValue.lowercase(Locale.getDefault()),
-                o2.sortValue.lowercase(Locale.getDefault())
-            )
 
             sorting and SORT_BY_SIZE != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
             sorting and SORT_BY_COUNT != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
