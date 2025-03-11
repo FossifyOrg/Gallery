@@ -13,7 +13,7 @@ exif = "1.0.1"
 #Room
 room = "2.6.1"
 #Fossify
-commons = "39c99b73c7"
+commons = "3dd1f7f33e"
 #Gradle4
 gradlePlugins-agp = "8.6.1"
 #Other

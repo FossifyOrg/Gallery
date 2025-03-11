@@ -22,6 +22,7 @@ class ChangeSortingDialog(
     init {
         currSorting = if (isDirectorySorting) config.directorySorting else config.getFolderSorting(pathToUse)
         binding = DialogChangeSortingBinding.inflate(activity.layoutInflater).apply {
+            sortingDialogRadioNumberOfItems.beVisibleIf(isDirectorySorting)
             sortingDialogOrderDivider.beVisibleIf(showFolderCheckbox || (currSorting and SORT_BY_NAME != 0 || currSorting and SORT_BY_PATH != 0))
 
             sortingDialogNumericSorting.beVisibleIf(showFolderCheckbox && (currSorting and SORT_BY_NAME != 0 || currSorting and SORT_BY_PATH != 0))
@@ -59,6 +60,7 @@ class ChangeSortingDialog(
         val sortBtn = when {
             currSorting and SORT_BY_PATH != 0 -> binding.sortingDialogRadioPath
             currSorting and SORT_BY_SIZE != 0 -> binding.sortingDialogRadioSize
+            currSorting and SORT_BY_COUNT != 0 -> binding.sortingDialogRadioNumberOfItems
             currSorting and SORT_BY_DATE_MODIFIED != 0 -> binding.sortingDialogRadioLastModified
             currSorting and SORT_BY_DATE_TAKEN != 0 -> binding.sortingDialogRadioDateTaken
             currSorting and SORT_BY_RANDOM != 0 -> binding.sortingDialogRadioRandom
@@ -83,6 +85,7 @@ class ChangeSortingDialog(
             R.id.sorting_dialog_radio_name -> SORT_BY_NAME
             R.id.sorting_dialog_radio_path -> SORT_BY_PATH
             R.id.sorting_dialog_radio_size -> SORT_BY_SIZE
+            R.id.sorting_dialog_radio_number_of_items -> SORT_BY_COUNT
             R.id.sorting_dialog_radio_last_modified -> SORT_BY_DATE_MODIFIED
             R.id.sorting_dialog_radio_random -> SORT_BY_RANDOM
             R.id.sorting_dialog_radio_custom -> SORT_BY_CUSTOM

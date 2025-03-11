@@ -124,7 +124,7 @@ fun Context.getSortedDirectories(source: ArrayList<Directory>): ArrayList<Direct
         return newDirsOrdered
     }
 
-    dirs.sortWith(Comparator { o1, o2 ->
+    dirs.sortWith { o1, o2 ->
         o1 as Directory
         o2 as Directory
 
@@ -170,6 +170,7 @@ fun Context.getSortedDirectories(source: ArrayList<Directory>): ArrayList<Direct
             )
 
             sorting and SORT_BY_SIZE != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
+            sorting and SORT_BY_COUNT != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
             sorting and SORT_BY_DATE_MODIFIED != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
             else -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
         }
@@ -178,7 +179,7 @@ fun Context.getSortedDirectories(source: ArrayList<Directory>): ArrayList<Direct
             result *= -1
         }
         result
-    })
+    }
 
     return movePinnedDirectoriesToFront(dirs)
 }
@@ -1061,16 +1062,18 @@ fun Context.createDirectoryFromMedia(
     val dateTaken = if (isSortingAscending) Math.min(firstItem.taken, lastItem.taken) else Math.max(firstItem.taken, lastItem.taken)
     val size = if (getProperFileSize) curMedia.sumByLong { it.size } else 0L
     val mediaTypes = curMedia.getDirMediaTypes()
-    val sortValue = getDirectorySortingValue(curMedia, path, dirName, size)
+    val count = curMedia.size
+    val sortValue = getDirectorySortingValue(curMedia, path, dirName, size, count)
     return Directory(null, path, thumbnail!!, dirName, curMedia.size, lastModified, dateTaken, size, getPathLocation(path), mediaTypes, sortValue)
 }
 
-fun Context.getDirectorySortingValue(media: ArrayList<Medium>, path: String, name: String, size: Long): String {
+fun Context.getDirectorySortingValue(media: ArrayList<Medium>, path: String, name: String, size: Long, count: Int): String {
     val sorting = config.directorySorting
     val sorted = when {
         sorting and SORT_BY_NAME != 0 -> return name
         sorting and SORT_BY_PATH != 0 -> return path
         sorting and SORT_BY_SIZE != 0 -> return size.toString()
+        sorting and SORT_BY_COUNT != 0 -> return count.toString()
         sorting and SORT_BY_DATE_MODIFIED != 0 -> media.sortedBy { it.modified }
         sorting and SORT_BY_DATE_TAKEN != 0 -> media.sortedBy { it.taken }
         else -> media

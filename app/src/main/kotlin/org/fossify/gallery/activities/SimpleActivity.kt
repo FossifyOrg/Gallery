@@ -59,6 +59,8 @@ open class SimpleActivity : BaseSimpleActivity() {
 
     override fun getAppLauncherName() = getString(R.string.app_launcher_name)
 
+    override fun getRepositoryName() = "Gallery"
+
     protected fun checkNotchSupport() {
         if (isPiePlus()) {
             val cutoutMode = when {
