@@ -231,9 +231,7 @@ fun Context.getSortedDirectories(source: ArrayList<Directory>): ArrayList<Direct
                 }
             }
 
-            sorting and SORT_BY_SIZE != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
-            sorting and SORT_BY_COUNT != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
-            sorting and SORT_BY_DATE_MODIFIED != 0 -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
+            // SORT_BY_SIZE, SORT_BY_COUNT, SORT_BY_DATE_MODIFIED are numerical
             else -> (o1.sortValue.toLongOrNull() ?: 0).compareTo(o2.sortValue.toLongOrNull() ?: 0)
         }
 
