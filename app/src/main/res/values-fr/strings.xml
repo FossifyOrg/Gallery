@@ -198,8 +198,8 @@
     <string name="media_management_prompt">Pour vous assurer que toutes les opérations de fichiers fonctionnent de manière fiable, veuillez faire de cette application l\'application de gestion des médias dans les paramètres de votre appareil.</string>
     <string name="password_protect_excluded">Protection par mot de passe de la visibilité des dossiers exclus</string>
     <string name="media_management_manual">Quelque chose s\'est mal passé, veuillez aller dans les paramètres de votre appareil - Applis - Accès spécial des applis - Applis de gestion des fichiers multimédias et autorisez cette application à gérer les médias.</string>
-    <string name="media_management_note">Si la redirection ne fonctionne pas, allez dans les paramètres de votre appareil - Applis - Accès aux applications spéciales - Applis de gestion des médias et autorisez cette application à gérer les médias.</string>
-    <string name="media_management_alternative">Si vous ne voulez pas le faire, vous pouvez aussi aller dans les Paramètres de votre appareil - Applis - Accès aux applications spéciales - Applis de gestion des médias et autoriser cette application à gérer les médias.</string>
+    <string name="media_management_note">Si la redirection ne fonctionne pas, allez dans les paramètres de votre appareil - Applis - Accès spécial des applis - Applis de gestion des fichiers multimédias et autorisez cette application à gérer les médias.</string>
+    <string name="media_management_alternative">Si vous ne voulez pas le faire, vous pouvez aussi aller dans les Paramètres de votre appareil - Applis - Accès spécial des applis - Applis de gestion des fichiers multimédias et autoriser cette application à gérer les médias.</string>
     <string name="alternative_media_access">Vous pouvez également n\'autoriser que l\'accès aux fichiers multimédias. Dans ce cas, vous ne pourrez cependant pas travailler avec les fichiers cachés.</string>
     <string name="media_only">Médias uniquement</string>
     <string name="all_files">Tous les fichiers</string>
