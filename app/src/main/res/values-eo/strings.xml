@@ -134,7 +134,7 @@
     <string name="slide">Glito</string>
     <string name="no_media_for_slideshow">Neniu aŭdvidaĵo por la bildserio estis trovita</string>
     <string name="group_direct_subfolders">Grupigi rektajn subdosierujojn</string>
-    <string name="group_by">Grupigi per</string>
+    <string name="group_by">Grupigi laŭ</string>
     <string name="slideshow_ended">La bildserio finiĝis</string>
     <string name="do_not_group_files">Ne grupigi dosierojn</string>
     <string name="by_file_type">Dosiertipo</string>
@@ -226,4 +226,20 @@
     <string name="faq_3_text">Vi povas longe premi la deziratan albumon kaj elekti la pinglan bildsimbolon en la meno de akcioj por alpingli ĝin al la supro. Ankaŭ eblas alpingli plurajn dosierujoj, kaj la alpinglitaj elementoj estos ordigitaj laŭ la defaŭlta ordigoreĝimo.</string>
     <string name="faq_2_text">Estas du eblaj solvoj. Aŭ vi povas reinstali la aplikaĵon, aŭ vi povas trovi la aplikaĵon en viaj aparataj agordoj aj elekti \"forviŝi datumojn\". Tio rekomencigos ĉiujn viajn agordojn sen forigi iun ajn dosieron.</string>
     <string name="faq_4_text">Vi povas aŭ duoble frapeti la flankon de la ekrano aŭ frapeti la tekston de aktuala aŭ maksimuma daŭroj proksime de la serĉobreto. Se vi ŝaltas la malfermadon de filmetoj en alia ekrano en la aplikaĵaj agordoj, vi ankaŭ povas uzi horizontalajn moviĝojn.</string>
+    <string name="faq_10_title">Ĉu mi povas tondi bildojn helpe de tiu ĉi aplikaĵo?</string>
+    <string name="faq_11_text">Kompreneble, nur uzi la opcion \"Grupigi laŭ\" en la bildeta vido. Eblas grupigi dosierojn laŭ pluraj kriterioj kiel prenodato. Se vi uzas la funkcion \"Montri enhavon de ĉiuj dosierujoj\", vi ankaŭ povas grupigi ilin laŭ dosierujoj.</string>
+    <string name="faq_5_title">Kio estas la diferenco inter kaŝi kaj ekskluzivi dosierujon?</string>
+    <string name="faq_13_text">La nuna solvo por montri bildojn kutime funkcias bone, sed se vi volas eĉ pli bonan kvaliton de bildoj, vi povas ŝalti \"Montri bildojn kun laŭeble plej alta kvalito\" en la aplikaĵaj agordoj en la sekcio \"Profunde zomeblaj bildoj\".</string>
+    <string name="faq_7_title">Dosierujo kun bildoj ne aperas aŭ ne montras ĉiujn bildojn. Kion mi povas fari?</string>
+    <string name="faq_8_title">Kion mi faras se mi nur volas, ke kelkaj specifaj dosierujoj aperu?</string>
+    <string name="faq_6_text">Eblas, ke kelkaj nekutimaj albumoj aperas. Vi povas facile ekskluzivi ilin per longe premi ilin kaj elekti Ekskluzivi. Tiam vi povas elekti la patran dosierujon, kaj tio ankaŭ verŝajne evitos, ke aliaj rilataj albumoj aperu.</string>
+    <string name="faq_6_title">Kial aperas dosierujoj kun albumartoj aŭ glumarkoj?</string>
+    <string name="faq_5_text">Ekskluzivi evitas montri la dosierujon nur en Fossify Galerio, kaj kaŝi funkcias tutsisteme por ankaŭ kaŝi la dosierujon el aliaj galerioj. Ĝi tion faras per krei malplenan dosieron \".nomedia\" en la dosierujo, kiun oni ankaŭ povas forigi per iu ajn dosieradministrilo. Rimarku, ke kelkaj aparatoj ne permesas kaŝi dosierujojn kiel Kamerao, Ekrankopioj kaj Elŝutoj.</string>
+    <string name="faq_10_text">Jes, vi povas tondi bildojn en la redaktilo per treni la angulojn de la bildo. Vi povas atingi la redaktilon per aŭ longe premi bildeton kaj elekti Redakti aŭ elekti Redakti el la plenekrana vido.</string>
+    <string name="faq_7_text">Estas pluraj eblaj kaŭzoj, sed facilas solvi ĝin. Nur iru al Agordoj -&gt; Administri inkluzivitajn dosierujojn, frapetu la + kaj iru al la dezirata dosierujo.</string>
+    <string name="faq_11_title">Ĉu eblas iel grupigi bildetojn de aŭdvidaĵaj dosierujoj?</string>
+    <string name="faq_12_title">Ordigi laŭ prenodato ne ŝajnas ĝuste funkcii. Kiel mi povas tion korekti?</string>
+    <string name="faq_8_text">Aldoni dosierujon al la inkluzivitaj dosierujoj nenion ajn aŭtomate ekskluzivas. Tio kion vi povas fari estas iri al Agordoj -&gt; Administri ekskluzivitajn dosierujojn, ekskluzivi la radikan dosierujon \"/\" kaj aldoni la deziratajn dosierujojn je Agordoj -&gt; Administri inkluzivitajn dosierujojn. Tiel, nur la elektitaj dosierujoj videblos, ĉar ekskluzivi kaj inkluzivi estas rikuraj, kaj dosierujoj kiuj estas samtempe ekskluzivitaj kaj inkluzivitaj aperas en la aplikaĵo.</string>
+    <string name="faq_13_title">Mi vidas striojn de koloroj en la bildoj. Kiel mi povas plibonigi la kvaliton?</string>
+    <string name="faq_12_text">Verŝajne estas ĉar la dosieroj estis kopiitaj el alia loko. Vi povas tion korekti per elekti la bildetojn de la dosieroj kaj elekti \"Korekti prenodaton\".</string>
 </resources>
