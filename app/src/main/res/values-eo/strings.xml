@@ -219,4 +219,6 @@
     <string name="faq_1_title">Kiel mi povas igi Fossify Galerio la defaŭlta aparata galerio?</string>
     <string name="media_management_alternative">Se vi ne volas tion fari, vi ankaŭ povus iri al viaj aparataj Agordoj - Aplikaĵoj - Specialaj permesoj de aplikaĵoj - Aplikaĵoj de administrado de aŭdvidaĵoj kaj permesi, ke tiu ĉi aplikaĵo administru aŭdvidaĵoj.</string>
     <string name="fullscreen_media">Plenekranaj aŭdvidaĵoj</string>
+    <string name="faq_2_title">Mi ŝlosis la aplikaĵon per pasvorto, sed mi forgesis ĝin. Kion mi povas fari?</string>
+    <string name="faq_1_text">Unue, vi devas trovi la aktualan defaŭltan galerion en la sekcio de aplikaĵoj de viaj aparataj agordoj. Serĉu butonon kiu ion diras kiel \"Malfermi defaŭlte\", alklaku ĝin, kaj elektu \"Forviŝi defaŭltojn\". La sekvan fojon, ke vi provas malfermi bildon aŭ filmeton, vi devus vidi elektilon de aplikaĵoj kie vi povas elekti Fossify Galerio kaj igi ĝin la defaŭlta aplikaĵo.</string>
 </resources>
