@@ -243,4 +243,7 @@
     <string name="faq_13_title">Mi vidas striojn de koloroj en la bildoj. Kiel mi povas plibonigi la kvaliton?</string>
     <string name="faq_12_text">Verŝajne estas ĉar la dosieroj estis kopiitaj el alia loko. Vi povas tion korekti per elekti la bildetojn de la dosieroj kaj elekti \"Korekti prenodaton\".</string>
     <string name="faq_14_title">Mi kaŝis dosier(uj)on. Kiel mi povas malkaŝi ĝin?</string>
+    <string name="faq_14_text">Vi povas aŭ elekti \"Dume montri kaŝitajn elementojn\" je la ĉefekrano aŭ baskuligi \"Montri kaŝitajn elementojn\" en la aplikaĵaj agordoj por vidi la kaŝitan elementon. Se vi volas malkaŝi ĝin, nur longe premu ĝin kaj elektu \"Malkaŝi\". Dosierujoj estas kaŝitaj per aldoni kaŝitan dosieron \".nomedia\" al ili, do vi ankaŭ povus forigi tiun dosieron helpe de iu ajn dosieradministrilo. Tamen rimarku, ke la kaŝado estas rikura, do se vi kaŝas dosierujon, ĉiuj subdosierujoj ankaŭ estos kaŝitaj. Do, por malkaŝi subdosierujojn, endas malkaŝi la patran dosierujon.</string>
+    <string name="faq_15_text">La aplikaĵa kaŝmemoro povas okupi ĝis 250 MB por ebligi pli rapidan ŝargadon de bildoj. Se la aplikaĵo okupas eĉ pli da spaco, verŝajne estas pro elementoj en la rubujo. Tiuj dosieroj estas inkluzivitaj en la grandeco de la aplikaĵo. Vi povas forviŝi la rubujon per malfermi ĝin kaj forigi ĉiujn dosierojn aŭ el la aplikaĵaj agordoj. Ĉiu dosiero en la rubujo estas aŭtomate forigita post 30 tagoj.</string>
+    <string name="faq_15_title">Kial la aplikaĵo okupas tiom da spaco?</string>
 </resources>
