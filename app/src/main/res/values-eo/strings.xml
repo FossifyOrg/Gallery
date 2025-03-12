@@ -194,4 +194,11 @@
     <string name="show_file_count_brackets">Montri nombron de dosieroj inter krampoj</string>
     <string name="show_file_count_none">Ne montri nombron de dosieroj</string>
     <string name="limit_folder_title">Limi longajn nomojn de dosierujoj al unu linio</string>
+    <string name="import_favorite_paths">Importi plej ŝatatajn</string>
+    <string name="export_favorite_paths">Eksporti plej ŝatatajn</string>
+    <string name="square">Kvadrato</string>
+    <string name="rounded_corners">Rondaj anguloj</string>
+    <string name="media_management_prompt">Por certigi, ke ĉiuj operacioj sur dosieroj ĝuste funkcias, bonvolu igi tiun ĉi aplikaĵon aplikaĵo de administrado de medioj en viaj aparataj agordoj.</string>
+    <string name="paths_imported_successfully">Vojoj sukcese importitaj</string>
+    <string name="password_protect_excluded">Protekti per pasvorto videblecon de ekskluzivitaj dosierujoj</string>
 </resources>
