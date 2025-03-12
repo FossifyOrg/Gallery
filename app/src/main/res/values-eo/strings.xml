@@ -23,7 +23,7 @@
     <string name="raw_images">RAW-bildoj</string>
     <string name="svgs">SVG-bildoj</string>
     <string name="portraits">Portretoj</string>
-    <string name="thumbnails">Miniaturoj</string>
+    <string name="thumbnails">Bildetoj</string>
     <string name="toggle_favorite">Baskuligi plej ŝatatan</string>
     <string name="playback_speed">Legada rapideco</string>
     <string name="excluded">(ekskluzivita)</string>
@@ -198,7 +198,25 @@
     <string name="export_favorite_paths">Eksporti plej ŝatatajn</string>
     <string name="square">Kvadrato</string>
     <string name="rounded_corners">Rondaj anguloj</string>
-    <string name="media_management_prompt">Por certigi, ke ĉiuj operacioj sur dosieroj ĝuste funkcias, bonvolu igi tiun ĉi aplikaĵon aplikaĵo de administrado de medioj en viaj aparataj agordoj.</string>
+    <string name="media_management_prompt">Por certigi, ke ĉiuj operacioj sur dosieroj ĝuste funkcias, bonvolu igi tiun ĉi aplikaĵon aplikaĵo de administrado de aŭdvidaĵoj en viaj aparataj agordoj.</string>
     <string name="paths_imported_successfully">Vojoj sukcese importitaj</string>
     <string name="password_protect_excluded">Protekti per pasvorto videblecon de ekskluzivitaj dosierujoj</string>
+    <string name="all_files">Ĉiuj dosieroj</string>
+    <string name="media_management_note">Se la alidirekto ne funkcias, bonvolu iri al viaj aparataj Agordoj - Aplikaĵoj - Specialaj permesoj de aplikaĵoj - Aplikaĵoj de administrado de aŭdvidaĵoj kaj permesi, ke tiu ĉi aplikaĵo administru aŭdvidaĵojn.</string>
+    <string name="extended_details">Pliaj detaloj</string>
+    <string name="bottom_actions">Malsupraj akcioj</string>
+    <string name="manage_bottom_actions">Administri videblajn malsuprajn akciojn</string>
+    <string name="failed_to_load_media">Malsukceso de ŝargi aŭdvidaĵo.</string>
+    <string name="file_is_malformed_or_corrupted">La dosiero estas misformita aŭ difektita.</string>
+    <string name="media_exceeds_device_capabilities">La aŭdvidaĵo superas la kapablojn de la aparato.</string>
+    <string name="unsupported_format">Nesubtenita dosiertipo.</string>
+    <string name="media_only">Nur aŭdvidaĵoj</string>
+    <string name="media_management_manual">Io malĝustas. Bonvolu iri al viaj aparataj Agordoj - Aplikaĵoj - Specialaj permesoj de aplikaĵoj - Aplikaĵoj de administrado de aŭdvidaĵoj kaj permesi, ke tiu ĉi aplikaĵo administru aŭdvidaĵojn.</string>
+    <string name="alternative_media_access">Alia, vi povas permesi atingon nur al aŭdvidaĵaj dosieroj. Tiukaze, vi tamen ne povos interagi kun kaŝitaj dosieroj.</string>
+    <string name="search_all_files">Serĉi ĉiujn dosierojn anstataŭ dosierujojn je la ĉefekrano</string>
+    <string name="show_all_folders">Montri menubutonon por rapide baskuligi \"Montri enhavon de ĉiuj dosierujoj\"</string>
+    <string name="toggle_file_visibility">Baskuligi videblecon de dosieroj</string>
+    <string name="faq_1_title">Kiel mi povas igi Fossify Galerio la defaŭlta aparata galerio?</string>
+    <string name="media_management_alternative">Se vi ne volas tion fari, vi ankaŭ povus iri al viaj aparataj Agordoj - Aplikaĵoj - Specialaj permesoj de aplikaĵoj - Aplikaĵoj de administrado de aŭdvidaĵoj kaj permesi, ke tiu ĉi aplikaĵo administru aŭdvidaĵoj.</string>
+    <string name="fullscreen_media">Plenekranaj aŭdvidaĵoj</string>
 </resources>
