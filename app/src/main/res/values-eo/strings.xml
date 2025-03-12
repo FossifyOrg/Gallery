@@ -242,4 +242,5 @@
     <string name="faq_8_text">Aldoni dosierujon al la inkluzivitaj dosierujoj nenion ajn aŭtomate ekskluzivas. Tio kion vi povas fari estas iri al Agordoj -&gt; Administri ekskluzivitajn dosierujojn, ekskluzivi la radikan dosierujon \"/\" kaj aldoni la deziratajn dosierujojn je Agordoj -&gt; Administri inkluzivitajn dosierujojn. Tiel, nur la elektitaj dosierujoj videblos, ĉar ekskluzivi kaj inkluzivi estas rikuraj, kaj dosierujoj kiuj estas samtempe ekskluzivitaj kaj inkluzivitaj aperas en la aplikaĵo.</string>
     <string name="faq_13_title">Mi vidas striojn de koloroj en la bildoj. Kiel mi povas plibonigi la kvaliton?</string>
     <string name="faq_12_text">Verŝajne estas ĉar la dosieroj estis kopiitaj el alia loko. Vi povas tion korekti per elekti la bildetojn de la dosieroj kaj elekti \"Korekti prenodaton\".</string>
+    <string name="faq_14_title">Mi kaŝis dosier(uj)on. Kiel mi povas malkaŝi ĝin?</string>
 </resources>
