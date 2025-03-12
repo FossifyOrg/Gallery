@@ -191,4 +191,7 @@
     <string name="file_thumbnail_style">Stiloj de dosieraj bildetoj</string>
     <string name="hide_extended_details">Kaŝi pliajn detalojn kiam la stata breto estas kaŝita</string>
     <string name="allow_down_gesture">Permesi fermi plenekranan vidon per malsupra moviĝo</string>
+    <string name="show_file_count_brackets">Montri nombron de dosieroj inter krampoj</string>
+    <string name="show_file_count_none">Ne montri nombron de dosieroj</string>
+    <string name="limit_folder_title">Limi longajn nomojn de dosierujoj al unu linio</string>
 </resources>
