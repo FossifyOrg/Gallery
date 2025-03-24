@@ -5,5 +5,5 @@
 * Checkboxen durch Schalter ersetzt
 * Fehleranzeige für fehlerhaftes Laden von Medien hinzugefügt
 * Verbesserte Logik der App-Sperre und Bedienoberfläche
-* Weitere kleinere Fehlerkorrekturen und Verbesserungen
+* Weitere kleinere Fehlerbehebungen und Verbesserungen
 * Weitere Übersetzungen hinzugefügt
