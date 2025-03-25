@@ -6,5 +6,5 @@
 * Verbesserte Scrollleistung und Bedienoberfläche
 * Verbesserte Logik der App-Sperre und Bedienoberfläche
 * Initiale Unterstützung für das JPEG-XL-Format (erhöhte App-Größe)
-* Weitere kleinere Fehlerkorrekturen und Verbesserungen
+* Weitere kleinere Fehlerbehebungen und Verbesserungen
 * Weitere Übersetzungen hinzugefügt

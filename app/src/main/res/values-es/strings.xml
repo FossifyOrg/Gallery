@@ -196,9 +196,9 @@
     <string name="paths_imported_successfully">Rutas importadas correctamente</string>
     <string name="media_management_prompt">Para asegurarse de que todas las operaciones en ficheros funcionan de forma segura, por favor haga esta aplicación una aplicación de manejo de medios en los ajustes de su dispositivo.</string>
     <string name="password_protect_excluded">Proteger con contraseña la visibilidad de las carpetas excluidas</string>
-    <string name="media_management_manual">Algo ha ido mal, por favor vaya a los Ajustes de su dispositivo - Aplicaciones - Acceso a aplicaciones especiales - Aplicaciones de gestión de medios y permita que esta aplicación gestione los medios.</string>
-    <string name="media_management_note">Si la redirección no funciona, ve a los Ajustes de tu dispositivo - Aplicaciones - Acceso a aplicaciones especiales - Aplicaciones de gestión de medios y permite que esta aplicación gestione los medios.</string>
-    <string name="media_management_alternative">Si no quieres hacerlo, también puedes ir a los Ajustes de tu dispositivo - Aplicaciones - Acceso a aplicaciones especiales - Aplicaciones de gestión de medios y permitir que esta aplicación gestione los medios.</string>
+    <string name="media_management_manual">Algo ha ido mal, por favor vaya a los Ajustes de su dispositivo - Aplicaciones - Acceso especial de aplicaciones - Aplicaciones de gestión de multimedia y permita que esta aplicación gestione los medios.</string>
+    <string name="media_management_note">Si la redirección no funciona, ve a los Ajustes de tu dispositivo - Aplicaciones - Acceso especial de aplicaciones - Aplicaciones de gestión de multimedia y permite que esta aplicación gestione los medios.</string>
+    <string name="media_management_alternative">Si no quieres hacerlo, también puedes ir a los Ajustes de tu dispositivo - Aplicaciones - Acceso especial de aplicaciones - Aplicaciones de gestión de multimedia y permitir que esta aplicación gestione los medios.</string>
     <string name="alternative_media_access">Alternativamente, puede permitir el acceso a los archivos multimedia solamente. Sin embargo, en ese caso no podrá trabajar con los archivos ocultos.</string>
     <string name="media_only">Sólo archivos multimedia</string>
     <string name="all_files">Todos los archivos</string>
