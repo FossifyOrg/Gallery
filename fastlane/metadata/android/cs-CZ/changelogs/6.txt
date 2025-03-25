@@ -1,6 +1,0 @@
-* Opraven pád při přehrávání videa.
-* Opravena prezentace na Androidu 14.
-* Přidána podpora pro AVIF.
-* Opraveno obnovení pozice po otočení zařízení.
-* Opraveno zvětšování snímků obrazovky při zapnutém přiblížení jedním až dvěma klepnutími.
-* Přidány některé překlady

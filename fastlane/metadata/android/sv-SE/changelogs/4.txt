@@ -1,2 +1,0 @@
-* Tog bort proprietära programbiblioteket panorama
-* Lade till några översättningar

@@ -1,6 +1,0 @@
-* Åtgärdade en krasch när videor spelades.
-* Åtärdade bildspel för Android 14.
-* Lade till stöd för AVIF.
-* Åtgärdade positionsåterställning efter enhetsrotation.
-* Åtgärdade inzooming av skärmdumpar när ett till ett dubbeltryck zoom är aktiverat.
-* Lade till översättningar.

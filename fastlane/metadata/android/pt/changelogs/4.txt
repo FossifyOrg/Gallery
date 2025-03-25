@@ -1,2 +1,0 @@
-* Bibliotecas de panoramas de código fechado removidas
-* Algumas traduções adicionadas

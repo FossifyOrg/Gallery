@@ -1,2 +1,0 @@
-* Rimosso il messaggio fittizio dell'app quando si utilizza l'editore
-* Aggiunte alcune traduzioni

@@ -1,2 +1,0 @@
-* S'ha eliminat el missatge d'aplicació falsa en fer servir l'editor.
-* S'han afegit algunes traduccions

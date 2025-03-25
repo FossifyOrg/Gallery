@@ -1,6 +1,0 @@
-* S'ha corregit una fallada en reproduir vídeos.
-* S'ha corregit la presentació de diapositives a l'Android 14.
-* S'ha afegit suport per a AVIF.
-* S'ha corregit el restabliment de la posició després de girar el dispositiu.
-* S'han corregit les captures de pantalla d'ampliació quan s'ha activat un zoom d'un a doble toc.
-* S'han afegit traduccions

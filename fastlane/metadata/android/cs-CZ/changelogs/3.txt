@@ -1,2 +1,0 @@
-* Fixed zooming in high-res images
-* Added some translations
