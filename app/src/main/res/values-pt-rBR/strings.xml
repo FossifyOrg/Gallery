@@ -255,4 +255,7 @@
     <string name="unsupported_format">Formato não suportado.</string>
     <string name="media_exceeds_device_capabilities">A mídia excede as capacidades do dispositivo.</string>
     <string name="failed_to_load_media">Falha ao carregar mídia.</string>
+    <string name="full_storage_permission_required">A Fossify Gallery precisa de acesso total para exibir todas as suas fotos e vídeos. Vá para Configurações &gt; Permissões &gt; Fotos e vídeos &gt; Permitir tudo.</string>
+    <string name="file_is_malformed_or_corrupted">O arquivo está malformado ou corrompido.</string>
+    <string name="playback_speed">Velocidade de reprodução</string>
 </resources>
