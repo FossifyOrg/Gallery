@@ -103,6 +103,14 @@ const val SEARCH_ALL_FILES_BY_DEFAULT = "search_all_files_by_default"
 const val LAST_EXPORTED_FAVORITES_FOLDER = "last_exported_favorites_folder"
 const val SHOW_PERMISSION_RATIONALE = "show_permission_rationale"
 
+// thumbnail cache size
+const val THUMBNAIL_CACHE_SIZE = "thumbnail_cache_size_pref"
+const val CACHE_SIZE_AUTO = 0 // Glide's default disk cache size is 250MB. This value is used to match that default.
+const val CACHE_SIZE_500 = 500
+const val CACHE_SIZE_1000 = 1000
+const val CACHE_SIZE_2000 = 2000
+const val CACHE_SIZE_5000 = 5000
+
 // slideshow
 const val SLIDESHOW_INTERVAL = "slideshow_interval"
 const val SLIDESHOW_INCLUDE_VIDEOS = "slideshow_include_videos"

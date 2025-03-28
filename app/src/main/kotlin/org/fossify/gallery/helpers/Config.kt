@@ -5,6 +5,7 @@ import android.content.res.Configuration
 import android.os.Environment
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import org.fossify.commons.extensions.formatSize
 import org.fossify.commons.helpers.*
 import org.fossify.gallery.R
 import org.fossify.gallery.models.AlbumCover
@@ -583,4 +584,28 @@ class Config(context: Context) : BaseConfig(context) {
     var showPermissionRationale: Boolean
         get() = prefs.getBoolean(SHOW_PERMISSION_RATIONALE, false)
         set(showPermissionRationale) = prefs.edit().putBoolean(SHOW_PERMISSION_RATIONALE, showPermissionRationale).apply()
+
+    var thumbnailCacheSizePreference: Int
+        get() = prefs.getInt(THUMBNAIL_CACHE_SIZE, CACHE_SIZE_AUTO)
+        set(size) = prefs.edit().putInt(THUMBNAIL_CACHE_SIZE, size).apply()
+
+    fun getThumbnailCacheSizeBytes(): Long {
+        return when (thumbnailCacheSizePreference) {
+            CACHE_SIZE_500 -> 500 * 1024 * 1024L
+            CACHE_SIZE_1000 -> 1024 * 1024 * 1024L
+            CACHE_SIZE_2000 -> 2 * 1024 * 1024 * 1024L
+            CACHE_SIZE_5000 -> 5 * 1024 * 1024 * 1024L
+            else -> 250 * 1024 * 1024L // Default Auto/250MB if something unexpected is stored
+        }
+    }
+
+    // Helper function to get size in bytes directly from preference ID for comparison
+    fun getSizeBytesFromPreference(preference: Int): Long {
+        // Use a temporary preference value to reuse existing calculation logic
+        val originalPreference = thumbnailCacheSizePreference
+        thumbnailCacheSizePreference = preference
+        val result = getThumbnailCacheSizeBytes()
+        thumbnailCacheSizePreference = originalPreference
+        return result
+    }
 }

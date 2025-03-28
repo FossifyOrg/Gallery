@@ -6,12 +6,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.fossify.commons.dialogs.*
 import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.*
 import org.fossify.commons.models.RadioItem
+import org.fossify.gallery.MyAppGlideModule
 import org.fossify.gallery.R
 import org.fossify.gallery.databinding.ActivitySettingsBinding
 import org.fossify.gallery.dialogs.*
@@ -47,6 +50,81 @@ class SettingsActivity : SimpleActivity() {
         super.onResume()
         setupToolbar(binding.settingsToolbar, NavigationIcon.Arrow)
         setupSettingItems()
+    }
+
+    private fun getGlideCacheDirSize(): Long {
+        val cacheDir = File(cacheDir, MyAppGlideModule.GLIDE_CACHE_DIR)
+        // Use the getProperSize function from the Commons library
+        return cacheDir.getProperSize(true)
+    }
+
+    private fun updateCurrentCacheUsageDisplay() {
+        ensureBackgroundThread {
+            val currentSize = getGlideCacheDirSize()
+            val limitBytes = config.getThumbnailCacheSizeBytes()
+            val limitString = limitBytes.formatSize()
+            val displayString = "${currentSize.formatSize()} / $limitString Limit"
+
+            runOnUiThread {
+                // Check if binding is still valid before accessing views
+                if (!isDestroyed && !isFinishing) {
+                    binding.settingsClearThumbnailCacheSize.text = displayString
+                }
+            }
+        }
+    }
+
+    private fun clearThumbnailCache() {
+        toast(R.string.clearing_cache)
+        ensureBackgroundThread {
+            Glide.get(applicationContext).clearDiskCache()
+            runOnUiThread {
+                if (!isDestroyed && !isFinishing) {
+                    toast(R.string.cache_cleared)
+                    updateCurrentCacheUsageDisplay()
+                }
+            }
+        }
+    }
+
+    private fun setupThumbnailCacheSettings() {
+        val currentLimitBytes = config.getThumbnailCacheSizeBytes()
+        binding.settingsThumbnailCacheSizeValue.text = currentLimitBytes.formatSize()
+
+        binding.settingsThumbnailCacheSizeHolder.setOnClickListener {
+            val items = arrayListOf(
+                RadioItem(CACHE_SIZE_AUTO, "${config.getSizeBytesFromPreference(CACHE_SIZE_AUTO).formatSize()} (${getString(R.string.default_text)})"),
+                RadioItem(CACHE_SIZE_500, config.getSizeBytesFromPreference(CACHE_SIZE_500).formatSize()),
+                RadioItem(CACHE_SIZE_1000, config.getSizeBytesFromPreference(CACHE_SIZE_1000).formatSize()),
+                RadioItem(CACHE_SIZE_2000, config.getSizeBytesFromPreference(CACHE_SIZE_2000).formatSize()),
+                RadioItem(CACHE_SIZE_5000, config.getSizeBytesFromPreference(CACHE_SIZE_5000).formatSize())
+            )
+
+            RadioGroupDialog(this, items, config.thumbnailCacheSizePreference) {
+                val newPreference = it as Int
+                if (newPreference == config.thumbnailCacheSizePreference) return@RadioGroupDialog // No change
+
+                val oldPreference = config.thumbnailCacheSizePreference
+                config.thumbnailCacheSizePreference = newPreference
+
+                val newLimitBytes = config.getThumbnailCacheSizeBytes()
+                binding.settingsThumbnailCacheSizeValue.text = newLimitBytes.formatSize()
+                updateCurrentCacheUsageDisplay()
+
+                val oldSizeBytes = config.getSizeBytesFromPreference(oldPreference)
+
+                // Clear cache only if the new limit is smaller *and* the old limit wasn't the largest size
+                if (newLimitBytes < oldSizeBytes && oldPreference != CACHE_SIZE_5000) {
+                    clearThumbnailCache()
+                    toast(R.string.cache_limit_needs_restart)
+                } else if (newLimitBytes > oldSizeBytes || (newPreference == CACHE_SIZE_5000 && oldPreference != CACHE_SIZE_5000)) {
+                    // Show restart hint only when increasing the limit or switching to the largest size
+                    toast(R.string.cache_limit_needs_restart)
+                }
+            }
+        }
+
+        updateCurrentCacheUsageDisplay()
     }
 
     private fun setupSettingItems() {
@@ -100,7 +178,8 @@ class SettingsActivity : SimpleActivity() {
         setupShowRecycleBinLast()
         setupEmptyRecycleBin()
         updateTextColors(binding.settingsHolder)
-        setupClearCache()
+        setupClearThumbnailCacheItem()
+        setupThumbnailCacheSettings()
         setupExportFavorites()
         setupImportFavorites()
         setupExportSettings()
@@ -723,21 +802,9 @@ class SettingsActivity : SimpleActivity() {
         }
     }
 
-    private fun setupClearCache() {
-        ensureBackgroundThread {
-            val size = cacheDir.getProperSize(true).formatSize()
-            runOnUiThread {
-                binding.settingsClearCacheSize.text = size
-            }
-        }
-
-        binding.settingsClearCacheHolder.setOnClickListener {
-            ensureBackgroundThread {
-                cacheDir.deleteRecursively()
-                runOnUiThread {
-                    binding.settingsClearCacheSize.text = cacheDir.getProperSize(true).formatSize()
-                }
-            }
+    private fun setupClearThumbnailCacheItem() {
+        binding.settingsClearThumbnailCacheHolder.setOnClickListener {
+            clearThumbnailCache()
         }
     }
 

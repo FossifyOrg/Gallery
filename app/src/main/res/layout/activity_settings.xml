@@ -858,6 +858,68 @@
                 android:id="@+id/settings_bottom_actions_divider"
                 layout="@layout/divider" />
 
+            <include
+                android:id="@+id/settings_cache_top_divider"
+                layout="@layout/divider" />
+
+            <TextView
+                android:id="@+id/settings_cache_label"
+                style="@style/SettingsSectionLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cache" />
+
+            <RelativeLayout
+                android:id="@+id/settings_thumbnail_cache_size_holder"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_thumbnail_cache_size_label"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thumbnail_cache_size" />
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_thumbnail_cache_size_value"
+                    style="@style/SettingsTextValueStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/settings_thumbnail_cache_size_label"
+                    tools:text="250 MB" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_clear_thumbnail_cache_holder"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground">
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_clear_thumbnail_cache_label"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear_cache" />
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_clear_thumbnail_cache_size"
+                    style="@style/SettingsTextValueStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/settings_clear_thumbnail_cache_label"
+                    tools:text="180 MB / 5 GB Limit" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/settings_cache_divider"
+                layout="@layout/divider" />
+
             <TextView
                 android:id="@+id/settings_recycle_bin_label"
                 style="@style/SettingsSectionLabelStyle"
@@ -943,29 +1005,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/migrating" />
-
-            <RelativeLayout
-                android:id="@+id/settings_clear_cache_holder"
-                style="@style/SettingsHolderTextViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <org.fossify.commons.views.MyTextView
-                    android:id="@+id/settings_clear_cache_label"
-                    style="@style/SettingsTextLabelStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/clear_cache" />
-
-                <org.fossify.commons.views.MyTextView
-                    android:id="@+id/settings_clear_cache_size"
-                    style="@style/SettingsTextValueStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/settings_clear_cache_label"
-                    tools:text="0 B" />
-
-            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/settings_export_favorites_holder"

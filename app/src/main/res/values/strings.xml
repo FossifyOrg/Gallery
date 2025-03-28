@@ -285,6 +285,13 @@
     <string name="faq_17_text">That stopped working due to the system changes that came with Android 11 too, the app cannot browse real folders anymore, it relies on the so called MediaStore at fetching data.</string>
     <string name="faq_18_title">Why do I see ads during video playback?</string>
     <string name="faq_18_text">Our apps have no ads whatsoever. If you see them during video playback, you must be using some other apps video player. Try finding your default video player in the device settings, then do a \"Clear defaults\" on it. The next time you invoke some video intent you will see an app picker prompt, where you can select what app you want to use.</string>
+    <string name="cache">Cache</string>
+    <string name="thumbnail_cache_size">Thumbnail cache size limit</string>
+    <string name="current_thumbnail_cache_usage">Current thumbnail cache usage</string>
+    <string name="clearing_cache">Clearing cache…</string>
+    <string name="cache_cleared">Cache cleared</string>
+    <string name="cache_limit_needs_restart">New cache limit might require an app restart to take full effect</string>
+    <string name="default_text">Default</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
