@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">Galleri</string>
-    <string name="edit">Redigér</string>
+    <string name="edit">Rediger</string>
     <string name="open_camera">Åbn kamera</string>
     <string name="hidden">(skjult)</string>
     <string name="excluded">(ekskluderet)</string>
@@ -21,11 +21,11 @@
     <string name="change_orientation">Skift orientering</string>
     <string name="force_portrait">Tving portræt</string>
     <string name="force_landscape">Tving landskab</string>
-    <string name="use_default_orientation">Brug standard orientering</string>
-    <string name="fix_date_taken">Fiks optagelsesdato</string>
-    <string name="fixing">Fikser…</string>
-    <string name="dates_fixed_successfully">Datoer fikset med succes</string>
-    <string name="no_date_takens_found">Ingen eksponeringsdatoer er fundet</string>
+    <string name="use_default_orientation">Brug standardorientering</string>
+    <string name="fix_date_taken">Ret oprettelsesdato</string>
+    <string name="fixing">Retter…</string>
+    <string name="dates_fixed_successfully">Datoer blev rettet</string>
+    <string name="no_date_takens_found">Ingen oprettelsesdatoer blev fundet</string>
     <string name="share_resized">Del en skaleret version</string>
     <string name="switch_to_file_search">Skift til filsøgning på tværs af synlige mapper</string>
     <string name="set_as_default_folder">Vælg som standardmappe</string>
@@ -33,7 +33,7 @@
     <string name="reorder_by_dragging">Omorganiser mapper ved at trække</string>
     <string name="reorder_by_dragging_pro">Omorganiser mapper ved at trække (Pro)</string>
     <string name="restore_to_path">Gendanner til \'%s\'</string>
-    <string name="filter_media">Filtrer medier</string>
+    <string name="filter_media">Filtrér medier</string>
     <string name="images">Billeder</string>
     <string name="videos">Videoer</string>
     <string name="gifs">GIF\'er</string>
@@ -251,4 +251,5 @@
     <string name="editor">Editor</string>
     <string name="wallpaper">Baggrund</string>
     <string name="animation">Animation</string>
+    <string name="full_storage_permission_required">Fossify Galleri skal have fuld adgang for at vise alle dine fotos og videoer. Gå til Indstillinger &gt; Tilladelser &gt; Billeder og videoer &gt; Tillad alle.</string>
 </resources>
