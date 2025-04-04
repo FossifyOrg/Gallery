@@ -89,6 +89,8 @@ class PhotoFragment : ViewPagerFragment() {
     private var mScreenWidth = 0
     private var mScreenHeight = 0
     private var mCurrentGestureViewZoom = 1f
+    private var mIsTouched = false
+    private var mInitialZoom = 1f
 
     private var mStoredShowExtendedDetails = false
     private var mStoredHideExtendedDetails = false
@@ -145,12 +147,16 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
                     override fun onStateChanged(state: State) {
+                        if (!mIsTouched) {
+                            mInitialZoom = state.zoom
+                        }
                         mCurrentGestureViewZoom = state.zoom
                     }
                 })
 
                 gesturesView.setOnTouchListener { v, event ->
-                    if (mCurrentGestureViewZoom == 1f) {
+                    mIsTouched = true
+                    if (Math.abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
                         handleEvent(event)
                     }
                     false
