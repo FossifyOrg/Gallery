@@ -3,7 +3,7 @@
     <string name="app_launcher_name">Galerie</string>
     <string name="edit">Bearbeiten</string>
     <string name="open_camera">Kamera öffnen</string>
-    <string name="hidden">(ausgeblendet)</string>
+    <string name="hidden">(versteckt)</string>
     <string name="excluded">(ausgeschlossen)</string>
     <string name="pin_folder">Ordner anheften</string>
     <string name="unpin_folder">Ordner loslösen</string>
@@ -39,19 +39,17 @@
     <string name="portraits">Porträts</string>
     <string name="no_media_with_filters">Keine Medien für die ausgewählten Filter gefunden.</string>
     <string name="change_filters_underlined"><u>Filter ändern</u></string>
-    <string name="hide_folder_description">Diese Funktion verbirgt den Ordner, indem sie in ihn eine .nomedia-Datei einfügt, sie verbirgt auch alle Unterordner. Du kannst sie wieder sehen, indem du in den Einstellungen die Option „Ausgeblendete Elemente anzeigen“ umschaltest. Weiter\?</string>
+    <string name="hide_folder_description">Diese Funktion versteckt den Ordner, indem eine .nomedia-Datei eingefügt wird, ebenso werden alle Unterordner versteckt. Mit der Einstellung „Versteckte Elemente anzeigen“ werden sie wieder sichtbar. Fortfahren?</string>
     <string name="exclude_folder_parent">Stattdessen einen höherliegenden Ordner ausschließen\?</string>
     <string name="hidden_folders">Versteckte Ordner</string>
     <string name="manage_hidden_folders">Versteckte Ordner verwalten</string>
-    <string name="hidden_folders_placeholder">Keinen mit einer .nomedia-Datei versteckten Ordner gefunden.</string>
+    <string name="hidden_folders_placeholder">Scheinbar werden keine Ordner durch eine .nomedia-Datei versteckt.</string>
     <string name="hidden_all_files">Du musst der App den Zugriff auf alle Dateien gewähren, um versteckte Dateien zu sehen, sonst funktioniert sie nicht.</string>
     <string name="cant_unhide_folder">Wenn ein Ordner oder einer seiner übergeordneten Ordner einen Punkt vor seinem Namen hat, ist er versteckt und kann somit nicht wieder angezeigt werden. Du musst den Punkt entfernen, indem du ihn umbenennst.</string>
     <string name="include_folders">Einbezogene Ordner</string>
     <string name="manage_included_folders">Einbezogene Ordner verwalten</string>
     <string name="add_folder">Ordner hinzufügen</string>
-    <string name="included_activity_placeholder">Wenn du einige Ordner hast, die Medien enthalten, aber von der App nicht erkannt wurden, kannst du sie hier manuell hinzufügen.
-\n
-\nDas Hinzufügen einiger Elemente hier schließt keine anderen Ordner aus.</string>
+    <string name="included_activity_placeholder">Wenn du einige Ordner hast, die Medien enthalten, aber von der App nicht erkannt wurden, kannst du sie hier manuell hinzufügen.\n\nDas Hinzufügen einiger Elemente schließt keine anderen Ordner aus.</string>
     <string name="no_media_add_included">Es konnten keine Mediendateien gefunden werden. Das Problem kann behoben werden, indem die Ordner mit den Mediendateien manuell hinzugefügt werden.</string>
     <string name="resize_and_save">Größe ändern und speichern</string>
     <string name="width">Breite</string>
@@ -94,8 +92,8 @@
     <string name="flip">Spiegeln</string>
     <string name="flip_horizontally">Horizontal spiegeln</string>
     <string name="flip_vertically">Vertikal spiegeln</string>
-    <string name="free_aspect_ratio">Beliebiges</string>
-    <string name="other_aspect_ratio">Anderes</string>
+    <string name="free_aspect_ratio">Beliebig</string>
+    <string name="other_aspect_ratio">Verschiedenes</string>
     <string name="set_as_wallpaper">Als Hintergrund festlegen</string>
     <string name="set_as_wallpaper_failed">Hintergrundbild festlegen fehlgeschlagen</string>
     <string name="set_as_wallpaper_with">Als Hintergrund festlegen mit:</string>
@@ -191,7 +189,7 @@
     <string name="paths_imported_successfully">Pfade erfolgreich importiert</string>
     <string name="media_management_prompt">Um sicherzustellen, dass alle Dateivorgänge zuverlässig funktionieren, sollte diese App in den Geräteeinstellungen als Medienverwaltungs-App festgelegt werden.</string>
     <string name="password_protect_excluded">Passwortschutz für die Sichtbarkeit ausgeschlossener Ordner</string>
-    <string name="media_management_manual">Irgendetwas ist schief gelaufen, öffne bitte die Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung und erlaube dieser App, Medien zu verwalten.</string>
+    <string name="media_management_manual">Irgendetwas ist schiefgelaufen. Öffne bitte die Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung und erlaube dieser App, Medien zu verwalten.</string>
     <string name="media_management_note">Wenn die Umleitung nicht funktioniert, öffne bitte die Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung und erlaube dieser App die Medienverwaltung.</string>
     <string name="media_management_alternative">Wenn du das nicht möchtest, kannst du auch in den Geräteeinstellungen – Apps – Spezieller App-Zugriff – Apps zur Medienverwaltung dieser App die Verwaltung von Medien erlauben.</string>
     <string name="alternative_media_access">Alternativ kannst du auch nur den Zugriff auf Mediendateien zulassen. In diesem Fall kann allerdings nicht mit versteckten Dateien gearbeitet werden.</string>
@@ -207,11 +205,11 @@
     <string name="toggle_favorite">Favorit umschalten</string>
     <string name="toggle_file_visibility">Sichtbarkeit von Dateien umschalten</string>
     <string name="faq_2_title">Ich habe die App mit einem Passwort geschützt und es vergessen. Was kann ich tun\?</string>
-    <string name="faq_2_text">Es gibt zwei Möglichkeiten: Entweder man installiert die App neu oder sucht die App in den Geräteeinstellungen und wählt dort „Daten löschen“. Alle Einstellungen werden zurückgesetzt, alle Mediendateien bleiben unberührt.</string>
+    <string name="faq_2_text">Es gibt zwei Möglichkeiten: Entweder du installierst die App neu oder du suchst die App in den Geräteeinstellungen und wählt dorst „Daten löschen“ aus. Alle Einstellungen werden zurückgesetzt, jedoch bleiben alle Mediendateien erhalten.</string>
     <string name="faq_3_title">Wie kann ich ein Album immer zuoberst erscheinen lassen\?</string>
     <string name="faq_3_text">Man kann lange auf das gewünschte Album drücken und im Aktionsmenü das Stecknadelsymbol auswählen; es wird nun zuoberst angeheftet. Man kann auch mehrere Ordner anheften. Angeheftete Objekte werden nach der Standardmethode sortiert.</string>
     <string name="faq_4_title">Wie kann ich in Videos vor- oder zurückspringen\?</string>
-    <string name="faq_4_text">Das geht, indem man doppelt auf die Seite des Bildschirms oder auf den Text nahe der Suchleiste tippt, der die aktuelle bzw. maximale Dauer anzeigt. Wenn in den App-Einstellungen die Funktion aktiviert ist, dass Videos in einem separaten Fenster geöffnet werden, kann man zudem horizontale Gesten verwenden.</string>
+    <string name="faq_4_text">Das geht, indem du doppelt auf die Seite des Bildschirms oder auf den Text nahe der Suchleiste tippst, der die aktuelle bzw. maximale Dauer anzeigt. Wenn in den App-Einstellungen die Funktion aktiviert ist, dass Videos in einem separaten Fenster geöffnet werden, kannst du zudem horizontale Gesten verwenden.</string>
     <string name="faq_5_title">Was ist der Unterschied zwischen dem Verstecken und dem Ausschließen eines Ordners\?</string>
     <string name="faq_6_title">Wieso erscheinen Ordner mit Musikcover oder Aufkleber\?</string>
     <string name="faq_6_text">Es kann geschehen, dass manche ungewöhnlichen Alben erscheinen. Diese kann man ausschließen, indem man sie lange drückt und \'Ausschließen\' auswählt. Im nächsten Dialog kann man den übergeordneten Ordner auswählen, wodurch die anderen zugehörigen Alben auch nicht auftauchen sollten.</string>
@@ -247,9 +245,7 @@
     <string name="animation">Animation</string>
     <string name="gifs">GIFs</string>
     <string name="videos">Videos</string>
-    <string name="excluded_activity_placeholder">Durch das Ausschließen von Ordnern werden diese zusammen mit ihren Unterordnern nur in Fossify Gallery ausgeblendet, in anderen Anwendungen sind sie weiterhin sichtbar.
-\n
-\nWenn du Ordner auch für andere Apps verstecken willst, verwende die Funktion „Ordner verstecken“.</string>
+    <string name="excluded_activity_placeholder">Das Ausschließen von Ordnern wird diese zusammen mit ihren Unterordnern nur in Fossify Gallery verstecken – in anderen Anwendungen sind sie weiterhin sichtbar.\n\nWenn du Ordner auch für andere Apps verstecken möchtest, verwende die Funktion „Ordner verstecken“.</string>
     <string name="editor">Editor</string>
     <string name="playback_speed">Wiedergabegeschwindigkeit</string>
     <string name="full_storage_permission_required">Fossify Gallery benötigt vollen Zugriff, um alle Fotos und Videos anzuzeigen. Gehe zu Einstellungen &gt; Berechtigungen &gt; Fotos und Videos &gt; Zugelassen.</string>
