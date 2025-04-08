@@ -20,7 +20,7 @@
     <string name="app_launcher_name">Galeria</string>
     <string name="hidden">(oculta)</string>
     <string name="reorder_by_dragging">Organizar pastas por arrasto</string>
-    <string name="excluded">(excluída)</string>
+    <string name="excluded">(excluído)</string>
     <string name="unlock_orientation">Desbloquear orientação</string>
     <string name="fixing">A corrigir…</string>
     <string name="force_portrait">Impor modo vertical</string>
@@ -43,7 +43,7 @@
     <plurals name="failed_to_resize_images">
         <item quantity="one">Falha ao redimensionar %d imagem</item>
         <item quantity="many">Falha ao redimensionar %d imagens</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="video_editing_failed">Falha ao editar o vídeo</string>
     <string name="file_edited_successfully">Ficheiro editado com sucesso</string>
@@ -255,4 +255,7 @@
     <string name="faq_3_title">Como posso fazer para que um álbum seja sempre mostrado no topo?</string>
     <string name="faq_8_text">Adicionar uma pasta ás \"Pastas Incluídas\" não exclui mais nada automaticamente. Em Definições–&gt; Gerir Pastas Excluídas, exclua a directoria root \"/\" e de seguida, adicione as pastas que pretende em Definições–&gt; Gerir Pastas Incluídas. Isto fará com que apenas as pastas seleccionadas sejam visíveis, uma vez que, quer a acção de incluir, quer a de excluir são recursivas. Isto faz com que uma pasta que é simultânemente excluída e incluída, acabe por ficar visível.</string>
     <string name="faq_10_title">Posso recortar imagens com esta aplicação?</string>
+    <string name="unsupported_format">Formato não suportado.</string>
+    <string name="file_is_malformed_or_corrupted">Ficheiro inválido ou danificado.</string>
+    <string name="media_exceeds_device_capabilities">O ficheiro excede as capacidades do dispositivo.</string>
 </resources>
