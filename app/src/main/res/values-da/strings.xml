@@ -216,8 +216,8 @@
     <string name="faq_6_title">Hvorfor dukker mapper med musikomslag eller klistermærker op\?</string>
     <string name="faq_6_text">Der kan dukke usædvanlige album op. Du kan nemt ekskludere dem ved at holde nede og vælge Ekskluder. I den næste dialog kan du vælge den overordnede mappe, hvilket ofte forhindrer, at relaterede album vises fremover.</string>
     <string name="faq_7_title">En mappe med billeder dukker ikke op, eller den viser ikke alle elementer. Hvad kan jeg gøre\?</string>
-    <string name="faq_7_text">Der kan være flere grunde, men en løsning er nem. Gå til Indstillinger -&gt; Administrer inkluderede mapper, vælg plusset og naviger til mappen.</string>
-    <string name="faq_8_title">Hvad hvis jeg kun vil have, at nogle få bestemte mapper er synlige\?</string>
+    <string name="faq_7_text">Der kan være flere grunde, men det er let at løse. Gå til Indstillinger -&gt; Administrer inkluderede mapper, vælg plusset og naviger til mappen.</string>
+    <string name="faq_8_title">Hvad hvis jeg kun vil have nogle bestemte mapper synlige?</string>
     <string name="faq_8_text">At tilføje en mappe ved de Inkluderede mapper, ekskluderer ikke automatisk alt. Det du kan gøre, er at gå til Indstillinger -&gt; Adminsterer ekskluderede mapper, eksludere rodmappen \"/\", og så tilføje de ønskede mapper under Indstillinger -&gt; Administrer inkluderede mapper. Det vil kun gøre de valgte mapper synlige, da både ekskludering og inkludering virker reskursivt, og hvis en mappe både er ekskluderet og inkluderet, vil den blive vist.</string>
     <string name="faq_10_title">Kan jeg beskære billeder med denne app\?</string>
     <string name="faq_10_text">Ja, du kan beskære billeder i editoren, ved at trække i billedets kanter. Du kan gå til editoren, ved enten at holde fingeren nede på et miniaturebillede og vælge Rediger, eller vælge Rediger fra fuldskærmsvisningen.</string>
