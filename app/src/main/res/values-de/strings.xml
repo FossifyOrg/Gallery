@@ -253,4 +253,5 @@
     <string name="unsupported_format">Nicht unterstütztes Format.</string>
     <string name="file_is_malformed_or_corrupted">Datei ist fehlerhaft oder beschädigt.</string>
     <string name="media_exceeds_device_capabilities">Medien überschreiten die Gerätekapazitäten.</string>
+    <string name="keep_screen_on_fullscreen_photos">Bildschirm beim Betrachten von Fotos im Vollbild eingeschaltet lassen</string>
 </resources>
