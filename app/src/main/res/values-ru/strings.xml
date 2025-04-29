@@ -259,4 +259,5 @@
     <string name="unsupported_format">Неподдерживаемый формат.</string>
     <string name="file_is_malformed_or_corrupted">Файл имеет неправильный формат или повреждён.</string>
     <string name="media_exceeds_device_capabilities">Медиафайл превосходит возможности устройства.</string>
+    <string name="keep_screen_on_fullscreen_photos">Держать экран включённым при полноэкранном просмотре</string>
 </resources>
