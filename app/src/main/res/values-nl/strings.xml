@@ -257,4 +257,5 @@
     <string name="file_is_malformed_or_corrupted">Bestand is onvolledig of beschadigd.</string>
     <string name="unsupported_format">Niet-ondersteund formaat.</string>
     <string name="media_exceeds_device_capabilities">Dit apparaat kan deze video niet afspelen.</string>
+    <string name="keep_screen_on_fullscreen_photos">Scherm ingeschakeld houden bij weergave in volledig scherm</string>
 </resources>
