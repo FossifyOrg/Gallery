@@ -258,4 +258,5 @@
     <string name="media_exceeds_device_capabilities">Média přesahují schopnosti zařízení.</string>
     <string name="file_is_malformed_or_corrupted">Soubor je poškozen.</string>
     <string name="unsupported_format">Nepodporovaný formát.</string>
+    <string name="keep_screen_on_fullscreen_photos">Ponechat obrazovku zapnutou při zobrazování fotografií na celou obrazovku</string>
 </resources>
