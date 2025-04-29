@@ -1,6 +1,0 @@
-* Video oynatırken oluşan çökme düzeltildi.
-* Android 14'te slayt gösterisi düzeltildi.
-* AVIF için destek eklendi.
-* Cihaz döndürüldükten sonra konum sıfırlama düzeltildi.
-* Bire bir çift dokunuşla yakınlaştırma etkinleştirildiğinde ekran görüntülerinin yakınlaştırılması düzeltildi.
-* Bazı çeviriler eklendi

@@ -38,6 +38,12 @@
                 android:text="@string/size" />
 
             <org.fossify.commons.views.MyCompatRadioButton
+                android:id="@+id/sorting_dialog_radio_number_of_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/number_of_items" />
+
+            <org.fossify.commons.views.MyCompatRadioButton
                 android:id="@+id/sorting_dialog_radio_last_modified"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -1,2 +1,0 @@
-* Parandasime mõnede failide puhul mustade pisipiltide tekkimise.
-* Lisasime mõned tõlked

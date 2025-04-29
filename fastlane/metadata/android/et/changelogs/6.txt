@@ -1,6 +1,0 @@
-* Parandasime kokkujooksmise videote esitamisel.
-* Parandasime Android 14 puhul slaidiesitlusel tekkinud vead.
-* Lisasime AVIF-failide toe.
-* Parandasime asukoha lähtestamise seadme pööramisel.
-* Parandasime ekraanitõmmiste suumimisel tekkinud vead, kui üks-ühele topeltklõpsuga suumimine on kasutusel.
-* Lisasime mõned tõlked

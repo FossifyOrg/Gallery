@@ -1,2 +1,0 @@
-* Dihilangkan pustaka panorama bersumber tertutup
-* Ditambahkan beberapa terjemahan

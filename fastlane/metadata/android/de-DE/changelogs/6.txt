@@ -1,6 +1,0 @@
-* Absturz beim Abspielen von Videos behoben.
-* Diashow unter Android 14 korrigiert.
-* Unterstützung für AVIF hinzugefügt.
-* Positionsrücksetzung nach Gerätedrehung korrigiert.
-* Zoomen von Screenshots korrigiert, wenn 1:1-Zoom mit zweimaligem doppeltem Antippen aktiviert ist.
-* Einige Übersetzungen hinzugefügt

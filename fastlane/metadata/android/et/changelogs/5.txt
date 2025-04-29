@@ -1,2 +1,0 @@
-* Eemaldasime rakendusest väära veateate, mis tekkis fotoredaktori kasutamisel
-* Lisasime mõned tõlked

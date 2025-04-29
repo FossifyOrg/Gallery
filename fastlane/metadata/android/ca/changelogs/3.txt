@@ -1,2 +1,0 @@
-* S'ha corregit el zoom en les imatges d'alta resolució
-* S'han afegit algunes traduccions

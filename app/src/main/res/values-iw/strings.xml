@@ -182,4 +182,5 @@
     <string name="manage_bottom_actions">נהל פעולות תחתונות גלויות</string>
     <string name="toggle_favorite">החלף מועדף</string>
     <string name="toggle_file_visibility">החלף את נראות הקובץ</string>
+    <string name="hidden_all_files">אתה צריך להעניק לאפליקציה גישה לכל הקבצים כדי לראות קבצים מוסתרים, אחרת זה לא יכול לעבוד.</string>
 </resources>
