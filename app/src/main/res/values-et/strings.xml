@@ -257,4 +257,5 @@
     <string name="media_exceeds_device_capabilities">Meedia ületab selle seadme suutlikkuse.</string>
     <string name="unsupported_format">Vorming pole toetatud.</string>
     <string name="file_is_malformed_or_corrupted">Fail on kas vigasena loodud või hiljem katki läinud.</string>
+    <string name="keep_screen_on_fullscreen_photos">Fotode täisekraanivaate kasutamisel hoia ekraan sisselülitatuna</string>
 </resources>
