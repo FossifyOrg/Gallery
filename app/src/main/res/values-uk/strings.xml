@@ -259,4 +259,5 @@
     <string name="media_exceeds_device_capabilities">Файл перевищує місткість пристрою.</string>
     <string name="unsupported_format">Непідтримуваний формат.</string>
     <string name="file_is_malformed_or_corrupted">Файл неправильно сформовано або пошкоджено.</string>
+    <string name="keep_screen_on_fullscreen_photos">Тримати екран увімкненим під час перегляду фотографій на весь екран</string>
 </resources>
