@@ -258,4 +258,5 @@
     <string name="unsupported_format">Format non pris en charge.</string>
     <string name="playback_speed">Vitesse de lecture</string>
     <string name="failed_to_load_media">Échec de chargement du média.</string>
+    <string name="keep_screen_on_fullscreen_photos">Garder l\'écran allumé lors de l\'affichage de photos en plein écran</string>
 </resources>
