@@ -245,7 +245,7 @@
     </plurals>
     <string name="images_resized_successfully">Ukuran gambar berhasil diubah</string>
     <string name="crop">Potong</string>
-    <string name="wallpaper">Wallpaper</string>
+    <string name="wallpaper">Latar belakang</string>
     <string name="interval">Selang waktu</string>
     <string name="slide">Geser</string>
     <string name="by_folder">Folder</string>

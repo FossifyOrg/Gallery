@@ -308,6 +308,10 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(DELETE_EMPTY_FOLDERS, false)
         set(deleteEmptyFolders) = prefs.edit().putBoolean(DELETE_EMPTY_FOLDERS, deleteEmptyFolders).apply()
 
+    var keepScreenOn: Boolean
+        get() = prefs.getBoolean(KEEP_SCREEN_ON, true)
+        set(keepScreenOn) = prefs.edit().putBoolean(KEEP_SCREEN_ON, keepScreenOn).apply()
+
     var allowPhotoGestures: Boolean
         get() = prefs.getBoolean(ALLOW_PHOTO_GESTURES, false)
         set(allowPhotoGestures) = prefs.edit().putBoolean(ALLOW_PHOTO_GESTURES, allowPhotoGestures).apply()
