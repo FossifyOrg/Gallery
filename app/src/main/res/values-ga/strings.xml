@@ -60,7 +60,7 @@
     <string name="show_all">Taispeáin inneachar gach fillteáin</string>
     <string name="all_folders">Gach fillteán</string>
     <string name="folder_view">Athraigh go hamharc an fhillteáin</string>
-    <string name="volume">Imleabhar</string>
+    <string name="volume">Toirt</string>
     <string name="brightness">Gile</string>
     <string name="lock_orientation">Cuir treoshuíomh faoi ghlas</string>
     <string name="unlock_orientation">Díghlasáil treoshuíomh</string>
@@ -236,7 +236,7 @@
     <string name="faq_3_text">Is féidir leat an t-albam atá ag teastáil a bhrú le fada agus an deilbhín Pin a roghnú ag an roghchlár gníomhartha, a chuirfidh go dtí an barr é. Is féidir leat bioráin fillteáin il freisin, beidh míreanna pinned a shórtáil ag an modh sórtála réamhshocraithe.</string>
     <string name="faq_4_title">Conas is féidir liom físeáin a chur ar aghaidh go tapa?</string>
     <string name="faq_4_text">Is féidir leat é a dhéanamh trí thaobh an scáileáin a chnagadh faoi dhó, nó trí na téacsanna reatha nó uastréimhse a thapáil in aice leis an mbarra lorga. Má chumasaíonn tú físeáin a oscailt ar scáileán ar leith i socruithe na haipe, is féidir leat gothaí cothrománacha a úsáid freisin.</string>
-    <string name="faq_5_title">Cad é an difríocht idir fillteán a chur i bhfolach agus gan é a áireamh?</string>
+    <string name="faq_5_title">Cad é an difríocht idir fillteán a cheilt agus a eisiamh?</string>
     <string name="faq_5_text">Ná cuir cosc ar an bhfillteán a thaispeáint ach amháin i nGailearaí Fossify, agus oibríonn Hide córas-ciallmhar agus folaíonn sé an fillteán ó ghailearaithe eile freisin. Oibríonn sé trí chomhad folamh \".nomedia\" a chruthú san fhillteán a thugtar, ar féidir leat a bhaint ansin le haon bhainisteoir comhad freisin. Tabhair faoi deara nach gceadaíonn roinnt feistí fillteáin a chur i bhfolach cosúil le Ceamara, Screenshots agus Íoslódálacha.</string>
     <string name="faq_6_title">Cén fáth a dtaispeánann fillteáin le healaín chlúdaigh ceoil nó greamáin?</string>
     <string name="faq_6_text">D\'fhéadfadh sé tarlú go bhfeicfidh tú roinnt albam neamhghnách á dtaispeáint. Is féidir leat iad a eisiamh go héasca trí iad a bhrú fada agus Eisiamh a roghnú. Sa chéad dialóg eile is féidir leat an máthairfhillteán a roghnú ansin, seans maith go gcuirfidh sé cosc ar na halbaim ghaolmhara eile a thaispeáint freisin.</string>
@@ -256,4 +256,5 @@
     <string name="faq_18_title">Cén fáth a bhfeicim fógraí le linn athsheinm físe?</string>
     <string name="faq_8_text">Má chuirtear fillteán leis na Fillteáin Áirithe, ní fhágann sin rud ar bith as an áireamh go huathoibríoch. Cad is féidir leat a dhéanamh ná dul i Socruithe -&gt; Bainistigh Fillteáin Eisiata, eisiamh an fillteán fréimhe \"/\", ansin cuir na fillteáin atá ag teastáil ag Socruithe -&gt; Bainistigh Fillteáin Áirithe. Ní dhéanfaidh sé sin ach na fillteáin roghnaithe a fheiceáil, mar go bhfuil an dá eisiamh agus lena n-áirítear athfhillteach agus má tá fillteán eisiata agus san áireamh, beidh sé a thaispeáint suas.</string>
     <string name="toggle_favorite">Scoránaigh is fearr leat</string>
+    <string name="keep_screen_on_fullscreen_photos">Coinnigh an scáileán ar siúl agus grianghraif lánscáileáin á bhféachaint agat</string>
 </resources>
