@@ -1,0 +1,25 @@
+name: Github Release
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+permissions:
+  contents: read
+
+jobs:
+  call-release-workflow:
+    uses: FossifyOrg/.github/.github/workflows/release.yml@main
+    with:
+      tag: ${{ github.ref_name }}
+      flavor: "foss"
+      package_name: "org.fossify.gallery"
+
+    secrets:
+      ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+      SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+      SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+      SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+      SERVICE_ACCOUNT_JSON_KEY_BASE64: ""
+      FOSSIFYBOT_TOKEN: ${{ secrets.FOSSIFYBOT_TOKEN }}
