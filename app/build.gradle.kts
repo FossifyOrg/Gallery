@@ -63,7 +63,7 @@ android {
     flavorDimensions.add("licensing")
     productFlavors {
         register("foss")
-        register("prepaid")
+        register("gplay")
     }
 
     sourceSets {
