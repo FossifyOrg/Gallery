@@ -15,6 +15,13 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 
+fun hasSigningVars(): Boolean {
+    return providers.environmentVariable("SIGNING_KEY_ALIAS").orNull != null
+            && providers.environmentVariable("SIGNING_KEY_PASSWORD").orNull != null
+            && providers.environmentVariable("SIGNING_STORE_FILE").orNull != null
+            && providers.environmentVariable("SIGNING_STORE_PASSWORD").orNull != null
+}
+
 android {
     compileSdk = project.libs.versions.app.build.compileSDKVersion.get().toInt()
 
@@ -35,13 +42,15 @@ android {
                 storeFile = file(keystoreProperties.getProperty("storeFile"))
                 storePassword = keystoreProperties.getProperty("storePassword")
             }
-        } else {
+        } else if (hasSigningVars()) {
             register("release") {
-                keyAlias = System.getenv("SIGNING_KEY_ALIAS")
-                keyPassword = System.getenv("SIGNING_KEY_PASSWORD")
-                storeFile = file(System.getenv("SIGNING_STORE_FILE"))
-                storePassword = System.getenv("SIGNING_STORE_PASSWORD")
+                keyAlias = providers.environmentVariable("SIGNING_KEY_ALIAS").get()
+                keyPassword = providers.environmentVariable("SIGNING_KEY_PASSWORD").get()
+                storeFile = file(providers.environmentVariable("SIGNING_STORE_FILE").get())
+                storePassword = providers.environmentVariable("SIGNING_STORE_PASSWORD").get()
             }
+        } else {
+            logger.warn("Warning: No signing config found. Build will be unsigned.")
         }
     }
 
@@ -61,7 +70,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
+            if (keystorePropertiesFile.exists() || hasSigningVars()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 
@@ -76,7 +87,8 @@ android {
     }
 
     compileOptions {
-        val currentJavaVersionFromLibs = JavaVersion.valueOf(libs.versions.app.build.javaVersion.get())
+        val currentJavaVersionFromLibs =
+            JavaVersion.valueOf(libs.versions.app.build.javaVersion.get())
         sourceCompatibility = currentJavaVersionFromLibs
         targetCompatibility = currentJavaVersionFromLibs
     }
@@ -106,7 +118,6 @@ android {
 
     bundle {
         language {
-            @Suppress("UnstableApiUsage")
             enableSplit = false
         }
     }
