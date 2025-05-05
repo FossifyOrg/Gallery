@@ -7,7 +7,7 @@ ksp = "1.9.25-1.0.20"
 detekt = "1.23.3"
 #AndroidX
 androidx-swiperefreshlayout = "1.1.0"
-androidx-constraintlayout = "2.1.4"
+androidx-constraintlayout = "2.2.1"
 #exif
 exif = "1.0.1"
 #Room
