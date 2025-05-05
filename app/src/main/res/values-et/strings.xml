@@ -214,7 +214,7 @@
     <string name="faq_2_title">Lukustasin rakenduse salasõnaga, kuid unustasin selle. Mida ma saan teha\?</string>
     <string name="faq_2_text">Seda saad lahendada kahel viisil. Võid kas paigaldada rakenduse uuesti või otsi rakenduse kirje oma seadme seadistustest ja vali „Tühjenda andmed“. See nullib kõik sinu seadistused, see ei eemalda ühtegi meediafaili.</string>
     <string name="faq_3_title">Kuidas saan teha nii, et album ilmuks alati ülaosas\?</string>
-    <string name="faq_3_text">Vajuta soovitud albumit pikalt ja vali toimingute menüüst ikooni Kinnita, mis kinnitab selle ülespoole. Saad kinnitada ka mitu kausta, kinnitatavad kirjed sorteeritakse vaikimisi sorteerimismeetodi järgi.</string>
+    <string name="faq_3_text">Vajuta soovitud albumit pikalt ja vali toimingute menüüst ikoon „Kinnita“, mis kinnitab selle ülespoole. Saad kinnitada ka mitu kausta, kinnitatavad kirjed sorteeritakse vaikimisi sorteerimismeetodi järgi.</string>
     <string name="faq_4_title">Kuidas saan videoid kiiresti edasi kerida\?</string>
     <string name="faq_4_text">Seda saad teha, kui topeltkoputad ekraani küljele või koputad praeguse või maksimaalse kestuse tekstidele otsinguriba lähedal. Kui lubad rakenduse seadetes videote avamise eraldi ekraanil, saate kasutada ka horisontaalseid viipeid.</string>
     <string name="faq_5_title">Mis erinevus on kausta peitmise ja väljajätmise vahel?</string>
