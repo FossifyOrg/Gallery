@@ -8,8 +8,6 @@ updates:
       prefix: "chore"
       prefix-development: "chore"
       include: "scope"
-    reviewers:
-      - "naveensingh"
     assignees:
       - "naveensingh"
 
@@ -21,8 +19,6 @@ updates:
       prefix: "chore"
       prefix-development: "chore"
       include: "scope"
-    reviewers:
-      - "naveensingh"
     assignees:
       - "naveensingh"
 
@@ -34,7 +30,5 @@ updates:
       prefix: "chore"
       prefix-development: "chore"
       include: "scope"
-    reviewers:
-      - "naveensingh"
     assignees:
       - "naveensingh"
