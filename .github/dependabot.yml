@@ -8,6 +8,8 @@ updates:
       prefix: "chore"
       prefix-development: "chore"
       include: "scope"
+    assignees:
+      - "naveensingh"
 
   - package-ecosystem: "gradle"
     directory: "/"
@@ -17,3 +19,16 @@ updates:
       prefix: "chore"
       prefix-development: "chore"
       include: "scope"
+    assignees:
+      - "naveensingh"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+    assignees:
+      - "naveensingh"
