@@ -256,4 +256,5 @@
     <string name="faq_18_title">מדוע אני רואה מודעות במהלך הפעלת וידאו?</string>
     <string name="excluded">(לא כלולים)</string>
     <string name="resize_factor">שנה את גורם הגודל</string>
+    <string name="keep_screen_on_fullscreen_photos">השארת המסך דלוק בעת צפייה בתמונות במסך מלא</string>
 </resources>
