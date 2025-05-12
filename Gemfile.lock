@@ -113,7 +113,7 @@ GEM
       xcodeproj (>= 1.13.0, < 2.0.0)
       xcpretty (~> 0.4.1)
       xcpretty-travis-formatter (>= 0.0.3, < 2.0.0)
-    fastlane-plugin-fossify (1.0.0)
+    fastlane-plugin-fossify (1.0.2)
       abbrev
     fastlane-sirp (1.0.0)
       sysrandom (~> 1.0)
