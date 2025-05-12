@@ -252,4 +252,6 @@
     <string name="media_exceeds_device_capabilities">Mediet overskrider enhedens kapacitet.</string>
     <string name="unsupported_format">Ikke-understøttet format.</string>
     <string name="failed_to_load_media">Kunne ikke indlæse medie.</string>
+    <string name="file_is_malformed_or_corrupted">Filen er misdannet eller beskadiget.</string>
+    <string name="keep_screen_on_fullscreen_photos">Hold skærmen tændt, mens du ser fotos i fuld skærm</string>
 </resources>
