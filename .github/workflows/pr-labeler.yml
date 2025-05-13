@@ -1,0 +1,15 @@
+name: PR Labeler
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  contents: read
+  # write permission is not required as FOSSIFYBOT_TOKEN is used
+
+jobs:
+  call-pr-labeler-workflow:
+    uses: FossifyOrg/.github/.github/workflows/pr-labeler.yml@main
+    secrets:
+      FOSSIFYBOT_TOKEN: ${{ secrets.FOSSIFYBOT_TOKEN }}
