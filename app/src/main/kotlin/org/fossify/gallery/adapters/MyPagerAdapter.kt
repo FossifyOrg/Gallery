@@ -33,7 +33,6 @@ class MyPagerAdapter(val activity: ViewPagerActivity, fm: FragmentManager, val m
         }
 
         fragment.arguments = bundle
-        fragment.listener = activity
         return fragment
     }
 
@@ -41,6 +40,10 @@ class MyPagerAdapter(val activity: ViewPagerActivity, fm: FragmentManager, val m
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val fragment = super.instantiateItem(container, position) as ViewPagerFragment
+
+        // getItem() might not be called if the activity is recreated, so the listener must be set here
+        fragment.listener = activity
+
         fragments[position] = fragment
         return fragment
     }
