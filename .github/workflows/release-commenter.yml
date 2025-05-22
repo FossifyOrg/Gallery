@@ -4,14 +4,7 @@ on:
   release:
     types: [published]
 
-permissions:
-  contents: read
-  issues: read
-  pull-requests: read
-  # write permission is not required as FOSSIFYBOT_TOKEN is used
-
 jobs:
   call-release-commenter:
     uses: FossifyOrg/.github/.github/workflows/release-commenter.yml@main
-    secrets:
-      FOSSIFYBOT_TOKEN: ${{ secrets.FOSSIFYBOT_TOKEN }}
+    secrets: inherit
