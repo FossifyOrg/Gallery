@@ -2,11 +2,10 @@ name: No Response
 
 on:
   schedule:
-    - cron: '0 12 * * *' # Runs daily at noon
+    - cron: "0 12 * * *" # Runs daily at noon
   workflow_dispatch:
 
 jobs:
   call-no-response-workflow:
     uses: FossifyOrg/.github/.github/workflows/no-response.yml@main
-    secrets:
-      FOSSIFYBOT_TOKEN: ${{ secrets.FOSSIFYBOT_TOKEN }}
+    secrets: inherit

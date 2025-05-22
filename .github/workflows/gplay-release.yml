@@ -24,9 +24,6 @@ on:
         type: boolean
         default: false
 
-permissions:
-  contents: read
-
 jobs:
   call-release-workflow:
     uses: FossifyOrg/.github/.github/workflows/release.yml@main
@@ -36,11 +33,4 @@ jobs:
       track: ${{ github.event.inputs.track }}
       rollout: ${{ github.event.inputs.rollout }}
       validate_only: ${{ github.event.inputs.validate_only == 'true' }}
-
-    secrets:
-      ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-      SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
-      SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
-      SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
-      SERVICE_ACCOUNT_JSON_KEY_BASE64: ${{ secrets.SERVICE_ACCOUNT_JSON_KEY_BASE64 }}
-      FOSSIFYBOT_TOKEN: ""
+    secrets: inherit
