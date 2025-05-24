@@ -258,4 +258,8 @@
     <string name="unsupported_format">Vorming pole toetatud.</string>
     <string name="file_is_malformed_or_corrupted">Fail on kas vigasena loodud või hiljem katki läinud.</string>
     <string name="keep_screen_on_fullscreen_photos">Fotode täisekraanivaate kasutamisel hoia ekraan sisselülitatuna</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Kas sa oled kindel, et soovid taastada %d faili?</item>
+        <item quantity="other">Kas sa oled kindel, et soovid taastada %d faili?</item>
+    </plurals>
 </resources>
