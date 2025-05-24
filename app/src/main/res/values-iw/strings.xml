@@ -257,4 +257,9 @@
     <string name="excluded">(לא כלולים)</string>
     <string name="resize_factor">שנה את גורם הגודל</string>
     <string name="keep_screen_on_fullscreen_photos">השארת המסך דלוק בעת צפייה בתמונות במסך מלא</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">האם אתה בטוח שאתה רוצה לשחזר קובץ %d?</item>
+        <item quantity="two">האם אתה בטוח שאתה רוצה לשחזר %d קבצים?</item>
+        <item quantity="other">האם אתה בטוח שאתה רוצה לשחזר %d קבצים?</item>
+    </plurals>
 </resources>
