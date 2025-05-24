@@ -254,4 +254,8 @@
     <string name="file_is_malformed_or_corrupted">Datei ist fehlerhaft oder beschädigt.</string>
     <string name="media_exceeds_device_capabilities">Medien überschreiten die Gerätekapazitäten.</string>
     <string name="keep_screen_on_fullscreen_photos">Bildschirm beim Betrachten von Fotos im Vollbild eingeschaltet lassen</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Soll wirklich %d Datei wiederhergestellt werden?</item>
+        <item quantity="other">Sollen wirklich %d Dateien wiederhergestellt werden?</item>
+    </plurals>
 </resources>
