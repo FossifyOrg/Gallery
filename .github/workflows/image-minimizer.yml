@@ -11,5 +11,4 @@ on:
 jobs:
   call-image-minimizer-workflow:
     uses: FossifyOrg/.github/.github/workflows/image-minimizer.yml@main
-    secrets:
-      FOSSIFYBOT_TOKEN: ${{ secrets.FOSSIFYBOT_TOKEN }}
+    secrets: inherit

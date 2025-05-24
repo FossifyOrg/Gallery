@@ -83,6 +83,7 @@ import org.fossify.gallery.extensions.openPath
 import org.fossify.gallery.extensions.openRecycleBin
 import org.fossify.gallery.extensions.restoreRecycleBinPaths
 import org.fossify.gallery.extensions.showRecycleBinEmptyingDialog
+import org.fossify.gallery.extensions.showRestoreConfirmationDialog
 import org.fossify.gallery.extensions.tryDeleteFileDirItem
 import org.fossify.gallery.extensions.updateWidgets
 import org.fossify.gallery.helpers.DIRECTORY
@@ -598,11 +599,13 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
 
     private fun restoreAllFiles() {
         val paths = mMedia.filter { it is Medium }.map { (it as Medium).path } as ArrayList<String>
-        restoreRecycleBinPaths(paths) {
-            ensureBackgroundThread {
-                directoryDB.deleteDirPath(RECYCLE_BIN)
+        showRestoreConfirmationDialog(paths.size) {
+            restoreRecycleBinPaths(paths) {
+                ensureBackgroundThread {
+                    directoryDB.deleteDirPath(RECYCLE_BIN)
+                }
+                finish()
             }
-            finish()
         }
     }
 

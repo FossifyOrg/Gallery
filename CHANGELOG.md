@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added restore confirmation dialogs ([#447])
+
 ### Fixed
 
 - Fixed inaccurate seeking in some videos ([#475])
@@ -123,4 +127,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.2]: https://github.com/FossifyOrg/Gallery/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/FossifyOrg/Gallery/releases/tag/1.0.1
 
+[#447]: https://github.com/FossifyOrg/Gallery/issues/447
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
