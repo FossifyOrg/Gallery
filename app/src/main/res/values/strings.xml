@@ -33,6 +33,10 @@
     <string name="reorder_by_dragging">Reorder folders by dragging</string>
     <string name="reorder_by_dragging_pro">Reorder folders by dragging (Pro)</string>
     <string name="restore_to_path">Restoring to \'%s\'</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Are you sure you want to restore %d file?</item>
+        <item quantity="other">Are you sure you want to restore %d files?</item>
+    </plurals>
     <string name="full_storage_permission_required">Fossify Gallery needs full access to display all your photos and videos. Go to Settings > Permissions > Photos and videos > Allow all.</string>
 
     <!-- Filter -->
