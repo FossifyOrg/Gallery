@@ -260,4 +260,10 @@
     <string name="file_is_malformed_or_corrupted">Файл имеет неправильный формат или повреждён.</string>
     <string name="media_exceeds_device_capabilities">Медиафайл превосходит возможности устройства.</string>
     <string name="keep_screen_on_fullscreen_photos">Держать экран включённым при полноэкранном просмотре</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Вы уверены, что хотите восстановить %d файл?</item>
+        <item quantity="few">Вы уверены, что хотите восстановить %d файла?</item>
+        <item quantity="many">Вы уверены, что хотите восстановить %d файлов?</item>
+        <item quantity="other">Вы уверены, что хотите восстановить %d файлов?</item>
+    </plurals>
 </resources>
