@@ -504,25 +504,12 @@ fun BaseSimpleActivity.showRecycleBinEmptyingDialog(callback: () -> Unit) {
     }
 }
 
-fun BaseSimpleActivity.showRecycleBinRestoringSelectedDialog(callback: () -> Unit) {
+fun BaseSimpleActivity.showRestoreConfirmationDialog(count: Int, callback: () -> Unit) {
     ConfirmationDialog(
-        this,
-        "",
-        R.string.restore_all_selected_confirmation,
-        org.fossify.commons.R.string.yes,
-        org.fossify.commons.R.string.no
-    ) {
-        callback()
-    }
-}
-
-fun BaseSimpleActivity.showRecycleBinRestoringAllDialog(callback: () -> Unit) {
-    ConfirmationDialog(
-        this,
-        "",
-        R.string.restore_all_confirmation,
-        org.fossify.commons.R.string.yes,
-        org.fossify.commons.R.string.no
+        activity = this,
+        message = resources.getQuantityString(R.plurals.restore_confirmation, count, count),
+        positive = org.fossify.commons.R.string.yes,
+        negative = org.fossify.commons.R.string.no
     ) {
         callback()
     }
