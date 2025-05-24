@@ -260,4 +260,10 @@
     <string name="unsupported_format">Непідтримуваний формат.</string>
     <string name="file_is_malformed_or_corrupted">Файл неправильно сформовано або пошкоджено.</string>
     <string name="keep_screen_on_fullscreen_photos">Тримати екран увімкненим під час перегляду фотографій на весь екран</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Ви впевнені, що хочете відновити %d файл?</item>
+        <item quantity="few">Ви впевнені, що хочете відновити %d файли?</item>
+        <item quantity="many">Ви впевнені, що хочете відновити %d файлів?</item>
+        <item quantity="other">Ви впевнені, що хочете відновити %d файлів?</item>
+    </plurals>
 </resources>
