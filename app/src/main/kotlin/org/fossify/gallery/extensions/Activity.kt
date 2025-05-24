@@ -504,6 +504,30 @@ fun BaseSimpleActivity.showRecycleBinEmptyingDialog(callback: () -> Unit) {
     }
 }
 
+fun BaseSimpleActivity.showRecycleBinRestoringSelectedDialog(callback: () -> Unit) {
+    ConfirmationDialog(
+        this,
+        "",
+        R.string.restore_all_selected_confirmation,
+        org.fossify.commons.R.string.yes,
+        org.fossify.commons.R.string.no
+    ) {
+        callback()
+    }
+}
+
+fun BaseSimpleActivity.showRecycleBinRestoringAllDialog(callback: () -> Unit) {
+    ConfirmationDialog(
+        this,
+        "",
+        R.string.restore_all_confirmation,
+        org.fossify.commons.R.string.yes,
+        org.fossify.commons.R.string.no
+    ) {
+        callback()
+    }
+}
+
 fun BaseSimpleActivity.updateFavoritePaths(fileDirItems: ArrayList<FileDirItem>, destination: String) {
     ensureBackgroundThread {
         fileDirItems.forEach {

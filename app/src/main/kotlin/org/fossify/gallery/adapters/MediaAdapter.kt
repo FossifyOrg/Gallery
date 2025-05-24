@@ -72,6 +72,7 @@ import org.fossify.gallery.extensions.saveRotatedImageToFile
 import org.fossify.gallery.extensions.setAs
 import org.fossify.gallery.extensions.shareMediaPaths
 import org.fossify.gallery.extensions.shareMediumPath
+import org.fossify.gallery.extensions.showRecycleBinRestoringSelectedDialog
 import org.fossify.gallery.extensions.toggleFileVisibility
 import org.fossify.gallery.extensions.tryCopyMoveFilesTo
 import org.fossify.gallery.extensions.updateDBMediaPath
@@ -388,7 +389,18 @@ class MediaAdapter(
     }
 
     private fun restoreFiles() {
-        activity.restoreRecycleBinPaths(getSelectedPaths()) {
+        val paths = getSelectedPaths()
+        if (paths.size > 1) {
+            activity.showRecycleBinRestoringSelectedDialog {
+                doRestoreFiles(paths)
+            }
+        } else {
+            doRestoreFiles(paths)
+        }
+    }
+
+    private fun doRestoreFiles(paths: ArrayList<String>) {
+        activity.restoreRecycleBinPaths(paths) {
             listener?.refreshItems()
             finishActMode()
         }
