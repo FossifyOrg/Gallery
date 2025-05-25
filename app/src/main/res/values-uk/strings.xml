@@ -131,14 +131,14 @@
     <string name="group_by">Групувати за</string>
     <string name="do_not_group_files">Не групувати файли</string>
     <string name="by_folder">текою</string>
-    <string name="by_last_modified">останньою зміною</string>
-    <string name="by_last_modified_daily">останньою зміною (по днях)</string>
-    <string name="by_last_modified_monthly">останньою зміною (по місяцях)</string>
-    <string name="by_date_taken">датою зйомки</string>
-    <string name="by_date_taken_daily">датою зйомки (по днях)</string>
-    <string name="by_date_taken_monthly">датою зйомки (по місяцях)</string>
-    <string name="by_file_type">типом файлу</string>
-    <string name="by_extension">розширенням</string>
+    <string name="by_last_modified">Останньою зміною</string>
+    <string name="by_last_modified_daily">Останньою зміною (по днях)</string>
+    <string name="by_last_modified_monthly">Останньою зміною (по місяцях)</string>
+    <string name="by_date_taken">Датою зйомки</string>
+    <string name="by_date_taken_daily">Датою зйомки (по днях)</string>
+    <string name="by_date_taken_monthly">Датою зйомки (по місяцях)</string>
+    <string name="by_file_type">Типом файлу</string>
+    <string name="by_extension">Розширення</string>
     <string name="show_file_count_section_header">Показувати кількість файлів у заголовках розділів</string>
     <string name="grouping_and_sorting">Зверніть увагу, що групування і сортування - це два окремих поля</string>
     <string name="folder_on_widget">Тека, що відображається на віджеті:</string>
@@ -151,9 +151,9 @@
     <string name="crop_thumbnails">Обрізати мініатюри у квадрат</string>
     <string name="show_thumbnail_video_duration">Показувати тривалість відео</string>
     <string name="screen_rotation_by">При повноекранному перегляді обертати за</string>
-    <string name="screen_rotation_system_setting">системними налаштуваннями</string>
-    <string name="screen_rotation_device_rotation">поворотом пристрою</string>
-    <string name="screen_rotation_aspect_ratio">співвідношенням сторін</string>
+    <string name="screen_rotation_system_setting">Системними налаштуваннями</string>
+    <string name="screen_rotation_device_rotation">Поворотом пристрою</string>
+    <string name="screen_rotation_aspect_ratio">Співвідношенням сторін</string>
     <string name="black_background_at_fullscreen">Чорне тло і рядок стану при повноекранному перегляді</string>
     <string name="scroll_thumbnails_horizontally">Гортати мініатюри горизонтально</string>
     <string name="hide_system_ui_at_fullscreen">Автоматично приховувати системний інтерфейс при повноекранному перегляді</string>
@@ -260,4 +260,10 @@
     <string name="unsupported_format">Непідтримуваний формат.</string>
     <string name="file_is_malformed_or_corrupted">Файл неправильно сформовано або пошкоджено.</string>
     <string name="keep_screen_on_fullscreen_photos">Тримати екран увімкненим під час перегляду фотографій на весь екран</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Ви впевнені, що хочете відновити %d файл?</item>
+        <item quantity="few">Ви впевнені, що хочете відновити %d файли?</item>
+        <item quantity="many">Ви впевнені, що хочете відновити %d файлів?</item>
+        <item quantity="other">Ви впевнені, що хочете відновити %d файлів?</item>
+    </plurals>
 </resources>
