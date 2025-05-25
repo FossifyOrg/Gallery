@@ -253,4 +253,9 @@
     <string name="faq_17_title">Kial mi ne plu povas inkluzivi mankantajn dosierujojn?</string>
     <string name="faq_18_title">Kial mi vidas reklamojn dum la legado de filmetoj?</string>
     <string name="faq_18_text">Niaj aplikaĵoj enhavas neniun ajn reklamon. Se vi vidas reklamojn dum la legado de filmetoj, tio devas signifi, ke vi uzas la legilon de iu alia aplikaĵo. Provu trovi vian defaŭltan legilon de filmetoj en la aparataj agordoj kaj elekti \"Forviŝi defaŭltojn\". La sekva fojo, ke vi malfermos iun filmeton, vi vidos elektilon de aplikaĵoj kie vi povas elekti la aplikaĵon kiun vi volas uzi.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Ĉu vi certas, ke vi volas restaŭri %d dosieron?</item>
+        <item quantity="other">Ĉu vi certas, ke vi volas restaŭri %d dosierojn?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Malŝalti malheligon de la ekrano dum fotoj estas plenekranaj</string>
 </resources>
