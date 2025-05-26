@@ -19,7 +19,7 @@ gradlePlugins-agp = "8.10.0"
 #Other
 androidGifDrawable = "1.2.25"
 androidImageCropper = "4.5.0"
-apng = "2.28.0"
+apng = "3.0.5"
 awebp = "2.28.0"
 glideCompiler = "4.16.0"
 zjupureWebpdecoder = "2.6.4.16.0"
