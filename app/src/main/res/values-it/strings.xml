@@ -259,4 +259,9 @@
     <string name="media_exceeds_device_capabilities">Il media supera le capacità del dispositivo.</string>
     <string name="unsupported_format">Formato non supportato.</string>
     <string name="keep_screen_on_fullscreen_photos">Mantieni lo schermo acceso durante la visualizzazione delle foto a schermo intero</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Sei sicuro di voler ripristinare %d file?</item>
+        <item quantity="many">Sei sicuro di voler ripristinare %d file?</item>
+        <item quantity="other">Sei sicuro di voler ripristinare %d file?</item>
+    </plurals>
 </resources>
