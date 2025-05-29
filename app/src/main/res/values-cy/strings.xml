@@ -152,7 +152,7 @@
     <string name="allow_deep_zooming_images">Galluogi chwyddo dwfn ar ddelweddau</string>
     <string name="folder_thumbnail_style">Arddull cryno-lun ffolder</string>
     <string name="show_file_count_none">Peidio â dangos cyfanswm ffeiliau</string>
-    <string name="failed_to_load_media">Wedi methu â llwytho cyfryngau</string>
+    <string name="failed_to_load_media">Wedi methu â llwytho cyfryngau.</string>
     <string name="file_edited_successfully">Wedi golygu\'r ffeil yn llwyddiannus</string>
     <string name="group_direct_subfolders">Grwpio is-ffolderi uniongyrchol</string>
     <string name="autoplay_videos">Chwarae fideos yn awtomatig</string>
