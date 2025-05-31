@@ -15,5 +15,3 @@ Fixed:
 • Swipe-to-close gesture now works with WebP images
 • Fixed inaccurate or broken seeking in some videos
 • Image rotation edits no longer auto-save without confirmation
-• External keyboards now work properly in copy/move dialogs
-
