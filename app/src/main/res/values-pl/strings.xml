@@ -260,4 +260,10 @@
     <string name="media_exceeds_device_capabilities">Plik przekracza możliwości urządzenia.</string>
     <string name="unsupported_format">Nieobsługiwany format.</string>
     <string name="file_is_malformed_or_corrupted">Plik jest wadliwy lub uszkodzony.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Czy przywrócić %d plik?</item>
+        <item quantity="few">Czy przywrócić %d pliki?</item>
+        <item quantity="many">Czy przywrócić %d plików?</item>
+        <item quantity="other">Czy przywrócić %d plików?</item>
+    </plurals>
 </resources>

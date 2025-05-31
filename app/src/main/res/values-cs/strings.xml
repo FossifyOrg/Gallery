@@ -259,4 +259,9 @@
     <string name="file_is_malformed_or_corrupted">Soubor je poškozen.</string>
     <string name="unsupported_format">Nepodporovaný formát.</string>
     <string name="keep_screen_on_fullscreen_photos">Ponechat obrazovku zapnutou při zobrazování fotografií na celou obrazovku</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Opravdu chcete obnovit %d soubor?</item>
+        <item quantity="few">Opravdu chcete obnovit %d soubory?</item>
+        <item quantity="other">Opravdu chcete obnovit %d souborů?</item>
+    </plurals>
 </resources>

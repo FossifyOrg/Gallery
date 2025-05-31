@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="keep_screen_on_fullscreen_photos">Paturēt ekrānu ieslēgtu, kamēr attēli tiek apskatīti pilnekrānā</string>
+    <plurals name="restore_confirmation">
+        <item quantity="zero">Vai tiešām atjaunot %d datņu?</item>
+        <item quantity="one">Vai tiešām atjaunot %d datni?</item>
+        <item quantity="other">Vai tiešām atjaunot %d datnes?</item>
+    </plurals>
 </resources>

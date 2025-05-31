@@ -259,4 +259,9 @@
     <string name="file_is_malformed_or_corrupted">El fitxer està malmès o s\'ha corromput.</string>
     <string name="unsupported_format">Format no admès.</string>
     <string name="keep_screen_on_fullscreen_photos">Mantén la pantalla encesa mentre es visualitzen les fotos a pantalla completa</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Segur que voleu restaurar %d fitxer?</item>
+        <item quantity="many">Segur que voleu restaurar %d de fitxers?</item>
+        <item quantity="other">Segur que voleu restaurar %d fitxers?</item>
+    </plurals>
 </resources>

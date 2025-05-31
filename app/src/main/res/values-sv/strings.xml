@@ -10,7 +10,7 @@
     <string name="pin_to_the_top">Fäst högst upp</string>
     <string name="show_all">Visa alla mappars innehåll</string>
     <string name="all_folders">Alla mappar</string>
-    <string name="folder_view">Byt till mappvy</string>
+    <string name="folder_view">Växla till mappvy</string>
     <string name="other_folder">Annan mapp</string>
     <string name="show_on_map">Visa på karta</string>
     <string name="unknown_location">Okänd plats</string>
@@ -86,7 +86,7 @@
     <string name="edit_image_with">Redigera bilden med:</string>
     <string name="edit_video_with">Redigera video med:</string>
     <string name="no_image_editor_found">Ingen bildredigerare hittades</string>
-    <string name="no_video_editor_found">Ingen videoredigerare funnen</string>
+    <string name="no_video_editor_found">Ingen videoredigerare hittades</string>
     <string name="unknown_file_location">Okänd filplats</string>
     <string name="error_saving_file">Det gick inte att skriva över källfilen</string>
     <string name="rotate_left">Rotera åt vänster</string>
@@ -255,4 +255,9 @@
     <string name="media_exceeds_device_capabilities">Media överskrider enhetens funktioner.</string>
     <string name="unsupported_format">Formatet stöds inte.</string>
     <string name="full_storage_permission_required">Fossify Gallery behöver fullständig åtkomst för att visa alla dina foton och videor. Gå till Inställningar &gt; Behörigheter &gt; Foton och videor &gt; Tillåt alla.</string>
+    <string name="keep_screen_on_fullscreen_photos">Låt skärmen vara på när foton visas i helskärm</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Är du säker på att du vill återställa %d fil?</item>
+        <item quantity="other">Är du säker på att du vill återställa %d filer?</item>
+    </plurals>
 </resources>
