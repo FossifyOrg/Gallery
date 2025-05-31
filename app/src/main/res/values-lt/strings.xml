@@ -20,7 +20,7 @@
     <string name="unlock_orientation">Atrakinti orientaciją</string>
     <string name="change_orientation">Keisti orientaciją</string>
     <string name="filter_media">Filtruoti mediją</string>
-    <string name="images">Paveikslai</string>
+    <string name="images">Vaizdai</string>
     <string name="videos">Vaizdo įrašai</string>
     <string name="gifs">GIF\'ai</string>
     <string name="no_media_with_filters">Su pasirinktais filtrais nerasta medijos bylų.</string>
@@ -114,4 +114,4 @@
     <string name="faq_10_title">Ar galiu apkarpyti vaizdus naudojant šią programėlę\?</string>
     <string name="faq_10_text">Taip, redaguodami vaizdus, galite juos apkarpyti, vilkdami vaizdo kampus. Galite patekti į redaktorių ilgai paspaudę vaizdo miniatiūrą ir pasirinkę Redaguoti arba iš viso ekrano rodinio pasirinkę Redaguoti.</string>
     <string name="faq_16_text">Nuo \"Android 11\" nebegalite paslėpti arba panaikinti failų ar aplankų paslėpimo, taip pat paslėptų failų ar aplankų negalite matyti galerijos programėlėse. Tam turėsite naudoti kokį nors failų tvarkytuvą.</string>
-    </resources>
+</resources>
