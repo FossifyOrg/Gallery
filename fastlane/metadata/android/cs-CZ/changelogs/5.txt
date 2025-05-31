@@ -1,2 +1,0 @@
-* Removed fake app message when using the editor.
-* Added some translations

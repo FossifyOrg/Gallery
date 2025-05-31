@@ -1,6 +1,0 @@
-* Se corrigió el fallo al reproducir videos.
-* Presentación de diapositivas fija en Android 14.
-* Se agregó soporte para AVIF.
-* Restablecimiento de posición fija después de la rotación del dispositivo.
-* Se corrigieron las capturas de pantalla cuando se habilitaba el zoom de doble toque uno a uno.
-* Se agregaron algunas traducciones

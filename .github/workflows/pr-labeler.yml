@@ -1,0 +1,10 @@
+name: PR Labeler
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  call-pr-labeler-workflow:
+    uses: FossifyOrg/.github/.github/workflows/pr-labeler.yml@main
+    secrets: inherit

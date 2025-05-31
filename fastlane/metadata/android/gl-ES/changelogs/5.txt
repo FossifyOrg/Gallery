@@ -1,2 +1,0 @@
-* Eliminada a mensaxe falsa da app ao usar o editor.
-* Engadidas algunhas traducións

@@ -1,2 +1,0 @@
-* Die falsche App-Meldung beim Verwenden des Editors entfernt.
-* Einige Übersetzungen hinzugefügt

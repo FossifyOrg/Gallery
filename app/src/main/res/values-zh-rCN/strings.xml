@@ -34,7 +34,7 @@
     <string name="reorder_by_dragging_pro">通过拖动重新排列文件夹 (专业版)</string>
     <string name="restore_to_path">还原到“%s”</string>
     <string name="filter_media">过滤显示的文件</string>
-    <string name="images">图像</string>
+    <string name="images">图片</string>
     <string name="videos">视频</string>
     <string name="gifs">GIF</string>
     <string name="raw_images">RAW 图像</string>
@@ -143,7 +143,7 @@
     <string name="by_extension">扩展名</string>
     <string name="show_file_count_section_header">在栏目标题上显示文件数</string>
     <string name="grouping_and_sorting">请注意：分组和排序是两种相互独立的文件组织方式</string>
-    <string name="folder_on_widget">显示在挂件中的文件夹：</string>
+    <string name="folder_on_widget">显示在微件中的文件夹：</string>
     <string name="show_folder_name">显示文件夹名称</string>
     <string name="autoplay_videos">自动播放视频</string>
     <string name="remember_last_video_position">记住视频上一次播放时的位置</string>
@@ -220,7 +220,7 @@
     <string name="faq_2_title">我用密码锁定了本应用，但我忘记密码了。我应该怎么办？</string>
     <string name="faq_2_text">您可以通过两种方式解决此问题。您可以重新安装本应用，也可以在本设备的设置页面中清除本应用的数据。清除本应用的数据将重置本应用的所有设置，但不会删除任何媒体文件。</string>
     <string name="faq_3_title">如何让某个相册始终靠前显示？</string>
-    <string name="faq_3_text">您可以长按需要靠前固定的相册，然后在工具栏中点击“图钉”按钮，即可将其靠前固定显示。您也可以靠前固定多个文件夹，被靠前固定的项目之间将按照默认的排序方式进行排序。</string>
+    <string name="faq_3_text">您可以长按需要靠前固定的相册，然后在工具栏中选中“图钉”按钮，即可将其靠前固定显示。您也可以靠前固定多个文件夹，被靠前固定的项目之间将按照默认的排序方式进行排序。</string>
     <string name="faq_4_title">如何快进/快退视频？</string>
     <string name="faq_4_text">您可以双击屏幕边缘或者点击在搜索栏附近显示的当前时间/总时长来进行操作。如果您在设置中启用了“在独立画面中播放视频”，则可以使用水平手势来对视频进行快进/快退。</string>
     <string name="faq_5_title">隐藏和排除文件夹有什么区别？</string>
@@ -256,4 +256,8 @@
     <string name="unsupported_format">不支持的格式。</string>
     <string name="file_is_malformed_or_corrupted">文件格式错误或已损坏。</string>
     <string name="media_exceeds_device_capabilities">媒体超出了设备容量。</string>
+    <string name="keep_screen_on_fullscreen_photos">全屏查看照片时保持屏幕开启</string>
+    <plurals name="restore_confirmation">
+        <item quantity="other">你确定要恢复 %d 个文件吗？</item>
+    </plurals>
 </resources>

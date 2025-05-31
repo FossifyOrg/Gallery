@@ -214,7 +214,7 @@
     <string name="faq_2_title">Lukustasin rakenduse salasõnaga, kuid unustasin selle. Mida ma saan teha\?</string>
     <string name="faq_2_text">Seda saad lahendada kahel viisil. Võid kas paigaldada rakenduse uuesti või otsi rakenduse kirje oma seadme seadistustest ja vali „Tühjenda andmed“. See nullib kõik sinu seadistused, see ei eemalda ühtegi meediafaili.</string>
     <string name="faq_3_title">Kuidas saan teha nii, et album ilmuks alati ülaosas\?</string>
-    <string name="faq_3_text">Vajuta soovitud albumit pikalt ja vali toimingute menüüst ikooni Kinnita, mis kinnitab selle ülespoole. Saad kinnitada ka mitu kausta, kinnitatavad kirjed sorteeritakse vaikimisi sorteerimismeetodi järgi.</string>
+    <string name="faq_3_text">Vajuta soovitud albumit pikalt ja vali toimingute menüüst ikoon „Kinnita“, mis kinnitab selle ülespoole. Saad kinnitada ka mitu kausta, kinnitatavad kirjed sorteeritakse vaikimisi sorteerimismeetodi järgi.</string>
     <string name="faq_4_title">Kuidas saan videoid kiiresti edasi kerida\?</string>
     <string name="faq_4_text">Seda saad teha, kui topeltkoputad ekraani küljele või koputad praeguse või maksimaalse kestuse tekstidele otsinguriba lähedal. Kui lubad rakenduse seadetes videote avamise eraldi ekraanil, saate kasutada ka horisontaalseid viipeid.</string>
     <string name="faq_5_title">Mis erinevus on kausta peitmise ja väljajätmise vahel?</string>
@@ -227,7 +227,7 @@
     <string name="faq_10_title">Kas ma saan selle rakendusega pilte kärpida\?</string>
     <string name="faq_10_text">Jah, sa saad pilte redaktoris kärpida, lohistades pildi nurki. Redaktorisse pääseb, kui vajutate pikalt pildi pisipildile ja valite käsu Edit või valite täisekraani vaates käsu Edit.</string>
     <string name="faq_11_title">Kas ma saan kuidagi rühmitada meediafailide pisipilte\?</string>
-    <string name="faq_11_text">Muidugi, kasutage pisipiltide vaates lihtsalt menüüelementi \"Group by\". Saate grupeerida faile mitme kriteeriumi, sealhulgas pildistamise kuupäeva järgi. Kui kasutate funktsiooni \"Show all folders content\" saate neid kaustade järgi rühmitada.</string>
+    <string name="faq_11_text">Muidugi, kasuta pisipiltide vaates lihtsalt menüüvalikut „Rühmituse alus“. Saad grupeerida faile mitme kriteeriumi, sealhulgas pildistamise kuupäeva järgi. Kui kasutad funktsiooni „Näita kõikide kaustade sisu“ saad neid kaustade järgi rühmitada.</string>
     <string name="faq_12_title">Sorteerimine võetud kuupäeva järgi ei tundu korralikult toimivat, kuidas seda parandada\?</string>
     <string name="faq_12_text">Tõenäoliselt on selle põhjuseks kuskilt kopeeritud failid. Saate selle parandada, valides faili pisipildid ja valides \"Fix Date Taken väärtus\".</string>
     <string name="faq_13_title">Ma näen piltidel mõningaid värviribasid. Kuidas ma saan kvaliteeti parandada\?</string>
@@ -257,4 +257,9 @@
     <string name="media_exceeds_device_capabilities">Meedia ületab selle seadme suutlikkuse.</string>
     <string name="unsupported_format">Vorming pole toetatud.</string>
     <string name="file_is_malformed_or_corrupted">Fail on kas vigasena loodud või hiljem katki läinud.</string>
+    <string name="keep_screen_on_fullscreen_photos">Fotode täisekraanivaate kasutamisel hoia ekraan sisselülitatuna</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Kas sa oled kindel, et soovid taastada %d faili?</item>
+        <item quantity="other">Kas sa oled kindel, et soovid taastada %d faili?</item>
+    </plurals>
 </resources>

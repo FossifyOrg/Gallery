@@ -1,0 +1,36 @@
+name: Google Play Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      track:
+        description: "Google Play Store release track"
+        required: false
+        type: choice
+        default: "beta"
+        options:
+          - internal
+          - alpha
+          - beta
+          - production
+      rollout:
+        description: "Rollout fraction (0.0-1.0)"
+        required: false
+        type: string
+        default: "0.05"
+      validate_only:
+        description: "Fastlane dry-run?"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  call-release-workflow:
+    uses: FossifyOrg/.github/.github/workflows/release.yml@main
+    with:
+      flavor: "gplay"
+      package_name: "org.fossify.gallery"
+      track: ${{ github.event.inputs.track }}
+      rollout: ${{ github.event.inputs.rollout }}
+      validate_only: ${{ github.event.inputs.validate_only == 'true' }}
+    secrets: inherit

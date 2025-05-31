@@ -244,4 +244,15 @@
     <string name="faq_18_title">Miksi näen mainoksia videon toiston aikana\?</string>
     <string name="faq_18_text">Sovelluksissamme ei ole lainkaan mainoksia. Jos näet niitä videon toiston aikana, sinun täytyy käyttää jotain muuta sovellusta videosoittimena. Yritä etsiä oletusarvoinen videosoittimesi laitteen asetuksista ja tee sitten ”Tyhjenä oletusasetukset” sille. Seuraavan kerran, kun kutsut jonkin videon aikomuksen, näet sovelluksen valintakehotuksen, jossa voit valita, mitä sovellusta haluat käyttää.</string>
     <string name="wallpaper">Taustakuva</string>
+    <string name="playback_speed">Toistonopeus</string>
+    <string name="failed_to_load_media">Median lataus epäonnistui.</string>
+    <string name="file_is_malformed_or_corrupted">Tiedosto on epäkelpo tai korruptoitunut.</string>
+    <string name="media_exceeds_device_capabilities">Media ylittää laitteen suorituskyvyn.</string>
+    <string name="unsupported_format">Tiedostomuoto ei tuettu.</string>
+    <string name="exclude_folder_description">Tämä toiminto poissulkee kansion ja sen alikansiot vain Fossify Gallery:sta. Voit hallita poissuljettuja kansioita asetuksista.</string>
+    <string name="faq_1_title">Kuinka voin asettaa Fossify Gallery:n laitteen oletusgalleriaksi?</string>
+    <string name="faq_1_text">Ensimmäisenä etsi laitteen asetuksista sovellukset-osio. Etsi painiketta, jossa on maininta, että \"Avaa oletuksena\". Valitse tämän jälkeen \"Palauta oletukset\". Seuraavan kerran, kun yrität avata kuvaa tai videota, valitsee sovellusvalitsimesta Fossify Gallery ja tee siitä oletussovellus.</string>
+    <string name="full_storage_permission_required">Fossify Gallery tarvitsee täyden pääsyn kuviin ja videoihin, jotta niitä voidaan näyttää. Mene kohtaan Asetukset &gt; Luvat &gt; Kuvat ja videot &gt; Salli kaikki.</string>
+    <string name="excluded_activity_placeholder">Kansioiden ja niiden alikansioiden poissulkeminen piilottaa kansiot vain Fossify Gallery:sta. Ne ovat edelleen saatavilla muissa sovelluksissa.\n\nJos haluat piilottaa ne myös muista sovelluksista, käytä Piilota toimintoa.</string>
+    <string name="faq_5_text">Kansion poissulku toimii vain Fossify Gallery:ssä. Piilota toiminto piiloittaa kansiot myös muista galleria-sovelluksista. Piilota-toiminto käyttää hyväkseen tyhjää \".nomedia\" tiedostoa valitussa kansiossa. Tämän tiedoston voi poistaa tiedostonhallintasovelluksella. Huomio, että jotkin laitteet eivät salli kameran ja järjestelmän oletuskansioiden, kuten Kamera, Kuvakaappaukset ja Lataukset, piilotusta.</string>
 </resources>

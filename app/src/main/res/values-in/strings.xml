@@ -142,17 +142,17 @@
     <string name="show_media_count">Tampilkan jumlah media di tampilan utama</string>
     <string name="show_extended_details">Tampilkan detail tambahan saat layar penuh</string>
     <string name="manage_extended_details">Kelola detail tambahan</string>
-    <string name="one_finger_zoom">Izinkan zum dengan satu jari di layar penuh</string>
+    <string name="one_finger_zoom">Izinkan zoom dengan satu jari di layar penuh</string>
     <string name="allow_instant_change">Izinkan mengganti media dengan mengklik sisi layar</string>
-    <string name="allow_deep_zooming_images">Izinkan zum gambar lebih dalam</string>
+    <string name="allow_deep_zooming_images">Izinkan zoom gambar lebih dalam</string>
     <string name="hide_extended_details">Sembunyikan detail tambahan ketika bilah status disembunyikan</string>
     <string name="show_at_bottom">Tampilkan tombol tindakan di layar bagian bawah</string>
     <string name="show_recycle_bin">Tampilkan Keranjang Sampah di layar folder</string>
-    <string name="deep_zoomable_images">Zum gambar mendalam</string>
+    <string name="deep_zoomable_images">Zoom gambar mendalam</string>
     <string name="show_highest_quality">Tampilkan gambar dalam kualitas tertinggi</string>
     <string name="show_recycle_bin_last">Tampilkan Keranjang Sampah sebagai item terakhir di layar utama</string>
     <string name="allow_down_gesture">Izinkan keluar dari layar penuh dengan menggeser ke bawah</string>
-    <string name="allow_one_to_one_zoom">Izinkan zum 1:1 dengan dua kali ketuk</string>
+    <string name="allow_one_to_one_zoom">Izinkan zoom 1:1 dengan dua kali ketuk</string>
     <string name="open_videos_on_separate_screen">Selalu buka video pada layar terpisah dengan gestur horizontal baru</string>
     <string name="show_notch">Tampilkan notch jika tersedia</string>
     <string name="allow_rotating_gestures">Izinkan memutar gambar dengan gestur</string>
@@ -161,13 +161,13 @@
     <string name="compromise">Kompromi</string>
     <string name="avoid_showing_invalid_files">Hindari menampilkan file yang tidak valid</string>
     <string name="show_image_file_types">Tampilkan jenis file gambar</string>
-    <string name="allow_zooming_videos">Perbolehkan perbesaran video dengan menekan dua kali</string>
+    <string name="allow_zooming_videos">Perbolehkan zoom video dengan mengetuk dua kali</string>
     <string name="folder_thumbnail_style">Gaya thumbnail folder</string>
     <string name="file_thumbnail_style">Gaya thumbnail file</string>
     <string name="mark_favorite_items">Tandai item favorit</string>
     <string name="thumbnail_spacing">Spasi thumbnail</string>
     <string name="show_file_count_line">Tampilkan jumlah file di baris terpisah</string>
-    <string name="show_file_count_brackets">Tampilkah jumlah file di kotak</string>
+    <string name="show_file_count_brackets">Tampilkah jumlah file di dalam kurung</string>
     <string name="show_file_count_none">Jangan tampilkan jumlah file</string>
     <string name="limit_folder_title">Batasi judul folder panjang ke 1 baris</string>
     <string name="square">Kotak</string>
@@ -180,7 +180,7 @@
     <string name="media_management_manual">Ada yang salah, silakan menuju ke Pengaturan - Aplikasi - Akses aplikasi khusus - Aplikasi manajemen media dan perbolehkan aplikasi ini untuk mengelola media.</string>
     <string name="media_management_note">Jika perubahan arah tidak bekerja, silakan menuju ke Pengaturan - Aplikasi - Akses aplikasi khusus - Aplikasi manajemen media dan perbolehkan aplikasi ini untuk mengelola media.</string>
     <string name="media_management_alternative">Jika Anda tidak ingin melakukannya, Anda juga dapat menuju ke Pengaturan - Aplikasi - Akses aplikasi khusus - Aplikasi manajemen media dan perbolehkan aplikasi ini untuk mengelola media.</string>
-    <string name="alternative_media_access">Secara alternatif, Anda dapat memperbolehkan mengakses file media saja. Jika demikian, Anda tidak akan dapat melakukan apa pun dengan file tersembunyi.</string>
+    <string name="alternative_media_access">Sebagai alternatif, Anda dapat memperbolehkan mengakses file media saja. Jika demikian, Anda tidak akan dapat melakukan apa pun dengan file tersembunyi.</string>
     <string name="media_only">Hanya media</string>
     <string name="all_files">Semua file</string>
     <string name="search_all_files">Cari semua file daripada folder di layar utama</string>
@@ -212,9 +212,9 @@
     <string name="faq_12_title">Tidak bisa mengurutkan berdasarkan Tanggal Diambil, bagaimana cara memperbaikinya\?</string>
     <string name="faq_12_text">Itu umumnya disebabkan karena file yang disalin dari tempat lain. Anda bisa memperbaikinya dengan memilih file thumbnail dan pilih \"Perbaiki Tanggal Diambil\".</string>
     <string name="faq_13_title">Saya melihat beberapa pita warna pada gambar. Bagaimana saya meningkatkan kualitasnya\?</string>
-    <string name="faq_13_text">Solusi saat ini untuk menampilkan gambar berfungsi dengan baik dalam sebagian besar kasus, namun jika anda ingin kualitas gambar yang lebih baik, anda bisa mengaktifkan \"Tampilkan gambar dalam kualitas tertinggi\" di pengaturan aplikasi, pada bagian \"Zum gambar mendalam\".</string>
+    <string name="faq_13_text">Solusi saat ini untuk menampilkan gambar berfungsi baik dalam sebagian besar kasus, namun jika anda ingin kualitas gambar yang lebih baik, anda bisa mengaktifkan \"Tampilkan gambar dalam kualitas tertinggi\" di pengaturan aplikasi, pada bagian \"Zoom gambar mendalam\".</string>
     <string name="faq_14_title">Saya punya file/folder tersembunyi. Bagaimana cara memunculkannya?</string>
-    <string name="faq_14_text">Anda bisa memilih menu \"Tampilkan sementara file tersembunyi\" di layar utama, atau \"Tampilkan file tersembunyi\" di pengaturan aplikasi untuk menampilkannya. Jika anda tidak ingin menyembunyikannya, tekan lama dan pilih \"Jangan sembunyikan\". Folder disembunyikan dengan cara menambahkan file bertajuk \".nomedia\" di dalamnya, dan Anda bisa menghapus file tersebut dengan aplikasi pengelola file. Peelu diingat bahwa proses penyembunyikan file bekerja secara beruntun, jadi jika Anda menyembunyikan sebuah folder, seluruh subfoldernya juga akan disembunyikan. Jadi untuk memunculkan subfolder, Anda harus memunculkan folder induknya.</string>
+    <string name="faq_14_text">Anda bisa memilih menu \"Tampilkan sementara file tersembunyi\" di layar utama, atau \"Tampilkan file tersembunyi\" di pengaturan aplikasi untuk menampilkannya. Jika Anda tidak ingin menyembunyikannya, tekan lama dan pilih \"Jangan sembunyikan\". Folder disembunyikan dengan cara menambahkan file bernama \".nomedia\" di dalamnya, dan Anda bisa menghapus file tersebut dengan aplikasi pengelola file. Peelu diingat bahwa proses penyembunyikan file bekerja secara beruntun, jadi jika Anda menyembunyikan sebuah folder, seluruh subfoldernya juga akan disembunyikan. Jadi untuk memunculkan subfolder, Anda harus memunculkan folder induknya.</string>
     <string name="faq_15_title">Kenapa aplikasi menggunakan sangat banyak ruang kosong\?</string>
     <string name="faq_15_text">Cache aplikasi bisa mencapai 250MB, ini untuk menjamin pemuatan gambar yang lebih cepat. Jika aplikasi menggunakan lebih banyak lagi ruang kosong, sangat memungkinkan anda memiliki item di dalam Keranjang Sampah. File tersebut akan menambah ukuran aplikasi. Anda bisa mengosongkan Keranjang sampah dengan cara membukanya dan menghapus semua file, atau dari pengaturan aplikasi. Semua file di dalam keranjang sampah akan dihapus secara otomatis setelah 30 hari.</string>
     <string name="faq_16_title">Apa yang terjadi pada penyembunyian file dan folder, dan mengapa saya tidak bisa melihat item yang tersembunyi lagi\?</string>
@@ -245,9 +245,15 @@
     </plurals>
     <string name="images_resized_successfully">Ukuran gambar berhasil diubah</string>
     <string name="crop">Potong</string>
-    <string name="wallpaper">Wallpaper</string>
+    <string name="wallpaper">Latar belakang</string>
     <string name="interval">Selang waktu</string>
     <string name="slide">Geser</string>
     <string name="by_folder">Folder</string>
     <string name="cant_unhide_folder">Jika folder atau salah satu folder induknya memiliki titik di depan namanya, maka folder tersebut tersembunyi dan tidak dapat dimunculkan seperti ini. Anda harus menghapus titik dengan mengganti namanya.</string>
+    <string name="full_storage_permission_required">Fossify Gallery perlu akses penuh untuk menampilkan semua foto dan video. Buka Pengaturan &gt; Izin &gt; Foto dan video &gt; Izinkan semua.</string>
+    <string name="playback_speed">Kecepatan pemutaran</string>
+    <string name="file_is_malformed_or_corrupted">File rusak atau korup.</string>
+    <string name="media_exceeds_device_capabilities">Media melebihi kemampuan perangkat.</string>
+    <string name="unsupported_format">Format tidak didukung.</string>
+    <string name="failed_to_load_media">Gagal memuat media.</string>
 </resources>

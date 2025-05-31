@@ -1,2 +1,0 @@
-* Se eliminó el mensaje incorrecto de la aplicación al usar el editor.
-* Se agregaron algunas traducciones

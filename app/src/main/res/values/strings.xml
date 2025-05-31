@@ -33,6 +33,10 @@
     <string name="reorder_by_dragging">Reorder folders by dragging</string>
     <string name="reorder_by_dragging_pro">Reorder folders by dragging (Pro)</string>
     <string name="restore_to_path">Restoring to \'%s\'</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Are you sure you want to restore %d file?</item>
+        <item quantity="other">Are you sure you want to restore %d files?</item>
+    </plurals>
     <string name="full_storage_permission_required">Fossify Gallery needs full access to display all your photos and videos. Go to Settings > Permissions > Photos and videos > Allow all.</string>
 
     <!-- Filter -->
@@ -180,6 +184,7 @@
     <string name="scroll_thumbnails_horizontally">Scroll thumbnails horizontally</string>
     <string name="hide_system_ui_at_fullscreen">Automatically hide system UI at fullscreen media</string>
     <string name="delete_empty_folders">Delete empty folders after deleting their content</string>
+    <string name="keep_screen_on_fullscreen_photos">Keep the screen on while viewing fullscreen photos</string>
     <string name="allow_photo_gestures">Allow controlling photo brightness with vertical gestures</string>
     <string name="allow_video_gestures">Allow controlling video volume and brightness with vertical gestures</string>
     <string name="playback_speed">Playback speed</string>
