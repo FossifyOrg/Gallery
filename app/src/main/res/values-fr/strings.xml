@@ -259,4 +259,9 @@
     <string name="playback_speed">Vitesse de lecture</string>
     <string name="failed_to_load_media">Échec de chargement du média.</string>
     <string name="keep_screen_on_fullscreen_photos">Garder l\'écran allumé lors de l\'affichage de photos en plein écran</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Êtes-vous sûr de vouloir restaurer %d fichier ?</item>
+        <item quantity="many">Êtes-vous sûr de vouloir restaurer %d fichiers ?</item>
+        <item quantity="other">Êtes-vous sûr de vouloir restaurer %d fichiers ?</item>
+    </plurals>
 </resources>

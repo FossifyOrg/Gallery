@@ -257,4 +257,11 @@
     <string name="faq_8_text">Má chuirtear fillteán leis na Fillteáin Áirithe, ní fhágann sin rud ar bith as an áireamh go huathoibríoch. Cad is féidir leat a dhéanamh ná dul i Socruithe -&gt; Bainistigh Fillteáin Eisiata, eisiamh an fillteán fréimhe \"/\", ansin cuir na fillteáin atá ag teastáil ag Socruithe -&gt; Bainistigh Fillteáin Áirithe. Ní dhéanfaidh sé sin ach na fillteáin roghnaithe a fheiceáil, mar go bhfuil an dá eisiamh agus lena n-áirítear athfhillteach agus má tá fillteán eisiata agus san áireamh, beidh sé a thaispeáint suas.</string>
     <string name="toggle_favorite">Scoránaigh is fearr leat</string>
     <string name="keep_screen_on_fullscreen_photos">Coinnigh an scáileán ar siúl agus grianghraif lánscáileáin á bhféachaint agat</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">An bhfuil tú cinnte gur mian leat %d comhad a athchóiriú?</item>
+        <item quantity="two">An bhfuil tú cinnte gur mian leat %d comhaid a athchóiriú?</item>
+        <item quantity="few">An bhfuil tú cinnte gur mian leat %d comhaid a athchóiriú?</item>
+        <item quantity="many">An bhfuil tú cinnte gur mian leat %d comhaid a athchóiriú?</item>
+        <item quantity="other">An bhfuil tú cinnte gur mian leat %d comhaid a athchóiriú?</item>
+    </plurals>
 </resources>
