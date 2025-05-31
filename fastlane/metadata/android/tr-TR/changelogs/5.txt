@@ -1,2 +1,0 @@
-* Düzenleyiciyi kullanırken sahte uygulama mesajı kaldırıldı.
-* Bazı çeviriler eklendi

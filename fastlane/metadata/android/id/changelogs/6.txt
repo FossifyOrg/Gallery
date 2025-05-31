@@ -1,6 +1,0 @@
-* Kemogokan telah diperbaiki ketika memutar video.
-* Salindia telah diperbaiki di Android 14.
-* Ditambahkan dukungan untuk AVIF.
-* Pengaturan ulang posisi telah diperbaiki setelah rotasi perangkat.
-* Diperbaiki perbesaran tangkapan layar ketika perbesaran ketuk ganda satu ke satu diaktifkan.
-* Ditambahkan beberapa terjemahan

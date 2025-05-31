@@ -1,2 +1,0 @@
-* Dihilangkan pesan aplikasi palsu ketika menggunakan penyunting.
-* Ditambahkan beberapa terjemahan

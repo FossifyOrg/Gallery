@@ -415,7 +415,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
             }
 
             checkSystemUI()
-            fullscreenToggled()
         }
 
         if (intent.action == "com.android.camera.action.REVIEW") {

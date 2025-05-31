@@ -1,2 +1,0 @@
-* Removed proprietary panorama library
-* Added some translations

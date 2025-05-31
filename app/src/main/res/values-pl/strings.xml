@@ -162,6 +162,7 @@
     <string name="scroll_thumbnails_horizontally">Przewijaj miniaturki w poziomie</string>
     <string name="hide_system_ui_at_fullscreen">Automatycznie ukrywaj interfejs systemu dla multimediów na pełnym ekranie</string>
     <string name="delete_empty_folders">Usuwaj puste foldery po usunięciu ich zawartości</string>
+    <string name="keep_screen_on_fullscreen_photos">Pozostawiaj ekran włączony podczas oglądania obrazów na pełnym ekranie</string>
     <string name="allow_photo_gestures">Zezwalaj na kontrolowanie jasności obrazów pionowymi gestami</string>
     <string name="allow_video_gestures">Zezwalaj na kontrolowanie głośności i jasności wideo pionowymi gestami</string>
     <string name="show_media_count">Pokazuj liczbę multimediów w folderze w widoku głównym</string>
@@ -259,4 +260,10 @@
     <string name="media_exceeds_device_capabilities">Plik przekracza możliwości urządzenia.</string>
     <string name="unsupported_format">Nieobsługiwany format.</string>
     <string name="file_is_malformed_or_corrupted">Plik jest wadliwy lub uszkodzony.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Czy przywrócić %d plik?</item>
+        <item quantity="few">Czy przywrócić %d pliki?</item>
+        <item quantity="many">Czy przywrócić %d plików?</item>
+        <item quantity="other">Czy przywrócić %d plików?</item>
+    </plurals>
 </resources>

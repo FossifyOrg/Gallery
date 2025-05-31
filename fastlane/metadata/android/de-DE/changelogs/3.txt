@@ -1,2 +1,0 @@
-* Das Zoomen in hochauflösenden Bildern korrigiert.
-* Einige Übersetzungen hinzugefügt
