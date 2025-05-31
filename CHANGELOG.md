@@ -7,13 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2025-05-31
+
 ### Added
 
-- Added restore confirmation dialogs ([#447])
+- Copy to clipboard button for images ([#199])
+- Option to keep screen on while viewing media ([#365])
+- Ability to sort folders by item count ([#379])
+- Confirmation dialog when restoring media ([#447])
+
+### Changed
+
+- Updated translations
 
 ### Fixed
 
-- Fixed inaccurate seeking in some videos ([#475])
+- Fixed unresponsive image/video controls after rotating device ([#275])
+- Swipe-to-close gesture now works with WebP images ([#362])
+- Fixed inaccurate or broken seeking in some videos ([#475])
+- Image rotation edits no longer auto-save without confirmation ([#241])
+- External keyboards now work properly in copy/move dialogs ([#128])
 
 ## [1.2.1] - 2024-09-28
 
@@ -117,7 +130,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed privacy policy link
 
-[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.2.1...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.3.0...HEAD
+[1.3.0]: https://github.com/FossifyOrg/Gallery/compare/1.2.1...1.3.0
 [1.2.1]: https://github.com/FossifyOrg/Gallery/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/FossifyOrg/Gallery/compare/1.1.3...1.2.0
 [1.1.3]: https://github.com/FossifyOrg/Gallery/compare/1.1.2...1.1.3
@@ -127,5 +141,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.2]: https://github.com/FossifyOrg/Gallery/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/FossifyOrg/Gallery/releases/tag/1.0.1
 
+[#128]: https://github.com/FossifyOrg/Gallery/issues/128
+[#199]: https://github.com/FossifyOrg/Gallery/issues/199
+[#241]: https://github.com/FossifyOrg/Gallery/issues/241
+[#275]: https://github.com/FossifyOrg/Gallery/issues/275
+[#362]: https://github.com/FossifyOrg/Gallery/issues/362
+[#365]: https://github.com/FossifyOrg/Gallery/issues/365
+[#379]: https://github.com/FossifyOrg/Gallery/issues/379
 [#447]: https://github.com/FossifyOrg/Gallery/issues/447
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
