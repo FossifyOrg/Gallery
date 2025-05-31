@@ -193,7 +193,7 @@
     <string name="import_favorite_paths">Nhập yêu thích</string>
     <string name="paths_imported_successfully">Đường dẫn được nhập thành công</string>
     <string name="media_management_prompt">Để đảm bảo rằng tất cả các thao tác với tệp hoạt động đáng tin cậy, vui lòng đặt ứng dụng này làm ứng dụng Quản lý phương tiện trong cài đặt thiết bị của bạn.</string>
-    <string name="password_protect_excluded">Mật khẩu bảo vệ khả năng hiển thị thư mục bị loại trừ</string>
+    <string name="password_protect_excluded">Khả năng hiển thị thư mục bị loại trừ</string>
     <string name="media_only">Chỉ phương tiện</string>
     <string name="all_files">Tất cả các tập tin</string>
     <string name="search_all_files">Tìm kiếm tất cả các tập tin thay vì thư mục trên màn hình chính</string>
