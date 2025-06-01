@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">גלריה</string>
-    <string name="edit">ערוך</string>
+    <string name="edit">עריכה</string>
     <string name="open_camera">פתח מצלמה</string>
     <string name="hidden">(מוסתר)</string>
     <string name="pin_folder">הצמד תקיה</string>
