@@ -46,7 +46,7 @@
     <string name="hidden_folders">Dossiers cachés</string>
     <string name="manage_hidden_folders">Gérer les dossiers cachés</string>
     <string name="hidden_folders_placeholder">Il semblerait que vous n\'ayez pas de dossier caché par un fichier .nomedia.</string>
-    <string name="hidden_all_files">Vous devez accorder à l\'application l\'accès à tous les fichiers pour voir les fichiers cachés, sinon elle ne peut pas fonctionner.</string>
+    <string name="hidden_all_files">Vous devez accorder à l\'application l\'accès à tous les fichiers pour voir les fichiers cachés, sinon cela ne peut pas fonctionner.</string>
     <string name="cant_unhide_folder">Si un dossier ou l\'un de ses dossiers parents a un point avant son nom, il est caché et ne peut pas être affiché comme ceci. Vous devez supprimer le point en le renommant.</string>
     <string name="include_folders">Dossiers ajoutés</string>
     <string name="manage_included_folders">Gérer les dossiers ajoutés</string>
@@ -194,7 +194,7 @@
     <string name="import_favorite_paths">Importer des favoris</string>
     <string name="paths_imported_successfully">Favoris importés</string>
     <string name="media_management_prompt">Pour vous assurer que toutes les opérations de fichiers fonctionnent de manière fiable, veuillez faire de cette application l\'application de gestion des médias dans les paramètres de votre appareil.</string>
-    <string name="password_protect_excluded">Protection par mot de passe de la visibilité des dossiers exclus</string>
+    <string name="password_protect_excluded">Protéger la visibilité des dossiers exclus par mot de passe</string>
     <string name="media_management_manual">Quelque chose s\'est mal passé, veuillez aller dans les paramètres de votre appareil - Applis - Accès spécial des applis - Applis de gestion des fichiers multimédias et autorisez cette application à gérer les médias.</string>
     <string name="media_management_note">Si la redirection ne fonctionne pas, allez dans les paramètres de votre appareil - Applis - Accès spécial des applis - Applis de gestion des fichiers multimédias et autorisez cette application à gérer les médias.</string>
     <string name="media_management_alternative">Si vous ne voulez pas le faire, vous pouvez aussi aller dans les Paramètres de votre appareil - Applis - Accès spécial des applis - Applis de gestion des fichiers multimédias et autoriser cette application à gérer les médias.</string>
@@ -208,12 +208,12 @@
     <string name="extended_details">Détails supplémentaires</string>
     <string name="bottom_actions">Barre d\'actions</string>
     <string name="manage_bottom_actions">Gérer la barre d\'actions</string>
-    <string name="toggle_favorite">Activer/désactiver le favori</string>
+    <string name="toggle_favorite">Ajouter/retirer des favoris</string>
     <string name="toggle_file_visibility">Visibilité du fichier</string>
     <string name="faq_1_title">Comment puis-je faire de Fossify Gallery la galerie par défaut ?</string>
     <string name="faq_1_text">D\'abord, vous devez trouver la galerie actuellement par défaut dans la section Applications de vos paramètres de périphérique, cherchez un bouton qui dit quelque chose comme \"Ouvrir par défaut\", cliquez dessus, puis sélectionnez \"Effacer les valeurs par défaut\". La prochaine fois que vous tenterez d\'ouvrir une image ou une vidéo, vous devriez voir apparaître un sélecteur d\'application, où vous pouvez sélectionner Fossify Gallery et en faire l\'application par défaut.</string>
     <string name="faq_2_title">J\'ai verrouillé l\'application avec un mot de passe et je l\'ai oublié. Que faire ?</string>
-    <string name="faq_2_text">Il y a deux façons de procéder. Soit vous réinstallez l\'application, soit vous recherchez l\'application dans les paramètres de l\'appareil et appuyez sur "Supprimer les données". Ceci réinitialisera seulement les paramètres de l\'application et ne supprimera pas vos fichiers.</string>
+    <string name="faq_2_text">Il y a deux façons de procéder. Soit vous réinstallez l\'application, soit vous recherchez l\'application dans les paramètres de l\'appareil et appuyez sur \"Supprimer les données\". Ceci réinitialisera seulement les paramètres de l\'application et ne supprimera pas vos fichiers.</string>
     <string name="faq_3_title">Comment faire pour qu\'un dossier soit toujours affiché tout en haut \?</string>
     <string name="faq_3_text">Vous devez simplement effectuer un appui prolongé sur le dossier en question et choisir "Épingler en haut" dans le menu d\'actions. Vous pouvez en épingler plusieurs. Les éléments épinglés seront alors triés selon l\'ordre par défaut.</string>
     <string name="faq_4_title">Comment avancer rapidement dans les vidéos \?</string>
