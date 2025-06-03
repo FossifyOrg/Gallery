@@ -21,11 +21,11 @@
     <string name="force_portrait">כוח דיוקן</string>
     <string name="force_landscape">כוח נוף</string>
     <string name="use_default_orientation">השתמש בכיוון ברירת המחדל</string>
-    <string name="fix_date_taken">ערך תיקון תאריך נלקח</string>
+    <string name="fix_date_taken">תקן את תאריך הצילום</string>
     <string name="fixing">מתקן…</string>
     <string name="dates_fixed_successfully">תאריכים תוקנה בהצלחה</string>
-    <string name="no_date_takens_found">לא נמצאו ערכי תאריך נטילתם</string>
-    <string name="share_resized">שתף גרסה ששונתה</string>
+    <string name="no_date_takens_found">לא נמצאו ערכי תאריך צילום</string>
+    <string name="share_resized">שיתוף גרסה בגודל שונה</string>
     <string name="switch_to_file_search">עבור לחיפוש קבצים בכל התיקיות הגלויות</string>
     <string name="set_as_default_folder">הגדר כתיקיית ברירת מחדל</string>
     <string name="unset_as_default_folder">בטל את ההגדרה כתיקיית ברירת המחדל</string>
@@ -56,9 +56,9 @@
     <string name="width">רוחב</string>
     <string name="height">גובה</string>
     <string name="keep_aspect_ratio">שמור על יחס רוחב-גובה</string>
-    <string name="invalid_values">נא להזין החלטה חוקית</string>
+    <string name="invalid_values">נא להזין רזולוציה חוקית</string>
     <string name="editor">עורך</string>
-    <string name="rotate">להחליף</string>
+    <string name="rotate">סיבוב</string>
     <string name="invalid_image_path">נתיב תמונה לא חוקי</string>
     <string name="invalid_video_path">נתיב וידאו לא חוקי</string>
     <string name="image_editing_failed">עריכת התמונה נכשלה</string>
@@ -73,9 +73,9 @@
     <string name="no_image_editor_found">לא נמצא עורך תמונות</string>
     <string name="no_video_editor_found">לא נמצא עורך וידאו</string>
     <string name="unknown_file_location">מיקום קובץ לא ידוע</string>
-    <string name="error_saving_file">לא ניתן היה להחליף את קובץ המקור</string>
+    <string name="error_saving_file">לא ניתן היה לשנות את קובץ המקור</string>
     <string name="rotate_left">סובב שמאלה</string>
-    <string name="rotate_right">לסובב ימינה</string>
+    <string name="rotate_right">סובב ימינה</string>
     <string name="rotate_one_eighty">סובב 180 מעלות</string>
     <string name="flip">להשליך</string>
     <string name="flip_horizontally">הפוך אופקית</string>
@@ -102,7 +102,7 @@
     <string name="loop_slideshow">מצגת לולאה</string>
     <string name="animation">אנימציה</string>
     <string name="no_animation">ללא</string>
-    <string name="fade">לדעוך</string>
+    <string name="fade">עמעום</string>
     <string name="slide">שקופית</string>
     <string name="slideshow_ended">הצגת השקופיות הסתיימה</string>
     <string name="no_media_for_slideshow">לא נמצאה מדיה עבור מצגת השקופיות</string>
@@ -124,7 +124,7 @@
     <string name="show_folder_name">הצג שם תיקיה</string>
     <string name="autoplay_videos">הפעל סרטונים באופן אוטומטי</string>
     <string name="remember_last_video_position">זכור את עמדת השמעת הווידאו האחרונה</string>
-    <string name="loop_videos">חזור על וידיאו</string>
+    <string name="loop_videos">לולאת סרטונים</string>
     <string name="animate_gifs">הנפשת GIF בתמונות ממוזערות</string>
     <string name="max_brightness">בהירות מרבית בעת צפייה במדיה במסך מלא</string>
     <string name="crop_thumbnails">חתוך תמונות ממוזערות לריבועים</string>
@@ -174,7 +174,7 @@
     <string name="rounded_corners">פינות מעוגלות</string>
     <string name="export_favorite_paths">ייצא נתיבי קבצים מועדפים</string>
     <string name="media_management_prompt">כדי לוודא שכל פעולות הקבצים פועלות בצורה מהימנה, אנא הפוך את האפליקציה הזו לאפליקציית ניהול מדיה בהגדרות המכשיר שלך.</string>
-    <string name="password_protect_excluded">הגנה באמצעות סיסמה על נראות התיקייה שלא נכללה</string>
+    <string name="password_protect_excluded">הגן באמצעות סיסמה על הצגת תיקיות מוסתרות</string>
     <string name="thumbnails">תמונות ממוזערות</string>
     <string name="fullscreen_media">מדיה במסך מלא</string>
     <string name="extended_details">פרטים מורחבים</string>
@@ -204,7 +204,7 @@
     <string name="faq_16_text">החל מאנדרואיד 11 אינך יכול להסתיר או להסתיר קבצים או תיקיות יותר, אתה לא יכול לראות את המוסתרים באפליקציות הגלריה גם בגלל הגבלות מערכת. תצטרך להשתמש במנהל קבצים כלשהו בשביל זה.</string>
     <string name="faq_17_text">זה הפסיק לעבוד בגלל שינויי המערכת שהגיעו גם עם אנדרואיד 11, האפליקציה לא יכולה לדפדף בתיקיות אמיתיות יותר, היא מסתמכת על מה שנקרא MediaStore באחזור נתונים.</string>
     <string name="faq_17_title">מדוע איני יכול לכלול יותר תיקיות חסרות?</string>
-    <string name="exclude_folder_description">פעולה זו לא תכלול את הבחירה יחד עם תיקיות המשנה שלה מגלריית Fossify בלבד. אתה יכול לנהל תיקיות שלא נכללות בהגדרות.</string>
+    <string name="exclude_folder_description">זה יסתיר את הפריטים הנבחרים יחד עם תיקיות המשנה שלהם מגלריית Fossify בלבד. אפשר לנהל תיקיות מוסתרות בהגדרות.</string>
     <string name="resize_multiple_images">שנה גודל של תמונות מרובות</string>
     <string name="resize_factor_error">הזן מספר בין 10 ל-90</string>
     <plurals name="failed_to_resize_images">
@@ -216,7 +216,7 @@
     <string name="allow_changing_aspect_ratio">אפשר לשנות את יחס הגובה-רוחב</string>
     <string name="import_favorite_paths">ייבוא מועדפים</string>
     <string name="faq_2_title">נעלתי את האפליקציה עם סיסמה, אבל שכחתי אותה. מה אני יכול לעשות?</string>
-    <string name="faq_5_title">מה ההבדל בין הסתרה לבין אי הכללה של תיקיה?</string>
+    <string name="faq_5_title">מה ההבדל בין הסתרה לבין החרגה של תיקיה?</string>
     <string name="faq_6_title">מדוע מופיעות תיקיות עם אמנות עטיפת מוזיקה או מדבקות?</string>
     <string name="faq_7_title">תיקייה עם תמונות לא מופיעה, או שהיא לא מציגה את כל הפריטים. מה אני יכול לעשות?</string>
     <string name="faq_8_title">מה אם אני רוצה שרק כמה תיקיות מסוימות יהיו גלויות?</string>
@@ -244,7 +244,7 @@
     <string name="media_management_note">אם ההפניה מחדש לא עובדת, נא להיכנס להגדרות - אפליקציות - גישה מיוחדת לאפליקציה - אפליקציות ניהול מדיה ואפשר לאפליקציה הזו לנהל מדיה.</string>
     <string name="media_only">מדיה בלבד</string>
     <string name="faq_5_text">אי הכללה מונע את הצגת התיקיה רק בגלריית Fossify, בעוד שההסתרה פועלת מבחינה מערכתית והיא מסתירה את התיקיה גם מגלריות אחרות. זה עובד על ידי יצירת קובץ \".nomedia\" ריק בתיקייה הנתונה, שאותו תוכל להסיר גם עם כל מנהל קבצים. שים לב שחלק מהמכשירים אינם מאפשרים הסתרת תיקיות כמו מצלמה, צילומי מסך והורדות.</string>
-    <string name="faq_8_text">הוספת תיקיה בתיקיות הכלולות לא מונעת באופן אוטומטי שום דבר. מה שאתה יכול לעשות זה להיכנס להגדרות -&gt; נהל תיקיות שלא נכללות, אל תכלול את תיקיית השורש \"/\", ואז הוסף את התיקיות הרצויות בהגדרות -&gt; נהל תיקיות נכללות. זה יהפוך רק את התיקיות שנבחרו לגלויות, שכן גם אי הכללה וגם הכללה הם רקורסיביים ואם תיקיה לא נכללת וגם כלולה, היא תופיע.</string>
+    <string name="faq_8_text">הוספת תיקייה לתיקיות הכלולות לא מסתירה שום דבר באופן אוטומטי. מה שאתה יכול לעשות הוא להיכנס להגדרות -&gt; ניהול תיקיות מוסתרות, להסתיר את תיקיית השורש \"/\", ואז להוסיף את התיקיות הרצויות בהגדרות -&gt; ניהול תיקיות כלולות. זה יגרום רק לתיקיות שנבחרו להופיע, מכיוון שגם הסתרה וגם הכללה הן רקורסיביות, ואם תיקייה גם מוסתרת וגם כלולה, היא תוצג.</string>
     <string name="faq_6_text">יכול לקרות שתראה כמה אלבומים יוצאי דופן מופיעים. אתה יכול בקלות לא לכלול אותם על ידי לחיצה ארוכה עליהם ובחירה באפשרות אל תכלול. בתיבת הדו-שיח הבאה תוכל לבחור את תיקיית האב, רוב הסיכויים שהיא תמנע גם את האלבומים הקשורים האחרים להופיע.</string>
     <string name="all_files">כל הקבצים</string>
     <string name="faq_11_text">בטח, פשוט השתמש בפריט התפריט \"קבץ לפי\" בזמן שאתה נמצא בתצוגת התמונות הממוזערות. אתה יכול לקבץ קבצים לפי מספר קריטריונים, כולל תאריך צילום. אם אתה משתמש בפונקציה \"הצג את כל תוכן התיקיות\" תוכל לקבץ אותן גם לפי תיקיות.</string>
@@ -258,8 +258,8 @@
     <string name="resize_factor">שנה את גורם הגודל</string>
     <string name="keep_screen_on_fullscreen_photos">השארת המסך דלוק בעת צפייה בתמונות במסך מלא</string>
     <plurals name="restore_confirmation">
-        <item quantity="one">האם אתה בטוח שאתה רוצה לשחזר קובץ %d?</item>
-        <item quantity="two">האם אתה בטוח שאתה רוצה לשחזר %d קבצים?</item>
-        <item quantity="other">האם אתה בטוח שאתה רוצה לשחזר %d קבצים?</item>
+        <item quantity="one">האם אתה בטוח שברצונך לשחזר קובץ %d?</item>
+        <item quantity="two">האם אתה בטוח שברצונך לשחזר %d קבצים?</item>
+        <item quantity="other">האם אתה בטוח שברצונך לשחזר %d קבצים?</item>
     </plurals>
 </resources>
