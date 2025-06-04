@@ -255,4 +255,7 @@
     <string name="media_exceeds_device_capabilities">媒體超出裝置的播放能力。</string>
     <string name="unsupported_format">不支援的格式。</string>
     <string name="keep_screen_on_fullscreen_photos">檢視全螢幕照片時維持螢幕開啟</string>
+    <plurals name="restore_confirmation">
+        <item quantity="other">您確定要還原 %d 個檔案嗎？</item>
+    </plurals>
 </resources>
