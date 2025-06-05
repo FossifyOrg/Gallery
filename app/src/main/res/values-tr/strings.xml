@@ -257,4 +257,9 @@
     <string name="file_is_malformed_or_corrupted">Dosya hatalı biçimlendirilmiş veya bozuk.</string>
     <string name="media_exceeds_device_capabilities">Medya aygıt kapasitesini aşıyor.</string>
     <string name="unsupported_format">Desteklenmeyen biçim.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">%d dosyayı geri yüklemek istediğinize emin misiniz?</item>
+        <item quantity="other">%d dosyayı geri yüklemek istediğinize emin misiniz?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Tam ekran fotoğraflara bakarken ekranı açık tut</string>
 </resources>
