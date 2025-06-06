@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - ".fossify/release-marker.txt"
+
+jobs:
+  call-release-workflow:
+    name: Release
+    uses: FossifyOrg/.github/.github/workflows/release.yml@main
+    with:
+      track: ${{ vars.GPLAY_TRACK || 'beta' }}
+      rollout: ${{ vars.GPLAY_ROLLOUT || '0.05' }}
+      validate_only: ${{ vars.GPLAY_DRY_RUN == 'true' }}
+    secrets: inherit

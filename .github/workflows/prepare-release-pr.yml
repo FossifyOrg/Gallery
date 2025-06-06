@@ -1,0 +1,11 @@
+name: Prepare Release PR
+
+on:
+  repository_dispatch:
+    types: [prepare-release]
+  workflow_dispatch:
+
+jobs:
+  call-release-pr:
+    uses: FossifyOrg/.github/.github/workflows/prepare-release-pr.yml@main
+    secrets: inherit
