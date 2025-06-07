@@ -212,7 +212,7 @@
     <string name="faq_3_text">Faça um toque longo na pasta em questão, e depois toque no ícone de alfinete na parte superior da tela, isto irá fixá-la no topo. Você também pode fixar várias pastas; os itens fixados serão classificados pelo método de ordenação padrão.</string>
     <string name="faq_4_title">Como faço para avançar rapidamente um vídeo (fast forward)\?</string>
     <string name="faq_4_text">Você pode fazer isso tocando duas vezes na lateral da tela ou tocando nos textos atuais ou de duração máxima próximos à barra de busca. Se você ativar a abertura de vídeos em uma tela separada nas configurações do aplicativo, também poderá usar gestos horizontais.</string>
-    <string name="faq_5_title">Qual é a diferença entre ocultar e ignorar uma pasta?</string>
+    <string name="faq_5_title">Qual é a diferença entre ocultar e excluir uma pasta?</string>
     <string name="faq_6_title">Porque pastas com capas de CD de música ou figurinhas aparecem na lista\?</string>
     <string name="faq_6_text">Pode acontecer de que algumas pastas incomuns apareçam. Você pode utilizar a opção Ignorar nestas pastas, adicionando-as a lista de pastas ignoradas. Uma maneira de fazer isso é realizar um toque longo em uma destas pastas, selecionar a opção Ignorar e, em seguida, selecionar a pasta superior.</string>
     <string name="faq_7_title">Uma das minhas pastas não aparece, ou nem todos os seus itens são exibidos. O que posso fazer\?</string>
@@ -255,4 +255,9 @@
     <string name="file_is_malformed_or_corrupted">O arquivo está malformado ou corrompido.</string>
     <string name="playback_speed">Velocidade de reprodução</string>
     <string name="keep_screen_on_fullscreen_photos">Manter a tela ligada enquanto vê fotos em tela cheia</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Você tem certeza que deseja restaurar %d arquivo?</item>
+        <item quantity="many">Você tem certeza que deseja restaurar %d arquivos?</item>
+        <item quantity="other">Você tem certeza que deseja restaurar %d arquivos?</item>
+    </plurals>
 </resources>
