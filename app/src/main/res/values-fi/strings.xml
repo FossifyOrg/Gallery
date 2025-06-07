@@ -255,4 +255,9 @@
     <string name="full_storage_permission_required">Fossify Gallery tarvitsee täyden pääsyn kuviin ja videoihin, jotta niitä voidaan näyttää. Mene kohtaan Asetukset &gt; Luvat &gt; Kuvat ja videot &gt; Salli kaikki.</string>
     <string name="excluded_activity_placeholder">Kansioiden ja niiden alikansioiden poissulkeminen piilottaa kansiot vain Fossify Gallery:sta. Ne ovat edelleen saatavilla muissa sovelluksissa.\n\nJos haluat piilottaa ne myös muista sovelluksista, käytä Piilota toimintoa.</string>
     <string name="faq_5_text">Kansion poissulku toimii vain Fossify Gallery:ssä. Piilota toiminto piiloittaa kansiot myös muista galleria-sovelluksista. Piilota-toiminto käyttää hyväkseen tyhjää \".nomedia\" tiedostoa valitussa kansiossa. Tämän tiedoston voi poistaa tiedostonhallintasovelluksella. Huomio, että jotkin laitteet eivät salli kameran ja järjestelmän oletuskansioiden, kuten Kamera, Kuvakaappaukset ja Lataukset, piilotusta.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Haluatko varmasti palauttaa %d tiedoston?</item>
+        <item quantity="other">Haluatko varmasti palauttaa %d tiedostoa?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Pidä näyttö päällä, kun selaat kokoruudun valokuvia</string>
 </resources>
