@@ -4,6 +4,10 @@ on:
   repository_dispatch:
     types: [prepare-release]
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "CHANGELOG.md"
 
 jobs:
   call-release-pr:
