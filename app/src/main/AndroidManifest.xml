@@ -105,6 +105,7 @@
         <activity
             android:name=".activities.ViewPagerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:colorMode="hdr"
             android:exported="true"
             android:parentActivityName=".activities.MediaActivity"
             android:theme="@style/TranslucentTheme">
@@ -150,6 +151,7 @@
         <activity
             android:name=".activities.PhotoVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:colorMode="hdr"
             android:exported="false"
             android:theme="@style/TranslucentTheme" />
 
@@ -184,6 +186,7 @@
         <activity
             android:name=".activities.PhotoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:colorMode="hdr"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
