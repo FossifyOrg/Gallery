@@ -2,7 +2,7 @@
 #jetbrains
 kotlin = "2.1.21"
 #KSP
-ksp = "2.1.21-2.0.1"
+ksp = "2.1.21-2.0.2"
 #Detekt
 detekt = "1.23.8"
 #AndroidX
