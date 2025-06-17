@@ -1,0 +1,17 @@
+Added:
+
+• Copy to clipboard button for images
+• Option to keep screen on while viewing media
+• Ability to sort folders by item count
+• Confirmation dialog when restoring media
+
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed unresponsive image/video controls after rotating device
+• Swipe-to-close gesture now works with WebP images
+• Fixed inaccurate or broken seeking in some videos
+• Image rotation edits no longer auto-save without confirmation
