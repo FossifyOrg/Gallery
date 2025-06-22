@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Updated translations
+
+### Fixed
+
+- Fixed crash in some external image editors ([#525])
+
 ## [1.3.1] - 2025-06-17
 
 ### Changed
@@ -157,3 +165,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#379]: https://github.com/FossifyOrg/Gallery/issues/379
 [#447]: https://github.com/FossifyOrg/Gallery/issues/447
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
+[#525]: https://github.com/FossifyOrg/Gallery/issues/525
