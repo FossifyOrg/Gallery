@@ -12,3 +12,4 @@ keystore.properties
 /app/src/proprietary/assets/vesdk_android_license
 fastlane/fastlane.json
 fastlane/report.xml
+.kotlin/
