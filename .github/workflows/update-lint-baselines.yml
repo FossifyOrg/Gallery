@@ -1,0 +1,11 @@
+name: Update lint baselines
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  update-lint-baselines:
+    uses: FossifyOrg/.github/.github/workflows/update-lint-baselines.yml@main
+    secrets: inherit

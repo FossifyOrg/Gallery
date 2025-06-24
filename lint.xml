@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- Fatal -->
+    <issue id="ExportedReceiver" severity="error" />
+    <issue id="ExportedService" severity="error" />
+    <issue id="ExportedContentProvider" severity="error" />
+    <issue id="MissingPermission" severity="error" />
+    <issue id="NotificationPermission" severity="error" />
+    <issue id="UnsafeOptInUsageError" severity="error" />
+    <issue id="StringFormatMatches" severity="error" />
+    <issue id="StringFormatInvalid" severity="error" />
+    <issue id="StringFormatCount" severity="error" />
+    <issue id="Range" severity="error" />
+    <issue id="CheckResult" severity="error" />
+    <issue id="WrongThread" severity="error" />
+    <issue id="Recycle" severity="error" />
+    <issue id="StaticFieldLeak" severity="error" />
+    <issue id="UseRequireInsteadOfGet" severity="error" />
+    <issue id="ClickableViewAccessibility" severity="error" />
+    <issue id="RtlSymmetry" severity="warning" />
+    <issue id="SetTextI18n" severity="warning" />
+
+    <!-- Warnings -->
+    <issue id="AllowBackup" severity="warning" />
+    <issue id="MissingTranslation" severity="warning" />
+    <issue id="UnusedResources" severity="warning" />
+    <issue id="UnusedQuantity" severity="warning" />
+    <issue id="MissingQuantity" severity="warning" />
+    <issue id="ContentDescription" severity="warning" />
+    <issue id="VectorPath" severity="warning" />
+    <issue id="IconDensities" severity="warning" />
+    <issue id="GradleDependency" severity="warning" />
+    <issue id="Overdraw" severity="warning" />
+</lint>
