@@ -139,20 +139,9 @@
         errorLine1="app-build-targetSDK = &quot;34&quot;"
         errorLine2="                      ~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="38"
             column="23"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `localeConfig` is only used in API level 33 and higher (current min is 26)"
-        errorLine1="        android:localeConfig=&quot;@xml/locale_config&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/AndroidManifest.xml"
-            line="50"
-            column="9"/>
     </issue>
 
     <issue
@@ -282,9 +271,20 @@
         errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.11.1-bin.zip"
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/wrapper/gradle-wrapper.properties"
+            file="$HOME/work/Gallery/Gallery/gradle/wrapper/gradle-wrapper.properties"
             line="3"
             column="17"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.10.1 is available: 8.11.0"
+        errorLine1="gradlePlugins-agp = &quot;8.10.1&quot;"
+        errorLine2="                    ~~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="18"
+            column="21"/>
     </issue>
 
     <issue
@@ -293,7 +293,7 @@
         errorLine1="media3Exoplayer = &quot;1.4.1&quot;"
         errorLine2="                  ~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="31"
             column="19"/>
     </issue>
@@ -304,7 +304,7 @@
         errorLine1="app-build-compileSDKVersion = &quot;34&quot;"
         errorLine2="                              ~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="37"
             column="31"/>
     </issue>
@@ -316,7 +316,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="263"
+            line="262"
             column="13"/>
     </issue>
 
@@ -481,7 +481,7 @@
         errorLine1="androidphotofilters = { module = &quot;com.github.naveensingh:androidphotofilters&quot;, version.ref = &quot;androidphotofilters&quot; }"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="61"
             column="24"/>
     </issue>
@@ -493,7 +493,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="263"
+            line="262"
             column="13"/>
     </issue>
 
@@ -3616,7 +3616,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="280"
+            line="279"
             column="10"/>
     </issue>
 
