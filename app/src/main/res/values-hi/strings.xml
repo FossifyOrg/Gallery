@@ -257,4 +257,8 @@
     <string name="media_exceeds_device_capabilities">यह मीडिया डिवाइस की क्षमताओं से अधिक है।</string>
     <string name="unsupported_format">यह प्रारूप समर्थित नहीं है।</string>
     <string name="failed_to_load_media">मीडिया लोड नहीं हुआ।</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">क्या आप वाकई %d फ़ाइल को पुनर्स्थापित करना चाहते हैं?</item>
+        <item quantity="other">क्या आप वाकई %d फ़ाइलें पुनर्स्थापित करना चाहते हैं?</item>
+    </plurals>
 </resources>
