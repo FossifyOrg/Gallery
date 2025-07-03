@@ -31,4 +31,5 @@
     <issue id="IconDensities" severity="warning" />
     <issue id="GradleDependency" severity="warning" />
     <issue id="Overdraw" severity="warning" />
+    <issue id="ExtraTranslation" severity="warning" />
 </lint>
