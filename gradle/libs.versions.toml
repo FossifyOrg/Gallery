@@ -5,6 +5,7 @@ kotlin = "2.1.21"
 ksp = "2.1.21-2.0.2"
 #Detekt
 detekt = "1.23.8"
+detektCompose = "0.4.22"
 #AndroidX
 androidx-swiperefreshlayout = "1.1.0"
 androidx-constraintlayout = "2.2.1"
@@ -50,6 +51,8 @@ exif = { module = "it.sephiroth.android.exif:library", version.ref = "exif" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+#Compose
+compose-detekt = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektCompose" }
 #Fossify
 fossify-commons = { module = "org.fossify:commons", version.ref = "commons" }
 #Other

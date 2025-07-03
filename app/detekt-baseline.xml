@@ -102,51 +102,18 @@
     <ID>LargeClass:VideoFragment.kt$VideoFragment : ViewPagerFragmentSurfaceTextureListenerOnSeekBarChangeListenerPlaybackSpeedListener</ID>
     <ID>LargeClass:VideoPlayerActivity.kt$VideoPlayerActivity : SimpleActivityOnSeekBarChangeListenerSurfaceTextureListenerPlaybackSpeedListener</ID>
     <ID>LargeClass:ViewPagerActivity.kt$ViewPagerActivity : SimpleActivityOnPageChangeListenerFragmentListener</ID>
-    <ID>LongMethod:Activity.kt$fun AppCompatActivity.fixDateTaken( paths: ArrayList&lt;String&gt;, showToasts: Boolean, hasRescanned: Boolean = false, callback: (() -&gt; Unit)? = null )</ID>
-    <ID>LongMethod:Activity.kt$fun BaseSimpleActivity.restoreRecycleBinPaths(paths: ArrayList&lt;String&gt;, callback: () -&gt; Unit)</ID>
-    <ID>LongMethod:Context.kt$@Suppress("UNCHECKED_CAST") fun Context.getSortedDirectories(source: ArrayList&lt;Directory&gt;): ArrayList&lt;Directory&gt;</ID>
-    <ID>LongMethod:Context.kt$fun Context.getCachedDirectories( getVideosOnly: Boolean = false, getImagesOnly: Boolean = false, forceShowHidden: Boolean = false, forceShowExcluded: Boolean = false, callback: (ArrayList&lt;Directory&gt;) -&gt; Unit, )</ID>
-    <ID>LongMethod:Context.kt$fun Context.getCachedMedia( path: String, getVideosOnly: Boolean = false, getImagesOnly: Boolean = false, callback: (ArrayList&lt;ThumbnailItem&gt;) -&gt; Unit )</ID>
-    <ID>LongMethod:Context.kt$fun Context.getDirectParentSubfolders( dirs: ArrayList&lt;Directory&gt;, currentPathPrefix: String ): ArrayList&lt;Directory&gt;</ID>
-    <ID>LongMethod:DirectoryAdapter.kt$DirectoryAdapter$private fun setupView(view: View, directory: Directory, holder: ViewHolder)</ID>
-    <ID>LongMethod:EditActivity.kt$EditActivity$private fun updatePrimaryActionButtons()</ID>
-    <ID>LongMethod:MainActivity.kt$MainActivity$override fun deleteFolders(folders: ArrayList&lt;File&gt;)</ID>
-    <ID>LongMethod:MainActivity.kt$MainActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
     <ID>LongMethod:MainActivity.kt$MainActivity$private fun gotDirectories(newDirs: ArrayList&lt;Directory&gt;)</ID>
-    <ID>LongMethod:MediaAdapter.kt$MediaAdapter$private fun setupThumbnail(view: View, medium: Medium)</ID>
-    <ID>LongMethod:MediaFetcher.kt$MediaFetcher$fun getAndroid11FolderMedia( isPickImage: Boolean, isPickVideo: Boolean, favoritePaths: ArrayList&lt;String&gt;, getFavoritePathsOnly: Boolean, getProperDateTaken: Boolean, dateTakens: HashMap&lt;String, Long&gt; ): HashMap&lt;String, ArrayList&lt;Medium&gt;&gt;</ID>
-    <ID>LongMethod:MediaFetcher.kt$MediaFetcher$private fun getMediaInFolder( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt; ): ArrayList&lt;Medium&gt;</ID>
-    <ID>LongMethod:PhotoFragment.kt$PhotoFragment$override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
-    <ID>LongMethod:PhotoVideoActivity.kt$PhotoVideoActivity$private fun checkIntent(savedInstanceState: Bundle? = null)</ID>
     <ID>LongMethod:SettingsActivity.kt$SettingsActivity$private fun parseFile(inputStream: InputStream?)</ID>
-    <ID>LongMethod:SettingsActivity.kt$SettingsActivity$private fun setupExportSettings()</ID>
-    <ID>LongMethod:SettingsActivity.kt$SettingsActivity$private fun setupSettingItems()</ID>
     <ID>LongMethod:VideoFragment.kt$VideoFragment$override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View</ID>
-    <ID>LongMethod:VideoPlayerActivity.kt$VideoPlayerActivity$private fun handleEvent(event: MotionEvent)</ID>
-    <ID>LongMethod:VideoPlayerActivity.kt$VideoPlayerActivity$private fun initPlayer()</ID>
-    <ID>LongMethod:ViewPagerActivity.kt$ViewPagerActivity$private fun initBottomActionButtons()</ID>
-    <ID>LongMethod:ViewPagerActivity.kt$ViewPagerActivity$private fun initContinue()</ID>
-    <ID>LongParameterList:Context.kt$( path: String, curMedia: ArrayList&lt;Medium&gt;, albumCovers: ArrayList&lt;AlbumCover&gt;, hiddenString: String, includedFolders: MutableSet&lt;String&gt;, getProperFileSize: Boolean, noMediaFolders: ArrayList&lt;String&gt;, )</ID>
-    <ID>LongParameterList:Context.kt$( path: String, fc: FileChannel, level: Int, start: Long, end: Long, callback: () -&gt; Unit )</ID>
-    <ID>LongParameterList:Context.kt$( path: String, target: MySquareImageView, cropThumbnails: Boolean, roundCorners: Int, signature: ObjectKey, crossFadeDuration: Int = THUMBNAIL_FADE_DURATION_MS, )</ID>
-    <ID>LongParameterList:Context.kt$( path: String, target: MySquareImageView, cropThumbnails: Boolean, roundCorners: Int, signature: ObjectKey, skipMemoryCacheAtPaths: ArrayList&lt;String&gt;? = null, animate: Boolean = false, tryLoadingWithPicasso: Boolean = false, crossFadeDuration: Int = THUMBNAIL_FADE_DURATION_MS, onError: (() -&gt; Unit)? = null )</ID>
-    <ID>LongParameterList:Context.kt$( type: Int, path: String, target: MySquareImageView, horizontalScroll: Boolean, animateGifs: Boolean, cropThumbnails: Boolean, roundCorners: Int, signature: ObjectKey, skipMemoryCacheAtPaths: ArrayList&lt;String&gt;? = null, onError: (() -&gt; Unit)? = null )</ID>
-    <ID>LongParameterList:DirectoryAdapter.kt$DirectoryAdapter$( activity: BaseSimpleActivity, var dirs: ArrayList&lt;Directory&gt;, val listener: DirectoryOperationsListener?, recyclerView: MyRecyclerView, val isPickIntent: Boolean, val swipeRefreshLayout: SwipeRefreshLayout? = null, itemClick: (Any) -&gt; Unit )</ID>
-    <ID>LongParameterList:DirectoryDao.kt$DirectoryDao$(path: String, thumbnail: String, mediaCnt: Int, lastModified: Long, dateTaken: Long, size: Long, mediaTypes: Int, sortValue: String)</ID>
     <ID>LongParameterList:MediaAdapter.kt$MediaAdapter$( activity: BaseSimpleActivity, var media: ArrayList&lt;ThumbnailItem&gt;, val listener: MediaOperationsListener?, val isAGetIntent: Boolean, val allowMultiplePicks: Boolean, val path: String, recyclerView: MyRecyclerView, itemClick: (Any) -&gt; Unit )</ID>
     <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( curPath: String, isPickImage: Boolean, isPickVideo: Boolean, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt;, android11Files: HashMap&lt;String, ArrayList&lt;Medium&gt;&gt;? )</ID>
-    <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean )</ID>
     <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt; )</ID>
-    <ID>LongParameterList:MediaFetcher.kt$MediaFetcher$( isPickImage: Boolean, isPickVideo: Boolean, favoritePaths: ArrayList&lt;String&gt;, getFavoritePathsOnly: Boolean, getProperDateTaken: Boolean, dateTakens: HashMap&lt;String, Long&gt; )</ID>
-    <ID>LongParameterList:MediaSideScroll.kt$MediaSideScroll$( activity: Activity, slideInfoView: TextView, isBrightness: Boolean, parentView: ViewGroup?, singleTap: (x: Float, y: Float) -&gt; Unit, doubleTap: ((x: Float, y: Float) -&gt; Unit)? = null )</ID>
-    <ID>LongParameterList:PickDirectoryDialog.kt$PickDirectoryDialog$( val activity: BaseSimpleActivity, val sourcePath: String, showOtherFolderButton: Boolean, val showFavoritesBin: Boolean, val isPickingCopyMoveDestination: Boolean, val isPickingFolderForWidget: Boolean, val callback: (path: String) -&gt; Unit )</ID>
     <ID>LoopWithTooManyJumpStatements:Activity.kt$for</ID>
     <ID>LoopWithTooManyJumpStatements:Context.kt$for</ID>
     <ID>LoopWithTooManyJumpStatements:MediaFetcher.kt$MediaFetcher$for</ID>
     <ID>LoopWithTooManyJumpStatements:String.kt$for</ID>
     <ID>LoopWithTooManyJumpStatements:String.kt$while</ID>
     <ID>MagicNumber:Activity.kt$10</ID>
-    <ID>MagicNumber:Activity.kt$1000</ID>
     <ID>MagicNumber:Activity.kt$11</ID>
     <ID>MagicNumber:Activity.kt$360</ID>
     <ID>MagicNumber:Activity.kt$4</ID>
@@ -162,7 +129,6 @@
     <ID>MagicNumber:Config.kt$Config$0.05f</ID>
     <ID>MagicNumber:Config.kt$Config$0.5f</ID>
     <ID>MagicNumber:Config.kt$Config$50</ID>
-    <ID>MagicNumber:Context.kt$1000L</ID>
     <ID>MagicNumber:Context.kt$1024</ID>
     <ID>MagicNumber:Context.kt$50</ID>
     <ID>MagicNumber:Context.kt$8</ID>
@@ -187,7 +153,6 @@
     <ID>MagicNumber:GalleryDatabase.kt$GalleryDatabase.Companion.&lt;no name provided&gt;$9</ID>
     <ID>MagicNumber:IsoTypeReader.kt$IsoTypeReader$32</ID>
     <ID>MagicNumber:IsoTypeReader.kt$IsoTypeReader$4</ID>
-    <ID>MagicNumber:MainActivity.kt$MainActivity$1000</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$30</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$3000L</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$50</ID>
@@ -197,9 +162,7 @@
     <ID>MagicNumber:MediaAdapter.kt$MediaAdapter$270</ID>
     <ID>MagicNumber:MediaAdapter.kt$MediaAdapter$90</ID>
     <ID>MagicNumber:MediaFetcher.kt$MediaFetcher$10</ID>
-    <ID>MagicNumber:MediaFetcher.kt$MediaFetcher$1000</ID>
     <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$100</ID>
-    <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$1000L</ID>
     <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$100f</ID>
     <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$2.55</ID>
     <ID>MagicNumber:MediaSideScroll.kt$MediaSideScroll$255f</ID>
@@ -236,27 +199,17 @@
     <ID>MagicNumber:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$100</ID>
     <ID>MagicNumber:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$90</ID>
     <ID>MagicNumber:SetWallpaperActivity.kt$SetWallpaperActivity$90</ID>
-    <ID>MagicNumber:VideoFragment.kt$VideoFragment$1000</ID>
-    <ID>MagicNumber:VideoFragment.kt$VideoFragment$1000L</ID>
-    <ID>MagicNumber:VideoFragment.kt$VideoFragment$1000f</ID>
     <ID>MagicNumber:VideoFragment.kt$VideoFragment$7</ID>
-    <ID>MagicNumber:VideoFragment.kt$VideoFragment.&lt;no name provided&gt;$1000</ID>
     <ID>MagicNumber:VideoFragment.kt$VideoFragment.&lt;no name provided&gt;$7</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$0.5</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$0.8</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100</ID>
-    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$1000</ID>
-    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$1000L</ID>
-    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$1000f</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100L</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100f</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$7</ID>
-    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity.&lt;no name provided&gt;$1000</ID>
-    <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$1000L</ID>
     <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$180</ID>
     <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$5</ID>
     <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$90</ID>
-    <ID>MagicNumber:ViewPagerFragment.kt$ViewPagerFragment$1000L</ID>
     <ID>MagicNumber:ViewPagerFragment.kt$ViewPagerFragment$100f</ID>
     <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100</ID>
     <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100f</ID>

@@ -139,8 +139,8 @@
         errorLine1="app-build-targetSDK = &quot;34&quot;"
         errorLine2="                      ~~~~">
         <location
-            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="38"
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            line="39"
             column="23"/>
     </issue>
 
@@ -271,7 +271,7 @@
         errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.11.1-bin.zip"
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/work/Gallery/Gallery/gradle/wrapper/gradle-wrapper.properties"
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/wrapper/gradle-wrapper.properties"
             line="3"
             column="17"/>
     </issue>
@@ -282,9 +282,31 @@
         errorLine1="gradlePlugins-agp = &quot;8.10.1&quot;"
         errorLine2="                    ~~~~~~~~">
         <location
-            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="18"
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            line="19"
             column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlin.android than 2.1.21 is available: 2.2.0"
+        errorLine1="kotlin = &quot;2.1.21&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            line="3"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.fossify:commons than 4.0.0 is available: 4.1.0"
+        errorLine1="commons = &quot;4.0.0&quot;"
+        errorLine2="          ~~~~~~~">
+        <location
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            line="17"
+            column="11"/>
     </issue>
 
     <issue
@@ -293,8 +315,8 @@
         errorLine1="media3Exoplayer = &quot;1.4.1&quot;"
         errorLine2="                  ~~~~~~~">
         <location
-            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="31"
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            line="32"
             column="19"/>
     </issue>
 
@@ -304,8 +326,8 @@
         errorLine1="app-build-compileSDKVersion = &quot;34&quot;"
         errorLine2="                              ~~~~">
         <location
-            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="37"
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            line="38"
             column="31"/>
     </issue>
 
@@ -423,56 +445,56 @@
         id="Aligned16KB"
         message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/9140bc23913cd6f2f8787e1f1b969e92/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/06c752ad0856e34efc88ef002ff39bbd/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/9140bc23913cd6f2f8787e1f1b969e92/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/06c752ad0856e34efc88ef002ff39bbd/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libavif_android.so` (from `org.aomedia.avif.android:avif:0.11.1.3c786d2`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/e2d4dc78b4ba2c006ffe2575865875d3/transformed/jetified-avif-0.11.1.3c786d2/jni/arm64-v8a/libavif_android.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/b2ddc958e4e9efa4dcb97acd76409fa7/transformed/jetified-avif-0.11.1.3c786d2/jni/arm64-v8a/libavif_android.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libavif_android.so` (from `org.aomedia.avif.android:avif:0.11.1.3c786d2`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/e2d4dc78b4ba2c006ffe2575865875d3/transformed/jetified-avif-0.11.1.3c786d2/jni/arm64-v8a/libavif_android.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/b2ddc958e4e9efa4dcb97acd76409fa7/transformed/jetified-avif-0.11.1.3c786d2/jni/arm64-v8a/libavif_android.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libavif_android.so` (from `org.aomedia.avif.android:avif:0.11.1.3c786d2`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/e2d4dc78b4ba2c006ffe2575865875d3/transformed/jetified-avif-0.11.1.3c786d2/jni/arm64-v8a/libavif_android.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/b2ddc958e4e9efa4dcb97acd76409fa7/transformed/jetified-avif-0.11.1.3c786d2/jni/arm64-v8a/libavif_android.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libbrotlicommon.so` (from `io.github.awxkee:jxl-coder:2.4.0.7`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/942040b4c27aba63b3266446883d7c00/transformed/jetified-jxl-coder-2.4.0.7-debug/jni/arm64-v8a/libbrotlicommon.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/8ca176343ce0ee5f3260df0103ee79f5/transformed/jetified-jxl-coder-2.4.0.7-debug/jni/arm64-v8a/libbrotlicommon.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libbrotlicommon.so` (from `io.github.awxkee:jxl-coder:2.4.0.7`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/942040b4c27aba63b3266446883d7c00/transformed/jetified-jxl-coder-2.4.0.7-debug/jni/arm64-v8a/libbrotlicommon.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/8ca176343ce0ee5f3260df0103ee79f5/transformed/jetified-jxl-coder-2.4.0.7-debug/jni/arm64-v8a/libbrotlicommon.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libbrotlicommon.so` (from `io.github.awxkee:jxl-coder:2.4.0.7`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/942040b4c27aba63b3266446883d7c00/transformed/jetified-jxl-coder-2.4.0.7-debug/jni/arm64-v8a/libbrotlicommon.so"/>
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/8ca176343ce0ee5f3260df0103ee79f5/transformed/jetified-jxl-coder-2.4.0.7-debug/jni/arm64-v8a/libbrotlicommon.so"/>
     </issue>
 
     <issue
@@ -481,8 +503,8 @@
         errorLine1="androidphotofilters = { module = &quot;com.github.naveensingh:androidphotofilters&quot;, version.ref = &quot;androidphotofilters&quot; }"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="61"
+            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            line="64"
             column="24"/>
     </issue>
 

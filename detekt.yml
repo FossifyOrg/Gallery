@@ -1,0 +1,58 @@
+build:
+  maxIssues: 0
+  weights:
+    complexity: 2
+    LongParameterList: 2
+    style: 1
+
+processors:
+  active: true
+  exclude:
+    - "FunctionCountProcessor"
+    - "PropertyCountProcessor"
+
+config:
+  validation: true
+
+complexity:
+  LongParameterList:
+    active: true
+    functionThreshold: 10
+    constructorThreshold: 8
+    ignoreDefaultParameters: true
+    ignoreAnnotated:
+      - "Composable"
+  LongMethod:
+    active: true
+    threshold: 120
+    ignoreAnnotated:
+      - "Composable"
+      - "Preview"
+
+style:
+  MagicNumber:
+    active: true
+    ignoreAnnotated: ["Composable"]
+    ignoreEnums: true
+    ignoreNumbers: ["-1", "0", "1", "2", "42", "1000"]
+  MaxLineLength:
+    active: true
+    maxLineLength: 120
+    excludePackageStatements: true
+    excludeImportStatements: true
+
+naming:
+  FunctionNaming:
+    active: true
+    ignoreAnnotated: ["Composable", "Preview"]
+    functionPattern: "[a-z][A-Za-z0-9]*"
+
+Compose: # io.nlopez.compose.rules
+  ComposableParametersOrdering:
+    active: true
+  ModifierDefaultValue:
+    active: true
+  MissingModifierDefaultValue:
+    active: true
+  PublicComposablePreview:
+    active: true
