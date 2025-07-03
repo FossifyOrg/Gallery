@@ -257,4 +257,9 @@
     <string name="media_exceeds_device_capabilities">A médiafájl meghaladja az eszköz képességeit.</string>
     <string name="file_is_malformed_or_corrupted">Hibás vagy sérült fájl.</string>
     <string name="unsupported_format">Nem támogatott formátum.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Biztosan vissza szeretné állítani a(z) %d fájlt?</item>
+        <item quantity="other">Biztosan vissza szeretné állítani a(z) %d fájlokat?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Képernyő bekapcsolva tartása teljes képernyős nézetben</string>
 </resources>
