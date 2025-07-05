@@ -259,8 +259,8 @@
     <string name="media_exceeds_device_capabilities">Medij premašuje mogućnosti uređaja.</string>
     <string name="failed_to_load_media">Neuspjelo učitavanje medija.</string>
     <plurals name="restore_confirmation">
-        <item quantity="one">Stvarno želiš obnoviti %s datoteku?</item>
-        <item quantity="few">Stvarno želiš obnoviti %s datoteke?</item>
-        <item quantity="other">Stvarno želiš obnoviti %s datoteka?</item>
+        <item quantity="one">Stvarno želiš obnoviti %d datoteku?</item>
+        <item quantity="few">Stvarno želiš obnoviti %d datoteke?</item>
+        <item quantity="other">Stvarno želiš obnoviti %d datoteka?</item>
     </plurals>
 </resources>
