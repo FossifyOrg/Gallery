@@ -263,4 +263,5 @@
         <item quantity="few">Stvarno želiš obnoviti %d datoteke?</item>
         <item quantity="other">Stvarno želiš obnoviti %d datoteka?</item>
     </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Ostavi ekran uključenim tijekom gledanja fotografija u cjeloekranskom prikazu</string>
 </resources>
