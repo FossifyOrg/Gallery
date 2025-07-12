@@ -19,13 +19,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.RelativeLayout
+import androidx.core.graphics.drawable.toBitmapOrNull
 import androidx.exifinterface.media.ExifInterface.*
 import com.alexvasilkov.gestures.GestureController
 import com.alexvasilkov.gestures.State
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.bumptech.glide.load.DataSource
-import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.bitmap.Rotate
@@ -54,7 +54,6 @@ import org.fossify.gallery.activities.ViewPagerActivity
 import org.fossify.gallery.adapters.PortraitPhotosAdapter
 import org.fossify.gallery.databinding.PagerPhotoItemBinding
 import org.fossify.gallery.extensions.config
-import org.fossify.gallery.extensions.saveRotatedImageToFile
 import org.fossify.gallery.extensions.sendFakeClick
 import org.fossify.gallery.helpers.*
 import org.fossify.gallery.models.Medium
@@ -272,6 +271,7 @@ class PhotoFragment : ViewPagerFragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        ColorModeHelper.resetColorMode(activity)
         if (activity?.isDestroyed == false) {
             binding.subsamplingView.recycle()
 
@@ -352,6 +352,7 @@ class PhotoFragment : ViewPagerFragment() {
             scheduleZoomableView()
         } else {
             hideZoomableView()
+            ColorModeHelper.resetColorMode(activity)
         }
     }
 
@@ -455,7 +456,6 @@ class PhotoFragment : ViewPagerFragment() {
         val priority = if (mIsFragmentVisible) Priority.IMMEDIATE else Priority.NORMAL
         val options = RequestOptions()
             .signature(mMedium.getKey())
-            .format(DecodeFormat.PREFER_ARGB_8888)
             .priority(priority)
             .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .fitCenter()
@@ -470,6 +470,7 @@ class PhotoFragment : ViewPagerFragment() {
             .apply(options)
             .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>, isFirstResource: Boolean): Boolean {
+                    ColorModeHelper.resetColorMode(activity)
                     if (activity != null && !activity!!.isDestroyed && !activity!!.isFinishing) {
                         tryLoadingWithPicasso(addZoomableView)
                     }
@@ -483,6 +484,10 @@ class PhotoFragment : ViewPagerFragment() {
                     dataSource: DataSource,
                     isFirstResource: Boolean
                 ): Boolean {
+                    activity?.let {
+                        ColorModeHelper.setColorModeForImage(it, resource.toBitmapOrNull())
+                    }
+                    
                     val allowZoomingImages = context?.config?.allowZoomingImages ?: true
                     binding.gesturesView.controller.settings.isZoomEnabled = mMedium.isRaw() || mCurrentRotationDegrees != 0 || allowZoomingImages == false
                     if (mIsFragmentVisible && addZoomableView) {
@@ -512,6 +517,7 @@ class PhotoFragment : ViewPagerFragment() {
 
             picasso.into(binding.gesturesView, object : Callback {
                 override fun onSuccess() {
+                    ColorModeHelper.resetColorMode(activity)
                     binding.gesturesView.controller.settings.isZoomEnabled =
                         mMedium.isRaw() || mCurrentRotationDegrees != 0 || context?.config?.allowZoomingImages == false
                     if (mIsFragmentVisible && addZoomableView) {
@@ -520,6 +526,7 @@ class PhotoFragment : ViewPagerFragment() {
                 }
 
                 override fun onError(e: Exception?) {
+                    ColorModeHelper.resetColorMode(activity)
                     if (mMedium.path != mOriginalPath) {
                         mMedium.path = mOriginalPath
                         loadImage()
