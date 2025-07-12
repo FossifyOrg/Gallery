@@ -196,6 +196,11 @@ class EditActivity : SimpleActivity() {
         binding.bottomAspectRatios.root.beVisible()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        ColorModeHelper.resetColorMode(this)
+    }
+
     private fun loadDefaultImageView() {
         binding.defaultImageView.beVisible()
         binding.cropImageView.beGone()
@@ -211,6 +216,7 @@ class EditActivity : SimpleActivity() {
             .apply(options)
             .listener(object : RequestListener<Bitmap> {
                 override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Bitmap>, isFirstResource: Boolean): Boolean {
+                    ColorModeHelper.resetColorMode(this@EditActivity)
                     if (uri != originalUri) {
                         uri = originalUri
                         Handler().post {
@@ -227,6 +233,7 @@ class EditActivity : SimpleActivity() {
                     dataSource: DataSource,
                     isFirstResource: Boolean
                 ): Boolean {
+                    ColorModeHelper.setColorModeForImage(this@EditActivity, bitmap)
                     val currentFilter = getFiltersAdapter()?.getCurrentFilter()
                     if (filterInitialBitmap == null) {
                         loadCropImageView()
