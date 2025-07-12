@@ -258,4 +258,10 @@
     <string name="media_exceeds_device_capabilities">Los medios superan las capacidades del dispositivo.</string>
     <string name="file_is_malformed_or_corrupted">El archivo está malformado o dañado.</string>
     <string name="unsupported_format">Formato no soportado.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">¿Confirma que quiere restaurar %d archivo?</item>
+        <item quantity="many">¿Confirma que quiere restaurar %d de archivos?</item>
+        <item quantity="other">¿Confirma que quiere restaurar %d archivos?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Mantener pantalla encendida al ver fotos en pantalla completa</string>
 </resources>

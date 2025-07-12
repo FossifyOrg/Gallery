@@ -258,4 +258,10 @@
     <string name="file_is_malformed_or_corrupted">Datoteka je neispravna ili oštećena.</string>
     <string name="media_exceeds_device_capabilities">Medij premašuje mogućnosti uređaja.</string>
     <string name="failed_to_load_media">Neuspjelo učitavanje medija.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Stvarno želiš obnoviti %d datoteku?</item>
+        <item quantity="few">Stvarno želiš obnoviti %d datoteke?</item>
+        <item quantity="other">Stvarno želiš obnoviti %d datoteka?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Ostavi ekran uključenim tijekom gledanja fotografija u cjeloekranskom prikazu</string>
 </resources>
