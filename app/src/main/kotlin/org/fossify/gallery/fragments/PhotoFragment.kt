@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Matrix
+import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.PictureDrawable
@@ -20,7 +21,12 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.RelativeLayout
 import androidx.core.graphics.drawable.toBitmapOrNull
-import androidx.exifinterface.media.ExifInterface.*
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_180
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_270
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_90
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSPOSE
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSVERSE
+import androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION
 import com.alexvasilkov.gestures.GestureController
 import com.alexvasilkov.gestures.State
 import com.bumptech.glide.Glide
@@ -43,8 +49,23 @@ import com.squareup.picasso.Picasso
 import it.sephiroth.android.library.exif2.ExifInterface
 import org.apache.sanselan.common.byteSources.ByteSourceInputStream
 import org.apache.sanselan.formats.jpeg.JpegImageParser
-import org.fossify.commons.activities.BaseSimpleActivity
-import org.fossify.commons.extensions.*
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beInvisible
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.fadeIn
+import org.fossify.commons.extensions.getProperBackgroundColor
+import org.fossify.commons.extensions.getProperTextColor
+import org.fossify.commons.extensions.getRealPathFromURI
+import org.fossify.commons.extensions.isExternalStorageManager
+import org.fossify.commons.extensions.isPathOnOTG
+import org.fossify.commons.extensions.isVisible
+import org.fossify.commons.extensions.isWebP
+import org.fossify.commons.extensions.navigationBarHeight
+import org.fossify.commons.extensions.onGlobalLayout
+import org.fossify.commons.extensions.portrait
+import org.fossify.commons.extensions.realScreenSize
+import org.fossify.commons.extensions.toast
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isRPlus
 import org.fossify.gallery.R
@@ -55,7 +76,16 @@ import org.fossify.gallery.adapters.PortraitPhotosAdapter
 import org.fossify.gallery.databinding.PagerPhotoItemBinding
 import org.fossify.gallery.extensions.config
 import org.fossify.gallery.extensions.sendFakeClick
-import org.fossify.gallery.helpers.*
+import org.fossify.gallery.helpers.ColorModeHelper
+import org.fossify.gallery.helpers.HIGH_TILE_DPI
+import org.fossify.gallery.helpers.LOW_TILE_DPI
+import org.fossify.gallery.helpers.MAX_ZOOM_EQUALITY_TOLERANCE
+import org.fossify.gallery.helpers.MEDIUM
+import org.fossify.gallery.helpers.MyGlideImageDecoder
+import org.fossify.gallery.helpers.NORMAL_TILE_DPI
+import org.fossify.gallery.helpers.PicassoRegionDecoder
+import org.fossify.gallery.helpers.SHOULD_INIT_FRAGMENT
+import org.fossify.gallery.helpers.WEIRD_TILE_DPI
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.svg.SvgSoftwareLayerSetter
 import pl.droidsonroids.gif.InputSource
@@ -485,7 +515,9 @@ class PhotoFragment : ViewPagerFragment() {
                     isFirstResource: Boolean
                 ): Boolean {
                     activity?.let {
-                        ColorModeHelper.setColorModeForImage(it, resource.toBitmapOrNull())
+                        val bmp = (resource as? BitmapDrawable)?.bitmap
+                            ?: resource.toBitmapOrNull()
+                        ColorModeHelper.setColorModeForImage(it, bmp)
                     }
                     
                     val allowZoomingImages = context?.config?.allowZoomingImages ?: true
