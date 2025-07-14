@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support for Ultra HDR images (Android 14+) ([#166])
+- Support for wide-color-gamut images ([#375])
+
 ### Changed
 
 - Updated translations
@@ -157,11 +162,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.1]: https://github.com/FossifyOrg/Gallery/releases/tag/1.0.1
 
 [#128]: https://github.com/FossifyOrg/Gallery/issues/128
+[#166]: https://github.com/FossifyOrg/Gallery/issues/166
 [#199]: https://github.com/FossifyOrg/Gallery/issues/199
 [#241]: https://github.com/FossifyOrg/Gallery/issues/241
 [#275]: https://github.com/FossifyOrg/Gallery/issues/275
 [#362]: https://github.com/FossifyOrg/Gallery/issues/362
 [#365]: https://github.com/FossifyOrg/Gallery/issues/365
+[#375]: https://github.com/FossifyOrg/Gallery/issues/375
 [#379]: https://github.com/FossifyOrg/Gallery/issues/379
 [#447]: https://github.com/FossifyOrg/Gallery/issues/447
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475

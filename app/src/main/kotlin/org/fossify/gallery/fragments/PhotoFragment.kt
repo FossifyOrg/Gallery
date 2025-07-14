@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Matrix
+import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.PictureDrawable
@@ -19,7 +20,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.RelativeLayout
-import androidx.exifinterface.media.ExifInterface.*
+import androidx.core.graphics.drawable.toBitmapOrNull
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_180
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_270
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_90
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSPOSE
+import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSVERSE
+import androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION
 import com.alexvasilkov.gestures.GestureController
 import com.alexvasilkov.gestures.State
 import com.bumptech.glide.Glide
@@ -43,8 +50,23 @@ import com.squareup.picasso.Picasso
 import it.sephiroth.android.library.exif2.ExifInterface
 import org.apache.sanselan.common.byteSources.ByteSourceInputStream
 import org.apache.sanselan.formats.jpeg.JpegImageParser
-import org.fossify.commons.activities.BaseSimpleActivity
-import org.fossify.commons.extensions.*
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beInvisible
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.fadeIn
+import org.fossify.commons.extensions.getProperBackgroundColor
+import org.fossify.commons.extensions.getProperTextColor
+import org.fossify.commons.extensions.getRealPathFromURI
+import org.fossify.commons.extensions.isExternalStorageManager
+import org.fossify.commons.extensions.isPathOnOTG
+import org.fossify.commons.extensions.isVisible
+import org.fossify.commons.extensions.isWebP
+import org.fossify.commons.extensions.navigationBarHeight
+import org.fossify.commons.extensions.onGlobalLayout
+import org.fossify.commons.extensions.portrait
+import org.fossify.commons.extensions.realScreenSize
+import org.fossify.commons.extensions.toast
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isRPlus
 import org.fossify.gallery.R
@@ -54,9 +76,17 @@ import org.fossify.gallery.activities.ViewPagerActivity
 import org.fossify.gallery.adapters.PortraitPhotosAdapter
 import org.fossify.gallery.databinding.PagerPhotoItemBinding
 import org.fossify.gallery.extensions.config
-import org.fossify.gallery.extensions.saveRotatedImageToFile
 import org.fossify.gallery.extensions.sendFakeClick
-import org.fossify.gallery.helpers.*
+import org.fossify.gallery.helpers.ColorModeHelper
+import org.fossify.gallery.helpers.HIGH_TILE_DPI
+import org.fossify.gallery.helpers.LOW_TILE_DPI
+import org.fossify.gallery.helpers.MAX_ZOOM_EQUALITY_TOLERANCE
+import org.fossify.gallery.helpers.MEDIUM
+import org.fossify.gallery.helpers.MyGlideImageDecoder
+import org.fossify.gallery.helpers.NORMAL_TILE_DPI
+import org.fossify.gallery.helpers.PicassoRegionDecoder
+import org.fossify.gallery.helpers.SHOULD_INIT_FRAGMENT
+import org.fossify.gallery.helpers.WEIRD_TILE_DPI
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.svg.SvgSoftwareLayerSetter
 import pl.droidsonroids.gif.InputSource
@@ -349,9 +379,11 @@ class PhotoFragment : ViewPagerFragment() {
 
     private fun photoFragmentVisibilityChanged(isVisible: Boolean) {
         if (isVisible) {
+            applyProperColorMode(binding.gesturesView.drawable)
             scheduleZoomableView()
         } else {
             hideZoomableView()
+            ColorModeHelper.resetColorMode(activity)
         }
     }
 
@@ -470,6 +502,7 @@ class PhotoFragment : ViewPagerFragment() {
             .apply(options)
             .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>, isFirstResource: Boolean): Boolean {
+                    resetColorModeIfVisible()
                     if (activity != null && !activity!!.isDestroyed && !activity!!.isFinishing) {
                         tryLoadingWithPicasso(addZoomableView)
                     }
@@ -483,6 +516,7 @@ class PhotoFragment : ViewPagerFragment() {
                     dataSource: DataSource,
                     isFirstResource: Boolean
                 ): Boolean {
+                    applyProperColorMode(resource)
                     val allowZoomingImages = context?.config?.allowZoomingImages ?: true
                     binding.gesturesView.controller.settings.isZoomEnabled = mMedium.isRaw() || mCurrentRotationDegrees != 0 || allowZoomingImages == false
                     if (mIsFragmentVisible && addZoomableView) {
@@ -512,6 +546,7 @@ class PhotoFragment : ViewPagerFragment() {
 
             picasso.into(binding.gesturesView, object : Callback {
                 override fun onSuccess() {
+                    applyProperColorMode(binding.gesturesView.drawable)
                     binding.gesturesView.controller.settings.isZoomEnabled =
                         mMedium.isRaw() || mCurrentRotationDegrees != 0 || context?.config?.allowZoomingImages == false
                     if (mIsFragmentVisible && addZoomableView) {
@@ -520,6 +555,7 @@ class PhotoFragment : ViewPagerFragment() {
                 }
 
                 override fun onError(e: Exception?) {
+                    resetColorModeIfVisible()
                     if (mMedium.path != mOriginalPath) {
                         mMedium.path = mOriginalPath
                         loadImage()
@@ -908,5 +944,20 @@ class PhotoFragment : ViewPagerFragment() {
         val fullscreenOffset = smallMargin + if (mIsFullscreen) 0 else requireContext().navigationBarHeight
         val actionsHeight = if (requireContext().config.bottomActions && !mIsFullscreen) resources.getDimension(R.dimen.bottom_actions_height) else 0f
         return requireContext().realScreenSize.y - height - actionsHeight - fullscreenOffset
+    }
+
+    private fun applyProperColorMode(resource: Drawable?) {
+        if (mIsFragmentVisible && activity != null) {
+            ColorModeHelper.setColorModeForImage(
+                activity = requireActivity(),
+                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull()
+            )
+        }
+    }
+
+    private fun resetColorModeIfVisible() {
+        if (mIsFragmentVisible) {
+            ColorModeHelper.resetColorMode(activity)
+        }
     }
 }
