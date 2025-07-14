@@ -12,7 +12,7 @@ import org.fossify.commons.helpers.isUpsideDownCakePlus
  */
 object ColorModeHelper {
 
-    fun isHdrSupported() = isUpsideDownCakePlus()
+    fun isGainmapSupported() = isUpsideDownCakePlus()
 
     @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
     fun hasHdrContent(bitmap: Bitmap?): Boolean {
@@ -31,7 +31,7 @@ object ColorModeHelper {
         setColorMode(
             activity = activity,
             colorMode = when {
-                isHdrSupported() && hasHdrContent(bitmap) -> ActivityInfo.COLOR_MODE_HDR
+                isGainmapSupported() && hasHdrContent(bitmap) -> ActivityInfo.COLOR_MODE_HDR
                 hasWideColorGamut(bitmap) -> ActivityInfo.COLOR_MODE_WIDE_COLOR_GAMUT
                 else -> ActivityInfo.COLOR_MODE_DEFAULT
             }
