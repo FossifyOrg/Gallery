@@ -301,7 +301,6 @@ class PhotoFragment : ViewPagerFragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        ColorModeHelper.resetColorMode(activity)
         if (activity?.isDestroyed == false) {
             binding.subsamplingView.recycle()
 
@@ -379,11 +378,7 @@ class PhotoFragment : ViewPagerFragment() {
 
     private fun photoFragmentVisibilityChanged(isVisible: Boolean) {
         if (isVisible) {
-            ColorModeHelper.setColorModeForImage(
-                activity = requireActivity(),
-                bitmap = (binding.gesturesView.drawable as? BitmapDrawable)?.bitmap
-                    ?: binding.gesturesView.drawable?.toBitmapOrNull()
-            )
+            applyProperColorMode(binding.gesturesView.drawable)
             scheduleZoomableView()
         } else {
             hideZoomableView()
@@ -505,7 +500,7 @@ class PhotoFragment : ViewPagerFragment() {
             .apply(options)
             .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>, isFirstResource: Boolean): Boolean {
-                    ColorModeHelper.resetColorMode(activity)
+                    resetColorModeIfVisible()
                     if (activity != null && !activity!!.isDestroyed && !activity!!.isFinishing) {
                         tryLoadingWithPicasso(addZoomableView)
                     }
@@ -519,12 +514,7 @@ class PhotoFragment : ViewPagerFragment() {
                     dataSource: DataSource,
                     isFirstResource: Boolean
                 ): Boolean {
-                    activity?.let {
-                        val bmp = (resource as? BitmapDrawable)?.bitmap
-                            ?: resource.toBitmapOrNull()
-                        ColorModeHelper.setColorModeForImage(it, bmp)
-                    }
-                    
+                    applyProperColorMode(resource)
                     val allowZoomingImages = context?.config?.allowZoomingImages ?: true
                     binding.gesturesView.controller.settings.isZoomEnabled = mMedium.isRaw() || mCurrentRotationDegrees != 0 || allowZoomingImages == false
                     if (mIsFragmentVisible && addZoomableView) {
@@ -554,7 +544,7 @@ class PhotoFragment : ViewPagerFragment() {
 
             picasso.into(binding.gesturesView, object : Callback {
                 override fun onSuccess() {
-                    ColorModeHelper.resetColorMode(activity)
+                    applyProperColorMode(binding.gesturesView.drawable)
                     binding.gesturesView.controller.settings.isZoomEnabled =
                         mMedium.isRaw() || mCurrentRotationDegrees != 0 || context?.config?.allowZoomingImages == false
                     if (mIsFragmentVisible && addZoomableView) {
@@ -563,7 +553,7 @@ class PhotoFragment : ViewPagerFragment() {
                 }
 
                 override fun onError(e: Exception?) {
-                    ColorModeHelper.resetColorMode(activity)
+                    resetColorModeIfVisible()
                     if (mMedium.path != mOriginalPath) {
                         mMedium.path = mOriginalPath
                         loadImage()
@@ -952,5 +942,20 @@ class PhotoFragment : ViewPagerFragment() {
         val fullscreenOffset = smallMargin + if (mIsFullscreen) 0 else requireContext().navigationBarHeight
         val actionsHeight = if (requireContext().config.bottomActions && !mIsFullscreen) resources.getDimension(R.dimen.bottom_actions_height) else 0f
         return requireContext().realScreenSize.y - height - actionsHeight - fullscreenOffset
+    }
+
+    private fun applyProperColorMode(resource: Drawable?) {
+        if (mIsFragmentVisible && activity != null) {
+            ColorModeHelper.setColorModeForImage(
+                activity = requireActivity(),
+                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull()
+            )
+        }
+    }
+
+    private fun resetColorModeIfVisible() {
+        if (mIsFragmentVisible) {
+            ColorModeHelper.resetColorMode(activity)
+        }
     }
 }
