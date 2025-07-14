@@ -2,10 +2,10 @@
 <resources>
     <string name="app_launcher_name">Галерэя</string>
     <string name="edit">Рэдагаваць</string>
-    <string name="open_camera">Адкрытая камера</string>
+    <string name="open_camera">Адкрыць камера</string>
     <string name="hidden">(схаваны)</string>
     <string name="excluded">(выключана)</string>
-    <string name="pin_folder">Замацаваць тэчку</string>
+    <string name="pin_folder">Замацаваць папку</string>
     <string name="unpin_folder">Адмацаваць тэчку</string>
     <string name="pin_to_the_top">Замацаваць зверху</string>
     <string name="show_all">Паказаць змесціва ўсіх папак</string>
