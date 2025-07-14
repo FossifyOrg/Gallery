@@ -379,6 +379,11 @@ class PhotoFragment : ViewPagerFragment() {
 
     private fun photoFragmentVisibilityChanged(isVisible: Boolean) {
         if (isVisible) {
+            ColorModeHelper.setColorModeForImage(
+                activity = requireActivity(),
+                bitmap = (binding.gesturesView.drawable as? BitmapDrawable)?.bitmap
+                    ?: binding.gesturesView.drawable.toBitmapOrNull()
+            )
             scheduleZoomableView()
         } else {
             hideZoomableView()
