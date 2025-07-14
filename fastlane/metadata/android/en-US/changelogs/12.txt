@@ -1,0 +1,13 @@
+Added:
+
+• Support for Ultra HDR images (Android 14+) 
+• Support for wide-color-gamut images 
+
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed crash in some external image editors 
+
