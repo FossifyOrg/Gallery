@@ -382,7 +382,7 @@ class PhotoFragment : ViewPagerFragment() {
             ColorModeHelper.setColorModeForImage(
                 activity = requireActivity(),
                 bitmap = (binding.gesturesView.drawable as? BitmapDrawable)?.bitmap
-                    ?: binding.gesturesView.drawable.toBitmapOrNull()
+                    ?: binding.gesturesView.drawable?.toBitmapOrNull()
             )
             scheduleZoomableView()
         } else {
