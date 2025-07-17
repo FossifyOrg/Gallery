@@ -23,6 +23,7 @@ class PicassoRegionDecoder(
         return Point(decoder!!.width, decoder!!.height)
     }
 
+    @Suppress("CyclomaticComplexMethod")
     override fun decodeRegion(rect: Rect, sampleSize: Int): Bitmap {
         synchronized(decoderLock) {
             var newSampleSize = sampleSize
@@ -43,7 +44,10 @@ class PicassoRegionDecoder(
             }
 
             // Apply EXIF mirror flips (orientation 2,4,5,7)
-            val needsFlipHorizontal = orientation == ExifInterface.ORIENTATION_FLIP_HORIZONTAL || orientation == ExifInterface.ORIENTATION_TRANSPOSE || orientation == ExifInterface.ORIENTATION_TRANSVERSE
+            val needsFlipHorizontal =
+                orientation == ExifInterface.ORIENTATION_FLIP_HORIZONTAL ||
+                    orientation == ExifInterface.ORIENTATION_TRANSPOSE ||
+                    orientation == ExifInterface.ORIENTATION_TRANSVERSE
             val needsFlipVertical = orientation == ExifInterface.ORIENTATION_FLIP_VERTICAL
 
             if (needsFlipHorizontal || needsFlipVertical) {
