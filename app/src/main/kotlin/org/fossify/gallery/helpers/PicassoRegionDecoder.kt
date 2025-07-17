@@ -3,13 +3,15 @@ package org.fossify.gallery.helpers
 import android.content.Context
 import android.graphics.*
 import android.net.Uri
+import androidx.exifinterface.media.ExifInterface
 import com.davemorrissey.labs.subscaleview.ImageRegionDecoder
 
 class PicassoRegionDecoder(
     val showHighestQuality: Boolean,
     val screenWidth: Int,
     val screenHeight: Int,
-    val minTileDpi: Int
+    val minTileDpi: Int,
+    private val orientation: Int
 ) : ImageRegionDecoder {
     private var decoder: BitmapRegionDecoder? = null
     private val decoderLock = Any()
@@ -35,8 +37,29 @@ class PicassoRegionDecoder(
             val options = BitmapFactory.Options()
             options.inSampleSize = newSampleSize
             options.inPreferredConfig = Bitmap.Config.ARGB_8888
-            val bitmap = decoder!!.decodeRegion(rect, options)
-            return bitmap ?: throw RuntimeException("Region decoder returned null bitmap - image format may not be supported")
+            var bitmap = decoder!!.decodeRegion(rect, options)
+            if (bitmap == null) {
+                throw RuntimeException("Region decoder returned null bitmap - image format may not be supported")
+            }
+
+            // Apply EXIF mirror flips (orientation 2,4,5,7)
+            val needsFlipHorizontal = orientation == ExifInterface.ORIENTATION_FLIP_HORIZONTAL || orientation == ExifInterface.ORIENTATION_TRANSPOSE || orientation == ExifInterface.ORIENTATION_TRANSVERSE
+            val needsFlipVertical = orientation == ExifInterface.ORIENTATION_FLIP_VERTICAL
+
+            if (needsFlipHorizontal || needsFlipVertical) {
+                val matrix = Matrix().apply {
+                    preScale(if (needsFlipHorizontal) -1f else 1f, if (needsFlipVertical) -1f else 1f)
+                    if (needsFlipHorizontal) {
+                        postTranslate(bitmap.width.toFloat(), 0f)
+                    }
+                    if (needsFlipVertical) {
+                        postTranslate(0f, bitmap.height.toFloat())
+                    }
+                }
+                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
+            }
+
+            return bitmap
         }
     }
 
