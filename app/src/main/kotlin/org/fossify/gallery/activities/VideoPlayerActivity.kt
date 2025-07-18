@@ -712,10 +712,10 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         }
 
         val curr = mExoPlayer!!.currentPosition
-        var newProgress =
+        var newPosition =
             if (forward) curr + FAST_FORWARD_VIDEO_MS else curr - FAST_FORWARD_VIDEO_MS
-        newProgress = newProgress.coerceIn(0, mExoPlayer!!.duration)
-        setPosition(newProgress)
+        newPosition = newPosition.coerceIn(0, mExoPlayer!!.duration)
+        setPosition(newPosition)
         if (!mIsPlaying) {
             togglePlayPause()
         }
