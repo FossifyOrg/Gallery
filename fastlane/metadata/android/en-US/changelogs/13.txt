@@ -1,0 +1,9 @@
+Changed:
+
+• Improved seek control in videos 
+• Updated translations
+
+Fixed:
+
+• Fixed broken looping in videos shorter than one second 
+
