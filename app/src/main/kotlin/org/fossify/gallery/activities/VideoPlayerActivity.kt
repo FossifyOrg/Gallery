@@ -753,7 +753,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
                     var percent = ((diffX / mScreenWidth) * 100).toInt()
                     percent = min(100, max(-100, percent))
 
-                    val skipLength = mDuration.toDouble() * (percent / 100)
+                    val skipLength = mDuration * (percent.toDouble() / 100)
                     var newProgress = mProgressAtDown + skipLength
                     newProgress = newProgress.coerceIn(0.0, mExoPlayer!!.duration.toDouble())
                     setPosition(newProgress.toLong())
