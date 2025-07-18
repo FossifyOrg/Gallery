@@ -397,10 +397,10 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun restoreLastVideoSavedPosition() {
-        val positionSeconds = mConfig.getLastVideoPosition(mMedium.path)
-        if (positionSeconds > 0) {
-            mPositionAtPause = positionSeconds * 1000L
-            setPosition(positionSeconds * 1000L)
+        val seconds = mConfig.getLastVideoPosition(mMedium.path)
+        if (seconds > 0) {
+            mPositionAtPause = seconds * 1000L
+            setPosition(seconds * 1000L)
         }
     }
 
