@@ -43,28 +43,21 @@ class PicassoRegionDecoder(
                 throw RuntimeException("Region decoder returned null bitmap - image format may not be supported")
             }
 
-            // Apply EXIF mirror flips (orientation 2,4,5,7)
-            val needsFlipHorizontal =
-                orientation == ExifInterface.ORIENTATION_FLIP_HORIZONTAL ||
-                    orientation == ExifInterface.ORIENTATION_TRANSPOSE ||
-                    orientation == ExifInterface.ORIENTATION_TRANSVERSE
-            val needsFlipVertical = orientation == ExifInterface.ORIENTATION_FLIP_VERTICAL
-
-            if (needsFlipHorizontal || needsFlipVertical) {
-                val matrix = Matrix().apply {
-                    preScale(if (needsFlipHorizontal) -1f else 1f, if (needsFlipVertical) -1f else 1f)
-                    if (needsFlipHorizontal) {
-                        postTranslate(bitmap.width.toFloat(), 0f)
-                    }
-                    if (needsFlipVertical) {
-                        postTranslate(0f, bitmap.height.toFloat())
-                    }
-                }
-                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
-            }
-
-            return bitmap
+            return applyExifOrientation(bitmap, orientation)
         }
+    }
+
+    private fun applyExifOrientation(bitmap: Bitmap, orientation: Int): Bitmap {
+        val matrix = Matrix()
+        when (orientation) {
+            ExifInterface.ORIENTATION_FLIP_HORIZONTAL -> matrix.setScale(-1f, 1f)
+            ExifInterface.ORIENTATION_FLIP_VERTICAL -> matrix.setScale(1f, -1f)
+            ExifInterface.ORIENTATION_TRANSPOSE -> matrix.setScale(-1f, 1f)
+            ExifInterface.ORIENTATION_TRANSVERSE -> matrix.setScale(-1f, 1f)
+            else -> return bitmap // other cases are handled at the view level
+        }
+
+        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
     }
 
     override fun isReady() = decoder != null && !decoder!!.isRecycled
