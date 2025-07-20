@@ -23,7 +23,6 @@ class PicassoRegionDecoder(
         return Point(decoder!!.width, decoder!!.height)
     }
 
-    @Suppress("CyclomaticComplexMethod")
     override fun decodeRegion(rect: Rect, sampleSize: Int): Bitmap {
         synchronized(decoderLock) {
             var newSampleSize = sampleSize
