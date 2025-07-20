@@ -1374,15 +1374,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         }
     }
 
-    private fun hideImageInfoPanel() {
-        binding.apply {
-            bottomActions.root.visibility = View.GONE
-            mediumViewerAppbar.visibility = View.GONE
-            topShadow.visibility = View.GONE
-            mediumViewerAppbar.visibility = View.GONE
-        }
-    }
-
     private fun fullscreenToggled() {
         binding.viewPager.adapter?.let {
             (it as MyPagerAdapter).toggleFullscreen(mIsFullScreen)
