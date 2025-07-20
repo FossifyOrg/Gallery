@@ -503,6 +503,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                     }
 
                     hideSystemUI(true)
+                    hideImageInfoPanel()
                     mRandomSlideshowStopped = false
                     mSlideshowInterval = config.slideshowInterval
                     mSlideshowMoveBackwards = config.slideshowMoveBackwards
@@ -1367,6 +1368,15 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         } else {
             stopSlideshow()
             showSystemUI(true)
+        }
+    }
+
+    private fun hideImageInfoPanel() {
+        binding.apply {
+            bottomActions.root.visibility = View.GONE
+            mediumViewerAppbar.visibility = View.GONE
+            topShadow.visibility = View.GONE
+            mediumViewerAppbar.visibility = View.GONE
         }
     }
 
