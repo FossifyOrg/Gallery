@@ -503,7 +503,10 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                     }
 
                     hideSystemUI(true)
-                    hideImageInfoPanel()
+                    if (!mIsFullScreen) {
+                        mIsFullScreen = true
+                        fullscreenToggled()
+                    }
                     mRandomSlideshowStopped = false
                     mSlideshowInterval = config.slideshowInterval
                     mSlideshowMoveBackwards = config.slideshowMoveBackwards
