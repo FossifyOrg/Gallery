@@ -5,7 +5,7 @@ kotlin = "2.2.0"
 ksp = "2.2.0-2.0.2"
 #Detekt
 detekt = "1.23.8"
-detektCompose = "0.4.22"
+detektCompose = "0.4.24"
 #AndroidX
 androidx-swiperefreshlayout = "1.1.0"
 androidx-constraintlayout = "2.2.1"
