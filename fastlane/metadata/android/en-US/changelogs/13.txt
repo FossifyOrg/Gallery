@@ -1,0 +1,11 @@
+Changed:
+
+• Improved seek control in videos 
+• Updated translations
+
+Fixed:
+
+• Fixed broken looping in videos shorter than one second 
+• Slideshows now automatically start in full-screen mode 
+• Fixed pixelation and artifacts in some JPEG XL images 
+
