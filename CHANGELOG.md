@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed broken looping in videos shorter than one second ([#565])
 - Slideshows now automatically start in full-screen mode ([#529])
+- Fixed pixelation and artifacts in some JPEG XL images ([#567])
 
 ## [1.4.0] - 2025-07-14
 ### Added
@@ -135,6 +136,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
 [#525]: https://github.com/FossifyOrg/Gallery/issues/525
 [#529]: https://github.com/FossifyOrg/Gallery/issues/529
+[#567]: https://github.com/FossifyOrg/Gallery/issues/567
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.4.0...HEAD
 [1.4.0]: https://github.com/FossifyOrg/Gallery/compare/1.3.1...1.4.0
