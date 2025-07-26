@@ -140,7 +140,7 @@
     <string name="by_file_type">Тип файла</string>
     <string name="by_extension">Расширение</string>
     <string name="show_file_count_section_header">Показывать количество файлов в заголовках разделов</string>
-    <string name="grouping_and_sorting">Обратите внимание, что группировка и сортировка — это два независимых поля</string>
+    <string name="grouping_and_sorting">Группировка и сортировка — это два независимых действия</string>
     <string name="folder_on_widget">Папка, отображаемая в виджете:</string>
     <string name="show_folder_name">Показывать имя папки</string>
     <string name="autoplay_videos">Воспроизводить видео автоматически</string>
