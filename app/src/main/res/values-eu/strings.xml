@@ -257,4 +257,9 @@
     <string name="file_is_malformed_or_corrupted">Fitxategia ez da zuzena edo kaltetuta dago.</string>
     <string name="media_exceeds_device_capabilities">Mediek gailuaren ezaugarriak gainditzen dituzte.</string>
     <string name="unsupported_format">Fitxategi ezin da erakutsi.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">"Ziur zaude fitxategi %d  leheneratu nahi duzula?"</item>
+        <item quantity="other">Ziur zaude %d fitxategi leheneratu nahi duzula?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Mantendu pantaila piztuta argazkiak pantaila osoan ikusi bitartean</string>
 </resources>
