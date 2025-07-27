@@ -255,7 +255,7 @@
     <string name="file_is_malformed_or_corrupted">Filen er misdannet eller beskadiget.</string>
     <string name="keep_screen_on_fullscreen_photos">Hold skærmen tændt, mens du ser fotos i fuld skærm</string>
     <plurals name="restore_confirmation">
-        <item quantity="one">Er du sikker på, at du vil gendanne %d fil?</item>
-        <item quantity="other">Er du sikker på, at du vil gendanne %d filer?</item>
+        <item quantity="one">Er du sikker på du vil gendanne %d fil?</item>
+        <item quantity="other">Er du sikker på du vil gendanne %d filer?</item>
     </plurals>
 </resources>
