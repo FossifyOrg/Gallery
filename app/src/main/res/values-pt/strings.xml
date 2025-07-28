@@ -256,4 +256,10 @@
     <string name="file_is_malformed_or_corrupted">Ficheiro inválido ou danificado.</string>
     <string name="media_exceeds_device_capabilities">O ficheiro excede as capacidades do dispositivo.</string>
     <string name="unsupported_format">Formato não suportado.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Tem certeza que deseja restaurar %d ficheiro?</item>
+        <item quantity="many">Tem certeza que deseja restaurar %d ficheiros?</item>
+        <item quantity="other">Tem certeza que deseja restaurar %d ficheiros?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Manter o ecrã ligado enquanto vê fotos em ecrã cheio</string>
 </resources>
