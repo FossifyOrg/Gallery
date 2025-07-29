@@ -152,7 +152,7 @@
     <string name="screen_rotation_system_setting">Sistemaren ezarpena</string>
     <string name="screen_rotation_device_rotation">Gailu-biratzea</string>
     <string name="screen_rotation_aspect_ratio">Aspektu-erlazioa</string>
-    <string name="black_background_at_fullscreen">Hondo beltza pantaila osoko multimediarekin</string>
+    <string name="black_background_at_fullscreen">Atzeko plano beltza pantaila osoko moduan</string>
     <string name="scroll_thumbnails_horizontally">Korritu iruditxoak horizontalki</string>
     <string name="hide_system_ui_at_fullscreen">Automatikoki ezkutatu sistemaren EI pantaila osoko multimediarekin</string>
     <string name="delete_empty_folders">Ezabatu hutsik dauden karpetak beren edukia ezabatu ondoren</string>
