@@ -242,4 +242,17 @@
     <string name="faq_17_text">Je to taktiež spôsobené zmenami súvisiacimi s Android 11, kedy apka už nevie prehliadať reálne priečinky. V získavaní súborov sa môže iba spoliehať na takzvaný MediaStore.</string>
     <string name="faq_18_title">Prečo sa mi počas prehrávania videí zobrazujú reklamy\?</string>
     <string name="faq_18_text">Naše apky nemajú vôbec žiadne reklamy. Ak sa vám zobrazujú počas prehrávania videí, používate prehrávač inej apky. Skúste v nastaveniach zariadenia nájsť predvolený prehrávač a použiť \"Odstrániť predvolené\". Pri ďalšom spustení videa uvidíte zoznam apiek, ktoré môžete na prehrávanie použiť.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">súbor</item>
+        <item quantity="few">súbory</item>
+        <item quantity="other">súborov</item>
+    </plurals>
+    <string name="full_storage_permission_required">Fossify Galéria potrebuje plný prístup pre zobrazenie všetkých vašich fotiek a videí. Ťuknite na Nastavenia &gt; Povolenia &gt; Fotky a videá &gt; Vždy povoliť všetko.</string>
+    <string name="editor">Editor</string>
+    <string name="wallpaper">Tapeta</string>
+    <string name="interval">Interval</string>
+    <string name="keep_screen_on_fullscreen_photos">Ponechať obrazovku zapnutú pri zobrazovaní fotografií na celú obrazovku</string>
+    <string name="playback_speed">Rýchlosť prehrávania</string>
+    <string name="failed_to_load_media">Nepodarilo sa načítať médiá.</string>
+    <string name="file_is_malformed_or_corrupted">Súbor je poškodený.</string>
 </resources>
