@@ -660,7 +660,11 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         if (mLoadedInitialPhotos) {
             startAsyncTask()
         } else {
-            getCachedMedia(mPath, mIsGetVideoIntent, mIsGetImageIntent) {
+            getCachedMedia(
+                mPath,
+                mIsGetVideoIntent && !mIsGetImageIntent,
+                mIsGetImageIntent && !mIsGetVideoIntent
+            ) {
                 if (it.isEmpty()) {
                     runOnUiThread {
                         binding.mediaRefreshLayout.isRefreshing = true
@@ -680,8 +684,8 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         mCurrAsyncTask = GetMediaAsynctask(
             context = applicationContext,
             mPath = mPath,
-            isPickImage = mIsGetImageIntent,
-            isPickVideo = mIsGetVideoIntent,
+            isPickImage = mIsGetImageIntent && !mIsGetVideoIntent,
+            isPickVideo = mIsGetVideoIntent && !mIsGetImageIntent,
             showAll = mShowAll
         ) {
             ensureBackgroundThread {
