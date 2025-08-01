@@ -204,7 +204,6 @@
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$0.5</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$0.8</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100</ID>
-    <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100L</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$100f</ID>
     <ID>MagicNumber:VideoPlayerActivity.kt$VideoPlayerActivity$7</ID>
     <ID>MagicNumber:ViewPagerActivity.kt$ViewPagerActivity$180</ID>
@@ -599,8 +598,6 @@
     <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_LANDSCAPE = 1</ID>
     <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_PORTRAIT = 0</ID>
     <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_SQUARE = 2</ID>
-    <ID>VariableNaming:VideoFragment.kt$VideoFragment$private val PROGRESS = "progress"</ID>
-    <ID>VariableNaming:VideoPlayerActivity.kt$VideoPlayerActivity$private val PLAY_WHEN_READY_DRAG_DELAY = 100L</ID>
     <ID>WildcardImport:Activity.kt$import java.io.*</ID>
     <ID>WildcardImport:Activity.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:Activity.kt$import org.fossify.commons.helpers.*</ID>
@@ -634,9 +631,6 @@
     <ID>WildcardImport:Medium.kt$import org.fossify.commons.helpers.*</ID>
     <ID>WildcardImport:Medium.kt$import org.fossify.gallery.helpers.*</ID>
     <ID>WildcardImport:MediumDao.kt$import androidx.room.*</ID>
-    <ID>WildcardImport:PhotoFragment.kt$import androidx.exifinterface.media.ExifInterface.*</ID>
-    <ID>WildcardImport:PhotoFragment.kt$import org.fossify.commons.extensions.*</ID>
-    <ID>WildcardImport:PhotoFragment.kt$import org.fossify.gallery.helpers.*</ID>
     <ID>WildcardImport:PhotoVideoActivity.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:PhotoVideoActivity.kt$import org.fossify.commons.helpers.*</ID>
     <ID>WildcardImport:PhotoVideoActivity.kt$import org.fossify.gallery.extensions.*</ID>
