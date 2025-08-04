@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Fixed media picker showing only GIFs when both images and videos are requested
+- Fixed volume gesture not working on some devices ([#237])
 
 ## [1.4.1] - 2025-07-22
 ### Changed
@@ -130,6 +131,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#128]: https://github.com/FossifyOrg/Gallery/issues/128
 [#166]: https://github.com/FossifyOrg/Gallery/issues/166
 [#199]: https://github.com/FossifyOrg/Gallery/issues/199
+[#237]: https://github.com/FossifyOrg/Gallery/issues/237
 [#241]: https://github.com/FossifyOrg/Gallery/issues/241
 [#275]: https://github.com/FossifyOrg/Gallery/issues/275
 [#325]: https://github.com/FossifyOrg/Gallery/issues/325

@@ -15,6 +15,7 @@ import org.fossify.commons.extensions.onGlobalLayout
 import org.fossify.gallery.R
 import org.fossify.gallery.extensions.audioManager
 import org.fossify.gallery.helpers.DRAG_THRESHOLD
+import kotlin.math.max
 
 // allow horizontal swipes through the layout, else it can cause glitches at zoomed in images
 class MediaSideScroll(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
@@ -156,14 +157,9 @@ class MediaSideScroll(context: Context, attrs: AttributeSet) : RelativeLayout(co
 
     private fun volumePercentChanged(percent: Int) {
         val stream = AudioManager.STREAM_MUSIC
-        val maxVolume = activity!!.audioManager.getStreamMaxVolume(stream)
-        val percentPerPoint = 100 / maxVolume
-        if (percentPerPoint == 0) {
-            return
-        }
-
-        val addPoints = percent / percentPerPoint
-        val newVolume = Math.min(maxVolume, Math.max(0, mTouchDownValue + addPoints))
+        val maxVolume = max(activity!!.audioManager.getStreamMaxVolume(stream), 1)
+        val addPoints = ((percent / 100f) * maxVolume).toInt()
+        val newVolume = (mTouchDownValue + addPoints).coerceIn(0, maxVolume)
         activity!!.audioManager.setStreamVolume(stream, newVolume, 0)
 
         val absolutePercent = ((newVolume / maxVolume.toFloat()) * 100).toInt()
