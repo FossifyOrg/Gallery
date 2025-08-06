@@ -114,4 +114,7 @@
     <string name="faq_10_title">Ar galiu apkarpyti vaizdus naudojant šią programėlę\?</string>
     <string name="faq_10_text">Taip, redaguodami vaizdus, galite juos apkarpyti, vilkdami vaizdo kampus. Galite patekti į redaktorių ilgai paspaudę vaizdo miniatiūrą ir pasirinkę Redaguoti arba iš viso ekrano rodinio pasirinkę Redaguoti.</string>
     <string name="faq_16_text">Nuo \"Android 11\" nebegalite paslėpti arba panaikinti failų ar aplankų paslėpimo, taip pat paslėptų failų ar aplankų negalite matyti galerijos programėlėse. Tam turėsite naudoti kokį nors failų tvarkytuvą.</string>
+    <string name="faq_18_text">Mūsų programos neturi jokių reklamų. Jei jas matote vaizdo įrašo peržiūros metu, tikriausiai naudojate kitą vaizdo įrašų leistuvę. Pabandykite rasti numatytąjį vaizdo įrašų leistuvę įrenginio nustatymuose, tada atlikite „Išvalyti numatytuosius“ veiksmą. Kitą kartą, kai paleisite vaizdo įrašą, pasirodys programos parinkiklio langas, kuriame galėsite pasirinkti norimą programą.</string>
+    <string name="faq_18_title">Kodėl matau reklamas vaizdo įrašų peržiūros metu?</string>
+    <string name="faq_17_text">Tai nustojo veikti dėl sistemos pakeitimų, kurie buvo padaryti su „Android 11“. Programa nebegali naršyti tikrų aplankų, ji remiasi vadinamuoju „MediaStore“, kad gautų duomenis.</string>
 </resources>
