@@ -126,7 +126,7 @@
     <string name="animation">Animazione</string>
     <string name="no_animation">Nessuna</string>
     <string name="fade">Dissolvenza</string>
-    <string name="slide">Diapositiva</string>
+    <string name="slide">Scorri</string>
     <string name="slideshow_ended">La presentazione è terminata</string>
     <string name="no_media_for_slideshow">Nessun file trovato per la presentazione</string>
     <string name="group_direct_subfolders">Raggruppa sottocartelle dirette</string>
