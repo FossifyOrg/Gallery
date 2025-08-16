@@ -242,4 +242,24 @@
     <string name="faq_17_text">Je to taktiež spôsobené zmenami súvisiacimi s Android 11, kedy apka už nevie prehliadať reálne priečinky. V získavaní súborov sa môže iba spoliehať na takzvaný MediaStore.</string>
     <string name="faq_18_title">Prečo sa mi počas prehrávania videí zobrazujú reklamy\?</string>
     <string name="faq_18_text">Naše apky nemajú vôbec žiadne reklamy. Ak sa vám zobrazujú počas prehrávania videí, používate prehrávač inej apky. Skúste v nastaveniach zariadenia nájsť predvolený prehrávač a použiť \"Odstrániť predvolené\". Pri ďalšom spustení videa uvidíte zoznam apiek, ktoré môžete na prehrávanie použiť.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Naozaj chcete obnoviť %d súbor?</item>
+        <item quantity="few">Naozaj chcete obnoviť %d súbory?</item>
+        <item quantity="other">Naozaj chcete obnoviť %d súborov?</item>
+    </plurals>
+    <string name="full_storage_permission_required">Fossify Galéria potrebuje plný prístup pre zobrazenie všetkých vašich fotiek a videí. Ťuknite na Nastavenia &gt; Povolenia &gt; Fotky a videá &gt; Vždy povoliť všetko.</string>
+    <string name="editor">Editor</string>
+    <string name="wallpaper">Tapeta</string>
+    <string name="interval">Interval</string>
+    <string name="keep_screen_on_fullscreen_photos">Ponechať obrazovku zapnutú pri zobrazovaní fotografií na celú obrazovku</string>
+    <string name="playback_speed">Rýchlosť prehrávania</string>
+    <string name="failed_to_load_media">Nepodarilo sa načítať médiá.</string>
+    <string name="file_is_malformed_or_corrupted">Súbor je poškodený.</string>
+    <string name="exclude_folder_description">Vybrané priečinky aj s ich podpriečinkami budú vylúčené iba z Fossify Galérie. Vylúčené priečinky môžete spravovať v nastaveniach aplikácie.</string>
+    <string name="excluded_activity_placeholder">Vylúčením sa priečinky aj s ich podpriečinkami stávajú neviditeľnými iba pre Fossify Galériu, pre ostatné aplikácie budú stále viditeľné.\n\nAk chcete, aby tieto priečinky neboli viditeľné ani v iných aplikáciách, použite funkciu Skryť.</string>
+    <string name="media_exceeds_device_capabilities">Mediá presahujú schopnosti zariadenia.</string>
+    <string name="unsupported_format">Nepodporovaný formát.</string>
+    <string name="faq_1_title">Ako viem Fossify Galériu nastaviť ako predvolenú galériu v zariadení?</string>
+    <string name="faq_1_text">Najprv vyhľadajte aktuálnu predvolenú galériu v sekcii Aplikácie v nastaveniach zariadenia, stlačte \"Predvolené otváranie\", potom \"Vymazať predvolené predvoľby\". Keď potom budete otvárať obrázok alebo video, zobrazí sa ponuka aplikácií na jeho otvorenie, v ktorej viete vybrať Fossify Galériu ako predvolenú.</string>
+    <string name="faq_5_text">Vylúčenie priečinka zabraňuje zobrazeniu priečinka iba vo Fossify Galérii, ale Skryť funguje v rámci celého zariadenia, takže skryje tieto priečinky aj v iných galériách. Funguje to tak, že sa vytvorí \".nomedia\" súbor v danom priečinku, ktorý sa potom dá tiež zmazať s akoukoľvek aplikáciou na správu súborov. Poznámka: niektoré zariadenia neumožňujú skrytie priečinkov ako Camera, Screenshots a Downloads.</string>
 </resources>

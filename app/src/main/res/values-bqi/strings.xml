@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_launcher_name">شؽوات مال</string>
+    <string name="edit">آلشت</string>
+    <string name="open_camera">گۊشیڌن شؽواتگر</string>
+    <string name="hidden">(بؽڌار)</string>
+    <string name="excluded">(شامل نؽبۊ)</string>
+    <string name="pin_folder">دیسنیڌن دوبلگه</string>
+    <string name="unpin_folder">وورداشتن دیسنیڌن دوبلگه</string>
+    <string name="pin_to_the_top">دیسنیڌن ب روء</string>
+    <string name="all_folders">پوی دوبلگه یل</string>
+    <string name="other_folder">دوبلگه یل دیری</string>
+    <string name="unknown_location">جاگه ن دیاری</string>
+    <string name="volume">هندا دونگ</string>
+    <string name="images">شؽواتا</string>
+    <string name="videos">ویدیویل</string>
+    <string name="gifs">گیفا</string>
+    <string name="add_folder">ٱووردن دوبلگه</string>
+    <string name="width">پئنا</string>
+    <string name="editor">آلشتگر</string>
+    <string name="basic_editor">آلشتگر پایه</string>
+    <string name="advanced_editor">آلشتگر پؽش رئڌه</string>
 </resources>

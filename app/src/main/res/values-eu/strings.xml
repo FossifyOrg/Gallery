@@ -152,7 +152,7 @@
     <string name="screen_rotation_system_setting">Sistemaren ezarpena</string>
     <string name="screen_rotation_device_rotation">Gailu-biratzea</string>
     <string name="screen_rotation_aspect_ratio">Aspektu-erlazioa</string>
-    <string name="black_background_at_fullscreen">Hondo beltza pantaila osoko multimediarekin</string>
+    <string name="black_background_at_fullscreen">Atzeko plano beltza pantaila osoko moduan</string>
     <string name="scroll_thumbnails_horizontally">Korritu iruditxoak horizontalki</string>
     <string name="hide_system_ui_at_fullscreen">Automatikoki ezkutatu sistemaren EI pantaila osoko multimediarekin</string>
     <string name="delete_empty_folders">Ezabatu hutsik dauden karpetak beren edukia ezabatu ondoren</string>
@@ -257,4 +257,9 @@
     <string name="file_is_malformed_or_corrupted">Fitxategia ez da zuzena edo kaltetuta dago.</string>
     <string name="media_exceeds_device_capabilities">Mediek gailuaren ezaugarriak gainditzen dituzte.</string>
     <string name="unsupported_format">Fitxategi ezin da erakutsi.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">"Ziur zaude fitxategi %d  leheneratu nahi duzula?"</item>
+        <item quantity="other">Ziur zaude %d fitxategi leheneratu nahi duzula?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Mantendu pantaila piztuta argazkiak pantaila osoan ikusi bitartean</string>
 </resources>
