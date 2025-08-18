@@ -2,7 +2,7 @@
 #jetbrains
 kotlin = "2.2.0"
 #KSP
-ksp = "2.2.0-2.0.2"
+ksp = "2.2.10-2.0.2"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.27"
