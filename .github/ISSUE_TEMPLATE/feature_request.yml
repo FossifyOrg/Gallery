@@ -33,8 +33,6 @@ body:
       label: Feature description
       description: |
         Explain how you want the app's look or behavior to change to suit your needs.
-        
-        ⚠️ Please **DO NOT** add links to SimpleMobileTools issues as they can be deleted at any time. Instead, copy-paste any useful information manually.
     validations:
       required: true
 
