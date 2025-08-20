@@ -77,9 +77,6 @@ body:
         What did you do for the bug to show up?
 
         If you can't cause the bug to show up again reliably (and hence don't have a proper set of steps to give us), please still try to give as many details as possible on how you think you encountered the bug.
-
-        ⚠️ Please **DO NOT** add links to SimpleMobileTools issues as they can be deleted at any time. Instead, copy-paste any useful information or instructions manually.
-
       placeholder: |
         1. Go to '...'
         2. Click on '....'
