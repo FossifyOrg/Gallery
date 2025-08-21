@@ -1,7 +1,10 @@
 package org.fossify.gallery.activities
 
 import android.content.ClipData
+import android.content.ContentValues
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +15,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.fossify.commons.dialogs.CreateNewFolderDialog
 import org.fossify.commons.dialogs.FilePickerDialog
 import org.fossify.commons.dialogs.RadioGroupDialog
@@ -510,6 +514,9 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
                 R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
                 R.id.settings -> launchSettings()
                 R.id.about -> launchAbout()
+                R.id.recover_from_cache -> ensureBackgroundThread {
+                    exportGlideCache()
+                }
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true
@@ -1747,5 +1754,44 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         arrayListOf<Release>().apply {
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
         }
+    }
+
+    fun exportGlideCache() {
+        val cacheDir = Glide.getPhotoCacheDir(this) ?: return toast("No Glide cache found")
+        val files = cacheDir.listFiles() ?: return toast("No files in Glide cache")
+
+        val resolver = contentResolver
+        val outputDir = "Pictures/Fossify/Recovered from cache"
+
+        toast(
+            "Exporting ${files.size} files from cache"
+        )
+        files.forEachIndexed { idx, f ->
+            val bmp = try {
+                val src = ImageDecoder.createSource(f)
+                ImageDecoder.decodeBitmap(src) { decoder, _, _ ->
+                    decoder.isMutableRequired = false
+                }
+            } catch (_: Throwable) {
+                null
+            }
+
+            if (bmp != null) {
+                val values = ContentValues().apply {
+                    put(Images.Media.DISPLAY_NAME, "cache_preview_$idx.jpg")
+                    put(Images.Media.MIME_TYPE, "image/jpeg")
+                    put(Images.Media.RELATIVE_PATH, outputDir)
+                }
+                val uri = resolver.insert(Images.Media.EXTERNAL_CONTENT_URI, values)
+                if (uri != null) {
+                    resolver.openOutputStream(uri)?.use { out ->
+                        bmp.compress(Bitmap.CompressFormat.JPEG, 100, out)
+                    }
+                }
+                bmp.recycle()
+            }
+        }
+
+        toast("Exported ${files.size} files from cache to $outputDir")
     }
 }

@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="AppCompatResource">
     <item
+        android:id="@+id/recover_from_cache"
+        android:title="Recover from cache"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/open_camera"
         android:icon="@drawable/ic_camera_vector"
         android:title="@string/open_camera"
