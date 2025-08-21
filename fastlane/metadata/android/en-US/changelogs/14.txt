@@ -1,0 +1,9 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed media picker showing only GIFs when both images and videos are requested
+• Fixed volume gesture not working on some devices 
+
