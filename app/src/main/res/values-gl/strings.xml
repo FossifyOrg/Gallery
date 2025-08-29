@@ -255,4 +255,9 @@
     <string name="media_exceeds_device_capabilities">O multimedia supera as capacidades do dispositivo.</string>
     <string name="unsupported_format">Formato non compatible.</string>
     <string name="failed_to_load_media">Fallou a carga do multimedia.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Queres restablecer %d ficheiro?</item>
+        <item quantity="other">Queres restablecer %d ficheiros?</item>
+    </plurals>
+    <string name="keep_screen_on_fullscreen_photos">Manter a pantalla acesa mentras ves fotos a pantalla completa</string>
 </resources>
