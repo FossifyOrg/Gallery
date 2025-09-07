@@ -954,7 +954,6 @@ class EditActivity : SimpleActivity() {
             contentResolver.openFileDescriptor(destination, "rw")?.use { pfd ->
                 val destExif = ExifInterface(pfd.fileDescriptor)
                 source.copyNonDimensionAttributesTo(destExif)
-                destExif.saveAttributes()
             }
         } else {
             val file = File(destination.path!!)
