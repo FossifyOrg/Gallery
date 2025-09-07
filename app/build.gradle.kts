@@ -154,6 +154,7 @@ dependencies {
     implementation(libs.androidx.swiperefreshlayout)
     implementation(libs.awebp)
     implementation(libs.apng)
+    implementation(libs.avif)
     implementation(libs.avif.integration)
     implementation(libs.jxl.integration)
     implementation(libs.okio)

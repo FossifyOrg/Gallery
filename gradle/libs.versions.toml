@@ -20,8 +20,7 @@ gradlePlugins-agp = "8.11.1"
 #Other
 androidGifDrawable = "1.2.29"
 androidImageCropper = "4.6.0"
-apng = "3.0.5"
-awebp = "3.0.5"
+animationAndroid = "3.0.5"
 glideCompiler = "5.0.3"
 zjupureWebpdecoder = "2.7.4.16.0"
 jxlDecoder = "2.3.0.1"
@@ -65,8 +64,9 @@ androidphotofilters = { module = "com.github.naveensingh:androidphotofilters", v
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 sanselan = { module = "org.apache.sanselan:sanselan", version.ref = "sanselan" }
-apng = { module = "com.github.penfeizhou.android.animation:apng", version.ref = "apng" }
-awebp = { module = "com.github.penfeizhou.android.animation:awebp", version.ref = "awebp" }
+apng = { module = "com.github.penfeizhou.android.animation:apng", version.ref = "animationAndroid" }
+awebp = { module = "com.github.penfeizhou.android.animation:awebp", version.ref = "animationAndroid" }
+avif = { module = "com.github.penfeizhou.android.animation:avif", version.ref = "animationAndroid" }
 glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glideCompiler" }
 zjupure-webpdecoder = { module = "com.github.zjupure:webpdecoder", version.ref = "zjupureWebpdecoder" }
 picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }

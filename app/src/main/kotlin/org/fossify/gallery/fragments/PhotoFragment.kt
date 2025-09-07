@@ -44,6 +44,7 @@ import com.davemorrissey.labs.subscaleview.ImageDecoder
 import com.davemorrissey.labs.subscaleview.ImageRegionDecoder
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import com.github.penfeizhou.animation.apng.APNGDrawable
+import com.github.penfeizhou.animation.avif.AVIFDrawable
 import com.github.penfeizhou.animation.webp.WebPDrawable
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
@@ -348,7 +349,9 @@ class PhotoFragment : ViewPagerFragment() {
         super.setMenuVisibility(menuVisible)
         mIsFragmentVisible = menuVisible
         if (mWasInit) {
-            if (!mMedium.isGIF() && !mMedium.isWebP() && !mMedium.isApng()) {
+            val isAnimatedContent =
+                mMedium.isGIF() || mMedium.isApng() || mMedium.isAvif() || mMedium.isWebP()
+            if (isAnimatedContent) {
                 photoFragmentVisibilityChanged(menuVisible)
             }
         }
@@ -419,6 +422,7 @@ class PhotoFragment : ViewPagerFragment() {
                     mMedium.isGIF() -> loadGif()
                     mMedium.isSVG() -> loadSVG()
                     mMedium.isApng() -> loadAPNG()
+                    mMedium.isAvif() -> loadAVIF()
                     else -> loadBitmap()
                 }
             }
@@ -461,6 +465,13 @@ class PhotoFragment : ViewPagerFragment() {
     private fun loadAPNG() {
         if (context != null) {
             val drawable = APNGDrawable.fromFile(mMedium.path)
+            binding.gesturesView.setImageDrawable(drawable)
+        }
+    }
+
+    private fun loadAVIF() {
+        if (context != null) {
+            val drawable = AVIFDrawable.fromFile(mMedium.path)
             binding.gesturesView.setImageDrawable(drawable)
         }
     }

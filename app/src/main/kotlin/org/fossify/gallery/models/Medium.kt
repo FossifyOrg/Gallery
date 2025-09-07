@@ -52,6 +52,8 @@ data class Medium(
 
     fun isApng() = name.isApng()
 
+    fun isAvif() = name.endsWith(".avif", true) // switch to commons extension.
+
     fun isHidden() = name.startsWith('.')
 
     fun isHeic() = name.lowercase(Locale.getDefault()).endsWith(".heic") || name.lowercase(Locale.getDefault()).endsWith(".heif")
