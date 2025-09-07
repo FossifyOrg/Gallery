@@ -1,6 +1,5 @@
 package org.fossify.gallery.activities
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
@@ -50,6 +49,8 @@ import org.fossify.gallery.helpers.*
 import org.fossify.gallery.models.FilterItem
 import java.io.*
 import kotlin.math.max
+import androidx.core.graphics.scale
+import androidx.core.net.toUri
 
 class EditActivity : SimpleActivity() {
     companion object {
@@ -853,6 +854,7 @@ class EditActivity : SimpleActivity() {
                         outputStream?.close()
                     }
 
+                    copyExifToUri(oldExif, saveUri)
                     Intent().apply {
                         data = saveUri
                         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
@@ -932,22 +934,32 @@ class EditActivity : SimpleActivity() {
             toast(org.fossify.commons.R.string.saving)
         }
 
-        if (resizeWidth > 0 && resizeHeight > 0) {
-            val resized = Bitmap.createScaledBitmap(bitmap, resizeWidth, resizeHeight, false)
-            resized.compress(file.absolutePath.getCompressionFormat(), 90, out)
-        } else {
-            bitmap.compress(file.absolutePath.getCompressionFormat(), 90, out)
+        out.use {
+            if (resizeWidth > 0 && resizeHeight > 0) {
+                val resized = bitmap.scale(resizeWidth, resizeHeight, false)
+                resized.compress(file.absolutePath.getCompressionFormat(), 90, out)
+            } else {
+                bitmap.compress(file.absolutePath.getCompressionFormat(), 90, out)
+            }
         }
 
-        try {
-            val newExif = ExifInterface(file.absolutePath)
-            oldExif?.copyNonDimensionAttributesTo(newExif)
-        } catch (e: Exception) {
-        }
-
-        setResult(Activity.RESULT_OK, intent)
+        copyExifToUri(oldExif, file.toUri())
+        setResult(RESULT_OK, intent)
         scanFinalPath(file.absolutePath)
-        out.close()
+    }
+
+    private fun copyExifToUri(source: ExifInterface?, destination: Uri?) {
+        if (source == null || destination == null) return
+        if (destination.scheme == "content") {
+            contentResolver.openFileDescriptor(destination, "rw")?.use { pfd ->
+                val destExif = ExifInterface(pfd.fileDescriptor)
+                source.copyNonDimensionAttributesTo(destExif)
+            }
+        } else {
+            val file = File(destination.path!!)
+            val destExif = ExifInterface(file.absolutePath)
+            source.copyNonDimensionAttributesTo(destExif)
+        }
     }
 
     private fun editWith() {
@@ -959,7 +971,7 @@ class EditActivity : SimpleActivity() {
         val paths = arrayListOf(path)
         rescanPaths(paths) {
             fixDateTaken(paths, false)
-            setResult(Activity.RESULT_OK, intent)
+            setResult(RESULT_OK, intent)
             toast(org.fossify.commons.R.string.file_saved)
             finish()
         }
