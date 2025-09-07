@@ -837,7 +837,7 @@ fun BaseSimpleActivity.launchResizeImageDialog(path: String, callback: (() -> Un
 }
 
 fun BaseSimpleActivity.resizeImage(oldPath: String, newPath: String, size: Point, callback: (success: Boolean) -> Unit) {
-    var oldExif: ExifInterface? = null
+    var oldExif: ExifInterface?
     val inputStream = contentResolver.openInputStream(Uri.fromFile(File(oldPath)))
     oldExif = ExifInterface(inputStream!!)
 
