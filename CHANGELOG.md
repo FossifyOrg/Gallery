@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed zoom in photos ([#642])
 
 ## [1.5.0] - 2025-09-08
 ### Added
@@ -162,6 +164,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#565]: https://github.com/FossifyOrg/Gallery/issues/565
 [#567]: https://github.com/FossifyOrg/Gallery/issues/567
 [#621]: https://github.com/FossifyOrg/Gallery/issues/621
+[#642]: https://github.com/FossifyOrg/Gallery/issues/642
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.5.0...HEAD
 [1.5.0]: https://github.com/FossifyOrg/Gallery/compare/1.4.2...1.5.0
