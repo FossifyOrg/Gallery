@@ -1,0 +1,12 @@
+Added:
+
+• Support for animated AVIF images 
+
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed metadata loss (EXIF) when editing or resizing images 
+
