@@ -5,8 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.5.0] - 2025-09-08
 ### Added
 - Support for animated AVIF images ([#621])
+
+### Changed
+- Updated translations
 
 ### Fixed
 - Fixed metadata loss (EXIF) when editing or resizing images ([#29])
@@ -158,7 +163,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#567]: https://github.com/FossifyOrg/Gallery/issues/567
 [#621]: https://github.com/FossifyOrg/Gallery/issues/621
 
-[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.4.2...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.5.0...HEAD
+[1.5.0]: https://github.com/FossifyOrg/Gallery/compare/1.4.2...1.5.0
 [1.4.2]: https://github.com/FossifyOrg/Gallery/compare/1.4.1...1.4.2
 [1.4.1]: https://github.com/FossifyOrg/Gallery/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/FossifyOrg/Gallery/compare/1.3.1...1.4.0
