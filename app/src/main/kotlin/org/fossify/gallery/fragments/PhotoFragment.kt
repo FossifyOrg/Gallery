@@ -349,9 +349,9 @@ class PhotoFragment : ViewPagerFragment() {
         super.setMenuVisibility(menuVisible)
         mIsFragmentVisible = menuVisible
         if (mWasInit) {
-            val isAnimatedContent =
-                mMedium.isGIF() || mMedium.isApng() || mMedium.isAvif() || mMedium.isWebP()
-            if (isAnimatedContent) {
+            val isNotAnimatedContent =
+                !mMedium.isGIF() && !mMedium.isApng() && !mMedium.isAvif() && !mMedium.isWebP()
+            if (isNotAnimatedContent) {
                 photoFragmentVisibilityChanged(menuVisible)
             }
         }
