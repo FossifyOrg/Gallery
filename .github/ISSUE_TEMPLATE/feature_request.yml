@@ -16,7 +16,7 @@ body:
       options:
         - label: "I made sure that there are **no existing issues** - [open](https://github.com/FossifyOrg/Gallery/issues) or [closed](https://github.com/FossifyOrg/Gallery/issues?q=is%3Aissue+is%3Aclosed) - to which I could contribute my information."
           required: true
-        - label: "I made sure that there are **no existing discussions** - [open](https://github.com/FossifyOrg/Gallery/discussions) or [closed](https://github.com/FossifyOrg/Gallery/discussions?discussions_q=is%3Aclosed) - to which I could contribute my information."
+        - label: "I made sure that there are **no existing discussions** - [open](https://github.com/orgs/FossifyOrg/discussions?discussions_q=is:open+label:gallery) or [closed](https://github.com/orgs/FossifyOrg/discussions?discussions_q=is:closed+label:gallery) - to which I could contribute my information."
           required: true
         - label: "I have read the FAQs inside the app (Menu -> About -> FAQs) and my problem isn't listed."
           required: true
