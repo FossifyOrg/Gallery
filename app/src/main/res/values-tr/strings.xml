@@ -102,7 +102,7 @@
     <string name="flip">Çevir</string>
     <string name="flip_horizontally">Yatay olarak çevir</string>
     <string name="flip_vertically">Dikey olarak çevir</string>
-    <string name="free_aspect_ratio">Ücretsiz</string>
+    <string name="free_aspect_ratio">Serbest</string>
     <string name="other_aspect_ratio">Diğer</string>
     <string name="wallpaper">Duvar kağıdı</string>
     <string name="set_as_wallpaper">Duvar kağıdı olarak ayarla</string>
