@@ -12,7 +12,7 @@ androidx-constraintlayout = "2.2.1"
 #exif
 exif = "1.0.1"
 #Room
-room = "2.7.2"
+room = "2.8.0"
 #Fossify
 commons = "5.0.2"
 #Gradle4
