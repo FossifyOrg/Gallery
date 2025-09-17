@@ -472,6 +472,11 @@ class PhotoFragment : ViewPagerFragment() {
     private fun loadAVIF() {
         if (context != null) {
             val drawable = AVIFDrawable.fromFile(mMedium.path)
+            if (drawable.intrinsicWidth == 0 || drawable.intrinsicHeight == 0) {
+                loadBitmap()
+                return
+            }
+
             binding.gesturesView.setImageDrawable(drawable)
         }
     }
@@ -502,11 +507,14 @@ class PhotoFragment : ViewPagerFragment() {
             .priority(priority)
             .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .fitCenter()
-
-        if (mCurrentRotationDegrees != 0) {
-            options.transform(Rotate(mCurrentRotationDegrees))
-            options.diskCacheStrategy(DiskCacheStrategy.NONE)
-        }
+            .run {
+                if (mCurrentRotationDegrees != 0) {
+                    transform(Rotate(mCurrentRotationDegrees))
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                } else {
+                    this
+                }
+            }
 
         Glide.with(requireContext())
             .load(path)
