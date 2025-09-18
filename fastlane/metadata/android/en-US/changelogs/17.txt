@@ -1,0 +1,8 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed black screen when viewing edited AVIF images 
+
