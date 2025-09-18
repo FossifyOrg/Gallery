@@ -4,8 +4,8 @@
     <string name="edit">Уреди</string>
     <string name="open_camera">Отвори камеру</string>
     <string name="hidden">(скривено)</string>
-    <string name="pin_folder">Прикачи фасциклу</string>
-    <string name="unpin_folder">Раскачи фасциклу</string>
+    <string name="pin_folder">Закачи фасциклу</string>
+    <string name="unpin_folder">Откачи фасциклу</string>
     <string name="pin_to_the_top">Закачи на врх</string>
     <string name="show_all">Прикажи садржај свих фасцикли</string>
     <string name="all_folders">Све фасцикле</string>
@@ -13,19 +13,19 @@
     <string name="other_folder">Друга фасцикла</string>
     <string name="show_on_map">Прикажи на мапи</string>
     <string name="unknown_location">Непозната локација</string>
-    <string name="volume">Волуме</string>
+    <string name="volume">Гласноћа</string>
     <string name="brightness">Осветљење</string>
     <string name="lock_orientation">Закључај оријентацију</string>
     <string name="unlock_orientation">Откључај оријентацију</string>
     <string name="change_orientation">Измени оријентацију</string>
     <string name="force_portrait">Форсирај портрет</string>
     <string name="force_landscape">Форсирај пејзаж</string>
-    <string name="use_default_orientation">Користи подразумевајућу оријентацију</string>
+    <string name="use_default_orientation">Користи подразумевану оријентацију</string>
     <string name="fix_date_taken">Поправи вредност за датум креирања</string>
     <string name="fixing">Исправљам…</string>
     <string name="dates_fixed_successfully">Датуми успешно исправљени</string>
-    <string name="no_date_takens_found">Нису пронађене вредности датума узимања</string>
-    <string name="share_resized">Подели верзију са промењеним димензијама</string>
+    <string name="no_date_takens_found">Нису пронађене вредности датума снимања</string>
+    <string name="share_resized">Подели верзију са промењеном величином</string>
     <string name="switch_to_file_search">Пребаците се на претрагу датотека у свим видљивим фасциклама</string>
     <string name="set_as_default_folder">Постави као подразумевани фолдер</string>
     <string name="unset_as_default_folder">Поништи као подразумевани фолдер</string>
@@ -153,7 +153,7 @@
     <string name="show_highest_quality">Прикажи слике у највећем могућем квалитету</string>
     <string name="show_recycle_bin_last">Прикажи канту за отпатке као задњу ставку на главном екрану</string>
     <string name="allow_down_gesture">Дозволи затварање приказа преко целог екрана са покретом на доле</string>
-    <string name="allow_one_to_one_zoom">Дозволи 1:1 зумирање са два дводупла притиска на екран</string>
+    <string name="allow_one_to_one_zoom">Дозволи 1:1 зумирање са два двострука додира на екран</string>
     <string name="open_videos_on_separate_screen">Увек отварај видео снимке наз асебном екрану са новим хоризонталним гестикулацијама</string>
     <string name="show_notch">Прикажи исечак уколико је доступан</string>
     <string name="allow_rotating_gestures">Дозволи ротацију слика гестикулацијама</string>
@@ -194,7 +194,7 @@
     <string name="faq_3_title">Како да подесим да се неки албум увек појављује на врху\?</string>
     <string name="faq_3_text">Дуго притисните на жељени албум и изаберите Закачи икону у менију за акције, то ће га поставити на врх. Можете да закачите више фасцикли истовремено, с тим што ће бити сортирани према подразумевајућем методу за сортирање.</string>
     <string name="faq_4_title">Како да премотавам видео снимке\?</string>
-    <string name="faq_4_text">То можете да урадите тако што ћете двапут куцнути на бочну страну екрана или куцнути текст тренутног или максималног трајања близу траке за претрагу. Ако омогућите отварање видео записа на посебном екрану у подешавањима апликације, можете да користите и хоризонталне покрете.</string>
+    <string name="faq_4_text">То можете да урадите тако што ћете двапут додирнути бочну страну екрана или куцнути текст тренутног или максималног трајања близу траке за претрагу. Ако омогућите отварање видео записа на посебном екрану у подешавањима апликације, можете да користите и хоризонталне покрете.</string>
     <string name="faq_5_title">Која је разлика између скривања и изузимања фасцикле\?</string>
     <string name="faq_6_title">Зашто се фасцикле са сликама музичких извођача или налепницама приказују\?</string>
     <string name="faq_6_text">Може се десити да се приказују неки необични албуми. Можете их лако изузети дугим притиском, а затим одабиром Изузми. У следећем дијалогу можете изабрати фасциклу родитеља, шансе су да ће спречити све остале албуме од приказивања.</string>
@@ -221,4 +221,25 @@
     <string name="faq_17_text">То је престало да ради због системских промена које су стигле и са Андроид 11, апликација више не може да прегледа праве фасцикле, ослања се на такозвани МедиаСторе при преношењу података.</string>
     <string name="faq_18_title">Зашто видим огласе током репродукције видео записа\?</string>
     <string name="faq_18_text">Наше апликације немају никакве огласе. Ако их видите током репродукције видео записа, сигурно користите неки други видео плејер апликација. Покушајте да пронађете подразумевани видео плејер у поставкама уређаја, а затим на њему урадите \"Обриши подразумеване вредности\". Када се следећи пут позовете на неку намеру видео записа видећете одзивник за одабирач апликација, где можете да изаберете коју апликацију желите да користите.</string>
+    <string name="excluded">(изузето)</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Да ли сте сигурни да желите да вратите %d фајл?</item>
+        <item quantity="few">Да ли сте сигурни да желите да вратите %d фајла?</item>
+        <item quantity="other">Да ли сте сигурни да желите да вратите %d фајлова?</item>
+    </plurals>
+    <string name="exclude_folder_description">Ово ће изузети одабир и његове подфасцикле само из Fossify Gallery-а. Изузетим фасциклама можете управљати у Подешавањима.</string>
+    <string name="full_storage_permission_required">Fossify Gallery мора да има потпун приступ да би приказала све ваше слике и видео снимке. Идите у Подешавања &gt; Дозволе &gt; Слике и видео снимци &gt; Дозволи све.</string>
+    <string name="paths_imported_successfully">Путање су успешно увезене</string>
+    <string name="no_animation">Нема</string>
+    <string name="media_exceeds_device_capabilities">Овај фајл премашује могућности уређаја.</string>
+    <string name="keep_screen_on_fullscreen_photos">Одржавај екран укључен док гледате фотографије преко целог екрана</string>
+    <string name="images_resized_successfully">Слике су успешно промениле величине</string>
+    <string name="resize_factor">Коефицијент промене величине</string>
+    <string name="hidden_all_files">Морате апликацији дозволити приступ Свим Фајловима да бисте видели скривене фајлове, иначе неће радити.</string>
+    <string name="resize_factor_info">Промените величину слика на одређен постотак, вредност мора бити између 10 и 90.</string>
+    <plurals name="failed_to_resize_images">
+        <item quantity="one">Неуспешна промена величине %d слике</item>
+        <item quantity="few">Неуспешна промена величине %d слике</item>
+        <item quantity="other">Неуспешна промена величине %d слика</item>
+    </plurals>
 </resources>
