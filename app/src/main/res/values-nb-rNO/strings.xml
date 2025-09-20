@@ -210,4 +210,13 @@
 \n
 \nHvis du vil skjule dem fra andre apper også, bruk Skjul-funksjonen.</string>
     <string name="exclude_folder_description">Dette vil ekskludere valgte sammen med undermapper, bare fra Fossify Gallery. Ekskluderte mapper kan håndteres i Innstillinger.</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Er du sikker på du vil gjenopprette %d fil?</item>
+        <item quantity="other">Er du sikker på du vil gjenopprette %d filer?</item>
+    </plurals>
+    <string name="playback_speed">Avspillingshastighet</string>
+    <string name="unsupported_format">Ikke-støttet format.</string>
+    <string name="keep_screen_on_fullscreen_photos">Hold skjermen på ved visning av bilder i fullskjermmodus</string>
+    <string name="full_storage_permission_required">Fossify Gallery trenger full tilgang for å vise alle dine bilder og videoer. Gå til Innstillinger &gt; Tillatelser &gt; Bilder og videoer &gt; Tillat alle.</string>
+    <string name="wallpaper">Bakgrunnsbilde</string>
 </resources>
