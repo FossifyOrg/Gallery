@@ -732,9 +732,10 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     private fun getChangeOrientationIcon(): Int {
         return if (mIsOrientationLocked) {
-            when (requestedOrientation) {
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT -> org.fossify.commons.R.drawable.ic_orientation_portrait_vector
-                else -> org.fossify.commons.R.drawable.ic_orientation_landscape_vector
+            if (requestedOrientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+                org.fossify.commons.R.drawable.ic_orientation_portrait_vector
+            } else {
+                org.fossify.commons.R.drawable.ic_orientation_landscape_vector
             }
         } else {
             org.fossify.commons.R.drawable.ic_orientation_auto_vector
