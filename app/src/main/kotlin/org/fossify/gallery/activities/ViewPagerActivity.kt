@@ -734,8 +734,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         return if (mIsOrientationLocked) {
             when (requestedOrientation) {
                 ActivityInfo.SCREEN_ORIENTATION_PORTRAIT -> org.fossify.commons.R.drawable.ic_orientation_portrait_vector
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE -> org.fossify.commons.R.drawable.ic_orientation_landscape_vector
-                ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE -> org.fossify.commons.R.drawable.ic_orientation_landscape_vector
                 else -> org.fossify.commons.R.drawable.ic_orientation_landscape_vector
             }
         } else {
