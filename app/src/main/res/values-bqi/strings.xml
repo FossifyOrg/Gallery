@@ -20,4 +20,18 @@
     <string name="editor">آلشتگر</string>
     <string name="basic_editor">آلشتگر پایه</string>
     <string name="advanced_editor">آلشتگر پؽش رئڌه</string>
+    <string name="show_all">نشووݩ داڌن موئتویات پوی دوبلگه یل</string>
+    <string name="folder_view">آلشت و نما دوبلگه یل</string>
+    <string name="show_on_map">نشووݩ داڌن ری نشقه</string>
+    <string name="brightness">رۊشنایی</string>
+    <string name="lock_orientation">چفت لر خردن</string>
+    <string name="unlock_orientation">وورداشتن چفت لر خردن</string>
+    <string name="change_orientation">آلشت راستا</string>
+    <string name="force_portrait">مجبۊر کردن و عمۊدی</string>
+    <string name="force_landscape">مجبۊر کردن و اوفوقی</string>
+    <string name="use_default_orientation">و کار گرؽڌن راستا پؽش فرز</string>
+    <string name="fix_date_taken">رفع ویرگار شؽوات وورداری</string>
+    <string name="fixing">هونی رفع ابۊ…</string>
+    <string name="dates_fixed_successfully">ویرگارا و خۊوی رفع وابین</string>
+    <string name="no_date_takens_found">ویرگار شؽوات وورداری نجۊرست</string>
 </resources>
