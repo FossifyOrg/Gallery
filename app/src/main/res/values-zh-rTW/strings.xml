@@ -214,7 +214,7 @@
     <string name="faq_3_text">長按該相簿，接著按圖釘圖示或選單中的「釘選在頂端」。您可以同時釘選數個相簿，它們將會依照預設排序方式排序。</string>
     <string name="faq_4_title">如何快轉影片？</string>
     <string name="faq_4_text">按兩下螢幕邊邊，或者按一下進度條旁邊的目前播放時間／影片時長文字。若您在設定中啟用了「總是用新的水平手勢在獨立畫面開啟影片」，則您也可以使用水平手勢快轉。</string>
-    <string name="faq_5_title">「隱藏」與「排除」資料夾的差別是？</string>
+    <string name="faq_5_title">「隱藏」與「排除」資料夾之間有什麼差別？</string>
     <string name="faq_6_title">為何出現了音樂的封面圖或是貼圖的資料夾？</string>
     <string name="faq_6_text">有時候會出現一些異常的相簿。長按並點選排除可排除它們，在接下來的對話框選擇它們的上層資料夾的話，有機會避免相關的相簿出現。</string>
     <string name="faq_7_title">有個含有圖片的資料夾沒出現，抑或是沒有顯示所有項目時，該怎麼辦？</string>
