@@ -196,7 +196,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                 findItem(R.id.menu_restore_file).isVisible = currentMedium.path.startsWith(recycleBinPath)
                 findItem(R.id.menu_create_shortcut).isVisible = true
                 findItem(R.id.menu_change_orientation).isVisible = rotationDegrees == 0 && visibleBottomActions and BOTTOM_ACTION_CHANGE_ORIENTATION == 0
-                findItem(R.id.menu_change_orientation).icon = resources.getDrawable(getChangeOrientationIcon())
                 findItem(R.id.menu_rotate).setShowAsAction(
                     if (rotationDegrees != 0) {
                         MenuItem.SHOW_AS_ACTION_ALWAYS
@@ -248,7 +247,8 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                 R.id.menu_remove_from_favorites -> toggleFavorite()
                 R.id.menu_restore_file -> restoreFile()
                 R.id.menu_force_portrait -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-                R.id.menu_force_landscape -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+                R.id.menu_force_landscape_left -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+                R.id.menu_force_landscape_right -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE)
                 R.id.menu_default_orientation -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
                 R.id.menu_save_as -> saveImageAs()
                 R.id.menu_create_shortcut -> createShortcut()
@@ -732,10 +732,11 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     private fun getChangeOrientationIcon(): Int {
         return if (mIsOrientationLocked) {
-            if (requestedOrientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
-                org.fossify.commons.R.drawable.ic_orientation_portrait_vector
-            } else {
-                org.fossify.commons.R.drawable.ic_orientation_landscape_vector
+            when (requestedOrientation) {
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT -> org.fossify.commons.R.drawable.ic_orientation_portrait_vector
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE -> org.fossify.commons.R.drawable.ic_orientation_landscape_vector
+                ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE -> org.fossify.commons.R.drawable.ic_orientation_landscape_vector
+                else -> org.fossify.commons.R.drawable.ic_orientation_landscape_vector
             }
         } else {
             org.fossify.commons.R.drawable.ic_orientation_auto_vector
@@ -884,7 +885,8 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         binding.bottomActions.bottomChangeOrientation.setOnClickListener {
             requestedOrientation = when (requestedOrientation) {
                 ActivityInfo.SCREEN_ORIENTATION_PORTRAIT -> ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE -> ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE -> ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
+                ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE -> ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
                 else -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
             }
             mIsOrientationLocked = requestedOrientation != ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED

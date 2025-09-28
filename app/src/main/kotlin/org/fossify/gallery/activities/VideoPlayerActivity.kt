@@ -193,7 +193,10 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         updateMenuItemColors(binding.videoToolbar.menu, forceWhiteIcons = true)
         binding.videoToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.menu_change_orientation -> changeOrientation()
+                R.id.menu_force_portrait -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+                R.id.menu_force_landscape_left -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+                R.id.menu_force_landscape_right -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE)
+                R.id.menu_default_orientation -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
                 R.id.menu_open_with -> openPath(mUri!!.toString(), true)
                 R.id.menu_share -> shareMediumPath(mUri!!.toString())
                 else -> return@setOnMenuItemClickListener false
@@ -586,14 +589,9 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         }
     }
 
-    private fun changeOrientation() {
-        mIsOrientationLocked = true
-        requestedOrientation =
-            if (resources.configuration.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-            } else {
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-            }
+    private fun toggleOrientation(orientation: Int) {
+        mIsOrientationLocked = orientation != ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        requestedOrientation = orientation
     }
 
     private fun toggleFullscreen() {
