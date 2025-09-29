@@ -264,4 +264,5 @@
         <item quantity="many">An bhfuil tú cinnte gur mian leat %d comhaid a athchóiriú?</item>
         <item quantity="other">An bhfuil tú cinnte gur mian leat %d comhaid a athchóiriú?</item>
     </plurals>
+    <string name="force_landscape_reverse">Tírdhreach fórsaithe (droim ar ais)</string>
 </resources>
