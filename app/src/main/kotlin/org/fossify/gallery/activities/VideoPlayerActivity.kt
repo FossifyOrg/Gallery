@@ -2,7 +2,11 @@ package org.fossify.gallery.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.ActivityInfo
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.Point
@@ -193,7 +197,10 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         updateMenuItemColors(binding.videoToolbar.menu, forceWhiteIcons = true)
         binding.videoToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.menu_change_orientation -> changeOrientation()
+                R.id.menu_force_portrait -> toggleOrientation(SCREEN_ORIENTATION_PORTRAIT)
+                R.id.menu_force_landscape -> toggleOrientation(SCREEN_ORIENTATION_LANDSCAPE)
+                R.id.menu_force_landscape_reverse -> toggleOrientation(SCREEN_ORIENTATION_REVERSE_LANDSCAPE)
+                R.id.menu_default_orientation -> toggleOrientation(SCREEN_ORIENTATION_UNSPECIFIED)
                 R.id.menu_open_with -> openPath(mUri!!.toString(), true)
                 R.id.menu_share -> shareMediumPath(mUri!!.toString())
                 else -> return@setOnMenuItemClickListener false
@@ -227,9 +234,9 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private fun setupOrientation() {
         if (!mIsOrientationLocked) {
             if (config.screenRotation == ROTATE_BY_DEVICE_ROTATION) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
+                requestedOrientation = SCREEN_ORIENTATION_SENSOR
             } else if (config.screenRotation == ROTATE_BY_SYSTEM_SETTING) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                requestedOrientation = SCREEN_ORIENTATION_UNSPECIFIED
             }
         }
     }
@@ -579,21 +586,16 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
 
         if (config.screenRotation == ROTATE_BY_ASPECT_RATIO) {
             if (mVideoSize.x > mVideoSize.y) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+                requestedOrientation = SCREEN_ORIENTATION_LANDSCAPE
             } else if (mVideoSize.x < mVideoSize.y) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+                requestedOrientation = SCREEN_ORIENTATION_PORTRAIT
             }
         }
     }
 
-    private fun changeOrientation() {
-        mIsOrientationLocked = true
-        requestedOrientation =
-            if (resources.configuration.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-            } else {
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-            }
+    private fun toggleOrientation(orientation: Int) {
+        mIsOrientationLocked = orientation != SCREEN_ORIENTATION_UNSPECIFIED
+        requestedOrientation = orientation
     }
 
     private fun toggleFullscreen() {

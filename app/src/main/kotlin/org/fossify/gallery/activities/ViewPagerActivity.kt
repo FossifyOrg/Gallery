@@ -8,7 +8,11 @@ import android.content.ActivityNotFoundException
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
-import android.content.pm.ActivityInfo
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
 import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.content.res.Configuration
@@ -36,8 +40,62 @@ import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import org.fossify.commons.dialogs.PropertiesDialog
 import org.fossify.commons.dialogs.RenameItemDialog
-import org.fossify.commons.extensions.*
-import org.fossify.commons.helpers.*
+import org.fossify.commons.extensions.actionBarHeight
+import org.fossify.commons.extensions.applyColorFilter
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.convertToBitmap
+import org.fossify.commons.extensions.formatSize
+import org.fossify.commons.extensions.getColoredDrawableWithColor
+import org.fossify.commons.extensions.getDataColumn
+import org.fossify.commons.extensions.getDoesFilePathExist
+import org.fossify.commons.extensions.getDuration
+import org.fossify.commons.extensions.getFilenameFromPath
+import org.fossify.commons.extensions.getFinalUriFromPath
+import org.fossify.commons.extensions.getImageResolution
+import org.fossify.commons.extensions.getIsPathDirectory
+import org.fossify.commons.extensions.getParentPath
+import org.fossify.commons.extensions.getProperBackgroundColor
+import org.fossify.commons.extensions.getResolution
+import org.fossify.commons.extensions.getUriMimeType
+import org.fossify.commons.extensions.handleDeletePasswordProtection
+import org.fossify.commons.extensions.handleLockedFolderOpening
+import org.fossify.commons.extensions.hasPermission
+import org.fossify.commons.extensions.hideKeyboard
+import org.fossify.commons.extensions.internalStoragePath
+import org.fossify.commons.extensions.isAStorageRootFolder
+import org.fossify.commons.extensions.isExternalStorageManager
+import org.fossify.commons.extensions.isGif
+import org.fossify.commons.extensions.isMediaFile
+import org.fossify.commons.extensions.isPortrait
+import org.fossify.commons.extensions.isRawFast
+import org.fossify.commons.extensions.isSvg
+import org.fossify.commons.extensions.isVideoFast
+import org.fossify.commons.extensions.navigationBarHeight
+import org.fossify.commons.extensions.navigationBarOnSide
+import org.fossify.commons.extensions.navigationBarWidth
+import org.fossify.commons.extensions.needsStupidWritePermissions
+import org.fossify.commons.extensions.onGlobalLayout
+import org.fossify.commons.extensions.portrait
+import org.fossify.commons.extensions.recycleBinPath
+import org.fossify.commons.extensions.rescanPaths
+import org.fossify.commons.extensions.scanPathRecursively
+import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.statusBarHeight
+import org.fossify.commons.extensions.toast
+import org.fossify.commons.extensions.tryGenericMimeType
+import org.fossify.commons.extensions.viewBinding
+import org.fossify.commons.helpers.FAVORITES
+import org.fossify.commons.helpers.IS_FROM_GALLERY
+import org.fossify.commons.helpers.NOMEDIA
+import org.fossify.commons.helpers.REAL_FILE_PATH
+import org.fossify.commons.helpers.REQUEST_EDIT_IMAGE
+import org.fossify.commons.helpers.REQUEST_SET_AS
+import org.fossify.commons.helpers.SORT_BY_RANDOM
+import org.fossify.commons.helpers.ensureBackgroundThread
+import org.fossify.commons.helpers.isRPlus
+import org.fossify.commons.helpers.isUpsideDownCakePlus
 import org.fossify.commons.models.FileDirItem
 import org.fossify.gallery.BuildConfig
 import org.fossify.gallery.R
@@ -47,11 +105,84 @@ import org.fossify.gallery.databinding.ActivityMediumBinding
 import org.fossify.gallery.dialogs.DeleteWithRememberDialog
 import org.fossify.gallery.dialogs.SaveAsDialog
 import org.fossify.gallery.dialogs.SlideshowDialog
-import org.fossify.gallery.extensions.*
+import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.favoritesDB
+import org.fossify.gallery.extensions.fixDateTaken
+import org.fossify.gallery.extensions.getFavoritePaths
+import org.fossify.gallery.extensions.getShortcutImage
+import org.fossify.gallery.extensions.handleMediaManagementPrompt
+import org.fossify.gallery.extensions.hideSystemUI
+import org.fossify.gallery.extensions.isDownloadsFolder
+import org.fossify.gallery.extensions.launchResizeImageDialog
+import org.fossify.gallery.extensions.launchSettings
+import org.fossify.gallery.extensions.mediaDB
+import org.fossify.gallery.extensions.movePathsInRecycleBin
+import org.fossify.gallery.extensions.openEditor
+import org.fossify.gallery.extensions.openPath
+import org.fossify.gallery.extensions.restoreRecycleBinPath
+import org.fossify.gallery.extensions.saveRotatedImageToFile
+import org.fossify.gallery.extensions.setAs
+import org.fossify.gallery.extensions.shareMediumPath
+import org.fossify.gallery.extensions.showFileOnMap
+import org.fossify.gallery.extensions.showSystemUI
+import org.fossify.gallery.extensions.toggleFileVisibility
+import org.fossify.gallery.extensions.tryCopyMoveFilesTo
+import org.fossify.gallery.extensions.tryDeleteFileDirItem
+import org.fossify.gallery.extensions.updateDBMediaPath
+import org.fossify.gallery.extensions.updateFavorite
+import org.fossify.gallery.extensions.updateFavoritePaths
 import org.fossify.gallery.fragments.PhotoFragment
 import org.fossify.gallery.fragments.VideoFragment
 import org.fossify.gallery.fragments.ViewPagerFragment
-import org.fossify.gallery.helpers.*
+import org.fossify.gallery.helpers.BOTTOM_ACTION_CHANGE_ORIENTATION
+import org.fossify.gallery.helpers.BOTTOM_ACTION_COPY
+import org.fossify.gallery.helpers.BOTTOM_ACTION_DELETE
+import org.fossify.gallery.helpers.BOTTOM_ACTION_EDIT
+import org.fossify.gallery.helpers.BOTTOM_ACTION_MOVE
+import org.fossify.gallery.helpers.BOTTOM_ACTION_PROPERTIES
+import org.fossify.gallery.helpers.BOTTOM_ACTION_RENAME
+import org.fossify.gallery.helpers.BOTTOM_ACTION_RESIZE
+import org.fossify.gallery.helpers.BOTTOM_ACTION_ROTATE
+import org.fossify.gallery.helpers.BOTTOM_ACTION_SET_AS
+import org.fossify.gallery.helpers.BOTTOM_ACTION_SHARE
+import org.fossify.gallery.helpers.BOTTOM_ACTION_SHOW_ON_MAP
+import org.fossify.gallery.helpers.BOTTOM_ACTION_SLIDESHOW
+import org.fossify.gallery.helpers.BOTTOM_ACTION_TOGGLE_FAVORITE
+import org.fossify.gallery.helpers.BOTTOM_ACTION_TOGGLE_VISIBILITY
+import org.fossify.gallery.helpers.ColorModeHelper
+import org.fossify.gallery.helpers.DefaultPageTransformer
+import org.fossify.gallery.helpers.FadePageTransformer
+import org.fossify.gallery.helpers.GO_TO_NEXT_ITEM
+import org.fossify.gallery.helpers.GO_TO_PREV_ITEM
+import org.fossify.gallery.helpers.HIDE_SYSTEM_UI_DELAY
+import org.fossify.gallery.helpers.IS_VIEW_INTENT
+import org.fossify.gallery.helpers.MAX_PRINT_SIDE_SIZE
+import org.fossify.gallery.helpers.PATH
+import org.fossify.gallery.helpers.PORTRAIT_PATH
+import org.fossify.gallery.helpers.RECYCLE_BIN
+import org.fossify.gallery.helpers.ROTATE_BY_ASPECT_RATIO
+import org.fossify.gallery.helpers.ROTATE_BY_DEVICE_ROTATION
+import org.fossify.gallery.helpers.ROTATE_BY_SYSTEM_SETTING
+import org.fossify.gallery.helpers.SHOW_ALL
+import org.fossify.gallery.helpers.SHOW_FAVORITES
+import org.fossify.gallery.helpers.SHOW_NEXT_ITEM
+import org.fossify.gallery.helpers.SHOW_PREV_ITEM
+import org.fossify.gallery.helpers.SHOW_RECYCLE_BIN
+import org.fossify.gallery.helpers.SKIP_AUTHENTICATION
+import org.fossify.gallery.helpers.SLIDESHOW_ANIMATION_FADE
+import org.fossify.gallery.helpers.SLIDESHOW_ANIMATION_NONE
+import org.fossify.gallery.helpers.SLIDESHOW_ANIMATION_SLIDE
+import org.fossify.gallery.helpers.SLIDESHOW_DEFAULT_INTERVAL
+import org.fossify.gallery.helpers.SLIDESHOW_FADE_DURATION
+import org.fossify.gallery.helpers.SLIDESHOW_SLIDE_DURATION
+import org.fossify.gallery.helpers.SLIDESHOW_START_ON_ENTER
+import org.fossify.gallery.helpers.TYPE_GIFS
+import org.fossify.gallery.helpers.TYPE_IMAGES
+import org.fossify.gallery.helpers.TYPE_PORTRAITS
+import org.fossify.gallery.helpers.TYPE_RAWS
+import org.fossify.gallery.helpers.TYPE_SVGS
+import org.fossify.gallery.helpers.TYPE_VIDEOS
+import org.fossify.gallery.helpers.getPermissionToRequest
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.models.ThumbnailItem
 import java.io.File
@@ -196,7 +327,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                 findItem(R.id.menu_restore_file).isVisible = currentMedium.path.startsWith(recycleBinPath)
                 findItem(R.id.menu_create_shortcut).isVisible = true
                 findItem(R.id.menu_change_orientation).isVisible = rotationDegrees == 0 && visibleBottomActions and BOTTOM_ACTION_CHANGE_ORIENTATION == 0
-                findItem(R.id.menu_change_orientation).icon = resources.getDrawable(getChangeOrientationIcon())
                 findItem(R.id.menu_rotate).setShowAsAction(
                     if (rotationDegrees != 0) {
                         MenuItem.SHOW_AS_ACTION_ALWAYS
@@ -247,9 +377,10 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                 R.id.menu_add_to_favorites -> toggleFavorite()
                 R.id.menu_remove_from_favorites -> toggleFavorite()
                 R.id.menu_restore_file -> restoreFile()
-                R.id.menu_force_portrait -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-                R.id.menu_force_landscape -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
-                R.id.menu_default_orientation -> toggleOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
+                R.id.menu_force_portrait -> toggleOrientation(SCREEN_ORIENTATION_PORTRAIT)
+                R.id.menu_force_landscape -> toggleOrientation(SCREEN_ORIENTATION_LANDSCAPE)
+                R.id.menu_force_landscape_reverse -> toggleOrientation(SCREEN_ORIENTATION_REVERSE_LANDSCAPE)
+                R.id.menu_default_orientation -> toggleOrientation(SCREEN_ORIENTATION_UNSPECIFIED)
                 R.id.menu_save_as -> saveImageAs()
                 R.id.menu_create_shortcut -> createShortcut()
                 R.id.menu_resize -> resizeImage()
@@ -460,9 +591,9 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
     private fun setupOrientation() {
         if (!mIsOrientationLocked) {
             if (config.screenRotation == ROTATE_BY_DEVICE_ROTATION) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
+                requestedOrientation = SCREEN_ORIENTATION_SENSOR
             } else if (config.screenRotation == ROTATE_BY_SYSTEM_SETTING) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                requestedOrientation = SCREEN_ORIENTATION_UNSPECIFIED
             }
         }
     }
@@ -726,13 +857,13 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     private fun toggleOrientation(orientation: Int) {
         requestedOrientation = orientation
-        mIsOrientationLocked = orientation != ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        mIsOrientationLocked = orientation != SCREEN_ORIENTATION_UNSPECIFIED
         refreshMenuItems()
     }
 
     private fun getChangeOrientationIcon(): Int {
         return if (mIsOrientationLocked) {
-            if (requestedOrientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+            if (requestedOrientation == SCREEN_ORIENTATION_PORTRAIT) {
                 org.fossify.commons.R.drawable.ic_orientation_portrait_vector
             } else {
                 org.fossify.commons.R.drawable.ic_orientation_landscape_vector
@@ -883,11 +1014,12 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         binding.bottomActions.bottomChangeOrientation.setOnLongClickListener { toast(R.string.change_orientation); true }
         binding.bottomActions.bottomChangeOrientation.setOnClickListener {
             requestedOrientation = when (requestedOrientation) {
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT -> ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE -> ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
-                else -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+                SCREEN_ORIENTATION_PORTRAIT -> SCREEN_ORIENTATION_LANDSCAPE
+                SCREEN_ORIENTATION_LANDSCAPE -> SCREEN_ORIENTATION_REVERSE_LANDSCAPE
+                SCREEN_ORIENTATION_REVERSE_LANDSCAPE -> SCREEN_ORIENTATION_UNSPECIFIED
+                else -> SCREEN_ORIENTATION_PORTRAIT
             }
-            mIsOrientationLocked = requestedOrientation != ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+            mIsOrientationLocked = requestedOrientation != SCREEN_ORIENTATION_UNSPECIFIED
             updateBottomActionIcons(currentMedium)
         }
 
@@ -988,7 +1120,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
     private fun sendPrintIntent(path: String) {
         val printHelper = PrintHelper(this)
         printHelper.scaleMode = PrintHelper.SCALE_MODE_FIT
-        printHelper.orientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        printHelper.orientation = SCREEN_ORIENTATION_PORTRAIT
 
         try {
             val resolution = path.getImageResolution(this)
@@ -1306,9 +1438,9 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
             val width = if (flipSides) resolution.y else resolution.x
             val height = if (flipSides) resolution.x else resolution.y
             if (width > height) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+                requestedOrientation = SCREEN_ORIENTATION_LANDSCAPE
             } else if (width < height) {
-                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+                requestedOrientation = SCREEN_ORIENTATION_PORTRAIT
             }
         }
     }

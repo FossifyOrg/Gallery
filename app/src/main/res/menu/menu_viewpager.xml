@@ -108,9 +108,8 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/menu_change_orientation"
-        android:icon="@drawable/ic_orientation_auto_vector"
         android:title="@string/change_orientation"
-        app:showAsAction="ifRoom">
+        app:showAsAction="never">
         <menu>
             <item
                 android:id="@+id/menu_force_portrait"
@@ -118,6 +117,9 @@
             <item
                 android:id="@+id/menu_force_landscape"
                 android:title="@string/force_landscape" />
+            <item
+                android:id="@+id/menu_force_landscape_reverse"
+                android:title="@string/force_landscape_reverse" />
             <item
                 android:id="@+id/menu_default_orientation"
                 android:title="@string/use_default_orientation" />
