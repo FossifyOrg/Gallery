@@ -262,4 +262,5 @@
         <item quantity="other">%d dosyayı geri yüklemek istediğinize emin misiniz?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Tam ekran fotoğraflara bakarken ekranı açık tut</string>
+    <string name="force_landscape_reverse">Yataya zorla (ters)</string>
 </resources>
