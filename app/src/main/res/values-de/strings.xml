@@ -13,15 +13,15 @@
     <string name="folder_view">Ansicht: Als Ordner</string>
     <string name="other_folder">Ordnerwahl</string>
     <string name="show_on_map">Auf Karte zeigen</string>
-    <string name="unknown_location">Adresse nicht bekannt</string>
+    <string name="unknown_location">Unbekannter Ort</string>
     <string name="volume">Lautstärke</string>
     <string name="brightness">Helligkeit</string>
     <string name="lock_orientation">Bildausrichtung sperren</string>
     <string name="unlock_orientation">Bildausrichtung entsperren</string>
     <string name="change_orientation">Bildausrichtung ändern</string>
-    <string name="force_portrait">Bildausrichtung im Hochformat</string>
-    <string name="force_landscape">Bildausrichtung im Querformat</string>
-    <string name="use_default_orientation">Automatische Bildausrichtung</string>
+    <string name="force_portrait">Hochformat erzwingen</string>
+    <string name="force_landscape">Querformat erzwingen</string>
+    <string name="use_default_orientation">Standardausrichtung verwenden</string>
     <string name="fix_date_taken">Aufnahmedatum korrigieren</string>
     <string name="fixing">Korrigieren …</string>
     <string name="dates_fixed_successfully">Datum erfolgreich korrigiert</string>
@@ -258,4 +258,5 @@
         <item quantity="one">Soll wirklich %d Datei wiederhergestellt werden?</item>
         <item quantity="other">Sollen wirklich %d Dateien wiederhergestellt werden?</item>
     </plurals>
+    <string name="force_landscape_reverse">Querformat erzwingen (umgekehrt)</string>
 </resources>
