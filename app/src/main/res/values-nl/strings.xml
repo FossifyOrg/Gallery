@@ -262,4 +262,5 @@
         <item quantity="one">%d bestand herstellen?</item>
         <item quantity="other">%d bestanden herstellen?</item>
     </plurals>
+    <string name="force_landscape_reverse">Landschapsmodus forceren (omgedraaid)</string>
 </resources>
