@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Added separate "Force landscape (left)" and "Force landscape (right)" options ([#630])
+- Added a "Force landscape (reverse)" orientation option ([#630])
 
 ## [1.5.2] - 2025-09-22
 ### Changed
