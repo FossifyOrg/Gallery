@@ -264,4 +264,5 @@
         <item quantity="many">Segur que voleu restaurar %d de fitxers?</item>
         <item quantity="other">Segur que voleu restaurar %d fitxers?</item>
     </plurals>
+    <string name="force_landscape_reverse">Força apaïsat (invers)</string>
 </resources>
