@@ -258,4 +258,5 @@
     <plurals name="restore_confirmation">
         <item quantity="other">您確定要還原 %d 個檔案嗎？</item>
     </plurals>
+    <string name="force_landscape_reverse">強制橫向（反轉）</string>
 </resources>
