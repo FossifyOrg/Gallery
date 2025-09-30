@@ -258,4 +258,5 @@
         <item quantity="one">Желаете ли %d файл да бъде възстановен?</item>
         <item quantity="other">Желаете ли %d файла да бъдат възстановени?</item>
     </plurals>
+    <string name="force_landscape_reverse">Пейзаж (обърнат)</string>
 </resources>
