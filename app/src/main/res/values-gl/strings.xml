@@ -260,4 +260,5 @@
         <item quantity="other">Queres restablecer %d ficheiros?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Manter a pantalla acesa mentras ves fotos a pantalla completa</string>
+    <string name="force_landscape_reverse">Forzar modo paisaxe (inverso)</string>
 </resources>
