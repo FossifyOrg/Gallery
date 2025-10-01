@@ -1,2 +1,2 @@
 # Auto-generated file. DO NOT EDIT.
-1.5.2
+1.6.0
