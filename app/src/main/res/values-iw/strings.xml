@@ -260,4 +260,5 @@
         <item quantity="two">האם ברצונך לשחזר %d קבצים?</item>
         <item quantity="other">האם ברצונך לשחזר %d קבצים?</item>
     </plurals>
+    <string name="force_landscape_reverse">כפיית כיוון לרוחב (הפוך)</string>
 </resources>

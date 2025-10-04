@@ -5,9 +5,9 @@
     <string name="open_camera">Ava kaamera</string>
     <string name="hidden">(peidetud)</string>
     <string name="excluded">(välistatud)</string>
-    <string name="pin_folder">Klammerda kaust</string>
-    <string name="unpin_folder">Eemalda kausta klammerdus</string>
-    <string name="pin_to_the_top">Kinnita ülaossa</string>
+    <string name="pin_folder">Tõsta kaust esile</string>
+    <string name="unpin_folder">Eemalda kausta esiletõstmine</string>
+    <string name="pin_to_the_top">Tõsta esile ülaosas</string>
     <string name="show_all">Näita kõikide kaustade sisu</string>
     <string name="all_folders">Kõik kaustad</string>
     <string name="folder_view">Kasuta kaustavaadet</string>
@@ -19,8 +19,8 @@
     <string name="lock_orientation">Lukusta ekraani pööramine</string>
     <string name="unlock_orientation">Eemalda ekraani pööramise lukustus</string>
     <string name="change_orientation">Muuda ekraani paigutust</string>
-    <string name="force_portrait">Kasuta püstkuva</string>
-    <string name="force_landscape">Kasuta rõhtkuva</string>
+    <string name="force_portrait">Kasuta püstvaadet</string>
+    <string name="force_landscape">Kasuta rõhtvaadet</string>
     <string name="use_default_orientation">Kasuta ekraani paigutuse vaikimisi seadistust</string>
     <string name="fix_date_taken">Paranda pildistamise ajatempel</string>
     <string name="fixing">Parandame…</string>
@@ -214,9 +214,9 @@
     <string name="faq_2_title">Lukustasin rakenduse salasõnaga, kuid unustasin selle. Mida ma saan teha\?</string>
     <string name="faq_2_text">Seda saad lahendada kahel viisil. Võid kas paigaldada rakenduse uuesti või otsi rakenduse kirje oma seadme seadistustest ja vali „Tühjenda andmed“. See nullib kõik sinu seadistused, see ei eemalda ühtegi meediafaili.</string>
     <string name="faq_3_title">Kuidas saan teha nii, et album ilmuks alati ülaosas\?</string>
-    <string name="faq_3_text">Vajuta soovitud albumit pikalt ja vali toimingute menüüst ikoon „Kinnita“, mis kinnitab selle ülespoole. Saad kinnitada ka mitu kausta, kinnitatavad kirjed sorteeritakse vaikimisi sorteerimismeetodi järgi.</string>
+    <string name="faq_3_text">Vajuta soovitud albumit pikalt ja vali toimingute menüüst ikoon „Tõsta esile“, mis kinnitab selle ülespoole. Saad esile tõsta ka mitu kausta, vastavad kirjed sorteeritakse vaikimisi sorteerimismeetodi järgi.</string>
     <string name="faq_4_title">Kuidas saan videoid kiiresti edasi kerida\?</string>
-    <string name="faq_4_text">Seda saad teha, kui topeltkoputad ekraani küljele või koputad praeguse või maksimaalse kestuse tekstidele otsinguriba lähedal. Kui lubad rakenduse seadetes videote avamise eraldi ekraanil, saate kasutada ka horisontaalseid viipeid.</string>
+    <string name="faq_4_text">Seda saad teha, kui topeltklõpsad ekraani küljele või klõpsad praeguse või maksimaalse kestuse tekstidel otsinguriba lähedal. Kui lubad rakenduse seadistustes videote avamise eraldi ekraanil, saad kasutada ka horisontaalseid viipeid.</string>
     <string name="faq_5_title">Mis erinevus on kausta peitmise ja väljajätmise vahel?</string>
     <string name="faq_6_title">Miks ilmuvad kaustad muusika kaanekujundusega või kleebised\?</string>
     <string name="faq_6_text">Võib juhtuda, et ilmub mõni ebatavaline album. Saate need hõlpsasti välja jätta, vajutades pikalt ja valides Exclude (Väljaarvamine). Järgmises dialoogis saate seejärel valida vanemkausta, mis tõenäoliselt takistab ka teiste seotud albumite ilmumist.</string>
@@ -262,4 +262,5 @@
         <item quantity="one">Kas sa oled kindel, et soovid taastada %d faili?</item>
         <item quantity="other">Kas sa oled kindel, et soovid taastada %d faili?</item>
     </plurals>
+    <string name="force_landscape_reverse">Kasuta rõhtvaadet (tagurpidi)</string>
 </resources>

@@ -3,8 +3,8 @@
     <string name="app_launcher_name">圖庫</string>
     <string name="edit">編輯</string>
     <string name="open_camera">開啟相機</string>
-    <string name="hidden">（隱藏）</string>
-    <string name="excluded">（排除）</string>
+    <string name="hidden">（已隱藏）</string>
+    <string name="excluded">（已排除）</string>
     <string name="pin_folder">釘選資料夾</string>
     <string name="unpin_folder">取消釘選資料夾</string>
     <string name="pin_to_the_top">釘選至頂部</string>
@@ -39,7 +39,7 @@
     <string name="gifs">GIF</string>
     <string name="raw_images">RAW 圖檔</string>
     <string name="svgs">SVG</string>
-    <string name="portraits">人像</string>
+    <string name="portraits">直向</string>
     <string name="no_media_with_filters">未發現符合篩選條件的媒體檔案。</string>
     <string name="change_filters_underlined"><u>更改篩選條件</u></string>
     <string name="hide_folder_description">啟用此功能將在選定資料夾中建立「.nomedia」檔案，該資料夾及其所有子資料夾將被隱藏。如要檢視隱藏的資料夾，可在設定中啟用「顯示隱藏項目」。是否繼續？</string>
@@ -214,7 +214,7 @@
     <string name="faq_3_text">長按該相簿，接著按圖釘圖示或選單中的「釘選在頂端」。您可以同時釘選數個相簿，它們將會依照預設排序方式排序。</string>
     <string name="faq_4_title">如何快轉影片？</string>
     <string name="faq_4_text">按兩下螢幕邊邊，或者按一下進度條旁邊的目前播放時間／影片時長文字。若您在設定中啟用了「總是用新的水平手勢在獨立畫面開啟影片」，則您也可以使用水平手勢快轉。</string>
-    <string name="faq_5_title">「隱藏」與「排除」資料夾的差別是？</string>
+    <string name="faq_5_title">「隱藏」與「排除」資料夾之間有什麼差別？</string>
     <string name="faq_6_title">為何出現了音樂的封面圖或是貼圖的資料夾？</string>
     <string name="faq_6_text">有時候會出現一些異常的相簿。長按並點選排除可排除它們，在接下來的對話框選擇它們的上層資料夾的話，有機會避免相關的相簿出現。</string>
     <string name="faq_7_title">有個含有圖片的資料夾沒出現，抑或是沒有顯示所有項目時，該怎麼辦？</string>
@@ -245,7 +245,7 @@
 \n
 \n如要同時在其他應用程式中隱藏，請使用隱藏功能。</string>
     <string name="exclude_folder_description">僅在 Fossify 圖片庫中排除選定的資料夾及其所有子資料夾。稍後可在設定中管理排除的資料夾。</string>
-    <string name="faq_1_title">我該如何將 Fossify Gallery 設定為預設的裝置相簿？</string>
+    <string name="faq_1_title">怎樣將 Fossify Gallery 設為本裝置的預設相簿？</string>
     <string name="faq_1_text">首先，您需要在裝置設定的應用程式部分找到目前預設的相簿，尋找一個寫著「預設開啟」之類的按鈕，點擊它，然後選擇「清除預設」。下次嘗試開啟圖片或影片時，您應該會看到一個應用程式選擇器，您可以在其中選擇 Fossify Gallery 並將其設為預設應用程式。</string>
     <string name="faq_5_text">排除是指僅在 Fossify Gallery 中不顯示該資料夾，而隱藏則是系統級別的操作，它也會將資料夾隱藏於其他相簿。這是通過在指定資料夾創建一個名為「.nomedia」的空檔案來實現的，您也可以使用任何檔案管理器刪除它。請注意，有些裝置不允許隱藏像是相機、截圖和下載等資料夾。</string>
     <string name="full_storage_permission_required">Fossify 圖庫需要完整存取權限才能顯示您所有的照片與影片。請到「設定」→「隱私權」→「應用程式權限」→「相片和影片」→「一律全部允許」。</string>
@@ -258,4 +258,5 @@
     <plurals name="restore_confirmation">
         <item quantity="other">您確定要還原 %d 個檔案嗎？</item>
     </plurals>
+    <string name="force_landscape_reverse">強制橫向（反轉）</string>
 </resources>

@@ -19,8 +19,8 @@
     <string name="lock_orientation">Aktivera rotationslås</string>
     <string name="unlock_orientation">Inaktivera rotationslås</string>
     <string name="change_orientation">Ändra orientering</string>
-    <string name="force_portrait">Lås skärmen i stående läge</string>
-    <string name="force_landscape">Lås skärmen i liggande läge</string>
+    <string name="force_portrait">Tvinga fram stående</string>
+    <string name="force_landscape">Tvinga fram liggande</string>
     <string name="use_default_orientation">Använd standardorientering</string>
     <string name="fix_date_taken">Korrigera fotodatum</string>
     <string name="fixing">Korrigerar…</string>
@@ -260,4 +260,5 @@
         <item quantity="one">Är du säker på att du vill återställa %d fil?</item>
         <item quantity="other">Är du säker på att du vill återställa %d filer?</item>
     </plurals>
+    <string name="force_landscape_reverse">Tvinga fram liggande (vänd)</string>
 </resources>

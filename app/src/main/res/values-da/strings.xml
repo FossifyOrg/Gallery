@@ -17,7 +17,7 @@
     <string name="volume">Lydstyrke</string>
     <string name="brightness">Lysstyrke</string>
     <string name="lock_orientation">Lås orientering</string>
-    <string name="unlock_orientation">Lås orientering op</string>
+    <string name="unlock_orientation">Oplås orientering</string>
     <string name="change_orientation">Skift orientering</string>
     <string name="force_portrait">Tving portræt</string>
     <string name="force_landscape">Tving landskab</string>
@@ -30,8 +30,8 @@
     <string name="switch_to_file_search">Skift til filsøgning på tværs af synlige mapper</string>
     <string name="set_as_default_folder">Vælg som standardmappe</string>
     <string name="unset_as_default_folder">Fravælg som standardmappe</string>
-    <string name="reorder_by_dragging">Omorganiser mapper ved at trække</string>
-    <string name="reorder_by_dragging_pro">Omorganiser mapper ved at trække (Pro)</string>
+    <string name="reorder_by_dragging">Omarranger mapper ved at trække</string>
+    <string name="reorder_by_dragging_pro">Omarranger mapper ved at trække (Pro)</string>
     <string name="restore_to_path">Gendanner til \'%s\'</string>
     <string name="filter_media">Filtrér medier</string>
     <string name="images">Billeder</string>
@@ -255,7 +255,8 @@
     <string name="file_is_malformed_or_corrupted">Filen er misdannet eller beskadiget.</string>
     <string name="keep_screen_on_fullscreen_photos">Hold skærmen tændt, mens du ser fotos i fuld skærm</string>
     <plurals name="restore_confirmation">
-        <item quantity="one">Er du sikker på du vil gendanne %d fil?</item>
-        <item quantity="other">Er du sikker på du vil gendanne %d filer?</item>
+        <item quantity="one">Er du sikker på, at du vil gendanne %d fil?</item>
+        <item quantity="other">Er du sikker på, at du vil gendanne %d filer?</item>
     </plurals>
+    <string name="force_landscape_reverse">Tving landskab (omvendt)</string>
 </resources>

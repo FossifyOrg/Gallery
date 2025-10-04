@@ -6,4 +6,10 @@
         <item quantity="one">Vai tiešām atjaunot %d datni?</item>
         <item quantity="other">Vai tiešām atjaunot %d datnes?</item>
     </plurals>
+    <plurals name="failed_to_resize_images">
+        <item quantity="zero">Neizdevās mainīt %d attēlu izmēru</item>
+        <item quantity="one">Neizdevās mainīt %d attēla izmēru</item>
+        <item quantity="other">Neizdevās mainīt %d attēlu izmēru</item>
+    </plurals>
+    <string name="faq_5_title">Kāda ir atšķirība starp mapes paslēpšanu un neiekļaušanu?</string>
 </resources>
