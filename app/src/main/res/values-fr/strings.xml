@@ -262,4 +262,5 @@
         <item quantity="many">Êtes-vous sûr de vouloir restaurer %d fichiers ?</item>
         <item quantity="other">Êtes-vous sûr de vouloir restaurer %d fichiers ?</item>
     </plurals>
+    <string name="force_landscape_reverse">Forcer le mode paysage (inversé)</string>
 </resources>
