@@ -260,4 +260,5 @@
         <item quantity="other">Haluatko varmasti palauttaa %d tiedostoa?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Pidä näyttö päällä, kun selaat kokoruudun valokuvia</string>
+    <string name="force_landscape_reverse">Pakota vaakasuunta (käännettynä)</string>
 </resources>
