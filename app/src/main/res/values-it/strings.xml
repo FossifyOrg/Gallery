@@ -110,7 +110,7 @@
     <string name="setting_wallpaper">Impostazione sfondo…</string>
     <string name="wallpaper_set_successfully">Sfondo impostato correttamente</string>
     <string name="portrait_aspect_ratio">Proporzioni ritratto</string>
-    <string name="landscape_aspect_ratio">Proporzioni panorama</string>
+    <string name="landscape_aspect_ratio">Rapporto d\'aspetto orizzontale</string>
     <string name="home_screen">Schermata principale</string>
     <string name="lock_screen">Schermata di blocco</string>
     <string name="home_and_lock_screen">Entrambe le schermate</string>
@@ -264,4 +264,5 @@
         <item quantity="many">Sei sicuro di voler ripristinare %d file?</item>
         <item quantity="other">Sei sicuro di voler ripristinare %d file?</item>
     </plurals>
+    <string name="force_landscape_reverse">Forza orizzontale (inverso)</string>
 </resources>
