@@ -258,4 +258,5 @@
         <item quantity="other">Ĉu vi certas, ke vi volas restaŭri %d dosierojn?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Malŝalti malheligon de la ekrano dum fotoj estas plenekranaj</string>
+    <string name="force_landscape_reverse">Ĉiam uzi horizontalan orientiĝon (inverse)</string>
 </resources>
