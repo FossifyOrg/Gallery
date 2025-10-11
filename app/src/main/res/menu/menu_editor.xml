@@ -5,15 +5,20 @@
         android:id="@+id/save_as"
         android:icon="@drawable/ic_check_vector"
         android:title="@string/save_as"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/overwrite_original"
+        android:icon="@drawable/ic_check_vector"
+        android:title="@string/overwrite_original"
+        app:showAsAction="never" />
     <item
         android:id="@+id/edit"
         android:icon="@drawable/ic_edit_vector"
         android:title="@string/edit_with"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/share"
         android:icon="@drawable/ic_share_vector"
         android:title="@string/share"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 </menu>

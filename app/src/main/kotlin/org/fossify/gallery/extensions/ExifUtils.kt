@@ -1,6 +1,10 @@
 package org.fossify.gallery.extensions
 
+import android.content.Context
+import android.net.Uri
 import androidx.exifinterface.media.ExifInterface
+import java.io.File
+import java.io.InputStream
 
 /**
  * A non-exhaustive list of all Exif attributes *excluding* dimension related attributes.
@@ -140,4 +144,34 @@ fun ExifInterface.copyNonDimensionAttributesTo(destination: ExifInterface) {
         destination.saveAttributes()
     } catch (_: Exception) {
     }
+}
+
+fun Context.readExif(uri: Uri): ExifInterface? {
+    var inputStream: InputStream? = null
+    return try {
+        inputStream = contentResolver.openInputStream(uri)
+        ExifInterface(inputStream!!)
+    } catch (_: Exception) {
+        null
+    } finally {
+        inputStream?.close()
+    }
+}
+
+fun Context.writeExif(exif: ExifInterface?, uri: Uri?) {
+    if (exif == null || uri == null) return
+    resolveUriScheme(
+        uri = uri,
+        onContentUri = {
+            contentResolver.openFileDescriptor(it, "rw")?.use { pfd ->
+                val destExif = ExifInterface(pfd.fileDescriptor)
+                exif.copyNonDimensionAttributesTo(destExif)
+            }
+        },
+        onPath = {
+            val file = File(it)
+            val destExif = ExifInterface(file.absolutePath)
+            exif.copyNonDimensionAttributesTo(destExif)
+        }
+    )
 }
