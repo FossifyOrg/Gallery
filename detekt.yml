@@ -40,6 +40,11 @@ style:
     maxLineLength: 120
     excludePackageStatements: true
     excludeImportStatements: true
+  ReturnCount:
+    active: true
+    max: 4
+    excludeGuardClauses: true
+    excludes: ["**/test/**", "**/androidTest/**"]
 
 naming:
   FunctionNaming:
