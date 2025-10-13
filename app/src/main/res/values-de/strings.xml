@@ -209,7 +209,7 @@
     <string name="faq_3_title">Wie kann ich ein Album immer zuoberst erscheinen lassen\?</string>
     <string name="faq_3_text">Drücke lange auf das gewünschte Album und wähle im Aktionsmenü das Stecknadelsymbol aus; es wird nun zuoberst angeheftet. Du kannst auch mehrere Ordner anheften, angeheftete Elemente werden nach der Standardmethode sortiert.</string>
     <string name="faq_4_title">Wie kann ich in Videos vor- oder zurückspringen\?</string>
-    <string name="faq_4_text">Tippe dazu doppelt auf die Seite des Bildschirms oder auf den Text nahe der Suchleiste, der die aktuelle bzw. maximale Dauer anzeigt. Wenn du in den App-Einstellungen die Funktion aktivierst, dass Videos in einem separaten Fenster geöffnet werden, kannst du zudem horizontale Gesten verwenden.</string>
+    <string name="faq_4_text">Tippe dazu doppelt auf die Seite des Bildschirms oder auf den Text nahe der Suchleiste, der die aktuelle bzw. maximale Dauer anzeigt. Wenn du in den Einstellungen die Funktion aktivierst, dass Videos in einem separaten Fenster geöffnet werden, kannst du zudem horizontale Gesten verwenden.</string>
     <string name="faq_5_title">Was ist der Unterschied zwischen dem Verstecken und dem Ausschließen eines Ordners\?</string>
     <string name="faq_6_title">Wieso erscheinen Ordner mit Musikcover oder Aufkleber\?</string>
     <string name="faq_6_text">Es kann vorkommen, dass einige ungewöhnliche Alben angezeigt werden. Diese kannst du einfach ausschließen, indem du lange auf sie drückst und „Ausschließen“ auswählt. Im nächsten Dialogfeld kannst du dann den übergeordneten Ordner auswählen, um zu verhindern, dass auch die anderen zugehörigen Alben angezeigt werden.</string>
