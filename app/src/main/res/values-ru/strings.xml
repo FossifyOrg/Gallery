@@ -267,4 +267,5 @@
         <item quantity="other">Восстановить %d файлов?</item>
     </plurals>
     <string name="force_landscape_reverse">Альбомная (обратная)</string>
+    <string name="overwrite_original">Перезаписать оригинал</string>
 </resources>
