@@ -267,4 +267,5 @@
         <item quantity="other">Czy przywrócić %d plików?</item>
     </plurals>
     <string name="force_landscape_reverse">Wymuś poziomą (odwrócona)</string>
+    <string name="overwrite_original">Nadpisz oryginał</string>
 </resources>
