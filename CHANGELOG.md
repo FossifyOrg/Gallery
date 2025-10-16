@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Option to overwrite the original image when saving edits ([#62])
 
 ## [1.6.0] - 2025-10-01
 ### Added
@@ -165,6 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed privacy policy link
 
 [#29]: https://github.com/FossifyOrg/Gallery/issues/29
+[#62]: https://github.com/FossifyOrg/Gallery/issues/62
 [#128]: https://github.com/FossifyOrg/Gallery/issues/128
 [#166]: https://github.com/FossifyOrg/Gallery/issues/166
 [#199]: https://github.com/FossifyOrg/Gallery/issues/199

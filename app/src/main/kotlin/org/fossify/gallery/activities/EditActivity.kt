@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
 import android.view.View
-import android.widget.ImageView
 import android.widget.RelativeLayout
 import androidx.core.view.isInvisible
 import androidx.exifinterface.media.ExifInterface
@@ -42,7 +41,6 @@ import org.fossify.gallery.dialogs.OtherAspectRatioDialog
 import org.fossify.gallery.dialogs.ResizeDialog
 import org.fossify.gallery.dialogs.SaveAsDialog
 import org.fossify.gallery.extensions.config
-import org.fossify.gallery.extensions.copyNonDimensionAttributesTo
 import org.fossify.gallery.extensions.fixDateTaken
 import org.fossify.gallery.extensions.openEditor
 import org.fossify.gallery.helpers.*
@@ -51,6 +49,14 @@ import java.io.*
 import kotlin.math.max
 import androidx.core.graphics.scale
 import androidx.core.net.toUri
+import org.fossify.gallery.extensions.writeExif
+import org.fossify.gallery.extensions.ensureWritablePath
+import org.fossify.gallery.extensions.getCompressionFormatFromUri
+import org.fossify.gallery.extensions.readExif
+import org.fossify.gallery.extensions.proposeNewFilePath
+import org.fossify.gallery.extensions.resolveUriScheme
+import org.fossify.gallery.extensions.showContentDescriptionOnLongClick
+import org.fossify.gallery.extensions.writeBitmapToCache
 
 class EditActivity : SimpleActivity() {
     companion object {
@@ -58,7 +64,6 @@ class EditActivity : SimpleActivity() {
             System.loadLibrary("NativeImageProcessor")
         }
 
-        private const val TEMP_FOLDER_NAME = "images"
         private const val ASPECT_X = "aspectX"
         private const val ASPECT_Y = "aspectY"
         private const val CROP = "crop"
@@ -73,17 +78,14 @@ class EditActivity : SimpleActivity() {
         private const val CROP_ROTATE_ASPECT_RATIO = 1
     }
 
-
     private lateinit var saveUri: Uri
     private var uri: Uri? = null
     private var resizeWidth = 0
     private var resizeHeight = 0
     private var drawColor = 0
     private var lastOtherAspectRatio: Pair<Float, Float>? = null
-    private var currPrimaryAction =
-        PRIMARY_ACTION_NONE
-    private var currCropRotateAction =
-        CROP_ROTATE_ASPECT_RATIO
+    private var currPrimaryAction = PRIMARY_ACTION_NONE
+    private var currCropRotateAction = CROP_ROTATE_ASPECT_RATIO
     private var currAspectRatio = ASPECT_RATIO_FREE
     private var isCropIntent = false
     private var isEditingWithThirdParty = false
@@ -94,6 +96,8 @@ class EditActivity : SimpleActivity() {
     private var originalUri: Uri? = null
     private var bitmapCroppingJob: Job? = null
     private val binding by viewBinding(ActivityEditBinding::inflate)
+
+    private var overwriteRequested = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -130,7 +134,8 @@ class EditActivity : SimpleActivity() {
     private fun setupOptionsMenu() {
         binding.editorToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.save_as -> saveImage()
+                R.id.save_as -> startSaveFlow(overwrite = false)
+                R.id.overwrite_original -> startSaveFlow(overwrite = true)
                 R.id.edit -> editWith()
                 R.id.share -> shareImage()
                 else -> return@setOnMenuItemClickListener false
@@ -154,11 +159,12 @@ class EditActivity : SimpleActivity() {
             return
         }
 
-        if (intent.extras?.containsKey(REAL_FILE_PATH) == true) {
+        val extras = intent.extras
+        if (extras?.containsKey(REAL_FILE_PATH) == true) {
             val realPath = intent.extras!!.getString(REAL_FILE_PATH)
             uri = when {
                 isPathOnOTG(realPath!!) -> uri
-                realPath.startsWith("file:/") -> Uri.parse(realPath)
+                realPath.startsWith("file:/") -> realPath.toUri()
                 else -> Uri.fromFile(File(realPath))
             }
         } else {
@@ -168,14 +174,16 @@ class EditActivity : SimpleActivity() {
         }
 
         saveUri = when {
-            intent.extras?.containsKey(MediaStore.EXTRA_OUTPUT) == true && intent.extras!!.get(MediaStore.EXTRA_OUTPUT) is Uri -> intent.extras!!.get(MediaStore.EXTRA_OUTPUT) as Uri
+            extras?.containsKey(MediaStore.EXTRA_OUTPUT) == true
+                    && extras.get(MediaStore.EXTRA_OUTPUT) is Uri -> extras.get(MediaStore.EXTRA_OUTPUT) as Uri
             else -> uri!!
         }
 
-        isCropIntent = intent.extras?.get(CROP) == "true"
+        isCropIntent = extras?.get(CROP) == "true"
         if (isCropIntent) {
             binding.bottomEditorPrimaryActions.root.beGone()
             (binding.bottomEditorCropRotateActions.root.layoutParams as RelativeLayout.LayoutParams).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 1)
+            binding.editorToolbar.menu.findItem(R.id.overwrite_original).isVisible = false
         }
 
         loadDefaultImageView()
@@ -321,76 +329,110 @@ class EditActivity : SimpleActivity() {
         }
     }
 
-    private fun saveImage() {
+    private fun setOldExif() {
+        oldExif = readExif(uri!!)
+    }
+
+    private fun startSaveFlow(overwrite: Boolean) {
+        overwriteRequested = overwrite
         setOldExif()
-
-        if (binding.cropImageView.isVisible()) {
-            cropImageAsync()
-        } else if (binding.editorDrawCanvas.isVisible()) {
-            val bitmap = binding.editorDrawCanvas.getBitmap()
-            if (saveUri.scheme == "file") {
-                SaveAsDialog(this, saveUri.path!!, true) {
-                    saveBitmapToFile(bitmap, it, true)
-                }
-            } else if (saveUri.scheme == "content") {
-                val filePathGetter = getNewFilePath()
-                SaveAsDialog(this, filePathGetter.first, filePathGetter.second) {
-                    saveBitmapToFile(bitmap, it, true)
-                }
-            }
-        } else {
-            val currentFilter = getFiltersAdapter()?.getCurrentFilter() ?: return
-            val filePathGetter = getNewFilePath()
-            SaveAsDialog(this, filePathGetter.first, filePathGetter.second) {
-                toast(org.fossify.commons.R.string.saving)
-
-                // clean up everything to free as much memory as possible
-                binding.defaultImageView.setImageResource(0)
-                binding.cropImageView.setImageBitmap(null)
-                binding.bottomEditorFilterActions.bottomActionsFilterList.adapter = null
-                binding.bottomEditorFilterActions.bottomActionsFilterList.beGone()
-
-                ensureBackgroundThread {
-                    try {
-                        val originalBitmap = Glide.with(applicationContext).asBitmap().load(uri).submit(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get()
-                        currentFilter.filter.processFilter(originalBitmap)
-                        saveBitmapToFile(originalBitmap, it, false)
-                    } catch (e: OutOfMemoryError) {
-                        toast(org.fossify.commons.R.string.out_of_memory_error)
-                    }
-                }
-            }
+        when {
+            binding.cropImageView.isVisible() -> saveCroppedImage()
+            binding.editorDrawCanvas.isVisible() -> saveDrawnImage()
+            else -> saveFilteredImage(overwrite)
         }
     }
 
-    private fun setCropProgressBarVisibility(visible: Boolean) {
-        val progressBar: View? = binding.cropImageView.findViewById(com.canhub.cropper.R.id.CropProgressBar)
-        progressBar?.isInvisible = visible.not()
+    private fun saveDrawnImage() {
+        saveBitmap(
+            overwrite = overwriteRequested,
+            bitmap = binding.editorDrawCanvas.getBitmap()
+        )
     }
 
-    private fun cropImageAsync() {
-        setCropProgressBarVisibility(visible = true)
+    private fun setCropProgressBarVisibility(visible: Boolean) {
+        binding.cropImageView
+            .findViewById<View>(com.canhub.cropper.R.id.CropProgressBar)
+            ?.isInvisible = visible.not()
+    }
+
+    private fun saveCroppedImage() {
+        setCropProgressBarVisibility(true)
         bitmapCroppingJob?.cancel()
         bitmapCroppingJob = lifecycleScope.launch(CoroutineExceptionHandler { _, t ->
-            onCropImageComplete(bitmap = null, error = Exception(t))
+            onImageCropped(bitmap = null, error = Exception(t))
         }) {
             val bitmap = withContext(Dispatchers.Default) {
                 binding.cropImageView.getCroppedImage()
             }
-            onCropImageComplete(bitmap, null)
+            onImageCropped(bitmap, null)
         }.apply {
-            invokeOnCompletion { setCropProgressBarVisibility(visible = false) }
+            invokeOnCompletion { setCropProgressBarVisibility(false) }
         }
     }
 
-    private fun setOldExif() {
-        var inputStream: InputStream? = null
-        try {
-            inputStream = contentResolver.openInputStream(uri!!)
-            oldExif = ExifInterface(inputStream!!)
-        } catch (e: Exception) {
-        } finally {
-            inputStream?.close()
+    private fun onImageCropped(bitmap: Bitmap?, error: Exception?) {
+        if (error != null || bitmap == null) {
+            toast("${getString(R.string.image_editing_failed)}: ${error?.message}")
+            return
+        }
+
+        setOldExif()
+
+        if (isSharingBitmap) {
+            isSharingBitmap = false
+            shareBitmap(bitmap)
+            return
+        }
+
+        if (isCropIntent) {
+            resolveUriScheme(
+                uri = saveUri,
+                onPath = { saveBitmapToPath(bitmap, it, true) },
+                onContentUri = {
+                    saveBitmapToContentUri(bitmap, it, showSavingToast = true, isCropCommit = true)
+                }
+            )
+            return
+        }
+
+        saveBitmap(overwriteRequested, bitmap, showSavingToast = true)
+    }
+
+    private fun getOriginalBitmap(): Bitmap {
+        return Glide.with(applicationContext)
+            .asBitmap()
+            .load(uri)
+            .submit(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
+            .get()
+    }
+
+    private fun withFilteredImage(callback: (Bitmap) -> Unit) {
+        val currentFilter = getFiltersAdapter()?.getCurrentFilter() ?: return
+        ensureBackgroundThread {
+            try {
+                val original = getOriginalBitmap()
+                currentFilter.filter.processFilter(original)
+                callback(original)
+            } catch (_: OutOfMemoryError) {
+                toast(org.fossify.commons.R.string.out_of_memory_error)
+            }
+        }
+    }
+
+    private fun saveFilteredImage(overwrite: Boolean) {
+        if (overwrite) {
+            freeMemory()
+            withFilteredImage {
+                saveBitmap(true, it)
+            }
+        } else {
+            resolveSaveAsPath { path ->
+                freeMemory()
+                withFilteredImage {
+                    saveBitmapToPath(it, path, showSavingToast = true)
+                }
+            }
         }
     }
 
@@ -404,7 +446,7 @@ class EditActivity : SimpleActivity() {
                         return@ensureBackgroundThread
                     }
 
-                    val originalBitmap = Glide.with(applicationContext).asBitmap().load(uri).submit(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).get()
+                    val originalBitmap = getOriginalBitmap()
                     currentFilter.filter.processFilter(originalBitmap)
                     shareBitmap(originalBitmap)
                 }
@@ -412,7 +454,7 @@ class EditActivity : SimpleActivity() {
                 binding.cropImageView.isVisible() -> {
                     isSharingBitmap = true
                     runOnUiThread {
-                        cropImageAsync()
+                        saveCroppedImage()
                     }
                 }
 
@@ -421,41 +463,8 @@ class EditActivity : SimpleActivity() {
         }
     }
 
-    private fun getTempImagePath(bitmap: Bitmap, callback: (path: String?) -> Unit) {
-        val bytes = ByteArrayOutputStream()
-        bitmap.compress(CompressFormat.PNG, 0, bytes)
-
-        val folder = File(
-            cacheDir,
-            TEMP_FOLDER_NAME
-        )
-        if (!folder.exists()) {
-            if (!folder.mkdir()) {
-                callback(null)
-                return
-            }
-        }
-
-        val filename = applicationContext.getFilenameFromContentUri(saveUri) ?: "tmp-${System.currentTimeMillis()}.jpg"
-        val newPath = "$folder/$filename"
-        val fileDirItem = FileDirItem(newPath, filename)
-        getFileOutputStream(fileDirItem, true) {
-            if (it != null) {
-                try {
-                    it.write(bytes.toByteArray())
-                    callback(newPath)
-                } catch (e: Exception) {
-                } finally {
-                    it.close()
-                }
-            } else {
-                callback("")
-            }
-        }
-    }
-
     private fun shareBitmap(bitmap: Bitmap) {
-        getTempImagePath(bitmap) {
+        writeBitmapToCache(saveUri, bitmap) {
             if (it != null) {
                 sharePathIntent(it, BuildConfig.APPLICATION_ID)
             } else {
@@ -464,7 +473,9 @@ class EditActivity : SimpleActivity() {
         }
     }
 
-    private fun getFiltersAdapter() = binding.bottomEditorFilterActions.bottomActionsFilterList.adapter as? FiltersAdapter
+    private fun getFiltersAdapter(): FiltersAdapter? {
+        return binding.bottomEditorFilterActions.bottomActionsFilterList.adapter as? FiltersAdapter
+    }
 
     private fun setupBottomActions() {
         setupPrimaryActionButtons()
@@ -490,7 +501,7 @@ class EditActivity : SimpleActivity() {
             binding.bottomEditorPrimaryActions.bottomPrimaryCropRotate,
             binding.bottomEditorPrimaryActions.bottomPrimaryDraw
         ).forEach {
-            setupLongPress(it)
+            it.showContentDescriptionOnLongClick()
         }
     }
 
@@ -559,7 +570,7 @@ class EditActivity : SimpleActivity() {
             binding.bottomEditorCropRotateActions.bottomFlipVertically,
             binding.bottomEditorCropRotateActions.bottomAspectRatio
         ).forEach {
-            setupLongPress(it)
+            it.showContentDescriptionOnLongClick()
         }
     }
 
@@ -712,8 +723,7 @@ class EditActivity : SimpleActivity() {
 
         if (currPrimaryAction != PRIMARY_ACTION_CROP_ROTATE) {
             binding.bottomAspectRatios.root.beGone()
-            currCropRotateAction =
-                CROP_ROTATE_NONE
+            currCropRotateAction = CROP_ROTATE_NONE
         }
         updateCropRotateActionButtons()
     }
@@ -796,19 +806,14 @@ class EditActivity : SimpleActivity() {
         ResizeDialog(this, point) {
             resizeWidth = it.x
             resizeHeight = it.y
-            cropImageAsync()
+            saveCroppedImage()
         }
     }
 
     private fun shouldCropSquare(): Boolean {
         val extras = intent.extras
-        return if (extras != null && extras.containsKey(ASPECT_X) && extras.containsKey(
-                ASPECT_Y
-            )
-        ) {
-            extras.getInt(ASPECT_X) == extras.getInt(
-                ASPECT_Y
-            )
+        return if (extras != null && extras.containsKey(ASPECT_X) && extras.containsKey(ASPECT_Y)) {
+            extras.getInt(ASPECT_X) == extras.getInt(ASPECT_Y)
         } else {
             false
         }
@@ -824,98 +829,70 @@ class EditActivity : SimpleActivity() {
         }
     }
 
-    private fun onCropImageComplete(bitmap: Bitmap?, error: Exception?) {
-        if (error == null && bitmap != null) {
-            setOldExif()
+    private fun resolveSaveAsPath(callback: (String) -> Unit) {
+        runOnUiThread {
+            resolveUriScheme(
+                uri = saveUri,
+                onPath = {
+                    SaveAsDialog(this, it, true, callback = callback)
+                },
+                onContentUri = {
+                    val (path, append) = proposeNewFilePath(it)
+                    SaveAsDialog(this, path, append, callback = callback)
+                }
+            )
+        }
+    }
 
-            if (isSharingBitmap) {
-                isSharingBitmap = false
-                shareBitmap(bitmap)
-                return
-            }
-
-            if (isCropIntent) {
-                if (saveUri.scheme == "file") {
-                    saveBitmapToFile(bitmap, saveUri.path!!, true)
-                } else {
-                    var inputStream: InputStream? = null
-                    var outputStream: OutputStream? = null
-                    try {
-                        val stream = ByteArrayOutputStream()
-                        bitmap.compress(CompressFormat.JPEG, 100, stream)
-                        inputStream = ByteArrayInputStream(stream.toByteArray())
-                        outputStream = contentResolver.openOutputStream(saveUri)
-                        inputStream.copyTo(outputStream!!)
-                    } catch (e: Exception) {
-                        showErrorToast(e)
-                        return
-                    } finally {
-                        inputStream?.close()
-                        outputStream?.close()
+    private fun saveBitmap(overwrite: Boolean, bitmap: Bitmap, showSavingToast: Boolean = true) {
+        if (overwrite) {
+            resolveUriScheme(
+                uri = saveUri,
+                onPath = { path ->
+                    ensureWritablePath(targetPath = path, confirmOverwrite = false) {
+                        saveBitmapToPath(bitmap, it, showSavingToast)
                     }
-
-                    copyExifToUri(oldExif, saveUri)
-                    Intent().apply {
-                        data = saveUri
-                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                        setResult(RESULT_OK, this)
-                    }
-                    finish()
+                },
+                onContentUri = { contentUri ->
+                    saveBitmapToContentUri(bitmap, contentUri, showSavingToast, isCropCommit = false)
                 }
-            } else if (saveUri.scheme == "file") {
-                SaveAsDialog(this, saveUri.path!!, true) {
-                    saveBitmapToFile(bitmap, it, true)
-                }
-            } else if (saveUri.scheme == "content") {
-                val filePathGetter = getNewFilePath()
-                SaveAsDialog(this, filePathGetter.first, filePathGetter.second) {
-                    saveBitmapToFile(bitmap, it, true)
-                }
-            } else {
-                toast(R.string.unknown_file_location)
-            }
+            )
         } else {
-            toast("${getString(R.string.image_editing_failed)}: ${error?.message}")
-        }
-    }
-
-    private fun getNewFilePath(): Pair<String, Boolean> {
-        var newPath = applicationContext.getRealPathFromURI(saveUri) ?: ""
-        if (newPath.startsWith("/mnt/")) {
-            newPath = ""
-        }
-
-        var shouldAppendFilename = true
-        if (newPath.isEmpty()) {
-            val filename = applicationContext.getFilenameFromContentUri(saveUri) ?: ""
-            if (filename.isNotEmpty()) {
-                val path =
-                    if (intent.extras?.containsKey(REAL_FILE_PATH) == true) intent.getStringExtra(REAL_FILE_PATH)?.getParentPath() else internalStoragePath
-                newPath = "$path/$filename"
-                shouldAppendFilename = false
+            resolveSaveAsPath { path ->
+                saveBitmapToPath(bitmap, path, showSavingToast)
             }
         }
-
-        if (newPath.isEmpty()) {
-            newPath = "$internalStoragePath/${getCurrentFormattedDateTime()}.${saveUri.toString().getFilenameExtension()}"
-            shouldAppendFilename = false
-        }
-
-        return Pair(newPath, shouldAppendFilename)
     }
 
-    private fun saveBitmapToFile(bitmap: Bitmap, path: String, showSavingToast: Boolean) {
+    private fun finishCropResultForContent(uri: Uri) {
+        val result = Intent().apply {
+            data = uri
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+        setResult(RESULT_OK, result)
+        finish()
+    }
+
+    private fun freeMemory() {
+        // clean up everything to free as much memory as possible
+        binding.defaultImageView.setImageResource(0)
+        binding.cropImageView.setImageBitmap(null)
+        binding.bottomEditorFilterActions.bottomActionsFilterList.adapter = null
+        binding.bottomEditorFilterActions.bottomActionsFilterList.beGone()
+    }
+
+    private fun saveBitmapToPath(bitmap: Bitmap, path: String, showSavingToast: Boolean) {
         try {
             ensureBackgroundThread {
                 val file = File(path)
                 val fileDirItem = FileDirItem(path, path.getFilenameFromPath())
                 try {
                     val out = FileOutputStream(file)
-                    saveBitmap(file, bitmap, out, showSavingToast)
+                    saveBitmapToFile(file, bitmap, out, showSavingToast)
                 } catch (e: Exception) {
                     getFileOutputStream(fileDirItem, true) {
                         if (it != null) {
-                            saveBitmap(file, bitmap, it, showSavingToast)
+                            saveBitmapToFile(file, bitmap, it, showSavingToast)
                         } else {
                             toast(R.string.image_editing_failed)
                         }
@@ -929,7 +906,7 @@ class EditActivity : SimpleActivity() {
         }
     }
 
-    private fun saveBitmap(file: File, bitmap: Bitmap, out: OutputStream, showSavingToast: Boolean) {
+    private fun saveBitmapToFile(file: File, bitmap: Bitmap, out: OutputStream, showSavingToast: Boolean) {
         if (showSavingToast) {
             toast(org.fossify.commons.R.string.saving)
         }
@@ -943,22 +920,55 @@ class EditActivity : SimpleActivity() {
             }
         }
 
-        copyExifToUri(oldExif, file.toUri())
+        writeExif(oldExif, file.toUri())
         setResult(RESULT_OK, intent)
         scanFinalPath(file.absolutePath)
     }
 
-    private fun copyExifToUri(source: ExifInterface?, destination: Uri?) {
-        if (source == null || destination == null) return
-        if (destination.scheme == "content") {
-            contentResolver.openFileDescriptor(destination, "rw")?.use { pfd ->
-                val destExif = ExifInterface(pfd.fileDescriptor)
-                source.copyNonDimensionAttributesTo(destExif)
+    private fun saveBitmapToContentUri(
+        bitmap: Bitmap,
+        uri: Uri,
+        showSavingToast: Boolean,
+        isCropCommit: Boolean
+    ) {
+        if (showSavingToast) {
+            toast(org.fossify.commons.R.string.saving)
+        }
+
+        ensureBackgroundThread {
+            var out: OutputStream? = null
+            try {
+                out = contentResolver.openOutputStream(uri, "wt")
+                    ?: contentResolver.openOutputStream(uri)
+                if (out == null) {
+                    val (path, append) = proposeNewFilePath(uri)
+                    runOnUiThread {
+                        SaveAsDialog(this, path, append) { path ->
+                            saveBitmapToPath(bitmap, path, showSavingToast)
+                        }
+                    }
+                    return@ensureBackgroundThread
+                }
+
+                val quality = if (isCropCommit) 100 else 90
+                bitmap.compress(getCompressionFormatFromUri(uri), quality, out)
+                out.flush()
+                writeExif(oldExif, uri)
+
+                runOnUiThread {
+                    if (isCropCommit) {
+                        finishCropResultForContent(uri)
+                    } else {
+                        setResult(RESULT_OK, intent)
+                        toast(org.fossify.commons.R.string.file_saved)
+                        finish()
+                    }
+                }
+            } catch (e: Exception) {
+                showErrorToast(e)
+            } finally {
+                try { out?.close() } catch (_: Exception) {}
             }
-        } else {
-            val file = File(destination.path!!)
-            val destExif = ExifInterface(file.absolutePath)
-            source.copyNonDimensionAttributesTo(destExif)
         }
     }
 
@@ -974,16 +984,6 @@ class EditActivity : SimpleActivity() {
             setResult(RESULT_OK, intent)
             toast(org.fossify.commons.R.string.file_saved)
             finish()
-        }
-    }
-
-    private fun setupLongPress(view: ImageView) {
-        view.setOnLongClickListener {
-            val contentDescription = view.contentDescription
-            if (contentDescription != null) {
-                toast(contentDescription.toString())
-            }
-            true
         }
     }
 }

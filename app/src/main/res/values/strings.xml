@@ -104,6 +104,7 @@
     <string name="no_image_editor_found">No image editor found</string>
     <string name="no_video_editor_found">No video editor found</string>
     <string name="unknown_file_location">Unknown file location</string>
+    <string name="overwrite_original">Overwrite original</string>
     <string name="error_saving_file">Could not overwrite the source file</string>
     <string name="rotate_left">Rotate left</string>
     <string name="rotate_right">Rotate right</string>
