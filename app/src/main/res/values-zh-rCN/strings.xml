@@ -261,4 +261,5 @@
         <item quantity="other">你确定要恢复 %d 个文件吗？</item>
     </plurals>
     <string name="force_landscape_reverse">强制横屏（反向）</string>
+    <string name="overwrite_original">覆盖原文件</string>
 </resources>
