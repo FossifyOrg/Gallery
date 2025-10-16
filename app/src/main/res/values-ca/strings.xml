@@ -265,4 +265,5 @@
         <item quantity="other">Segur que voleu restaurar %d fitxers?</item>
     </plurals>
     <string name="force_landscape_reverse">Força apaïsat (invers)</string>
+    <string name="overwrite_original">Sobreescriure l\'original</string>
 </resources>
