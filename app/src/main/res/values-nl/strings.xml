@@ -263,5 +263,5 @@
         <item quantity="other">%d bestanden herstellen?</item>
     </plurals>
     <string name="force_landscape_reverse">Landschapsmodus forceren (omgedraaid)</string>
-    <string name="overwrite_original">Origineel over­schrĳven</string>
+    <string name="overwrite_original">Origineel overschrĳven</string>
 </resources>
