@@ -141,8 +141,8 @@
     <string name="loop_videos">Loop videoer</string>
     <string name="animate_gifs">Animer GIF\'er i miniaturer</string>
     <string name="max_brightness">Maks. lysstyrke ved fuldskærmsvisning af medier</string>
-    <string name="crop_thumbnails">Beskær miniaturer i kvadrater</string>
-    <string name="show_thumbnail_video_duration">Vis varighed på video</string>
+    <string name="crop_thumbnails">Beskær miniaturebilleder til firkanter</string>
+    <string name="show_thumbnail_video_duration">Vis videovarighed</string>
     <string name="screen_rotation_by">Roter fuldskærmsmedier efter</string>
     <string name="screen_rotation_system_setting">Systemindstilling</string>
     <string name="screen_rotation_device_rotation">Enhedens orientering</string>
