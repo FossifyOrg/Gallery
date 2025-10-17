@@ -12,4 +12,10 @@
         <item quantity="other">Neizdevās mainīt %d attēlu izmēru</item>
     </plurals>
     <string name="faq_5_title">Kāda ir atšķirība starp mapes paslēpšanu un neiekļaušanu?</string>
+    <string name="overwrite_original">Pārrakstīt sākotnējo</string>
+    <string name="error_saving_file">Nevarēja pārrakstīt avota datni</string>
+    <string name="rotate_left">Pagriezt pa kreisi</string>
+    <string name="rotate_right">Pagriezt pa labi</string>
+    <string name="rotate_one_eighty">Pagriezt par 180º</string>
+    <string name="transform">Pārveidot</string>
 </resources>
