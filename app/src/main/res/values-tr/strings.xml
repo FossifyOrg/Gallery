@@ -263,4 +263,5 @@
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Tam ekran fotoğraflara bakarken ekranı açık tut</string>
     <string name="force_landscape_reverse">Yataya zorla (ters)</string>
+    <string name="overwrite_original">Orijinal olanın üstüne yaz</string>
 </resources>
