@@ -83,7 +83,7 @@
     <string name="file_edited_successfully">Filredigering utförd</string>
     <string name="image_edited_successfully">Bildredigering utförd</string>
     <string name="video_edited_successfully">Videoredigering utförd</string>
-    <string name="edit_image_with">Redigera bilden med:</string>
+    <string name="edit_image_with">Redigera bild med:</string>
     <string name="edit_video_with">Redigera video med:</string>
     <string name="no_image_editor_found">Ingen bildredigerare hittades</string>
     <string name="no_video_editor_found">Ingen videoredigerare hittades</string>
@@ -261,4 +261,5 @@
         <item quantity="other">Är du säker på att du vill återställa %d filer?</item>
     </plurals>
     <string name="force_landscape_reverse">Tvinga fram liggande (vänd)</string>
+    <string name="overwrite_original">Skriv över originalet</string>
 </resources>
