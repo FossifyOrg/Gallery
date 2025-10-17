@@ -259,4 +259,5 @@
         <item quantity="other">Sollen wirklich %d Dateien wiederhergestellt werden?</item>
     </plurals>
     <string name="force_landscape_reverse">Querformat erzwingen (umgekehrt)</string>
+    <string name="overwrite_original">Original überschreiben</string>
 </resources>
