@@ -261,4 +261,5 @@
         <item quantity="other">האם ברצונך לשחזר %d קבצים?</item>
     </plurals>
     <string name="force_landscape_reverse">כפיית כיוון לרוחב (הפוך)</string>
+    <string name="overwrite_original">דריסת המקור</string>
 </resources>
