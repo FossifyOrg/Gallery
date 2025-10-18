@@ -14,7 +14,7 @@ exif = "1.0.1"
 #Room
 room = "2.8.2"
 #Fossify
-commons = "5.3.0"
+commons = "5.4.0"
 #Gradle4
 gradlePlugins-agp = "8.11.1"
 #Other
@@ -34,8 +34,8 @@ okio = "3.16.1"
 picasso = "2.71828"
 subsamplingScaleImageView = "d705c3c4ad"
 #build
-app-build-compileSDKVersion = "34"
-app-build-targetSDK = "34"
+app-build-compileSDKVersion = "36"
+app-build-targetSDK = "36"
 app-build-minimumSDK = "26"
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
