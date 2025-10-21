@@ -151,6 +151,8 @@ import java.io.InputStream
 import java.io.OutputStream
 
 class MainActivity : SimpleActivity(), DirectoryOperationsListener {
+    override var isSearchBarEnabled = true
+    
     companion object {
         private const val PICK_MEDIA = 2
         private const val PICK_WALLPAPER = 3
@@ -197,7 +199,6 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
@@ -229,11 +230,9 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(
-            mainCoordinatorLayout = binding.directoriesCoordinator,
-            nestedView = binding.directoriesGrid,
-            useTransparentNavigation = !config.scrollHorizontally,
-            useTopSearchMenu = true
+        updateEdgeToEdge(
+            topAppBar = binding.directoriesSearchMenu.getToolbar(),
+            scrollingView = binding.directoriesGrid,
         )
 
         binding.directoriesRefreshLayout.setOnRefreshListener { getDirectories() }
