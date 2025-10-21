@@ -121,7 +121,7 @@ class EditActivity : SimpleActivity() {
         super.onResume()
         isEditingWithThirdParty = false
         binding.bottomEditorDrawActions.bottomDrawWidth.setColors(getProperTextColor(), getProperPrimaryColor(), getProperBackgroundColor())
-        setupToolbar(binding.editorToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.editorToolbar, NavigationIcon.Arrow)
     }
 
     override fun onStop() {

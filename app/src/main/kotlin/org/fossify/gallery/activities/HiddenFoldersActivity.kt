@@ -31,7 +31,7 @@ class HiddenFoldersActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.manageFoldersToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.manageFoldersToolbar, NavigationIcon.Arrow)
     }
 
     private fun updateFolders() {
