@@ -125,7 +125,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private val binding by viewBinding(ActivityVideoPlayerBinding::inflate)
 
     public override fun onCreate(savedInstanceState: Bundle?) {
-        showTransparentTop = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
@@ -246,7 +245,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         binding.videoToolbar.title = getFilenameFromUri(mUri!!)
         initTimeHolder()
 
-        showSystemUI(true)
+        showSystemUI()
         window.decorView.setOnSystemUiVisibilityChangeListener { visibility ->
             val isFullscreen = visibility and View.SYSTEM_UI_FLAG_FULLSCREEN != 0
             fullscreenToggled(isFullscreen)
@@ -605,9 +604,9 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private fun fullscreenToggled(isFullScreen: Boolean) {
         mIsFullscreen = isFullScreen
         if (isFullScreen) {
-            hideSystemUI(true)
+            hideSystemUI()
         } else {
-            showSystemUI(true)
+            showSystemUI()
         }
 
         val newAlpha = if (isFullScreen) 0f else 1f

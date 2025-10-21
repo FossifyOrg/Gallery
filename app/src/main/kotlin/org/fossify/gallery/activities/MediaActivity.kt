@@ -173,9 +173,9 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         setupOptionsMenu()
         refreshMenuItems()
         storeStateVariables()
-        updateEdgeToEdge(
-            topAppBar = binding.mediaSearchMenu.getToolbar(),
-            scrollingView = binding.mediaGrid,
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.mediaMenu),
+            padBottomImeAndSystem = listOf(binding.mediaGrid)
         )
 
         if (mShowAll) {
@@ -329,7 +329,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         val isDefaultFolder = !config.defaultFolder.isEmpty()
                 && File(config.defaultFolder).compareTo(File(mPath)) == 0
 
-        binding.mediaMenu.getToolbar().menu.apply {
+        binding.mediaMenu.requireToolbar().menu.apply {
             findItem(R.id.group).isVisible = !config.scrollHorizontally
 
             findItem(R.id.empty_recycle_bin).isVisible = mPath == RECYCLE_BIN
@@ -357,7 +357,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun setupOptionsMenu() {
-        binding.mediaMenu.getToolbar().inflateMenu(R.menu.menu_media)
+        binding.mediaMenu.requireToolbar().inflateMenu(R.menu.menu_media)
         binding.mediaMenu.toggleHideOnScroll(!config.scrollHorizontally)
         binding.mediaMenu.setupMenu()
 
@@ -367,7 +367,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             binding.mediaRefreshLayout.isEnabled = text.isEmpty() && config.enablePullToRefresh
         }
 
-        binding.mediaMenu.getToolbar().setOnMenuItemClickListener { menuItem ->
+        binding.mediaMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.sort -> showSortingDialog()
                 R.id.filter -> showFilterMediaDialog()
@@ -410,7 +410,6 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun updateMenuColors() {
-        updateStatusbarColor(getProperBackgroundColor())
         binding.mediaMenu.updateColors()
     }
 

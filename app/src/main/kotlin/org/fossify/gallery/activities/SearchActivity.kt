@@ -39,7 +39,10 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        updateEdgeToEdge(topAppBar = binding.searchMenu.getToolbar(), scrollingView = binding.searchGrid)
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.searchMenu),
+            padBottomImeAndSystem = listOf(binding.searchGrid)
+        )
         binding.searchEmptyTextPlaceholder.setTextColor(getProperTextColor())
         getAllMedia()
         binding.searchFastscroller.updateColors(getProperPrimaryColor())
@@ -56,7 +59,7 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun setupOptionsMenu() {
-        binding.searchMenu.getToolbar().inflateMenu(R.menu.menu_search)
+        binding.searchMenu.requireToolbar().inflateMenu(R.menu.menu_search)
         binding.searchMenu.toggleHideOnScroll(true)
         binding.searchMenu.setupMenu()
         binding.searchMenu.toggleForceArrowBackIcon(true)
@@ -76,7 +79,7 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
             textChanged(text)
         }
 
-        binding.searchMenu.getToolbar().setOnMenuItemClickListener { menuItem ->
+        binding.searchMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.toggle_filename -> toggleFilenameVisibility()
                 else -> return@setOnMenuItemClickListener false
@@ -86,7 +89,6 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun updateMenuColors() {
-        updateStatusbarColor(getProperBackgroundColor())
         binding.searchMenu.updateColors()
     }
 

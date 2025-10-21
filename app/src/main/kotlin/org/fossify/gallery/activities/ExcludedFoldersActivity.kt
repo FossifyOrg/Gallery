@@ -22,13 +22,16 @@ class ExcludedFoldersActivity : SimpleActivity(), RefreshRecyclerViewListener {
         setupOptionsMenu()
         binding.manageFoldersToolbar.title = getString(org.fossify.commons.R.string.excluded_folders)
 
-        updateEdgeToEdge(topAppBar = binding.manageFoldersToolbar, scrollingView = binding.manageFoldersList)
-        setupMaterialScrollListener(binding.manageFoldersList, binding.manageFoldersToolbar)
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.manageFoldersAppbar),
+            padBottomSystem = listOf(binding.manageFoldersList)
+        )
+        setupMaterialScrollListener(binding.manageFoldersList, binding.manageFoldersAppbar)
     }
 
     override fun onResume() {
         super.onResume()
-        setupTopAppBar(binding.manageFoldersToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.manageFoldersAppbar, NavigationIcon.Arrow)
     }
 
     private fun updateFolders() {

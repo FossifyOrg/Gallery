@@ -13,7 +13,9 @@
     <ImageView
         android:id="@+id/top_shadow"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/default_status_action_height"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/fragment_viewer_appbar"
+        android:layout_alignParentTop="true"
         android:background="@drawable/gradient_background_flipped"
         android:contentDescription="@null" />
 
@@ -22,7 +24,7 @@
         layout="@layout/bottom_actions"
         android:visibility="gone" />
 
-    <com.google.android.material.appbar.AppBarLayout
+    <org.fossify.commons.views.MyAppBarLayout
         android:id="@+id/fragment_viewer_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,5 +40,5 @@
             app:menu="@menu/photo_video_menu"
             app:navigationIcon="@drawable/ic_arrow_left_vector" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+    </org.fossify.commons.views.MyAppBarLayout>
 </RelativeLayout>
