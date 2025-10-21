@@ -231,7 +231,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         refreshMenuItems()
 
         updateEdgeToEdge(
-            topAppBar = binding.directoriesSearchMenu.getToolbar(),
+            topAppBar = binding.mainMenu.getToolbar(),
             scrollingView = binding.directoriesGrid,
         )
 
