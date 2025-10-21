@@ -19,14 +19,13 @@ class HiddenFoldersActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private val binding by viewBinding(ActivityManageFoldersBinding::inflate)
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         updateFolders()
         setupOptionsMenu()
         binding.manageFoldersToolbar.title = getString(R.string.hidden_folders)
 
-        updateMaterialActivityViews(binding.manageFoldersCoordinator, binding.manageFoldersList, useTransparentNavigation = true, useTopSearchMenu = false)
+        updateEdgeToEdge(topAppBar = binding.manageFoldersToolbar, scrollingView = binding.manageFoldersList)
         setupMaterialScrollListener(binding.manageFoldersList, binding.manageFoldersToolbar)
     }
 

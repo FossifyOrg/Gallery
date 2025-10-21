@@ -112,6 +112,8 @@ import java.io.File
 import java.io.IOException
 
 class MediaActivity : SimpleActivity(), MediaOperationsListener {
+    override var isSearchBarEnabled = true
+    
     private val LAST_MEDIA_CHECK_PERIOD = 3000L
 
     private var mPath = ""
@@ -149,7 +151,6 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
@@ -172,11 +173,9 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         setupOptionsMenu()
         refreshMenuItems()
         storeStateVariables()
-        updateMaterialActivityViews(
-            mainCoordinatorLayout = binding.mediaCoordinator,
-            nestedView = binding.mediaGrid,
-            useTransparentNavigation = !config.scrollHorizontally,
-            useTopSearchMenu = true
+        updateEdgeToEdge(
+            topAppBar = binding.mediaSearchMenu.getToolbar(),
+            scrollingView = binding.mediaGrid,
         )
 
         if (mShowAll) {

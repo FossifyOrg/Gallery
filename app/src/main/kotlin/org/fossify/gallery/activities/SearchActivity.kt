@@ -26,6 +26,8 @@ import org.fossify.gallery.models.ThumbnailItem
 import java.io.File
 
 class SearchActivity : SimpleActivity(), MediaOperationsListener {
+    override var isSearchBarEnabled = true
+    
     private var mLastSearchedText = ""
 
     private var mCurrAsyncTask: GetMediaAsynctask? = null
@@ -34,11 +36,10 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
     private val binding by viewBinding(ActivitySearchBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        updateMaterialActivityViews(binding.searchCoordinator, binding.searchGrid, useTransparentNavigation = true, useTopSearchMenu = true)
+        updateEdgeToEdge(topAppBar = binding.searchMenu.getToolbar(), scrollingView = binding.searchGrid)
         binding.searchEmptyTextPlaceholder.setTextColor(getProperTextColor())
         getAllMedia()
         binding.searchFastscroller.updateColors(getProperPrimaryColor())
