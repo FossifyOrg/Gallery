@@ -259,4 +259,13 @@
         <item quantity="many">Вы ўпэўнены, што заціце аднавіць %d файлаў?</item>
         <item quantity="other">Вы ўпэўнены, што заціце аднавіць %d файлаў?</item>
     </plurals>
+    <string name="force_landscape_reverse">Прымусовы альбомны (зваротны)</string>
+    <string name="full_storage_permission_required">Fossify Gallery патрабуе поўны доступ, каб паказваць усе вашыя фота і відэа. Перайдзіце ў Налады &gt; Дазволы &gt; Фота і Відэа &gt; Дазволіць усё.</string>
+    <string name="overwrite_original">Перазапісаць арыгінал</string>
+    <string name="keep_screen_on_fullscreen_photos">Трымаць экран уключаным падчас прагляду поўнаэкранным праглядзе</string>
+    <string name="playback_speed">Хуткасць прайгравання</string>
+    <string name="failed_to_load_media">Немагчыма загрузіць медыя.</string>
+    <string name="file_is_malformed_or_corrupted">Файл мае няслушны фармат ці пашкоджаны.</string>
+    <string name="media_exceeds_device_capabilities">Медыя файл перавышае магчымасці прылады.</string>
+    <string name="unsupported_format">Непадтрымліваемы фармат.</string>
 </resources>
