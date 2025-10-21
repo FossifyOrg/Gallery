@@ -39,7 +39,7 @@ class PickDirectoryDialog(
     private val config = activity.config
     private val searchView = binding.folderSearchView
     private val searchEditText = searchView.binding.topToolbarSearch
-    private val searchViewAppBarLayout = searchView.binding.topAppBarLayout
+    private val searchBarContainer = searchView.binding.searchBarContainer
 
     init {
         (binding.directoriesGrid.layoutManager as MyGridLayoutManager).apply {
@@ -95,10 +95,10 @@ class PickDirectoryDialog(
     }
 
     private fun MySearchMenu.updateSearchViewUi() {
-        getToolbar().beInvisible()
+        requireToolbar().beInvisible()
         updateColors()
         setBackgroundColor(Color.TRANSPARENT)
-        searchViewAppBarLayout.setBackgroundColor(Color.TRANSPARENT)
+        searchBarContainer.setBackgroundColor(Color.TRANSPARENT)
     }
 
     private fun MySearchMenu.setSearchViewListeners() {

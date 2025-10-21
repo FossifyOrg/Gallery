@@ -54,7 +54,7 @@ class SetWallpaperActivity : SimpleActivity(), CropImageView.OnCropImageComplete
 
     override fun onResume() {
         super.onResume()
-        setupTopAppBar(binding.setWallpaperToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.setWallpaperAppbar, NavigationIcon.Arrow)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
