@@ -35,4 +35,24 @@
     <string name="dates_fixed_successfully">ویرگارا و خۊوی رفع وابین</string>
     <string name="no_date_takens_found">ویرگار شؽوات وورداری نجۊرست</string>
     <string name="playback_speed">ترات پشک</string>
+    <string name="share_resized">یک رسۊوی نوسخه آلشت هندا داڌه وابیڌه</string>
+    <string name="switch_to_file_search">آلشت و پیتینیڌن فایل منجا پوی دوبلگه یل دیاری</string>
+    <string name="set_as_default_folder">سامووݩ و عونوان دوبلگه پؽش فرز</string>
+    <string name="unset_as_default_folder">وورداشتن سامووݩ و عونوان دوبلگه پؽش فرز</string>
+    <string name="reorder_by_dragging">ترتیب دوبلگه یل وا کشیڌن</string>
+    <string name="reorder_by_dragging_pro">ترتیب دوبلگه یل وا کشیڌن (هرفه ای)</string>
+    <string name="restore_to_path">وورگندن و «%s»</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one"></item>
+        <item quantity="other"></item>
+    </plurals>
+    <string name="filter_media">فیلتر وارسگر</string>
+    <string name="raw_images">شؽواتا خام</string>
+    <string name="svgs">اس وی جی یل</string>
+    <string name="portraits">پورتره یل</string>
+    <string name="no_media_with_filters">هیچ فایل وارسگری وا فیلترا پسند وابیڌه نجۊرزست.</string>
+    <string name="change_filters_underlined"><u>آلشت فیلترا</u></string>
+    <string name="hidden_folders">دوبلگه یل بؽڌاری</string>
+    <string name="manage_hidden_folders">دؽوۉداری دوبلگه یل بؽڌاری</string>
+    <string name="hidden_folders_placeholder">منی هیچ دوبلگه ای ک وا فایل «‎.nomedia» بیڌار وابیڌه بۊ، نڌارین.</string>
 </resources>
