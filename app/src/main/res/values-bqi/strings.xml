@@ -42,10 +42,6 @@
     <string name="reorder_by_dragging">ترتیب دوبلگه یل وا کشیڌن</string>
     <string name="reorder_by_dragging_pro">ترتیب دوبلگه یل وا کشیڌن (هرفه ای)</string>
     <string name="restore_to_path">وورگندن و «%s»</string>
-    <plurals name="restore_confirmation">
-        <item quantity="one"></item>
-        <item quantity="other"></item>
-    </plurals>
     <string name="filter_media">فیلتر وارسگر</string>
     <string name="raw_images">شؽواتا خام</string>
     <string name="svgs">اس وی جی یل</string>
