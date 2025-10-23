@@ -7,23 +7,74 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Html
-import android.widget.RelativeLayout
-import org.fossify.commons.dialogs.PropertiesDialog
-import org.fossify.commons.extensions.*
-import org.fossify.commons.helpers.*
-import org.fossify.gallery.BuildConfig
-import org.fossify.gallery.R
-import org.fossify.gallery.databinding.FragmentHolderBinding
-import org.fossify.gallery.extensions.*
-import org.fossify.gallery.fragments.PhotoFragment
-import org.fossify.gallery.fragments.VideoFragment
-import org.fossify.gallery.fragments.ViewPagerFragment
-import org.fossify.gallery.helpers.*
-import org.fossify.gallery.models.Medium
-import java.io.File
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.fossify.commons.dialogs.PropertiesDialog
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.checkAppSideloading
+import org.fossify.commons.extensions.getColoredDrawableWithColor
+import org.fossify.commons.extensions.getDoesFilePathExist
+import org.fossify.commons.extensions.getFilenameFromPath
+import org.fossify.commons.extensions.getFilenameFromUri
+import org.fossify.commons.extensions.getFinalUriFromPath
+import org.fossify.commons.extensions.getParentPath
+import org.fossify.commons.extensions.getRealPathFromURI
+import org.fossify.commons.extensions.getUriMimeType
+import org.fossify.commons.extensions.hideKeyboard
+import org.fossify.commons.extensions.isExternalStorageManager
+import org.fossify.commons.extensions.isGif
+import org.fossify.commons.extensions.isGone
+import org.fossify.commons.extensions.isImageFast
+import org.fossify.commons.extensions.isPortrait
+import org.fossify.commons.extensions.isRawFast
+import org.fossify.commons.extensions.isSvg
+import org.fossify.commons.extensions.isVideoFast
+import org.fossify.commons.extensions.rescanPath
+import org.fossify.commons.extensions.rescanPaths
+import org.fossify.commons.extensions.toHex
+import org.fossify.commons.extensions.toast
+import org.fossify.commons.extensions.viewBinding
+import org.fossify.commons.helpers.IS_FROM_GALLERY
+import org.fossify.commons.helpers.NOMEDIA
+import org.fossify.commons.helpers.REAL_FILE_PATH
+import org.fossify.commons.helpers.ensureBackgroundThread
+import org.fossify.commons.helpers.isRPlus
+import org.fossify.gallery.BuildConfig
+import org.fossify.gallery.R
+import org.fossify.gallery.databinding.FragmentHolderBinding
+import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.hideSystemUI
+import org.fossify.gallery.extensions.openEditor
+import org.fossify.gallery.extensions.openPath
+import org.fossify.gallery.extensions.setAs
+import org.fossify.gallery.extensions.sharePath
+import org.fossify.gallery.extensions.showFileOnMap
+import org.fossify.gallery.extensions.showSystemUI
+import org.fossify.gallery.fragments.PhotoFragment
+import org.fossify.gallery.fragments.VideoFragment
+import org.fossify.gallery.fragments.ViewPagerFragment
+import org.fossify.gallery.helpers.BOTTOM_ACTION_EDIT
+import org.fossify.gallery.helpers.BOTTOM_ACTION_PROPERTIES
+import org.fossify.gallery.helpers.BOTTOM_ACTION_SET_AS
+import org.fossify.gallery.helpers.BOTTOM_ACTION_SHARE
+import org.fossify.gallery.helpers.BOTTOM_ACTION_SHOW_ON_MAP
+import org.fossify.gallery.helpers.IS_IN_RECYCLE_BIN
+import org.fossify.gallery.helpers.IS_VIEW_INTENT
+import org.fossify.gallery.helpers.MEDIUM
+import org.fossify.gallery.helpers.PATH
+import org.fossify.gallery.helpers.SHOW_FAVORITES
+import org.fossify.gallery.helpers.SKIP_AUTHENTICATION
+import org.fossify.gallery.helpers.TYPE_GIFS
+import org.fossify.gallery.helpers.TYPE_IMAGES
+import org.fossify.gallery.helpers.TYPE_PORTRAITS
+import org.fossify.gallery.helpers.TYPE_RAWS
+import org.fossify.gallery.helpers.TYPE_SVGS
+import org.fossify.gallery.helpers.TYPE_VIDEOS
+import org.fossify.gallery.models.Medium
+import java.io.File
 
 open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentListener {
     private var mMedium: Medium? = null
@@ -36,11 +87,15 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
 
     private val binding by viewBinding(FragmentHolderBinding::inflate)
 
+    override val padCutout: Boolean
+        get() = !config.showNotch
+
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupEdgeToEdge(
-            padBottomSystem = listOf(binding.bottomActions.bottomActionsWrapper)
+            padTopSystem = listOf(binding.fragmentViewerAppbar),
+            padBottomSystem = listOf(binding.bottomActions.bottomActionsWrapper),
         )
         if (checkAppSideloading()) {
             return
@@ -180,7 +235,6 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
             }
         }
 
-        checkNotchSupport()
         showSystemUI()
         val bundle = Bundle()
         val file = File(mUri.toString())
@@ -216,7 +270,7 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
             window.attributes = attributes
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(window.decorView) { _, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.fragmentHolder) { _, insets ->
             val systemBarsVisible = insets.isVisible(
                 WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.navigationBars()
             )

@@ -18,15 +18,14 @@ import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Icon
 import android.os.Bundle
 import android.os.Handler
 import android.view.MenuItem
 import android.view.WindowManager
 import android.view.animation.DecelerateInterpolator
-import android.widget.RelativeLayout
 import android.widget.Toast
+import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.exifinterface.media.ExifInterface
@@ -212,18 +211,21 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     private val binding by viewBinding(ActivityMediumBinding::inflate)
 
+    override val padCutout: Boolean
+        get() = !config.showNotch
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupEdgeToEdge(
-            padBottomSystem = listOf(binding.bottomActions.bottomActionsWrapper)
+            padTopSystem = listOf(binding.mediumViewerAppbar),
+            padBottomSystem = listOf(binding.bottomActions.bottomActionsWrapper),
         )
 
         setupOptionsMenu()
         refreshMenuItems()
 
         window.decorView.setBackgroundColor(getProperBackgroundColor())
-        checkNotchSupport()
         (MediaActivity.mMedia.clone() as ArrayList<ThumbnailItem>).filterIsInstanceTo(mMediaFiles, Medium::class.java)
 
         requestMediaPermissions {
@@ -513,7 +515,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         binding.viewPager.offscreenPageLimit = 2
 
         if (config.blackBackground) {
-            binding.viewPager.background = ColorDrawable(Color.BLACK)
+            binding.viewPager.background = Color.BLACK.toDrawable()
         }
 
         if (config.hideSystemUI) {
@@ -524,7 +526,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
             }
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(window.decorView) { _, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.fragmentHolder) { _, insets ->
             val systemBarsVisible = insets.isVisible(
                 WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.navigationBars()
             )
