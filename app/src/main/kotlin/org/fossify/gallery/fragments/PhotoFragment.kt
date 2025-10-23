@@ -19,8 +19,10 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.RelativeLayout
 import androidx.core.graphics.drawable.toBitmapOrNull
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat.Type
+import androidx.core.view.updateLayoutParams
 import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_180
 import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_270
 import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_90
@@ -52,10 +54,12 @@ import it.sephiroth.android.library.exif2.ExifInterface
 import org.apache.sanselan.common.byteSources.ByteSourceInputStream
 import org.apache.sanselan.formats.jpeg.JpegImageParser
 import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.beInvisible
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.fadeIn
+import org.fossify.commons.extensions.fadeOut
 import org.fossify.commons.extensions.getProperBackgroundColor
 import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.getRealPathFromURI
@@ -63,11 +67,11 @@ import org.fossify.commons.extensions.isExternalStorageManager
 import org.fossify.commons.extensions.isPathOnOTG
 import org.fossify.commons.extensions.isVisible
 import org.fossify.commons.extensions.isWebP
-import org.fossify.commons.extensions.navigationBarHeight
 import org.fossify.commons.extensions.onGlobalLayout
 import org.fossify.commons.extensions.portrait
 import org.fossify.commons.extensions.realScreenSize
 import org.fossify.commons.extensions.toast
+import org.fossify.commons.helpers.DEFAULT_ANIMATION_DURATION
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isRPlus
 import org.fossify.gallery.R
@@ -77,6 +81,7 @@ import org.fossify.gallery.activities.ViewPagerActivity
 import org.fossify.gallery.adapters.PortraitPhotosAdapter
 import org.fossify.gallery.databinding.PagerPhotoItemBinding
 import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.getBottomActionsHeight
 import org.fossify.gallery.extensions.sendFakeClick
 import org.fossify.gallery.helpers.ColorModeHelper
 import org.fossify.gallery.helpers.HIGH_TILE_DPI
@@ -203,6 +208,14 @@ class PhotoFragment : ViewPagerFragment() {
             }
         }
 
+        ViewCompat.setOnApplyWindowInsetsListener(binding.photoHolder) { _, insets ->
+            val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
+            binding.bottomActionsDummy.updateLayoutParams<ViewGroup.LayoutParams> {
+                height = resources.getBottomActionsHeight() + system.bottom
+            }
+            insets
+        }
+
         checkScreenDimensions()
         storeStateVariables()
         if (!mIsFragmentVisible && activity is PhotoActivity) {
@@ -242,7 +255,6 @@ class PhotoFragment : ViewPagerFragment() {
             }
         }
 
-        mIsFullscreen = requireActivity().window.decorView.systemUiVisibility and View.SYSTEM_UI_FLAG_FULLSCREEN == View.SYSTEM_UI_FLAG_FULLSCREEN
         loadImage()
         initExtendedDetails()
         mWasInit = true
@@ -623,7 +635,6 @@ class PhotoFragment : ViewPagerFragment() {
             }
 
             binding.photoPortraitStripe.adapter = adapter
-            setupStripeBottomMargin()
 
             val coverIndex = getCoverImageIndex(paths)
             if (coverIndex != -1) {
@@ -656,14 +667,6 @@ class PhotoFragment : ViewPagerFragment() {
             paths.add("")
         }
         return paths
-    }
-
-    private fun setupStripeBottomMargin() {
-        var bottomMargin = requireContext().navigationBarHeight + resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
-        if (requireContext().config.bottomActions) {
-            bottomMargin += resources.getDimension(R.dimen.bottom_actions_height).toInt()
-        }
-        (binding.photoPortraitStripeWrapper.layoutParams as RelativeLayout.LayoutParams).bottomMargin = bottomMargin
     }
 
     private fun getCoverImageIndex(paths: ArrayList<String>): Int {
@@ -898,18 +901,9 @@ class PhotoFragment : ViewPagerFragment() {
     private fun initExtendedDetails() {
         if (requireContext().config.showExtendedDetails) {
             binding.photoDetails.apply {
-                beInvisible()   // make it invisible so we can measure it, but not show yet
                 text = getMediumExtendedDetails(mMedium)
-                onGlobalLayout {
-                    if (isAdded) {
-                        val realY = getExtendedDetailsY(height)
-                        if (realY > 0) {
-                            y = realY
-                            beVisibleIf(text.isNotEmpty())
-                            alpha = if (!requireContext().config.hideExtendedDetails || !mIsFullscreen) 1f else 0f
-                        }
-                    }
-                }
+                beVisibleIf(text.isNotEmpty())
+                alpha = if (!requireContext().config.hideExtendedDetails || !mIsFullscreen) 1f else 0f
             }
         } else {
             binding.photoDetails.beGone()
@@ -939,12 +933,16 @@ class PhotoFragment : ViewPagerFragment() {
         binding.apply {
             photoDetails.apply {
                 if (mStoredShowExtendedDetails && isVisible() && context != null && resources != null) {
-                    animate().y(getExtendedDetailsY(height))
-
                     if (mStoredHideExtendedDetails) {
                         animate().alpha(if (isFullscreen) 0f else 1f).start()
                     }
                 }
+            }
+
+            if (isFullscreen) {
+                bottomActionsDummy.fadeOut(DEFAULT_ANIMATION_DURATION)
+            } else {
+                bottomActionsDummy.beVisible()
             }
 
             if (mIsPanorama) {
@@ -956,13 +954,6 @@ class PhotoFragment : ViewPagerFragment() {
                 photoPortraitStripeWrapper.animate().alpha(if (isFullscreen) 0f else 1f).start()
             }
         }
-    }
-
-    private fun getExtendedDetailsY(height: Int): Float {
-        val smallMargin = context?.resources?.getDimension(org.fossify.commons.R.dimen.small_margin) ?: return 0f
-        val fullscreenOffset = smallMargin + if (mIsFullscreen) 0 else requireContext().navigationBarHeight
-        val actionsHeight = if (requireContext().config.bottomActions && !mIsFullscreen) resources.getDimension(R.dimen.bottom_actions_height) else 0f
-        return requireContext().realScreenSize.y - height - actionsHeight - fullscreenOffset
     }
 
     private fun applyProperColorMode(resource: Drawable?) {

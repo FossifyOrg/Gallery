@@ -18,12 +18,13 @@
         android:id="@+id/top_shadow"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:minHeight="@dimen/default_status_action_height"
         android:layout_alignBottom="@id/medium_viewer_appbar"
         android:layout_alignParentTop="true"
         android:background="@drawable/gradient_background_flipped"
         android:contentDescription="@null" />
 
-    <org.fossify.commons.views.MyAppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/medium_viewer_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,5 +40,5 @@
             app:menu="@menu/menu_viewpager"
             app:navigationIcon="@drawable/ic_arrow_left_vector" />
 
-    </org.fossify.commons.views.MyAppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 </RelativeLayout>

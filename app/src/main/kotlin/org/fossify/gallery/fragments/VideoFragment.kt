@@ -18,11 +18,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.view.children
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat.Type
+import androidx.core.view.updateLayoutParams
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -44,31 +45,29 @@ import com.bumptech.glide.Glide
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.beInvisible
-import org.fossify.commons.extensions.beInvisibleIf
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.fadeIn
+import org.fossify.commons.extensions.fadeOut
 import org.fossify.commons.extensions.getDuration
 import org.fossify.commons.extensions.getFormattedDuration
 import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.getVideoResolution
 import org.fossify.commons.extensions.isGone
 import org.fossify.commons.extensions.isVisible
-import org.fossify.commons.extensions.navigationBarHeight
-import org.fossify.commons.extensions.navigationBarWidth
 import org.fossify.commons.extensions.onGlobalLayout
-import org.fossify.commons.extensions.realScreenSize
 import org.fossify.commons.extensions.setDrawablesRelativeWithIntrinsicBounds
 import org.fossify.commons.extensions.showErrorToast
 import org.fossify.commons.extensions.updateTextColors
+import org.fossify.commons.helpers.DEFAULT_ANIMATION_DURATION
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.gallery.R
 import org.fossify.gallery.activities.VideoActivity
 import org.fossify.gallery.databinding.PagerVideoItemBinding
 import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.getBottomActionsHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
-import org.fossify.gallery.extensions.hasNavBar
 import org.fossify.gallery.extensions.mute
 import org.fossify.gallery.extensions.parseFileChannel
 import org.fossify.gallery.extensions.unmute
@@ -220,6 +219,15 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                 false
             }
         }
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.videoHolder) { _, insets ->
+            val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
+            binding.bottomActionsDummy.updateLayoutParams<ViewGroup.LayoutParams> {
+                height = resources.getBottomActionsHeight() + system.bottom
+            }
+            insets
+        }
+
         mView = binding.root
 
         if (!arguments.getBoolean(SHOULD_INIT_FRAGMENT, true)) {
@@ -234,8 +242,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             mIsFragmentVisible = true
         }
 
-        mIsFullscreen =
-            activity.window.decorView.systemUiVisibility and View.SYSTEM_UI_FLAG_FULLSCREEN == View.SYSTEM_UI_FLAG_FULLSCREEN
         initTimeHolder()
         // checkIfPanorama() TODO: Implement panorama using a FOSS library
 
@@ -361,8 +367,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         setVideoSize()
-        initTimeHolder()
-        checkExtendedDetails()
         binding.videoSurfaceFrame.onGlobalLayout {
             binding.videoSurfaceFrame.controller.resetState()
         }
@@ -558,18 +562,9 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private fun checkExtendedDetails() {
         if (mConfig.showExtendedDetails) {
             binding.videoDetails.apply {
-                beInvisible()   // make it invisible so we can measure it, but not show yet
                 text = getMediumExtendedDetails(mMedium)
-                onGlobalLayout {
-                    if (isAdded) {
-                        val realY = getExtendedDetailsY(height)
-                        if (realY > 0) {
-                            y = realY
-                            beVisibleIf(text.isNotEmpty())
-                            alpha = if (!mConfig.hideExtendedDetails || !mIsFullscreen) 1f else 0f
-                        }
-                    }
-                }
+                beVisibleIf(text.isNotEmpty())
+                alpha = if (!mConfig.hideExtendedDetails || !mIsFullscreen) 1f else 0f
             }
         } else {
             binding.videoDetails.beGone()
@@ -577,21 +572,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun initTimeHolder() {
-        var right = 0
-        var bottom = requireContext().navigationBarHeight
-        if (mConfig.bottomActions) {
-            bottom += resources.getDimension(R.dimen.bottom_actions_height).toInt()
-        }
-
-        if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE && activity?.hasNavBar() == true) {
-            right += requireActivity().navigationBarWidth
-        }
-
-        (mTimeHolder.layoutParams as RelativeLayout.LayoutParams).apply {
-            bottomMargin = bottom
-            rightMargin = right
-        }
-        mTimeHolder.beInvisibleIf(mIsFullscreen)
+        mTimeHolder.beGoneIf(mIsFullscreen)
+        mTimeHolder.alpha = if (mIsFullscreen) 0f else 1f
     }
 
     private fun checkIfPanorama() {
@@ -613,10 +595,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
 
     override fun fullscreenToggled(isFullscreen: Boolean) {
         mIsFullscreen = isFullscreen
-        val newAlpha = if (isFullscreen) 0f else 1f
-        if (!mIsFullscreen) {
-            mTimeHolder.beVisible()
-        }
 
         mSeekBar.setOnSeekBarChangeListener(if (mIsFullscreen) null else this)
         arrayOf(
@@ -629,13 +607,18 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             it.isClickable = !mIsFullscreen
         }
 
-        mTimeHolder.animate().alpha(newAlpha).start()
+        if (isFullscreen) {
+            mTimeHolder.fadeOut(DEFAULT_ANIMATION_DURATION)
+            binding.bottomActionsDummy.fadeOut(DEFAULT_ANIMATION_DURATION)
+        } else {
+            binding.bottomActionsDummy.beVisible()
+            mTimeHolder.fadeIn(DEFAULT_ANIMATION_DURATION)
+        }
+
         binding.videoDetails.apply {
             if (mStoredShowExtendedDetails && isVisible() && context != null && resources != null) {
-                animate().y(getExtendedDetailsY(height))
-
                 if (mStoredHideExtendedDetails) {
-                    animate().alpha(newAlpha).start()
+                    animate().alpha(if (isFullscreen) 0f else 1f).start()
                 }
             }
         }
@@ -668,24 +651,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         binding.bottomVideoTimeHolder.videoPlaybackSpeed.text =
             "${DecimalFormat("#.##").format(speed)}x"
         mExoPlayer?.setPlaybackSpeed(speed)
-    }
-
-    private fun getExtendedDetailsY(height: Int): Float {
-        val smallMargin =
-            context?.resources?.getDimension(org.fossify.commons.R.dimen.small_margin) ?: return 0f
-        val fullscreenOffset =
-            smallMargin + if (mIsFullscreen) 0 else requireContext().navigationBarHeight
-        var actionsHeight = 0f
-        if (!mIsFullscreen) {
-            if (binding.bottomVideoTimeHolder.root.children.any { isVisible }) {
-                actionsHeight += binding.bottomVideoTimeHolder.root.height
-            }
-
-            if (mConfig.bottomActions) {
-                actionsHeight += resources.getDimension(R.dimen.bottom_actions_height)
-            }
-        }
-        return requireContext().realScreenSize.y - height - actionsHeight - fullscreenOffset
     }
 
     private fun skip(forward: Boolean) {
