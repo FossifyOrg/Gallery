@@ -12,7 +12,7 @@
     <string name="all_folders">Dossiers</string>
     <string name="folder_view">Basculer vers l\'affichage par dossiers</string>
     <string name="other_folder">Autre dossier</string>
-    <string name="show_on_map">Afficher sur la carte</string>
+    <string name="show_on_map">Afficher sur une carte</string>
     <string name="unknown_location">Position inconnue</string>
     <string name="brightness">Luminosité</string>
     <string name="lock_orientation">Verrouiller la rotation</string>
@@ -42,7 +42,7 @@
     <string name="hide_folder_description">Cette option cache le dossier en y ajoutant un fichier \".nomedia\", elle cachera aussi tous les sous-dossiers. Vous pouvez afficher ces dossiers avec l\'option \"Afficher les fichiers cachés\" dans les paramètres. Continuer ?</string>
     <string name="exclude_folder_description">Ceci exclura la sélection et ses sous-dossiers de Fossify Gallery uniquement. Vous pouvez gérer les dossiers exclus dans Paramètres.</string>
     <string name="exclude_folder_parent">Exclure un dossier parent \?</string>
-    <string name="excluded_activity_placeholder">Exclure les dossiers va les cacher avec leur sous-dossiers uniquement dans Fossify Gallery, ils seront toujours visibles dans les autres applications.\n\nSi vous voulez aussi les cacher des autres applications, utilisez la fonction Masquer.</string>
+    <string name="excluded_activity_placeholder">Exclure les dossiers va les cacher (ainsi que leur sous-dossiers) uniquement dans Fossify Gallery, ils seront toujours visibles dans les autres applications.\n\nSi vous voulez aussi les cacher des autres applications, utilisez la fonction \"Cacher\".</string>
     <string name="hidden_folders">Dossiers cachés</string>
     <string name="manage_hidden_folders">Gérer les dossiers cachés</string>
     <string name="hidden_folders_placeholder">Il semblerait que vous n\'ayez pas de dossier caché par un fichier .nomedia.</string>
@@ -104,8 +104,8 @@
     <string name="set_as_wallpaper">Définir comme fond d\'écran</string>
     <string name="set_as_wallpaper_failed">Échec de la définition en tant que fond d\'écran</string>
     <string name="set_as_wallpaper_with">Définir comme fond d\'écran avec :</string>
-    <string name="setting_wallpaper">Définition du fond d\'écran en cours…</string>
-    <string name="wallpaper_set_successfully">Fond d\'écran défini</string>
+    <string name="setting_wallpaper">Modification du fond d\'écran en cours…</string>
+    <string name="wallpaper_set_successfully">Fond d\'écran défini avec succès</string>
     <string name="portrait_aspect_ratio">Rapport d\'affichage portrait</string>
     <string name="landscape_aspect_ratio">Rapport d\'affichage paysage</string>
     <string name="home_screen">Écran d\'accueil</string>
@@ -126,7 +126,7 @@
     <string name="slideshow_ended">Diaporama terminé</string>
     <string name="no_media_for_slideshow">Aucun média trouvé pour le diaporama</string>
     <string name="group_direct_subfolders">Mode sous-dossiers</string>
-    <string name="group_by">Grouper par</string>
+    <string name="group_by">Grouper par...</string>
     <string name="do_not_group_files">Ne pas grouper les fichiers</string>
     <string name="by_folder">Dossier</string>
     <string name="by_last_modified">Date de modification</string>
@@ -137,7 +137,7 @@
     <string name="by_date_taken_monthly">Date de prise (par mois)</string>
     <string name="by_file_type">Type de fichier</string>
     <string name="show_file_count_section_header">Afficher le nombre d\'éléments dans les entêtes</string>
-    <string name="grouping_and_sorting">Notez que « Grouper par » et « Trier par » sont deux modes indépendants</string>
+    <string name="grouping_and_sorting">Notez que \"Grouper par\" et \"Trier par\" sont deux modes indépendants</string>
     <string name="folder_on_widget">Dossier affiché dans le widget :</string>
     <string name="show_folder_name">Afficher le nom du dossier</string>
     <string name="autoplay_videos">Lecture automatique des vidéos</string>
@@ -171,7 +171,7 @@
     <string name="show_recycle_bin_last">Afficher la corbeille en fin de liste sur l\'écran principal</string>
     <string name="allow_down_gesture">Fermer la vue plein écran par un geste vers le bas</string>
     <string name="allow_one_to_one_zoom">Permettre un zoom avant 1:1 par double appui</string>
-    <string name="open_videos_on_separate_screen">Ouvrir les vidéos dans une application externe</string>
+    <string name="open_videos_on_separate_screen">Ouvrir les vidéos dans une fenêtre indépendante</string>
     <string name="show_notch">Afficher une encoche si disponible</string>
     <string name="allow_rotating_gestures">Pivoter les images par gestes</string>
     <string name="file_loading_priority">Priorité de chargement des fichiers</string>
@@ -192,7 +192,7 @@
     <string name="rounded_corners">Arrondi</string>
     <string name="export_favorite_paths">Exporter les favoris</string>
     <string name="import_favorite_paths">Importer des favoris</string>
-    <string name="paths_imported_successfully">Favoris importés</string>
+    <string name="paths_imported_successfully">Favoris importés avec succès</string>
     <string name="media_management_prompt">Pour vous assurer que toutes les opérations de fichiers fonctionnent de manière fiable, veuillez faire de cette application l\'application de gestion des médias dans les paramètres de votre appareil.</string>
     <string name="password_protect_excluded">Protéger la visibilité des dossiers exclus par mot de passe</string>
     <string name="media_management_manual">Quelque chose s\'est mal passé, veuillez aller dans les paramètres de votre appareil - Applis - Accès spécial des applis - Applis de gestion des fichiers multimédias et autorisez cette application à gérer les médias.</string>
@@ -218,12 +218,12 @@
     <string name="faq_3_text">Vous devez simplement effectuer un appui prolongé sur le dossier en question et choisir \"Épingler\" en haut dans le menu d\'actions. Vous pouvez en épingler plusieurs. Les éléments épinglés seront alors triés selon l\'ordre par défaut.</string>
     <string name="faq_4_title">Comment avancer rapidement dans les vidéos \?</string>
     <string name="faq_4_text">Appuyez deux fois sur le côté de l\'écran, ou appuyez sur la valeur de durée actuelle ou maximale près de la barre de recherche. Si vous activez l\'ouverture des vidéos sur un écran séparé dans les paramètres de l\'application, vous pouvez également utiliser des gestes horizontaux.</string>
-    <string name="faq_5_title">Quelle est la différence entre masquer et exclure un dossier ?</string>
+    <string name="faq_5_title">Quelle est la différence entre cacher et exclure un dossier ?</string>
     <string name="faq_5_text">\"Exclure\" empêche l\'affichage du dossier seulement dans Fossify Gallery, tandis que \"Masquer\" fonctionne au niveau du système et cache également le dossier des autres galeries. Cela fonctionne en créant un fichier vide \".nomedia\" dans le dossier donné, que vous pouvez ensuite supprimer avec n\'importe quel gestionnaire de fichier. Notez que certains appareils ne permettent pas de cacher des dossiers comme Appareil photo, Captures d\'écran et Téléchargements.</string>
     <string name="faq_6_title">Pourquoi des dossiers avec des pochettes d\'albums musicaux ou des miniatures d\'images sont affichés ?</string>
     <string name="faq_6_text">Il est possible que des dossiers qui ne devraient pas être affichés le soient. Vous pouvez les exclure facilement en les sélectionnant par un appui prolongé, puis en choisissant l\'option \"Exclure\", après quoi vous pouvez aussi sélectionner le dossier parent, ce qui devrait éviter l\'apparition de dossiers similaires.</string>
     <string name="faq_7_title">Un dossier avec des images n\'apparaît pas. Que faire \?</string>
-    <string name="faq_7_text">Cela peut arriver pour de multiples raisons, mais c\'est facile à résoudre. Allez dans \"Paramètres\", puis \"Gérer les dossiers ajoutés\", appuyez sur + et sélectionnez le dossier voulu.</string>
+    <string name="faq_7_text">Cela peut arriver pour de multiples raisons, mais c\'est facile à résoudre. Allez dans \"Paramètres\", puis \"Gérer les dossiers ajoutés\", appuyez sur \"+\" et sélectionnez le dossier voulu.</string>
     <string name="faq_8_title">Comment faire apparaître uniquement certains dossiers \?</string>
     <string name="faq_8_text">Ajouter un dossier dans les Dossiers ajoutés rend visible l\'ensemble du contenu du dossier. Pour exclure certains dossiers, il faut aller dans \"Paramètres\", puis \"Gérer les dossiers exclus\", exclure le dossier racine \"/\", puis ajouter les dossiers souhaités dans \"Paramètres\", puis \"Gérer les dossiers ajoutés\". Seuls les dossiers sélectionnés seront visibles parce que les exclusions et inclusions sont récursives, et si un dossier est à la fois exclus et inclus, il sera affiché.</string>
     <string name="faq_10_title">Puis-je recadrer des images avec cette application \?</string>
@@ -235,15 +235,15 @@
     <string name="faq_13_title">Je vois des bandes de couleurs sur les images. Comment puis-je améliorer la qualité \?</string>
     <string name="faq_13_text">La solution actuelle d\'affichage des images fonctionne bien dans la grande majorité des cas, mais si vous voulez une qualité d\'image encore meilleure, vous pouvez activer l\'option "Afficher les images dans la meilleure qualité possible" dans la section "Niveau de zoom" des paramètres de l\'application.</string>
     <string name="faq_14_title">J\'ai caché un fichier ou un dossier. Comment puis-je en rétablir l\'affichage \?</string>
-    <string name="faq_14_text">Vous pouvez soit appuyer sur l\'option "Afficher les fichiers cachés" du menu de l\'écran principal, ou appuyer sur le bouton "Afficher les fichiers cachés" dans les paramètres de l\'application. Si vous voulez rétablir leur affichage, effectuez un appui prolongé dessus et appuyez sur le symbole "Œil" permettant l\'affichage. Les dossiers sont cachés en ajoutant un fichier .nomedia à leur racine, vous pouvez également supprimer ce fichier avec n\'importe quel explorateur de fichiers. Notez que le masquage fonctionne de manière récursive, donc si vous masquez un dossier, tous les sous-dossiers seront également masqués. Donc, pour afficher les sous-dossiers, vous devez afficher le dossier parent.</string>
-    <string name="faq_15_title">Pourquoi l\'application prend-elle tant de place \?</string>
+    <string name="faq_14_text">Vous pouvez soit appuyer sur l\'option \"Afficher les fichiers cachés\" du menu de l\'écran principal, ou appuyer sur le bouton \"Afficher les fichiers cachés\" dans les paramètres de l\'application. Si vous voulez rétablir leur affichage, effectuez un appui prolongé dessus et appuyez sur le symbole \"Œil\" permettant l\'affichage. Les dossiers sont cachés en ajoutant un fichier \".nomedia\" à leur racine, vous pouvez également supprimer ce fichier avec n\'importe quel explorateur de fichiers. Notez que le masquage fonctionne de manière récursive, donc si vous cachez un dossier, tous les sous-dossiers seront également cachés. Donc, pour afficher les sous-dossiers, vous devez afficher le dossier parent.</string>
+    <string name="faq_15_title">Pourquoi l\'application prend autant tant de place ?</string>
     <string name="faq_15_text">Le cache d\'application peut prendre jusqu\'à 250 Mo pour accélérer le chargement des images. Si l\'application occupe encore plus d\'espace, c\'est probablement parce que vous avez des éléments dans la corbeille. Ces fichiers comptent pour la taille de l\'application. Vous pouvez vider la corbeille en l\'ouvrant et en supprimant tous les fichiers ou à partir des paramètres de l\'application. Chaque fichier de la corbeille est automatiquement supprimé après 30 jours.</string>
     <string name="faq_16_title">Qu\'est ce qui se passe avec les fichiers et dossiers cachés et pourquoi je ne peux plus les voir \?</string>
-    <string name="faq_16_text">À partir d\'Android 11, vous ne pouvez plus cacher ou afficher des fichiers ou des dossiers, et vous ne pouvez pas non plus voir ceux qui sont masqués dans les applications de la galerie. Vous devrez utiliser un gestionnaire de fichiers pour cela.</string>
+    <string name="faq_16_text">À partir d\'Android 11, vous ne pouvez plus cacher ou afficher des fichiers ou des dossiers, et vous ne pouvez pas non plus voir ceux qui sont cachés dans les applications de la galerie. Vous devrez utiliser un gestionnaire de fichiers pour cela.</string>
     <string name="faq_16_text_extra">Vous pouvez également accorder à cette galerie l\'accès à tous les fichiers via les paramètres de votre appareil, ce qui nous permettra de montrer les éléments cachés et de rendre les opérations sur les fichiers plus fiables en général.</string>
     <string name="faq_17_title">Pourquoi est-ce que je ne peux plus inclure des dossiers manquants ?</string>
     <string name="faq_17_text">Cette fonctionnalité ne fonctionne plus en raison des modifications apportées au système avec Android 11. L\'application ne peut plus parcourir les dossiers réels, elle s\'appuie sur le MediaStore pour récupérer les données.</string>
-    <string name="faq_18_title">Pourquoi des publicités apparaissent-elles pendant la lecture d\'une vidéo ?</string>
+    <string name="faq_18_title">Pourquoi des publicités apparaissent elles pendant la lecture d\'une vidéo ?</string>
     <string name="faq_18_text">Nos applications ne comportent aucune publicité. Si vous en voyez pendant la lecture d\'une vidéo, vous devez sûrement utiliser le lecteur vidéo d\'une autre application. Essayez de trouver le lecteur vidéo par défaut dans les paramètres de votre appareil, puis faites "Supprimer les valeurs par défaut". Lors du prochain lancement d\'une vidéo, une invite de sélection d\'application s\'affichera, et vous pourrez choisir l\'application que vous souhaitez utiliser.</string>
     <string name="volume">Volume</string>
     <string name="images">Images</string>
@@ -256,11 +256,12 @@
     <string name="unsupported_format">Format non pris en charge.</string>
     <string name="playback_speed">Vitesse de lecture</string>
     <string name="failed_to_load_media">Échec de chargement du média.</string>
-    <string name="keep_screen_on_fullscreen_photos">Garder l\'écran allumé lors de l\'affichage de photos en plein écran</string>
+    <string name="keep_screen_on_fullscreen_photos">Garder l\'écran allumé lors de l\'affichage en plein écran</string>
     <plurals name="restore_confirmation">
         <item quantity="one">Êtes-vous sûr de vouloir restaurer %d fichier ?</item>
         <item quantity="many">Êtes-vous sûr de vouloir restaurer %d fichiers ?</item>
         <item quantity="other">Êtes-vous sûr de vouloir restaurer %d fichiers ?</item>
     </plurals>
     <string name="force_landscape_reverse">Forcer le mode paysage (inversé)</string>
+    <string name="overwrite_original">Remplacer l\'original</string>
 </resources>
