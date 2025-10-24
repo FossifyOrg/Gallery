@@ -263,4 +263,5 @@
         <item quantity="other">Kas sa oled kindel, et soovid taastada %d faili?</item>
     </plurals>
     <string name="force_landscape_reverse">Kasuta rõhtvaadet (tagurpidi)</string>
+    <string name="overwrite_original">Kirjuta originaalfail üle</string>
 </resources>

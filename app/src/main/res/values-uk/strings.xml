@@ -267,4 +267,5 @@
         <item quantity="other">Ви впевнені, що хочете відновити %d файлів?</item>
     </plurals>
     <string name="force_landscape_reverse">Примусовий ландшафт (зворотний)</string>
+    <string name="overwrite_original">Перезаписати оригінал</string>
 </resources>

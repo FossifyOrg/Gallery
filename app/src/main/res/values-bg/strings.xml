@@ -259,4 +259,5 @@
         <item quantity="other">Желаете ли %d файла да бъдат възстановени?</item>
     </plurals>
     <string name="force_landscape_reverse">Пейзаж (обърнат)</string>
+    <string name="overwrite_original">Презаписване на изходния файл</string>
 </resources>

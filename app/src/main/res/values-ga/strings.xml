@@ -265,4 +265,5 @@
         <item quantity="other">An bhfuil tú cinnte gur mian leat %d comhaid a athchóiriú?</item>
     </plurals>
     <string name="force_landscape_reverse">Tírdhreach fórsaithe (droim ar ais)</string>
+    <string name="overwrite_original">Forscríobh an bhunleagan</string>
 </resources>
