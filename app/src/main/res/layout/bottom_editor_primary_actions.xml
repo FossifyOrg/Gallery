@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bottom_editor_primary_actions_wrapper"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/bottom_actions_height"
-    android:layout_alignParentBottom="true">
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:minHeight="@dimen/bottom_actions_height">
 
     <ImageView
         android:id="@+id/bottom_primary_filter"

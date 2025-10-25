@@ -102,6 +102,9 @@ class EditActivity : SimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(
+            padBottomSystem = listOf(binding.bottomEditorPrimaryActions.root)
+        )
 
         if (checkAppSideloading()) {
             return
