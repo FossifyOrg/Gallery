@@ -303,15 +303,16 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         mTempShowHiddenHandler.removeCallbacksAndMessages(null)
     }
 
-    override fun onBackPressed() {
-        if (binding.mediaMenu.isSearchOpen) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (binding.mediaMenu.isSearchOpen) {
             binding.mediaMenu.closeSearch()
+            true
         } else {
             if (config.showAll) {
                 appLockManager.lock()
             }
 
-            super.onBackPressed()
+            false
         }
     }
 
@@ -475,7 +476,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             if (!mShowAll) {
                 binding.mediaMenu.toggleForceArrowBackIcon(true)
                 binding.mediaMenu.onNavigateBackClickListener = {
-                    onBackPressed()
+                    performDefaultBack()
                 }
             }
 
