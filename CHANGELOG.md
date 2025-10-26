@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-
 - Compatibility updates for Android 15 & 16
+
+### Fixed
+- Fixed overlap between extended details and bottom actions ([#418])
 
 ## [1.7.0] - 2025-10-16
 ### Added
@@ -188,6 +190,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#365]: https://github.com/FossifyOrg/Gallery/issues/365
 [#375]: https://github.com/FossifyOrg/Gallery/issues/375
 [#379]: https://github.com/FossifyOrg/Gallery/issues/379
+[#418]: https://github.com/FossifyOrg/Gallery/issues/418
 [#447]: https://github.com/FossifyOrg/Gallery/issues/447
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
 [#525]: https://github.com/FossifyOrg/Gallery/issues/525
