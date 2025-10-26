@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Compatibility updates for Android 15 & 16
+
 ## [1.7.0] - 2025-10-16
 ### Added
 - Option to overwrite the original image when saving edits ([#62])
