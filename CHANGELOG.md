@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed overlap between extended details and bottom actions ([#418])
+- Fixed loading big JXL images ([#622])
 
 ## [1.7.0] - 2025-10-16
 ### Added
@@ -198,6 +199,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#565]: https://github.com/FossifyOrg/Gallery/issues/565
 [#567]: https://github.com/FossifyOrg/Gallery/issues/567
 [#621]: https://github.com/FossifyOrg/Gallery/issues/621
+[#622]: https://github.com/FossifyOrg/Gallery/issues/622
 [#630]: https://github.com/FossifyOrg/Gallery/issues/630
 [#642]: https://github.com/FossifyOrg/Gallery/issues/642
 [#648]: https://github.com/FossifyOrg/Gallery/issues/648
