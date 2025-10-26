@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/photo_holder"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
 
     <com.alexvasilkov.gestures.GestureImageView
         android:id="@+id/gestures_view"
@@ -50,14 +51,25 @@
         android:id="@+id/photo_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@id/bottom_actions_dummy"
         android:layout_alignParentStart="true"
-        android:layout_marginHorizontal="@dimen/medium_margin"
+        android:layout_marginHorizontal="@dimen/activity_margin"
+        android:layout_marginVertical="@dimen/activity_margin"
         android:background="@drawable/extended_details_background"
         android:padding="@dimen/medium_margin"
         android:textColor="@color/theme_dark_text_color"
         android:textSize="@dimen/smaller_text_size"
         android:visibility="gone"
-        tools:text="My image\nAnother line" />
+        tools:text="My image\nAnother line"
+        tools:visibility="visible" />
+
+    <Space
+        android:id="@+id/bottom_actions_dummy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_actions_height"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="@dimen/normal_margin" />
 
     <org.fossify.gallery.views.MediaSideScroll
         android:id="@+id/photo_brightness_controller"
@@ -86,7 +98,7 @@
         android:id="@+id/photo_portrait_stripe_wrapper"
         android:layout_width="match_parent"
         android:layout_height="@dimen/portrait_photos_stripe_height"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/bottom_actions_dummy"
         android:visibility="invisible">
 
         <androidx.recyclerview.widget.RecyclerView

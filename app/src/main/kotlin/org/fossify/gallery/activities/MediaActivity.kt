@@ -112,6 +112,8 @@ import java.io.File
 import java.io.IOException
 
 class MediaActivity : SimpleActivity(), MediaOperationsListener {
+    override var isSearchBarEnabled = true
+    
     private val LAST_MEDIA_CHECK_PERIOD = 3000L
 
     private var mPath = ""
@@ -149,7 +151,6 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
@@ -172,11 +173,9 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         setupOptionsMenu()
         refreshMenuItems()
         storeStateVariables()
-        updateMaterialActivityViews(
-            mainCoordinatorLayout = binding.mediaCoordinator,
-            nestedView = binding.mediaGrid,
-            useTransparentNavigation = !config.scrollHorizontally,
-            useTopSearchMenu = true
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.mediaMenu),
+            padBottomImeAndSystem = listOf(binding.mediaGrid)
         )
 
         if (mShowAll) {
@@ -304,15 +303,16 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         mTempShowHiddenHandler.removeCallbacksAndMessages(null)
     }
 
-    override fun onBackPressed() {
-        if (binding.mediaMenu.isSearchOpen) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (binding.mediaMenu.isSearchOpen) {
             binding.mediaMenu.closeSearch()
+            true
         } else {
             if (config.showAll) {
                 appLockManager.lock()
             }
 
-            super.onBackPressed()
+            false
         }
     }
 
@@ -330,7 +330,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         val isDefaultFolder = !config.defaultFolder.isEmpty()
                 && File(config.defaultFolder).compareTo(File(mPath)) == 0
 
-        binding.mediaMenu.getToolbar().menu.apply {
+        binding.mediaMenu.requireToolbar().menu.apply {
             findItem(R.id.group).isVisible = !config.scrollHorizontally
 
             findItem(R.id.empty_recycle_bin).isVisible = mPath == RECYCLE_BIN
@@ -358,7 +358,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun setupOptionsMenu() {
-        binding.mediaMenu.getToolbar().inflateMenu(R.menu.menu_media)
+        binding.mediaMenu.requireToolbar().inflateMenu(R.menu.menu_media)
         binding.mediaMenu.toggleHideOnScroll(!config.scrollHorizontally)
         binding.mediaMenu.setupMenu()
 
@@ -368,7 +368,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             binding.mediaRefreshLayout.isEnabled = text.isEmpty() && config.enablePullToRefresh
         }
 
-        binding.mediaMenu.getToolbar().setOnMenuItemClickListener { menuItem ->
+        binding.mediaMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.sort -> showSortingDialog()
                 R.id.filter -> showFilterMediaDialog()
@@ -411,7 +411,6 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun updateMenuColors() {
-        updateStatusbarColor(getProperBackgroundColor())
         binding.mediaMenu.updateColors()
     }
 
@@ -477,7 +476,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             if (!mShowAll) {
                 binding.mediaMenu.toggleForceArrowBackIcon(true)
                 binding.mediaMenu.onNavigateBackClickListener = {
-                    onBackPressed()
+                    performDefaultBack()
                 }
             }
 

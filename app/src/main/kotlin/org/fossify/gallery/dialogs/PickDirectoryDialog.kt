@@ -1,22 +1,39 @@
 package org.fossify.gallery.dialogs
 
 import android.graphics.Color
-import android.view.KeyEvent.ACTION_UP
-import android.view.KeyEvent.KEYCODE_BACK
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import org.fossify.commons.activities.BaseSimpleActivity
 import org.fossify.commons.dialogs.FilePickerDialog
-import org.fossify.commons.extensions.*
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beInvisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.getAlertDialogBuilder
+import org.fossify.commons.extensions.getDefaultCopyDestinationPath
+import org.fossify.commons.extensions.getProperPrimaryColor
+import org.fossify.commons.extensions.handleHiddenFolderPasswordProtection
+import org.fossify.commons.extensions.handleLockedFolderOpening
+import org.fossify.commons.extensions.hideKeyboard
+import org.fossify.commons.extensions.isGone
+import org.fossify.commons.extensions.isInDownloadDir
+import org.fossify.commons.extensions.isRestrictedWithSAFSdk30
+import org.fossify.commons.extensions.setupDialogStuff
+import org.fossify.commons.extensions.toast
 import org.fossify.commons.helpers.VIEW_TYPE_GRID
 import org.fossify.commons.views.MyGridLayoutManager
 import org.fossify.commons.views.MySearchMenu
 import org.fossify.gallery.R
 import org.fossify.gallery.adapters.DirectoryAdapter
 import org.fossify.gallery.databinding.DialogDirectoryPickerBinding
-import org.fossify.gallery.extensions.*
+import org.fossify.gallery.extensions.addTempFolderIfNeeded
+import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.getCachedDirectories
+import org.fossify.gallery.extensions.getDirsToShow
+import org.fossify.gallery.extensions.getDistinctPath
+import org.fossify.gallery.extensions.getSortedDirectories
 import org.fossify.gallery.models.Directory
 
 class PickDirectoryDialog(
@@ -39,7 +56,7 @@ class PickDirectoryDialog(
     private val config = activity.config
     private val searchView = binding.folderSearchView
     private val searchEditText = searchView.binding.topToolbarSearch
-    private val searchViewAppBarLayout = searchView.binding.topAppBarLayout
+    private val searchBarContainer = searchView.binding.searchBarContainer
 
     init {
         (binding.directoriesGrid.layoutManager as MyGridLayoutManager).apply {
@@ -54,14 +71,6 @@ class PickDirectoryDialog(
         val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(org.fossify.commons.R.string.ok, null)
             .setNegativeButton(org.fossify.commons.R.string.cancel, null)
-            .setOnKeyListener { dialogInterface, i, keyEvent ->
-                return@setOnKeyListener if (keyEvent.action == ACTION_UP && i == KEYCODE_BACK) {
-                    backPressed()
-                    true
-                } else {
-                    false
-                }
-            }
 
         if (showOtherFolderButton) {
             builder.setNeutralButton(R.string.other_folder) { dialogInterface, i -> showOtherFolder() }
@@ -76,6 +85,24 @@ class PickDirectoryDialog(
                         binding.directoriesShowHidden.beGone()
                         showHidden = true
                         fetchDirectories(true)
+                    }
+                }
+
+                alertDialog.onBackPressedDispatcher.addCallback(alertDialog) {
+                    if (searchView.isSearchOpen) {
+                        searchView.closeSearch()
+                    } else if (activity.config.groupDirectSubfolders) {
+                        if (currentPathPrefix.isEmpty()) {
+                            isEnabled = false
+                            alertDialog.onBackPressedDispatcher.onBackPressed()
+                        } else {
+                            openedSubfolders.removeAt(openedSubfolders.lastIndex)
+                            currentPathPrefix = openedSubfolders.last()
+                            gotDirectories(allDirectories)
+                        }
+                    } else {
+                        isEnabled = false
+                        alertDialog.onBackPressedDispatcher.onBackPressed()
                     }
                 }
             }
@@ -95,10 +122,10 @@ class PickDirectoryDialog(
     }
 
     private fun MySearchMenu.updateSearchViewUi() {
-        getToolbar().beInvisible()
+        requireToolbar().beInvisible()
         updateColors()
         setBackgroundColor(Color.TRANSPARENT)
-        searchViewAppBarLayout.setBackgroundColor(Color.TRANSPARENT)
+        searchBarContainer.setBackgroundColor(Color.TRANSPARENT)
     }
 
     private fun MySearchMenu.setSearchViewListeners() {
@@ -231,22 +258,6 @@ class PickDirectoryDialog(
         binding.apply {
             directoriesGrid.adapter = adapter
             directoriesFastscroller.setScrollVertically(!scrollHorizontally)
-        }
-    }
-
-    private fun backPressed() {
-        if (searchView.isSearchOpen) {
-            searchView.closeSearch()
-        } else if (activity.config.groupDirectSubfolders) {
-            if (currentPathPrefix.isEmpty()) {
-                dialog?.dismiss()
-            } else {
-                openedSubfolders.removeLast()
-                currentPathPrefix = openedSubfolders.last()
-                gotDirectories(allDirectories)
-            }
-        } else {
-            dialog?.dismiss()
         }
     }
 }

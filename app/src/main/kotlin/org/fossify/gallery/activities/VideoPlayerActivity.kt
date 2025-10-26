@@ -22,7 +22,6 @@ import android.view.Surface
 import android.view.TextureView
 import android.view.View
 import android.view.WindowManager
-import android.widget.RelativeLayout
 import android.widget.SeekBar
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.media3.common.AudioAttributes
@@ -41,7 +40,6 @@ import androidx.media3.exoplayer.SeekParameters
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.exoplayer.source.ProgressiveMediaSource
-import org.fossify.commons.extensions.actionBarHeight
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
@@ -50,14 +48,9 @@ import org.fossify.commons.extensions.getColoredDrawableWithColor
 import org.fossify.commons.extensions.getFilenameFromUri
 import org.fossify.commons.extensions.getFormattedDuration
 import org.fossify.commons.extensions.getProperTextColor
-import org.fossify.commons.extensions.navigationBarHeight
-import org.fossify.commons.extensions.navigationBarOnSide
-import org.fossify.commons.extensions.navigationBarWidth
 import org.fossify.commons.extensions.onGlobalLayout
-import org.fossify.commons.extensions.portrait
 import org.fossify.commons.extensions.setDrawablesRelativeWithIntrinsicBounds
 import org.fossify.commons.extensions.showErrorToast
-import org.fossify.commons.extensions.statusBarHeight
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.gallery.R
@@ -65,7 +58,6 @@ import org.fossify.gallery.databinding.ActivityVideoPlayerBinding
 import org.fossify.gallery.extensions.config
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
-import org.fossify.gallery.extensions.hasNavBar
 import org.fossify.gallery.extensions.hideSystemUI
 import org.fossify.gallery.extensions.mute
 import org.fossify.gallery.extensions.openPath
@@ -124,19 +116,23 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
 
     private val binding by viewBinding(ActivityVideoPlayerBinding::inflate)
 
+    override val padCutout: Boolean
+        get() = !config.showNotch
+
     public override fun onCreate(savedInstanceState: Bundle?) {
-        showTransparentTop = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.videoAppbar),
+            padBottomSystem = listOf(binding.bottomVideoTimeHolder.root),
+        )
         setupOptionsMenu()
         setupOrientation()
-        checkNotchSupport()
         initPlayer()
     }
 
     override fun onResume() {
         super.onResume()
-        binding.topShadow.layoutParams.height = statusBarHeight + actionBarHeight
         window.statusBarColor = Color.TRANSPARENT
         window.navigationBarColor = Color.TRANSPARENT
         if (config.blackBackground) {
@@ -150,12 +146,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         }
 
         updateTextColors(binding.videoPlayerHolder)
-
-        if (!portrait && navigationBarOnSide && navigationBarWidth > 0) {
-            binding.videoToolbar.setPadding(0, 0, navigationBarWidth, 0)
-        } else {
-            binding.videoToolbar.setPadding(0, 0, 0, 0)
-        }
     }
 
     override fun onPause() {
@@ -180,8 +170,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     }
 
     private fun setupOptionsMenu() {
-        (binding.videoAppbar.layoutParams as RelativeLayout.LayoutParams).topMargin =
-            statusBarHeight
         binding.videoToolbar.apply {
             setTitleTextColor(Color.WHITE)
             overflowIcon = resources.getColoredDrawableWithColor(
@@ -220,15 +208,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         binding.videoSurfaceFrame.onGlobalLayout {
             binding.videoSurfaceFrame.controller.resetState()
         }
-
-        binding.topShadow.layoutParams.height = statusBarHeight + actionBarHeight
-        (binding.videoAppbar.layoutParams as RelativeLayout.LayoutParams).topMargin =
-            statusBarHeight
-        if (!portrait && navigationBarOnSide && navigationBarWidth > 0) {
-            binding.videoToolbar.setPadding(0, 0, navigationBarWidth, 0)
-        } else {
-            binding.videoToolbar.setPadding(0, 0, 0, 0)
-        }
     }
 
     private fun setupOrientation() {
@@ -246,7 +225,7 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
         binding.videoToolbar.title = getFilenameFromUri(mUri!!)
         initTimeHolder()
 
-        showSystemUI(true)
+        showSystemUI()
         window.decorView.setOnSystemUiVisibilityChangeListener { visibility ->
             val isFullscreen = visibility and View.SYSTEM_UI_FLAG_FULLSCREEN != 0
             fullscreenToggled(isFullscreen)
@@ -605,9 +584,9 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     private fun fullscreenToggled(isFullScreen: Boolean) {
         mIsFullscreen = isFullScreen
         if (isFullScreen) {
-            hideSystemUI(true)
+            hideSystemUI()
         } else {
-            showSystemUI(true)
+            showSystemUI()
         }
 
         val newAlpha = if (isFullScreen) 0f else 1f
@@ -673,19 +652,6 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
     }
 
     private fun initTimeHolder() {
-        var right = 0
-        var bottom = 0
-
-        if (hasNavBar()) {
-            if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
-                bottom += navigationBarHeight
-            } else {
-                right += navigationBarWidth
-                bottom += navigationBarHeight
-            }
-        }
-
-        binding.bottomVideoTimeHolder.videoTimeHolder.setPadding(0, 0, right, bottom)
         binding.bottomVideoTimeHolder.videoSeekbar.setOnSeekBarChangeListener(this)
         binding.bottomVideoTimeHolder.videoSeekbar.max = mDuration.toInt()
         binding.bottomVideoTimeHolder.videoDuration.text = mDuration.getFormattedDuration()

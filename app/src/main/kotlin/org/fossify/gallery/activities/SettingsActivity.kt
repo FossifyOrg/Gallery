@@ -35,17 +35,19 @@ class SettingsActivity : SimpleActivity() {
     private val binding by viewBinding(ActivitySettingsBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        updateMaterialActivityViews(binding.settingsCoordinator, binding.settingsHolder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.settingsNestedScrollview, binding.settingsToolbar)
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.settingsAppbar),
+            padBottomSystem = listOf(binding.settingsNestedScrollview)
+        )
+        setupMaterialScrollListener(binding.settingsNestedScrollview, binding.settingsAppbar)
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.settingsToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.settingsAppbar, NavigationIcon.Arrow)
         setupSettingItems()
     }
 
@@ -488,7 +490,7 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private fun setupShowNotch() {
-        binding.settingsShowNotchHolder.beVisibleIf(isPiePlus())
+        binding.settingsShowNotchHolder.beVisibleIf(isPiePlus() && !isVanillaIceCreamPlus())
         binding.settingsShowNotch.isChecked = config.showNotch
         binding.settingsShowNotchHolder.setOnClickListener {
             binding.settingsShowNotch.toggle()

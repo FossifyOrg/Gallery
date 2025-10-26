@@ -16,20 +16,22 @@ class ExcludedFoldersActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private val binding by viewBinding(ActivityManageFoldersBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         updateFolders()
         setupOptionsMenu()
         binding.manageFoldersToolbar.title = getString(org.fossify.commons.R.string.excluded_folders)
 
-        updateMaterialActivityViews(binding.manageFoldersCoordinator, binding.manageFoldersList, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.manageFoldersList, binding.manageFoldersToolbar)
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.manageFoldersAppbar),
+            padBottomSystem = listOf(binding.manageFoldersList)
+        )
+        setupMaterialScrollListener(binding.manageFoldersList, binding.manageFoldersAppbar)
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.manageFoldersToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.manageFoldersAppbar, NavigationIcon.Arrow)
     }
 
     private fun updateFolders() {

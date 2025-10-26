@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/video_time_holder"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/video_playback_speed"

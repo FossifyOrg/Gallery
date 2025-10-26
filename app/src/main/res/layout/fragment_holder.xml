@@ -13,7 +13,9 @@
     <ImageView
         android:id="@+id/top_shadow"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/default_status_action_height"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/fragment_viewer_appbar"
+        android:layout_alignParentTop="true"
         android:background="@drawable/gradient_background_flipped"
         android:contentDescription="@null" />
 

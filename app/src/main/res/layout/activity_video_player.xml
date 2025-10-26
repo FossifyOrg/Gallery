@@ -33,9 +33,12 @@
     <ImageView
         android:id="@+id/top_shadow"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/default_status_action_height"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/video_appbar"
+        android:layout_alignParentTop="true"
         android:background="@drawable/gradient_background_flipped"
-        android:contentDescription="@null" />
+        android:contentDescription="@null"
+        android:minHeight="@dimen/default_status_action_height" />
 
     <TextView
         android:id="@+id/video_bottom_gradient"
@@ -48,7 +51,10 @@
 
     <include
         android:id="@+id/bottom_video_time_holder"
-        layout="@layout/bottom_video_time_holder" />
+        layout="@layout/bottom_video_time_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
 
     <include
         android:id="@+id/error_message_holder"

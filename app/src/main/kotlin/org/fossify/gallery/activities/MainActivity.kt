@@ -151,6 +151,8 @@ import java.io.InputStream
 import java.io.OutputStream
 
 class MainActivity : SimpleActivity(), DirectoryOperationsListener {
+    override var isSearchBarEnabled = true
+    
     companion object {
         private const val PICK_MEDIA = 2
         private const val PICK_WALLPAPER = 3
@@ -197,7 +199,6 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
@@ -229,11 +230,8 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(
-            mainCoordinatorLayout = binding.directoriesCoordinator,
-            nestedView = binding.directoriesGrid,
-            useTransparentNavigation = !config.scrollHorizontally,
-            useTopSearchMenu = true
+        setupEdgeToEdge(
+            padBottomImeAndSystem = listOf(binding.directoriesGrid)
         )
 
         binding.directoriesRefreshLayout.setOnRefreshListener { getDirectories() }
@@ -394,20 +392,23 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
         }
     }
 
-    override fun onBackPressed() {
-        if (binding.mainMenu.isSearchOpen) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (binding.mainMenu.isSearchOpen) {
             binding.mainMenu.closeSearch()
+            true
         } else if (config.groupDirectSubfolders) {
             if (mCurrentPathPrefix.isEmpty()) {
-                super.onBackPressed()
+                appLockManager.lock()
+                false
             } else {
                 mOpenedSubfolders.removeAt(mOpenedSubfolders.lastIndex)
                 mCurrentPathPrefix = mOpenedSubfolders.last()
                 setupAdapter(mDirs)
+                true
             }
         } else {
             appLockManager.lock()
-            super.onBackPressed()
+            false
         }
     }
 
@@ -448,7 +449,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
 
     private fun refreshMenuItems() {
         if (!mIsThirdPartyIntent) {
-            binding.mainMenu.getToolbar().menu.apply {
+            binding.mainMenu.requireToolbar().menu.apply {
                 findItem(R.id.column_count).isVisible = config.viewTypeFolders == VIEW_TYPE_GRID
                 findItem(R.id.set_as_default_folder).isVisible = !config.defaultFolder.isEmpty()
                 findItem(R.id.open_recycle_bin).isVisible =
@@ -458,7 +459,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
             }
         }
 
-        binding.mainMenu.getToolbar().menu.apply {
+        binding.mainMenu.requireToolbar().menu.apply {
             findItem(R.id.temporarily_show_hidden).isVisible = !config.shouldShowHidden
             findItem(R.id.stop_showing_hidden).isVisible =
                 (!isRPlus() || isExternalStorageManager()) && config.temporarilyShowHidden
@@ -475,7 +476,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
             R.menu.menu_main
         }
 
-        binding.mainMenu.getToolbar().inflateMenu(menuId)
+        binding.mainMenu.requireToolbar().inflateMenu(menuId)
         binding.mainMenu.toggleHideOnScroll(!config.scrollHorizontally)
         binding.mainMenu.setupMenu()
 
@@ -492,7 +493,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
             binding.directoriesSwitchSearching.beVisibleIf(text.isNotEmpty())
         }
 
-        binding.mainMenu.getToolbar().setOnMenuItemClickListener { menuItem ->
+        binding.mainMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.sort -> showSortingDialog()
                 R.id.filter -> showFilterMediaDialog()
@@ -517,7 +518,6 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     }
 
     private fun updateMenuColors() {
-        updateStatusbarColor(getProperBackgroundColor())
         binding.mainMenu.updateColors()
     }
 

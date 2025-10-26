@@ -18,16 +18,16 @@ import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Icon
 import android.os.Bundle
 import android.os.Handler
 import android.view.MenuItem
-import android.view.View
 import android.view.WindowManager
 import android.view.animation.DecelerateInterpolator
-import android.widget.RelativeLayout
 import android.widget.Toast
+import androidx.core.graphics.drawable.toDrawable
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.exifinterface.media.ExifInterface
 import androidx.print.PrintHelper
 import androidx.viewpager.widget.ViewPager
@@ -40,7 +40,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import org.fossify.commons.dialogs.PropertiesDialog
 import org.fossify.commons.dialogs.RenameItemDialog
-import org.fossify.commons.extensions.actionBarHeight
 import org.fossify.commons.extensions.applyColorFilter
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
@@ -72,17 +71,12 @@ import org.fossify.commons.extensions.isPortrait
 import org.fossify.commons.extensions.isRawFast
 import org.fossify.commons.extensions.isSvg
 import org.fossify.commons.extensions.isVideoFast
-import org.fossify.commons.extensions.navigationBarHeight
-import org.fossify.commons.extensions.navigationBarOnSide
-import org.fossify.commons.extensions.navigationBarWidth
 import org.fossify.commons.extensions.needsStupidWritePermissions
 import org.fossify.commons.extensions.onGlobalLayout
-import org.fossify.commons.extensions.portrait
 import org.fossify.commons.extensions.recycleBinPath
 import org.fossify.commons.extensions.rescanPaths
 import org.fossify.commons.extensions.scanPathRecursively
 import org.fossify.commons.extensions.showErrorToast
-import org.fossify.commons.extensions.statusBarHeight
 import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.tryGenericMimeType
 import org.fossify.commons.extensions.viewBinding
@@ -95,7 +89,6 @@ import org.fossify.commons.helpers.REQUEST_SET_AS
 import org.fossify.commons.helpers.SORT_BY_RANDOM
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isRPlus
-import org.fossify.commons.helpers.isUpsideDownCakePlus
 import org.fossify.commons.models.FileDirItem
 import org.fossify.gallery.BuildConfig
 import org.fossify.gallery.R
@@ -218,16 +211,21 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     private val binding by viewBinding(ActivityMediumBinding::inflate)
 
+    override val padCutout: Boolean
+        get() = !config.showNotch
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        showTransparentTop = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.mediumViewerAppbar),
+            padBottomSystem = listOf(binding.bottomActions.bottomActionsWrapper),
+        )
+
         setupOptionsMenu()
         refreshMenuItems()
 
         window.decorView.setBackgroundColor(getProperBackgroundColor())
-        binding.topShadow.layoutParams.height = statusBarHeight + actionBarHeight
-        checkNotchSupport()
         (MediaActivity.mMedia.clone() as ArrayList<ThumbnailItem>).filterIsInstanceTo(mMediaFiles, Medium::class.java)
 
         requestMediaPermissions {
@@ -244,12 +242,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         if (!hasPermission(getPermissionToRequest())) {
             finish()
             return
-        }
-
-        if (config.bottomActions) {
-            window.navigationBarColor = Color.TRANSPARENT
-        } else {
-            setTranslucentNavigation()
         }
 
         initBottomActions()
@@ -343,7 +335,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
     }
 
     private fun setupOptionsMenu() {
-        (binding.mediumViewerAppbar.layoutParams as RelativeLayout.LayoutParams).topMargin = statusBarHeight
         binding.mediumViewerToolbar.apply {
             setTitleTextColor(Color.WHITE)
             overflowIcon = resources.getColoredDrawableWithColor(org.fossify.commons.R.drawable.ic_three_dots_vector, Color.WHITE)
@@ -416,7 +407,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         initBottomActionsLayout()
-        (binding.mediumViewerAppbar.layoutParams as RelativeLayout.LayoutParams).topMargin = statusBarHeight
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -467,7 +457,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
             return
         }
 
-        showSystemUI(true)
+        showSystemUI()
 
         if (intent.getBooleanExtra(SKIP_AUTHENTICATION, false)) {
             initContinue()
@@ -525,7 +515,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         binding.viewPager.offscreenPageLimit = 2
 
         if (config.blackBackground) {
-            binding.viewPager.background = ColorDrawable(Color.BLACK)
+            binding.viewPager.background = Color.BLACK.toDrawable()
         }
 
         if (config.hideSystemUI) {
@@ -536,18 +526,16 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
             }
         }
 
-        window.decorView.setOnSystemUiVisibilityChangeListener { visibility ->
-            mIsFullScreen = if (isUpsideDownCakePlus()) {
-                visibility and View.SYSTEM_UI_FLAG_LOW_PROFILE != 0
-            } else if (isInMultiWindowMode) {
-                visibility and View.SYSTEM_UI_FLAG_LOW_PROFILE != 0
-            } else if (visibility and View.SYSTEM_UI_FLAG_LOW_PROFILE == 0) {
-                false
-            } else {
-                visibility and View.SYSTEM_UI_FLAG_FULLSCREEN != 0
+        ViewCompat.setOnApplyWindowInsetsListener(binding.fragmentHolder) { _, insets ->
+            val systemBarsVisible = insets.isVisible(
+                WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.navigationBars()
+            )
+            val fullscreen = !systemBarsVisible
+            if (mIsFullScreen != fullscreen) {
+                mIsFullScreen = fullscreen
+                checkSystemUI()
             }
-
-            checkSystemUI()
+            insets
         }
 
         if (intent.action == "com.android.camera.action.REVIEW") {
@@ -633,7 +621,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                         binding.viewPager.setPageTransformer(false, FadePageTransformer())
                     }
 
-                    hideSystemUI(true)
+                    hideSystemUI()
                     if (!mIsFullScreen) {
                         mIsFullScreen = true
                         fullscreenToggled()
@@ -730,7 +718,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         if (mIsSlideshowActive) {
             binding.viewPager.setPageTransformer(false, DefaultPageTransformer())
             mIsSlideshowActive = false
-            showSystemUI(true)
+            showSystemUI()
             mSlideshowHandler.removeCallbacksAndMessages(null)
             window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             mAreSlideShowMediaVisible = false
@@ -956,17 +944,10 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
     }
 
     private fun initBottomActionsLayout() {
-        binding.bottomActions.root.layoutParams.height = resources.getDimension(R.dimen.bottom_actions_height).toInt() + navigationBarHeight
         if (config.bottomActions) {
             binding.bottomActions.root.beVisible()
         } else {
             binding.bottomActions.root.beGone()
-        }
-
-        if (!portrait && navigationBarOnSide && navigationBarWidth > 0) {
-            binding.mediumViewerToolbar.setPadding(0, 0, navigationBarWidth, 0)
-        } else {
-            binding.mediumViewerToolbar.setPadding(0, 0, 0, 0)
         }
     }
 
@@ -1499,10 +1480,10 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     private fun checkSystemUI() {
         if (mIsFullScreen) {
-            hideSystemUI(true)
+            hideSystemUI()
         } else {
             stopSlideshow()
-            showSystemUI(true)
+            showSystemUI()
         }
     }
 

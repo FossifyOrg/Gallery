@@ -26,6 +26,8 @@ import org.fossify.gallery.models.ThumbnailItem
 import java.io.File
 
 class SearchActivity : SimpleActivity(), MediaOperationsListener {
+    override var isSearchBarEnabled = true
+    
     private var mLastSearchedText = ""
 
     private var mCurrAsyncTask: GetMediaAsynctask? = null
@@ -34,11 +36,13 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
     private val binding by viewBinding(ActivitySearchBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        updateMaterialActivityViews(binding.searchCoordinator, binding.searchGrid, useTransparentNavigation = true, useTopSearchMenu = true)
+        setupEdgeToEdge(
+            padTopSystem = listOf(binding.searchMenu),
+            padBottomImeAndSystem = listOf(binding.searchGrid)
+        )
         binding.searchEmptyTextPlaceholder.setTextColor(getProperTextColor())
         getAllMedia()
         binding.searchFastscroller.updateColors(getProperPrimaryColor())
@@ -55,7 +59,7 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun setupOptionsMenu() {
-        binding.searchMenu.getToolbar().inflateMenu(R.menu.menu_search)
+        binding.searchMenu.requireToolbar().inflateMenu(R.menu.menu_search)
         binding.searchMenu.toggleHideOnScroll(true)
         binding.searchMenu.setupMenu()
         binding.searchMenu.toggleForceArrowBackIcon(true)
@@ -75,7 +79,7 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
             textChanged(text)
         }
 
-        binding.searchMenu.getToolbar().setOnMenuItemClickListener { menuItem ->
+        binding.searchMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.toggle_filename -> toggleFilenameVisibility()
                 else -> return@setOnMenuItemClickListener false
@@ -85,7 +89,6 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun updateMenuColors() {
-        updateStatusbarColor(getProperBackgroundColor())
         binding.searchMenu.updateColors()
     }
 

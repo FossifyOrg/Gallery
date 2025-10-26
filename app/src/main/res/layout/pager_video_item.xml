@@ -4,6 +4,7 @@
     android:id="@+id/video_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:layoutDirection="ltr">
 
     <ImageView
@@ -60,8 +61,11 @@
         android:id="@+id/video_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@id/bottom_video_time_holder"
         android:layout_alignParentStart="true"
-        android:layout_marginHorizontal="@dimen/medium_margin"
+        android:layout_marginHorizontal="@dimen/activity_margin"
+        android:layout_marginVertical="@dimen/activity_margin"
         android:background="@drawable/extended_details_background"
         android:padding="@dimen/medium_margin"
         android:textColor="@color/theme_dark_text_color"
@@ -70,9 +74,20 @@
         tools:text="Big buck bunny.mp4\n948.52 MB\n1920 x 1080 (2.1MP)\n10 April 2008, 08:30 AM"
         tools:visibility="visible" />
 
+    <Space
+        android:id="@+id/bottom_actions_dummy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_actions_height"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="@dimen/normal_margin" />
+
     <include
         android:id="@+id/bottom_video_time_holder"
-        layout="@layout/bottom_video_time_holder" />
+        layout="@layout/bottom_video_time_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@id/bottom_actions_dummy" />
 
     <TextView
         android:id="@+id/slide_info"

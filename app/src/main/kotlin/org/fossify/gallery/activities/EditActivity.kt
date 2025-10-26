@@ -102,6 +102,9 @@ class EditActivity : SimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(
+            padBottomSystem = listOf(binding.bottomEditorPrimaryActions.root)
+        )
 
         if (checkAppSideloading()) {
             return
@@ -121,7 +124,7 @@ class EditActivity : SimpleActivity() {
         super.onResume()
         isEditingWithThirdParty = false
         binding.bottomEditorDrawActions.bottomDrawWidth.setColors(getProperTextColor(), getProperPrimaryColor(), getProperBackgroundColor())
-        setupToolbar(binding.editorToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.editorAppbar, NavigationIcon.Arrow)
     }
 
     override fun onStop() {
