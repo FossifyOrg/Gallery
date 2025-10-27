@@ -1,6 +1,6 @@
 [versions]
 #jetbrains
-kotlin = "2.2.20"
+kotlin = "2.2.21"
 #KSP
 ksp = "2.2.20-2.0.4"
 #Detekt
