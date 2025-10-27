@@ -14,7 +14,7 @@ androidx-documentfile = "1.1.0"
 #exif
 exif = "1.0.1"
 #Room
-room = "2.8.2"
+room = "2.8.3"
 #Fossify
 commons = "5.5.0"
 #Gradle4
