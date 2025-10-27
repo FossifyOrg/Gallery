@@ -4,7 +4,6 @@
     android:id="@+id/video_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
     android:layoutDirection="ltr">
 
     <ImageView
