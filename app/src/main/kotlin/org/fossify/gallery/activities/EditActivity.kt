@@ -411,11 +411,12 @@ class EditActivity : SimpleActivity() {
     }
 
     private fun withFilteredImage(callback: (Bitmap) -> Unit) {
-        val currentFilter = getFiltersAdapter()?.getCurrentFilter() ?: return
+        val currentFilter = getFiltersAdapter()?.getCurrentFilter()?.filter ?: return
+        freeMemory()
         ensureBackgroundThread {
             try {
                 val original = getOriginalBitmap()
-                currentFilter.filter.processFilter(original)
+                currentFilter.processFilter(original)
                 callback(original)
             } catch (_: OutOfMemoryError) {
                 toast(org.fossify.commons.R.string.out_of_memory_error)
@@ -425,13 +426,11 @@ class EditActivity : SimpleActivity() {
 
     private fun saveFilteredImage(overwrite: Boolean) {
         if (overwrite) {
-            freeMemory()
             withFilteredImage {
                 saveBitmap(true, it)
             }
         } else {
             resolveSaveAsPath { path ->
-                freeMemory()
                 withFilteredImage {
                     saveBitmapToPath(it, path, showSavingToast = true)
                 }
