@@ -1,0 +1,12 @@
+Changed:
+
+• Compatibility updates for Android 15 & 16
+• Search bar is now pinned to the top when scrolling
+• Updated translations
+
+Fixed:
+
+• Fixed overlap between extended details and bottom actions 
+• Fixed loading big JXL images 
+• Fixed non-functional filter in image editor 
+
