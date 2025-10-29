@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.0] - 2025-10-29
 ### Changed
 - Compatibility updates for Android 15 & 16
 - Search bar is now pinned to the top when scrolling
+- Updated translations
 
 ### Fixed
 - Fixed overlap between extended details and bottom actions ([#418])
@@ -207,7 +209,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#648]: https://github.com/FossifyOrg/Gallery/issues/648
 [#718]: https://github.com/FossifyOrg/Gallery/issues/718
 
-[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.7.0...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.8.0...HEAD
+[1.8.0]: https://github.com/FossifyOrg/Gallery/compare/1.7.0...1.8.0
 [1.7.0]: https://github.com/FossifyOrg/Gallery/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/FossifyOrg/Gallery/compare/1.5.2...1.6.0
 [1.5.2]: https://github.com/FossifyOrg/Gallery/compare/1.5.1...1.5.2
