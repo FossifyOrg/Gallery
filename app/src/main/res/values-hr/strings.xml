@@ -20,7 +20,7 @@
     <string name="unlock_orientation">Otključaj položaj</string>
     <string name="change_orientation">Promijeni položaj</string>
     <string name="force_portrait">Prisili uspravni format</string>
-    <string name="force_landscape">Prisili položeni format</string>
+    <string name="force_landscape">Prisili polegnuti format</string>
     <string name="use_default_orientation">Koristi standardni položaj</string>
     <string name="fix_date_taken">Ispravi vrijednost datuma snimanja</string>
     <string name="fixing">Ispravlja se…</string>
@@ -264,4 +264,6 @@
         <item quantity="other">Stvarno želiš obnoviti %d datoteka?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Ostavi ekran uključenim tijekom gledanja fotografija u cjeloekranskom prikazu</string>
+    <string name="force_landscape_reverse">Prisilni polegnuti format (obrnuto)</string>
+    <string name="overwrite_original">Prebriši original</string>
 </resources>
