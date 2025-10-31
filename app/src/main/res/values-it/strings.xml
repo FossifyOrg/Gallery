@@ -265,4 +265,5 @@
         <item quantity="other">Sei sicuro di voler ripristinare %d file?</item>
     </plurals>
     <string name="force_landscape_reverse">Forza orizzontale (inverso)</string>
+    <string name="overwrite_original">Sovrascrivi originale</string>
 </resources>
