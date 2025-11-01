@@ -262,4 +262,6 @@
         <item quantity="other">Tem certeza que deseja restaurar %d ficheiros?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Manter o ecrã ligado enquanto vê fotos em ecrã cheio</string>
+    <string name="force_landscape_reverse">Paisagem forçada (reversa)</string>
+    <string name="overwrite_original">Sobrescrever original</string>
 </resources>
