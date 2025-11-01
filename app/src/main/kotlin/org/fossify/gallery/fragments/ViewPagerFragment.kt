@@ -67,15 +67,11 @@ abstract class ViewPagerFragment : Fragment() {
         }
 
         if (detailsFlag and EXT_RESOLUTION != 0) {
-            if(medium.name.endsWith(".jxl")) {
-                var jxlCoder = JxlCoder
-                var size = jxlCoder.getSize(file.readBytes())
-                if(size!=null) {
-                    var point = Point(size.width,size.height)
-                    point.formatAsResolution()
-                        .let {if (it.isNotEmpty() == true) details.appendLine(it) }
-                }
-            }else {
+            if (medium.name.endsWith(".jxl")) {
+                var size = JxlCoder.getSize(file.readBytes())
+                var point = size?.let { Point(it.width,it.height).formatAsResolution() }
+                point?.let { if(it.isNotEmpty() == true) details.appendLine(it) }
+            } else {
                 context!!.getResolution(
                     file.absolutePath)?.formatAsResolution()
                     .let { if (it?.isNotEmpty() == true) details.appendLine(it) }
