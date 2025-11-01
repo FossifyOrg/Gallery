@@ -67,15 +67,7 @@ abstract class ViewPagerFragment : Fragment() {
         }
 
         if (detailsFlag and EXT_RESOLUTION != 0) {
-            if (medium.name.endsWith(".jxl")) {
-                var size = JxlCoder.getSize(file.readBytes())
-                var point = size?.let { Point(it.width,it.height).formatAsResolution() }
-                point?.let { if(it.isNotEmpty() == true) details.appendLine(it) }
-            } else {
-                context!!.getResolution(
-                    file.absolutePath)?.formatAsResolution()
-                    .let { if (it?.isNotEmpty() == true) details.appendLine(it) }
-            }
+            getResolution(medium, file)?.let { if(it.isNotEmpty()) details.appendLine(it) }
         }
 
         if (detailsFlag and EXT_LAST_MODIFIED != 0) {
@@ -101,6 +93,16 @@ abstract class ViewPagerFragment : Fragment() {
     }
 
     fun getPathToLoad(medium: Medium) = if (context?.isPathOnOTG(medium.path) == true) medium.path.getOTGPublicPath(context!!) else medium.path
+
+    private fun getResolution(medium: Medium, file: File): String? {
+        if (medium.name.endsWith(".jxl")) {
+            val size = JxlCoder.getSize(file.readBytes())
+            val point = size?.let { Point(it.width,it.height).formatAsResolution() }
+            return point
+        } else {
+            return context!!.getResolution(file.absolutePath)?.formatAsResolution()
+        }
+    }
 
     private fun getFileLastModified(file: File): String {
         val projection = arrayOf(Images.Media.DATE_MODIFIED)
