@@ -260,4 +260,6 @@
         <item quantity="many">Você tem certeza que deseja restaurar %d arquivos?</item>
         <item quantity="other">Você tem certeza que deseja restaurar %d arquivos?</item>
     </plurals>
+    <string name="force_landscape_reverse">Paisagem forçada (reversa)</string>
+    <string name="overwrite_original">Sobrescrever original</string>
 </resources>
