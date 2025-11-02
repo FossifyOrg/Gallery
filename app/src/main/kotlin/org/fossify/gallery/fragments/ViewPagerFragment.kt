@@ -95,7 +95,7 @@ abstract class ViewPagerFragment : Fragment() {
     fun getPathToLoad(medium: Medium) = if (context?.isPathOnOTG(medium.path) == true) medium.path.getOTGPublicPath(context!!) else medium.path
 
     private fun getResolution(medium: Medium, file: File): String? {
-        if (medium.name.endsWith(".jxl")) {
+        if (medium.name.endsWith(".jxl",ignoreCase = true)) {
             val resolution = try {
                 JxlCoder.getSize(file.readBytes())
             } catch (ignored: OutOfMemoryError) {
