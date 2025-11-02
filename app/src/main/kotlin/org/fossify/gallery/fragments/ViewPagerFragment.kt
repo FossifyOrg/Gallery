@@ -40,8 +40,9 @@ abstract class ViewPagerFragment : Fragment() {
     }
 
     fun getMediumExtendedDetails(medium: Medium): String {
+        val context = context ?: return ""
         val file = File(medium.path)
-        if (context?.getDoesFilePathExist(file.absolutePath) == false) {
+        if (!context.getDoesFilePathExist(file.absolutePath)) {
             return ""
         }
 
@@ -53,7 +54,7 @@ abstract class ViewPagerFragment : Fragment() {
         }
 
         val details = StringBuilder()
-        val detailsFlag = context!!.config.extendedDetails
+        val detailsFlag = context.config.extendedDetails
         if (detailsFlag and EXT_NAME != 0) {
             medium.name.let { if (it.isNotEmpty()) details.appendLine(it) }
         }
@@ -75,7 +76,7 @@ abstract class ViewPagerFragment : Fragment() {
         }
 
         if (detailsFlag and EXT_DATE_TAKEN != 0) {
-            exif.getExifDateTaken(context!!).let { if (it.isNotEmpty()) details.appendLine(it) }
+            exif.getExifDateTaken(context).let { if (it.isNotEmpty()) details.appendLine(it) }
         }
 
         if (detailsFlag and EXT_CAMERA_MODEL != 0) {
@@ -92,7 +93,14 @@ abstract class ViewPagerFragment : Fragment() {
         return details.toString().trim()
     }
 
-    fun getPathToLoad(medium: Medium) = if (context?.isPathOnOTG(medium.path) == true) medium.path.getOTGPublicPath(context!!) else medium.path
+    fun getPathToLoad(medium: Medium): String {
+        val context = context ?: return medium.path
+        return if (context.isPathOnOTG(medium.path)) {
+            medium.path.getOTGPublicPath(context)
+        } else {
+            medium.path
+        }
+    }
 
     private fun getResolution(medium: Medium, file: File): String? {
         if (medium.name.endsWith(".jxl",ignoreCase = true)) {
@@ -103,22 +111,23 @@ abstract class ViewPagerFragment : Fragment() {
             }
             return resolution?.let { Point(it.width,it.height).formatAsResolution() }
         } else {
-            return context!!.getResolution(file.absolutePath)?.formatAsResolution()
+            return context?.getResolution(file.absolutePath)?.formatAsResolution()
         }
     }
 
     private fun getFileLastModified(file: File): String {
+        val context = context ?: return ""
         val projection = arrayOf(Images.Media.DATE_MODIFIED)
         val uri = Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
         val selectionArgs = arrayOf(file.absolutePath)
-        val cursor = context!!.contentResolver.query(uri, projection, selection, selectionArgs, null)
+        val cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor?.use {
             return if (cursor.moveToFirst()) {
                 val dateModified = cursor.getLongValue(Images.Media.DATE_MODIFIED) * 1000L
-                dateModified.formatDate(context!!)
+                dateModified.formatDate(context)
             } else {
-                file.lastModified().formatDate(context!!)
+                file.lastModified().formatDate(context)
             }
         }
         return ""
