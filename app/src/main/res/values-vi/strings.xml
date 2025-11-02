@@ -230,4 +230,34 @@
     <string name="faq_15_title">Tại sao ứng dụng chiếm quá nhiều dung lượng \?</string>
     <string name="faq_15_text">Bộ nhớ cache ứng dụng có thể mất tới 250MB, nó đảm bảo tải hình ảnh nhanh hơn. Nếu ứng dụng chiếm nhiều dung lượng hơn, rất có thể là do bạn có nhiều mục trong Thùng rác. Những tập tin đó được tính vào kích thước ứng dụng. Bạn có thể xóa thùng rác bằng cách mở nó và xóa tất cả các tệp hoặc từ Cài đặt ứng dụng. Mọi tệp trong Thùng rác sẽ tự động bị xóa sau 30 ngày.</string>
     <string name="faq_16_text">Bắt đầu với Android 11, bạn không thể ẩn hoặc hiện các tệp hoặc thư mục nữa, bạn cũng không thể nhìn thấy những tệp hoặc thư mục bị ẩn trong ứng dụng thư viện. Bạn sẽ phải sử dụng một số trình quản lý tệp cho điều đó.</string>
+    <string name="force_landscape_reverse">Bắt buộc ngang (đảo ngược)</string>
+    <string name="full_storage_permission_required">Fossify Gallery cần quyền truy cập đầy đủ để hiển thị tất cả ảnh và video của bạn. Vào Cài đặt &gt; Quyền &gt; Ảnh và video &gt; Cho phép tất cả.</string>
+    <string name="excluded_activity_placeholder">Việc loại trừ các thư mục sẽ khiến chúng cùng với các thư mục con bị ẩn chỉ trong ứng dụng Fossify Gallery, nhưng chúng vẫn sẽ hiển thị trong các ứng dụng khác.\n\nNếu bạn muốn ẩn chúng khỏi các ứng dụng khác nữa, hãy sử dụng chức năng Ẩn (Hide).</string>
+    <plurals name="restore_confirmation">
+        <item quantity="other">Bạn có chắc chắn muốn khôi phục %d tệp không?</item>
+    </plurals>
+    <string name="svgs">SVGs</string>
+    <string name="exclude_folder_description">Loại trừ mục đã chọn cùng với các thư mục con khỏi Fossify Gallery. Bạn có thể quản lý thư mục đã loại trừ trong phần Cài đặt.</string>
+    <string name="cant_unhide_folder">Nếu một thư mục hoặc một trong các thư mục mẹ của nó có dấu chấm ở đầu tên, thì nó sẽ bị ẩn và không thể hiện lại bằng cách này. Bạn cần đổi tên để xóa dấu chấm đi.</string>
+    <string name="overwrite_original">Ghi đè lên bản gốc</string>
+    <string name="keep_screen_on_fullscreen_photos">Giữ màn hình luôn bật khi xem ảnh toàn màn hình</string>
+    <string name="playback_speed">Tốc độ phát lại</string>
+    <string name="media_management_manual">Đã xảy ra lỗi. Vui lòng vào Cài đặt thiết bị - Ứng dụng - Quyền truy cập đặc biệt - Ứng dụng quản lý phương tiện và cho phép ứng dụng này quản lý phương tiện.</string>
+    <string name="media_management_note">Nếu chuyển hướng không hoạt động, vui lòng vào Cài đặt thiết bị - Ứng dụng - Quyền truy cập đặc biệt - Ứng dụng quản lý phương tiện và cho phép ứng dụng này quản lý phương tiện.</string>
+    <string name="media_management_alternative">Nếu bạn không muốn thực hiện theo cách đó, bạn cũng có thể vào Cài đặt thiết bị - Ứng dụng - Quyền truy cập đặc biệt - Ứng dụng quản lý phương tiện và cho phép ứng dụng này quản lý phương tiện.</string>
+    <string name="alternative_media_access">Ngoài ra, bạn cũng có thể chỉ cho phép truy cập các tệp phương tiện. Tuy nhiên, trong trường hợp đó bạn sẽ không thể thực hiện với các tệp ẩn.</string>
+    <string name="show_all_folders">Hiển thị nút menu để bật/tắt nhanh chế độ Hiển thị nội dung tất cả thư mục</string>
+    <string name="failed_to_load_media">Tải tệp phương tiện không thành công.</string>
+    <string name="file_is_malformed_or_corrupted">Tệp không hợp lệ hoặc đã bị hỏng.</string>
+    <string name="media_exceeds_device_capabilities">Thiết bị không hỗ trợ tệp phương tiện này.</string>
+    <string name="unsupported_format">Định dạng không được hỗ trợ.</string>
+    <string name="faq_1_title">Làm cách nào để đặt Fossify Gallery làm ứng dụng thư viện mặc định?</string>
+    <string name="faq_4_text">Bạn có thể thực hiện bằng cách nhấn đúp vào cạnh màn hình hoặc chạm vào thời lượng hiện tại hoặc tối đa gần thanh tua. Nếu bạn bật tùy chọn mở video trên màn hình riêng trong phần cài đặt ứng dụng, bạn cũng có thể sử dụng thao tác vuốt ngang.</string>
+    <string name="faq_5_text">Loại trừ chỉ ngăn thư mục hiển thị trong Fossify Gallery, trong khi Ẩn hoạt động trên toàn hệ thống và ẩn thư mục khỏi các ứng dụng thư viện khác. Chức năng này hoạt động bằng cách tạo một tệp tin \".nomedia\" trống trong thư mục được chọn, mà bạn có thể xóa bằng bất kỳ trình quản lý tệp nào. Lưu ý rằng một số thiết bị không cho phép ẩn các thư mục như Camera, Ảnh chụp màn hình và Tải xuống.</string>
+    <string name="faq_16_title">Điều gì đã xảy ra với tính năng ẩn tệp và thư mục và tại sao tôi không thể thấy các mục đã ẩn nữa?</string>
+    <string name="faq_16_text_extra">Hoặc bạn cũng có thể cấp quyền “Truy cập tất cả tệp” cho ứng dụng thư viện này trong phần Cài đặt thiết bị. Việc này sẽ cho phép hiển thị các mục ẩn và giúp thao tác với tệp ổn định hơn.</string>
+    <string name="faq_17_title">Tại sao tôi không thể thêm các thư mục bị thiếu nữa?</string>
+    <string name="faq_17_text">Tính năng đó đã ngừng hoạt động do thay đổi hệ thống từ Android 11. Ứng dụng không thể duyệt thư mục thực nữa mà phải dựa vào MediaStore để truy xuất dữ liệu.</string>
+    <string name="faq_18_title">Tại sao tôi thấy quảng cáo khi phát video?</string>
+    <string name="faq_18_text">Ứng dụng của chúng tôi hoàn toàn không có quảng cáo. Nếu bạn thấy quảng cáo khi phát video, có thể bạn đang sử dụng trình phát video của ứng dụng khác. Hãy vào phần Cài đặt thiết bị để tìm trình phát video mặc định, sau đó chọn “Xóa mặc định”. Lần tiếp theo khi bạn mở video, hệ thống sẽ hiển thị hộp thoại chọn ứng dụng, nơi bạn có thể chọn ứng dụng muốn sử dụng.</string>
 </resources>
