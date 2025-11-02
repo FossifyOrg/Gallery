@@ -93,7 +93,14 @@ abstract class ViewPagerFragment : Fragment() {
         return details.toString().trim()
     }
 
-    fun getPathToLoad(medium: Medium) = if (context?.isPathOnOTG(medium.path) == true) medium.path.getOTGPublicPath(context!!) else medium.path
+    fun getPathToLoad(medium: Medium): String {
+        val context = context ?: return medium.path
+        return if (context.isPathOnOTG(medium.path)) {
+            medium.path.getOTGPublicPath(context)
+        } else {
+            medium.path
+        }
+    }
 
     private fun getResolution(medium: Medium, file: File): String? {
         if (medium.name.endsWith(".jxl",ignoreCase = true)) {
