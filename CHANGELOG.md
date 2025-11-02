@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Added support for displaying jxl file resolution in extendedDetails feature ([#659])
+
 ## [1.8.0] - 2025-10-29
 ### Changed
 - Compatibility updates for Android 15 & 16
@@ -208,6 +211,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#642]: https://github.com/FossifyOrg/Gallery/issues/642
 [#648]: https://github.com/FossifyOrg/Gallery/issues/648
 [#718]: https://github.com/FossifyOrg/Gallery/issues/718
+[#659]: https://github.com/FossifyOrg/Gallery/issues/659
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.8.0...HEAD
 [1.8.0]: https://github.com/FossifyOrg/Gallery/compare/1.7.0...1.8.0
