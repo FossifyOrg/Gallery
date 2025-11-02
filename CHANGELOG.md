@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed missing resolution info in extended details for JXL images ([#659]) 
 
 ## [1.8.0] - 2025-10-29
 ### Changed
@@ -207,6 +209,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#630]: https://github.com/FossifyOrg/Gallery/issues/630
 [#642]: https://github.com/FossifyOrg/Gallery/issues/642
 [#648]: https://github.com/FossifyOrg/Gallery/issues/648
+[#659]: https://github.com/FossifyOrg/Gallery/issues/659
 [#718]: https://github.com/FossifyOrg/Gallery/issues/718
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.8.0...HEAD
