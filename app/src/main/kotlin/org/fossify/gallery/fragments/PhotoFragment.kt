@@ -522,7 +522,7 @@ class PhotoFragment : ViewPagerFragment() {
             .run {
                 if (mCurrentRotationDegrees != 0) {
                     transform(Rotate(mCurrentRotationDegrees))
-                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
                 } else {
                     this
                 }
@@ -900,10 +900,15 @@ class PhotoFragment : ViewPagerFragment() {
 
     private fun initExtendedDetails() {
         if (requireContext().config.showExtendedDetails) {
-            binding.photoDetails.apply {
-                text = getMediumExtendedDetails(mMedium)
-                beVisibleIf(text.isNotEmpty())
-                alpha = if (!requireContext().config.hideExtendedDetails || !mIsFullscreen) 1f else 0f
+            ensureBackgroundThread {
+                val details = getMediumExtendedDetails(mMedium)
+                activity?.runOnUiThread {
+                    binding.photoDetails.apply {
+                        text = details
+                        beVisibleIf(text.isNotEmpty())
+                        alpha = if (!requireContext().config.hideExtendedDetails || !mIsFullscreen) 1f else 0f
+                    }
+                }
             }
         } else {
             binding.photoDetails.beGone()

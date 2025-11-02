@@ -96,9 +96,12 @@ abstract class ViewPagerFragment : Fragment() {
 
     private fun getResolution(medium: Medium, file: File): String? {
         if (medium.name.endsWith(".jxl")) {
-            val size = JxlCoder.getSize(file.readBytes())
-            val point = size?.let { Point(it.width, it.height).formatAsResolution() }
-            return point
+            val resolution = try {
+                JxlCoder.getSize(file.readBytes())
+            } catch (ignored: OutOfMemoryError) {
+                null
+            }
+            return resolution?.let { Point(it.width,it.height).formatAsResolution() }
         } else {
             return context!!.getResolution(file.absolutePath)?.formatAsResolution()
         }
