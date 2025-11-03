@@ -21,6 +21,7 @@ import android.graphics.Color
 import android.graphics.drawable.Icon
 import android.os.Bundle
 import android.os.Handler
+import android.provider.MediaStore
 import android.view.MenuItem
 import android.view.WindowManager
 import android.view.animation.DecelerateInterpolator
@@ -538,7 +539,10 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
             insets
         }
 
-        if (intent.action == "com.android.camera.action.REVIEW") {
+        if (
+            intent.action == "com.android.camera.action.REVIEW"
+            || intent.action == MediaStore.ACTION_REVIEW
+        ) {
             ensureBackgroundThread {
                 if (mediaDB.getMediaFromPath(mPath).isEmpty()) {
                     val filename = mPath.getFilenameFromPath()

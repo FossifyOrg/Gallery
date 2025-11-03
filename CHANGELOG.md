@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
-- Fixed missing resolution info in extended details for JXL images ([#659]) 
+- Fixed missing resolution info in extended details for JXL images ([#659])
+- Fixed Gallery not appearing when opening photos from LineageOS Camera ([#411])
 
 ## [1.8.0] - 2025-10-29
 ### Changed
@@ -197,6 +198,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#365]: https://github.com/FossifyOrg/Gallery/issues/365
 [#375]: https://github.com/FossifyOrg/Gallery/issues/375
 [#379]: https://github.com/FossifyOrg/Gallery/issues/379
+[#411]: https://github.com/FossifyOrg/Gallery/issues/411
 [#418]: https://github.com/FossifyOrg/Gallery/issues/418
 [#447]: https://github.com/FossifyOrg/Gallery/issues/447
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
