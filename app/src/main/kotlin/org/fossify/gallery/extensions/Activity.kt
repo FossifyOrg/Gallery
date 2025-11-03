@@ -187,7 +187,7 @@ fun AppCompatActivity.showSystemUI() {
 }
 
 fun AppCompatActivity.hideSystemUI() {
-    window.hideBars()
+    window.hideBars(transient = false)
 }
 
 fun BaseSimpleActivity.addNoMedia(path: String, callback: () -> Unit) {
