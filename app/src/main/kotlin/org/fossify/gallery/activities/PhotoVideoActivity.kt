@@ -436,4 +436,6 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
     override fun launchViewVideoIntent(path: String) {}
 
     override fun isSlideShowActive() = false
+
+    override fun isFullScreen() = mIsFullScreen
 }

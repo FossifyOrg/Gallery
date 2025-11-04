@@ -242,6 +242,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             mIsFragmentVisible = true
         }
 
+        mIsFullscreen = listener?.isFullScreen() == true
         initTimeHolder()
         // checkIfPanorama() TODO: Implement panorama using a FOSS library
 
