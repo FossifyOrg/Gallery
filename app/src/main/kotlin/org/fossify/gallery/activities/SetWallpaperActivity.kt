@@ -34,6 +34,9 @@ class SetWallpaperActivity : SimpleActivity(), CropImageView.OnCropImageComplete
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(
+            padBottomSystem = listOf(binding.activitySetWallpaperHolder)
+        )
         setupBottomActions()
 
         if (checkAppSideloading()) {
