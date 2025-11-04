@@ -37,6 +37,8 @@ abstract class ViewPagerFragment : Fragment() {
         fun launchViewVideoIntent(path: String)
 
         fun isSlideShowActive(): Boolean
+
+        fun isFullScreen(): Boolean
     }
 
     fun getMediumExtendedDetails(medium: Medium): String {

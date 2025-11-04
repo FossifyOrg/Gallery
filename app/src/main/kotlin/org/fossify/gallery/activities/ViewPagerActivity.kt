@@ -1431,6 +1431,8 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     override fun isSlideShowActive() = mIsSlideshowActive
 
+    override fun isFullScreen() = mIsFullScreen
+
     override fun goToPrevItem() {
         binding.viewPager.setCurrentItem(binding.viewPager.currentItem - 1, false)
         checkOrientation()
