@@ -27,8 +27,6 @@ import android.view.WindowManager
 import android.view.animation.DecelerateInterpolator
 import android.widget.Toast
 import androidx.core.graphics.drawable.toDrawable
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.exifinterface.media.ExifInterface
 import androidx.print.PrintHelper
 import androidx.viewpager.widget.ViewPager
@@ -525,18 +523,6 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
                     fragmentClicked()
                 }, HIDE_SYSTEM_UI_DELAY)
             }
-        }
-
-        ViewCompat.setOnApplyWindowInsetsListener(binding.fragmentHolder) { _, insets ->
-            val systemBarsVisible = insets.isVisible(
-                WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.navigationBars()
-            )
-            val fullscreen = !systemBarsVisible
-            if (mIsFullScreen != fullscreen) {
-                mIsFullScreen = fullscreen
-                checkSystemUI()
-            }
-            insets
         }
 
         if (

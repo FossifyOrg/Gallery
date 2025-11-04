@@ -8,8 +8,6 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Html
 import androidx.core.graphics.drawable.toDrawable
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import org.fossify.commons.dialogs.PropertiesDialog
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
@@ -268,18 +266,6 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
             val attributes = window.attributes
             attributes.screenBrightness = 1f
             window.attributes = attributes
-        }
-
-        ViewCompat.setOnApplyWindowInsetsListener(binding.fragmentHolder) { _, insets ->
-            val systemBarsVisible = insets.isVisible(
-                WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.navigationBars()
-            )
-            val fullscreen = !systemBarsVisible
-            if (mIsFullScreen != fullscreen) {
-                mIsFullScreen = fullscreen
-                mFragment?.fullscreenToggled(fullscreen)
-            }
-            insets
         }
 
         initBottomActions()
