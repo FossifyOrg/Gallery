@@ -1,0 +1,13 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed missing resolution info in extended details for JXL images 
+• Fixed Gallery not appearing when opening photos from LineageOS Camera 
+• Fixed extended details showing up in full-screen in some cases 
+• Fixed full-screen view not working properly on some devices 
+• Fixed full-screen requiring double taps in some cases 
+• Fixed overlap between bottom actions and system bar when setting wallpaper 
+
