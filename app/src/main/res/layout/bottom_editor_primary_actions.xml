@@ -4,7 +4,6 @@
     android:id="@+id/bottom_editor_primary_actions_wrapper"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
     android:minHeight="@dimen/bottom_actions_height">
 
     <ImageView
