@@ -907,7 +907,8 @@ class PhotoFragment : ViewPagerFragment() {
                     binding.photoDetails.apply {
                         text = details
                         beVisibleIf(text.isNotEmpty())
-                        alpha = if (!requireContext().config.hideExtendedDetails || !mIsFullscreen) 1f else 0f
+                        val hideExtendedDetails = context?.config?.hideExtendedDetails == true
+                        alpha = if (!hideExtendedDetails || !mIsFullscreen) 1f else 0f
                     }
                 }
             }
