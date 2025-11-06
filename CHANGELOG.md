@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed overlap between editor controls and preview ([#752])
 
 ## [1.8.1] - 2025-11-04
 ### Changed
@@ -225,6 +227,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#734]: https://github.com/FossifyOrg/Gallery/issues/734
 [#743]: https://github.com/FossifyOrg/Gallery/issues/743
 [#747]: https://github.com/FossifyOrg/Gallery/issues/747
+[#752]: https://github.com/FossifyOrg/Gallery/issues/752
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...HEAD
 [1.8.1]: https://github.com/FossifyOrg/Gallery/compare/1.8.0...1.8.1
