@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed overlap between editor controls and preview ([#752])
 - Fixed crash when viewing photos with extended details enabled ([#754])
+- Fixed cropped copies being saved in app data when setting wallpaper ([#759]) 
 
 ## [1.8.1] - 2025-11-04
 ### Changed
@@ -230,6 +231,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#747]: https://github.com/FossifyOrg/Gallery/issues/747
 [#752]: https://github.com/FossifyOrg/Gallery/issues/752
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
+[#759]: https://github.com/FossifyOrg/Gallery/issues/759
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...HEAD
 [1.8.1]: https://github.com/FossifyOrg/Gallery/compare/1.8.0...1.8.1
