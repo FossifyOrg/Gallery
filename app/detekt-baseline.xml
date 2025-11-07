@@ -92,7 +92,7 @@
     <ID>ImplicitDefaultLocale:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$String.format("%.2f", value)</ID>
     <ID>InstanceOfCheckForException:Activity.kt$e !is IOException</ID>
     <ID>LargeClass:DirectoryAdapter.kt$DirectoryAdapter : MyRecyclerViewAdapterItemTouchHelperContractOnPopupTextUpdate</ID>
-    <ID>LargeClass:EditActivity.kt$EditActivity : SimpleActivity</ID>
+    <ID>LargeClass:EditActivity.kt$EditActivity : BaseCropActivity</ID>
     <ID>LargeClass:MainActivity.kt$MainActivity : SimpleActivityDirectoryOperationsListener</ID>
     <ID>LargeClass:MediaActivity.kt$MediaActivity : SimpleActivityMediaOperationsListener</ID>
     <ID>LargeClass:MediaAdapter.kt$MediaAdapter : MyRecyclerViewAdapterOnPopupTextUpdate</ID>
@@ -445,8 +445,6 @@
     <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$val isSDOrOtgRootFolder = isAStorageRootFolder(oldPath.getParentPath()) &amp;&amp; !oldPath.startsWith(internalStoragePath)</ID>
     <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity$val medium = Medium(null, filename, mPath, parent, ts, ts, File(mPath).length(), type, duration, isFavorite, 0, 0L)</ID>
     <ID>MaxLineLength:ViewPagerActivity.kt$ViewPagerActivity.&lt;no name provided&gt;$override</ID>
-    <ID>MaxLineLength:ViewPagerFragment.kt$ViewPagerFragment$context!!.getResolution(file.absolutePath)?.formatAsResolution().let { if (it?.isNotEmpty() == true) details.appendLine(it) }</ID>
-    <ID>MaxLineLength:ViewPagerFragment.kt$ViewPagerFragment$fun getPathToLoad(medium: Medium)</ID>
     <ID>MaxLineLength:ViewPagerFragment.kt$ViewPagerFragment$if</ID>
     <ID>MaxLineLength:WidgetConfigureActivity.kt$WidgetConfigureActivity$if</ID>
     <ID>NestedBlockDepth:Context.kt$fun Context.getDirectParentSubfolders( dirs: ArrayList&lt;Directory&gt;, currentPathPrefix: String ): ArrayList&lt;Directory&gt;</ID>
@@ -486,7 +484,6 @@
     <ID>SwallowedException:PhotoFragment.kt$PhotoFragment$e: OutOfMemoryError</ID>
     <ID>SwallowedException:PhotoVideoActivity.kt$PhotoVideoActivity$e: Exception</ID>
     <ID>SwallowedException:ResizeMultipleImagesDialog.kt$ResizeMultipleImagesDialog$e: OutOfMemoryError</ID>
-    <ID>SwallowedException:SetWallpaperActivity.kt$SetWallpaperActivity$e: OutOfMemoryError</ID>
     <ID>SwallowedException:SettingsActivity.kt$SettingsActivity$e: ActivityNotFoundException</ID>
     <ID>SwallowedException:String.kt$e: IOException</ID>
     <ID>SwallowedException:ViewPagerActivity.kt$ViewPagerActivity$e: ActivityNotFoundException</ID>
@@ -515,7 +512,7 @@
     <ID>TooManyFunctions:Config.kt$Config : BaseConfig</ID>
     <ID>TooManyFunctions:Context.kt$org.fossify.gallery.extensions.Context.kt</ID>
     <ID>TooManyFunctions:DirectoryAdapter.kt$DirectoryAdapter : MyRecyclerViewAdapterItemTouchHelperContractOnPopupTextUpdate</ID>
-    <ID>TooManyFunctions:EditActivity.kt$EditActivity : SimpleActivity</ID>
+    <ID>TooManyFunctions:EditActivity.kt$EditActivity : BaseCropActivity</ID>
     <ID>TooManyFunctions:EditorDrawCanvas.kt$EditorDrawCanvas : View</ID>
     <ID>TooManyFunctions:MainActivity.kt$MainActivity : SimpleActivityDirectoryOperationsListener</ID>
     <ID>TooManyFunctions:ManageFoldersAdapter.kt$ManageFoldersAdapter : MyRecyclerViewAdapter</ID>
@@ -560,10 +557,6 @@
     <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val MAX_PROGRESS = (MAX_PLAYBACK_SPEED * 100 + MIN_PLAYBACK_SPEED * 100).toInt()</ID>
     <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val MIN_PLAYBACK_SPEED = 0.25f</ID>
     <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val STEP = 0.05f</ID>
-    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val PICK_IMAGE = 1</ID>
-    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_LANDSCAPE = 1</ID>
-    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_PORTRAIT = 0</ID>
-    <ID>VariableNaming:SetWallpaperActivity.kt$SetWallpaperActivity$private val RATIO_SQUARE = 2</ID>
     <ID>WildcardImport:Activity.kt$import java.io.*</ID>
     <ID>WildcardImport:Activity.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:Activity.kt$import org.fossify.commons.helpers.*</ID>
@@ -575,10 +568,6 @@
     <ID>WildcardImport:Constants.kt$import org.fossify.commons.helpers.*</ID>
     <ID>WildcardImport:Directory.kt$import androidx.room.*</ID>
     <ID>WildcardImport:Directory.kt$import org.fossify.commons.helpers.*</ID>
-    <ID>WildcardImport:EditActivity.kt$import java.io.*</ID>
-    <ID>WildcardImport:EditActivity.kt$import kotlinx.coroutines.*</ID>
-    <ID>WildcardImport:EditActivity.kt$import org.fossify.commons.extensions.*</ID>
-    <ID>WildcardImport:EditActivity.kt$import org.fossify.gallery.helpers.*</ID>
     <ID>WildcardImport:EditorDrawCanvas.kt$import android.graphics.*</ID>
     <ID>WildcardImport:ExcludedFoldersActivity.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:ExportFavoritesDialog.kt$import org.fossify.commons.extensions.*</ID>

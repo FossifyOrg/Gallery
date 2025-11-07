@@ -2,18 +2,16 @@ package org.fossify.gallery.activities
 
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.Bitmap.CompressFormat
 import android.graphics.Color
 import android.graphics.Point
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
-import android.view.View
 import android.widget.RelativeLayout
-import androidx.core.view.isInvisible
+import androidx.core.graphics.scale
+import androidx.core.net.toUri
 import androidx.exifinterface.media.ExifInterface
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -26,9 +24,30 @@ import com.bumptech.glide.request.target.Target
 import com.canhub.cropper.CropImageView
 import com.zomato.photofilters.FilterPack
 import com.zomato.photofilters.imageprocessors.Filter
-import kotlinx.coroutines.*
 import org.fossify.commons.dialogs.ColorPickerDialog
-import org.fossify.commons.extensions.*
+import org.fossify.commons.extensions.applyColorFilter
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beGoneIf
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.beVisibleIf
+import org.fossify.commons.extensions.checkAppSideloading
+import org.fossify.commons.extensions.getCompressionFormat
+import org.fossify.commons.extensions.getFileOutputStream
+import org.fossify.commons.extensions.getFilenameFromPath
+import org.fossify.commons.extensions.getProperBackgroundColor
+import org.fossify.commons.extensions.getProperPrimaryColor
+import org.fossify.commons.extensions.getProperTextColor
+import org.fossify.commons.extensions.getRealPathFromURI
+import org.fossify.commons.extensions.isGone
+import org.fossify.commons.extensions.isPathOnOTG
+import org.fossify.commons.extensions.isVisible
+import org.fossify.commons.extensions.onGlobalLayout
+import org.fossify.commons.extensions.onSeekBarChangeListener
+import org.fossify.commons.extensions.rescanPaths
+import org.fossify.commons.extensions.sharePathIntent
+import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.toast
+import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.REAL_FILE_PATH
 import org.fossify.commons.helpers.ensureBackgroundThread
@@ -41,24 +60,31 @@ import org.fossify.gallery.dialogs.OtherAspectRatioDialog
 import org.fossify.gallery.dialogs.ResizeDialog
 import org.fossify.gallery.dialogs.SaveAsDialog
 import org.fossify.gallery.extensions.config
-import org.fossify.gallery.extensions.fixDateTaken
-import org.fossify.gallery.extensions.openEditor
-import org.fossify.gallery.helpers.*
-import org.fossify.gallery.models.FilterItem
-import java.io.*
-import kotlin.math.max
-import androidx.core.graphics.scale
-import androidx.core.net.toUri
-import org.fossify.gallery.extensions.writeExif
 import org.fossify.gallery.extensions.ensureWritablePath
+import org.fossify.gallery.extensions.fixDateTaken
 import org.fossify.gallery.extensions.getCompressionFormatFromUri
-import org.fossify.gallery.extensions.readExif
+import org.fossify.gallery.extensions.openEditor
 import org.fossify.gallery.extensions.proposeNewFilePath
+import org.fossify.gallery.extensions.readExif
 import org.fossify.gallery.extensions.resolveUriScheme
 import org.fossify.gallery.extensions.showContentDescriptionOnLongClick
 import org.fossify.gallery.extensions.writeBitmapToCache
+import org.fossify.gallery.extensions.writeExif
+import org.fossify.gallery.helpers.ASPECT_RATIO_FOUR_THREE
+import org.fossify.gallery.helpers.ASPECT_RATIO_FREE
+import org.fossify.gallery.helpers.ASPECT_RATIO_ONE_ONE
+import org.fossify.gallery.helpers.ASPECT_RATIO_OTHER
+import org.fossify.gallery.helpers.ASPECT_RATIO_SIXTEEN_NINE
+import org.fossify.gallery.helpers.ColorModeHelper
+import org.fossify.gallery.helpers.FilterThumbnailsManager
+import org.fossify.gallery.helpers.getPermissionToRequest
+import org.fossify.gallery.models.FilterItem
+import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStream
+import kotlin.math.max
 
-class EditActivity : SimpleActivity() {
+class EditActivity : BaseCropActivity() {
     companion object {
         init {
             System.loadLibrary("NativeImageProcessor")
@@ -94,10 +120,12 @@ class EditActivity : SimpleActivity() {
     private var oldExif: ExifInterface? = null
     private var filterInitialBitmap: Bitmap? = null
     private var originalUri: Uri? = null
-    private var bitmapCroppingJob: Job? = null
     private val binding by viewBinding(ActivityEditBinding::inflate)
 
     private var overwriteRequested = false
+
+    override val cropImageView: CropImageView
+        get() = binding.cropImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -340,7 +368,7 @@ class EditActivity : SimpleActivity() {
         overwriteRequested = overwrite
         setOldExif()
         when {
-            binding.cropImageView.isVisible() -> saveCroppedImage()
+            binding.cropImageView.isVisible() -> cropImage()
             binding.editorDrawCanvas.isVisible() -> saveDrawnImage()
             else -> saveFilteredImage(overwrite)
         }
@@ -353,28 +381,8 @@ class EditActivity : SimpleActivity() {
         )
     }
 
-    private fun setCropProgressBarVisibility(visible: Boolean) {
-        binding.cropImageView
-            .findViewById<View>(com.canhub.cropper.R.id.CropProgressBar)
-            ?.isInvisible = visible.not()
-    }
-
-    private fun saveCroppedImage() {
-        setCropProgressBarVisibility(true)
-        bitmapCroppingJob?.cancel()
-        bitmapCroppingJob = lifecycleScope.launch(CoroutineExceptionHandler { _, t ->
-            onImageCropped(bitmap = null, error = Exception(t))
-        }) {
-            val bitmap = withContext(Dispatchers.Default) {
-                binding.cropImageView.getCroppedImage()
-            }
-            onImageCropped(bitmap, null)
-        }.apply {
-            invokeOnCompletion { setCropProgressBarVisibility(false) }
-        }
-    }
-
-    private fun onImageCropped(bitmap: Bitmap?, error: Exception?) {
+    override fun onImageCropped(bitmap: Bitmap?, error: Exception?) {
+        if (isFinishing || isDestroyed) return
         if (error != null || bitmap == null) {
             toast("${getString(R.string.image_editing_failed)}: ${error?.message}")
             return
@@ -456,7 +464,7 @@ class EditActivity : SimpleActivity() {
                 binding.cropImageView.isVisible() -> {
                     isSharingBitmap = true
                     runOnUiThread {
-                        saveCroppedImage()
+                        cropImage()
                     }
                 }
 
@@ -808,7 +816,7 @@ class EditActivity : SimpleActivity() {
         ResizeDialog(this, point) {
             resizeWidth = it.x
             resizeHeight = it.y
-            saveCroppedImage()
+            cropImage()
         }
     }
 
