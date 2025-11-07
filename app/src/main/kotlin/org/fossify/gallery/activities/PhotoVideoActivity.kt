@@ -7,7 +7,9 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Html
+import android.view.View
 import androidx.core.graphics.drawable.toDrawable
+import com.google.android.material.appbar.AppBarLayout
 import org.fossify.commons.dialogs.PropertiesDialog
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
@@ -74,7 +76,7 @@ import org.fossify.gallery.helpers.TYPE_VIDEOS
 import org.fossify.gallery.models.Medium
 import java.io.File
 
-open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentListener {
+open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.FragmentListener {
     private var mMedium: Medium? = null
     private var mIsFullScreen = false
     private var mIsFromGallery = false
@@ -85,14 +87,16 @@ open class PhotoVideoActivity : SimpleActivity(), ViewPagerFragment.FragmentList
 
     private val binding by viewBinding(FragmentHolderBinding::inflate)
 
-    override val padCutout: Boolean
-        get() = !config.showNotch
+    override val contentHolder: View
+        get() = binding.fragmentHolder
+
+    override val appBarLayout: AppBarLayout
+        get() = binding.fragmentViewerAppbar
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupEdgeToEdge(
-            padTopSystem = listOf(binding.fragmentViewerAppbar),
             padBottomSystem = listOf(binding.bottomActions.bottomActionsWrapper),
         )
         if (checkAppSideloading()) {
