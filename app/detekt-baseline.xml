@@ -100,7 +100,7 @@
     <ID>LargeClass:PhotoFragment.kt$PhotoFragment : ViewPagerFragment</ID>
     <ID>LargeClass:SettingsActivity.kt$SettingsActivity : SimpleActivity</ID>
     <ID>LargeClass:VideoFragment.kt$VideoFragment : ViewPagerFragmentSurfaceTextureListenerOnSeekBarChangeListenerPlaybackSpeedListener</ID>
-    <ID>LargeClass:ViewPagerActivity.kt$ViewPagerActivity : SimpleActivityOnPageChangeListenerFragmentListener</ID>
+    <ID>LargeClass:ViewPagerActivity.kt$ViewPagerActivity : BaseViewerActivityOnPageChangeListenerFragmentListener</ID>
     <ID>LongMethod:MainActivity.kt$MainActivity$private fun gotDirectories(newDirs: ArrayList&lt;Directory&gt;)</ID>
     <ID>LongMethod:SettingsActivity.kt$SettingsActivity$private fun parseFile(inputStream: InputStream?)</ID>
     <ID>LongMethod:VideoFragment.kt$VideoFragment$override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View</ID>
@@ -523,12 +523,12 @@
     <ID>TooManyFunctions:Medium.kt$Medium : SerializableThumbnailItem</ID>
     <ID>TooManyFunctions:MediumDao.kt$MediumDao</ID>
     <ID>TooManyFunctions:PhotoFragment.kt$PhotoFragment : ViewPagerFragment</ID>
-    <ID>TooManyFunctions:PhotoVideoActivity.kt$PhotoVideoActivity : SimpleActivityFragmentListener</ID>
+    <ID>TooManyFunctions:PhotoVideoActivity.kt$PhotoVideoActivity : BaseViewerActivityFragmentListener</ID>
     <ID>TooManyFunctions:SearchActivity.kt$SearchActivity : SimpleActivityMediaOperationsListener</ID>
     <ID>TooManyFunctions:SettingsActivity.kt$SettingsActivity : SimpleActivity</ID>
     <ID>TooManyFunctions:VideoFragment.kt$VideoFragment : ViewPagerFragmentSurfaceTextureListenerOnSeekBarChangeListenerPlaybackSpeedListener</ID>
-    <ID>TooManyFunctions:VideoPlayerActivity.kt$VideoPlayerActivity : SimpleActivityOnSeekBarChangeListenerSurfaceTextureListenerPlaybackSpeedListener</ID>
-    <ID>TooManyFunctions:ViewPagerActivity.kt$ViewPagerActivity : SimpleActivityOnPageChangeListenerFragmentListener</ID>
+    <ID>TooManyFunctions:VideoPlayerActivity.kt$VideoPlayerActivity : BaseViewerActivityOnSeekBarChangeListenerSurfaceTextureListenerPlaybackSpeedListener</ID>
+    <ID>TooManyFunctions:ViewPagerActivity.kt$ViewPagerActivity : BaseViewerActivityOnPageChangeListenerFragmentListener</ID>
     <ID>TooManyFunctions:WidgetConfigureActivity.kt$WidgetConfigureActivity : SimpleActivity</ID>
     <ID>UnusedPrivateMember:PhotoFragment.kt$PhotoFragment$private fun checkIfPanorama()</ID>
     <ID>UnusedPrivateMember:VideoFragment.kt$VideoFragment$private fun checkIfPanorama()</ID>
