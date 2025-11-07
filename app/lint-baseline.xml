@@ -195,7 +195,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="570"
+            line="573"
             column="17"/>
     </issue>
 
@@ -217,7 +217,7 @@
         errorLine2="                                      ~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/PhotoVideoActivity.kt"
-            line="255"
+            line="259"
             column="39"/>
     </issue>
 
@@ -228,7 +228,7 @@
         errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/PhotoVideoActivity.kt"
-            line="283"
+            line="287"
             column="36"/>
     </issue>
 
@@ -239,7 +239,7 @@
         errorLine2="                                          ~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="732"
+            line="737"
             column="43"/>
     </issue>
 
@@ -250,7 +250,7 @@
         errorLine2="                                                           ~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="732"
+            line="737"
             column="60"/>
     </issue>
 
@@ -261,7 +261,7 @@
         errorLine2="                                                  ~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="1336"
+            line="1341"
             column="51"/>
     </issue>
 
@@ -283,7 +283,7 @@
         errorLine2="                ~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="379"
+            line="382"
             column="17"/>
     </issue>
 
@@ -396,7 +396,7 @@
         errorLine2="                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="881"
+            line="886"
             column="28"/>
     </issue>
 
@@ -5774,7 +5774,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="139"
+            line="142"
             column="52"/>
     </issue>
 
@@ -5785,7 +5785,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="139"
+            line="142"
             column="52"/>
     </issue>
 
@@ -6005,7 +6005,7 @@
         errorLine2="        ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="270"
+            line="273"
             column="9"/>
     </issue>
 
@@ -6016,7 +6016,7 @@
         errorLine2="                                                     ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="270"
+            line="273"
             column="54"/>
     </issue>
 
@@ -6566,7 +6566,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="411"
+            line="414"
             column="17"/>
     </issue>
 

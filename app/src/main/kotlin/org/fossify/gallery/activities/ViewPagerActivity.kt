@@ -23,6 +23,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
 import android.view.MenuItem
+import android.view.View
 import android.view.WindowManager
 import android.view.animation.DecelerateInterpolator
 import android.widget.Toast
@@ -37,6 +38,7 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
+import com.google.android.material.appbar.AppBarLayout
 import org.fossify.commons.dialogs.PropertiesDialog
 import org.fossify.commons.dialogs.RenameItemDialog
 import org.fossify.commons.extensions.applyColorFilter
@@ -181,7 +183,7 @@ import java.io.File
 import kotlin.math.min
 
 @Suppress("UNCHECKED_CAST")
-class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, ViewPagerFragment.FragmentListener {
+class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, ViewPagerFragment.FragmentListener {
     companion object {
         private const val REQUEST_VIEW_VIDEO = 1
         private const val SAVED_PATH = "current_path"
@@ -210,14 +212,16 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
 
     private val binding by viewBinding(ActivityMediumBinding::inflate)
 
-    override val padCutout: Boolean
-        get() = !config.showNotch
+    override val contentHolder: View
+        get() = binding.fragmentHolder
+
+    override val appBarLayout: AppBarLayout
+        get() = binding.mediumViewerAppbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupEdgeToEdge(
-            padTopSystem = listOf(binding.mediumViewerAppbar),
             padBottomSystem = listOf(binding.bottomActions.bottomActionsWrapper),
         )
 
@@ -514,6 +518,7 @@ class ViewPagerActivity : SimpleActivity(), ViewPager.OnPageChangeListener, View
         binding.viewPager.offscreenPageLimit = 2
 
         if (config.blackBackground) {
+            binding.fragmentHolder.background = Color.BLACK.toDrawable()
             binding.viewPager.background = Color.BLACK.toDrawable()
         }
 

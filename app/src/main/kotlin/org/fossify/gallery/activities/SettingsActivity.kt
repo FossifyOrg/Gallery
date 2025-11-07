@@ -490,7 +490,7 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private fun setupShowNotch() {
-        binding.settingsShowNotchHolder.beVisibleIf(isPiePlus() && !isVanillaIceCreamPlus())
+        binding.settingsShowNotchHolder.beVisibleIf(isPiePlus())
         binding.settingsShowNotch.isChecked = config.showNotch
         binding.settingsShowNotchHolder.setOnClickListener {
             binding.settingsShowNotch.toggle()

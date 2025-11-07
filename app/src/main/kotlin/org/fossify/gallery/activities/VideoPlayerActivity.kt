@@ -40,6 +40,7 @@ import androidx.media3.exoplayer.SeekParameters
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.exoplayer.source.ProgressiveMediaSource
+import com.google.android.material.appbar.AppBarLayout
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
@@ -84,7 +85,7 @@ import kotlin.math.max
 import kotlin.math.min
 
 @UnstableApi
-open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListener,
+open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeListener,
     TextureView.SurfaceTextureListener, PlaybackSpeedListener {
     companion object {
         private const val PLAY_WHEN_READY_DRAG_DELAY = 100L
@@ -116,14 +117,16 @@ open class VideoPlayerActivity : SimpleActivity(), SeekBar.OnSeekBarChangeListen
 
     private val binding by viewBinding(ActivityVideoPlayerBinding::inflate)
 
-    override val padCutout: Boolean
-        get() = !config.showNotch
+    override val contentHolder: View
+        get() = binding.videoPlayerHolder
+
+    override val appBarLayout: AppBarLayout
+        get() = binding.videoAppbar
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupEdgeToEdge(
-            padTopSystem = listOf(binding.videoAppbar),
             padBottomSystem = listOf(binding.bottomVideoTimeHolder.root),
         )
         setupOptionsMenu()
