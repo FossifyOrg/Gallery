@@ -5,13 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.9.0] - 2025-11-08
 ### Changed
-- Restored ability to show/hide notch area ([#749])     
+- Restored ability to show/hide notch area ([#749])
 
 ### Fixed
 - Fixed overlap between editor controls and preview ([#752])
 - Fixed crash when viewing photos with extended details enabled ([#754])
-- Fixed cropped copies being saved in app data when setting wallpaper ([#759]) 
+- Fixed cropped copies being saved in app data when setting wallpaper ([#759])
 - Fixed overlap between player controls and navigation bars in landscape mode
 
 ## [1.8.1] - 2025-11-04
@@ -233,12 +235,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#734]: https://github.com/FossifyOrg/Gallery/issues/734
 [#743]: https://github.com/FossifyOrg/Gallery/issues/743
 [#747]: https://github.com/FossifyOrg/Gallery/issues/747
-[#752]: https://github.com/FossifyOrg/Gallery/issues/752
 [#749]: https://github.com/FossifyOrg/Gallery/issues/749
+[#752]: https://github.com/FossifyOrg/Gallery/issues/752
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
 
-[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.9.0...HEAD
+[1.9.0]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...1.9.0
 [1.8.1]: https://github.com/FossifyOrg/Gallery/compare/1.8.0...1.8.1
 [1.8.0]: https://github.com/FossifyOrg/Gallery/compare/1.7.0...1.8.0
 [1.7.0]: https://github.com/FossifyOrg/Gallery/compare/1.6.0...1.7.0
