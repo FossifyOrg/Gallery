@@ -1,0 +1,12 @@
+Changed:
+
+• Restored ability to show/hide notch area 
+• Updated translations
+
+Fixed:
+
+• Fixed overlap between editor controls and preview 
+• Fixed crash when viewing photos with extended details enabled 
+• Fixed cropped copies being saved in app data when setting wallpaper 
+• Fixed overlap between player controls and navigation bars in landscape mode
+
