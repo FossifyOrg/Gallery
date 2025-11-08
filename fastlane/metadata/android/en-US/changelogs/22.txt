@@ -1,7 +1,6 @@
 Changed:
 
 • Restored ability to show/hide notch area 
-• Updated translations
 
 Fixed:
 
