@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed overlap between editor controls and preview ([#752])
 - Fixed crash when viewing photos with extended details enabled ([#754])
 - Fixed cropped copies being saved in app data when setting wallpaper ([#759]) 
+- Fixed overlap between player controls and navigation bars in landscape mode
 
 ## [1.8.1] - 2025-11-04
 ### Changed
