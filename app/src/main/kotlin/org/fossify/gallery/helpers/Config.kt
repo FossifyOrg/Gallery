@@ -5,7 +5,11 @@ import android.content.res.Configuration
 import android.os.Environment
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import org.fossify.commons.helpers.*
+import org.fossify.commons.helpers.BaseConfig
+import org.fossify.commons.helpers.PROTECTION_PATTERN
+import org.fossify.commons.helpers.SORT_BY_DATE_MODIFIED
+import org.fossify.commons.helpers.SORT_DESCENDING
+import org.fossify.commons.helpers.VIEW_TYPE_GRID
 import org.fossify.gallery.R
 import org.fossify.gallery.models.AlbumCover
 import java.util.Arrays
@@ -527,6 +531,8 @@ class Config(context: Context) : BaseConfig(context) {
     var showNotch: Boolean
         get() = prefs.getBoolean(SHOW_NOTCH, true)
         set(showNotch) = prefs.edit().putBoolean(SHOW_NOTCH, showNotch).apply()
+
+    val showNotchFlow = ::showNotch.asFlowNonNull(true)
 
     var spamFoldersChecked: Boolean
         get() = prefs.getBoolean(SPAM_FOLDERS_CHECKED, false)
