@@ -676,7 +676,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         val curr = mExoPlayer!!.currentPosition
         var newPosition =
             if (forward) curr + FAST_FORWARD_VIDEO_MS else curr - FAST_FORWARD_VIDEO_MS
-        newPosition = newPosition.coerceIn(0, mExoPlayer!!.duration)
+        newPosition = newPosition.coerceIn(0, maxOf(mExoPlayer!!.duration, 0))
         setPosition(newPosition)
         if (!mIsPlaying) {
             togglePlayPause()
