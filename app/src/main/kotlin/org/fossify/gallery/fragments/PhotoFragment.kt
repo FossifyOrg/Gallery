@@ -75,6 +75,7 @@ import org.fossify.commons.helpers.DEFAULT_ANIMATION_DURATION
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.isRPlus
 import org.fossify.gallery.R
+import org.fossify.gallery.activities.BaseViewerActivity
 import org.fossify.gallery.activities.PhotoActivity
 import org.fossify.gallery.activities.PhotoVideoActivity
 import org.fossify.gallery.activities.ViewPagerActivity
@@ -909,6 +910,7 @@ class PhotoFragment : ViewPagerFragment() {
                         beVisibleIf(text.isNotEmpty())
                         val hideExtendedDetails = context?.config?.hideExtendedDetails == true
                         alpha = if (!hideExtendedDetails || !mIsFullscreen) 1f else 0f
+                        (activity as? BaseViewerActivity)?.applyProperHorizontalInsets(this)
                     }
                 }
             }

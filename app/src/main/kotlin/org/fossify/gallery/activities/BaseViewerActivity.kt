@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.appbar.AppBarLayout
 import kotlinx.coroutines.launch
+import org.fossify.commons.extensions.updateMarginWithBase
 import org.fossify.commons.extensions.updatePaddingWithBase
 import org.fossify.gallery.extensions.config
 
@@ -52,7 +53,6 @@ abstract class BaseViewerActivity : SimpleActivity() {
         } else {
             val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
             val cutout = insets.getInsetsIgnoringVisibility(Type.displayCutout())
-
             appBarLayout.updatePaddingWithBase(
                 top = if (cutout.top > 0) 0 else system.top,
                 left = if (cutout.left > 0) 0 else system.left,
@@ -65,6 +65,27 @@ abstract class BaseViewerActivity : SimpleActivity() {
                 right = cutout.right,
                 bottom = cutout.bottom
             )
+        }
+    }
+
+    fun applyProperHorizontalInsets(view: View) {
+        ViewCompat.setOnApplyWindowInsetsListener(view) { _, insets ->
+            if (config.showNotch) {
+                val systemAndCutout =
+                    insets.getInsetsIgnoringVisibility(Type.systemBars() or Type.displayCutout())
+                view.updateMarginWithBase(
+                    left = systemAndCutout.left,
+                    right = systemAndCutout.right
+                )
+            } else {
+                val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
+                val cutout = insets.getInsetsIgnoringVisibility(Type.displayCutout())
+                view.updateMarginWithBase(
+                    left = if (cutout.left > 0) 0 else system.left,
+                    right = if (cutout.right > 0) 0 else system.right
+                )
+            }
+            insets
         }
     }
 }

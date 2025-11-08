@@ -659,6 +659,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         binding.bottomVideoTimeHolder.videoSeekbar.max = mDuration.toInt()
         binding.bottomVideoTimeHolder.videoDuration.text = mDuration.getFormattedDuration()
         binding.bottomVideoTimeHolder.videoCurrTime.text = mCurrTime.getFormattedDuration()
+        applyProperHorizontalInsets(binding.bottomVideoTimeHolder.videoTimeHolder)
         setupTimer()
     }
 

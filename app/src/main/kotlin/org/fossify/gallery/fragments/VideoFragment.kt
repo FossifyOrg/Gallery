@@ -62,6 +62,7 @@ import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.helpers.DEFAULT_ANIMATION_DURATION
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.gallery.R
+import org.fossify.gallery.activities.BaseViewerActivity
 import org.fossify.gallery.activities.VideoActivity
 import org.fossify.gallery.databinding.PagerVideoItemBinding
 import org.fossify.gallery.extensions.config
@@ -566,6 +567,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                 text = getMediumExtendedDetails(mMedium)
                 beVisibleIf(text.isNotEmpty())
                 alpha = if (!mConfig.hideExtendedDetails || !mIsFullscreen) 1f else 0f
+                (activity as? BaseViewerActivity)?.applyProperHorizontalInsets(this)
             }
         } else {
             binding.videoDetails.beGone()
@@ -575,6 +577,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private fun initTimeHolder() {
         mTimeHolder.beGoneIf(mIsFullscreen)
         mTimeHolder.alpha = if (mIsFullscreen) 0f else 1f
+        (activity as? BaseViewerActivity)?.applyProperHorizontalInsets(mTimeHolder)
     }
 
     private fun checkIfPanorama() {
