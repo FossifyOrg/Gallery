@@ -642,13 +642,12 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
 
             val drawableId =
                 if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
-            binding.bottomVideoTimeHolder.videoPlaybackSpeed
-                .setDrawablesRelativeWithIntrinsicBounds(
-                    AppCompatResources.getDrawable(
-                        requireContext(),
-                        drawableId
+            context?.let {
+                binding.bottomVideoTimeHolder.videoPlaybackSpeed
+                    .setDrawablesRelativeWithIntrinsicBounds(
+                        AppCompatResources.getDrawable(it, drawableId)
                     )
-                )
+            }
         }
 
         @SuppressLint("SetTextI18n")

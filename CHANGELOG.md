@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Restored ability to show/hide notch area ([#749])      
+- Restored ability to show/hide notch area ([#749])     
 
 ### Fixed
 - Fixed overlap between editor controls and preview ([#752])
