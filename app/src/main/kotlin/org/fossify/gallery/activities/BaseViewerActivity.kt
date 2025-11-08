@@ -5,7 +5,11 @@ import android.view.View
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsCompat.Type
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.appbar.AppBarLayout
+import kotlinx.coroutines.launch
 import org.fossify.commons.extensions.updatePaddingWithBase
 import org.fossify.gallery.extensions.config
 
@@ -21,6 +25,17 @@ abstract class BaseViewerActivity : SimpleActivity() {
             setupEdgeToEdge(insets)
             insets
         }
+        registerShowNotchCollector(contentRoot)
+    }
+
+    private fun registerShowNotchCollector(view: View) {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                config.showNotchFlow.collect {
+                    view.requestApplyInsets()
+                }
+            }
+        }
     }
 
     private fun setupEdgeToEdge(insets: WindowInsetsCompat) {
@@ -32,6 +47,8 @@ abstract class BaseViewerActivity : SimpleActivity() {
                 left = systemAndCutout.left,
                 right = systemAndCutout.right
             )
+
+            contentHolder.updatePaddingWithBase(left = 0, top = 0, right = 0, bottom = 0)
         } else {
             val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
             val cutout = insets.getInsetsIgnoringVisibility(Type.displayCutout())
