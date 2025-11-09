@@ -766,8 +766,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
 
         if (mIsPlaying) {
             mExoPlayer!!.playWhenReady = true
-        } else {
-            playVideo()
         }
 
         mIsDragged = false

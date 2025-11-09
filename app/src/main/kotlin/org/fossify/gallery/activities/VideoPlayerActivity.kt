@@ -756,10 +756,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                             it.animate().alpha(0f).start()
                         }
                     }
-
-                    if (!mIsPlaying) {
-                        togglePlayPause()
-                    }
                 }
                 mIsDragged = false
             }
@@ -815,8 +811,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
         if (mIsPlaying) {
             mExoPlayer!!.playWhenReady = true
-        } else {
-            togglePlayPause()
         }
 
         mIsDragged = false
