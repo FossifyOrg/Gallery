@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="edit">Ẓreg</string>
+    <string name="open_camera">Ldi takamiṛat</string>
+    <string name="hidden">(yettwaffer)</string>
 </resources>
