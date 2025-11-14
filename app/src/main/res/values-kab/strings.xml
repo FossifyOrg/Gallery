@@ -3,4 +3,10 @@
     <string name="edit">Ẓreg</string>
     <string name="open_camera">Ldi takamiṛat</string>
     <string name="hidden">(yettwaffer)</string>
+    <string name="volume">Ableɣ</string>
+    <string name="unknown_location">Adig arussin</string>
+    <string name="playback_speed">Arured n wurar</string>
+    <string name="lock_orientation">Sekkeṛ lewhi</string>
+    <string name="unlock_orientation">Serreḥ usekkeṛ n lewhi</string>
+    <string name="change_orientation">Beddel lewhi</string>
 </resources>
