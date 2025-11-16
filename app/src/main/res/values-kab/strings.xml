@@ -9,4 +9,6 @@
     <string name="lock_orientation">Sekkeṛ lewhi</string>
     <string name="unlock_orientation">Serreḥ usekkeṛ n lewhi</string>
     <string name="change_orientation">Beddel lewhi</string>
+    <string name="force_landscape_reverse">Ḥettem imeẓri s tehri (tti)</string>
+    <string name="fixing">Aseggem…</string>
 </resources>
