@@ -71,4 +71,6 @@
     <string name="set_as_wallpaper_with">Sbadu am tugna n ugdil s:</string>
     <string name="setting_wallpaper">Asbadu n tugna n ugdil…</string>
     <string name="wallpaper_set_successfully">Tugna n ugdil tettwasbedd akken iwata</string>
+    <string name="images">Tugniwin</string>
+    <string name="videos">Tividyutin</string>
 </resources>
