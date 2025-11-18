@@ -118,6 +118,15 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private var mStoredBottomActions = true
     private var mStoredExtendedDetails = 0
     private var mStoredRememberLastVideoPosition = false
+    private var mOriginalPlaybackSpeed = 1f
+    private var mIsLongPressActive = false
+
+    private val mTouchHoldRunnable = Runnable {
+        // This code runs after the delay, only if the user is still holding down.
+        mIsLongPressActive = true
+        mOriginalPlaybackSpeed = mExoPlayer?.playbackParameters?.speed ?: mConfig.playbackSpeed
+        updatePlaybackSpeed(2.0f)
+    }
 
     private lateinit var mTimeHolder: View
     private lateinit var mBrightnessSideScroll: MediaSideScroll
@@ -214,6 +223,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             videoSurfaceFrame.setOnTouchListener { view, event ->
                 if (videoSurfaceFrame.controller.state.zoom == 1f) {
                     handleEvent(event)
+                    handleTouchHoldEvent(event)
                 }
 
                 gestureDetector.onTouchEvent(event)
@@ -288,7 +298,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                     doubleTap = { x, y ->
                         doSkip(false)
                     })
-
                 mVolumeSideScroll.initialize(
                     activity,
                     slideInfo,
@@ -940,6 +949,25 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                 height = screenHeight
             }
             mTextureView.layoutParams = this
+        }
+    }
+
+    private fun handleTouchHoldEvent(event: MotionEvent) {
+        when (event.action) {
+            MotionEvent.ACTION_DOWN -> {
+                if (mIsPlaying) {
+                    mTimerHandler.postDelayed(mTouchHoldRunnable, 300)
+                }
+            }
+
+            MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+
+                if (mIsLongPressActive) {
+                    updatePlaybackSpeed(mOriginalPlaybackSpeed)
+                    mIsLongPressActive = false
+                }
+            }
         }
     }
 }
