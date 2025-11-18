@@ -91,6 +91,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     companion object {
         private const val PROGRESS = "progress"
         private const val UPDATE_INTERVAL_MS = 250L
+        private const val TOUCH_HOLD_DURATION_MS = 300L
     }
 
     private var mIsFullscreen = false
@@ -956,7 +957,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 if (mIsPlaying) {
-                    mTimerHandler.postDelayed(mTouchHoldRunnable, 300)
+                    mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
                 }
             }
 
