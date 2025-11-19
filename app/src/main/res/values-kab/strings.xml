@@ -73,4 +73,7 @@
     <string name="wallpaper_set_successfully">Tugna n ugdil tettwasbedd akken iwata</string>
     <string name="images">Tugniwin</string>
     <string name="videos">Tividyutin</string>
+    <string name="exclude_folder_description">Ayagi ad d-iṣṭixer afran akked wid yellan s yikaramen inaddawen si Timidelt Fossify kan. Tzemreḍ ad tesferkeḍ ikaramen yettwaɛezlen deg iɣewwaṛen.</string>
+    <string name="excluded_activity_placeholder">Asṭaxer n yikaramen ad ten-yerr d wid n yikaramen inaddawen imuffiren deg timidelt Fossy kan, ad d-banen daɣen deg yisnasen-nniḍen.\n\nMa tebɣiḍ ad ten-teffreḍ seg yisnasen-nniḍen, seqdec tawuri n tuffirt.</string>
+    <string name="hidden_folders">Ikaraman yettwaffren</string>
 </resources>
