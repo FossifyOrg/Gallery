@@ -32,7 +32,7 @@ androidphotofilters = "193f2ae509"
 sanselan = "0.97-incubator"
 media3Exoplayer = "1.8.0"
 okhttp = "5.3.1"
-okio = "3.16.3"
+okio = "3.16.4"
 picasso = "2.71828"
 subsamplingScaleImageView = "d705c3c4ad"
 #build
