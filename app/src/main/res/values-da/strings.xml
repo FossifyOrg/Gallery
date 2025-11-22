@@ -259,4 +259,5 @@
         <item quantity="other">Er du sikker på, at du vil gendanne %d filer?</item>
     </plurals>
     <string name="force_landscape_reverse">Tving landskab (omvendt)</string>
+    <string name="overwrite_original">Overskriv original</string>
 </resources>
