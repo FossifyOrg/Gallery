@@ -177,4 +177,25 @@
     <string name="edit_video_with">Ẓreg tavidyut s:</string>
     <string name="no_image_editor_found">Ulac amaẓrag n tugna</string>
     <string name="no_video_editor_found">Ulac amaẓrag n tvidyut</string>
+    <string name="manage_extended_details">sefrek ifatusen yettwasmeɣren</string>
+    <string name="one_finger_zoom">Sireg asemɣer/asemẓi n uḍad deg ugdil aččuran n umidya</string>
+    <string name="allow_instant_change">Sireg abeddel n umidya s utekki ɣef yidisan n ugdil</string>
+    <string name="allow_deep_zooming_images">Sireg asemɣer/asemẓi alqayan n tugniwin</string>
+    <string name="hide_extended_details">Ffer ifatusen yettwasmeɣren ticki afeggag n waddad yeffer</string>
+    <string name="show_at_bottom">Sken kra n tqeffalin n tigawt deg wadda n ugdil</string>
+    <string name="show_recycle_bin">Ssken Taqecwalt n Yiḍumman deg ugdil n yikaramen</string>
+    <string name="deep_zoomable_images">Asemɣer/Asemẓi lqayen n tugniwin</string>
+    <string name="show_highest_quality">Ssken-d tugniwin s tɣara ifazen akk</string>
+    <string name="show_recycle_bin_last">Sken-d Taqecwalt n Yiḍumman am uferdis aneggaru deg ugdil agejdan</string>
+    <string name="allow_down_gesture">Sireg ad tmedleḍ timeẓri n ugdil aččuṛan s usɣel ɣer wedda</string>
+    <string name="open_videos_on_separate_screen">Ldi yal tikelt tividyutin deg ugdil yemgaraden s yisɣal iglan imaynuten</string>
+    <string name="allow_rotating_gestures">Sireg tuzzya n tugniwin s tigawt</string>
+    <string name="file_loading_priority">Asali n ufaylu uzwir</string>
+    <string name="speed">Arured</string>
+    <string name="bottom_actions">Tigawin n wadda</string>
+    <string name="manage_bottom_actions">Sefrek tigawin n wadda yettbanen</string>
+    <string name="toggle_favorite">Beddel amenyaf</string>
+    <string name="toggle_file_visibility">Beddel tittwalit n ufaylu</string>
+    <string name="failed_to_load_media">Asali n umidya ur yeddi ara.</string>
+    <string name="file_is_malformed_or_corrupted">Afaylu ur ittusefrak ara akken iwata neɣ d ameggafsu.</string>
 </resources>
