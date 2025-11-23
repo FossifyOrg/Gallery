@@ -18,6 +18,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
@@ -66,6 +67,7 @@ import org.fossify.gallery.activities.BaseViewerActivity
 import org.fossify.gallery.activities.VideoActivity
 import org.fossify.gallery.databinding.PagerVideoItemBinding
 import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getBottomActionsHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
@@ -92,6 +94,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         private const val PROGRESS = "progress"
         private const val UPDATE_INTERVAL_MS = 250L
         private const val TOUCH_HOLD_DURATION_MS = 300L
+        private const val TOUCH_HOLD_SPEED_MULTIPLIER = 2.0f
     }
 
     private var mIsFullscreen = false
@@ -123,10 +126,13 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private var mIsLongPressActive = false
 
     private val mTouchHoldRunnable = Runnable {
+        mView.parent.requestDisallowInterceptTouchEvent(true)
         // This code runs after the delay, only if the user is still holding down.
         mIsLongPressActive = true
         mOriginalPlaybackSpeed = mExoPlayer?.playbackParameters?.speed ?: mConfig.playbackSpeed
-        updatePlaybackSpeed(2.0f)
+        updatePlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
+
+        mPlaybackSpeedPill.fadeIn()
     }
 
     private lateinit var mTimeHolder: View
@@ -140,6 +146,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private lateinit var mCurrTimeView: TextView
     private lateinit var mPlayPauseButton: ImageView
     private lateinit var mSeekBar: SeekBar
+    private lateinit var mPlaybackSpeedPill: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -180,6 +187,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             }
 
             mSeekBar = bottomVideoTimeHolder.videoSeekbar
+            mPlaybackSpeedPill = playbackSpeedPill
             mSeekBar.setOnSeekBarChangeListener(this@VideoFragment)
             // adding an empty click listener just to avoid ripple animation at toggling fullscreen
             mSeekBar.setOnClickListener { }
@@ -224,8 +232,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             videoSurfaceFrame.setOnTouchListener { view, event ->
                 if (videoSurfaceFrame.controller.state.zoom == 1f) {
                     handleEvent(event)
-                    handleTouchHoldEvent(event)
                 }
+                handleTouchHoldEvent(event)
 
                 gestureDetector.onTouchEvent(event)
                 false
@@ -234,6 +242,14 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.videoHolder) { _, insets ->
             val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
+
+            val pillTopMargin = system.top + resources.getActionBarHeight(context) + resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+            (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+                setMargins(
+                    0, pillTopMargin, 0, 0
+                )
+            }
+
             binding.bottomActionsDummy.updateLayoutParams<ViewGroup.LayoutParams> {
                 height = resources.getBottomActionsHeight() + system.bottom
             }
@@ -956,7 +972,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private fun handleTouchHoldEvent(event: MotionEvent) {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                if (mIsPlaying) {
+                if (mIsPlaying && !mBrightnessSideScroll.isScrolling && !mVolumeSideScroll.isScrolling) {
                     mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
                 }
             }
@@ -967,6 +983,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                 if (mIsLongPressActive) {
                     updatePlaybackSpeed(mOriginalPlaybackSpeed)
                     mIsLongPressActive = false
+                    mPlaybackSpeedPill.fadeOut()
                 }
             }
         }

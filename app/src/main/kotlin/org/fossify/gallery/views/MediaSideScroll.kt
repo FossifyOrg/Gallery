@@ -21,6 +21,7 @@ import kotlin.math.max
 class MediaSideScroll(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
     private val SLIDE_INFO_FADE_DELAY = 1000L
     private var mTouchDownX = 0f
+    internal var isScrolling = false
     private var mTouchDownY = 0f
     private var mTouchDownTime = 0L
     private var mTouchDownValue = -1
@@ -106,6 +107,7 @@ class MediaSideScroll(context: Context, attrs: AttributeSet) : RelativeLayout(co
                 val diffY = mTouchDownY - event.rawY
 
                 if (Math.abs(diffY) > dragThreshold && Math.abs(diffY) > Math.abs(diffX)) {
+                    isScrolling = true
                     var percent = ((diffY / mViewHeight) * 100).toInt() * 3
                     percent = Math.min(100, Math.max(-100, percent))
 
@@ -129,9 +131,14 @@ class MediaSideScroll(context: Context, attrs: AttributeSet) : RelativeLayout(co
             }
 
             MotionEvent.ACTION_UP -> {
+                isScrolling = false
                 if (mIsBrightnessScroll) {
                     mTouchDownValue = mTempBrightness
                 }
+            }
+
+            MotionEvent.ACTION_CANCEL -> {
+                isScrolling = false
             }
         }
         return true
