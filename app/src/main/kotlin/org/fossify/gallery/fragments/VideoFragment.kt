@@ -243,7 +243,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         ViewCompat.setOnApplyWindowInsetsListener(binding.videoHolder) { _, insets ->
             val system = insets.getInsetsIgnoringVisibility(Type.systemBars())
 
-            val pillTopMargin = system.top + resources.getActionBarHeight(context) + resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+            val pillTopMargin = system.top + resources.getActionBarHeight(context) +
+                resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
             (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
                 setMargins(
                     0, pillTopMargin, 0, 0
