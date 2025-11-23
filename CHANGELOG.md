@@ -5,8 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
 ### Changed
 - Player now respects play/pause state when seeking
+
+### Fixed
+- Fixed crash in editor when launched from other apps ([#786])
+
 
 ## [1.9.0] - 2025-11-08
 ### Changed
@@ -241,6 +246,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#752]: https://github.com/FossifyOrg/Gallery/issues/752
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
+[#786]: https://github.com/FossifyOrg/Gallery/issues/786
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.9.0...HEAD
 [1.9.0]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...1.9.0
