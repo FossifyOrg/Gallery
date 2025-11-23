@@ -8,7 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
-import android.widget.RelativeLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.graphics.scale
 import androidx.core.net.toUri
 import androidx.exifinterface.media.ExifInterface
@@ -130,8 +130,15 @@ class EditActivity : BaseCropActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        isCropIntent = intent.extras?.get(CROP) == "true"
         setupEdgeToEdge(
-            padBottomSystem = listOf(binding.bottomEditorPrimaryActions.root)
+            padBottomSystem = listOf(
+                if (isCropIntent) {
+                    binding.bottomEditorCropRotateActions.root
+                } else {
+                    binding.bottomEditorPrimaryActions.root
+                }
+            )
         )
 
         if (checkAppSideloading()) {
@@ -210,10 +217,15 @@ class EditActivity : BaseCropActivity() {
             else -> uri!!
         }
 
-        isCropIntent = extras?.get(CROP) == "true"
         if (isCropIntent) {
             binding.bottomEditorPrimaryActions.root.beGone()
-            (binding.bottomEditorCropRotateActions.root.layoutParams as RelativeLayout.LayoutParams).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 1)
+
+            val params = binding.bottomEditorCropRotateActions.root.layoutParams as? ConstraintLayout.LayoutParams
+            if (params != null) {
+                params.bottomToBottom = binding.activityEditHolder.id
+                binding.bottomEditorCropRotateActions.root.layoutParams = params
+            }
+
             binding.editorToolbar.menu.findItem(R.id.overwrite_original).isVisible = false
         }
 

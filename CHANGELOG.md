@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed crash in editor when launched from other apps ([#786])
+
 ### Added
 - Long press gesture to play videos at 2x speed ([#666])
 
@@ -241,7 +244,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#752]: https://github.com/FossifyOrg/Gallery/issues/752
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
-[#666]: https://github.com/FossifyOrg/Gallery/issues/666
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.9.0...HEAD
 [1.9.0]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...1.9.0
