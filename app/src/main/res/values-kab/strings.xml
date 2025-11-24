@@ -198,4 +198,9 @@
     <string name="toggle_file_visibility">Beddel tittwalit n ufaylu</string>
     <string name="failed_to_load_media">Asali n umidya ur yeddi ara.</string>
     <string name="file_is_malformed_or_corrupted">Afaylu ur ittusefrak ara akken iwata neɣ d ameggafsu.</string>
+    <string name="no_animation">Ula yiwet</string>
+    <string name="by_folder">Akaram</string>
+    <string name="group_by">Segrew s</string>
+    <string name="do_not_group_files">Ur segraw ara ifuyla</string>
+    <string name="delete_empty_folders">Kkes ikaramen ilmawen mi tekkseḍ agbur-nsen</string>
 </resources>
