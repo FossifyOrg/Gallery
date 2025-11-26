@@ -236,4 +236,15 @@
     <string name="faq_1_title">Amek ara rreɣ timidelt n Fossify d amezwer n yibenk n tmidelt?</string>
     <string name="faq_1_text">Tazwara ilaq-ak ad d-tafeḍ timidelt tamezwert deg weḥric n yisnasen n yiɣewwaren-ik-im n yibenk, nadi ɣef tqeffalt i d-yeqqaren taɣawsa am \"Ldi s wudem amezwer\", sit fell-as, sakin fren \"Sfeḍ imezwar\".Tikkelt i d-iteddun ad tɛerḍeḍ ad teldiḍ tugna neɣ tavidyut ilaq ad twaliḍ amextaf n usnas, anda tzemreḍ ad tferneḍ Timidelt n Fossify u ad tt-terreḍ d asnas amezwer.</string>
     <string name="faq_2_title">Sekkeṛ asnas s wawal uffir, maca ttuɣ-t. D acu i zemreɣ ad t-xedmeɣ?</string>
+    <string name="slideshow">Askan n tmaccagin</string>
+    <string name="loop_slideshow">askan n tmaccagin s teneddict</string>
+    <string name="slide">Timeccegit</string>
+    <string name="slideshow_ended">Askan n tmaccagin ifukk</string>
+    <string name="no_media_for_slideshow">Ulac amidya n uskan n tmaccagin yettwafen</string>
+    <string name="scroll_thumbnails_horizontally">Drurem tinfulin s wudem aglawan</string>
+    <string name="faq_2_text">Tzemreḍ ad t-id-tefruḍ deg 2 n iberdan. Tzemreḍ ad talseḍ asbeddi n usnas, neɣ ad tafeḍ asnas deg iɣewwaṛen n yibenk sakin fren \"Sfeḍ isefka\". Ayagi ad iwennez akk iɣewwaren-ik-im, ur tekkes ara ifuyla n imidyaten.</string>
+    <string name="faq_3_title">Amek i zemreɣ ad d-rreɣ album dima yettban-d deg tqacuct?</string>
+    <string name="faq_4_title">Amek i zemreɣ ad sleɣ tividyutin s tɣawla ɣer sdat?</string>
+    <string name="faq_5_title">D acu n umgirred yellan gar tuffra d ustixer n ukaram?</string>
+    <string name="faq_6_title">Acuɣer ikaramen s tduli n uẓawan neɣ isenṭeḍen ttbanen-d?</string>
 </resources>
