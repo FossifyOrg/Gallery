@@ -1,0 +1,8 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed crash in editor when launched from other apps 
+
