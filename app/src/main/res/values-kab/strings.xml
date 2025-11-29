@@ -250,4 +250,12 @@
     <string name="show_notch">Sken tanqiḍt n ugdil ma tewjed</string>
     <string name="faq_3_text">Tzemreḍ ad ttekkiḍ ɣef walbum yerna ad tferneḍ tignit usenṭeḍ deg umuɣ n tigawin, aya ad t-yessenṭeḍ ɣer tqacuct. Tzemreḍ ad tsenteḍeḍ aṭas n yikaramen, ad myizwarent iferdisen ittwasenteḍen s tarrayt n usmizzwer amezwer.</string>
     <string name="faq_4_text">Tzemreḍ ad t-tgeḍ s usiti snat n tikkal deg yidis n ugdil, neɣ s usiti n yiḍrisen n tenzagt tamirant neɣ tafellayt zdat n ufeggag n unadi. Ma tremdeḍ tulya n tvidyutin ɣef ugdil i yiman-is deg iɣewwaṛen n usnas, tzemreḍ daɣen ad tesqedceḍ tigawin tiglawanen.</string>
+    <string name="faq_5_text">Astixer ur iseḥbes ara askan n ukaram ala deg Timidelt n Fossify, ulamma Tuffra tetteddu deg uswir n unagraw u daɣen akaram ittwaffer seg tmideltin nniden. Iteddu s tmerna n ufaylu ilem \".nomedia \" deg ukaram i d-muddeḍ, sakin tzemreḍ ad tekkseḍ s yal amsefrak n ufaylu. Ger tamawt d akken kra n ibenkan ur ttaǧǧan ara ad ffren ikaramen am tkamiṛat, tuṭṭfiwin n ugdil akked isidar.</string>
+    <string name="faq_6_text">Aya yezmer ad yeḍru dakken ad twaliḍ kra n yilbumen ur nennum ara. Tzemreḍ ad ten-stixreḍ s sshala s usiti aɣezzfan fell-asen syin fren Stixer. Di tenkult n udiwenni i d-iteddun tzemreḍ ad tferneḍ akaram amarraw, yezmer lḥal ad yili waya d ayen ara yeǧǧen ikaramen nniḍen ur ttbanen ara.</string>
+    <string name="faq_7_title">Akaram s tugniwin ur d-ittban ara, neɣ ur d-ittban ara akk iferdisen. D acu i zemreɣ ad t-xedmeɣ?</string>
+    <string name="faq_7_text">Aya yezmer ad yesɛu aṭas n ssebbat, maca yeshel maḍi. Kcem kan ɣer yiɣewwaren -&gt; Sefrek ikaramen yedduklen, fren Ugar sakin inig ɣer ukaram ilaqen.</string>
+    <string name="faq_8_title">I ma bɣiɣ ad d-banen kra kan n yikaramen?</string>
+    <string name="faq_10_title">Zemreɣ ad neǧreɣ tugniwin s usnas-a?</string>
+    <string name="faq_10_text">Ih, tzemreḍ ad tenǧreḍ tugniwin deg umaẓrag, ad tzuɣreḍ tugniwin s tiɣemmaṛ n tugna. Tzemreḍ ad terzuḍ ɣer umaẓrag s usiti ɣezzifen ɣef tugna taqmaḍt, fren Taẓrigt, neɣ fren Taẓrigt seg teskant n ugdil aččuran.</string>
+    <string name="faq_11_title">Zemreɣ ad geɣ kra usgrew n tiqmaḍin n ufaylu n umidya?</string>
 </resources>
