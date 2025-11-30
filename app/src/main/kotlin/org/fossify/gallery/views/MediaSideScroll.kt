@@ -33,6 +33,7 @@ class MediaSideScroll(context: Context, attrs: AttributeSet) : RelativeLayout(co
 
     private var mSlideInfoText = ""
     private var mSlideInfoFadeHandler = Handler()
+    internal var onVerticalScroll: (() -> Unit)? = null
     private var mParentView: ViewGroup? = null
     private var activity: Activity? = null
     private var doubleTap: ((Float, Float) -> Unit)? = null
@@ -106,6 +107,7 @@ class MediaSideScroll(context: Context, attrs: AttributeSet) : RelativeLayout(co
                 val diffY = mTouchDownY - event.rawY
 
                 if (Math.abs(diffY) > dragThreshold && Math.abs(diffY) > Math.abs(diffX)) {
+                    onVerticalScroll?.invoke()
                     var percent = ((diffY / mViewHeight) * 100).toInt() * 3
                     percent = Math.min(100, Math.max(-100, percent))
 

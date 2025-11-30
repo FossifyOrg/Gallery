@@ -6,6 +6,26 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr">
 
+    <TextView
+        android:id="@+id/playback_speed_pill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/label_start_margin"
+        android:background="@drawable/playback_pill_background"
+        android:elevation="10dp"
+        android:paddingStart="@dimen/list_item_padding_horizontal"
+        android:paddingTop="@dimen/list_item_padding_vertical"
+        android:paddingEnd="@dimen/list_item_padding_horizontal"
+        android:paddingBottom="@dimen/list_item_padding_vertical"
+        android:text="@string/playback_speed_display_text"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/list_secondary_text_size"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
     <ImageView
         android:id="@+id/video_preview"
         android:layout_width="match_parent"
