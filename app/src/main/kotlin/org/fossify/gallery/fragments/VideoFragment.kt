@@ -196,6 +196,12 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             mCurrTimeView = bottomVideoTimeHolder.videoCurrTime
             mBrightnessSideScroll = videoBrightnessController
             mVolumeSideScroll = videoVolumeController
+            mBrightnessSideScroll.onVerticalScroll = {
+                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+            }
+            mVolumeSideScroll.onVerticalScroll = {
+                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+            }
             mTextureView = videoSurface
             mTextureView.surfaceTextureListener = this@VideoFragment
 
@@ -973,7 +979,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private fun handleTouchHoldEvent(event: MotionEvent) {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                if (mIsPlaying && !mBrightnessSideScroll.isScrolling && !mVolumeSideScroll.isScrolling) {
+                if (mIsPlaying) {
                     mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
                 }
             }
