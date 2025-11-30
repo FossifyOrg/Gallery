@@ -2,10 +2,10 @@
 #jetbrains
 kotlin = "2.2.21"
 #KSP
-ksp = "2.3.2"
+ksp = "2.3.3"
 #Detekt
 detekt = "1.23.8"
-detektCompose = "0.4.27"
+detektCompose = "0.4.28"
 #AndroidX
 androidx-print = "1.1.0"
 androidx-swiperefreshlayout = "1.1.0"
