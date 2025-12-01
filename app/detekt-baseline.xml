@@ -277,7 +277,6 @@
     <ID>MaxLineLength:DirectoryDao.kt$DirectoryDao$@Query("UPDATE directories SET thumbnail = :thumbnail, filename = :name, path = :newPath WHERE path = :oldPath COLLATE NOCASE")</ID>
     <ID>MaxLineLength:DirectoryDao.kt$DirectoryDao$fun</ID>
     <ID>MaxLineLength:DirectoryItemBinding.kt$GridDirectoryItemRoundedCornersBinding$class</ID>
-    <ID>MaxLineLength:EditActivity.kt$EditActivity$(binding.bottomEditorCropRotateActions.root.layoutParams as RelativeLayout.LayoutParams).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 1)</ID>
     <ID>MaxLineLength:EditActivity.kt$EditActivity$binding.bottomEditorDrawActions.bottomDrawWidth.setColors(getProperTextColor(), getProperPrimaryColor(), getProperBackgroundColor())</ID>
     <ID>MaxLineLength:EditActivity.kt$EditActivity$if</ID>
     <ID>MaxLineLength:EditActivity.kt$EditActivity$val layoutManager = binding.bottomEditorFilterActions.bottomActionsFilterList.layoutManager as LinearLayoutManager</ID>
@@ -564,7 +563,6 @@
     <ID>WildcardImport:ChangeFolderThumbnailStyleDialog.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:ChangeFolderThumbnailStyleDialog.kt$import org.fossify.gallery.helpers.*</ID>
     <ID>WildcardImport:ChangeGroupingDialog.kt$import org.fossify.gallery.helpers.*</ID>
-    <ID>WildcardImport:Config.kt$import org.fossify.commons.helpers.*</ID>
     <ID>WildcardImport:Constants.kt$import org.fossify.commons.helpers.*</ID>
     <ID>WildcardImport:Directory.kt$import androidx.room.*</ID>
     <ID>WildcardImport:Directory.kt$import org.fossify.commons.helpers.*</ID>
