@@ -16,12 +16,12 @@ exif = "1.0.1"
 #Room
 room = "2.8.4"
 #Fossify
-commons = "5.7.3"
+commons = "5.9.1"
 #Gradle4
 gradlePlugins-agp = "8.11.1"
 #Other
 androidGifDrawable = "1.2.29"
-androidImageCropper = "4.6.0"
+androidImageCropper = "4.7.0"
 animationAndroid = "3.0.5"
 glideCompiler = "5.0.5"
 zjupureWebpdecoder = "2.7.4.16.0"
