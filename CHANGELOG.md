@@ -249,6 +249,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#752]: https://github.com/FossifyOrg/Gallery/issues/752
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
+[#786]: https://github.com/FossifyOrg/Gallery/issues/786
+[#666]: https://github.com/FossifyOrg/Gallery/issues/666
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...HEAD
 [1.9.1]: https://github.com/FossifyOrg/Gallery/compare/1.9.0...1.9.1
