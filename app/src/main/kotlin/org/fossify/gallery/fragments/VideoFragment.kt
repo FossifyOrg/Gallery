@@ -1000,13 +1000,13 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             MotionEvent.ACTION_MOVE -> {
                 val deltaX = abs(event.x - mInitialX)
                 val deltaY = abs(event.y - mInitialY)
-                if(mIsPlaying && (deltaX > mTouchSlop || deltaY > mTouchSlop) && !mIsLongPressActive) {
+                if (mIsPlaying && (deltaX > mTouchSlop || deltaY > mTouchSlop) && !mIsLongPressActive) {
                     mTimerHandler.removeCallbacks(mTouchHoldRunnable)
                 }
             }
 
             MotionEvent.ACTION_POINTER_DOWN -> {
-                if(!mIsLongPressActive) {
+                if (!mIsLongPressActive) {
                     mTimerHandler.removeCallbacks(mTouchHoldRunnable)
                 }
             }
