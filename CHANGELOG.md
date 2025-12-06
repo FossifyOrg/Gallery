@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Long press gesture to play videos at 2x speed ([#666])
 
 ## [1.9.1] - 2025-11-25
 ### Changed
@@ -247,6 +249,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
+[#666]: https://github.com/FossifyOrg/Gallery/issues/666
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...HEAD
 [1.9.1]: https://github.com/FossifyOrg/Gallery/compare/1.9.0...1.9.1
