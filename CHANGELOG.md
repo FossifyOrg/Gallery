@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Long press gesture to play videos at 2x speed ([#666])
-- 2x speed pill to indicate triggering of 2x playback speed gesture
 
 ## [1.9.1] - 2025-11-25
 ### Changed

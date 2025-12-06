@@ -10,11 +10,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
 import android.view.GestureDetector
+import android.view.HapticFeedbackConstants
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.Surface
 import android.view.TextureView
 import android.view.View
+import android.view.ViewConfiguration
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
@@ -86,6 +88,7 @@ import org.fossify.gallery.views.MediaSideScroll
 import java.io.File
 import java.io.FileInputStream
 import java.text.DecimalFormat
+import kotlin.math.abs
 
 @UnstableApi
 class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
@@ -93,7 +96,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     companion object {
         private const val PROGRESS = "progress"
         private const val UPDATE_INTERVAL_MS = 250L
-        private const val TOUCH_HOLD_DURATION_MS = 300L
+        private const val TOUCH_HOLD_DURATION_MS = 500L
         private const val TOUCH_HOLD_SPEED_MULTIPLIER = 2.0f
     }
 
@@ -130,6 +133,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         // This code runs after the delay, only if the user is still holding down.
         mIsLongPressActive = true
         mOriginalPlaybackSpeed = mExoPlayer?.playbackParameters?.speed ?: mConfig.playbackSpeed
+        mView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
         updatePlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
 
         mPlaybackSpeedPill.fadeIn()
@@ -147,6 +151,9 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private lateinit var mPlayPauseButton: ImageView
     private lateinit var mSeekBar: SeekBar
     private lateinit var mPlaybackSpeedPill: TextView
+    private var mTouchSlop = 0
+    private var mInitialX = 0f
+    private var mInitialY = 0f
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -159,6 +166,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
 
         mMedium = arguments.getSerializable(MEDIUM) as Medium
         mConfig = context.config
+        mTouchSlop = (ViewConfiguration.get(context).scaledTouchSlop) / 3
         binding = PagerVideoItemBinding.inflate(inflater, container, false).apply {
             panoramaOutline.setOnClickListener { openPanorama() }
             bottomVideoTimeHolder.videoCurrTime.setOnClickListener { skip(false) }
@@ -240,6 +248,9 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                     handleEvent(event)
                 }
                 handleTouchHoldEvent(event)
+                if (mIsLongPressActive) {
+                    return@setOnTouchListener true
+                }
 
                 gestureDetector.onTouchEvent(event)
                 false
@@ -977,22 +988,41 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun handleTouchHoldEvent(event: MotionEvent) {
-        when (event.action) {
+        when (event.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
-                if (mIsPlaying) {
+                if (mIsPlaying && event.pointerCount == 1) {
+                    mInitialX = event.x
+                    mInitialY = event.y
                     mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
+                }
+            }
+
+            MotionEvent.ACTION_MOVE -> {
+                val deltaX = abs(event.x - mInitialX)
+                val deltaY = abs(event.y - mInitialY)
+                if(mIsPlaying && (deltaX > mTouchSlop || deltaY > mTouchSlop) && !mIsLongPressActive) {
+                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+                }
+            }
+
+            MotionEvent.ACTION_POINTER_DOWN -> {
+                if(!mIsLongPressActive) {
+                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
                 }
             }
 
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-
-                if (mIsLongPressActive) {
-                    updatePlaybackSpeed(mOriginalPlaybackSpeed)
-                    mIsLongPressActive = false
-                    mPlaybackSpeedPill.fadeOut()
-                }
+                stopHoldSpeedMultiplierGesture()
             }
+        }
+    }
+
+    private fun stopHoldSpeedMultiplierGesture() {
+        if (mIsLongPressActive) {
+            updatePlaybackSpeed(mOriginalPlaybackSpeed)
+            mIsLongPressActive = false
+            mPlaybackSpeedPill.fadeOut()
         }
     }
 }
