@@ -98,6 +98,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         private const val UPDATE_INTERVAL_MS = 250L
         private const val TOUCH_HOLD_DURATION_MS = 500L
         private const val TOUCH_HOLD_SPEED_MULTIPLIER = 2.0f
+        private const val TOUCH_SLOP_DIVIDER = 3
     }
 
     private var mIsFullscreen = false
@@ -166,7 +167,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
 
         mMedium = arguments.getSerializable(MEDIUM) as Medium
         mConfig = context.config
-        mTouchSlop = (ViewConfiguration.get(context).scaledTouchSlop) / 3
+        mTouchSlop = (ViewConfiguration.get(context).scaledTouchSlop) / TOUCH_SLOP_DIVIDER
         binding = PagerVideoItemBinding.inflate(inflater, container, false).apply {
             panoramaOutline.setOnClickListener { openPanorama() }
             bottomVideoTimeHolder.videoCurrTime.setOnClickListener { skip(false) }
@@ -1000,7 +1001,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             MotionEvent.ACTION_MOVE -> {
                 val deltaX = abs(event.x - mInitialX)
                 val deltaY = abs(event.y - mInitialY)
-                if (mIsPlaying && (deltaX > mTouchSlop || deltaY > mTouchSlop) && !mIsLongPressActive) {
+                if (!mIsLongPressActive && (deltaX > mTouchSlop || deltaY > mTouchSlop)) {
                     mTimerHandler.removeCallbacks(mTouchHoldRunnable)
                 }
             }
