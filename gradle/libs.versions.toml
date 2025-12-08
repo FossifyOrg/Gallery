@@ -8,7 +8,7 @@ detekt = "1.23.8"
 detektCompose = "0.4.28"
 #AndroidX
 androidx-print = "1.1.0"
-androidx-swiperefreshlayout = "1.1.0"
+androidx-swiperefreshlayout = "1.2.0"
 androidx-constraintlayout = "2.2.1"
 androidx-documentfile = "1.1.0"
 #exif
@@ -16,7 +16,7 @@ exif = "1.0.1"
 #Room
 room = "2.8.4"
 #Fossify
-commons = "5.9.1"
+commons = "5.10.0"
 #Gradle4
 gradlePlugins-agp = "8.11.1"
 #Other
