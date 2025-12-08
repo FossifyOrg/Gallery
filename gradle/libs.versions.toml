@@ -8,7 +8,7 @@ detekt = "1.23.8"
 detektCompose = "0.4.28"
 #AndroidX
 androidx-print = "1.1.0"
-androidx-swiperefreshlayout = "1.1.0"
+androidx-swiperefreshlayout = "1.2.0"
 androidx-constraintlayout = "2.2.1"
 androidx-documentfile = "1.1.0"
 #exif
