@@ -1,10 +1,14 @@
 package org.fossify.gallery.adapters
 
+import android.view.ContextThemeWrapper
+import android.view.Gravity
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import org.fossify.commons.activities.BaseSimpleActivity
 import org.fossify.commons.adapters.MyRecyclerViewAdapter
+import org.fossify.commons.extensions.getPopupMenuTheme
 import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.isPathOnSD
 import org.fossify.commons.extensions.setupViewBackground
@@ -69,7 +73,44 @@ class ManageHiddenFoldersAdapter(
                 text = folder
                 setTextColor(context.getProperTextColor())
             }
+
+            overflowMenuIcon.drawable.apply {
+                mutate()
+                setTint(activity.getProperTextColor())
+            }
+
+            overflowMenuIcon.setOnClickListener {
+                showPopupMenu(overflowMenuAnchor, folder)
+            }
         }
+    }
+
+    private fun showPopupMenu(view: View, folder: String) {
+        finishActMode()
+        val theme = activity.getPopupMenuTheme()
+        val contextTheme = ContextThemeWrapper(activity, theme)
+
+        PopupMenu(contextTheme, view, Gravity.END).apply {
+            inflate(getActionMenuId())
+            setOnMenuItemClickListener { item ->
+                val folderId = folder.hashCode()
+                when (item.itemId) {
+                    R.id.cab_unhide -> {
+                        executeItemMenuOperation(folderId) {
+                            tryUnhideFolders()
+                        }
+                    }
+                }
+                true
+            }
+            show()
+        }
+    }
+
+    private fun executeItemMenuOperation(folderId: Int, callback: () -> Unit) {
+        selectedKeys.clear()
+        selectedKeys.add(folderId)
+        callback()
     }
 
     private fun tryUnhideFolders() {
