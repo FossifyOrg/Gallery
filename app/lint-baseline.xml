@@ -179,13 +179,13 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of com.vanniktech:android-image-cropper than 4.6.0 is available: 4.7.0"
-        errorLine1="androidImageCropper = &quot;4.6.0&quot;"
-        errorLine2="                      ~~~~~~~">
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.1"
+        errorLine1="detektCompose = &quot;0.4.28&quot;"
+        errorLine2="                ~~~~~~~~">
         <location
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="24"
-            column="23"/>
+            line="8"
+            column="17"/>
     </issue>
 
     <issue
@@ -272,7 +272,7 @@
         errorLine2="                ~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="517"
+            line="562"
             column="17"/>
     </issue>
 
@@ -5763,7 +5763,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="439"
+            line="484"
             column="37"/>
     </issue>
 
@@ -5862,7 +5862,7 @@
         errorLine2="                 ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/views/MediaSideScroll.kt"
-            line="83"
+            line="84"
             column="18"/>
     </issue>
 
@@ -5961,7 +5961,7 @@
         errorLine2="            ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="209"
+            line="242"
             column="13"/>
     </issue>
 
@@ -5972,7 +5972,7 @@
         errorLine2="                                            ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="209"
+            line="242"
             column="45"/>
     </issue>
 
@@ -5983,7 +5983,7 @@
         errorLine2="            ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="214"
+            line="247"
             column="13"/>
     </issue>
 
@@ -5994,7 +5994,7 @@
         errorLine2="                                                 ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="214"
+            line="247"
             column="50"/>
     </issue>
 
@@ -6159,7 +6159,7 @@
         errorLine2="     ~~~~~~~~~">
         <location
             file="src/main/res/layout/pager_video_item.xml"
-            line="9"
+            line="29"
             column="6"/>
     </issue>
 
@@ -6170,7 +6170,7 @@
         errorLine2="     ~~~~~~~~~">
         <location
             file="src/main/res/layout/pager_video_item.xml"
-            line="38"
+            line="58"
             column="6"/>
     </issue>
 
@@ -6181,7 +6181,7 @@
         errorLine2="     ~~~~~~~~~">
         <location
             file="src/main/res/layout/pager_video_item.xml"
-            line="50"
+            line="70"
             column="6"/>
     </issue>
 
@@ -6335,7 +6335,7 @@
         errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/views/MediaSideScroll.kt"
-            line="195"
+            line="197"
             column="20"/>
     </issue>
 
@@ -6555,7 +6555,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="790"
+            line="835"
             column="17"/>
     </issue>
 
