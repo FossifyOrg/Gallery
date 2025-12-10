@@ -1,6 +1,8 @@
 name: Update lint baselines
 
 on:
+  repository_dispatch:
+    types: [update-lint-baselines]
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *"
