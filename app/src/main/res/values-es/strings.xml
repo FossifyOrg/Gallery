@@ -264,6 +264,6 @@
         <item quantity="other">¿Confirma que quiere restaurar %d archivos?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Mantener pantalla encendida al ver fotos en pantalla completa</string>
-    <string name="force_landscape_reverse">Forzar paisaje (inverso)</string>
+    <string name="force_landscape_reverse">Fuerza apaisado (inverso)</string>
     <string name="overwrite_original">Sobreescribir original</string>
 </resources>
