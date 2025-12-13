@@ -1,0 +1,13 @@
+Added:
+
+• Long press gesture to play videos at 2x speed 
+
+Changed:
+
+• Player now respects play/pause state when seeking
+• Updated translations
+
+Fixed:
+
+• Fixed opening JXL files from other apps 
+
