@@ -244,4 +244,8 @@
     <string name="images_resized_successfully">画像のサイズを変更しました</string>
     <string name="wallpaper">壁紙</string>
     <string name="exclude_folder_description">選択したフォルダーとその子フォルダーをFossifyギャラリーから除外します。除外したフォルダーは設定画面で管理できます。</string>
+    <plurals name="restore_confirmation">
+        <item quantity="other">本当に %d ファイルを復元しますか?</item>
+    </plurals>
+    <string name="overwrite_original">元のファイルを上書きする</string>
 </resources>
