@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Long press gesture to play videos at 2x speed ([#666])
 
+### Fixed
+- Fixed opening JXL files from other apps ([#568])
+
 ## [1.9.1] - 2025-11-25
 ### Changed
 - Updated translations
@@ -233,6 +236,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#525]: https://github.com/FossifyOrg/Gallery/issues/525
 [#529]: https://github.com/FossifyOrg/Gallery/issues/529
 [#565]: https://github.com/FossifyOrg/Gallery/issues/565
+[#568]: https://github.com/FossifyOrg/Gallery/issues/568
 [#567]: https://github.com/FossifyOrg/Gallery/issues/567
 [#621]: https://github.com/FossifyOrg/Gallery/issues/621
 [#622]: https://github.com/FossifyOrg/Gallery/issues/622
