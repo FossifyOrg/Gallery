@@ -688,9 +688,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             if (forward) curr + FAST_FORWARD_VIDEO_MS else curr - FAST_FORWARD_VIDEO_MS
         newPosition = newPosition.coerceIn(0, mExoPlayer!!.duration)
         setPosition(newPosition)
-        if (!mIsPlaying) {
-            togglePlayPause()
-        }
     }
 
     private fun handleEvent(event: MotionEvent) {
