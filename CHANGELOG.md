@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Long press gesture to play videos at 2x speed ([#666])
 
+### Changed
+- Player now respects play/pause state when seeking
+
 ### Fixed
 - Fixed opening JXL files from other apps ([#568])
 
