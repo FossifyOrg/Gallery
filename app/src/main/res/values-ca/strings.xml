@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">Galeria</string>
-    <string name="edit">Edita</string>
+    <string name="edit">Editar</string>
     <string name="open_camera">Obre la càmera</string>
     <string name="hidden">(ocult)</string>
     <string name="excluded">(exclòs)</string>
@@ -83,8 +83,8 @@
     <string name="file_edited_successfully">El fitxer s\'ha editat correctament</string>
     <string name="image_edited_successfully">La imatge s\'ha editat correctament</string>
     <string name="video_edited_successfully">El vídeo s\'ha editat correctament</string>
-    <string name="edit_image_with">Edita la imatge amb:</string>
-    <string name="edit_video_with">Edita el vídeo amb:</string>
+    <string name="edit_image_with">Editar la imatge amb:</string>
+    <string name="edit_video_with">Editar el vídeo amb:</string>
     <string name="no_image_editor_found">No s\'ha trobat cap editor d\'imatges</string>
     <string name="no_video_editor_found">No s\'ha trobat cap editor de vídeo</string>
     <string name="unknown_file_location">Ubicació desconeguda del fitxer</string>
@@ -208,7 +208,7 @@
     <string name="extended_details">Detalls ampliats</string>
     <string name="bottom_actions">Accions a la part inferior</string>
     <string name="manage_bottom_actions">Gestió de les accions visibles de la part inferior</string>
-    <string name="toggle_favorite">Commuta com a preferit</string>
+    <string name="toggle_favorite">Commutar preferit</string>
     <string name="toggle_file_visibility">Commuta la visibilitat del fitxer</string>
     <string name="faq_2_title">Vaig bloquejar l\'aplicació amb una contrasenya, però l\'he oblidat. Què puc fer\?</string>
     <string name="faq_2_text">Es pot resoldre de dues maneres. Podeu tornar a instal·lar l\'aplicació o trobar l\'aplicació a la configuració del dispositiu i seleccionar «Neteja les dades». Això reiniciarà totes les configuracions, no eliminarà cap fitxer multimèdia.</string>
@@ -224,7 +224,7 @@
     <string name="faq_8_title">Què passa si vull veure només algunes carpetes concretes\?</string>
     <string name="faq_8_text">Afegir una carpeta a les carpetes incloses no exclou automàticament res. El que podeu fer és anar a Configuració -&gt; Gestiona les carpetes excloses, excloure la carpeta arrel «/» i, a continuació, afegir les carpetes desitjades a Configuració -&gt; Gestiona les carpetes incloses. Això farà que només siguin visibles les carpetes seleccionades, ja que tant excloure com incloure són recursius i si una carpeta està exclosa i inclosa, aquesta es mostrarà.</string>
     <string name="faq_10_title">Puc escapçar imatges amb aquesta aplicació\?</string>
-    <string name="faq_10_text">Sí, podeu escapçar imatges a l\'editor, arrossegant les cantonades de la imatge. Es pot accedir a l\'editor prement prolongadament una miniatura d\'imatge i seleccionant Edita o seleccionant Edita des de la visualització de pantalla completa.</string>
+    <string name="faq_10_text">Sí, podeu escapçar imatges a l\'editor, arrossegant les cantonades de la imatge. Es pot accedir a l\'editor prement prolongadament una miniatura d\'imatge i seleccionant Editar, o seleccionant Editar des de la visualització de pantalla completa.</string>
     <string name="faq_11_title">Puc agrupar d\'alguna manera les miniatures dels fitxers multimèdia\?</string>
     <string name="faq_11_text">Sí, només cal utilitzar l\'element de menú «Agrupa per» mentre esteu a la vista de miniatures. Podeu agrupar fitxers amb diversos criteris, inclosa la data de presa. Si utilitzeu la funció «Mostra el contingut de totes les carpetes», també podeu agrupar-les per carpetes.</string>
     <string name="faq_12_title">L\'ordenació per la data de presa no sembla funcionar correctament, com puc solucionar-ho\?</string>
