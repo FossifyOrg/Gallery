@@ -222,7 +222,7 @@
     <string name="faq_10_title">Kan jeg beskære billeder med denne app\?</string>
     <string name="faq_10_text">Ja, du kan beskære billeder i editoren ved at trække i hjørnerne. Du åbner editoren ved at holde nede på en billedminiature og vælge Rediger eller ved at vælge Rediger i fuldskærmsvisningen.</string>
     <string name="faq_11_title">Kan jeg på nogen måde gruppere mediefilminiaturer?</string>
-    <string name="faq_11_text">Ja, brug menupunktet \"Gruppér efter\" i miniaturevisningen. Du kan gruppere filer efter flere kriterier, bl.a. optagelsesdato. Hvis du bruger funktionen \"Vis indhold af alle mapper\", kan du også gruppere efter mapper.</string>
+    <string name="faq_11_text">Ja, brug blot menupunktet \"Gruppér efter\" i miniaturevisningen. Du kan gruppere filer efter flere kriterier, bl.a. optagelsesdato. Bruger du funktionen \"Vis indhold fra alle mapper\", kan de også grupperes efter mapper.</string>
     <string name="faq_12_title">Sortering efter optagelsesdato ser ikke ud til at fungere. Hvordan kan jeg fikse det?</string>
     <string name="faq_12_text">Det skyldes sandsynligvis, at filerne er kopieret et andet sted fra. Du kan rette det ved at markere filminiaturerne og vælge \"Ret optagelsesdato\".</string>
     <string name="faq_13_title">Jeg ser noget \"color banding\" på billederne. Hvordan kan jeg forbedre kvaliteten\?</string>
