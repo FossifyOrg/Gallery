@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">Galeria</string>
-    <string name="edit">Editar</string>
+    <string name="edit">Edita</string>
     <string name="open_camera">Obre la càmera</string>
     <string name="hidden">(ocult)</string>
     <string name="excluded">(exclòs)</string>
@@ -208,7 +208,7 @@
     <string name="extended_details">Detalls ampliats</string>
     <string name="bottom_actions">Accions a la part inferior</string>
     <string name="manage_bottom_actions">Gestió de les accions visibles de la part inferior</string>
-    <string name="toggle_favorite">Commutar preferit</string>
+    <string name="toggle_favorite">Commuta preferit</string>
     <string name="toggle_file_visibility">Commuta la visibilitat del fitxer</string>
     <string name="faq_2_title">Vaig bloquejar l\'aplicació amb una contrasenya, però l\'he oblidat. Què puc fer\?</string>
     <string name="faq_2_text">Es pot resoldre de dues maneres. Podeu tornar a instal·lar l\'aplicació o trobar l\'aplicació a la configuració del dispositiu i seleccionar «Neteja les dades». Això reiniciarà totes les configuracions, no eliminarà cap fitxer multimèdia.</string>
