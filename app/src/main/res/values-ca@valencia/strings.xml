@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="edit">Editar</string>
+    <string name="toggle_favorite">Commutar preferit</string>
 </resources>
