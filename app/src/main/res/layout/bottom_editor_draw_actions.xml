@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_editor_draw_actions_wrapper"
     android:layout_width="match_parent"
     android:layout_height="@dimen/bottom_actions_height"
@@ -38,10 +39,10 @@
         android:clickable="false"
         android:contentDescription="@null"
         android:padding="@dimen/small_margin"
-        android:src="@drawable/circle_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/bottom_draw_undo"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/circle_background" />
 
     <ImageView
         android:id="@+id/bottom_draw_undo"

@@ -26,6 +26,7 @@ import com.zomato.photofilters.FilterPack
 import com.zomato.photofilters.imageprocessors.Filter
 import org.fossify.commons.dialogs.ColorPickerDialog
 import org.fossify.commons.extensions.applyColorFilter
+import org.fossify.commons.extensions.setFillWithStroke
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.beVisible
@@ -813,7 +814,8 @@ class EditActivity : BaseCropActivity() {
 
     private fun updateDrawColor(color: Int) {
         drawColor = color
-        binding.bottomEditorDrawActions.bottomDrawColor.applyColorFilter(color)
+        binding.bottomEditorDrawActions.bottomDrawColor
+            .setFillWithStroke(color, getProperBackgroundColor())
         config.lastEditorDrawColor = color
         binding.editorDrawCanvas.updateColor(color)
     }
