@@ -5,11 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.10.0] - 2025-12-16
 ### Added
 - Long press gesture to play videos at 2x speed ([#666])
 
 ### Changed
 - Player now respects play/pause state when seeking
+- Updated translations
 
 ### Fixed
 - Fixed opening JXL files from other apps ([#568])
@@ -239,14 +242,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#525]: https://github.com/FossifyOrg/Gallery/issues/525
 [#529]: https://github.com/FossifyOrg/Gallery/issues/529
 [#565]: https://github.com/FossifyOrg/Gallery/issues/565
-[#568]: https://github.com/FossifyOrg/Gallery/issues/568
 [#567]: https://github.com/FossifyOrg/Gallery/issues/567
+[#568]: https://github.com/FossifyOrg/Gallery/issues/568
 [#621]: https://github.com/FossifyOrg/Gallery/issues/621
 [#622]: https://github.com/FossifyOrg/Gallery/issues/622
 [#630]: https://github.com/FossifyOrg/Gallery/issues/630
 [#642]: https://github.com/FossifyOrg/Gallery/issues/642
 [#648]: https://github.com/FossifyOrg/Gallery/issues/648
 [#659]: https://github.com/FossifyOrg/Gallery/issues/659
+[#666]: https://github.com/FossifyOrg/Gallery/issues/666
 [#718]: https://github.com/FossifyOrg/Gallery/issues/718
 [#734]: https://github.com/FossifyOrg/Gallery/issues/734
 [#743]: https://github.com/FossifyOrg/Gallery/issues/743
@@ -256,9 +260,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
-[#666]: https://github.com/FossifyOrg/Gallery/issues/666
 
-[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...HEAD
+[1.10.0]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...1.10.0
 [1.9.1]: https://github.com/FossifyOrg/Gallery/compare/1.9.0...1.9.1
 [1.9.0]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...1.9.0
 [1.8.1]: https://github.com/FossifyOrg/Gallery/compare/1.8.0...1.8.1
