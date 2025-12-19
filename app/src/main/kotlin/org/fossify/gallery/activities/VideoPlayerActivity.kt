@@ -13,17 +13,25 @@ import android.graphics.Point
 import android.graphics.SurfaceTexture
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
 import android.view.GestureDetector
+import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.Surface
 import android.view.TextureView
 import android.view.View
+import android.view.ViewConfiguration
+import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.RelativeLayout
 import android.widget.SeekBar
+import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.WindowInsetsCompat.Type
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -45,6 +53,7 @@ import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.fadeIn
+import org.fossify.commons.extensions.fadeOut
 import org.fossify.commons.extensions.getColoredDrawableWithColor
 import org.fossify.commons.extensions.getFilenameFromUri
 import org.fossify.commons.extensions.getFormattedDuration
@@ -57,6 +66,7 @@ import org.fossify.commons.extensions.viewBinding
 import org.fossify.gallery.R
 import org.fossify.gallery.databinding.ActivityVideoPlayerBinding
 import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
 import org.fossify.gallery.extensions.hideSystemUI
@@ -81,6 +91,7 @@ import org.fossify.gallery.helpers.SHOW_NEXT_ITEM
 import org.fossify.gallery.helpers.SHOW_PREV_ITEM
 import org.fossify.gallery.interfaces.PlaybackSpeedListener
 import java.text.DecimalFormat
+import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 
@@ -90,6 +101,8 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     companion object {
         private const val PLAY_WHEN_READY_DRAG_DELAY = 100L
         private const val UPDATE_INTERVAL_MS = 250L
+        private const val TOUCH_HOLD_DURATION_MS = 500L
+        private const val TOUCH_HOLD_SPEED_MULTIPLIER = 2.0f
     }
 
     private var mIsFullscreen = false
@@ -114,6 +127,24 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private var mPlayWhenReadyHandler = Handler()
 
     private var mIgnoreCloseDown = false
+    private var mOriginalPlaybackSpeed = 1f
+    private var mIsLongPressActive = false
+    private var mTouchSlop = 0
+    private var mInitialX = 0f
+    private var mInitialY = 0f
+    private lateinit var mPlaybackSpeedPill: TextView
+    private val mTouchHoldRunnable = Runnable {
+        // Prevent parent views from intercepting touch events, like a ViewPager swipe
+        contentHolder.parent.requestDisallowInterceptTouchEvent(true)
+        mIsLongPressActive = true
+        mOriginalPlaybackSpeed = config.playbackSpeed // Get current speed
+        contentHolder.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
+        runOnUiThread {
+            mExoPlayer?.setPlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER) // Set to 2x speed
+            updatePlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
+        }
+        mPlaybackSpeedPill.fadeIn() // Show UI feedback
+    }
 
     private val binding by viewBinding(ActivityVideoPlayerBinding::inflate)
 
@@ -126,6 +157,8 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        mPlaybackSpeedPill = binding.playbackSpeedPill
+        mTouchSlop = (ViewConfiguration.get(this).scaledTouchSlop)
         setupEdgeToEdge(
             padBottomSystem = listOf(binding.bottomVideoTimeHolder.root),
         )
@@ -271,6 +304,10 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             })
 
         binding.videoSurfaceFrame.setOnTouchListener { view, event ->
+            handleTouchHoldEvent(event)
+            if (mIsLongPressActive) {
+                return@setOnTouchListener true
+            }
             handleEvent(event)
             gestureDetector.onTouchEvent(event)
             false
@@ -697,12 +734,26 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                 mTouchDownY = event.rawY
                 mTouchDownTime = System.currentTimeMillis()
                 mProgressAtDown = mExoPlayer!!.currentPosition
+//                if (mIsPlaying && event.pointerCount == 1) {
+//                    mInitialX = event.x
+//                    mInitialY = event.y
+//                    mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
+//                }
             }
 
-            MotionEvent.ACTION_POINTER_DOWN -> mIgnoreCloseDown = true
+            MotionEvent.ACTION_POINTER_DOWN -> {
+                mIgnoreCloseDown = true
+//                if (!mIsLongPressActive) {
+//                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+//                }
+            }
             MotionEvent.ACTION_MOVE -> {
                 val diffX = event.rawX - mTouchDownX
                 val diffY = event.rawY - mTouchDownY
+//
+//                if (!mIsLongPressActive && (diffX > abs(mTouchSlop) || diffY > abs(mTouchSlop))) {
+//                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+//                }
 
                 if (mIsDragged || (Math.abs(diffX) > mDragThreshold && Math.abs(diffX) > Math.abs(
                         diffY
@@ -759,7 +810,53 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                     }
                 }
                 mIsDragged = false
+//                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+//                stopHoldSpeedMultiplierGesture()
             }
+//
+//            MotionEvent.ACTION_CANCEL -> {
+//                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+//                stopHoldSpeedMultiplierGesture()
+//            }
+        }
+    }
+
+    private fun handleTouchHoldEvent(event: MotionEvent) {
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -> {
+                if (mIsPlaying && event.pointerCount == 1) {
+                    mInitialX = event.x
+                    mInitialY = event.y
+                    mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
+                }
+            }
+
+            MotionEvent.ACTION_MOVE -> {
+                val deltaX = abs(event.x - mInitialX)
+                val deltaY = abs(event.y - mInitialY)
+                if (!mIsLongPressActive && (deltaX > mTouchSlop || deltaY > mTouchSlop)) {
+                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+                }
+            }
+
+            MotionEvent.ACTION_POINTER_DOWN -> {
+                if (!mIsLongPressActive) {
+                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+                }
+            }
+
+            MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
+                stopHoldSpeedMultiplierGesture()
+            }
+        }
+    }
+
+    private fun stopHoldSpeedMultiplierGesture() {
+        if (mIsLongPressActive) {
+            updatePlaybackSpeed(mOriginalPlaybackSpeed)
+            mIsLongPressActive = false
+            mPlaybackSpeedPill.fadeOut()
         }
     }
 
@@ -823,9 +920,30 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     override fun onSurfaceTextureDestroyed(surface: SurfaceTexture) = false
 
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
         mExoPlayer?.setVideoSurface(Surface(binding.videoSurface.surfaceTexture))
+        val system = WindowInsets.CONSUMED.getInsetsIgnoringVisibility(Type.systemBars())
+
+        val pillTopMargin = system.top + resources.getActionBarHeight(this) +
+            resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+        (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+            setMargins(
+                0, pillTopMargin, 0, 0
+            )
+        }
     }
 
-    override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {}
+    @RequiresApi(Build.VERSION_CODES.R)
+    override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {
+        val system = WindowInsets.CONSUMED.getInsetsIgnoringVisibility(Type.systemBars())
+
+        val pillTopMargin = system.top + resources.getActionBarHeight(this) +
+            resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+        (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+            setMargins(
+                0, pillTopMargin, 0, 0
+            )
+        }
+    }
 }
