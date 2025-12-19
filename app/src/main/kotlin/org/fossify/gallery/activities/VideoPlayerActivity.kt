@@ -734,26 +734,14 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                 mTouchDownY = event.rawY
                 mTouchDownTime = System.currentTimeMillis()
                 mProgressAtDown = mExoPlayer!!.currentPosition
-//                if (mIsPlaying && event.pointerCount == 1) {
-//                    mInitialX = event.x
-//                    mInitialY = event.y
-//                    mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
-//                }
             }
 
             MotionEvent.ACTION_POINTER_DOWN -> {
                 mIgnoreCloseDown = true
-//                if (!mIsLongPressActive) {
-//                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-//                }
             }
             MotionEvent.ACTION_MOVE -> {
                 val diffX = event.rawX - mTouchDownX
                 val diffY = event.rawY - mTouchDownY
-//
-//                if (!mIsLongPressActive && (diffX > abs(mTouchSlop) || diffY > abs(mTouchSlop))) {
-//                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-//                }
 
                 if (mIsDragged || (Math.abs(diffX) > mDragThreshold && Math.abs(diffX) > Math.abs(
                         diffY
@@ -810,14 +798,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                     }
                 }
                 mIsDragged = false
-//                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-//                stopHoldSpeedMultiplierGesture()
             }
-//
-//            MotionEvent.ACTION_CANCEL -> {
-//                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-//                stopHoldSpeedMultiplierGesture()
-//            }
         }
     }
 
