@@ -89,9 +89,9 @@ import org.fossify.gallery.helpers.ROTATE_BY_DEVICE_ROTATION
 import org.fossify.gallery.helpers.ROTATE_BY_SYSTEM_SETTING
 import org.fossify.gallery.helpers.SHOW_NEXT_ITEM
 import org.fossify.gallery.helpers.SHOW_PREV_ITEM
+import org.fossify.gallery.helpers.VideoGestureHelper
 import org.fossify.gallery.interfaces.PlaybackSpeedListener
 import java.text.DecimalFormat
-import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 
@@ -101,8 +101,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     companion object {
         private const val PLAY_WHEN_READY_DRAG_DELAY = 100L
         private const val UPDATE_INTERVAL_MS = 250L
-        private const val TOUCH_HOLD_DURATION_MS = 500L
-        private const val TOUCH_HOLD_SPEED_MULTIPLIER = 2.0f
     }
 
     private var mIsFullscreen = false
@@ -127,24 +125,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private var mPlayWhenReadyHandler = Handler()
 
     private var mIgnoreCloseDown = false
-    private var mOriginalPlaybackSpeed = 1f
-    private var mIsLongPressActive = false
     private var mTouchSlop = 0
-    private var mInitialX = 0f
-    private var mInitialY = 0f
     private lateinit var mPlaybackSpeedPill: TextView
-    private val mTouchHoldRunnable = Runnable {
-        // Prevent parent views from intercepting touch events, like a ViewPager swipe
-        contentHolder.parent.requestDisallowInterceptTouchEvent(true)
-        mIsLongPressActive = true
-        mOriginalPlaybackSpeed = config.playbackSpeed // Get current speed
-        contentHolder.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
-        runOnUiThread {
-            mExoPlayer?.setPlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER) // Set to 2x speed
-            updatePlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
-        }
-        mPlaybackSpeedPill.fadeIn() // Show UI feedback
-    }
+    private lateinit var videoGestureHelper: VideoGestureHelper
 
     private val binding by viewBinding(ActivityVideoPlayerBinding::inflate)
 
@@ -159,6 +142,19 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         setContentView(binding.root)
         mPlaybackSpeedPill = binding.playbackSpeedPill
         mTouchSlop = (ViewConfiguration.get(this).scaledTouchSlop)
+        videoGestureHelper = VideoGestureHelper(
+            touchSlop = mTouchSlop,
+            isPlaying = { mIsPlaying },
+            getCurrentSpeed = { config.playbackSpeed },
+            setPlaybackSpeed = { speed ->
+                mExoPlayer?.setPlaybackSpeed(speed) // Set to 2x speed
+                updatePlaybackSpeed(speed)
+            },
+            showPill = { mPlaybackSpeedPill.fadeIn() },
+            hidePill = { mPlaybackSpeedPill.fadeOut() },
+            performHaptic = { contentHolder.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS) },
+            disallowParentIntercept = { contentHolder.parent.requestDisallowInterceptTouchEvent(true) }
+        )
         setupEdgeToEdge(
             padBottomSystem = listOf(binding.bottomVideoTimeHolder.root),
         )
@@ -304,10 +300,12 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             })
 
         binding.videoSurfaceFrame.setOnTouchListener { view, event ->
-            handleTouchHoldEvent(event)
-            if (mIsLongPressActive) {
+            videoGestureHelper.onTouchEvent(event)
+
+            if (videoGestureHelper.isLongPressActive) {
                 return@setOnTouchListener true
             }
+
             handleEvent(event)
             gestureDetector.onTouchEvent(event)
             false
@@ -799,45 +797,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                 }
                 mIsDragged = false
             }
-        }
-    }
-
-    private fun handleTouchHoldEvent(event: MotionEvent) {
-        when (event.actionMasked) {
-            MotionEvent.ACTION_DOWN -> {
-                if (mIsPlaying && event.pointerCount == 1) {
-                    mInitialX = event.x
-                    mInitialY = event.y
-                    mTimerHandler.postDelayed(mTouchHoldRunnable, TOUCH_HOLD_DURATION_MS)
-                }
-            }
-
-            MotionEvent.ACTION_MOVE -> {
-                val deltaX = abs(event.x - mInitialX)
-                val deltaY = abs(event.y - mInitialY)
-                if (!mIsLongPressActive && (deltaX > mTouchSlop || deltaY > mTouchSlop)) {
-                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-                }
-            }
-
-            MotionEvent.ACTION_POINTER_DOWN -> {
-                if (!mIsLongPressActive) {
-                    mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-                }
-            }
-
-            MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                mTimerHandler.removeCallbacks(mTouchHoldRunnable)
-                stopHoldSpeedMultiplierGesture()
-            }
-        }
-    }
-
-    private fun stopHoldSpeedMultiplierGesture() {
-        if (mIsLongPressActive) {
-            updatePlaybackSpeed(mOriginalPlaybackSpeed)
-            mIsLongPressActive = false
-            mPlaybackSpeedPill.fadeOut()
         }
     }
 
