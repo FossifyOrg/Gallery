@@ -24,14 +24,14 @@ import android.view.Surface
 import android.view.TextureView
 import android.view.View
 import android.view.ViewConfiguration
-import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.view.WindowInsetsCompat.Type
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -257,6 +257,21 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private fun initPlayer() {
         mUri = intent.data ?: return
         binding.videoToolbar.title = getFilenameFromUri(mUri!!)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+
+            // Calculate the top margin using the safe inset value
+            val pillTopMargin = systemBars.top + resources.getActionBarHeight(this) +
+                resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+
+            // Apply the margin to the pill
+            (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+                setMargins(0, pillTopMargin, 0, 0)
+            }
+
+            // Return the insets so other views can consume them if needed
+            insets
+        }
         initTimeHolder()
 
         showSystemUI()
@@ -834,6 +849,19 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         mExoPlayer = null
     }
 
+    /*@RequiresApi(Build.VERSION_CODES.R)
+    fun setPillHeight() {
+        val system = WindowInsets.CONSUMED.getInsetsIgnoringVisibility(Type.systemBars())
+
+        val pillTopMargin = system.top + resources.getActionBarHeight(this) +
+            resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+        (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+            setMargins(
+                0, pillTopMargin, 0, 0
+            )
+        }
+    }*/
+
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
         if (mExoPlayer != null && fromUser) {
             setPosition(progress.toLong())
@@ -865,27 +893,8 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
         mExoPlayer?.setVideoSurface(Surface(binding.videoSurface.surfaceTexture))
-        val system = WindowInsets.CONSUMED.getInsetsIgnoringVisibility(Type.systemBars())
-
-        val pillTopMargin = system.top + resources.getActionBarHeight(this) +
-            resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
-        (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
-            setMargins(
-                0, pillTopMargin, 0, 0
-            )
-        }
     }
 
     @RequiresApi(Build.VERSION_CODES.R)
-    override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {
-        val system = WindowInsets.CONSUMED.getInsetsIgnoringVisibility(Type.systemBars())
-
-        val pillTopMargin = system.top + resources.getActionBarHeight(this) +
-            resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
-        (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
-            setMargins(
-                0, pillTopMargin, 0, 0
-            )
-        }
-    }
+    override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {}
 }
