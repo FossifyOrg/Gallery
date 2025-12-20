@@ -262,4 +262,5 @@
         <item quantity="other">Ziur zaude %d fitxategi leheneratu nahi duzula?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Mantendu pantaila piztuta argazkiak pantaila osoan ikusi bitartean</string>
+    <string name="force_landscape_reverse">Behartu horizontala (alderantzizkoa)</string>
 </resources>
