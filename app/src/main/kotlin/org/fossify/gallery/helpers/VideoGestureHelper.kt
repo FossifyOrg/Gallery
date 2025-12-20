@@ -5,15 +5,19 @@ import android.os.Looper
 import android.view.MotionEvent
 import kotlin.math.abs
 
+data class VideoGestureCallbacks(
+    val isPlaying: () -> Boolean,
+    val getCurrentSpeed: () -> Float,
+    val setPlaybackSpeed: (Float) -> Unit,
+    val showPill: () -> Unit,
+    val hidePill: () -> Unit,
+    val performHaptic: () -> Unit,
+    val disallowParentIntercept: () -> Unit
+)
+
 class VideoGestureHelper(
     private val touchSlop: Int,
-    private val isPlaying: () -> Boolean,
-    private val getCurrentSpeed: () -> Float,
-    private val setPlaybackSpeed: (Float) -> Unit,
-    private val showPill: () -> Unit,
-    private val hidePill: () -> Unit,
-    private val performHaptic: () -> Unit,
-    private val disallowParentIntercept: () -> Unit
+    private val callbacks: VideoGestureCallbacks
 ) {
     companion object {
         private const val TOUCH_HOLD_DURATION_MS = 500L
@@ -28,18 +32,18 @@ class VideoGestureHelper(
     internal var isLongPressActive = false
 
     private val touchHoldRunnable = Runnable {
-        disallowParentIntercept()
+        callbacks.disallowParentIntercept()
         isLongPressActive = true
-        originalSpeed = getCurrentSpeed()
-        performHaptic()
-        setPlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
-        showPill()
+        originalSpeed = callbacks.getCurrentSpeed()
+        callbacks.performHaptic()
+        callbacks.setPlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
+        callbacks.showPill()
     }
 
     fun onTouchEvent(event: MotionEvent) {
         when (event.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
-                if (isPlaying() && event.pointerCount == 1) {
+                if (callbacks.isPlaying() && event.pointerCount == 1) {
                     initialX = event.x
                     initialY = event.y
                     handler.postDelayed(touchHoldRunnable, TOUCH_HOLD_DURATION_MS)
@@ -70,9 +74,9 @@ class VideoGestureHelper(
 
     fun stop() {
         if (isLongPressActive) {
-            setPlaybackSpeed(originalSpeed)
+            callbacks.setPlaybackSpeed(originalSpeed)
             isLongPressActive = false
-            hidePill()
+            callbacks.hidePill()
         }
     }
 

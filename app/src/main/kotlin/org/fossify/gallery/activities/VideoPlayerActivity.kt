@@ -89,6 +89,7 @@ import org.fossify.gallery.helpers.ROTATE_BY_DEVICE_ROTATION
 import org.fossify.gallery.helpers.ROTATE_BY_SYSTEM_SETTING
 import org.fossify.gallery.helpers.SHOW_NEXT_ITEM
 import org.fossify.gallery.helpers.SHOW_PREV_ITEM
+import org.fossify.gallery.helpers.VideoGestureCallbacks
 import org.fossify.gallery.helpers.VideoGestureHelper
 import org.fossify.gallery.interfaces.PlaybackSpeedListener
 import java.text.DecimalFormat
@@ -144,16 +145,17 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         mTouchSlop = (ViewConfiguration.get(this).scaledTouchSlop)
         videoGestureHelper = VideoGestureHelper(
             touchSlop = mTouchSlop,
-            isPlaying = { mIsPlaying },
-            getCurrentSpeed = { config.playbackSpeed },
-            setPlaybackSpeed = { speed ->
-                mExoPlayer?.setPlaybackSpeed(speed) // Set to 2x speed
-                updatePlaybackSpeed(speed)
-            },
-            showPill = { mPlaybackSpeedPill.fadeIn() },
-            hidePill = { mPlaybackSpeedPill.fadeOut() },
-            performHaptic = { contentHolder.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS) },
-            disallowParentIntercept = { contentHolder.parent.requestDisallowInterceptTouchEvent(true) }
+            callbacks = VideoGestureCallbacks(
+                isPlaying = { mIsPlaying },
+                getCurrentSpeed = { config.playbackSpeed },
+                setPlaybackSpeed = { speed ->
+                    mExoPlayer?.setPlaybackSpeed(speed) // Set to 2x speed
+                    updatePlaybackSpeed(speed)
+                },
+                showPill = { mPlaybackSpeedPill.fadeIn() },
+                hidePill = { mPlaybackSpeedPill.fadeOut() },
+                performHaptic = { contentHolder.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS) },
+                disallowParentIntercept = { contentHolder.parent.requestDisallowInterceptTouchEvent(true) })
         )
         setupEdgeToEdge(
             padBottomSystem = listOf(binding.bottomVideoTimeHolder.root),
