@@ -5,8 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.10.1] - 2025-12-23
+### Changed
+- Updated translations
+
 ### Fixed
-- Fixed invisible color picker button in black themes ([#337]) 
+- Fixed invisible color picker button in black themes ([#337])
 
 ## [1.10.0] - 2025-12-16
 ### Added
@@ -264,7 +269,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
 
-[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.1...HEAD
+[1.10.1]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...1.10.1
 [1.10.0]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...1.10.0
 [1.9.1]: https://github.com/FossifyOrg/Gallery/compare/1.9.0...1.9.1
 [1.9.0]: https://github.com/FossifyOrg/Gallery/compare/1.8.1...1.9.0
