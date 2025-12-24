@@ -2,7 +2,7 @@
 #jetbrains
 kotlin = "2.2.21"
 #KSP
-ksp = "2.3.3"
+ksp = "2.3.4"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.28"
@@ -30,7 +30,7 @@ gestureviews = "e706487a14"
 androidsvgAar = "1.4"
 androidphotofilters = "193f2ae509"
 sanselan = "0.97-incubator"
-media3Exoplayer = "1.8.0"
+media3Exoplayer = "1.9.0"
 okhttp = "5.3.2"
 okio = "3.16.4"
 picasso = "2.71828"
