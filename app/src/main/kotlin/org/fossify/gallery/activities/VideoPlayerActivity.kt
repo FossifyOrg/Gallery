@@ -13,17 +13,25 @@ import android.graphics.Point
 import android.graphics.SurfaceTexture
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
 import android.view.GestureDetector
+import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.Surface
 import android.view.TextureView
 import android.view.View
+import android.view.ViewConfiguration
 import android.view.WindowManager
+import android.widget.RelativeLayout
 import android.widget.SeekBar
+import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -45,6 +53,7 @@ import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.fadeIn
+import org.fossify.commons.extensions.fadeOut
 import org.fossify.commons.extensions.getColoredDrawableWithColor
 import org.fossify.commons.extensions.getFilenameFromUri
 import org.fossify.commons.extensions.getFormattedDuration
@@ -57,6 +66,7 @@ import org.fossify.commons.extensions.viewBinding
 import org.fossify.gallery.R
 import org.fossify.gallery.databinding.ActivityVideoPlayerBinding
 import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
 import org.fossify.gallery.extensions.hideSystemUI
@@ -79,6 +89,8 @@ import org.fossify.gallery.helpers.ROTATE_BY_DEVICE_ROTATION
 import org.fossify.gallery.helpers.ROTATE_BY_SYSTEM_SETTING
 import org.fossify.gallery.helpers.SHOW_NEXT_ITEM
 import org.fossify.gallery.helpers.SHOW_PREV_ITEM
+import org.fossify.gallery.helpers.VideoGestureCallbacks
+import org.fossify.gallery.helpers.VideoGestureHelper
 import org.fossify.gallery.interfaces.PlaybackSpeedListener
 import java.text.DecimalFormat
 import kotlin.math.max
@@ -114,6 +126,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private var mPlayWhenReadyHandler = Handler()
 
     private var mIgnoreCloseDown = false
+    private var mTouchSlop = 0
+    private lateinit var mPlaybackSpeedPill: TextView
+    private lateinit var videoGestureHelper: VideoGestureHelper
 
     private val binding by viewBinding(ActivityVideoPlayerBinding::inflate)
 
@@ -126,6 +141,22 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        mPlaybackSpeedPill = binding.playbackSpeedPill
+        mTouchSlop = (ViewConfiguration.get(this).scaledTouchSlop)
+        videoGestureHelper = VideoGestureHelper(
+            touchSlop = mTouchSlop,
+            callbacks = VideoGestureCallbacks(
+                isPlaying = { mIsPlaying },
+                getCurrentSpeed = { config.playbackSpeed },
+                setPlaybackSpeed = { speed ->
+                    mExoPlayer?.setPlaybackSpeed(speed) // Set to 2x speed
+                    updatePlaybackSpeed(speed)
+                },
+                showPill = { mPlaybackSpeedPill.fadeIn() },
+                hidePill = { mPlaybackSpeedPill.fadeOut() },
+                performHaptic = { contentHolder.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS) },
+                disallowParentIntercept = { contentHolder.parent.requestDisallowInterceptTouchEvent(true) })
+        )
         setupEdgeToEdge(
             padBottomSystem = listOf(binding.bottomVideoTimeHolder.root),
         )
@@ -226,6 +257,21 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private fun initPlayer() {
         mUri = intent.data ?: return
         binding.videoToolbar.title = getFilenameFromUri(mUri!!)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+
+            // Calculate the top margin using the safe inset value
+            val pillTopMargin = systemBars.top + resources.getActionBarHeight(this) +
+                resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+
+            // Apply the margin to the pill
+            (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+                setMargins(0, pillTopMargin, 0, 0)
+            }
+
+            // Return the insets so other views can consume them if needed
+            insets
+        }
         initTimeHolder()
 
         showSystemUI()
@@ -271,6 +317,12 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             })
 
         binding.videoSurfaceFrame.setOnTouchListener { view, event ->
+            videoGestureHelper.onTouchEvent(event)
+
+            if (videoGestureHelper.isLongPressActive) {
+                return@setOnTouchListener true
+            }
+
             handleEvent(event)
             gestureDetector.onTouchEvent(event)
             false
@@ -699,7 +751,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                 mProgressAtDown = mExoPlayer!!.currentPosition
             }
 
-            MotionEvent.ACTION_POINTER_DOWN -> mIgnoreCloseDown = true
+            MotionEvent.ACTION_POINTER_DOWN -> {
+                mIgnoreCloseDown = true
+            }
             MotionEvent.ACTION_MOVE -> {
                 val diffX = event.rawX - mTouchDownX
                 val diffY = event.rawY - mTouchDownY
@@ -795,6 +849,19 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         mExoPlayer = null
     }
 
+    /*@RequiresApi(Build.VERSION_CODES.R)
+    fun setPillHeight() {
+        val system = WindowInsets.CONSUMED.getInsetsIgnoringVisibility(Type.systemBars())
+
+        val pillTopMargin = system.top + resources.getActionBarHeight(this) +
+            resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+        (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+            setMargins(
+                0, pillTopMargin, 0, 0
+            )
+        }
+    }*/
+
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
         if (mExoPlayer != null && fromUser) {
             setPosition(progress.toLong())
@@ -823,9 +890,11 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     override fun onSurfaceTextureDestroyed(surface: SurfaceTexture) = false
 
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
         mExoPlayer?.setVideoSurface(Surface(binding.videoSurface.surfaceTexture))
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {}
 }
