@@ -783,7 +783,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         mExoPlayer?.playWhenReady = false
         mPlayWhenReadyHandler.removeCallbacksAndMessages(null)
         mPlayWhenReadyHandler.postDelayed({
-            mExoPlayer?.playWhenReady = true
+            if (mIsPlaying) {
+                mExoPlayer?.playWhenReady = true
+            }
         }, PLAY_WHEN_READY_DRAG_DELAY)
     }
 
