@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
-- Fixed invisible color picker button in black themes ([#337]) 
+- Fixed invisible color picker button in black themes ([#337])
+- Fixed issue with separate video player not respecting paused state when seeking ([#831])
 
 ## [1.10.0] - 2025-12-16
 ### Added
@@ -263,6 +264,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
+[#831]: https://github.com/FossifyOrg/Gallery/issues/831
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...HEAD
 [1.10.0]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...1.10.0
