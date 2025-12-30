@@ -1,6 +1,6 @@
 [versions]
 #jetbrains
-kotlin = "2.2.21"
+kotlin = "2.3.0"
 #KSP
 ksp = "2.3.4"
 #Detekt
@@ -20,7 +20,7 @@ commons = "5.12.0"
 #Gradle4
 gradlePlugins-agp = "8.11.1"
 #Other
-androidGifDrawable = "1.2.29"
+androidGifDrawable = "1.2.30"
 androidImageCropper = "4.7.0"
 animationAndroid = "3.0.5"
 glideCompiler = "5.0.5"
