@@ -2,7 +2,14 @@ name: PR
 
 on:
     pull_request:
-        branches: [ main ]
+        branches: [main]
+        paths-ignore:
+            - ".github/**"
+            - "CHANGELOG.md"
+            - "docs/**"
+            - "fastlane/**"
+            - "LICENSE"
+            - "README.md"
 
 jobs:
     call-pr-workflow:
