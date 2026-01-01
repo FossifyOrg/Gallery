@@ -257,6 +257,9 @@ class PhotoFragment : ViewPagerFragment() {
         }
 
         mIsFullscreen = listener?.isFullScreen() == true
+        if (mIsFullscreen) {
+            binding.bottomActionsDummy.beGone()
+        }
         loadImage()
         initExtendedDetails()
         mWasInit = true
