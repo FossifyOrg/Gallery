@@ -1,0 +1,10 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed invisible color picker button in black themes 
+• Fixed issue with separate video player not respecting paused state when seeking 
+• Fixed misplacement of extended information during slideshow 
+
