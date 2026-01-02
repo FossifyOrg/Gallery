@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Long press gesture to play videos at 2x speed in separate video player ([#830])
+
 ### Fixed
 - Fixed invisible color picker button in black themes ([#337])
 - Fixed issue with separate video player not respecting paused state when seeking ([#831])
@@ -265,6 +268,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
+[#830]: https://github.com/FossifyOrg/Gallery/issues/830
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
 
