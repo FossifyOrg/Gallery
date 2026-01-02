@@ -13,7 +13,6 @@ import android.graphics.Point
 import android.graphics.SurfaceTexture
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
@@ -28,7 +27,6 @@ import android.view.WindowManager
 import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -70,11 +68,9 @@ import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
 import org.fossify.gallery.extensions.hideSystemUI
-import org.fossify.gallery.extensions.mute
 import org.fossify.gallery.extensions.openPath
 import org.fossify.gallery.extensions.shareMediumPath
 import org.fossify.gallery.extensions.showSystemUI
-import org.fossify.gallery.extensions.unmute
 import org.fossify.gallery.fragments.PlaybackSpeedFragment
 import org.fossify.gallery.helpers.DRAG_THRESHOLD
 import org.fossify.gallery.helpers.EXOPLAYER_MAX_BUFFER_MS
@@ -851,19 +847,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         mExoPlayer = null
     }
 
-    /*@RequiresApi(Build.VERSION_CODES.R)
-    fun setPillHeight() {
-        val system = WindowInsets.CONSUMED.getInsetsIgnoringVisibility(Type.systemBars())
-
-        val pillTopMargin = system.top + resources.getActionBarHeight(this) +
-            resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
-        (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
-            setMargins(
-                0, pillTopMargin, 0, 0
-            )
-        }
-    }*/
-
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
         if (mExoPlayer != null && fromUser) {
             setPosition(progress.toLong())
@@ -892,11 +875,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     override fun onSurfaceTextureDestroyed(surface: SurfaceTexture) = false
 
-    @RequiresApi(Build.VERSION_CODES.R)
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
         mExoPlayer?.setVideoSurface(Surface(binding.videoSurface.surfaceTexture))
     }
 
-    @RequiresApi(Build.VERSION_CODES.R)
     override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {}
 }
