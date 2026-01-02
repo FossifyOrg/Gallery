@@ -157,7 +157,7 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.application than 8.11.1 is available: 8.13.1. (There is also a newer version of 8.11.𝑥 available, if upgrading to 8.13.1 is difficult: 8.11.2)"
+        message="A newer version of com.android.application than 8.11.1 is available: 8.13.2. (There is also a newer version of 8.11.𝑥 available, if upgrading to 8.13.2 is difficult: 8.11.2)"
         errorLine1="gradlePlugins-agp = &quot;8.11.1&quot;"
         errorLine2="                    ~~~~~~~~">
         <location
@@ -173,13 +173,13 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="272"
+            line="284"
             column="13"/>
     </issue>
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.1"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.3"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
@@ -291,14 +291,14 @@
         id="Aligned16KB"
         message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.13/transforms/e2b828021c95f1a673a583c08e00dc19/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
+            file="$GRADLE_USER_HOME/caches/8.13/transforms/15e4b31d5110a1dcfc48649ed3caa224/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.13/transforms/e2b828021c95f1a673a583c08e00dc19/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
+            file="$GRADLE_USER_HOME/caches/8.13/transforms/15e4b31d5110a1dcfc48649ed3caa224/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
     </issue>
 
     <issue
@@ -319,7 +319,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="272"
+            line="284"
             column="13"/>
     </issue>
 
@@ -831,7 +831,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;restore_confirmation&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;restore_confirmation&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;plurals name=&quot;restore_confirmation&quot;>"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1425,7 +1425,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;overwrite_original&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
+        message="&quot;overwrite_original&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;overwrite_original&quot;>Overwrite original&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -3410,11 +3410,11 @@
         errorLine2="                             ~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/EditActivity.kt"
-            line="946"
+            line="948"
             column="30"/>
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/EditActivity.kt"
-            line="946"
+            line="948"
             column="9"
             message="The unsafe intent is launched here."/>
     </issue>
@@ -3426,11 +3426,11 @@
         errorLine2="                                             ~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/EditActivity.kt"
-            line="984"
+            line="986"
             column="46"/>
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/EditActivity.kt"
-            line="984"
+            line="986"
             column="25"
             message="The unsafe intent is launched here."/>
     </issue>
@@ -3442,11 +3442,11 @@
         errorLine2="                                 ~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/EditActivity.kt"
-            line="1006"
+            line="1008"
             column="34"/>
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/EditActivity.kt"
-            line="1006"
+            line="1008"
             column="13"
             message="The unsafe intent is launched here."/>
     </issue>
@@ -3469,7 +3469,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="src/main/AndroidManifest.xml"
-            line="289"
+            line="301"
             column="10"/>
     </issue>
 
@@ -3557,7 +3557,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/EditActivity.kt"
-            line="741"
+            line="742"
             column="21"/>
     </issue>
 
@@ -6555,7 +6555,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="835"
+            line="830"
             column="17"/>
     </issue>
 

@@ -4,6 +4,13 @@ on:
     pull_request:
         branches: [main]
         types: [labeled, opened, synchronize, reopened]
+        paths-ignore:
+            - ".github/**"
+            - "CHANGELOG.md"
+            - "docs/**"
+            - "fastlane/**"
+            - "LICENSE"
+            - "README.md"
 
 jobs:
     call-testing-build-workflow:
