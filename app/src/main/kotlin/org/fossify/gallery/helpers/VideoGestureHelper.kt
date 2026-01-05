@@ -30,14 +30,17 @@ class VideoGestureHelper(
     private var initialY = 0f
     private var originalSpeed = 1f
     internal var isLongPressActive = false
+    private var wasLongPressHandled = false
 
     private val touchHoldRunnable = Runnable {
-        callbacks.disallowParentIntercept()
-        isLongPressActive = true
-        originalSpeed = callbacks.getCurrentSpeed()
-        callbacks.performHaptic()
-        callbacks.setPlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
-        callbacks.showPill()
+        if (callbacks.isPlaying()) {
+            callbacks.disallowParentIntercept()
+            isLongPressActive = true
+            originalSpeed = callbacks.getCurrentSpeed()
+            callbacks.performHaptic()
+            callbacks.setPlaybackSpeed(TOUCH_HOLD_SPEED_MULTIPLIER)
+            callbacks.showPill()
+        }
     }
 
     fun onTouchEvent(event: MotionEvent) {
@@ -72,8 +75,15 @@ class VideoGestureHelper(
         }
     }
 
+    fun wasLongPressHandled() = wasLongPressHandled
+
+    fun updateLongPressHandled() {
+        wasLongPressHandled = false
+    }
+
     fun stop() {
         if (isLongPressActive) {
+            wasLongPressHandled = true
             callbacks.setPlaybackSpeed(originalSpeed)
             isLongPressActive = false
             callbacks.hidePill()

@@ -629,7 +629,11 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     }
 
     private fun toggleFullscreen() {
-        fullscreenToggled(!mIsFullscreen)
+        if (!videoGestureHelper.wasLongPressHandled()) {
+            fullscreenToggled(!mIsFullscreen)
+        } else {
+            videoGestureHelper.updateLongPressHandled()
+        }
     }
 
     private fun fullscreenToggled(isFullScreen: Boolean) {
