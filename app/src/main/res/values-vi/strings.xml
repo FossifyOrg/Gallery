@@ -18,9 +18,9 @@
     <string name="brightness">Độ sáng</string>
     <string name="lock_orientation">Khóa xoay màn hình</string>
     <string name="unlock_orientation">Mở khóa xoay</string>
-    <string name="change_orientation">Đổi chiều</string>
-    <string name="force_portrait">Bắt buộc dọc</string>
-    <string name="force_landscape">Bắt buộc ngang</string>
+    <string name="change_orientation">Xoay chiều</string>
+    <string name="force_portrait">Chiều dọc</string>
+    <string name="force_landscape">Chiều ngang</string>
     <string name="use_default_orientation">Dùng chiều mặc định</string>
     <string name="fix_date_taken">Sửa ngày chụp</string>
     <string name="fixing">Đang sửa…</string>
@@ -228,7 +228,7 @@
     <string name="faq_15_title">Tại sao ứng dụng chiếm quá nhiều dung lượng \?</string>
     <string name="faq_15_text">Bộ nhớ cache ứng dụng có thể mất tới 250MB nhằm đảm bảo tải hình ảnh nhanh hơn. Nếu ứng dụng chiếm nhiều dung lượng hơn, rất có thể là do bạn có nhiều mục trong Thùng rác. Những tệp đó được tính vào kích thước ứng dụng. Bạn có thể xóa tất cả tệp trong Thùng rác. Mọi tệp trong Thùng rác sẽ tự động bị xóa sau 30 ngày.</string>
     <string name="faq_16_text">Kể từ Android 11, bạn không thể ẩn hoặc hiện các tệp hoặc thư mục nữa, bạn cũng không thể nhìn thấy những tệp hoặc thư mục bị ẩn trong ứng dụng thư viện. Bạn sẽ phải sử dụng một số trình quản lý tệp cho điều đó.</string>
-    <string name="force_landscape_reverse">Bắt buộc ngang (đảo ngược)</string>
+    <string name="force_landscape_reverse">Chiều ngang (đảo ngược)</string>
     <string name="full_storage_permission_required">Fossify Gallery cần toàn quyền truy cập để hiển thị tất cả ảnh và video của bạn. Vào Cài đặt → Quyền → Ảnh và video → Cho phép tất cả.</string>
     <string name="excluded_activity_placeholder">Việc bỏ qua các thư mục sẽ khiến chúng cùng với các thư mục con bị ẩn trong ứng dụng Fossify Gallery, nhưng vẫn sẽ hiển thị trong các ứng dụng khác.\n\nNếu bạn muốn ẩn chúng khỏi các ứng dụng khác nữa, hãy sử dụng chức năng Ẩn (Hide).</string>
     <plurals name="restore_confirmation">
