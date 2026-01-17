@@ -3,6 +3,7 @@ package org.fossify.gallery.extensions
 import android.annotation.SuppressLint
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
@@ -12,7 +13,9 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.PictureDrawable
 import android.media.AudioManager
 import android.net.Uri
+import android.os.Build
 import android.os.Process
+import android.provider.MediaStore
 import android.provider.MediaStore.Files
 import android.provider.MediaStore.Images
 import android.widget.ImageView
@@ -39,6 +42,7 @@ import org.fossify.commons.extensions.doesThisOrParentHaveNoMedia
 import org.fossify.commons.extensions.getDocumentFile
 import org.fossify.commons.extensions.getDoesFilePathExist
 import org.fossify.commons.extensions.getDuration
+import org.fossify.commons.extensions.getFilePublicUri
 import org.fossify.commons.extensions.getFilenameFromPath
 import org.fossify.commons.extensions.getLongValue
 import org.fossify.commons.extensions.getMimeTypeFromUri
@@ -77,6 +81,7 @@ import org.fossify.commons.helpers.SORT_USE_NUMERIC_VALUE
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.commons.helpers.sumByLong
 import org.fossify.commons.views.MySquareImageView
+import org.fossify.gallery.BuildConfig
 import org.fossify.gallery.R
 import org.fossify.gallery.asynctasks.GetMediaAsynctask
 import org.fossify.gallery.databases.GalleryDatabase
@@ -1080,6 +1085,13 @@ fun Context.updateFavorite(path: String, isFavorite: Boolean) {
             favoritesDB.insert(getFavoriteFromPath(path))
         } else {
             favoritesDB.deleteFavoritePath(path)
+        }
+        // Update media in favorites collection for Android 11+ (API level 30)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            val values = ContentValues().apply {
+                put(MediaStore.MediaColumns.IS_FAVORITE, if (isFavorite) 1 else 0)
+            }
+            contentResolver.update(getFilePublicUri(File(path), BuildConfig.APPLICATION_ID), values, null)
         }
     } catch (e: Exception) {
         toast(org.fossify.commons.R.string.unknown_error_occurred)
