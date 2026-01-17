@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Update system favorites collection on Android 11+ when favoriting media ([#848])
+
 ### Fixed
 - Fixed invisible color picker button in black themes ([#337])
 - Fixed issue with separate video player not respecting paused state when seeking ([#831])
@@ -267,6 +270,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
+[#848]: https://github.com/FossifyOrg/Gallery/issues/848
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...HEAD
 [1.10.0]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...1.10.0
