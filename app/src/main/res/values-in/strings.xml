@@ -256,4 +256,10 @@
     <string name="media_exceeds_device_capabilities">Media melebihi kemampuan perangkat.</string>
     <string name="unsupported_format">Format tidak didukung.</string>
     <string name="failed_to_load_media">Gagal memuat media.</string>
+    <string name="force_landscape_reverse">Paksa lanskap (terbalik)</string>
+    <string name="overwrite_original">Timpa yang asli</string>
+    <string name="keep_screen_on_fullscreen_photos">Biarkan layar tetap menyala saat melihat foto layar penuh</string>
+    <plurals name="restore_confirmation">
+        <item quantity="other">Apakah Anda yakin ingin memulihkan %d file?</item>
+    </plurals>
 </resources>
