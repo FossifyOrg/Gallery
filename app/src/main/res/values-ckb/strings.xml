@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="edit">دەستکاری</string>
+    <string name="app_launcher_name">گەلەری</string>
+    <string name="images">وێنەکان</string>
+    <string name="videos">ڤیدیۆکان</string>
+    <string name="open_camera">کردنەوەی کامێرە</string>
+    <string name="hidden">(شاراوە)</string>
+    <string name="excluded">(بەدەر)</string>
+    <string name="all_folders">هەموو بوخچەکان</string>
 </resources>

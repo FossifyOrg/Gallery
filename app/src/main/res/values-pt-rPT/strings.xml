@@ -258,4 +258,12 @@
     <string name="unsupported_format">Formato não suportado.</string>
     <string name="file_is_malformed_or_corrupted">Ficheiro inválido ou danificado.</string>
     <string name="media_exceeds_device_capabilities">O ficheiro excede as capacidades do dispositivo.</string>
+    <string name="force_landscape_reverse">Impor modo horizontal (inverso)</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Tem a certeza de que pretende restaurar o ficheiro %d?</item>
+        <item quantity="many">Tem a certeza de que pretende restaurar os ficheiros %d?</item>
+        <item quantity="other"></item>
+    </plurals>
+    <string name="overwrite_original">Sobrescrever original</string>
+    <string name="keep_screen_on_fullscreen_photos">Mantenha o ecrã ligado enquanto visualiza fotos em ecrã inteiro</string>
 </resources>
