@@ -98,6 +98,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     companion object {
         private const val PLAY_WHEN_READY_DRAG_DELAY = 100L
         private const val UPDATE_INTERVAL_MS = 250L
+        private const val TOUCH_SLOP_DIVIDER = 3
     }
 
     private var mIsFullscreen = false
@@ -138,7 +139,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         mPlaybackSpeedPill = binding.playbackSpeedPill
-        mTouchSlop = (ViewConfiguration.get(this).scaledTouchSlop)
+        mTouchSlop = (ViewConfiguration.get(this).scaledTouchSlop) / TOUCH_SLOP_DIVIDER
         videoGestureHelper = VideoGestureHelper(
             touchSlop = mTouchSlop,
             callbacks = VideoGestureCallbacks(
