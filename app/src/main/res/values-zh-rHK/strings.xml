@@ -155,8 +155,8 @@
     <string name="faq_10_text">可以，在編輯工具中拖動圖片的角落即可裁剪圖片。對縮圖長按並選擇編輯，或者在全螢幕檢視時選擇編輯皆可進入編輯工具。</string>
     <string name="faq_11_title">有辦法分類縮圖嗎？</string>
     <string name="faq_11_text">可以，在檢視縮圖時使用選單中的「分組方式」即可，有多種分類方式可供選擇，包含拍攝日期等。若使用了「資料夾內容全部顯示」功能，則也可以依資料夾來分類。</string>
-    <string name="faq_12_title">依照拍攝日期的排序好像排得不太對，要怎麼修正？</string>
-    <string name="faq_12_text">很有可能是因為檔案是從其他地方複製過來的。選擇縮圖並選擇「修復拍攝日期數值」即可修正。</string>
+    <string name="faq_12_title">依照拍攝日期的排序似乎不太正確，何以修正？</string>
+    <string name="faq_12_text">多是因為檔案是從其他地方複製過來。選擇縮圖並選擇「修復拍攝日期數值」即可修正。</string>
     <string name="faq_13_title">看到圖片上出現了色帶問題，要如何改善畫質？</string>
     <string name="faq_13_text">目前顯示圖片的方式在大多數情況下都能正常運作，但若想要更好的畫質，可以啟用「設定」-&gt;「可強制放大的圖片」段落中的「以最高品質顯示圖片」。</string>
     <string name="faq_14_title">如何取消隱藏檔案／資料夾？</string>
@@ -256,4 +256,6 @@
     <string name="faq_17_text">因 Android 11 的系統變更，這項功能無法再運作。app 沒辦法瀏覽實際的資料夾，而是透過所謂的 MediaStorage 來擷取資料。</string>
     <string name="faq_18_title">為什麼我在播放影片時看到廣告？</string>
     <string name="faq_18_text">我們的應用程式完全沒有廣告。如果您在播放影片時看到它們，那麼您一定是在使用其他應用程式的影片播放器。嘗試在裝置設定中找到您的預設影片播放器，然後對其進行清除其預設值。下次您嘗試播放影片時，系統會提示您選擇應用程式，您可以在此選擇您想要使用的影片播放器。</string>
+    <string name="force_landscape_reverse">強制橫向（另一面）</string>
+    <string name="overwrite_original">覆寫原檔</string>
 </resources>

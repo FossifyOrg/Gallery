@@ -217,7 +217,7 @@
     <string name="faq_3_text">Nahi duzun albuma luze sakatu eta Pin ikonoa hauta dezakezu ekintzen menuan, eta horrek goian finkatuko du. Karpeta anitz ere ainguratu ditzakezu, ainguratutako elementuak ordenatzeko metodo lehenetsiaren arabera ordenatuko dira.</string>
     <string name="faq_4_title">Nola aurreratu ditzaket bideoak azkar\?</string>
     <string name="faq_4_text">Pantailaren alboa bitan sakatuz edo bilaketa-barratik gertu dauden uneko edo gehienezko iraupeneko testuak sakatuz egin dezakezu. Aplikazioaren ezarpenetan bideoak pantaila bereizi batean irekitzea gaitzen baduzu, keinu horizontalak ere erabil ditzakezu.</string>
-    <string name="faq_5_title">Zein da karpeta bat ezkutatzearen eta baztertzearen arteko aldea\?</string>
+    <string name="faq_5_title">Zein da karpeta bat ezkutatzearen eta baztertzearen arteko diferentzia?</string>
     <string name="faq_6_title">Zergatik agertzen dira musikaren azala edo eranskailuak dituzten karpetak\?</string>
     <string name="faq_6_text">Gerta daiteke ezohiko album batzuk agertzea. Erraz bazter ditzakezu luze sakatuz eta Baztertu hautatuz. Hurrengo elkarrizketa-koadroan karpeta nagusia hauta dezakezu, litekeena da erlazionatutako beste albumak ere agertzea eragotziko duela.</string>
     <string name="faq_7_title">Irudiak dituen karpeta bat ez da agertzen edo ez ditu elementu guztiak erakusten. Zer egin dezaket\?</string>
@@ -258,8 +258,10 @@
     <string name="media_exceeds_device_capabilities">Mediek gailuaren ezaugarriak gainditzen dituzte.</string>
     <string name="unsupported_format">Fitxategi ezin da erakutsi.</string>
     <plurals name="restore_confirmation">
-        <item quantity="one">"Ziur zaude fitxategi %d  leheneratu nahi duzula?"</item>
+        <item quantity="one">Ziur zaude fitxategi %d leheneratu nahi duzula?</item>
         <item quantity="other">Ziur zaude %d fitxategi leheneratu nahi duzula?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Mantendu pantaila piztuta argazkiak pantaila osoan ikusi bitartean</string>
+    <string name="force_landscape_reverse">Behartu horizontala (alderantzizkoa)</string>
+    <string name="overwrite_original">Gainidatzi jatorrizkoa</string>
 </resources>

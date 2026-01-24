@@ -220,4 +220,5 @@
     <string name="full_storage_permission_required">Fossify Gallery trenger full tilgang for å vise alle dine bilder og videoer. Gå til Innstillinger &gt; Tillatelser &gt; Bilder og videoer &gt; Tillat alle.</string>
     <string name="wallpaper">Bakgrunnsbilde</string>
     <string name="force_landscape_reverse">Framtving landskap (omvendt)</string>
+    <string name="overwrite_original">Overskriv original</string>
 </resources>
