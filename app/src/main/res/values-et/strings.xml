@@ -141,7 +141,7 @@
     <string name="grouping_and_sorting">Pane tähele, et rühmitamine ja sorteerimine on 2 erinevat välja</string>
     <string name="folder_on_widget">Vidinas näidatav kaust:</string>
     <string name="show_folder_name">Näita kausta nime</string>
-    <string name="autoplay_videos">Esita videosid automaatselt</string>
+    <string name="autoplay_videos">Esita videoid automaatselt</string>
     <string name="remember_last_video_position">Jäta meelde video taasesituse viimane ajapunkt</string>
     <string name="loop_videos">Esita videosid lõputult</string>
     <string name="animate_gifs">Animeeri GIF-faile pisipiltide juures</string>
@@ -166,7 +166,7 @@
     <string name="allow_deep_zooming_images">Luba piltide sügavat suumimist</string>
     <string name="hide_extended_details">Kui olekuriba on peidetud, peida detailne lisateave</string>
     <string name="show_at_bottom">Näita mõned tegevusnupud ekraani allosas</string>
-    <string name="show_recycle_bin">Kuva prügikast kaustade vaates</string>
+    <string name="show_recycle_bin">Kuva kaustade vaates prügikasti</string>
     <string name="deep_zoomable_images">Sügavalt suumitavad pildid</string>
     <string name="show_highest_quality">Näita pilte võimalikult kõrge kvaliteediga</string>
     <string name="show_recycle_bin_last">Kuva prügikast põhivaate viimase kirjena</string>
