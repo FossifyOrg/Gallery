@@ -106,6 +106,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private var mWasVideoStarted = false
     private var mIsDragged = false
     private var mIsOrientationLocked = false
+    private var mHasAudio = true
     private var mScreenWidth = 0
     private var mCurrTime = 0L
     private var mDuration = 0L
@@ -454,7 +455,27 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         })
     }
 
+    private fun checkAudioTrack() {
+        mHasAudio = mExoPlayer?.let { player ->
+            if (player.currentTracks.groups.isEmpty()) {
+                return@let false
+            }
+
+            player.currentTracks.groups.any { group ->
+                // Get the format of the first track in the group to check its type.
+                val format = group.getTrackFormat(0)
+                // Check if the MIME type is an audio type (e.g., "audio/mp4a-latm").
+                format.sampleMimeType?.startsWith("audio/") == true
+            }
+        } ?: false //
+        if (!mHasAudio) {
+            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
+            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
+        }
+    }
+
     private fun videoPrepared() {
+        checkAudioTrack()
         if (!mWasVideoStarted) {
             binding.bottomVideoTimeHolder.videoTogglePlayPause.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
@@ -670,6 +691,11 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             binding.bottomVideoTimeHolder.videoDuration,
         ).forEach {
             it.isClickable = !mIsFullscreen
+        }
+
+        if (!mHasAudio) {
+            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
+            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
         }
 
         binding.videoAppbar.animate().alpha(newAlpha).withStartAction {

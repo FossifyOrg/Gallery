@@ -128,6 +128,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private var mStoredRememberLastVideoPosition = false
     private var mOriginalPlaybackSpeed = 1f
     private var mIsLongPressActive = false
+    private var mHasAudio = true
 
     private val mTouchHoldRunnable = Runnable {
         mView.parent.requestDisallowInterceptTouchEvent(true)
@@ -664,6 +665,11 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             mTimeHolder.fadeIn(DEFAULT_ANIMATION_DURATION)
         }
 
+        if (!mHasAudio) {
+            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
+            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
+        }
+
         binding.videoDetails.apply {
             if (mStoredShowExtendedDetails && isVisible() && context != null && resources != null) {
                 if (mStoredHideExtendedDetails) {
@@ -880,7 +886,27 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         }
     }
 
+    private fun checkAudioTrack() {
+        mHasAudio = mExoPlayer?.let { player ->
+            if (player.currentTracks.groups.isEmpty()) {
+                return@let false
+            }
+
+            player.currentTracks.groups.any { group ->
+                // Get the format of the first track in the group to check its type.
+                val format = group.getTrackFormat(0)
+                // Check if the MIME type is an audio type (e.g., "audio/mp4a-latm").
+                format.sampleMimeType?.startsWith("audio/") == true
+            }
+        } ?: false //
+        if (!mHasAudio) {
+            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
+            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
+        }
+    }
+
     private fun videoPrepared() {
+        checkAudioTrack()
         if (mDuration == 0L) {
             mDuration = mExoPlayer!!.duration
             setupTimeHolder()
