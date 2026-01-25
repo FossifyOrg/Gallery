@@ -262,7 +262,7 @@
     <plurals name="restore_confirmation">
         <item quantity="one">Tem a certeza de que pretende restaurar o ficheiro %d?</item>
         <item quantity="many">Tem a certeza de que pretende restaurar os ficheiros %d?</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="overwrite_original">Sobrescrever original</string>
     <string name="keep_screen_on_fullscreen_photos">Mantenha o ecrã ligado enquanto visualiza fotos em ecrã inteiro</string>
