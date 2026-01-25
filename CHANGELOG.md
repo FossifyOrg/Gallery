@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Added support for custom fonts
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
 
 ## Changed
