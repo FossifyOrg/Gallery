@@ -254,6 +254,9 @@
     <string name="media_exceeds_device_capabilities">Media exceeds device capabilities.</string>
     <string name="unsupported_format">Unsupported format.</string>
 
+    <!-- Player-->
+    <string name="video_no_sound">This video has no sound</string>
+
     <!-- FAQ -->
     <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>
     <string name="faq_1_text">First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \"Open by default\", click on it, then select \"Clear defaults\".
@@ -296,7 +299,4 @@
         Haven't found some strings? There's more at
         https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
     -->
-
-    <!-- Player-->
-    <string name="video_no_sound">This video has no sound</string>
 </resources>
