@@ -508,12 +508,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             setPosition(0)
         }
 
-        if (!mWasVideoStarted) {
-            if (!mHasAudio) {
-                toast(R.string.video_no_sound)
-            }
-        }
-
         mWasVideoStarted = true
         mIsPlaying = true
         mExoPlayer?.playWhenReady = true
@@ -554,6 +548,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                 R.drawable.ic_vector_speaker_on
             }
         }else {
+            if(mWasVideoStarted) {
+                toast(R.string.video_no_sound)
+            }
             R.drawable.ic_vector_no_sound
         }
 

@@ -798,6 +798,9 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                 R.drawable.ic_vector_speaker_on
             }
         } else {
+            if(mWasVideoStarted) {
+                activity?.toast(R.string.video_no_sound)
+            }
             R.drawable.ic_vector_no_sound
         }
 
@@ -838,10 +841,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.text =
                 "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"
-
-            if (!mHasAudio) {
-                activity?.toast(R.string.video_no_sound)
-            }
         }
 
         mWasVideoStarted = true
