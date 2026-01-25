@@ -35,6 +35,7 @@ import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
+import androidx.media3.common.Tracks
 import androidx.media3.common.VideoSize
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.ContentDataSource
@@ -59,6 +60,7 @@ import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.onGlobalLayout
 import org.fossify.commons.extensions.setDrawablesRelativeWithIntrinsicBounds
 import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.gallery.R
@@ -452,30 +454,16 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                     }
                 }
             }
+
+            override fun onTracksChanged(tracks: Tracks) {
+                super.onTracksChanged(tracks)
+                mHasAudio = tracks.containsType(C.TRACK_TYPE_AUDIO)
+                updatePlayerMuteState()
+            }
         })
     }
 
-    private fun checkAudioTrack() {
-        mHasAudio = mExoPlayer?.let { player ->
-            if (player.currentTracks.groups.isEmpty()) {
-                return@let false
-            }
-
-            player.currentTracks.groups.any { group ->
-                // Get the format of the first track in the group to check its type.
-                val format = group.getTrackFormat(0)
-                // Check if the MIME type is an audio type (e.g., "audio/mp4a-latm").
-                format.sampleMimeType?.startsWith("audio/") == true
-            }
-        } ?: false //
-        if (!mHasAudio) {
-            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
-            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
-        }
-    }
-
     private fun videoPrepared() {
-        checkAudioTrack()
         if (!mWasVideoStarted) {
             binding.bottomVideoTimeHolder.videoTogglePlayPause.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
@@ -520,6 +508,12 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             setPosition(0)
         }
 
+        if (!mWasVideoStarted) {
+            if (!mHasAudio) {
+                toast(R.string.video_no_sound)
+            }
+        }
+
         mWasVideoStarted = true
         mIsPlaying = true
         mExoPlayer?.playWhenReady = true
@@ -551,12 +545,16 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     private fun updatePlayerMuteState() {
         val isMuted = config.muteVideos
-        val drawableId = if (isMuted) {
-            mExoPlayer?.mute()
-            R.drawable.ic_vector_speaker_off
-        } else {
-            mExoPlayer?.unmute()
-            R.drawable.ic_vector_speaker_on
+        val drawableId = if(mHasAudio) {
+            if (isMuted) {
+                mExoPlayer?.mute()
+                R.drawable.ic_vector_speaker_off
+            } else {
+                mExoPlayer?.unmute()
+                R.drawable.ic_vector_speaker_on
+            }
+        }else {
+            R.drawable.ic_vector_no_sound
         }
 
         binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
@@ -691,11 +689,6 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             binding.bottomVideoTimeHolder.videoDuration,
         ).forEach {
             it.isClickable = !mIsFullscreen
-        }
-
-        if (!mHasAudio) {
-            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
-            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
         }
 
         binding.videoAppbar.animate().alpha(newAlpha).withStartAction {

@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
-- Added a dedicated icon for videos without an audio track ([#876])
+
+## Changed
+- Mute button is now disabled for videos without an audio track ([#876])
 
 ### Fixed
 - Fixed invisible color picker button in black themes ([#337])

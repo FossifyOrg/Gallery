@@ -32,6 +32,7 @@ import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
+import androidx.media3.common.Tracks
 import androidx.media3.common.VideoSize
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.ContentDataSource
@@ -47,7 +48,6 @@ import androidx.media3.exoplayer.source.ProgressiveMediaSource
 import com.bumptech.glide.Glide
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beGoneIf
-import org.fossify.commons.extensions.beInvisible
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.fadeIn
@@ -61,6 +61,7 @@ import org.fossify.commons.extensions.isVisible
 import org.fossify.commons.extensions.onGlobalLayout
 import org.fossify.commons.extensions.setDrawablesRelativeWithIntrinsicBounds
 import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.helpers.DEFAULT_ANIMATION_DURATION
 import org.fossify.commons.helpers.ensureBackgroundThread
@@ -73,9 +74,7 @@ import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getBottomActionsHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
-import org.fossify.gallery.extensions.mute
 import org.fossify.gallery.extensions.parseFileChannel
-import org.fossify.gallery.extensions.unmute
 import org.fossify.gallery.helpers.Config
 import org.fossify.gallery.helpers.EXOPLAYER_MAX_BUFFER_MS
 import org.fossify.gallery.helpers.EXOPLAYER_MIN_BUFFER_MS
@@ -586,6 +585,12 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                     }
                 }
             }
+
+            override fun onTracksChanged(tracks: Tracks) {
+                super.onTracksChanged(tracks)
+                mHasAudio = tracks.containsType(C.TRACK_TYPE_AUDIO)
+                updatePlayerMuteState()
+            }
         })
     }
 
@@ -663,11 +668,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         } else {
             binding.bottomActionsDummy.beVisible()
             mTimeHolder.fadeIn(DEFAULT_ANIMATION_DURATION)
-        }
-
-        if (!mHasAudio) {
-            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
-            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
         }
 
         binding.videoDetails.apply {
@@ -789,12 +789,16 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     private fun updatePlayerMuteState() {
         val context = context ?: return
         val isMuted = mConfig.muteVideos
-        val drawableId = if (isMuted) {
-            mExoPlayer?.mute()
-            R.drawable.ic_vector_speaker_off
+        val drawableId = if (mHasAudio) {
+            if (isMuted) {
+                mExoPlayer?.mute()
+                R.drawable.ic_vector_speaker_off
+            } else {
+                mExoPlayer?.unmute()
+                R.drawable.ic_vector_speaker_on
+            }
         } else {
-            mExoPlayer?.unmute()
-            R.drawable.ic_vector_speaker_on
+            R.drawable.ic_vector_no_sound
         }
 
         binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
@@ -834,6 +838,10 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.beVisible()
             binding.bottomVideoTimeHolder.videoPlaybackSpeed.text =
                 "${DecimalFormat("#.##").format(mConfig.playbackSpeed)}x"
+
+            if (!mHasAudio) {
+                activity?.toast(R.string.video_no_sound)
+            }
         }
 
         mWasVideoStarted = true
@@ -886,27 +894,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         }
     }
 
-    private fun checkAudioTrack() {
-        mHasAudio = mExoPlayer?.let { player ->
-            if (player.currentTracks.groups.isEmpty()) {
-                return@let false
-            }
-
-            player.currentTracks.groups.any { group ->
-                // Get the format of the first track in the group to check its type.
-                val format = group.getTrackFormat(0)
-                // Check if the MIME type is an audio type (e.g., "audio/mp4a-latm").
-                format.sampleMimeType?.startsWith("audio/") == true
-            }
-        } ?: false //
-        if (!mHasAudio) {
-            binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(R.drawable.no_sound)
-            binding.bottomVideoTimeHolder.videoToggleMute.isClickable = false
-        }
-    }
-
     private fun videoPrepared() {
-        checkAudioTrack()
         if (mDuration == 0L) {
             mDuration = mExoPlayer!!.duration
             setupTimeHolder()
