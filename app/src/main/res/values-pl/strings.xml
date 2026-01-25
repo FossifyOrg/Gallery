@@ -173,7 +173,7 @@
     <string name="allow_deep_zooming_images">Zezwalaj na mocne powiększanie obrazów</string>
     <string name="hide_extended_details">Ukrywaj dodatkowe szczegóły, gdy pasek stanu jest ukryty</string>
     <string name="show_at_bottom">Pokazuj niektóre przyciski akcji na dole ekranu</string>
-    <string name="show_recycle_bin">Pokazuj kosz w widoku folderów</string>
+    <string name="show_recycle_bin">Pokazuj kosz na ekranie folderów</string>
     <string name="deep_zoomable_images">Mocne powiększanie obrazów</string>
     <string name="show_highest_quality">Pokazuj obrazy w najwyższej możliwej jakości</string>
     <string name="show_recycle_bin_last">Pokazuj kosz jako ostatni element na ekranie głównym</string>
