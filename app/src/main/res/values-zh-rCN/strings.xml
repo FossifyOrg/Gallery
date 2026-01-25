@@ -32,7 +32,7 @@
     <string name="unset_as_default_folder">取消设置为默认文件夹</string>
     <string name="reorder_by_dragging">通过拖动重新排列文件夹</string>
     <string name="reorder_by_dragging_pro">通过拖动重新排列文件夹 (专业版)</string>
-    <string name="restore_to_path">还原到“%s”</string>
+    <string name="restore_to_path">恢复至“%s”</string>
     <string name="filter_media">过滤显示的文件</string>
     <string name="images">图片</string>
     <string name="videos">视频</string>
@@ -170,10 +170,10 @@
     <string name="allow_deep_zooming_images">允许大幅度缩放图像</string>
     <string name="hide_extended_details">状态栏隐藏时，同时隐藏更多详细信息</string>
     <string name="show_at_bottom">显示底部按钮</string>
-    <string name="show_recycle_bin">文件夹画面显示回收站</string>
+    <string name="show_recycle_bin">在文件夹界面显示回收站</string>
     <string name="deep_zoomable_images">大幅度缩放图像</string>
     <string name="show_highest_quality">使用最高画质显示图像</string>
-    <string name="show_recycle_bin_last">主屏幕的最后一项显示回收站</string>
+    <string name="show_recycle_bin_last">在主屏幕末尾显示回收站</string>
     <string name="allow_down_gesture">使用下滑手势退出全屏</string>
     <string name="allow_one_to_one_zoom">两指双击后 1:1 缩放图像</string>
     <string name="open_videos_on_separate_screen">使用左右滑动快进/快退手势时总是在独立画面中播放视频</string>
@@ -242,7 +242,7 @@
     <string name="faq_14_title">我隐藏了某个文件/文件夹。如何取消隐藏？</string>
     <string name="faq_14_text">您可以在主屏幕的菜单中点击“临时显示隐藏的项目”，也可以在设置中启用“显示隐藏的项目”。如果您想要取消隐藏某个项目，长按它并选择菜单中的“取消隐藏”即可。本应用是通过向文件夹中添加“.nomedia”文件来隐藏文件夹的，您可以使用任意一款文件管理器删除该文件来取消隐藏。请注意：隐藏是按照递归方式处理的。如果您隐藏了某个文件夹，它的所有的子文件夹也将被隐藏。要取消隐藏某个子文件夹，您必须先取消隐藏它的父文件夹。</string>
     <string name="faq_15_title">为什么这款应用要占用如此大的存储空间？</string>
-    <string name="faq_15_text">本应用可以使用不超过 250MB 的缓存以提高图像的加载速度。如果本应用占用的缓存超出了这个数值，则有可能是在回收站中也存在项目。回收站中的文件缓存也被计入本应用的缓存占用。您可以打开回收站并删除所有文件，也可以在系统的应用设置中清除本应用的回收站内容。回收站中的内容会在被移入 30 天后自动删除。</string>
+    <string name="faq_15_text">应用缓存最多占用 250MB 可确保图片加载更快。如果应用占用缓存超过此值，很可能是回收站中保留了项目。这些文件也会计入应用大小。您可以打开回收站删除所有文件，也可以在应用设置中清除回收站。回收站中的所有文件将在 30 天后自动删除。</string>
     <string name="faq_16_title">文件和文件夹的隐藏功能似乎有问题，为什么我再也无法查看隐藏的项目？</string>
     <string name="faq_16_text">从 Android 11 开始，系统不再允许用户隐藏/取消隐藏文件和文件夹，也不允许相册应用查看隐藏的文件和文件夹。您必须使用文件管理器来进行此类操作。</string>
     <string name="faq_16_text_extra">您也可以在本设备的设置页面中授予本应用访问所有文件的权限。这将让本应用可以显示隐藏的项目，还可以提高文件操作的可靠性。</string>
@@ -258,7 +258,7 @@
     <string name="media_exceeds_device_capabilities">媒体超出了设备容量。</string>
     <string name="keep_screen_on_fullscreen_photos">全屏查看照片时保持屏幕开启</string>
     <plurals name="restore_confirmation">
-        <item quantity="other">你确定要恢复 %d 个文件吗？</item>
+        <item quantity="other">确定要恢复 %d 个文件吗？</item>
     </plurals>
     <string name="force_landscape_reverse">强制横屏（反向）</string>
     <string name="overwrite_original">覆盖原文件</string>
