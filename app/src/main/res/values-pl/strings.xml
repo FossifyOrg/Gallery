@@ -268,4 +268,5 @@
     </plurals>
     <string name="force_landscape_reverse">Wymuś poziomą (odwrócona)</string>
     <string name="overwrite_original">Nadpisz oryginał</string>
+    <string name="video_no_sound">To wideo nie ma dźwięku</string>
 </resources>
