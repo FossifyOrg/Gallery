@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added support for custom fonts
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
 
-## Changed
+### Changed
 - Mute button is now disabled for videos without an audio track ([#876])
 
 ### Fixed
