@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added support for custom fonts
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
 
+## Changed
+- Mute button is now disabled for videos without an audio track ([#876])
+
 ### Fixed
 - Fixed invisible color picker button in black themes ([#337])
 - Fixed issue with separate video player not respecting paused state when seeking ([#831])
@@ -272,6 +275,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#830]: https://github.com/FossifyOrg/Gallery/issues/830
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
+[#876]: https://github.com/FossifyOrg/Gallery/issues/876
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...HEAD
 [1.10.0]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...1.10.0

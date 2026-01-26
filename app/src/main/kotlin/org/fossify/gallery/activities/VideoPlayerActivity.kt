@@ -35,6 +35,7 @@ import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
+import androidx.media3.common.Tracks
 import androidx.media3.common.VideoSize
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.ContentDataSource
@@ -59,6 +60,7 @@ import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.onGlobalLayout
 import org.fossify.commons.extensions.setDrawablesRelativeWithIntrinsicBounds
 import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.gallery.R
@@ -106,6 +108,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private var mWasVideoStarted = false
     private var mIsDragged = false
     private var mIsOrientationLocked = false
+    private var mHasAudio = true
     private var mScreenWidth = 0
     private var mCurrTime = 0L
     private var mDuration = 0L
@@ -451,6 +454,12 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                     }
                 }
             }
+
+            override fun onTracksChanged(tracks: Tracks) {
+                super.onTracksChanged(tracks)
+                mHasAudio = tracks.containsType(C.TRACK_TYPE_AUDIO)
+                updatePlayerMuteState()
+            }
         })
     }
 
@@ -530,12 +539,19 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     private fun updatePlayerMuteState() {
         val isMuted = config.muteVideos
-        val drawableId = if (isMuted) {
-            mExoPlayer?.mute()
-            R.drawable.ic_vector_speaker_off
+        val drawableId = if (mHasAudio) {
+            if (isMuted) {
+                mExoPlayer?.mute()
+                R.drawable.ic_vector_speaker_off
+            } else {
+                mExoPlayer?.unmute()
+                R.drawable.ic_vector_speaker_on
+            }
         } else {
-            mExoPlayer?.unmute()
-            R.drawable.ic_vector_speaker_on
+            if (mWasVideoStarted) {
+                toast(R.string.video_no_sound)
+            }
+            R.drawable.ic_vector_no_sound
         }
 
         binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
