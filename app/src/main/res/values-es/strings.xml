@@ -166,10 +166,10 @@
     <string name="allow_deep_zooming_images">Permitir zoom profundo</string>
     <string name="hide_extended_details">Ocultar detalles ampliados cuando la barra de estado está oculta</string>
     <string name="show_at_bottom">Mostrar botones de acción en la parte inferior de la pantalla</string>
-    <string name="show_recycle_bin">Mostrar la papelera de reciclaje en la pantalla de carpetas</string>
+    <string name="show_recycle_bin">Mostrar la papelera de reciclaje en la vista de carpetas</string>
     <string name="deep_zoomable_images">Imágenes ampliables con zoom</string>
     <string name="show_highest_quality">Mostrar imágenes con la mayor calidad posible</string>
-    <string name="show_recycle_bin_last">Mostrar la papelera de reciclaje como el último elemento en la pantalla principal</string>
+    <string name="show_recycle_bin_last">Mostrar la papelera de reciclaje como último elemento en la pantalla principal</string>
     <string name="allow_down_gesture">Permitir cerrar la vista de pantalla completa con un gesto hacia abajo</string>
     <string name="allow_one_to_one_zoom">Permitir zoom 1:1 con un toque doble</string>
     <string name="open_videos_on_separate_screen">Abrir videos en una pantalla separada con nuevos gestos horizontales</string>
@@ -235,7 +235,7 @@
     <string name="faq_14_title">He ocultado un archivo/carpeta. ¿Cómo puedo desocultarlo\?</string>
     <string name="faq_14_text">Puede presionar el elemento de menú \"Mostrar elementos ocultos temporalmente\" en la pantalla principal, o alternar \"Mostrar elementos ocultos\" en la configuración de la aplicación para ver el elemento oculto. Si desea mostrarlo, simplemente manténgalo presionado y seleccione \"Mostrar\". Las carpetas se ocultan agregando un archivo \".nomedia\" oculto en ellas, también puede eliminar el archivo con cualquier administrador de archivos. Sin embargo, tenga en cuenta que la ocultación funciona de forma recursiva, por lo que si oculta una carpeta, todas las subcarpetas también se ocultarán. Entonces, para mostrar las subcarpetas, debe mostrar la carpeta principal.</string>
     <string name="faq_15_title">¿Por qué la aplicación ocupa tanto espacio\?</string>
-    <string name="faq_15_text">La caché de la aplicación puede ocupar hasta 250 MB, lo que garantiza una carga más rápida de las imágenes. Si la aplicación está ocupando aún más espacio, lo más probable es que tenga elementos en la papelera de reciclaje. Esos archivos cuentan para el tamaño de la aplicación. Puedes borrar la papelera de reciclaje abriéndola y borrando todos los archivos, o desde los ajustes de la aplicación. Todos los archivos de la papelera se eliminan automáticamente después de 30 días.</string>
+    <string name="faq_15_text">La caché de la aplicación puede ocupar hasta 250 MB, lo que permite cargar las imágenes más rápido. Si la aplicación está usando aún más espacio, lo más probable es que tengas archivos en la papelera de reciclaje, ya que también cuentan dentro del tamaño de la aplicación. Puedes vaciar la papelera abriéndola y eliminando todos los archivos, o desde los ajustes de la aplicación. Cada archivo de la papelera se elimina automáticamente después de 30 días.</string>
     <string name="faq_16_title">¿Qué ha pasado con la ocultación de archivos y carpetas y por qué ya no puedo ver los elementos ocultos\?</string>
     <string name="faq_16_text">A partir de Android 11 ya no puede ocultar o mostrar archivos o carpetas, tampoco puede ver las ocultas en aplicaciones de galería debido a restricciones del sistema. Tendrá que usar algún gestor de archivos para ello.</string>
     <string name="faq_16_text_extra">O también puede conceder a esta galería el acceso a todos los archivos a través de la configuración de su dispositivo, lo que nos permitirá mostrar los elementos ocultos y hacer más fiables las operaciones con los archivos en general.</string>
