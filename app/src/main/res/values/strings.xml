@@ -255,7 +255,7 @@
     <string name="unsupported_format">Unsupported format.</string>
 
     <!-- Player-->
-    <string name="video_no_sound">This video has no sound</string>
+    <string name="video_no_sound">This video has no audio</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">How can I make Fossify Gallery the default device gallery?</string>

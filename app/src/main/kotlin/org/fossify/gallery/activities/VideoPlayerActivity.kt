@@ -539,7 +539,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     private fun updatePlayerMuteState() {
         val isMuted = config.muteVideos
-        val drawableId = if(mHasAudio) {
+        val drawableId = if (mHasAudio) {
             if (isMuted) {
                 mExoPlayer?.mute()
                 R.drawable.ic_vector_speaker_off
@@ -547,8 +547,8 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                 mExoPlayer?.unmute()
                 R.drawable.ic_vector_speaker_on
             }
-        }else {
-            if(mWasVideoStarted) {
+        } else {
+            if (mWasVideoStarted) {
                 toast(R.string.video_no_sound)
             }
             R.drawable.ic_vector_no_sound

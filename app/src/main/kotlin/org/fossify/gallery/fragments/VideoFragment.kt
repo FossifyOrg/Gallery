@@ -798,7 +798,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                 R.drawable.ic_vector_speaker_on
             }
         } else {
-            if(mWasVideoStarted) {
+            if (mWasVideoStarted) {
                 activity?.toast(R.string.video_no_sound)
             }
             R.drawable.ic_vector_no_sound
