@@ -266,4 +266,5 @@
     </plurals>
     <string name="force_landscape_reverse">Força apaïsat (invers)</string>
     <string name="overwrite_original">Sobreescriure l\'original</string>
+    <string name="video_no_sound">Aquest vídeo no té àudio</string>
 </resources>
