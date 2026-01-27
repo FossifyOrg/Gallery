@@ -266,4 +266,5 @@
     </plurals>
     <string name="force_landscape_reverse">Tírdhreach fórsaithe (droim ar ais)</string>
     <string name="overwrite_original">Forscríobh an bhunleagan</string>
+    <string name="video_no_sound">Níl aon fhuaim sa fhíseán seo</string>
 </resources>
