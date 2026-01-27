@@ -268,4 +268,5 @@
     </plurals>
     <string name="force_landscape_reverse">Альбомная (обратная)</string>
     <string name="overwrite_original">Перезаписать оригинал</string>
+    <string name="video_no_sound">Видео без звука</string>
 </resources>
