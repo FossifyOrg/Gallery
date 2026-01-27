@@ -260,4 +260,5 @@
     </plurals>
     <string name="force_landscape_reverse">Querformat erzwingen (umgekehrt)</string>
     <string name="overwrite_original">Original überschreiben</string>
+    <string name="video_no_sound">Dieses Video hat kein Audio</string>
 </resources>
