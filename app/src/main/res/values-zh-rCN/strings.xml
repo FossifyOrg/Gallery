@@ -262,4 +262,5 @@
     </plurals>
     <string name="force_landscape_reverse">强制横屏（反向）</string>
     <string name="overwrite_original">覆盖原文件</string>
+    <string name="video_no_sound">此视频没有音频</string>
 </resources>
