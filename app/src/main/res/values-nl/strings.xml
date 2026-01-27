@@ -264,4 +264,5 @@
     </plurals>
     <string name="force_landscape_reverse">Landschapsmodus forceren (omgedraaid)</string>
     <string name="overwrite_original">Origineel overschrĳven</string>
+    <string name="video_no_sound">Deze video heeft geen geluid</string>
 </resources>
