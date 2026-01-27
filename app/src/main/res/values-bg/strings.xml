@@ -260,4 +260,5 @@
     </plurals>
     <string name="force_landscape_reverse">Пейзаж (обърнат)</string>
     <string name="overwrite_original">Презаписване на изходния файл</string>
+    <string name="video_no_sound">Видеото няма звук</string>
 </resources>
