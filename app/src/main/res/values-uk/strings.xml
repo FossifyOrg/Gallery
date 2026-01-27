@@ -268,4 +268,5 @@
     </plurals>
     <string name="force_landscape_reverse">Примусовий ландшафт (зворотний)</string>
     <string name="overwrite_original">Перезаписати оригінал</string>
+    <string name="video_no_sound">Це відео не має аудіо</string>
 </resources>
