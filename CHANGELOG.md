@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Added support for custom fonts
+- Added option to toggle HDR rendering ([#564])
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
 
 ### Changed
@@ -255,6 +256,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
 [#525]: https://github.com/FossifyOrg/Gallery/issues/525
 [#529]: https://github.com/FossifyOrg/Gallery/issues/529
+[#564]: https://github.com/FossifyOrg/Gallery/issues/564
 [#565]: https://github.com/FossifyOrg/Gallery/issues/565
 [#567]: https://github.com/FossifyOrg/Gallery/issues/567
 [#568]: https://github.com/FossifyOrg/Gallery/issues/568
