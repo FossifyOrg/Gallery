@@ -325,6 +325,15 @@ class PhotoFragment : ViewPagerFragment() {
             activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
 
+        // preference might have changed
+        if (mWasInit && mIsFragmentVisible) {
+            if (binding.gesturesView.isVisible()) {
+                binding.gesturesView.drawable?.let { applyProperColorMode(it) }
+            } else {
+                resetColorModeIfVisible()
+            }
+        }
+
         storeStateVariables()
     }
 
