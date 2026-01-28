@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Matrix
-import android.graphics.Point
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -31,7 +30,6 @@ import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSPOSE
 import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSVERSE
 import androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION
 import com.alexvasilkov.gestures.GestureController
-import com.alexvasilkov.gestures.GravityUtils
 import com.alexvasilkov.gestures.State
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
@@ -166,8 +164,6 @@ class PhotoFragment : ViewPagerFragment() {
             instantPrevItem.parentView = container
             instantNextItem.parentView = container
 
-            gesturesView.controller.settings.isRotationEnabled = true
-
             photoBrightnessController.initialize(activity, slideInfo, true, container, singleTap = { x, y ->
                 mView.apply {
                     if (subsamplingView.isVisible()) {
@@ -188,21 +184,21 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
                     override fun onStateChanged(state: State) {
-                        mCurrentGestureViewZoom = state.zoom
-                        val rotation = normalizeAngle(state.rotation.toInt())
-                        if (!mIsTouched || (State.equals((state.rotation % 90.0F), 0.0F) && !State.equals(
-                                rotation.toFloat(),
-                                mCurrentRotationDegrees.toFloat()
-                            ))
-                        ) {
+                        if (!mIsTouched) {
+                            mInitialZoom = state.zoom
                             gesturesView.controller.settings.apply {
                                 if (hasImageSize() && hasViewportSize()) {
-                                    mCurrentRotationDegrees = normalizeAngle(rotation)
-                                    val fitZoom = getFitZoom(mCurrentRotationDegrees)
-                                    mInitialZoom = fitZoom
+                                    val zoomByWidth = viewportWidth.toFloat() / imageWidth
+                                    val zoomByHeight = viewportHeight.toFloat() / imageHeight
+                                    var target = maxOf(zoomByWidth, zoomByHeight)
+                                    if (abs(target - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                                        target = mInitialZoom * DEFAULT_DOUBLE_TAP_ZOOM
+                                    }
+                                    doubleTapZoom = target.coerceAtMost(maxZoom)
                                 }
                             }
                         }
+                        mCurrentGestureViewZoom = state.zoom
                     }
                 })
 
@@ -913,43 +909,7 @@ class PhotoFragment : ViewPagerFragment() {
             mCurrentRotationDegrees = (mCurrentRotationDegrees + degrees) % 360
             mLoadZoomableViewHandler.removeCallbacksAndMessages(null)
             mIsSubsamplingVisible = false
-            val path = getFilePathToShow()
-            if (path.isWebP()) {
-                rotateGestureView()
-            } else {
-                loadBitmap()
-            }
-        }
-    }
-
-    private fun rotateGestureView() {
-        val state = binding.gesturesView.controller.state
-        binding.gesturesView.controller.settings.apply {
-            if (hasImageSize() && hasViewportSize()) {
-                val fitZoom = getFitZoom(mCurrentRotationDegrees)
-                val point = Point()
-                GravityUtils.getDefaultPivot(binding.gesturesView.controller.settings, point)
-                state.rotateTo(mCurrentRotationDegrees.toFloat(), point.x.toFloat(), point.y.toFloat())
-                if (abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
-                    state.zoomTo(fitZoom, point.x.toFloat(), point.y.toFloat())
-                }
-                mInitialZoom = fitZoom
-                binding.gesturesView.controller.updateState()
-            }
-        }
-    }
-
-    private fun getFitZoom(rotation: Int): Float {
-        binding.gesturesView.controller.settings.apply {
-            val fitZoom: Float
-            if (State.equals(rotation.toFloat(), 90F) || State.equals(rotation.toFloat(), 270F)) {
-                fitZoom = (viewportWidth.toFloat() / imageHeight).coerceAtMost(viewportHeight.toFloat() / imageWidth)
-                doubleTapZoom = (viewportWidth.toFloat() / imageHeight).coerceAtLeast(viewportHeight.toFloat() / imageWidth)
-            } else {
-                fitZoom = (viewportWidth.toFloat() / imageWidth).coerceAtMost(viewportHeight.toFloat() / imageHeight)
-                doubleTapZoom = (viewportWidth.toFloat() / imageWidth).coerceAtLeast(viewportHeight.toFloat() / imageHeight)
-            }
-            return fitZoom
+            loadBitmap()
         }
     }
 
@@ -1031,9 +991,5 @@ class PhotoFragment : ViewPagerFragment() {
         if (mIsFragmentVisible) {
             ColorModeHelper.resetColorMode(activity)
         }
-    }
-
-    fun normalizeAngle(angle: Int): Int {
-        return ((angle % 360) + 360) % 360
     }
 }
