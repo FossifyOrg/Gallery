@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Added support for custom fonts
-- Added option to toggle HDR rendering ([#564])
+- Added option to toggle Ultra HDR rendering (Android 14+) ([#564])
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
 
 ### Changed
