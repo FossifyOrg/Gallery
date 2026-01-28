@@ -173,6 +173,10 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(MAX_BRIGHTNESS, false)
         set(maxBrightness) = prefs.edit().putBoolean(MAX_BRIGHTNESS, maxBrightness).apply()
 
+    var ultraHdrRendering: Boolean
+        get() = prefs.getBoolean(ULTRA_HDR_RENDERING, true)
+        set(ultraHdrRendering) = prefs.edit().putBoolean(ULTRA_HDR_RENDERING, ultraHdrRendering).apply()
+
     var playbackSpeed: Float
         get() = prefs.getFloat(PLAYBACK_SPEED, 1f)
         set(playbackSpeed) = prefs.edit().putFloat(PLAYBACK_SPEED, playbackSpeed).apply()

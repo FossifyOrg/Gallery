@@ -325,6 +325,7 @@ class PhotoFragment : ViewPagerFragment() {
             activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
 
+        reapplyColorModeIfNeeded()
         storeStateVariables()
     }
 
@@ -982,7 +983,8 @@ class PhotoFragment : ViewPagerFragment() {
         if (mIsFragmentVisible && activity != null) {
             ColorModeHelper.setColorModeForImage(
                 activity = requireActivity(),
-                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull()
+                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull(),
+                ultraHdr = context?.config?.ultraHdrRendering ?: true
             )
         }
     }
@@ -990,6 +992,17 @@ class PhotoFragment : ViewPagerFragment() {
     private fun resetColorModeIfVisible() {
         if (mIsFragmentVisible) {
             ColorModeHelper.resetColorMode(activity)
+        }
+    }
+
+    private fun reapplyColorModeIfNeeded() {
+        if (mWasInit && mIsFragmentVisible) {
+            val drawable = binding.gesturesView.drawable
+            if (drawable != null && binding.gesturesView.isVisible()) {
+                applyProperColorMode(drawable)
+            } else {
+                resetColorModeIfVisible()
+            }
         }
     }
 }

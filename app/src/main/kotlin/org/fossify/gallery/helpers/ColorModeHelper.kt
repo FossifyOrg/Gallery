@@ -27,11 +27,11 @@ object ColorModeHelper {
         activity.window.setColorMode(colorMode)
     }
 
-    fun setColorModeForImage(activity: Activity, bitmap: Bitmap?) {
+    fun setColorModeForImage(activity: Activity, bitmap: Bitmap?, ultraHdr: Boolean = true) {
         setColorMode(
             activity = activity,
             colorMode = when {
-                isGainmapSupported() && hasHdrContent(bitmap) -> ActivityInfo.COLOR_MODE_HDR
+                ultraHdr && isGainmapSupported() && hasHdrContent(bitmap) -> ActivityInfo.COLOR_MODE_HDR
                 hasWideColorGamut(bitmap) -> ActivityInfo.COLOR_MODE_WIDE_COLOR_GAMUT
                 else -> ActivityInfo.COLOR_MODE_DEFAULT
             }
