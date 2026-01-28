@@ -286,7 +286,7 @@ class EditActivity : BaseCropActivity() {
                     dataSource: DataSource,
                     isFirstResource: Boolean
                 ): Boolean {
-                    ColorModeHelper.setColorModeForImage(this@EditActivity, bitmap)
+                    ColorModeHelper.setColorModeForImage(this@EditActivity, bitmap, config.ultraHdrPhotos)
                     val currentFilter = getFiltersAdapter()?.getCurrentFilter()
                     if (filterInitialBitmap == null) {
                         loadCropImageView()

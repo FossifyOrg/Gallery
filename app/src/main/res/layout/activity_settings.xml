@@ -459,6 +459,21 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/settings_ultra_hdr_photos_holder"
+                style="@style/SettingsHolderSwitchStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyMaterialSwitch
+                    android:id="@+id/settings_ultra_hdr_photos"
+                    style="@style/SettingsSwitchStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ultra_hdr_photos" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/settings_black_background_holder"
                 style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"

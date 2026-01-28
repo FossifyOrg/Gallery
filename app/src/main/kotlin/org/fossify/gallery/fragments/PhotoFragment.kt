@@ -982,7 +982,8 @@ class PhotoFragment : ViewPagerFragment() {
         if (mIsFragmentVisible && activity != null) {
             ColorModeHelper.setColorModeForImage(
                 activity = requireActivity(),
-                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull()
+                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull(),
+                ultraHdr = context?.config?.ultraHdrPhotos == true
             )
         }
     }
