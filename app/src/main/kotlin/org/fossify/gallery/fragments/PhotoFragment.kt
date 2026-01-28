@@ -327,9 +327,9 @@ class PhotoFragment : ViewPagerFragment() {
 
         // reset color mode as preference might have changed
         if (mWasInit && mIsFragmentVisible) {
-            if (binding.gesturesView.isVisible()) {
-                val drawable = binding.gesturesView.drawable
-                if (drawable != null) applyProperColorMode(drawable) else resetColorModeIfVisible()
+            val drawable = binding.gesturesView.drawable
+            if (drawable != null && binding.gesturesView.isVisible()) {
+                applyProperColorMode(drawable)
             } else {
                 resetColorModeIfVisible()
             }
