@@ -308,7 +308,7 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private fun setupUltraHdrPhotos() {
-        binding.settingsUltraHdrPhotosHolder.beVisibleIf(isUpsideDownCakePlus())
+        binding.settingsUltraHdrPhotosHolder.beVisibleIf(ColorModeHelper.isGainmapSupported())
         binding.settingsUltraHdrPhotos.isChecked = config.ultraHdrPhotos
         binding.settingsUltraHdrPhotosHolder.setOnClickListener {
             binding.settingsUltraHdrPhotos.toggle()
