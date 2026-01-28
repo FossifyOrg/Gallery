@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed invisible color picker button in black themes ([#337])
 - Fixed issue with separate video player not respecting paused state when seeking ([#831])
 - Fixed misplacement of extended information during slideshow ([#800])
+- Fixed double tap to zoom for WebP images ([#363])
 
 ## [1.10.0] - 2025-12-16
 ### Added
@@ -244,6 +245,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#325]: https://github.com/FossifyOrg/Gallery/issues/325
 [#337]: https://github.com/FossifyOrg/Gallery/issues/337
 [#362]: https://github.com/FossifyOrg/Gallery/issues/362
+[#363]: https://github.com/FossifyOrg/Gallery/issues/363
 [#365]: https://github.com/FossifyOrg/Gallery/issues/365
 [#375]: https://github.com/FossifyOrg/Gallery/issues/375
 [#379]: https://github.com/FossifyOrg/Gallery/issues/379
