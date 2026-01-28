@@ -1,0 +1,17 @@
+Added:
+
+• Added support for custom fonts
+• Added option to toggle Ultra HDR rendering (Android 14+) 
+• Long press gesture to play videos at 2x speed in separate video player 
+
+Changed:
+
+• Mute button is now disabled for videos without an audio track 
+• Updated translations
+
+Fixed:
+
+• Fixed issue with separate video player not respecting paused state when seeking 
+• Fixed misplacement of extended information during slideshow 
+• Fixed double-tap to zoom for WebP images 
+
