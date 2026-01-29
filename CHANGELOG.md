@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added support for custom fonts
 - Added option to toggle Ultra HDR rendering (Android 14+) ([#564])
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
+- Update system favorites collection on Android 11+ when favoriting media ([#848])
 
 ### Changed
 - Mute button is now disabled for videos without an audio track ([#876])
@@ -278,6 +279,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
 [#876]: https://github.com/FossifyOrg/Gallery/issues/876
+[#848]: https://github.com/FossifyOrg/Gallery/issues/848
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...HEAD
 [1.10.0]: https://github.com/FossifyOrg/Gallery/compare/1.9.1...1.10.0
