@@ -61,6 +61,7 @@ import org.fossify.commons.extensions.onGlobalLayout
 import org.fossify.commons.extensions.setDrawablesRelativeWithIntrinsicBounds
 import org.fossify.commons.extensions.showErrorToast
 import org.fossify.commons.extensions.toast
+import org.fossify.commons.extensions.updateBrightness
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.gallery.R
@@ -127,6 +128,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     private var mIgnoreCloseDown = false
     private var mTouchSlop = 0
+    private var mOriginalBrightness: Float? = null
     private lateinit var mPlaybackSpeedPill: TextView
     private lateinit var videoGestureHelper: VideoGestureHelper
 
@@ -173,12 +175,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             binding.videoPlayerHolder.background = ColorDrawable(Color.BLACK)
         }
 
-        if (config.maxBrightness) {
-            val attributes = window.attributes
-            attributes.screenBrightness = 1f
-            window.attributes = attributes
-        }
-
+        mOriginalBrightness = window.updateBrightness(config.maxBrightness, mOriginalBrightness)
         updateTextColors(binding.videoPlayerHolder)
     }
 
