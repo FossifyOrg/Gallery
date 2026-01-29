@@ -54,8 +54,6 @@ import it.sephiroth.android.library.exif2.ExifInterface
 import org.apache.sanselan.common.byteSources.ByteSourceInputStream
 import org.apache.sanselan.formats.jpeg.JpegImageParser
 import org.fossify.commons.extensions.beGone
-import org.fossify.commons.extensions.beGoneIf
-import org.fossify.commons.extensions.beInvisible
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.fadeIn
@@ -100,6 +98,7 @@ import pl.droidsonroids.gif.InputSource
 import java.io.File
 import java.io.FileOutputStream
 import java.util.Locale
+import kotlin.math.abs
 import kotlin.math.ceil
 
 class PhotoFragment : ViewPagerFragment() {
@@ -187,6 +186,17 @@ class PhotoFragment : ViewPagerFragment() {
                     override fun onStateChanged(state: State) {
                         if (!mIsTouched) {
                             mInitialZoom = state.zoom
+                            gesturesView.controller.settings.apply {
+                                if (hasImageSize() && hasViewportSize()) {
+                                    val zoomByWidth = viewportWidth.toFloat() / imageWidth
+                                    val zoomByHeight = viewportHeight.toFloat() / imageHeight
+                                    var target = maxOf(zoomByWidth, zoomByHeight)
+                                    if (abs(target - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                                        target = mInitialZoom * DEFAULT_DOUBLE_TAP_ZOOM
+                                    }
+                                    doubleTapZoom = target.coerceAtMost(maxZoom)
+                                }
+                            }
                         }
                         mCurrentGestureViewZoom = state.zoom
                     }
@@ -194,7 +204,7 @@ class PhotoFragment : ViewPagerFragment() {
 
                 gesturesView.setOnTouchListener { v, event ->
                     mIsTouched = true
-                    if (Math.abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                    if (abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
                         handleEvent(event)
                     }
                     false
@@ -315,6 +325,7 @@ class PhotoFragment : ViewPagerFragment() {
             activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
 
+        reapplyColorModeIfNeeded()
         storeStateVariables()
     }
 
@@ -972,7 +983,8 @@ class PhotoFragment : ViewPagerFragment() {
         if (mIsFragmentVisible && activity != null) {
             ColorModeHelper.setColorModeForImage(
                 activity = requireActivity(),
-                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull()
+                bitmap = (resource as? BitmapDrawable)?.bitmap ?: resource?.toBitmapOrNull(),
+                ultraHdr = context?.config?.ultraHdrRendering ?: true
             )
         }
     }
@@ -980,6 +992,17 @@ class PhotoFragment : ViewPagerFragment() {
     private fun resetColorModeIfVisible() {
         if (mIsFragmentVisible) {
             ColorModeHelper.resetColorMode(activity)
+        }
+    }
+
+    private fun reapplyColorModeIfNeeded() {
+        if (mWasInit && mIsFragmentVisible) {
+            val drawable = binding.gesturesView.drawable
+            if (drawable != null && binding.gesturesView.isVisible()) {
+                applyProperColorMode(drawable)
+            } else {
+                resetColorModeIfVisible()
+            }
         }
     }
 }

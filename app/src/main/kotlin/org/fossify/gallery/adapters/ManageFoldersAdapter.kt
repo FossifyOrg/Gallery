@@ -1,7 +1,7 @@
 package org.fossify.gallery.adapters
 
 import android.view.*
-import android.widget.PopupMenu
+import androidx.appcompat.widget.PopupMenu
 import org.fossify.commons.activities.BaseSimpleActivity
 import org.fossify.commons.adapters.MyRecyclerViewAdapter
 import org.fossify.commons.extensions.getPopupMenuTheme

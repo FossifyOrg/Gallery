@@ -17,18 +17,25 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
 import android.view.GestureDetector
+import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.Surface
 import android.view.TextureView
 import android.view.View
+import android.view.ViewConfiguration
 import android.view.WindowManager
+import android.widget.RelativeLayout
 import android.widget.SeekBar
+import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
+import androidx.media3.common.Tracks
 import androidx.media3.common.VideoSize
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.ContentDataSource
@@ -45,6 +52,7 @@ import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.fadeIn
+import org.fossify.commons.extensions.fadeOut
 import org.fossify.commons.extensions.getColoredDrawableWithColor
 import org.fossify.commons.extensions.getFilenameFromUri
 import org.fossify.commons.extensions.getFormattedDuration
@@ -52,19 +60,19 @@ import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.onGlobalLayout
 import org.fossify.commons.extensions.setDrawablesRelativeWithIntrinsicBounds
 import org.fossify.commons.extensions.showErrorToast
+import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.gallery.R
 import org.fossify.gallery.databinding.ActivityVideoPlayerBinding
 import org.fossify.gallery.extensions.config
+import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
 import org.fossify.gallery.extensions.hideSystemUI
-import org.fossify.gallery.extensions.mute
 import org.fossify.gallery.extensions.openPath
 import org.fossify.gallery.extensions.shareMediumPath
 import org.fossify.gallery.extensions.showSystemUI
-import org.fossify.gallery.extensions.unmute
 import org.fossify.gallery.fragments.PlaybackSpeedFragment
 import org.fossify.gallery.helpers.DRAG_THRESHOLD
 import org.fossify.gallery.helpers.EXOPLAYER_MAX_BUFFER_MS
@@ -79,6 +87,8 @@ import org.fossify.gallery.helpers.ROTATE_BY_DEVICE_ROTATION
 import org.fossify.gallery.helpers.ROTATE_BY_SYSTEM_SETTING
 import org.fossify.gallery.helpers.SHOW_NEXT_ITEM
 import org.fossify.gallery.helpers.SHOW_PREV_ITEM
+import org.fossify.gallery.helpers.VideoGestureCallbacks
+import org.fossify.gallery.helpers.VideoGestureHelper
 import org.fossify.gallery.interfaces.PlaybackSpeedListener
 import java.text.DecimalFormat
 import kotlin.math.max
@@ -90,6 +100,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     companion object {
         private const val PLAY_WHEN_READY_DRAG_DELAY = 100L
         private const val UPDATE_INTERVAL_MS = 250L
+        private const val TOUCH_SLOP_DIVIDER = 3
     }
 
     private var mIsFullscreen = false
@@ -97,6 +108,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private var mWasVideoStarted = false
     private var mIsDragged = false
     private var mIsOrientationLocked = false
+    private var mHasAudio = true
     private var mScreenWidth = 0
     private var mCurrTime = 0L
     private var mDuration = 0L
@@ -114,6 +126,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private var mPlayWhenReadyHandler = Handler()
 
     private var mIgnoreCloseDown = false
+    private var mTouchSlop = 0
+    private lateinit var mPlaybackSpeedPill: TextView
+    private lateinit var videoGestureHelper: VideoGestureHelper
 
     private val binding by viewBinding(ActivityVideoPlayerBinding::inflate)
 
@@ -126,6 +141,22 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        mPlaybackSpeedPill = binding.playbackSpeedPill
+        mTouchSlop = (ViewConfiguration.get(this).scaledTouchSlop) / TOUCH_SLOP_DIVIDER
+        videoGestureHelper = VideoGestureHelper(
+            touchSlop = mTouchSlop,
+            callbacks = VideoGestureCallbacks(
+                isPlaying = { mIsPlaying },
+                getCurrentSpeed = { config.playbackSpeed },
+                setPlaybackSpeed = { speed ->
+                    mExoPlayer?.setPlaybackSpeed(speed) // Set to 2x speed
+                    updatePlaybackSpeed(speed)
+                },
+                showPill = { mPlaybackSpeedPill.fadeIn() },
+                hidePill = { mPlaybackSpeedPill.fadeOut() },
+                performHaptic = { contentHolder.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS) },
+                disallowParentIntercept = { contentHolder.parent.requestDisallowInterceptTouchEvent(true) })
+        )
         setupEdgeToEdge(
             padBottomSystem = listOf(binding.bottomVideoTimeHolder.root),
         )
@@ -226,6 +257,21 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     private fun initPlayer() {
         mUri = intent.data ?: return
         binding.videoToolbar.title = getFilenameFromUri(mUri!!)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+
+            // Calculate the top margin using the safe inset value
+            val pillTopMargin = systemBars.top + resources.getActionBarHeight(this) +
+                resources.getDimension(org.fossify.commons.R.dimen.normal_margin).toInt()
+
+            // Apply the margin to the pill
+            (mPlaybackSpeedPill.layoutParams as? RelativeLayout.LayoutParams)?.apply {
+                setMargins(0, pillTopMargin, 0, 0)
+            }
+
+            // Return the insets so other views can consume them if needed
+            insets
+        }
         initTimeHolder()
 
         showSystemUI()
@@ -271,6 +317,12 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
             })
 
         binding.videoSurfaceFrame.setOnTouchListener { view, event ->
+            videoGestureHelper.onTouchEvent(event)
+
+            if (videoGestureHelper.isLongPressActive) {
+                return@setOnTouchListener true
+            }
+
             handleEvent(event)
             gestureDetector.onTouchEvent(event)
             false
@@ -402,6 +454,12 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                     }
                 }
             }
+
+            override fun onTracksChanged(tracks: Tracks) {
+                super.onTracksChanged(tracks)
+                mHasAudio = tracks.containsType(C.TRACK_TYPE_AUDIO)
+                updatePlayerMuteState()
+            }
         })
     }
 
@@ -481,12 +539,19 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
 
     private fun updatePlayerMuteState() {
         val isMuted = config.muteVideos
-        val drawableId = if (isMuted) {
-            mExoPlayer?.mute()
-            R.drawable.ic_vector_speaker_off
+        val drawableId = if (mHasAudio) {
+            if (isMuted) {
+                mExoPlayer?.mute()
+                R.drawable.ic_vector_speaker_off
+            } else {
+                mExoPlayer?.unmute()
+                R.drawable.ic_vector_speaker_on
+            }
         } else {
-            mExoPlayer?.unmute()
-            R.drawable.ic_vector_speaker_on
+            if (mWasVideoStarted) {
+                toast(R.string.video_no_sound)
+            }
+            R.drawable.ic_vector_no_sound
         }
 
         binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
@@ -581,7 +646,11 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
     }
 
     private fun toggleFullscreen() {
-        fullscreenToggled(!mIsFullscreen)
+        if (!videoGestureHelper.wasLongPressHandled()) {
+            fullscreenToggled(!mIsFullscreen)
+        } else {
+            videoGestureHelper.updateLongPressHandled()
+        }
     }
 
     private fun fullscreenToggled(isFullScreen: Boolean) {
@@ -699,7 +768,9 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
                 mProgressAtDown = mExoPlayer!!.currentPosition
             }
 
-            MotionEvent.ACTION_POINTER_DOWN -> mIgnoreCloseDown = true
+            MotionEvent.ACTION_POINTER_DOWN -> {
+                mIgnoreCloseDown = true
+            }
             MotionEvent.ACTION_MOVE -> {
                 val diffX = event.rawX - mTouchDownX
                 val diffY = event.rawY - mTouchDownY

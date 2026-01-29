@@ -6,12 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Added support for custom fonts
+- Added option to toggle Ultra HDR rendering (Android 14+) ([#564])
+- Long press gesture to play videos at 2x speed in separate video player ([#830])
 - Update system favorites collection on Android 11+ when favoriting media ([#848])
 
+### Changed
+- Mute button is now disabled for videos without an audio track ([#876])
+
 ### Fixed
-- Fixed invisible color picker button in black themes ([#337])
 - Fixed issue with separate video player not respecting paused state when seeking ([#831])
 - Fixed misplacement of extended information during slideshow ([#800])
+- Fixed double-tap to zoom for WebP images ([#363])
 
 ## [1.10.0] - 2025-12-16
 ### Added
@@ -238,8 +244,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#241]: https://github.com/FossifyOrg/Gallery/issues/241
 [#275]: https://github.com/FossifyOrg/Gallery/issues/275
 [#325]: https://github.com/FossifyOrg/Gallery/issues/325
-[#337]: https://github.com/FossifyOrg/Gallery/issues/337
 [#362]: https://github.com/FossifyOrg/Gallery/issues/362
+[#363]: https://github.com/FossifyOrg/Gallery/issues/363
 [#365]: https://github.com/FossifyOrg/Gallery/issues/365
 [#375]: https://github.com/FossifyOrg/Gallery/issues/375
 [#379]: https://github.com/FossifyOrg/Gallery/issues/379
@@ -249,6 +255,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#475]: https://github.com/FossifyOrg/Gallery/issues/475
 [#525]: https://github.com/FossifyOrg/Gallery/issues/525
 [#529]: https://github.com/FossifyOrg/Gallery/issues/529
+[#564]: https://github.com/FossifyOrg/Gallery/issues/564
 [#565]: https://github.com/FossifyOrg/Gallery/issues/565
 [#567]: https://github.com/FossifyOrg/Gallery/issues/567
 [#568]: https://github.com/FossifyOrg/Gallery/issues/568
@@ -268,8 +275,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
+[#830]: https://github.com/FossifyOrg/Gallery/issues/830
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
+[#876]: https://github.com/FossifyOrg/Gallery/issues/876
 [#848]: https://github.com/FossifyOrg/Gallery/issues/848
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...HEAD
