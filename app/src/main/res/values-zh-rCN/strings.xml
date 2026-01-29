@@ -263,4 +263,5 @@
     <string name="force_landscape_reverse">强制横屏（反向）</string>
     <string name="overwrite_original">覆盖原文件</string>
     <string name="video_no_sound">此视频没有音频</string>
+    <string name="render_ultra_hdr_photos">以 HDR 模式显示 Ultra HDR 照片</string>
 </resources>
