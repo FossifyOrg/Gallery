@@ -18,4 +18,6 @@
     <string name="rotate_right">Pagriezt pa labi</string>
     <string name="rotate_one_eighty">Pagriezt par 180º</string>
     <string name="transform">Pārveidot</string>
+    <string name="video_no_sound">Šim video nav skaņas</string>
+    <string name="faq_1_title">Kā es varu Fossify Gallery padarīt par ierīces noklusējuma galeriju?</string>
 </resources>
