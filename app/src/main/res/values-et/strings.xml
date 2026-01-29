@@ -265,4 +265,5 @@
     <string name="force_landscape_reverse">Kasuta rõhtvaadet (tagurpidi)</string>
     <string name="overwrite_original">Kirjuta originaalfail üle</string>
     <string name="video_no_sound">Selles videos puudub heliriba</string>
+    <string name="render_ultra_hdr_photos">Näita Ultra HDR vormingus pilte HDR-vormingus</string>
 </resources>
