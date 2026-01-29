@@ -261,4 +261,5 @@
     <string name="force_landscape_reverse">Querformat erzwingen (umgekehrt)</string>
     <string name="overwrite_original">Original überschreiben</string>
     <string name="video_no_sound">Dieses Video hat kein Audio</string>
+    <string name="render_ultra_hdr_photos">Ultra-HDR-Fotos in HDR anzeigen</string>
 </resources>
