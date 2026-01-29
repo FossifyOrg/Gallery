@@ -269,4 +269,5 @@
     <string name="force_landscape_reverse">Альбомная (обратная)</string>
     <string name="overwrite_original">Перезаписать оригинал</string>
     <string name="video_no_sound">Видео без звука</string>
+    <string name="render_ultra_hdr_photos">Показывать изображения Ultra HDR в HDR</string>
 </resources>
