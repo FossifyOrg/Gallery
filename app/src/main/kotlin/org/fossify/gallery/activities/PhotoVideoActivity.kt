@@ -36,6 +36,7 @@ import org.fossify.commons.extensions.rescanPath
 import org.fossify.commons.extensions.rescanPaths
 import org.fossify.commons.extensions.toHex
 import org.fossify.commons.extensions.toast
+import org.fossify.commons.extensions.updateBrightness
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.IS_FROM_GALLERY
 import org.fossify.commons.helpers.NOMEDIA
@@ -82,6 +83,7 @@ open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.Fragment
     private var mIsFromGallery = false
     private var mFragment: ViewPagerFragment? = null
     private var mUri: Uri? = null
+    private var mOriginalBrightness: Float? = null
 
     var mIsVideo = false
 
@@ -266,12 +268,7 @@ open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.Fragment
             binding.fragmentHolder.background = Color.BLACK.toDrawable()
         }
 
-        if (config.maxBrightness) {
-            val attributes = window.attributes
-            attributes.screenBrightness = 1f
-            window.attributes = attributes
-        }
-
+        mOriginalBrightness = window.updateBrightness(config.maxBrightness, mOriginalBrightness)
         initBottomActions()
     }
 
