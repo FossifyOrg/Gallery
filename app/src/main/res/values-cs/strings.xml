@@ -266,6 +266,6 @@
     </plurals>
     <string name="force_landscape_reverse">Vynutit orientaci na šířku (reverzní)</string>
     <string name="overwrite_original">Přepsat originál</string>
-    <string name="video_no_sound">Tot video nemá žádný zvuk</string>
+    <string name="video_no_sound">Toto video nemá žádný zvuk</string>
     <string name="render_ultra_hdr_photos">Zobrazit Ultra HDR fotky v HDR</string>
 </resources>
