@@ -5,4 +5,5 @@
         <item quantity="other">Are you sure you want to restore %d files?</item>
     </plurals>
     <string name="app_launcher_name">Gallery</string>
+    <string name="edit">Edit</string>
 </resources>
