@@ -181,26 +181,7 @@ class PhotoFragment : ViewPagerFragment() {
                 false
             }
 
-            gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
-                override fun onStateChanged(state: State) {
-                    val settings = gesturesView.controller.settings
-                    if (settings.hasImageSize() && settings.hasViewportSize() && !mHasInitialZoom) {
-                        val zoomByWidth = settings.viewportWidth.toFloat() / settings.imageWidth
-                        val zoomByHeight = settings.viewportHeight.toFloat() / settings.imageHeight
-                        val fitZoom = maxOf(zoomByWidth, zoomByHeight)
-                        mInitialZoom = state.zoom
-                        var target = fitZoom
-                        if (abs(target - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
-                            target = mInitialZoom * DEFAULT_DOUBLE_TAP_ZOOM
-                        }
-                        settings.doubleTapZoom = target.coerceAtMost(settings.maxZoom)
-                        mHasInitialZoom = true
-                    }
-
-                    mCurrentGestureViewZoom = state.zoom
-                }
-            })
-
+            setupGesturesViewStateListener()
             gesturesView.setOnTouchListener { v, event ->
                 val allowDownGesture = context.config.allowDownGesture
                 if (allowDownGesture && abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
@@ -613,6 +594,28 @@ class PhotoFragment : ViewPagerFragment() {
             })
         } catch (ignored: Exception) {
         }
+    }
+
+    private fun setupGesturesViewStateListener() {
+        binding.gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
+            override fun onStateChanged(state: State) {
+                val settings = binding.gesturesView.controller.settings
+                if (settings.hasImageSize() && settings.hasViewportSize() && !mHasInitialZoom) {
+                    val zoomByWidth = settings.viewportWidth.toFloat() / settings.imageWidth
+                    val zoomByHeight = settings.viewportHeight.toFloat() / settings.imageHeight
+                    val fitZoom = maxOf(zoomByWidth, zoomByHeight)
+                    mInitialZoom = state.zoom
+                    var target = fitZoom
+                    if (abs(target - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                        target = mInitialZoom * DEFAULT_DOUBLE_TAP_ZOOM
+                    }
+                    settings.doubleTapZoom = target.coerceAtMost(settings.maxZoom)
+                    mHasInitialZoom = true
+                }
+
+                mCurrentGestureViewZoom = state.zoom
+            }
+        })
     }
 
     private fun showPortraitStripe() {
