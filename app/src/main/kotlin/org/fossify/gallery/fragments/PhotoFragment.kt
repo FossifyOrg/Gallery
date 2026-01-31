@@ -1,5 +1,6 @@
 package org.fossify.gallery.fragments
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -126,8 +127,8 @@ class PhotoFragment : ViewPagerFragment() {
     private var mScreenWidth = 0
     private var mScreenHeight = 0
     private var mCurrentGestureViewZoom = 1f
-    private var mIsTouched = false
     private var mInitialZoom = 1f
+    private var mHasInitialZoom = false
 
     private var mStoredShowExtendedDetails = false
     private var mStoredHideExtendedDetails = false
@@ -139,6 +140,7 @@ class PhotoFragment : ViewPagerFragment() {
     private lateinit var binding: PagerPhotoItemBinding
     private lateinit var mMedium: Medium
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val context = requireContext()
         val activity = requireActivity()
@@ -174,48 +176,23 @@ class PhotoFragment : ViewPagerFragment() {
                 }
             })
 
-            if (context.config.allowDownGesture) {
-                gifView.setOnTouchListener { v, event ->
-                    if (gifViewFrame.controller.state.zoom == 1f) {
-                        handleEvent(event)
-                    }
-                    false
-                }
+            gifView.setOnTouchListener { v, event ->
+                if (context.config.allowDownGesture && gifViewFrame.controller.state.zoom == 1f) handleEvent(event)
+                false
+            }
 
-                gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
-                    override fun onStateChanged(state: State) {
-                        if (!mIsTouched) {
-                            mInitialZoom = state.zoom
-                            gesturesView.controller.settings.apply {
-                                if (hasImageSize() && hasViewportSize()) {
-                                    val zoomByWidth = viewportWidth.toFloat() / imageWidth
-                                    val zoomByHeight = viewportHeight.toFloat() / imageHeight
-                                    var target = maxOf(zoomByWidth, zoomByHeight)
-                                    if (abs(target - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
-                                        target = mInitialZoom * DEFAULT_DOUBLE_TAP_ZOOM
-                                    }
-                                    doubleTapZoom = target.coerceAtMost(maxZoom)
-                                }
-                            }
-                        }
-                        mCurrentGestureViewZoom = state.zoom
-                    }
-                })
-
-                gesturesView.setOnTouchListener { v, event ->
-                    mIsTouched = true
-                    if (abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
-                        handleEvent(event)
-                    }
-                    false
+            setupGesturesViewStateListener()
+            gesturesView.setOnTouchListener { v, event ->
+                val allowDownGesture = context.config.allowDownGesture
+                if (allowDownGesture && abs(mCurrentGestureViewZoom - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                    handleEvent(event)
                 }
+                false
+            }
 
-                subsamplingView.setOnTouchListener { v, event ->
-                    if (subsamplingView.isZoomedOut()) {
-                        handleEvent(event)
-                    }
-                    false
-                }
+            subsamplingView.setOnTouchListener { v, event ->
+                if (subsamplingView.isZoomedOut() && context.config.allowDownGesture) handleEvent(event)
+                false
             }
         }
 
@@ -437,6 +414,7 @@ class PhotoFragment : ViewPagerFragment() {
     }
 
     private fun loadImage() {
+        mHasInitialZoom = false
         checkScreenDimensions()
 
         if (mMedium.isPortrait() && context != null) {
@@ -510,10 +488,8 @@ class PhotoFragment : ViewPagerFragment() {
     }
 
     private fun loadBitmap(addZoomableView: Boolean = true) {
-        if (context == null) {
-            return
-        }
-
+        mHasInitialZoom = false
+        if (context == null) return
         val path = getFilePathToShow()
         if (path.isWebP()) {
             val drawable = WebPDrawable.fromFile(path)
@@ -618,6 +594,28 @@ class PhotoFragment : ViewPagerFragment() {
             })
         } catch (ignored: Exception) {
         }
+    }
+
+    private fun setupGesturesViewStateListener() {
+        binding.gesturesView.controller.addOnStateChangeListener(object : GestureController.OnStateChangeListener {
+            override fun onStateChanged(state: State) {
+                val settings = binding.gesturesView.controller.settings
+                if (settings.hasImageSize() && settings.hasViewportSize() && !mHasInitialZoom) {
+                    val zoomByWidth = settings.viewportWidth.toFloat() / settings.imageWidth
+                    val zoomByHeight = settings.viewportHeight.toFloat() / settings.imageHeight
+                    val fitZoom = maxOf(zoomByWidth, zoomByHeight)
+                    mInitialZoom = state.zoom
+                    var target = fitZoom
+                    if (abs(target - mInitialZoom) < MAX_ZOOM_EQUALITY_TOLERANCE) {
+                        target = mInitialZoom * DEFAULT_DOUBLE_TAP_ZOOM
+                    }
+                    settings.doubleTapZoom = target.coerceAtMost(settings.maxZoom)
+                    mHasInitialZoom = true
+                }
+
+                mCurrentGestureViewZoom = state.zoom
+            }
+        })
     }
 
     private fun showPortraitStripe() {

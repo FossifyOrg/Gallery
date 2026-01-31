@@ -53,8 +53,8 @@
     <ID>CyclomaticComplexMethod:MediaFetcher.kt$MediaFetcher$private fun getMediaInFolder( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, getProperDateTaken: Boolean, getProperLastModified: Boolean, getProperFileSize: Boolean, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean, lastModifieds: HashMap&lt;String, Long&gt;, dateTakens: HashMap&lt;String, Long&gt; ): ArrayList&lt;Medium&gt;</ID>
     <ID>CyclomaticComplexMethod:MediaFetcher.kt$MediaFetcher$private fun getMediaOnOTG( folder: String, isPickImage: Boolean, isPickVideo: Boolean, filterMedia: Int, favoritePaths: ArrayList&lt;String&gt;, getVideoDurations: Boolean ): ArrayList&lt;Medium&gt;</ID>
     <ID>CyclomaticComplexMethod:MediaSideScroll.kt$MediaSideScroll$override fun onTouchEvent(event: MotionEvent): Boolean</ID>
+    <ID>CyclomaticComplexMethod:PhotoFragment.kt$PhotoFragment$@SuppressLint("ClickableViewAccessibility") override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
     <ID>CyclomaticComplexMethod:PhotoFragment.kt$PhotoFragment$override fun fullscreenToggled(isFullscreen: Boolean)</ID>
-    <ID>CyclomaticComplexMethod:PhotoFragment.kt$PhotoFragment$override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View</ID>
     <ID>CyclomaticComplexMethod:PhotoVideoActivity.kt$PhotoVideoActivity$private fun checkIntent(savedInstanceState: Bundle? = null)</ID>
     <ID>CyclomaticComplexMethod:PickDirectoryDialog.kt$PickDirectoryDialog$private fun gotDirectories(newDirs: ArrayList&lt;Directory&gt;)</ID>
     <ID>CyclomaticComplexMethod:SettingsActivity.kt$SettingsActivity$private fun parseFile(inputStream: InputStream?)</ID>
