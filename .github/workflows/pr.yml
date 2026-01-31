@@ -3,13 +3,10 @@ name: PR
 on:
     pull_request:
         branches: [main]
-        paths-ignore:
-            - ".github/**"
-            - "CHANGELOG.md"
-            - "docs/**"
-            - "fastlane/**"
-            - "LICENSE"
-            - "README.md"
+
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
     call-pr-workflow:
