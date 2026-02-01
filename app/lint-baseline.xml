@@ -150,7 +150,7 @@
         errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip"
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/wrapper/gradle-wrapper.properties"
+            file="$HOME/work/Gallery/Gallery/gradle/wrapper/gradle-wrapper.properties"
             line="3"
             column="17"/>
     </issue>
@@ -161,20 +161,9 @@
         errorLine1="gradlePlugins-agp = &quot;8.11.1&quot;"
         errorLine2="                    ~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="21"
             column="21"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of androidx.media3:media3-exoplayer than 1.9.0 is available: 1.9.1"
-        errorLine1="media3Exoplayer = &quot;1.9.0&quot;"
-        errorLine2="                  ~~~~~~~">
-        <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
-            line="33"
-            column="19"/>
     </issue>
 
     <issue
@@ -190,11 +179,11 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.5"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.6"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="8"
             column="17"/>
     </issue>
@@ -318,7 +307,7 @@
         errorLine1="androidphotofilters = { module = &quot;com.github.naveensingh:androidphotofilters&quot;, version.ref = &quot;androidphotofilters&quot; }"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Gallery/gradle/libs.versions.toml"
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="67"
             column="24"/>
     </issue>
