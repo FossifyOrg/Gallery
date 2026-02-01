@@ -43,9 +43,8 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/cab_rename"
-        android:icon="@drawable/ic_rename_vector"
         android:title="@string/rename"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/cab_hide"
         android:icon="@drawable/ic_hide_vector"
