@@ -267,4 +267,5 @@
     <string name="force_landscape_reverse">Tírdhreach fórsaithe (droim ar ais)</string>
     <string name="overwrite_original">Forscríobh an bhunleagan</string>
     <string name="video_no_sound">Níl aon fhuaim sa fhíseán seo</string>
+    <string name="render_ultra_hdr_photos">Taispeáin grianghraif Ultra HDR in HDR</string>
 </resources>
