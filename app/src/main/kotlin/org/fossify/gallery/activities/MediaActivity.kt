@@ -27,7 +27,6 @@ import org.fossify.commons.extensions.getFilenameFromPath
 import org.fossify.commons.extensions.getIsPathDirectory
 import org.fossify.commons.extensions.getLatestMediaByDateId
 import org.fossify.commons.extensions.getLatestMediaId
-import org.fossify.commons.extensions.getProperBackgroundColor
 import org.fossify.commons.extensions.getProperPrimaryColor
 import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.getTimeFormat
@@ -77,9 +76,9 @@ import org.fossify.gallery.extensions.isDownloadsFolder
 import org.fossify.gallery.extensions.launchAbout
 import org.fossify.gallery.extensions.launchCamera
 import org.fossify.gallery.extensions.launchSettings
+import org.fossify.gallery.extensions.launchVideoPlayer
 import org.fossify.gallery.extensions.mediaDB
 import org.fossify.gallery.extensions.movePathsInRecycleBin
-import org.fossify.gallery.extensions.openPath
 import org.fossify.gallery.extensions.openRecycleBin
 import org.fossify.gallery.extensions.restoreRecycleBinPaths
 import org.fossify.gallery.extensions.showRecycleBinEmptyingDialog
@@ -91,7 +90,6 @@ import org.fossify.gallery.helpers.GET_ANY_INTENT
 import org.fossify.gallery.helpers.GET_IMAGE_INTENT
 import org.fossify.gallery.helpers.GET_VIDEO_INTENT
 import org.fossify.gallery.helpers.GridSpacingItemDecoration
-import org.fossify.gallery.helpers.IS_IN_RECYCLE_BIN
 import org.fossify.gallery.helpers.MAX_COLUMN_COUNT
 import org.fossify.gallery.helpers.MediaFetcher
 import org.fossify.gallery.helpers.PATH
@@ -964,14 +962,19 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             finish()
         } else {
             mWasFullscreenViewOpen = true
-            Intent(this, ViewPagerActivity::class.java).apply {
-                putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
-                putExtra(PATH, path)
-                putExtra(SHOW_ALL, mShowAll)
-                putExtra(SHOW_FAVORITES, mPath == FAVORITES)
-                putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
-                putExtra(IS_FROM_GALLERY, true)
-                startActivity(this)
+            val isVideo = path.isVideoFast()
+            if (isVideo && config.openVideosOnSeparateScreen) {
+                launchVideoPlayer(path)
+            } else {
+                Intent(this, ViewPagerActivity::class.java).apply {
+                    putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
+                    putExtra(PATH, path)
+                    putExtra(SHOW_ALL, mShowAll)
+                    putExtra(SHOW_FAVORITES, mPath == FAVORITES)
+                    putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
+                    putExtra(IS_FROM_GALLERY, true)
+                    startActivity(this)
+                }
             }
         }
     }

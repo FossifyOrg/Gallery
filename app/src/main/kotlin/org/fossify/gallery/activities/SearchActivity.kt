@@ -159,8 +159,8 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
 
     private fun itemClicked(path: String) {
         val isVideo = path.isVideoFast()
-        if (isVideo) {
-            openPath(path, false)
+        if (isVideo && config.openVideosOnSeparateScreen) {
+            launchVideoPlayer(path)
         } else {
             Intent(this, ViewPagerActivity::class.java).apply {
                 putExtra(PATH, path)

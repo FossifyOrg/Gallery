@@ -5,11 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Videos now open in the in-app player; use the "Open with" option for other apps ([#774])
+
 ### Fixed
 - Fixed double-tap to zoom gesture for WebP images (again) ([#363])
-
-### Added
-- Open videos directly without showing the system app chooser ([#774])
 
 ## [1.11.0] - 2026-01-30
 ### Added

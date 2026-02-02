@@ -40,6 +40,7 @@ import org.fossify.gallery.R
 import org.fossify.gallery.activities.MediaActivity
 import org.fossify.gallery.activities.SettingsActivity
 import org.fossify.gallery.activities.SimpleActivity
+import org.fossify.gallery.activities.VideoPlayerActivity
 import org.fossify.gallery.dialogs.AllFilesPermissionDialog
 import org.fossify.gallery.dialogs.PickDirectoryDialog
 import org.fossify.gallery.dialogs.ResizeMultipleImagesDialog
@@ -75,6 +76,27 @@ fun Activity.setAs(path: String) {
 
 fun Activity.openPath(path: String, forceChooser: Boolean, extras: HashMap<String, Boolean> = HashMap()) {
     openPathIntent(path, forceChooser, BuildConfig.APPLICATION_ID, extras = extras)
+}
+
+fun Activity.launchVideoPlayer(path: String, extras: HashMap<String, Boolean> = HashMap()) {
+    ensureBackgroundThread {
+        val newUri = getFinalUriFromPath(path, BuildConfig.APPLICATION_ID)
+        if (newUri == null) {
+            toast(org.fossify.commons.R.string.unknown_error_occurred)
+            return@ensureBackgroundThread
+        }
+
+        val mimeType = getUriMimeType(path, newUri)
+        Intent(applicationContext, VideoPlayerActivity::class.java).apply {
+            setDataAndType(newUri, mimeType)
+
+            for ((key, value) in extras) {
+                putExtra(key, value)
+            }
+
+            startActivity(this)
+        }
+    }
 }
 
 fun Activity.openEditor(path: String, forceChooser: Boolean = false) {
