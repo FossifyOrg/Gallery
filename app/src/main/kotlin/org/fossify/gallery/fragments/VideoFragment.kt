@@ -1,3 +1,5 @@
+@file:androidx.annotation.OptIn(markerClass = [UnstableApi::class])
+
 package org.fossify.gallery.fragments
 
 import android.annotation.SuppressLint
@@ -89,7 +91,6 @@ import java.io.FileInputStream
 import java.text.DecimalFormat
 import kotlin.math.abs
 
-@UnstableApi
 class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     SeekBar.OnSeekBarChangeListener, PlaybackSpeedListener {
     companion object {

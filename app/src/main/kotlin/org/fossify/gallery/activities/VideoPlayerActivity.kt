@@ -1,3 +1,5 @@
+@file:androidx.annotation.OptIn(markerClass = [UnstableApi::class])
+
 package org.fossify.gallery.activities
 
 import android.annotation.SuppressLint
@@ -95,7 +97,6 @@ import java.text.DecimalFormat
 import kotlin.math.max
 import kotlin.math.min
 
-@UnstableApi
 open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeListener,
     TextureView.SurfaceTextureListener, PlaybackSpeedListener {
     companion object {
