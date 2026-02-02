@@ -87,14 +87,12 @@ fun Activity.launchVideoPlayer(path: String, extras: HashMap<String, Boolean> = 
         }
 
         val mimeType = getUriMimeType(path, newUri)
-        Intent(applicationContext, VideoPlayerActivity::class.java).apply {
-            setDataAndType(newUri, mimeType)
-
-            for ((key, value) in extras) {
-                putExtra(key, value)
+        runOnUiThread {
+            Intent(applicationContext, VideoPlayerActivity::class.java).apply {
+                setDataAndType(newUri, mimeType)
+                for ((key, value) in extras) putExtra(key, value)
+                startActivity(this)
             }
-
-            startActivity(this)
         }
     }
 }
