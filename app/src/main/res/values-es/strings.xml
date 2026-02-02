@@ -267,4 +267,5 @@
     <string name="force_landscape_reverse">Fuerza apaisado (inverso)</string>
     <string name="overwrite_original">Sobreescribir original</string>
     <string name="video_no_sound">Este vídeo no tiene audio</string>
+    <string name="render_ultra_hdr_photos">Mostrar las fotos Ultra HDR en HDR</string>
 </resources>
