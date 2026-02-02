@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed double-tap to zoom gesture for WebP images (again) ([#363])
 
+### Added
+- Open videos directly without showing the system app chooser ([#774])
+
 ## [1.11.0] - 2026-01-30
 ### Added
 - Added support for custom fonts
@@ -278,6 +281,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#752]: https://github.com/FossifyOrg/Gallery/issues/752
 [#754]: https://github.com/FossifyOrg/Gallery/issues/754
 [#759]: https://github.com/FossifyOrg/Gallery/issues/759
+[#774]: https://github.com/FossifyOrg/Gallery/issues/774
 [#786]: https://github.com/FossifyOrg/Gallery/issues/786
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
 [#830]: https://github.com/FossifyOrg/Gallery/issues/830

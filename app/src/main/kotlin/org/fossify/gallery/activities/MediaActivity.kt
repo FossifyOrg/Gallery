@@ -964,28 +964,14 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             finish()
         } else {
             mWasFullscreenViewOpen = true
-            val isVideo = path.isVideoFast()
-            if (isVideo) {
-                val extras = HashMap<String, Boolean>()
-                extras[SHOW_FAVORITES] = mPath == FAVORITES
-                if (path.startsWith(recycleBinPath)) {
-                    extras[IS_IN_RECYCLE_BIN] = true
-                }
-
-                if (shouldSkipAuthentication()) {
-                    extras[SKIP_AUTHENTICATION] = true
-                }
-                openPath(path, false, extras)
-            } else {
-                Intent(this, ViewPagerActivity::class.java).apply {
-                    putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
-                    putExtra(PATH, path)
-                    putExtra(SHOW_ALL, mShowAll)
-                    putExtra(SHOW_FAVORITES, mPath == FAVORITES)
-                    putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
-                    putExtra(IS_FROM_GALLERY, true)
-                    startActivity(this)
-                }
+            Intent(this, ViewPagerActivity::class.java).apply {
+                putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
+                putExtra(PATH, path)
+                putExtra(SHOW_ALL, mShowAll)
+                putExtra(SHOW_FAVORITES, mPath == FAVORITES)
+                putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
+                putExtra(IS_FROM_GALLERY, true)
+                startActivity(this)
             }
         }
     }
