@@ -171,7 +171,7 @@
     <string name="allow_deep_zooming_images">Derin yakınlaştırma resimlerine izin ver</string>
     <string name="hide_extended_details">Durum çubuğu gizlendiğinde genişletilmiş ayrıntıları gizle</string>
     <string name="show_at_bottom">Ekranın alt kısmında bazı eylem düğmelerini göster</string>
-    <string name="show_recycle_bin">Geri dönüşüm kutusu\'nu klasörler ekranında gösterme</string>
+    <string name="show_recycle_bin">Geri dönüşüm kutusunu klasörler ekranında göster</string>
     <string name="deep_zoomable_images">Derin yakınlaştırılabilir resimler</string>
     <string name="show_highest_quality">Resimleri mümkün olan en yüksek kalitede göster</string>
     <string name="show_recycle_bin_last">Geri dönüşüm kutusunu ana ekranda son öge olarak göster</string>
@@ -243,7 +243,7 @@
     <string name="faq_14_title">Bir dosya/klasör gizledim. Nasıl gösterebilirim\?</string>
     <string name="faq_14_text">Ana ekranda \"Geçici olarak gizli ögeleri göster\" menü ögesine veya gizli ögeyi görmek için uygulama ayarlarında \"Gizli ögeleri göster\" seçeneğine tıklayabilirsiniz. Göstermek isterseniz, sadece uzun basın ve \"Göster\" seçeneğini seçin. Klasörler gizlenmiş bir \".nomedia\" dosyası ekleyerek gizlenir, dosyayı herhangi bir dosya yöneticisi ile de silebilirsiniz. Gizlemenin yinelemeli olarak çalıştığını unutmayın, bu nedenle bir klasörü gizlerseniz tüm alt klasörler de gizlenir. Bu nedenle, alt klasörleri göstermek için ana klasörü göstermeniz gerekir.</string>
     <string name="faq_15_title">Uygulama neden bu kadar yer kaplıyor\?</string>
-    <string name="faq_15_text">Uygulama önbelleği 250 MB\'a kadar çıkabilir, daha hızlı resim yüklemesini sağlar. Uygulama daha da fazla yer kaplıyorsa, büyük olasılıkla Geri Dönüşüm Kutusunda öge bulundurmanızdan kaynaklanmaktadır. Bu dosyalar uygulama boyutuna göre sayılır. Geri Dönüşüm Kutusunu açarak ve tüm dosyaları silerek ya da uygulama ayarlarından temizleyebilirsiniz. Geri dönüşümdeki her dosya 30 gün sonra otomatik olarak silinir.</string>
+    <string name="faq_15_text">Uygulama önbelleği 250 MB\'a kadar çıkabilir; bu, resimlerin daha hızlı yüklemesini sağlar. Uygulama bu boyuttan daha fazla yer kaplıyorsa büyük ihtimalle geri dönüşüm kutusunda öge bulundurmanızdan kaynaklanmaktadır. Bu dosyalar uygulama boyutuna dahil edilir. Bu dosyaları geri dönüşüm kutusunu açıp içindeki her dosyayı silerek ya da uygulama ayarlarından silerek temizleyebilirsiniz. Geri dönüşüm kutusundaki her dosya 30 gün sonra otomatik olarak silinir.</string>
     <string name="faq_16_title">Dosya ve klasör gizlemeye ne oldu ve neden artık gizli ögeleri göremiyorum\?</string>
     <string name="faq_16_text">Android 11\'den itibaren artık dosya veya klasörleri gizleyemez veya gizliliğini kaldıramazsınız, sistem kısıtlamaları nedeniyle galeri uygulamalarında da gizli olanları göremezsiniz. Bunun için bir dosya yöneticisi kullanmanız gerekecektir.</string>
     <string name="faq_16_text_extra">Veya aygıt ayarlarınız aracılığıyla bu galeriye Tüm Dosyalara erişim izni verebilirsiniz, bu da gizli ögeleri göstermemizi ve dosya işlemlerini genel olarak daha güvenilir hale getirmemizi sağlayacaktır.</string>
@@ -264,4 +264,6 @@
     <string name="keep_screen_on_fullscreen_photos">Tam ekran fotoğraflara bakarken ekranı açık tut</string>
     <string name="force_landscape_reverse">Yataya zorla (ters)</string>
     <string name="overwrite_original">Orijinal olanın üstüne yaz</string>
+    <string name="video_no_sound">Bu video ses içermiyor</string>
+    <string name="render_ultra_hdr_photos">HDR içinde Ultra HDR fotoğrafları göster</string>
 </resources>

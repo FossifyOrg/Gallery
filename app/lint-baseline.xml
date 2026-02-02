@@ -96,7 +96,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/SettingsActivity.kt"
-            line="165"
+            line="166"
             column="13"/>
     </issue>
 
@@ -129,7 +129,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="248"
+            line="235"
             column="21"/>
     </issue>
 
@@ -179,7 +179,7 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.5"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.6"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
@@ -195,7 +195,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="622"
+            line="635"
             column="17"/>
     </issue>
 
@@ -217,7 +217,7 @@
         errorLine2="                                      ~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/PhotoVideoActivity.kt"
-            line="259"
+            line="261"
             column="39"/>
     </issue>
 
@@ -228,7 +228,7 @@
         errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/PhotoVideoActivity.kt"
-            line="287"
+            line="284"
             column="36"/>
     </issue>
 
@@ -239,7 +239,7 @@
         errorLine2="                                          ~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="737"
+            line="733"
             column="43"/>
     </issue>
 
@@ -250,7 +250,7 @@
         errorLine2="                                                           ~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="737"
+            line="733"
             column="60"/>
     </issue>
 
@@ -261,7 +261,7 @@
         errorLine2="                                                  ~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="1341"
+            line="1337"
             column="51"/>
     </issue>
 
@@ -396,7 +396,7 @@
         errorLine2="                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="886"
+            line="882"
             column="28"/>
     </issue>
 
@@ -468,7 +468,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;edit&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai)"
+        message="&quot;edit&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai)"
         errorLine1="    &lt;string name=&quot;edit&quot;>Edit&lt;/string>"
         errorLine2="            ~~~~~~~~~~~">
         <location
@@ -688,7 +688,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;force_landscape_reverse&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;force_landscape_reverse&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;force_landscape_reverse&quot;>Force landscape (reverse)&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -2085,9 +2085,9 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;crop_thumbnails&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;crop_thumbnails&quot;>Crop thumbnails into squares&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        message="&quot;render_ultra_hdr_photos&quot; is not translated in &quot;hi&quot; (Hindi), &quot;pt&quot; (Portuguese), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hr&quot; (Croatian), &quot;hu&quot; (Hungarian), &quot;uk&quot; (Ukrainian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;eo&quot; (Esperanto), &quot;is&quot; (Icelandic), &quot;it&quot; (Italian), &quot;my&quot; (Burmese), &quot;es&quot; (Spanish), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;vi&quot; (Vietnamese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;fr&quot; (French), &quot;kab&quot; (Kabyle), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;ga&quot; (Irish), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;sv&quot; (Swedish), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish), &quot;tr&quot; (Turkish)"
+        errorLine1="    &lt;string name=&quot;render_ultra_hdr_photos&quot;>Show Ultra HDR photos in HDR&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
             line="179"
@@ -2096,12 +2096,23 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;show_thumbnail_video_duration&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;crop_thumbnails&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        errorLine1="    &lt;string name=&quot;crop_thumbnails&quot;>Crop thumbnails into squares&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="180"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;show_thumbnail_video_duration&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;show_thumbnail_video_duration&quot;>Show video durations&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="180"
+            line="181"
             column="13"/>
     </issue>
 
@@ -2112,7 +2123,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="181"
+            line="182"
             column="13"/>
     </issue>
 
@@ -2123,7 +2134,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="182"
+            line="183"
             column="13"/>
     </issue>
 
@@ -2134,7 +2145,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="183"
+            line="184"
             column="13"/>
     </issue>
 
@@ -2145,7 +2156,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="184"
+            line="185"
             column="13"/>
     </issue>
 
@@ -2156,7 +2167,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="185"
+            line="186"
             column="13"/>
     </issue>
 
@@ -2167,7 +2178,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="186"
+            line="187"
             column="13"/>
     </issue>
 
@@ -2178,7 +2189,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="187"
+            line="188"
             column="13"/>
     </issue>
 
@@ -2189,7 +2200,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="188"
+            line="189"
             column="13"/>
     </issue>
 
@@ -2200,7 +2211,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="189"
+            line="190"
             column="13"/>
     </issue>
 
@@ -2211,7 +2222,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="190"
+            line="191"
             column="13"/>
     </issue>
 
@@ -2222,7 +2233,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="191"
+            line="192"
             column="13"/>
     </issue>
 
@@ -2233,7 +2244,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="192"
+            line="193"
             column="13"/>
     </issue>
 
@@ -2244,7 +2255,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="193"
+            line="194"
             column="13"/>
     </issue>
 
@@ -2255,7 +2266,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="194"
+            line="195"
             column="13"/>
     </issue>
 
@@ -2266,7 +2277,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="195"
+            line="196"
             column="13"/>
     </issue>
 
@@ -2277,7 +2288,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="196"
+            line="197"
             column="13"/>
     </issue>
 
@@ -2288,7 +2299,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="197"
+            line="198"
             column="13"/>
     </issue>
 
@@ -2299,7 +2310,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="198"
+            line="199"
             column="13"/>
     </issue>
 
@@ -2310,7 +2321,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="199"
+            line="200"
             column="13"/>
     </issue>
 
@@ -2321,18 +2332,18 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="200"
+            line="201"
             column="13"/>
     </issue>
 
     <issue
         id="MissingTranslation"
         message="&quot;show_recycle_bin&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;show_recycle_bin&quot;>Show the Recycle Bin at the folders screen&lt;/string>"
+        errorLine1="    &lt;string name=&quot;show_recycle_bin&quot;>Show the recycle bin on the folders screen&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="201"
+            line="202"
             column="13"/>
     </issue>
 
@@ -2343,7 +2354,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="202"
+            line="203"
             column="13"/>
     </issue>
 
@@ -2354,18 +2365,18 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="203"
+            line="204"
             column="13"/>
     </issue>
 
     <issue
         id="MissingTranslation"
         message="&quot;show_recycle_bin_last&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;show_recycle_bin_last&quot;>Show the Recycle Bin as the last item on the main screen&lt;/string>"
+        errorLine1="    &lt;string name=&quot;show_recycle_bin_last&quot;>Show the recycle bin as the last item on the main screen&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="204"
+            line="205"
             column="13"/>
     </issue>
 
@@ -2376,7 +2387,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="205"
+            line="206"
             column="13"/>
     </issue>
 
@@ -2387,7 +2398,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="206"
+            line="207"
             column="13"/>
     </issue>
 
@@ -2398,7 +2409,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="207"
+            line="208"
             column="13"/>
     </issue>
 
@@ -2409,7 +2420,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="208"
+            line="209"
             column="13"/>
     </issue>
 
@@ -2420,7 +2431,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="209"
+            line="210"
             column="13"/>
     </issue>
 
@@ -2431,7 +2442,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="210"
+            line="211"
             column="13"/>
     </issue>
 
@@ -2442,7 +2453,7 @@
         errorLine2="            ~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="211"
+            line="212"
             column="13"/>
     </issue>
 
@@ -2453,7 +2464,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="212"
+            line="213"
             column="13"/>
     </issue>
 
@@ -2464,7 +2475,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="213"
+            line="214"
             column="13"/>
     </issue>
 
@@ -2475,7 +2486,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="214"
+            line="215"
             column="13"/>
     </issue>
 
@@ -2486,7 +2497,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="215"
+            line="216"
             column="13"/>
     </issue>
 
@@ -2497,7 +2508,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="216"
+            line="217"
             column="13"/>
     </issue>
 
@@ -2508,7 +2519,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="217"
+            line="218"
             column="13"/>
     </issue>
 
@@ -2519,7 +2530,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="218"
+            line="219"
             column="13"/>
     </issue>
 
@@ -2530,7 +2541,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="219"
+            line="220"
             column="13"/>
     </issue>
 
@@ -2541,7 +2552,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="220"
+            line="221"
             column="13"/>
     </issue>
 
@@ -2552,7 +2563,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="221"
+            line="222"
             column="13"/>
     </issue>
 
@@ -2563,7 +2574,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="222"
+            line="223"
             column="13"/>
     </issue>
 
@@ -2574,7 +2585,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="223"
+            line="224"
             column="13"/>
     </issue>
 
@@ -2585,7 +2596,7 @@
         errorLine2="            ~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="224"
+            line="225"
             column="13"/>
     </issue>
 
@@ -2596,7 +2607,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="225"
+            line="226"
             column="13"/>
     </issue>
 
@@ -2607,7 +2618,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="226"
+            line="227"
             column="13"/>
     </issue>
 
@@ -2618,7 +2629,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="227"
+            line="228"
             column="13"/>
     </issue>
 
@@ -2629,7 +2640,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="228"
+            line="229"
             column="13"/>
     </issue>
 
@@ -2640,7 +2651,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="229"
+            line="230"
             column="13"/>
     </issue>
 
@@ -2651,7 +2662,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="230"
+            line="231"
             column="13"/>
     </issue>
 
@@ -2662,7 +2673,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="231"
+            line="232"
             column="13"/>
     </issue>
 
@@ -2673,7 +2684,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="232"
+            line="233"
             column="13"/>
     </issue>
 
@@ -2684,7 +2695,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="233"
+            line="234"
             column="13"/>
     </issue>
 
@@ -2695,7 +2706,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="234"
+            line="235"
             column="13"/>
     </issue>
 
@@ -2706,7 +2717,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="235"
+            line="236"
             column="13"/>
     </issue>
 
@@ -2717,7 +2728,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="236"
+            line="237"
             column="13"/>
     </issue>
 
@@ -2728,7 +2739,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="237"
+            line="238"
             column="13"/>
     </issue>
 
@@ -2739,7 +2750,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="238"
+            line="239"
             column="13"/>
     </issue>
 
@@ -2750,7 +2761,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="241"
+            line="242"
             column="13"/>
     </issue>
 
@@ -2761,7 +2772,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="242"
+            line="243"
             column="13"/>
     </issue>
 
@@ -2772,7 +2783,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="243"
+            line="244"
             column="13"/>
     </issue>
 
@@ -2783,7 +2794,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="244"
+            line="245"
             column="13"/>
     </issue>
 
@@ -2794,7 +2805,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="247"
+            line="248"
             column="13"/>
     </issue>
 
@@ -2805,7 +2816,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="248"
+            line="249"
             column="13"/>
     </issue>
 
@@ -2816,7 +2827,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="249"
+            line="250"
             column="13"/>
     </issue>
 
@@ -2827,7 +2838,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="252"
+            line="253"
             column="13"/>
     </issue>
 
@@ -2838,7 +2849,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="253"
+            line="254"
             column="13"/>
     </issue>
 
@@ -2849,7 +2860,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="254"
+            line="255"
             column="13"/>
     </issue>
 
@@ -2860,18 +2871,29 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="255"
+            line="256"
             column="13"/>
     </issue>
 
     <issue
         id="MissingTranslation"
-        message="&quot;faq_1_title&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;video_no_sound&quot; is not translated in &quot;hi&quot; (Hindi), &quot;pt&quot; (Portuguese), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hr&quot; (Croatian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;it&quot; (Italian), &quot;my&quot; (Burmese), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;vi&quot; (Vietnamese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;fr&quot; (French), &quot;kab&quot; (Kabyle), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;sv&quot; (Swedish), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish)"
+        errorLine1="    &lt;string name=&quot;video_no_sound&quot;>This video has no audio&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="259"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;faq_1_title&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;faq_1_title&quot;>How can I make Fossify Gallery the default device gallery?&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="258"
+            line="262"
             column="13"/>
     </issue>
 
@@ -2882,7 +2904,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="259"
+            line="263"
             column="13"/>
     </issue>
 
@@ -2893,7 +2915,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="261"
+            line="265"
             column="13"/>
     </issue>
 
@@ -2904,7 +2926,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="262"
+            line="266"
             column="13"/>
     </issue>
 
@@ -2915,7 +2937,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="263"
+            line="267"
             column="13"/>
     </issue>
 
@@ -2926,7 +2948,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="264"
+            line="268"
             column="13"/>
     </issue>
 
@@ -2937,7 +2959,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="265"
+            line="269"
             column="13"/>
     </issue>
 
@@ -2948,7 +2970,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="266"
+            line="270"
             column="13"/>
     </issue>
 
@@ -2959,7 +2981,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="267"
+            line="271"
             column="13"/>
     </issue>
 
@@ -2970,7 +2992,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="268"
+            line="272"
             column="13"/>
     </issue>
 
@@ -2981,7 +3003,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="269"
+            line="273"
             column="13"/>
     </issue>
 
@@ -2992,7 +3014,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="270"
+            line="274"
             column="13"/>
     </issue>
 
@@ -3003,7 +3025,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="271"
+            line="275"
             column="13"/>
     </issue>
 
@@ -3014,7 +3036,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="272"
+            line="276"
             column="13"/>
     </issue>
 
@@ -3025,7 +3047,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="273"
+            line="277"
             column="13"/>
     </issue>
 
@@ -3036,7 +3058,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="274"
+            line="278"
             column="13"/>
     </issue>
 
@@ -3047,7 +3069,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="276"
+            line="280"
             column="13"/>
     </issue>
 
@@ -3058,7 +3080,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="277"
+            line="281"
             column="13"/>
     </issue>
 
@@ -3069,7 +3091,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="278"
+            line="282"
             column="13"/>
     </issue>
 
@@ -3080,7 +3102,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="279"
+            line="283"
             column="13"/>
     </issue>
 
@@ -3091,7 +3113,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="280"
+            line="284"
             column="13"/>
     </issue>
 
@@ -3102,7 +3124,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="281"
+            line="285"
             column="13"/>
     </issue>
 
@@ -3113,7 +3135,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="282"
+            line="286"
             column="13"/>
     </issue>
 
@@ -3124,7 +3146,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="283"
+            line="287"
             column="13"/>
     </issue>
 
@@ -3135,7 +3157,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="284"
+            line="288"
             column="13"/>
     </issue>
 
@@ -3146,7 +3168,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="285"
+            line="289"
             column="13"/>
     </issue>
 
@@ -3157,18 +3179,18 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="286"
+            line="290"
             column="13"/>
     </issue>
 
     <issue
         id="MissingTranslation"
         message="&quot;faq_15_text&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nb&quot; (Norwegian Bokmål), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;faq_15_text&quot;>App cache can take up to 250MB, it ensures quicker image loading. If the app is taking up even more space, it is most likely caused by you having items in the Recycle Bin. Those files count to the app size. You can clear the Recycle bin by opening it and deleting all files, or from the app settings. Every file in the Bin is deleted automatically after 30 days.&lt;/string>"
+        errorLine1="    &lt;string name=&quot;faq_15_text&quot;>App cache can take up to 250MB, it ensures quicker image loading. If the app is taking up even more space, it is most likely caused by you having items in the recycle bin. Those files count to the app size. You can clear the recycle bin by opening it and deleting all files, or from the app settings. Every file in the bin is deleted automatically after 30 days.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="287"
+            line="291"
             column="13"/>
     </issue>
 
@@ -3179,7 +3201,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="288"
+            line="292"
             column="13"/>
     </issue>
 
@@ -3190,7 +3212,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="289"
+            line="293"
             column="13"/>
     </issue>
 
@@ -3201,7 +3223,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="290"
+            line="294"
             column="13"/>
     </issue>
 
@@ -3212,7 +3234,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="291"
+            line="295"
             column="13"/>
     </issue>
 
@@ -3223,7 +3245,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="292"
+            line="296"
             column="13"/>
     </issue>
 
@@ -3234,7 +3256,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="293"
+            line="297"
             column="13"/>
     </issue>
 
@@ -3245,7 +3267,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="294"
+            line="298"
             column="13"/>
     </issue>
 
@@ -4202,7 +4224,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="193"
+            line="194"
             column="13"/>
     </issue>
 
@@ -4213,7 +4235,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="196"
+            line="197"
             column="13"/>
     </issue>
 
@@ -4224,7 +4246,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="215"
+            line="216"
             column="13"/>
     </issue>
 
@@ -4235,7 +4257,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="228"
+            line="229"
             column="13"/>
     </issue>
 
@@ -4246,7 +4268,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="229"
+            line="230"
             column="13"/>
     </issue>
 
@@ -4257,7 +4279,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="231"
+            line="232"
             column="13"/>
     </issue>
 
@@ -4268,7 +4290,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="232"
+            line="233"
             column="13"/>
     </issue>
 
@@ -4279,7 +4301,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="238"
+            line="239"
             column="13"/>
     </issue>
 
@@ -4319,8 +4341,8 @@
     <issue
         id="TooManyViews"
         message="`activity_settings.xml` has more than 80 views, bad for performance"
-        errorLine1="                &lt;org.fossify.commons.views.MyTextView"
-        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                &lt;org.fossify.commons.views.MyMaterialSwitch"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/activity_settings.xml"
             line="572"
@@ -4615,11 +4637,22 @@
     <issue
         id="UseKtx"
         message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        set(ultraHdrRendering) = prefs.edit().putBoolean(ULTRA_HDR_RENDERING, ultraHdrRendering).apply()"
+        errorLine2="                                 ~~~~~~~~~~~~">
+        <location
+            file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
+            line="178"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
         errorLine1="        set(playbackSpeed) = prefs.edit().putFloat(PLAYBACK_SPEED, playbackSpeed).apply()"
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="178"
+            line="182"
             column="30"/>
     </issue>
 
@@ -4630,7 +4663,7 @@
         errorLine2="                                     ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="182"
+            line="186"
             column="38"/>
     </issue>
 
@@ -4641,7 +4674,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="186"
+            line="190"
             column="31"/>
     </issue>
 
@@ -4652,7 +4685,7 @@
         errorLine2="                                          ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="190"
+            line="194"
             column="43"/>
     </issue>
 
@@ -4663,7 +4696,7 @@
         errorLine2="                                      ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="194"
+            line="198"
             column="39"/>
     </issue>
 
@@ -4674,7 +4707,7 @@
         errorLine2="                                 ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="198"
+            line="202"
             column="34"/>
     </issue>
 
@@ -4685,7 +4718,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="202"
+            line="206"
             column="31"/>
     </issue>
 
@@ -4696,7 +4729,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="206"
+            line="210"
             column="36"/>
     </issue>
 
@@ -4707,7 +4740,7 @@
         errorLine2="                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="210"
+            line="214"
             column="21"/>
     </issue>
 
@@ -4718,7 +4751,7 @@
         errorLine2="                          ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="214"
+            line="218"
             column="27"/>
     </issue>
 
@@ -4729,7 +4762,7 @@
         errorLine2="                                          ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="218"
+            line="222"
             column="43"/>
     </issue>
 
@@ -4740,7 +4773,7 @@
         errorLine2="                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="222"
+            line="226"
             column="24"/>
     </issue>
 
@@ -4751,7 +4784,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="226"
+            line="230"
             column="32"/>
     </issue>
 
@@ -4762,7 +4795,7 @@
         errorLine2="                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="230"
+            line="234"
             column="28"/>
     </issue>
 
@@ -4773,7 +4806,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="234"
+            line="238"
             column="29"/>
     </issue>
 
@@ -4784,7 +4817,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="238"
+            line="242"
             column="30"/>
     </issue>
 
@@ -4795,7 +4828,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="242"
+            line="246"
             column="35"/>
     </issue>
 
@@ -4806,7 +4839,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="271"
+            line="275"
             column="31"/>
     </issue>
 
@@ -4817,7 +4850,7 @@
         errorLine2="                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="300"
+            line="304"
             column="28"/>
     </issue>
 
@@ -4828,7 +4861,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="309"
+            line="313"
             column="29"/>
     </issue>
 
@@ -4839,7 +4872,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="313"
+            line="317"
             column="35"/>
     </issue>
 
@@ -4850,7 +4883,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="317"
+            line="321"
             column="29"/>
     </issue>
 
@@ -4861,7 +4894,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="321"
+            line="325"
             column="35"/>
     </issue>
 
@@ -4872,7 +4905,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="325"
+            line="329"
             column="35"/>
     </issue>
 
@@ -4883,7 +4916,7 @@
         errorLine2="                                 ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="329"
+            line="333"
             column="34"/>
     </issue>
 
@@ -4894,7 +4927,7 @@
         errorLine2="                                      ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="333"
+            line="337"
             column="39"/>
     </issue>
 
@@ -4905,7 +4938,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="337"
+            line="341"
             column="37"/>
     </issue>
 
@@ -4916,7 +4949,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="341"
+            line="345"
             column="37"/>
     </issue>
 
@@ -4927,7 +4960,7 @@
         errorLine2="                                      ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="345"
+            line="349"
             column="39"/>
     </issue>
 
@@ -4938,7 +4971,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="349"
+            line="353"
             column="35"/>
     </issue>
 
@@ -4949,7 +4982,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="353"
+            line="357"
             column="30"/>
     </issue>
 
@@ -4960,7 +4993,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="357"
+            line="361"
             column="31"/>
     </issue>
 
@@ -4971,7 +5004,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="361"
+            line="365"
             column="32"/>
     </issue>
 
@@ -4982,7 +5015,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="365"
+            line="369"
             column="30"/>
     </issue>
 
@@ -4993,7 +5026,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="369"
+            line="373"
             column="36"/>
     </issue>
 
@@ -5004,7 +5037,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="373"
+            line="377"
             column="36"/>
     </issue>
 
@@ -5015,7 +5048,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="377"
+            line="381"
             column="32"/>
     </issue>
 
@@ -5026,7 +5059,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="381"
+            line="385"
             column="31"/>
     </issue>
 
@@ -5037,7 +5070,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="385"
+            line="389"
             column="35"/>
     </issue>
 
@@ -5048,7 +5081,7 @@
         errorLine2="                                          ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="389"
+            line="393"
             column="43"/>
     </issue>
 
@@ -5059,7 +5092,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="393"
+            line="397"
             column="35"/>
     </issue>
 
@@ -5070,7 +5103,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="397"
+            line="401"
             column="36"/>
     </issue>
 
@@ -5081,7 +5114,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="401"
+            line="405"
             column="36"/>
     </issue>
 
@@ -5092,7 +5125,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="405"
+            line="409"
             column="37"/>
     </issue>
 
@@ -5103,7 +5136,7 @@
         errorLine2="                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="409"
+            line="413"
             column="24"/>
     </issue>
 
@@ -5114,7 +5147,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="413"
+            line="417"
             column="30"/>
     </issue>
 
@@ -5125,7 +5158,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="417"
+            line="421"
             column="30"/>
     </issue>
 
@@ -5136,7 +5169,7 @@
         errorLine2="        ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="420"
+            line="424"
             column="9"/>
     </issue>
 
@@ -5147,7 +5180,7 @@
         errorLine2="            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="425"
+            line="429"
             column="13"/>
     </issue>
 
@@ -5158,7 +5191,7 @@
         errorLine2="                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="440"
+            line="444"
             column="21"/>
     </issue>
 
@@ -5169,7 +5202,7 @@
         errorLine2="            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="443"
+            line="447"
             column="13"/>
     </issue>
 
@@ -5180,7 +5213,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="448"
+            line="452"
             column="37"/>
     </issue>
 
@@ -5191,7 +5224,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="453"
+            line="457"
             column="33"/>
     </issue>
 
@@ -5202,7 +5235,7 @@
         errorLine2="                                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="473"
+            line="477"
             column="40"/>
     </issue>
 
@@ -5213,7 +5246,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="477"
+            line="481"
             column="35"/>
     </issue>
 
@@ -5224,7 +5257,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="481"
+            line="485"
             column="29"/>
     </issue>
 
@@ -5235,7 +5268,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="485"
+            line="489"
             column="35"/>
     </issue>
 
@@ -5246,7 +5279,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="489"
+            line="493"
             column="35"/>
     </issue>
 
@@ -5257,7 +5290,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="493"
+            line="497"
             column="33"/>
     </issue>
 
@@ -5268,7 +5301,7 @@
         errorLine2="                                         ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="497"
+            line="501"
             column="42"/>
     </issue>
 
@@ -5279,7 +5312,7 @@
         errorLine2="                                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="501"
+            line="505"
             column="48"/>
     </issue>
 
@@ -5290,7 +5323,7 @@
         errorLine2="                                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="505"
+            line="509"
             column="48"/>
     </issue>
 
@@ -5301,7 +5334,7 @@
         errorLine2="                                     ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="509"
+            line="513"
             column="38"/>
     </issue>
 
@@ -5312,7 +5345,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="513"
+            line="517"
             column="37"/>
     </issue>
 
@@ -5323,7 +5356,7 @@
         errorLine2="                                 ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="517"
+            line="521"
             column="34"/>
     </issue>
 
@@ -5334,7 +5367,7 @@
         errorLine2="                                         ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="521"
+            line="525"
             column="42"/>
     </issue>
 
@@ -5345,7 +5378,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="525"
+            line="529"
             column="36"/>
     </issue>
 
@@ -5356,7 +5389,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="529"
+            line="533"
             column="36"/>
     </issue>
 
@@ -5367,7 +5400,7 @@
         errorLine2="                         ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="533"
+            line="537"
             column="26"/>
     </issue>
 
@@ -5378,7 +5411,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="539"
+            line="543"
             column="35"/>
     </issue>
 
@@ -5389,7 +5422,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="543"
+            line="547"
             column="33"/>
     </issue>
 
@@ -5400,7 +5433,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="547"
+            line="551"
             column="36"/>
     </issue>
 
@@ -5411,7 +5444,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="551"
+            line="555"
             column="32"/>
     </issue>
 
@@ -5422,7 +5455,7 @@
         errorLine2="                                     ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="555"
+            line="559"
             column="38"/>
     </issue>
 
@@ -5433,7 +5466,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="559"
+            line="563"
             column="37"/>
     </issue>
 
@@ -5444,7 +5477,7 @@
         errorLine2="                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="563"
+            line="567"
             column="28"/>
     </issue>
 
@@ -5455,7 +5488,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="567"
+            line="571"
             column="33"/>
     </issue>
 
@@ -5466,7 +5499,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="571"
+            line="575"
             column="33"/>
     </issue>
 
@@ -5477,7 +5510,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="575"
+            line="579"
             column="35"/>
     </issue>
 
@@ -5488,7 +5521,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="579"
+            line="583"
             column="35"/>
     </issue>
 
@@ -5499,7 +5532,7 @@
         errorLine2="                                          ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="583"
+            line="587"
             column="43"/>
     </issue>
 
@@ -5510,7 +5543,7 @@
         errorLine2="                                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="587"
+            line="591"
             column="40"/>
     </issue>
 
@@ -5521,7 +5554,7 @@
         errorLine2="                                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="591"
+            line="595"
             column="44"/>
     </issue>
 
@@ -5532,7 +5565,7 @@
         errorLine2="                                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="595"
+            line="599"
             column="40"/>
     </issue>
 
@@ -5598,7 +5631,7 @@
         errorLine2="                                                               ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="227"
+            line="214"
             column="64"/>
     </issue>
 
@@ -5609,7 +5642,7 @@
         errorLine2="                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="235"
+            line="222"
             column="88"/>
     </issue>
 
@@ -5620,7 +5653,7 @@
         errorLine2="                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="240"
+            line="227"
             column="84"/>
     </issue>
 
@@ -5631,7 +5664,7 @@
         errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="246"
+            line="233"
             column="72"/>
     </issue>
 
@@ -5642,7 +5675,7 @@
         errorLine2="                                                                        ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="453"
+            line="442"
             column="73"/>
     </issue>
 
@@ -5653,7 +5686,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="755"
+            line="764"
             column="26"/>
     </issue>
 
@@ -5664,7 +5697,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="755"
+            line="764"
             column="26"/>
     </issue>
 
@@ -5675,7 +5708,7 @@
         errorLine2="                                 ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="767"
+            line="776"
             column="34"/>
     </issue>
 
@@ -5686,7 +5719,7 @@
         errorLine2="                                 ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="767"
+            line="776"
             column="34"/>
     </issue>
 
@@ -5697,7 +5730,7 @@
         errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="782"
+            line="791"
             column="34"/>
     </issue>
 
@@ -5708,7 +5741,7 @@
         errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="782"
+            line="791"
             column="34"/>
     </issue>
 
@@ -5719,7 +5752,7 @@
         errorLine2="                                                                 ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="822"
+            line="831"
             column="66"/>
     </issue>
 
@@ -5730,7 +5763,7 @@
         errorLine2="                                                                                   ~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="853"
+            line="862"
             column="84"/>
     </issue>
 
@@ -5741,7 +5774,7 @@
         errorLine2="                                                            ~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="864"
+            line="873"
             column="61"/>
     </issue>
 
@@ -5774,7 +5807,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="170"
+            line="175"
             column="52"/>
     </issue>
 
@@ -5785,7 +5818,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="170"
+            line="175"
             column="52"/>
     </issue>
 
@@ -5868,78 +5901,12 @@
 
     <issue
         id="ClickableViewAccessibility"
-        message="Custom view ``GifTextureView`` has `setOnTouchListener` called on it but does not override `performClick`"
-        errorLine1="                gifView.setOnTouchListener { v, event ->"
-        errorLine2="                ^">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="179"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="ClickableViewAccessibility"
-        message="`onTouch` lambda should call `View#performClick` when a click is detected"
-        errorLine1="                gifView.setOnTouchListener { v, event ->"
-        errorLine2="                                           ^">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="179"
-            column="44"/>
-    </issue>
-
-    <issue
-        id="ClickableViewAccessibility"
-        message="Custom view ``GestureImageView`` has `setOnTouchListener` called on it but does not override `performClick`"
-        errorLine1="                gesturesView.setOnTouchListener { v, event ->"
-        errorLine2="                ^">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="195"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="ClickableViewAccessibility"
-        message="`onTouch` lambda should call `View#performClick` when a click is detected"
-        errorLine1="                gesturesView.setOnTouchListener { v, event ->"
-        errorLine2="                                                ^">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="195"
-            column="49"/>
-    </issue>
-
-    <issue
-        id="ClickableViewAccessibility"
-        message="Custom view ``SubsamplingScaleImageView`` has `setOnTouchListener` called on it but does not override `performClick`"
-        errorLine1="                subsamplingView.setOnTouchListener { v, event ->"
-        errorLine2="                ^">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="203"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="ClickableViewAccessibility"
-        message="`onTouch` lambda should call `View#performClick` when a click is detected"
-        errorLine1="                subsamplingView.setOnTouchListener { v, event ->"
-        errorLine2="                                                   ^">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="203"
-            column="52"/>
-    </issue>
-
-    <issue
-        id="ClickableViewAccessibility"
         message="Custom view ``RecyclerView`` has `setOnTouchListener` called on it but does not override `performClick`"
         errorLine1="        binding.photoPortraitStripe.setOnTouchListener { v, event ->"
         errorLine2="        ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="696"
+            line="705"
             column="9"/>
     </issue>
 
@@ -5950,7 +5917,7 @@
         errorLine2="                                                       ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/PhotoFragment.kt"
-            line="696"
+            line="705"
             column="56"/>
     </issue>
 
@@ -6522,7 +6489,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/SettingsActivity.kt"
-            line="203"
+            line="204"
             column="17"/>
     </issue>
 
@@ -6533,7 +6500,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/SettingsActivity.kt"
-            line="237"
+            line="238"
             column="17"/>
     </issue>
 
@@ -6555,7 +6522,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="830"
+            line="843"
             column="17"/>
     </issue>
 
@@ -6566,7 +6533,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="463"
+            line="469"
             column="17"/>
     </issue>
 

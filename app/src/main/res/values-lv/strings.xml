@@ -18,4 +18,9 @@
     <string name="rotate_right">Pagriezt pa labi</string>
     <string name="rotate_one_eighty">Pagriezt par 180º</string>
     <string name="transform">Pārveidot</string>
+    <string name="video_no_sound">Šim video nav skaņas</string>
+    <string name="faq_1_title">Kā es varu Fossify Gallery padarīt par ierīces noklusējuma galeriju?</string>
+    <string name="render_ultra_hdr_photos">Rādīt Ultra HDR fotoattēlus kā HDR</string>
+    <string name="crop_thumbnails">Apcirpt sīktēlus kā kvadrātus</string>
+    <string name="show_thumbnail_video_duration">Rādīt video ilgumu</string>
 </resources>

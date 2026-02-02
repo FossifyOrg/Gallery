@@ -80,6 +80,7 @@ import org.fossify.commons.extensions.scanPathRecursively
 import org.fossify.commons.extensions.showErrorToast
 import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.tryGenericMimeType
+import org.fossify.commons.extensions.updateBrightness
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.FAVORITES
 import org.fossify.commons.helpers.IS_FROM_GALLERY
@@ -209,6 +210,7 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
     private var mMediaFiles = ArrayList<Medium>()
     private var mFavoritePaths = ArrayList<String>()
     private var mIgnoredPaths = ArrayList<String>()
+    private var mOriginalBrightness: Float? = null
 
     private val binding by viewBinding(ActivityMediumBinding::inflate)
 
@@ -248,13 +250,7 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
         }
 
         initBottomActions()
-
-        if (config.maxBrightness) {
-            val attributes = window.attributes
-            attributes.screenBrightness = 1f
-            window.attributes = attributes
-        }
-
+        mOriginalBrightness = window.updateBrightness(config.maxBrightness, mOriginalBrightness)
         setupOrientation()
         refreshMenuItems()
 

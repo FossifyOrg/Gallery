@@ -2,7 +2,7 @@
 #jetbrains
 kotlin = "2.3.0"
 #KSP
-ksp = "2.3.4"
+ksp = "2.3.5"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.28"
@@ -16,7 +16,7 @@ exif = "1.0.1"
 #Room
 room = "2.8.4"
 #Fossify
-commons = "6.0.0"
+commons = "6.1.0"
 #Gradle4
 gradlePlugins-agp = "8.11.1"
 #Other
@@ -30,7 +30,7 @@ gestureviews = "e706487a14"
 androidsvgAar = "1.4"
 androidphotofilters = "193f2ae509"
 sanselan = "0.97-incubator"
-media3Exoplayer = "1.9.0"
+media3Exoplayer = "1.9.1"
 okhttp = "5.3.2"
 okio = "3.16.4"
 picasso = "2.71828"

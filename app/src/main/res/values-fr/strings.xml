@@ -165,7 +165,7 @@
     <string name="allow_deep_zooming_images">Activer les options de zoom avancées</string>
     <string name="hide_extended_details">Cacher les informations supplémentaires si la barre d\'état est masquée</string>
     <string name="show_at_bottom">Afficher les boutons d\'action</string>
-    <string name="show_recycle_bin">Afficher la corbeille en affichage par dossiers</string>
+    <string name="show_recycle_bin">Afficher la corbeille sur l\'écran des dossiers</string>
     <string name="deep_zoomable_images">Niveau de zoom</string>
     <string name="show_highest_quality">Afficher les images dans la meilleure qualité possible</string>
     <string name="show_recycle_bin_last">Afficher la corbeille en fin de liste sur l\'écran principal</string>
@@ -264,4 +264,6 @@
     </plurals>
     <string name="force_landscape_reverse">Forcer le mode paysage (inversé)</string>
     <string name="overwrite_original">Remplacer l\'original</string>
+    <string name="render_ultra_hdr_photos">Afficher les photos Ultra HDR en HDR</string>
+    <string name="video_no_sound">Cette vidéo n\'a pas d\'audio</string>
 </resources>

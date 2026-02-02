@@ -260,4 +260,5 @@
     <string name="keep_screen_on_fullscreen_photos">Malŝalti malheligon de la ekrano dum fotoj estas plenekranaj</string>
     <string name="force_landscape_reverse">Ĉiam uzi horizontalan orientiĝon (inverse)</string>
     <string name="overwrite_original">Superskribi originan</string>
+    <string name="video_no_sound">Tiu ĉi filmeto ne havas aŭdion</string>
 </resources>

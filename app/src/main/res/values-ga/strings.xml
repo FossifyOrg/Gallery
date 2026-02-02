@@ -185,7 +185,7 @@
     <string name="allow_deep_zooming_images">Ceadaigh íomhánna zúmála doimhne</string>
     <string name="hide_extended_details">Folaigh sonraí breisithe nuair atá an barra stádais i bhfolach</string>
     <string name="show_at_bottom">Taispeáin roinnt cnaipí aicsin ag bun an scáileáin</string>
-    <string name="show_recycle_bin">Taispeáin an bosca athchúrsála ag scáileán na bhfillteán</string>
+    <string name="show_recycle_bin">Taispeáin an bosca athchúrsála ar scáileán na bhfillteán</string>
     <string name="deep_zoomable_images">Íomhánna domhain zúmáilte</string>
     <string name="show_highest_quality">Taispeáin íomhánna den chaighdeán is airde is féidir</string>
     <string name="show_recycle_bin_last">Taispeáin an bosca athchúrsála mar an mhír dheireanach ar an bpríomhscáileán</string>
@@ -248,7 +248,7 @@
     <string name="faq_13_title">Feicim roinnt bandáil datha ar na híomhánna. Conas is féidir liom an caighdeán a fheabhsú?</string>
     <string name="faq_14_text">Is féidir leat an mhír roghchláir \"Taispeáin míreanna folaithe go sealadach\" a bhrú ag an bpríomhscáileán, nó scoránaigh \"Taispeáin míreanna i bhfolach\" i socruithe an fheidhmchláir chun an mhír fholaithe a fheiceáil. Más mian leat é a unhide, brúigh ach fada é agus roghnaigh \"Unhide\". Tá fillteáin i bhfolach trí chomhad \".nomedia\" i bhfolach a chur isteach iontu, is féidir leat an comhad a scriosadh le haon bhainisteoir comhad freisin. Tabhair faoi deara go n-oibríonn hiding go hathchúrsach áfach, mar sin má cheilt tú fillteán, beidh gach fofhillteán i bhfolach freisin. Mar sin, chun unhiding na fofhillteáin a bhfuil tú a unhide an máthairfhillteán.</string>
     <string name="faq_16_title">Cad a tharla do chomhad agus fillteán i bhfolach agus cén fáth nach féidir liom míreanna i bhfolach a fheiceáil níos mó?</string>
-    <string name="faq_15_text">Is féidir le taisce app suas le 250MB a ghlacadh, cinntíonn sé luchtú íomhá níos tapúla. Má tá níos mó spáis á thógáil ag an aip, is dóichí gurb é is cúis leis ná go bhfuil míreanna agat sa Bhosca Athchúrsála. Áirítear na comhaid sin ar mhéid an fheidhmchláir. Is féidir leat an bosca athchúrsála a ghlanadh trína oscailt agus gach comhad a scriosadh, nó ó shocruithe na haipe. Scriostar gach comhad sa bhosca bruscair go huathoibríoch tar éis 30 lá.</string>
+    <string name="faq_15_text">Is féidir le taisce an aip suas le 250MB a thógáil, rud a chinntíonn go luchtóidh íomhánna níos tapúla. Má tá an aip ag glacadh níos mó spáis fós, is dóichí gur mar gheall ar earraí atá sa bhosca athchúrsála atá sé. Cuirtear na comhaid sin san áireamh i méid an aip. Is féidir leat an bosca athchúrsála a ghlanadh trína oscailt agus na comhaid go léir a scriosadh, nó ó shocruithe an aip. Scriostar gach comhad sa bhosca go huathoibríoch tar éis 30 lá.</string>
     <string name="faq_16_text">Ag tosú le Android 11 ní féidir leat comhaid nó fillteáin a cheilt nó a cheilt níos mó, ní féidir leat na cinn i bhfolach a fheiceáil in aipeanna gailearaí mar gheall ar shrianta córais ach an oiread. Beidh ort bainisteoir comhad éigin a úsáid chuige sin.</string>
     <string name="faq_16_text_extra">Nó is féidir leat rochtain a thabhairt don ghailearaí seo ar Gach Comhad trí do shocruithe gléis, rud a ligfidh dúinn míreanna folaithe a thaispeáint agus oibríochtaí comhaid a dhéanamh níos iontaofa go ginearálta.</string>
     <string name="faq_17_title">Cén fáth nach féidir liom fillteáin atá ar iarraidh a chur san áireamh níos mó?</string>
@@ -266,4 +266,6 @@
     </plurals>
     <string name="force_landscape_reverse">Tírdhreach fórsaithe (droim ar ais)</string>
     <string name="overwrite_original">Forscríobh an bhunleagan</string>
+    <string name="video_no_sound">Níl aon fhuaim sa fhíseán seo</string>
+    <string name="render_ultra_hdr_photos">Taispeáin grianghraif Ultra HDR in HDR</string>
 </resources>
