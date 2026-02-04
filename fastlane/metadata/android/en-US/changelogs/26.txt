@@ -1,0 +1,9 @@
+Changed:
+
+• Videos now open in the in-app player; use the "Open with" option for other apps 
+• Updated translations
+
+Fixed:
+
+• Fixed double-tap to zoom gesture for WebP images (again) 
+
