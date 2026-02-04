@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Update system favorites collection on Android 11+ when favoriting media ([#848])
 
 ## [1.12.0] - 2026-02-02
 ### Changed
@@ -19,7 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added support for custom fonts
 - Added option to toggle Ultra HDR rendering (Android 14+) ([#564])
 - Long press gesture to play videos at 2x speed in separate video player ([#830])
-- Update system favorites collection on Android 11+ when favoriting media ([#848])
 
 ### Changed
 - Mute button is now disabled for videos without an audio track ([#876])

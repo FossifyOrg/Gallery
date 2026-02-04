@@ -79,6 +79,7 @@ import org.fossify.commons.helpers.SORT_BY_SIZE
 import org.fossify.commons.helpers.SORT_DESCENDING
 import org.fossify.commons.helpers.SORT_USE_NUMERIC_VALUE
 import org.fossify.commons.helpers.ensureBackgroundThread
+import org.fossify.commons.helpers.isRPlus
 import org.fossify.commons.helpers.sumByLong
 import org.fossify.commons.views.MySquareImageView
 import org.fossify.gallery.BuildConfig
@@ -1087,7 +1088,7 @@ fun Context.updateFavorite(path: String, isFavorite: Boolean) {
             favoritesDB.deleteFavoritePath(path)
         }
         // Update media in favorites collection for Android 11+ (API level 30)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        if (isRPlus()) {
             val values = ContentValues().apply {
                 put(MediaStore.MediaColumns.IS_FAVORITE, if (isFavorite) 1 else 0)
             }
