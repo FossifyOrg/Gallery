@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.ContentProviderOperation
 import android.content.ContentValues
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Process
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.graphics.BitmapFactory
@@ -18,7 +20,6 @@ import android.provider.MediaStore.Files
 import android.provider.MediaStore.Images
 import android.provider.Settings
 import android.util.DisplayMetrics
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.exifinterface.media.ExifInterface
 import com.bumptech.glide.Glide
@@ -1072,4 +1073,33 @@ fun Activity.proposeNewFilePath(uri: Uri): Pair<String, Boolean> {
     }
 
     return Pair(newPath, shouldAppendFilename)
+}
+
+fun Activity.updateFavorite(path: String, isFavorite: Boolean) {
+    try {
+        if (isFavorite) {
+            favoritesDB.insert(getFavoriteFromPath(path))
+        } else {
+            favoritesDB.deleteFavoritePath(path)
+        }
+        // Update media in favorites collection for Android 11+ (API level 30)
+        if (isRPlus()) {
+            val uri = getFilePublicUri(File(path), BuildConfig.APPLICATION_ID)
+            if (checkUriPermission(
+                    uri, Process.myPid(), Process.myUid(),
+                    Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                val pendingIntent = MediaStore.createFavoriteRequest(contentResolver, listOf(uri), isFavorite)
+                startIntentSenderForResult(pendingIntent.intentSender, 100, null, 0, 0, 0)
+            } else {
+                val values = ContentValues().apply {
+                    put(MediaStore.MediaColumns.IS_FAVORITE, if (isFavorite) 1 else 0)
+                }
+                contentResolver.update(uri, values, null)
+            }
+        }
+    } catch (_: Exception) {
+        toast(org.fossify.commons.R.string.unknown_error_occurred)
+    }
 }
