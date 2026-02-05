@@ -171,7 +171,7 @@
     <string name="show_recycle_bin_last">Mostra la paperera de reciclatge com a últim element a la pantalla principal</string>
     <string name="allow_down_gesture">Permet tancar la vista de pantalla completa amb un gest cap avall</string>
     <string name="allow_one_to_one_zoom">Permet el zoom 1:1 amb dos tocs dobles</string>
-    <string name="open_videos_on_separate_screen">Obre sempre els vídeos en una pantalla separada amb gestos horitzontals nous</string>
+    <string name="open_videos_on_separate_screen">Reprodueix els vídeos en una pantalla separada amb gestos horitzontals</string>
     <string name="show_notch">Mostra una osca si està disponible</string>
     <string name="allow_rotating_gestures">Permet girar imatges amb gestos</string>
     <string name="file_loading_priority">Prioritat de càrrega de fitxers</string>
@@ -268,4 +268,7 @@
     <string name="overwrite_original">Sobreescriure l\'original</string>
     <string name="video_no_sound">Aquest vídeo no té àudio</string>
     <string name="render_ultra_hdr_photos">Mostra les fotos en Ultra HDR en HDR</string>
+    <string name="on_video_tap">En tocar el vídeo</string>
+    <string name="open_in_app_player">Obre en el reproductor de l\'aplicació</string>
+    <string name="open_system_default_player">Obre l\'aplicació de reproducció predeterminada</string>
 </resources>
