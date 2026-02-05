@@ -178,7 +178,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
             bottomVideoTimeHolder.videoToggleMute.setOnClickListener {
                 mConfig.muteVideos = !mConfig.muteVideos
-                updatePlayerMuteState()
+                updatePlayerMuteState(showToast = true)
             }
 
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
@@ -787,27 +787,21 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         }
     }
 
-    private fun updatePlayerMuteState() {
-        val context = context ?: return
+    private fun updatePlayerMuteState(showToast: Boolean = false) {
         val isMuted = mConfig.muteVideos
-        val drawableId = if (mHasAudio) {
-            if (isMuted) {
-                mExoPlayer?.mute()
-                R.drawable.ic_vector_speaker_off
-            } else {
-                mExoPlayer?.unmute()
-                R.drawable.ic_vector_speaker_on
-            }
-        } else {
-            if (mWasVideoStarted) {
-                activity?.toast(R.string.video_no_sound)
-            }
-            R.drawable.ic_vector_no_sound
+        if (mHasAudio) {
+            if (isMuted) mExoPlayer?.mute() else mExoPlayer?.unmute()
+        } else if (showToast && mWasVideoStarted) {
+            activity?.toast(R.string.video_no_sound)
         }
 
-        binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
-            AppCompatResources.getDrawable(context, drawableId)
-        )
+        val drawableId = when {
+            !mHasAudio -> R.drawable.ic_vector_no_sound
+            isMuted -> R.drawable.ic_vector_speaker_off
+            else -> R.drawable.ic_vector_speaker_on
+        }
+
+        binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(drawableId)
     }
 
     fun playVideo() {
