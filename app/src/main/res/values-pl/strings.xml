@@ -179,7 +179,7 @@
     <string name="show_recycle_bin_last">Pokazuj kosz jako ostatni element na ekranie głównym</string>
     <string name="allow_down_gesture">Zezwalaj na zamykanie widoku pełnoekranowego gestem pociągnięcia w dół</string>
     <string name="allow_one_to_one_zoom">Zezwalaj na powiększanie 1:1 dwoma podwójnymi naciśnięciami</string>
-    <string name="open_videos_on_separate_screen">Zawsze otwieraj wideo na osobnym ekranie z innymi poziomymi gestami</string>
+    <string name="open_videos_on_separate_screen">Odtwarzaj wideo na osobnym ekranie z poziomymi gestami</string>
     <string name="show_notch">Pokazuj wycięcie ekranu, jeśli jest dostępne</string>
     <string name="allow_rotating_gestures">Zezwalaj na obracanie obrazów gestami</string>
     <string name="file_loading_priority">Priorytet ładowania plików</string>
@@ -270,4 +270,7 @@
     <string name="overwrite_original">Nadpisz oryginał</string>
     <string name="video_no_sound">To wideo nie ma dźwięku</string>
     <string name="render_ultra_hdr_photos">Pokazuj obrazy Ultra HDR w HDR</string>
+    <string name="on_video_tap">Przy naciśnięciu wideo</string>
+    <string name="open_in_app_player">Otwórz wbudowany odtwarzacz</string>
+    <string name="open_system_default_player">Otwórz domyślną aplikację odtwarzacza</string>
 </resources>
