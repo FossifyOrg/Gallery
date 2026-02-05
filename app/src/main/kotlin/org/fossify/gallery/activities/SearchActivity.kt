@@ -160,17 +160,23 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
     }
 
     private fun itemClicked(path: String) {
-        val isVideo = path.isVideoFast()
-        if (isVideo && config.videoPlayerType == VIDEO_PLAYER_SYSTEM) {
-            openPath(path, false)
-        } else if (isVideo && config.openVideosOnSeparateScreen && config.videoPlayerType == VIDEO_PLAYER_APP) {
-            launchVideoPlayer(path)
-        } else {
-            Intent(this, ViewPagerActivity::class.java).apply {
-                putExtra(PATH, path)
-                putExtra(SHOW_ALL, false)
-                startActivity(this)
-            }
+        if (!path.isVideoFast()) {
+            openInViewPager(path)
+            return
+        }
+
+        when (config.videoPlayerType) {
+            VIDEO_PLAYER_SYSTEM -> openPath(path = path, forceChooser = false)
+            VIDEO_PLAYER_APP -> if (config.separateVideoPlayer) launchVideoPlayer(path) else openInViewPager(path)
+            else -> openInViewPager(path) // unreachable by design
+        }
+    }
+
+    private fun openInViewPager(path: String) {
+        Intent(this, ViewPagerActivity::class.java).apply {
+            putExtra(PATH, path)
+            putExtra(SHOW_ALL, false)
+            startActivity(this)
         }
     }
 

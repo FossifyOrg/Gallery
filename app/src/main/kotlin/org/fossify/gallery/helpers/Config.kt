@@ -217,9 +217,10 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(MUTE_VIDEOS, false)
         set(muteVideos) = prefs.edit().putBoolean(MUTE_VIDEOS, muteVideos).apply()
 
-    var openVideosOnSeparateScreen: Boolean
-        get() = prefs.getBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, false)
-        set(openVideosOnSeparateScreen) = prefs.edit().putBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, openVideosOnSeparateScreen).apply()
+    var separateVideoPlayer: Boolean
+        get() = prefs.getBoolean(SEPARATE_VIDEO_PLAYER, false)
+        set(separateVideoPlayer) = prefs.edit().putBoolean(SEPARATE_VIDEO_PLAYER, separateVideoPlayer)
+            .apply()
 
     var videoPlayerType: Int
         get() = prefs.getInt(VIDEO_PLAYER_TYPE, VIDEO_PLAYER_APP)

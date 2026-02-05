@@ -189,7 +189,7 @@ open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.Fragment
 
         var filename = getFilenameFromUri(mUri!!)
         mIsFromGallery = intent.getBooleanExtra(IS_FROM_GALLERY, false)
-        if (mIsFromGallery && filename.isVideoFast() && config.openVideosOnSeparateScreen) {
+        if (mIsFromGallery && filename.isVideoFast() && config.separateVideoPlayer) {
             launchVideoPlayer()
             return
         }

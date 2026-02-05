@@ -184,7 +184,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
             videoPlayOutline.setOnClickListener {
-                if (mConfig.openVideosOnSeparateScreen) {
+                if (mConfig.separateVideoPlayer) {
                     launchVideoPlayer()
                 } else {
                     togglePlayPause()
@@ -352,7 +352,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                     })
 
                 videoSurface.onGlobalLayout {
-                    if (mIsFragmentVisible && mConfig.autoplayVideos && !mConfig.openVideosOnSeparateScreen) {
+                    if (mIsFragmentVisible && mConfig.autoplayVideos && !mConfig.separateVideoPlayer) {
                         playVideo()
                     }
                 }
@@ -373,7 +373,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             requireContext().config      // make sure we get a new config, in case the user changed something in the app settings
         requireActivity().updateTextColors(binding.videoHolder)
         val allowVideoGestures = mConfig.allowVideoGestures
-        mTextureView.beGoneIf(mConfig.openVideosOnSeparateScreen || mIsPanorama)
+        mTextureView.beGoneIf(mConfig.separateVideoPlayer || mIsPanorama)
         binding.videoSurfaceFrame.beGoneIf(mTextureView.isGone())
 
         mVolumeSideScroll.beVisibleIf(allowVideoGestures && !mIsPanorama)
@@ -407,7 +407,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         }
 
         mIsFragmentVisible = menuVisible
-        if (mWasFragmentInit && menuVisible && mConfig.autoplayVideos && !mConfig.openVideosOnSeparateScreen) {
+        if (mWasFragmentInit && menuVisible && mConfig.autoplayVideos && !mConfig.separateVideoPlayer) {
             playVideo()
         }
     }
@@ -477,7 +477,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun initExoPlayer() {
-        if (activity == null || mConfig.openVideosOnSeparateScreen || mIsPanorama || mExoPlayer != null) {
+        if (activity == null || mConfig.separateVideoPlayer || mIsPanorama || mExoPlayer != null) {
             return
         }
 
@@ -963,7 +963,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun setVideoSize() {
-        if (activity == null || mConfig.openVideosOnSeparateScreen) {
+        if (activity == null || mConfig.separateVideoPlayer) {
             return
         }
 

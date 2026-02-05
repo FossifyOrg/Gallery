@@ -966,32 +966,40 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             finish()
         } else {
             mWasFullscreenViewOpen = true
-            val isVideo = path.isVideoFast()
-            if (isVideo && config.videoPlayerType == VIDEO_PLAYER_SYSTEM) {
-                val extras = HashMap<String, Boolean>()
-                extras[SHOW_FAVORITES] = mPath == FAVORITES
-                if (path.startsWith(recycleBinPath)) {
-                    extras[IS_IN_RECYCLE_BIN] = true
-                }
+            if (!path.isVideoFast()) {
+                openInViewPager(path)
+                return
+            }
 
-                if (shouldSkipAuthentication()) {
-                    extras[SKIP_AUTHENTICATION] = true
-                }
-                openPath(path, false, extras)
-            } else if (isVideo && config.openVideosOnSeparateScreen && config.videoPlayerType == VIDEO_PLAYER_APP) {
-                launchVideoPlayer(path)
-            } else {
-                Intent(this, ViewPagerActivity::class.java).apply {
-                    putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
-                    putExtra(PATH, path)
-                    putExtra(SHOW_ALL, mShowAll)
-                    putExtra(SHOW_FAVORITES, mPath == FAVORITES)
-                    putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
-                    putExtra(IS_FROM_GALLERY, true)
-                    startActivity(this)
-                }
+            when (config.videoPlayerType) {
+                VIDEO_PLAYER_SYSTEM -> openSystemDefaultPlayer(path)
+                VIDEO_PLAYER_APP -> if (config.separateVideoPlayer) launchVideoPlayer(path) else openInViewPager(path)
+                else -> openInViewPager(path) // unreachable by design
             }
         }
+    }
+
+    private fun openInViewPager(path: String) {
+        Intent(this, ViewPagerActivity::class.java).apply {
+            putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
+            putExtra(PATH, path)
+            putExtra(SHOW_ALL, mShowAll)
+            putExtra(SHOW_FAVORITES, mPath == FAVORITES)
+            putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
+            putExtra(IS_FROM_GALLERY, true)
+            startActivity(this)
+        }
+    }
+
+    private fun openSystemDefaultPlayer(path: String) {
+        openPath(
+            path = path,
+            forceChooser = false,
+            extras = hashMapOf(SHOW_FAVORITES to (mPath == FAVORITES)).apply {
+                if (path.startsWith(recycleBinPath)) put(IS_IN_RECYCLE_BIN, true)
+                if (shouldSkipAuthentication()) put(SKIP_AUTHENTICATION, true)
+            }
+        )
     }
 
     private fun gotMedia(media: ArrayList<ThumbnailItem>, isFromCache: Boolean) {
