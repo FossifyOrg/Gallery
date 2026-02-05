@@ -18,7 +18,6 @@ import android.provider.MediaStore.Files
 import android.provider.MediaStore.Images
 import android.provider.Settings
 import android.util.DisplayMetrics
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.exifinterface.media.ExifInterface
 import com.bumptech.glide.Glide
@@ -78,7 +77,7 @@ fun Activity.openPath(path: String, forceChooser: Boolean, extras: HashMap<Strin
     openPathIntent(path, forceChooser, BuildConfig.APPLICATION_ID, extras = extras)
 }
 
-fun Activity.launchVideoPlayer(path: String, extras: HashMap<String, Boolean> = HashMap()) {
+fun Activity.launchGesturePlayer(path: String, extras: HashMap<String, Boolean> = HashMap()) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, BuildConfig.APPLICATION_ID)
         if (newUri == null) {

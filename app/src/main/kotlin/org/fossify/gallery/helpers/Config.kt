@@ -217,9 +217,9 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(MUTE_VIDEOS, false)
         set(muteVideos) = prefs.edit().putBoolean(MUTE_VIDEOS, muteVideos).apply()
 
-    var separateVideoPlayer: Boolean
-        get() = prefs.getBoolean(SEPARATE_VIDEO_PLAYER, false)
-        set(separateVideoPlayer) = prefs.edit().putBoolean(SEPARATE_VIDEO_PLAYER, separateVideoPlayer)
+    var gestureVideoPlayer: Boolean
+        get() = prefs.getBoolean(GESTURE_VIDEO_PLAYER, false)
+        set(separateVideoPlayer) = prefs.edit().putBoolean(GESTURE_VIDEO_PLAYER, separateVideoPlayer)
             .apply()
 
     var videoPlayerType: Int

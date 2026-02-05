@@ -76,7 +76,7 @@ import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getBottomActionsHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
-import org.fossify.gallery.extensions.launchVideoPlayer
+import org.fossify.gallery.extensions.launchGesturePlayer
 import org.fossify.gallery.extensions.parseFileChannel
 import org.fossify.gallery.helpers.Config
 import org.fossify.gallery.helpers.EXOPLAYER_MAX_BUFFER_MS
@@ -185,7 +185,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
             videoPlayOutline.setOnClickListener {
-                if (mConfig.separateVideoPlayer) activity.launchVideoPlayer(mMedium.path) else togglePlayPause()
+                if (mConfig.gestureVideoPlayer) activity.launchGesturePlayer(mMedium.path) else togglePlayPause()
             }
 
             mPlayPauseButton = bottomVideoTimeHolder.videoTogglePlayPause
@@ -349,7 +349,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                     })
 
                 videoSurface.onGlobalLayout {
-                    if (mIsFragmentVisible && mConfig.autoplayVideos && !mConfig.separateVideoPlayer) {
+                    if (mIsFragmentVisible && mConfig.autoplayVideos && !mConfig.gestureVideoPlayer) {
                         playVideo()
                     }
                 }
@@ -370,7 +370,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             requireContext().config      // make sure we get a new config, in case the user changed something in the app settings
         requireActivity().updateTextColors(binding.videoHolder)
         val allowVideoGestures = mConfig.allowVideoGestures
-        mTextureView.beGoneIf(mConfig.separateVideoPlayer || mIsPanorama)
+        mTextureView.beGoneIf(mConfig.gestureVideoPlayer || mIsPanorama)
         binding.videoSurfaceFrame.beGoneIf(mTextureView.isGone())
 
         mVolumeSideScroll.beVisibleIf(allowVideoGestures && !mIsPanorama)
@@ -404,7 +404,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         }
 
         mIsFragmentVisible = menuVisible
-        val shouldPlayVideo = mWasFragmentInit && menuVisible && mConfig.autoplayVideos && !mConfig.separateVideoPlayer
+        val shouldPlayVideo = mWasFragmentInit && menuVisible && mConfig.autoplayVideos && !mConfig.gestureVideoPlayer
         if (shouldPlayVideo) playVideo()
     }
 
@@ -473,7 +473,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun initExoPlayer() {
-        val shouldSkipInit = activity == null || mConfig.separateVideoPlayer || mIsPanorama || mExoPlayer != null
+        val shouldSkipInit = activity == null || mConfig.gestureVideoPlayer || mIsPanorama || mExoPlayer != null
         if (shouldSkipInit) return
 
         val isContentUri = mMedium.path.startsWith("content://")
@@ -954,9 +954,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun setVideoSize() {
-        if (activity == null || mConfig.separateVideoPlayer) {
-            return
-        }
+        if (activity == null || mConfig.gestureVideoPlayer) return
 
         val videoProportion = mVideoSize.x.toFloat() / mVideoSize.y.toFloat()
         val display = requireActivity().windowManager.defaultDisplay

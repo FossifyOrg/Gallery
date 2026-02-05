@@ -167,7 +167,7 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
 
         when (config.videoPlayerType) {
             VIDEO_PLAYER_SYSTEM -> openPath(path = path, forceChooser = false)
-            VIDEO_PLAYER_APP -> if (config.separateVideoPlayer) launchVideoPlayer(path) else openInViewPager(path)
+            VIDEO_PLAYER_APP -> if (config.gestureVideoPlayer) launchGesturePlayer(path) else openInViewPager(path)
             else -> openInViewPager(path) // unreachable by design
         }
     }

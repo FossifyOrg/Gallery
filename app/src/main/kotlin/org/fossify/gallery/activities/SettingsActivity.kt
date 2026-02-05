@@ -293,10 +293,10 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private fun setupOpenVideosOnSeparateScreen() {
-        binding.settingsOpenVideosOnSeparateScreen.isChecked = config.separateVideoPlayer
+        binding.settingsOpenVideosOnSeparateScreen.isChecked = config.gestureVideoPlayer
         binding.settingsOpenVideosOnSeparateScreenHolder.setOnClickListener {
             binding.settingsOpenVideosOnSeparateScreen.toggle()
-            config.separateVideoPlayer = binding.settingsOpenVideosOnSeparateScreen.isChecked
+            config.gestureVideoPlayer = binding.settingsOpenVideosOnSeparateScreen.isChecked
         }
     }
 
@@ -919,7 +919,7 @@ class SettingsActivity : SimpleActivity() {
                 put(AUTOPLAY_VIDEOS, config.autoplayVideos)
                 put(REMEMBER_LAST_VIDEO_POSITION, config.rememberLastVideoPosition)
                 put(LOOP_VIDEOS, config.loopVideos)
-                put(SEPARATE_VIDEO_PLAYER, config.separateVideoPlayer)
+                put(GESTURE_VIDEO_PLAYER, config.gestureVideoPlayer)
                 put(VIDEO_PLAYER_TYPE, config.videoPlayerType)
                 put(ALLOW_VIDEO_GESTURES, config.allowVideoGestures)
                 put(ANIMATE_GIFS, config.animateGifs)
@@ -1065,7 +1065,7 @@ class SettingsActivity : SimpleActivity() {
                 AUTOPLAY_VIDEOS -> config.autoplayVideos = value.toBoolean()
                 REMEMBER_LAST_VIDEO_POSITION -> config.rememberLastVideoPosition = value.toBoolean()
                 LOOP_VIDEOS -> config.loopVideos = value.toBoolean()
-                SEPARATE_VIDEO_PLAYER -> config.separateVideoPlayer = value.toBoolean()
+                GESTURE_VIDEO_PLAYER -> config.gestureVideoPlayer = value.toBoolean()
                 VIDEO_PLAYER_TYPE -> config.videoPlayerType = value.toInt()
                 ALLOW_VIDEO_GESTURES -> config.allowVideoGestures = value.toBoolean()
                 ANIMATE_GIFS -> config.animateGifs = value.toBoolean()

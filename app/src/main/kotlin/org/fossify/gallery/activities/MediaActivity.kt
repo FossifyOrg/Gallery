@@ -76,7 +76,7 @@ import org.fossify.gallery.extensions.isDownloadsFolder
 import org.fossify.gallery.extensions.launchAbout
 import org.fossify.gallery.extensions.launchCamera
 import org.fossify.gallery.extensions.launchSettings
-import org.fossify.gallery.extensions.launchVideoPlayer
+import org.fossify.gallery.extensions.launchGesturePlayer
 import org.fossify.gallery.extensions.mediaDB
 import org.fossify.gallery.extensions.movePathsInRecycleBin
 import org.fossify.gallery.extensions.openPath
@@ -973,7 +973,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
 
             when (config.videoPlayerType) {
                 VIDEO_PLAYER_SYSTEM -> openSystemDefaultPlayer(path)
-                VIDEO_PLAYER_APP -> if (config.separateVideoPlayer) launchVideoPlayer(path) else openInViewPager(path)
+                VIDEO_PLAYER_APP -> if (config.gestureVideoPlayer) launchGesturePlayer(path) else openInViewPager(path)
                 else -> openInViewPager(path) // unreachable by design
             }
         }
