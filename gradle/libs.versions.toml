@@ -11,6 +11,7 @@ androidx-print = "1.1.0"
 androidx-swiperefreshlayout = "1.2.0"
 androidx-constraintlayout = "2.2.1"
 androidx-documentfile = "1.1.0"
+lifecycle-runtime-ktx = "2.10.0"
 #exif
 exif = "1.0.1"
 #Room
@@ -48,6 +49,7 @@ androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefre
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
 androidx-print = { module = "androidx.print:print", version.ref = "androidx-print" }
 androidx-documentfile = { module = "androidx.documentfile:documentfile", version.ref = "androidx-documentfile" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
 #exif
 exif = { module = "it.sephiroth.android.exif:library", version.ref = "exif" }
 #Room
