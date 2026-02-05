@@ -191,7 +191,7 @@
     <string name="show_recycle_bin_last">Taispeáin an bosca athchúrsála mar an mhír dheireanach ar an bpríomhscáileán</string>
     <string name="allow_down_gesture">Ceadaigh an t-amharc lánscáileáin a dhúnadh le gotha síos</string>
     <string name="allow_one_to_one_zoom">Ceadaigh zúmáil isteach 1:1 le dhá sconna dúbailte</string>
-    <string name="open_videos_on_separate_screen">Oscail físeáin i gcónaí ar scáileán ar leith le gothaí cothrománacha nua</string>
+    <string name="open_videos_on_separate_screen">Seinn físeáin ar scáileán ar leith le gothaí cothrománacha</string>
     <string name="allow_rotating_gestures">Ceadaigh íomhánna rothlacha le gothaí</string>
     <string name="folder_thumbnail_style">Stíl mhionsamhlacha fillteáin</string>
     <string name="file_thumbnail_style">Stíl mhionsamhlacha an chomhaid</string>
@@ -268,4 +268,7 @@
     <string name="overwrite_original">Forscríobh an bhunleagan</string>
     <string name="video_no_sound">Níl aon fhuaim sa fhíseán seo</string>
     <string name="render_ultra_hdr_photos">Taispeáin grianghraif Ultra HDR in HDR</string>
+    <string name="on_video_tap">Ar sconna físe</string>
+    <string name="open_in_app_player">Oscail an seinnteoir san aip</string>
+    <string name="open_system_default_player">Oscail an aip seinnteora réamhshocraithe</string>
 </resources>
