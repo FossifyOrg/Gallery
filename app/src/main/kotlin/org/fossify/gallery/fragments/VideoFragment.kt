@@ -407,9 +407,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         }
 
         mIsFragmentVisible = menuVisible
-        if (mWasFragmentInit && menuVisible && mConfig.autoplayVideos && !mConfig.separateVideoPlayer) {
-            playVideo()
-        }
+        val shouldPlayVideo = mWasFragmentInit && menuVisible && mConfig.autoplayVideos && !mConfig.separateVideoPlayer
+        if (shouldPlayVideo) playVideo()
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -477,9 +476,8 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun initExoPlayer() {
-        if (activity == null || mConfig.separateVideoPlayer || mIsPanorama || mExoPlayer != null) {
-            return
-        }
+        val shouldSkipInit = activity == null || mConfig.separateVideoPlayer || mIsPanorama || mExoPlayer != null
+        if (shouldSkipInit) return
 
         val isContentUri = mMedium.path.startsWith("content://")
         val uri = if (isContentUri) Uri.parse(mMedium.path) else Uri.fromFile(File(mMedium.path))
