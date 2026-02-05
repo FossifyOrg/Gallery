@@ -76,9 +76,10 @@ import org.fossify.gallery.extensions.isDownloadsFolder
 import org.fossify.gallery.extensions.launchAbout
 import org.fossify.gallery.extensions.launchCamera
 import org.fossify.gallery.extensions.launchSettings
-import org.fossify.gallery.extensions.launchVideoPlayer
+import org.fossify.gallery.extensions.launchGesturePlayer
 import org.fossify.gallery.extensions.mediaDB
 import org.fossify.gallery.extensions.movePathsInRecycleBin
+import org.fossify.gallery.extensions.openPath
 import org.fossify.gallery.extensions.openRecycleBin
 import org.fossify.gallery.extensions.restoreRecycleBinPaths
 import org.fossify.gallery.extensions.showRecycleBinEmptyingDialog
@@ -90,6 +91,7 @@ import org.fossify.gallery.helpers.GET_ANY_INTENT
 import org.fossify.gallery.helpers.GET_IMAGE_INTENT
 import org.fossify.gallery.helpers.GET_VIDEO_INTENT
 import org.fossify.gallery.helpers.GridSpacingItemDecoration
+import org.fossify.gallery.helpers.IS_IN_RECYCLE_BIN
 import org.fossify.gallery.helpers.MAX_COLUMN_COUNT
 import org.fossify.gallery.helpers.MediaFetcher
 import org.fossify.gallery.helpers.PATH
@@ -102,6 +104,8 @@ import org.fossify.gallery.helpers.SHOW_RECYCLE_BIN
 import org.fossify.gallery.helpers.SHOW_TEMP_HIDDEN_DURATION
 import org.fossify.gallery.helpers.SKIP_AUTHENTICATION
 import org.fossify.gallery.helpers.SLIDESHOW_START_ON_ENTER
+import org.fossify.gallery.helpers.VIDEO_PLAYER_APP
+import org.fossify.gallery.helpers.VIDEO_PLAYER_SYSTEM
 import org.fossify.gallery.interfaces.MediaOperationsListener
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.models.ThumbnailItem
@@ -962,21 +966,40 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             finish()
         } else {
             mWasFullscreenViewOpen = true
-            val isVideo = path.isVideoFast()
-            if (isVideo && config.openVideosOnSeparateScreen) {
-                launchVideoPlayer(path)
-            } else {
-                Intent(this, ViewPagerActivity::class.java).apply {
-                    putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
-                    putExtra(PATH, path)
-                    putExtra(SHOW_ALL, mShowAll)
-                    putExtra(SHOW_FAVORITES, mPath == FAVORITES)
-                    putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
-                    putExtra(IS_FROM_GALLERY, true)
-                    startActivity(this)
-                }
+            if (!path.isVideoFast()) {
+                openInViewPager(path)
+                return
+            }
+
+            when (config.videoPlayerType) {
+                VIDEO_PLAYER_SYSTEM -> openSystemDefaultPlayer(path)
+                VIDEO_PLAYER_APP -> if (config.gestureVideoPlayer) launchGesturePlayer(path) else openInViewPager(path)
+                else -> openInViewPager(path) // unreachable by design
             }
         }
+    }
+
+    private fun openInViewPager(path: String) {
+        Intent(this, ViewPagerActivity::class.java).apply {
+            putExtra(SKIP_AUTHENTICATION, shouldSkipAuthentication())
+            putExtra(PATH, path)
+            putExtra(SHOW_ALL, mShowAll)
+            putExtra(SHOW_FAVORITES, mPath == FAVORITES)
+            putExtra(SHOW_RECYCLE_BIN, mPath == RECYCLE_BIN)
+            putExtra(IS_FROM_GALLERY, true)
+            startActivity(this)
+        }
+    }
+
+    private fun openSystemDefaultPlayer(path: String) {
+        openPath(
+            path = path,
+            forceChooser = false,
+            extras = hashMapOf(SHOW_FAVORITES to (mPath == FAVORITES)).apply {
+                if (path.startsWith(recycleBinPath)) put(IS_IN_RECYCLE_BIN, true)
+                if (shouldSkipAuthentication()) put(SKIP_AUTHENTICATION, true)
+            }
+        )
     }
 
     private fun gotMedia(media: ArrayList<ThumbnailItem>, isFromCache: Boolean) {

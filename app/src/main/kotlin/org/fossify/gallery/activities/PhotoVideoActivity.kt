@@ -189,8 +189,8 @@ open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.Fragment
 
         var filename = getFilenameFromUri(mUri!!)
         mIsFromGallery = intent.getBooleanExtra(IS_FROM_GALLERY, false)
-        if (mIsFromGallery && filename.isVideoFast() && config.openVideosOnSeparateScreen) {
-            launchVideoPlayer()
+        if (mIsFromGallery && filename.isVideoFast() && config.gestureVideoPlayer) {
+            launchGesturePlayer()
             return
         }
 
@@ -272,7 +272,7 @@ open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.Fragment
         initBottomActions()
     }
 
-    private fun launchVideoPlayer() {
+    private fun launchGesturePlayer() {
         val newUri = getFinalUriFromPath(mUri.toString(), BuildConfig.APPLICATION_ID)
         if (newUri == null) {
             toast(org.fossify.commons.R.string.unknown_error_occurred)

@@ -17,7 +17,8 @@ const val AUTOPLAY_VIDEOS = "autoplay_videos"
 const val REMEMBER_LAST_VIDEO_POSITION = "remember_last_video_position"
 const val LOOP_VIDEOS = "loop_videos"
 const val MUTE_VIDEOS = "mute_videos"
-const val OPEN_VIDEOS_ON_SEPARATE_SCREEN = "open_videos_on_separate_screen"
+const val GESTURE_VIDEO_PLAYER = "open_videos_on_separate_screen"
+const val VIDEO_PLAYER_TYPE = "video_player_type"
 const val ANIMATE_GIFS = "animate_gifs"
 const val MAX_BRIGHTNESS = "max_brightness"
 const val ULTRA_HDR_RENDERING = "ultra_hdr_rendering"
@@ -167,6 +168,10 @@ const val TEMP_FOLDER_NAME = "images"
 const val ROTATE_BY_SYSTEM_SETTING = 0
 const val ROTATE_BY_DEVICE_ROTATION = 1
 const val ROTATE_BY_ASPECT_RATIO = 2
+
+// video player type
+const val VIDEO_PLAYER_APP = 0
+const val VIDEO_PLAYER_SYSTEM = 1
 
 // file loading priority
 const val PRIORITY_SPEED = 0
