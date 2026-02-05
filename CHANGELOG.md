@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Added "On video tap" option to choose between in-app player or system default player ([#917])
+- Added "On video tap" option to choose between in-app player or default player app ([#917])
 
 ### Fixed
 - Fixed unnecessary "Video has no audio" toast when looping videos ([#876])
