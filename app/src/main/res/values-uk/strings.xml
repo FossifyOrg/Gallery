@@ -174,7 +174,7 @@
     <string name="show_recycle_bin_last">Показувати кошик як останній елемент на головному екрані</string>
     <string name="allow_down_gesture">Дозволити закриття повноекранного перегляду свайпом згори вниз</string>
     <string name="allow_one_to_one_zoom">Дозволити масштабування до 1:1 подвійним тапом</string>
-    <string name="open_videos_on_separate_screen">Завжди відкривати відео на окремому екрані з новими горизонтальними жестами</string>
+    <string name="open_videos_on_separate_screen">Відтворювати відео на окремому екрані за допомогою горизонтальних жестів</string>
     <string name="show_notch">Показувати мітку, якщо доступна</string>
     <string name="allow_rotating_gestures">Дозволити обертання зображень жестами</string>
     <string name="file_loading_priority">Пріоритет завантаження файлів</string>
@@ -269,4 +269,8 @@
     <string name="force_landscape_reverse">Примусовий ландшафт (зворотний)</string>
     <string name="overwrite_original">Перезаписати оригінал</string>
     <string name="video_no_sound">Це відео не має аудіо</string>
+    <string name="render_ultra_hdr_photos">Показувати Ultra HDR фото як HDR</string>
+    <string name="on_video_tap">На відеозаписі</string>
+    <string name="open_in_app_player">Відкрити у вбудованому програвачі</string>
+    <string name="open_system_default_player">Відкрити в типовому програвачі застосунку</string>
 </resources>
