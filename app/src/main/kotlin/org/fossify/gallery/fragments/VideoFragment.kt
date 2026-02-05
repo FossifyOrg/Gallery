@@ -76,6 +76,7 @@ import org.fossify.gallery.extensions.getActionBarHeight
 import org.fossify.gallery.extensions.getBottomActionsHeight
 import org.fossify.gallery.extensions.getFormattedDuration
 import org.fossify.gallery.extensions.getFriendlyMessage
+import org.fossify.gallery.extensions.launchVideoPlayer
 import org.fossify.gallery.extensions.parseFileChannel
 import org.fossify.gallery.helpers.Config
 import org.fossify.gallery.helpers.EXOPLAYER_MAX_BUFFER_MS
@@ -184,11 +185,7 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
             videoSurfaceFrame.controller.settings.swallowDoubleTaps = true
 
             videoPlayOutline.setOnClickListener {
-                if (mConfig.separateVideoPlayer) {
-                    launchVideoPlayer()
-                } else {
-                    togglePlayPause()
-                }
+                if (mConfig.separateVideoPlayer) activity.launchVideoPlayer(mMedium.path) else togglePlayPause()
             }
 
             mPlayPauseButton = bottomVideoTimeHolder.videoTogglePlayPause
@@ -591,10 +588,6 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
                 updatePlayerMuteState()
             }
         })
-    }
-
-    private fun launchVideoPlayer() {
-        listener?.launchViewVideoIntent(mMedium.path)
     }
 
     private fun toggleFullscreen() {
