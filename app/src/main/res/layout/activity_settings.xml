@@ -73,7 +73,7 @@
             <org.fossify.commons.views.PurchaseThankYouItem
                 android:id="@+id/settings_purchase_thank_you_holder"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <RelativeLayout
                 android:id="@+id/settings_use_english_holder"
@@ -309,6 +309,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/allow_video_gestures" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_on_video_tap_holder"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_on_video_tap_label"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/on_video_tap" />
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_on_video_tap"
+                    style="@style/SettingsTextValueStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/settings_on_video_tap_label"
+                    tools:text="@string/open_in_app_player" />
 
             </RelativeLayout>
 

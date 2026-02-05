@@ -79,6 +79,7 @@ import org.fossify.gallery.extensions.launchSettings
 import org.fossify.gallery.extensions.launchVideoPlayer
 import org.fossify.gallery.extensions.mediaDB
 import org.fossify.gallery.extensions.movePathsInRecycleBin
+import org.fossify.gallery.extensions.openPath
 import org.fossify.gallery.extensions.openRecycleBin
 import org.fossify.gallery.extensions.restoreRecycleBinPaths
 import org.fossify.gallery.extensions.showRecycleBinEmptyingDialog
@@ -90,6 +91,7 @@ import org.fossify.gallery.helpers.GET_ANY_INTENT
 import org.fossify.gallery.helpers.GET_IMAGE_INTENT
 import org.fossify.gallery.helpers.GET_VIDEO_INTENT
 import org.fossify.gallery.helpers.GridSpacingItemDecoration
+import org.fossify.gallery.helpers.IS_IN_RECYCLE_BIN
 import org.fossify.gallery.helpers.MAX_COLUMN_COUNT
 import org.fossify.gallery.helpers.MediaFetcher
 import org.fossify.gallery.helpers.PATH
@@ -102,6 +104,8 @@ import org.fossify.gallery.helpers.SHOW_RECYCLE_BIN
 import org.fossify.gallery.helpers.SHOW_TEMP_HIDDEN_DURATION
 import org.fossify.gallery.helpers.SKIP_AUTHENTICATION
 import org.fossify.gallery.helpers.SLIDESHOW_START_ON_ENTER
+import org.fossify.gallery.helpers.VIDEO_PLAYER_APP
+import org.fossify.gallery.helpers.VIDEO_PLAYER_SYSTEM
 import org.fossify.gallery.interfaces.MediaOperationsListener
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.models.ThumbnailItem
@@ -963,7 +967,18 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         } else {
             mWasFullscreenViewOpen = true
             val isVideo = path.isVideoFast()
-            if (isVideo && config.openVideosOnSeparateScreen) {
+            if (isVideo && config.videoPlayerType == VIDEO_PLAYER_SYSTEM) {
+                val extras = HashMap<String, Boolean>()
+                extras[SHOW_FAVORITES] = mPath == FAVORITES
+                if (path.startsWith(recycleBinPath)) {
+                    extras[IS_IN_RECYCLE_BIN] = true
+                }
+
+                if (shouldSkipAuthentication()) {
+                    extras[SKIP_AUTHENTICATION] = true
+                }
+                openPath(path, false, extras)
+            } else if (isVideo && config.openVideosOnSeparateScreen && config.videoPlayerType == VIDEO_PLAYER_APP) {
                 launchVideoPlayer(path)
             } else {
                 Intent(this, ViewPagerActivity::class.java).apply {

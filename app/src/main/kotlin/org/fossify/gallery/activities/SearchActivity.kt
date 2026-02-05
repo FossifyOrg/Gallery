@@ -20,6 +20,8 @@ import org.fossify.gallery.helpers.GridSpacingItemDecoration
 import org.fossify.gallery.helpers.MediaFetcher
 import org.fossify.gallery.helpers.PATH
 import org.fossify.gallery.helpers.SHOW_ALL
+import org.fossify.gallery.helpers.VIDEO_PLAYER_APP
+import org.fossify.gallery.helpers.VIDEO_PLAYER_SYSTEM
 import org.fossify.gallery.interfaces.MediaOperationsListener
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.models.ThumbnailItem
@@ -159,7 +161,9 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
 
     private fun itemClicked(path: String) {
         val isVideo = path.isVideoFast()
-        if (isVideo && config.openVideosOnSeparateScreen) {
+        if (isVideo && config.videoPlayerType == VIDEO_PLAYER_SYSTEM) {
+            openPath(path, false)
+        } else if (isVideo && config.openVideosOnSeparateScreen && config.videoPlayerType == VIDEO_PLAYER_APP) {
             launchVideoPlayer(path)
         } else {
             Intent(this, ViewPagerActivity::class.java).apply {

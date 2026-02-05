@@ -221,6 +221,10 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, false)
         set(openVideosOnSeparateScreen) = prefs.edit().putBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, openVideosOnSeparateScreen).apply()
 
+    var videoPlayerType: Int
+        get() = prefs.getInt(VIDEO_PLAYER_TYPE, VIDEO_PLAYER_APP)
+        set(videoPlayerType) = prefs.edit().putInt(VIDEO_PLAYER_TYPE, videoPlayerType).apply()
+
     var displayFileNames: Boolean
         get() = prefs.getBoolean(DISPLAY_FILE_NAMES, false)
         set(display) = prefs.edit().putBoolean(DISPLAY_FILE_NAMES, display).apply()
