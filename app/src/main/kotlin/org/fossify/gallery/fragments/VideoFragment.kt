@@ -788,19 +788,20 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
     }
 
     private fun updatePlayerMuteState(showToast: Boolean = false) {
-        val context = context ?: return
         val isMuted = mConfig.muteVideos
-        val drawableId = if (mHasAudio) {
+        if (mHasAudio) {
             if (isMuted) mExoPlayer?.mute() else mExoPlayer?.unmute()
-            if (isMuted) R.drawable.ic_vector_speaker_off else R.drawable.ic_vector_speaker_on
-        } else {
-            if (showToast && mWasVideoStarted) activity?.toast(R.string.video_no_sound)
-            R.drawable.ic_vector_no_sound
+        } else if (showToast && mWasVideoStarted) {
+            activity?.toast(R.string.video_no_sound)
         }
 
-        binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
-            AppCompatResources.getDrawable(context, drawableId)
-        )
+        val drawableId = when {
+            !mHasAudio -> R.drawable.ic_vector_no_sound
+            isMuted -> R.drawable.ic_vector_speaker_off
+            else -> R.drawable.ic_vector_speaker_on
+        }
+
+        binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(drawableId)
     }
 
     fun playVideo() {
