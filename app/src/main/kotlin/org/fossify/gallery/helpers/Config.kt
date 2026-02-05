@@ -219,7 +219,7 @@ class Config(context: Context) : BaseConfig(context) {
 
     var gestureVideoPlayer: Boolean
         get() = prefs.getBoolean(GESTURE_VIDEO_PLAYER, false)
-        set(separateVideoPlayer) = prefs.edit().putBoolean(GESTURE_VIDEO_PLAYER, separateVideoPlayer)
+        set(gestureVideoPlayer) = prefs.edit().putBoolean(GESTURE_VIDEO_PLAYER, gestureVideoPlayer)
             .apply()
 
     var videoPlayerType: Int
