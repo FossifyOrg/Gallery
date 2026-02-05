@@ -205,7 +205,7 @@
     <string name="show_recycle_bin_last">Show the recycle bin as the last item on the main screen</string>
     <string name="allow_down_gesture">Allow closing the fullscreen view with a down gesture</string>
     <string name="allow_one_to_one_zoom">Allow 1:1 zooming in with two double taps</string>
-    <string name="open_videos_on_separate_screen">Always open videos on a separate screen with new horizontal gestures</string>
+    <string name="open_videos_on_separate_screen">Play videos on a separate screen with horizontal gestures</string>
     <string name="on_video_tap">On video tap</string>
     <string name="open_in_app_player">Open in-app player</string>
     <string name="open_system_default_player">Open default player app</string>
