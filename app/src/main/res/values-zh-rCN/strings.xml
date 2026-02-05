@@ -176,7 +176,7 @@
     <string name="show_recycle_bin_last">在主屏幕末尾显示回收站</string>
     <string name="allow_down_gesture">使用下滑手势退出全屏</string>
     <string name="allow_one_to_one_zoom">两指双击后 1:1 缩放图像</string>
-    <string name="open_videos_on_separate_screen">使用左右滑动快进/快退手势时总是在独立画面中播放视频</string>
+    <string name="open_videos_on_separate_screen">使用横向手势在独立屏幕上播放视频</string>
     <string name="show_notch">显示刘海 (如果可用)</string>
     <string name="allow_rotating_gestures">允许使用手势旋转图像</string>
     <string name="file_loading_priority">文件加载优先事项</string>
@@ -264,4 +264,7 @@
     <string name="overwrite_original">覆盖原文件</string>
     <string name="video_no_sound">此视频没有音频</string>
     <string name="render_ultra_hdr_photos">以 HDR 模式显示 Ultra HDR 照片</string>
+    <string name="open_in_app_player">打开应用内播放器</string>
+    <string name="open_system_default_player">打开默认播放器应用</string>
+    <string name="on_video_tap">点按视频时</string>
 </resources>
