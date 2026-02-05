@@ -5,7 +5,7 @@ kotlin = "2.3.0"
 ksp = "2.3.5"
 #Detekt
 detekt = "1.23.8"
-detektCompose = "0.4.28"
+detektCompose = "0.5.6"
 #AndroidX
 androidx-print = "1.1.0"
 androidx-swiperefreshlayout = "1.2.0"
@@ -17,8 +17,8 @@ exif = "1.0.1"
 room = "2.8.4"
 #Fossify
 commons = "6.1.0"
-#Gradle4
-gradlePlugins-agp = "8.11.1"
+#Gradle
+gradlePlugins-agp = "9.0.0"
 #Other
 androidGifDrawable = "1.2.30"
 androidImageCropper = "4.7.0"
@@ -83,6 +83,5 @@ room = [
 ]
 [plugins]
 android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
-kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
