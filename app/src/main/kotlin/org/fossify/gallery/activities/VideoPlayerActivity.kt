@@ -284,7 +284,7 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         binding.bottomVideoTimeHolder.videoPlaybackSpeed.setOnClickListener { showPlaybackSpeedPicker() }
         binding.bottomVideoTimeHolder.videoToggleMute.setOnClickListener {
             config.muteVideos = !config.muteVideos
-            updatePlayerMuteState()
+            updatePlayerMuteState(showToast = true)
         }
 
         binding.videoSurfaceFrame.setOnClickListener { toggleFullscreen() }
@@ -535,26 +535,21 @@ open class VideoPlayerActivity : BaseViewerActivity(), SeekBar.OnSeekBarChangeLi
         }
     }
 
-    private fun updatePlayerMuteState() {
+    private fun updatePlayerMuteState(showToast: Boolean = false) {
         val isMuted = config.muteVideos
-        val drawableId = if (mHasAudio) {
-            if (isMuted) {
-                mExoPlayer?.mute()
-                R.drawable.ic_vector_speaker_off
-            } else {
-                mExoPlayer?.unmute()
-                R.drawable.ic_vector_speaker_on
-            }
-        } else {
-            if (mWasVideoStarted) {
-                toast(R.string.video_no_sound)
-            }
-            R.drawable.ic_vector_no_sound
+        if (mHasAudio) {
+            if (isMuted) mExoPlayer?.mute() else mExoPlayer?.unmute()
+        } else if (showToast && mWasVideoStarted) {
+            toast(R.string.video_no_sound)
         }
 
-        binding.bottomVideoTimeHolder.videoToggleMute.setImageDrawable(
-            AppCompatResources.getDrawable(this, drawableId)
-        )
+        val drawableId = when {
+            !mHasAudio -> R.drawable.ic_vector_no_sound
+            isMuted -> R.drawable.ic_vector_speaker_off
+            else -> R.drawable.ic_vector_speaker_on
+        }
+
+        binding.bottomVideoTimeHolder.videoToggleMute.setImageResource(drawableId)
     }
 
     private fun setPosition(milliseconds: Long) {

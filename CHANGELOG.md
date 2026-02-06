@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Added "On video tap" option to choose between in-app player or default player app ([#917])
 - Update system favorites collection on Android 11+ when favoriting media ([#848])
+
+### Fixed
+- Fixed unnecessary "Video has no audio" toast when looping videos ([#876])
 
 ## [1.12.0] - 2026-02-02
 ### Changed
@@ -291,8 +295,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
 [#830]: https://github.com/FossifyOrg/Gallery/issues/830
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
-[#876]: https://github.com/FossifyOrg/Gallery/issues/876
 [#848]: https://github.com/FossifyOrg/Gallery/issues/848
+[#876]: https://github.com/FossifyOrg/Gallery/issues/876
+[#917]: https://github.com/FossifyOrg/Gallery/issues/917
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.12.0...HEAD
 [1.12.0]: https://github.com/FossifyOrg/Gallery/compare/1.11.0...1.12.0

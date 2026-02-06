@@ -161,10 +161,10 @@
     <string name="allow_deep_zooming_images">Habilitar zoom aprofundado para imagens</string>
     <string name="hide_extended_details">Ocultar detalhes adicionais quando a barra de status estiver escondida</string>
     <string name="show_at_bottom">Exibir alguns botões de ação na parte inferior da tela</string>
-    <string name="show_recycle_bin">Exibir a Lixeira na tela inicial</string>
+    <string name="show_recycle_bin">Mostrar a lixeira na tela de pastas</string>
     <string name="deep_zoomable_images">Zoom aprofundado para imagens</string>
     <string name="show_highest_quality">Exibir imagens na maior qualidade possível</string>
-    <string name="show_recycle_bin_last">Exibir a Lixeira como o último item na tela inicial</string>
+    <string name="show_recycle_bin_last">Mostrar a lixeira como último item da tela principal</string>
     <string name="allow_down_gesture">Habilitar fechar a exibição em tela cheia com um gesto para baixo</string>
     <string name="allow_one_to_one_zoom">Habilitar zoom 1:1 com dois toques duplos</string>
     <string name="open_videos_on_separate_screen">Sempre abrir vídeos em uma tela separada com novos gestos horizontais</string>
@@ -262,4 +262,6 @@
     </plurals>
     <string name="force_landscape_reverse">Paisagem forçada (reversa)</string>
     <string name="overwrite_original">Sobrescrever original</string>
+    <string name="render_ultra_hdr_photos">Mostrar fotos Ultra HDR em HDR</string>
+    <string name="video_no_sound">Este vídeo não tem áudio</string>
 </resources>
