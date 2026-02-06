@@ -1119,7 +1119,17 @@ private fun Activity.updateFavoriteInMediaStore(uri: Uri, isFavorite: Boolean) {
 private fun isMedia(contentResolver: ContentResolver, uri: Uri): Boolean {
     return try {
         val type = contentResolver.getType(uri) ?: return false
-        type.startsWith("image/") || type.startsWith("video/")
+        val supportedImageTypes = setOf(
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+            "image/gif",
+            "image/bmp",
+            "image/x-ms-bmp"
+        )
+        val isImage = type in supportedImageTypes
+        val isVideo = type.startsWith("video/")
+        isImage || isVideo
     } catch (_: Exception) {
         false
     }
