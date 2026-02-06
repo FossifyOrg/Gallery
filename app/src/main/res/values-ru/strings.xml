@@ -270,4 +270,7 @@
     <string name="overwrite_original">Перезаписать оригинал</string>
     <string name="video_no_sound">Видео без звука</string>
     <string name="render_ultra_hdr_photos">Показывать изображения Ultra HDR в HDR</string>
+    <string name="on_video_tap">При нажатии на видео</string>
+    <string name="open_in_app_player">Открыть встроенный проигрыватель</string>
+    <string name="open_system_default_player">Открыть проигрыватель по умолчанию</string>
 </resources>
