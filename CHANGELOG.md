@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed unnecessary "Video has no audio" toast when looping videos ([#876])
+- Fixed same pencil icons for edit and rename buttons ([#925])
 
 ## [1.12.0] - 2026-02-02
 ### Changed
@@ -296,6 +297,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
 [#876]: https://github.com/FossifyOrg/Gallery/issues/876
 [#917]: https://github.com/FossifyOrg/Gallery/issues/917
+[#925]: https://github.com/FossifyOrg/Gallery/issues/925
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.12.0...HEAD
 [1.12.0]: https://github.com/FossifyOrg/Gallery/compare/1.11.0...1.12.0
