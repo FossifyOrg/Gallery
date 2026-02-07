@@ -5,7 +5,6 @@ import java.io.FileInputStream
 
 plugins {
     alias(libs.plugins.android)
-    alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.ksp)
     alias(libs.plugins.detekt)
 }
@@ -88,7 +87,7 @@ android {
     }
 
     sourceSets {
-        getByName("main").java.srcDirs("src/main/kotlin")
+        getByName("main").java.directories.add("src/main/kotlin")
     }
 
     compileOptions {
@@ -149,6 +148,7 @@ dependencies {
     implementation(libs.android.image.cropper)
     implementation(libs.exif)
     implementation(libs.android.gif.drawable)
+    implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.documentfile)
     implementation(libs.androidx.media3.exoplayer)
