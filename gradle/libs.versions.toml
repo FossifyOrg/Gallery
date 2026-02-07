@@ -7,6 +7,7 @@ ksp = "2.3.5"
 detekt = "1.23.8"
 detektCompose = "0.4.28"
 #AndroidX
+androidx-lifecycle = "2.10.0"
 androidx-print = "1.1.0"
 androidx-swiperefreshlayout = "1.2.0"
 androidx-constraintlayout = "2.2.1"
@@ -43,6 +44,7 @@ app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
 [libraries]
 #AndroidX
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "androidx-lifecycle" }
 androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3Exoplayer" }
 androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "androidx-swiperefreshlayout" }
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
