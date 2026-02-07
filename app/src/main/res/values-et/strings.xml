@@ -172,7 +172,7 @@
     <string name="show_recycle_bin_last">Kuva prügikast põhivaate viimase kirjena</string>
     <string name="allow_down_gesture">Luba täisekraanivaate sulgemist allapoole suunatud viipega</string>
     <string name="allow_one_to_one_zoom">Luba 1:1 suumimist kahe topeltpuudutusega</string>
-    <string name="open_videos_on_separate_screen">Ava videod alati eraldi vaates uute horisontaalsete viibetega</string>
+    <string name="open_videos_on_separate_screen">Esita videod eraldi ekraanidel horisontaalsete viibetega</string>
     <string name="show_notch">Kuva sälk, kui see on saadaval</string>
     <string name="allow_rotating_gestures">Luba piltide pööramist viibetega</string>
     <string name="file_loading_priority">Faili laadimise prioriteet</string>
@@ -266,4 +266,7 @@
     <string name="overwrite_original">Kirjuta originaalfail üle</string>
     <string name="video_no_sound">Selles videos puudub heliriba</string>
     <string name="render_ultra_hdr_photos">Näita Ultra HDR vormingus pilte HDR-vormingus</string>
+    <string name="on_video_tap">Video klõpsamisel</string>
+    <string name="open_in_app_player">Ava rakendusesisene meediaesitaja</string>
+    <string name="open_system_default_player">Ava vaikimisi meediaesitaja</string>
 </resources>
