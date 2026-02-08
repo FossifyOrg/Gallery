@@ -170,7 +170,7 @@
     <string name="show_recycle_bin_last">Кошчето да е последен елемент на главния екран</string>
     <string name="allow_down_gesture">Излизане от цял екран с дърпане надолу</string>
     <string name="allow_one_to_one_zoom">Мащабиране 1:1 с две двойни потупвания</string>
-    <string name="open_videos_on_separate_screen">Отваряне на видео на отделен екран с нов хоризонтален жест</string>
+    <string name="open_videos_on_separate_screen">Възпроизвеждане на видео на отделен екран с хоризонтални жестове</string>
     <string name="show_notch">Показване на прорез на екрана, ако е наличен</string>
     <string name="allow_rotating_gestures">Завъртане на изображения с жестове</string>
     <string name="file_loading_priority">Приоритет на зареждане на файлове</string>
@@ -262,4 +262,7 @@
     <string name="overwrite_original">Презаписване на изходния файл</string>
     <string name="video_no_sound">Видеото няма звук</string>
     <string name="render_ultra_hdr_photos">Показване на снимките в Ultra HDR като HDR</string>
+    <string name="on_video_tap">При докосване на видео</string>
+    <string name="open_in_app_player">Отваряне на вградено изпълняване на видео</string>
+    <string name="open_system_default_player">Отваряне на подразбирано възпроизвеждане на видео</string>
 </resources>
