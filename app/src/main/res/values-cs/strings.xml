@@ -171,7 +171,7 @@
     <string name="show_recycle_bin_last">Zobrazit koš jako poslední položku na hlavní obrazovce</string>
     <string name="allow_down_gesture">Povolit zavírání celoobrazovkového režimu gestem tažení dolů</string>
     <string name="allow_one_to_one_zoom">Povolit přiblížení 1:1 dvojitým klepnutím</string>
-    <string name="open_videos_on_separate_screen">Vždy otevírat videa na vlastní obrazovce s novými vodorovnými gesty</string>
+    <string name="open_videos_on_separate_screen">Přehrávat videa na vlastní obrazovce s vodorovnými gesty</string>
     <string name="show_notch">Zobrazit výřez obrazovky (notch) pokud je dostupný</string>
     <string name="allow_rotating_gestures">Povolit otáčení obrázků gesty</string>
     <string name="file_loading_priority">Priorita načítání obrázků</string>
@@ -268,4 +268,7 @@
     <string name="overwrite_original">Přepsat originál</string>
     <string name="video_no_sound">Toto video nemá žádný zvuk</string>
     <string name="render_ultra_hdr_photos">Zobrazit Ultra HDR fotky v HDR</string>
+    <string name="on_video_tap">Při klepnutí na video</string>
+    <string name="open_in_app_player">Otevřít přehrávač v aplikaci</string>
+    <string name="open_system_default_player">Otevřít výchozí aplikaci přehrávače</string>
 </resources>
