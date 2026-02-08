@@ -51,4 +51,12 @@
     <string name="image_editing_failed">ફોટો ફેરફાર સફળ ના થયું</string>
     <string name="include_folders">સમાવિષ્ટ ફોલ્ડરો</string>
     <string name="unset_as_default_folder">સેટ ડિફૌલ્ટ ફોલ્ડર કદી દો</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">પાક્કું તમને %d ફાઇલ રિસ્ટોર કરવી છે ?</item>
+        <item quantity="other">પાક્કું તમને %d ફાઇલ રિસ્ટોર કરવી છે ?</item>
+    </plurals>
+    <plurals name="failed_to_resize_images">
+        <item quantity="one">%d ફોટો ની સાઇઝ બદલવામાં અસફળ થયા</item>
+        <item quantity="other">%d ફોટા ની સાઇઝ બદલવામાં અસફળ થયા</item>
+    </plurals>
 </resources>
