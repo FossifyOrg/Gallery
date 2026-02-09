@@ -268,4 +268,7 @@
     <string name="overwrite_original">Sobreescribir original</string>
     <string name="video_no_sound">Este vídeo no tiene audio</string>
     <string name="render_ultra_hdr_photos">Mostrar las fotos Ultra HDR en HDR</string>
+    <string name="on_video_tap">Al tocar el video</string>
+    <string name="open_in_app_player">Abrir el reproductor de la aplicación</string>
+    <string name="open_system_default_player">Abrir la aplicación de reproducción predeterminada</string>
 </resources>
