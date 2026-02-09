@@ -172,7 +172,7 @@
     <string name="show_recycle_bin_last">Mostrar la papelera de reciclaje como último elemento en la pantalla principal</string>
     <string name="allow_down_gesture">Permitir cerrar la vista de pantalla completa con un gesto hacia abajo</string>
     <string name="allow_one_to_one_zoom">Permitir zoom 1:1 con un toque doble</string>
-    <string name="open_videos_on_separate_screen">Abrir videos en una pantalla separada con nuevos gestos horizontales</string>
+    <string name="open_videos_on_separate_screen">Reproducir videos en una pantalla separada con gestos horizontales</string>
     <string name="show_notch">Mostrar una muesca si está disponible</string>
     <string name="allow_rotating_gestures">Permitir girar con gestos</string>
     <string name="file_loading_priority">Prioridad de carga de archivos</string>
