@@ -171,7 +171,7 @@
     <string name="one_finger_zoom">Permesi zomadon per unu fingro por plenekranaj aŭdvidaĵoj</string>
     <string name="allow_instant_change">Permesi tuje ŝanĝi aŭdvidaĵojn per alklaki flankojn de la ekrano</string>
     <string name="allow_one_to_one_zoom">Permesi 1:1-an zomon per duobla frapeto</string>
-    <string name="open_videos_on_separate_screen">Ĉiam malfermi filmetojn sur alia ekrano per novaj horizontalaj moviĝoj</string>
+    <string name="open_videos_on_separate_screen">Legi filmetojn sur alia ekrano per horizontalaj moviĝoj</string>
     <string name="file_loading_priority">Prioritato de ŝargo de dosieroj</string>
     <string name="speed">Rapido</string>
     <string name="compromise">Kompromiso</string>
@@ -261,4 +261,8 @@
     <string name="force_landscape_reverse">Ĉiam uzi horizontalan orientiĝon (inverse)</string>
     <string name="overwrite_original">Superskribi originan</string>
     <string name="video_no_sound">Tiu ĉi filmeto ne havas aŭdion</string>
+    <string name="render_ultra_hdr_photos">Montri fotojn «ultra HDR» en HDR</string>
+    <string name="on_video_tap">Al frapeto sur filmeto</string>
+    <string name="open_in_app_player">Malfermi legilon de Galerio</string>
+    <string name="open_system_default_player">Malfermi defaŭltan legilan aplikaĵon</string>
 </resources>
