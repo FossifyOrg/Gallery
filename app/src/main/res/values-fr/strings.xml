@@ -266,4 +266,5 @@
     <string name="overwrite_original">Remplacer l\'original</string>
     <string name="render_ultra_hdr_photos">Afficher les photos Ultra HDR en HDR</string>
     <string name="video_no_sound">Cette vidéo n\'a pas d\'audio</string>
+    <string name="open_system_default_player">Ouvrir l\'application du lecteur par défaut</string>
 </resources>
