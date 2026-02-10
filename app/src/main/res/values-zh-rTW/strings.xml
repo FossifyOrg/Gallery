@@ -142,7 +142,7 @@
     <string name="remember_last_video_position">記住影片上次播放位置</string>
     <string name="loop_videos">循環播放影片</string>
     <string name="animate_gifs">在縮圖顯示 GIF 動畫</string>
-    <string name="max_brightness">自動提高亮度</string>
+    <string name="max_brightness">檢視全螢幕媒體時將亮度設定為最高亮度</string>
     <string name="crop_thumbnails">裁剪縮圖為正方形</string>
     <string name="show_thumbnail_video_duration">顯示影片長度</string>
     <string name="screen_rotation_by">全螢幕時旋轉方向</string>
@@ -169,7 +169,7 @@
     <string name="show_recycle_bin_last">回收桶顯示在主畫面最後</string>
     <string name="allow_down_gesture">以下滑手勢關閉全螢幕檢視</string>
     <string name="allow_one_to_one_zoom">按兩下螢幕兩次來1:1縮放</string>
-    <string name="open_videos_on_separate_screen">啟用影片快轉手勢</string>
+    <string name="open_videos_on_separate_screen">透過橫向手勢在獨立螢幕上播放影片</string>
     <string name="show_notch">允許螢幕凹口遮擋畫面</string>
     <string name="allow_rotating_gestures">使用手勢來旋轉圖片</string>
     <string name="file_loading_priority">檔案讀取優先權</string>
@@ -261,4 +261,8 @@
     <string name="force_landscape_reverse">強制橫向（反轉）</string>
     <string name="overwrite_original">覆寫原始內容</string>
     <string name="video_no_sound">此影片沒有音訊</string>
+    <string name="render_ultra_hdr_photos">以 HDR 模式顯示 Ultra HDR 照片</string>
+    <string name="on_video_tap">輕點影片</string>
+    <string name="open_in_app_player">開啟應用程式內播放程式</string>
+    <string name="open_system_default_player">開啟預設播放器應用程式</string>
 </resources>
