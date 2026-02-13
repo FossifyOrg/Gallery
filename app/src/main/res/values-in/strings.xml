@@ -147,13 +147,13 @@
     <string name="allow_deep_zooming_images">Izinkan zoom gambar lebih dalam</string>
     <string name="hide_extended_details">Sembunyikan detail tambahan ketika bilah status disembunyikan</string>
     <string name="show_at_bottom">Tampilkan tombol tindakan di layar bagian bawah</string>
-    <string name="show_recycle_bin">Tampilkan Keranjang Sampah di layar folder</string>
+    <string name="show_recycle_bin">Tampilkan keranjang sampah di layar folder</string>
     <string name="deep_zoomable_images">Zoom gambar mendalam</string>
     <string name="show_highest_quality">Tampilkan gambar dalam kualitas tertinggi</string>
-    <string name="show_recycle_bin_last">Tampilkan Keranjang Sampah sebagai item terakhir di layar utama</string>
+    <string name="show_recycle_bin_last">Tampilkan keranjang sampah sebagai item terakhir di layar utama</string>
     <string name="allow_down_gesture">Izinkan keluar dari layar penuh dengan menggeser ke bawah</string>
     <string name="allow_one_to_one_zoom">Izinkan zoom 1:1 dengan dua kali ketuk</string>
-    <string name="open_videos_on_separate_screen">Selalu buka video pada layar terpisah dengan gestur horizontal baru</string>
+    <string name="open_videos_on_separate_screen">Putar video di layar terpisah dengan gestur horizontal</string>
     <string name="show_notch">Tampilkan notch jika tersedia</string>
     <string name="allow_rotating_gestures">Izinkan memutar gambar dengan gestur</string>
     <string name="file_loading_priority">Prioritas pemuatan file</string>
@@ -216,7 +216,7 @@
     <string name="faq_14_title">Saya punya file/folder tersembunyi. Bagaimana cara memunculkannya?</string>
     <string name="faq_14_text">Anda bisa memilih menu \"Tampilkan sementara file tersembunyi\" di layar utama, atau \"Tampilkan file tersembunyi\" di pengaturan aplikasi untuk menampilkannya. Jika Anda tidak ingin menyembunyikannya, tekan lama dan pilih \"Jangan sembunyikan\". Folder disembunyikan dengan cara menambahkan file bernama \".nomedia\" di dalamnya, dan Anda bisa menghapus file tersebut dengan aplikasi pengelola file. Peelu diingat bahwa proses penyembunyikan file bekerja secara beruntun, jadi jika Anda menyembunyikan sebuah folder, seluruh subfoldernya juga akan disembunyikan. Jadi untuk memunculkan subfolder, Anda harus memunculkan folder induknya.</string>
     <string name="faq_15_title">Kenapa aplikasi menggunakan sangat banyak ruang kosong\?</string>
-    <string name="faq_15_text">Cache aplikasi bisa mencapai 250MB, ini untuk menjamin pemuatan gambar yang lebih cepat. Jika aplikasi menggunakan lebih banyak lagi ruang kosong, sangat memungkinkan anda memiliki item di dalam Keranjang Sampah. File tersebut akan menambah ukuran aplikasi. Anda bisa mengosongkan Keranjang sampah dengan cara membukanya dan menghapus semua file, atau dari pengaturan aplikasi. Semua file di dalam keranjang sampah akan dihapus secara otomatis setelah 30 hari.</string>
+    <string name="faq_15_text">Cache aplikasi dapat mencapai 250MB, memastikan pemuatan gambar lebih cepat. Jika aplikasi menggunakan ruang lebih banyak, kemungkinan besar disebabkan oleh item di keranjang sampah. File-file tersebut terhitung ke ukuran aplikasi. Anda dapat mengosongkan keranjang sampah dengan membukanya dan menghapus semua file, atau dari pengaturan aplikasi. Setiap file di keranjang sampah dihapus secara otomatis setelah 30 hari.</string>
     <string name="faq_16_title">Apa yang terjadi pada penyembunyian file dan folder, dan mengapa saya tidak bisa melihat item yang tersembunyi lagi\?</string>
     <string name="faq_16_text">Dimulai dengan Android 11, Anda tidak dapat menyembunyikan atau memunculkan file atau folder lagi, Anda juga tidak dapat melihat file atau folder yang tersembunyi di aplikasi galeri karena pembatasan sistem. Anda harus menggunakan beberapa pengelola file untuk melakukannya.</string>
     <string name="faq_16_text_extra">Atau Anda dapat memberikan galeri ini akses ke Semua File melalui pengaturan perangkat Anda, itu akan memungkinkan kami untuk menampilkan item tersembunyi dan pengoperasian file lebih andal.</string>
@@ -262,4 +262,9 @@
     <plurals name="restore_confirmation">
         <item quantity="other">Apakah Anda yakin ingin memulihkan %d file?</item>
     </plurals>
+    <string name="render_ultra_hdr_photos">Tampilkan foto Ultra HDR dalam HDR</string>
+    <string name="on_video_tap">Saat mengetuk video</string>
+    <string name="open_in_app_player">Buka pemutar dalam aplikasi</string>
+    <string name="open_system_default_player">Buka aplikasi pemutar default</string>
+    <string name="video_no_sound">Video ini tidak memiliki audio</string>
 </resources>
