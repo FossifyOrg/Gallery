@@ -25,13 +25,13 @@
     <string name="fix_date_taken">Korrigera fotodatum</string>
     <string name="fixing">Korrigerar…</string>
     <string name="dates_fixed_successfully">Datumen har korrigerats</string>
-    <string name="no_date_takens_found">Inga Datum Tagna värden hittades</string>
+    <string name="no_date_takens_found">Inga fotodatum hittades</string>
     <string name="share_resized">Dela en storleksändrad version</string>
     <string name="switch_to_file_search">Växla till filsökning i alla synliga mappar</string>
     <string name="set_as_default_folder">Använd som standardmapp</string>
     <string name="unset_as_default_folder">Ta bort som standardmapp</string>
-    <string name="reorder_by_dragging">Ändra mappordning genom att dra</string>
-    <string name="reorder_by_dragging_pro">Ändra mappordning genom att dra (Pro)</string>
+    <string name="reorder_by_dragging">Ordna om mappar genom att dra</string>
+    <string name="reorder_by_dragging_pro">Ordna om mappar genom att dra (Pro)</string>
     <string name="restore_to_path">Återställer till \'%s\'</string>
     <string name="filter_media">Filtrera media</string>
     <string name="images">Bilder</string>
@@ -262,4 +262,9 @@
     </plurals>
     <string name="force_landscape_reverse">Tvinga fram liggande (vänd)</string>
     <string name="overwrite_original">Skriv över originalet</string>
+    <string name="render_ultra_hdr_photos">Visa Ultra HDR-foton i HDR</string>
+    <string name="on_video_tap">Vid videotryck</string>
+    <string name="open_in_app_player">Öppna spelaren i appen</string>
+    <string name="open_system_default_player">Öppna standardspelaren</string>
+    <string name="video_no_sound">Videon har inget ljud</string>
 </resources>
