@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.13.1] - 2026-02-14
+### Changed
+- Updated translations
+
 ### Fixed
 - Fixed file size calculations to use SI decimal units (divide by 1000)
 
@@ -306,7 +311,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#917]: https://github.com/FossifyOrg/Gallery/issues/917
 [#925]: https://github.com/FossifyOrg/Gallery/issues/925
 
-[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.13.0...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.13.1...HEAD
+[1.13.1]: https://github.com/FossifyOrg/Gallery/compare/1.13.0...1.13.1
 [1.13.0]: https://github.com/FossifyOrg/Gallery/compare/1.12.0...1.13.0
 [1.12.0]: https://github.com/FossifyOrg/Gallery/compare/1.11.0...1.12.0
 [1.11.0]: https://github.com/FossifyOrg/Gallery/compare/1.10.0...1.11.0
