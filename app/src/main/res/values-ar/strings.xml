@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">الاستديو</string>
-    <string name="edit">تعديل</string>
-    <string name="open_camera">فتح الكاميرا</string>
+    <string name="app_launcher_name">المعرض</string>
+    <string name="edit">عدِّل</string>
+    <string name="open_camera">افتح الكاميرا</string>
     <string name="hidden">(مخفي)</string>
     <string name="excluded">(مستبعد)</string>
     <string name="pin_folder">تثبيت المجلد</string>
@@ -33,7 +33,7 @@
     <string name="reorder_by_dragging">إعادة ترتيب المجلدات عن طريق السحب</string>
     <string name="reorder_by_dragging_pro">إعادة ترتيب المجلدات عن طريق السحب (Pro)</string>
     <string name="restore_to_path">الاستعادة إلى \'%s\'</string>
-    <string name="filter_media">فرز الوسائط</string>
+    <string name="filter_media">تصفية الوسائط</string>
     <string name="images">الصور</string>
     <string name="videos">الفيديوهات</string>
     <string name="gifs">الصور المتحركة (GIF)</string>
