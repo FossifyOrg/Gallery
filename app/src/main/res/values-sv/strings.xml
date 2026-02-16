@@ -166,13 +166,13 @@
     <string name="allow_deep_zooming_images">Tillåt djupzoomning av bilder</string>
     <string name="hide_extended_details">Dölj utökad information när statusfältet är dolt</string>
     <string name="show_at_bottom">Visa några åtgärdsknappar längst ned på skärmen</string>
-    <string name="show_recycle_bin">Visa Papperskorgen i mappvyn</string>
+    <string name="show_recycle_bin">Visa papperskorgen på mappskärmen</string>
     <string name="deep_zoomable_images">Djupt zoombara bilder</string>
     <string name="show_highest_quality">Visa bilder i högsta möjliga kvalitet</string>
-    <string name="show_recycle_bin_last">Visa Papperskorgen som det sista objektet i huvudvyn</string>
+    <string name="show_recycle_bin_last">Visa papperskorgen som det sista objektet på huvudskärmen</string>
     <string name="allow_down_gesture">Tillåt avslutning av helskärmsläget med en nedåtgest</string>
     <string name="allow_one_to_one_zoom">Tillåt 1:1-zoomning med två dubbeltryck</string>
-    <string name="open_videos_on_separate_screen">Öppna alltid videor i en separat vy med nya horisontella gester</string>
+    <string name="open_videos_on_separate_screen">Spela upp videor på en separat skärm med horisontella gester</string>
     <string name="show_notch">Visa notch om tillgängligt</string>
     <string name="allow_rotating_gestures">Tillåt bildrotation med gester</string>
     <string name="file_loading_priority">Filinläsningsprioritet</string>
