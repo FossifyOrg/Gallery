@@ -66,4 +66,8 @@
     <string name="portraits">ઊભા ફોટો</string>
     <string name="hide_folder_description">આ ક્રિયા ફોલ્ડરમાં \'.nomedia\' ફાઇલ નાંખશે જેનાથી એ ફોલ્ડર અને એના અંદરના ફોલ્ડર પણ છુપાડી દેશે. સેટિંગ માં \'છુપાડેલી વસ્તુઓ દેખાડો\' ને ચાલુ બંદ કરવાથી તમે એને પાછું જોયશકસો. શું તમને આ કરવું છે?</string>
     <string name="hidden_folders_placeholder">\".nomedia\" ફાઇલ થી છુપાયેલા એવા કોઈ ફોલ્ડર તમારી પાસે નથી એવું લાગે છે.</string>
+    <string name="hidden_all_files">તમને આ અપ્પ ને બધી ફાઇલ જોવા ની મંજૂરી આપવી પડશે જેનાથી એ છુપાયેલી ફાઇલ ને જોય શકે, નહીં તો આ કામ નહીં કરે.</string>
+    <string name="invalid_values">કૃપયા કરીને બરાબર માપ દર્જ કરો</string>
+    <string name="resize_multiple_images">બહુ બધા ફોટા નો માપ બદલો</string>
+    <string name="resize_factor">ફરીમાપ પરિબળ</string>
 </resources>
