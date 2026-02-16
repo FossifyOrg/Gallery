@@ -59,4 +59,11 @@
         <item quantity="one">%d ફોટો ની સાઇઝ બદલવામાં અસફળ થયા</item>
         <item quantity="other">%d ફોટા ની સાઇઝ બદલવામાં અસફળ થયા</item>
     </plurals>
+    <string name="force_landscape_reverse">­­બળજબરી આડું (ઊલટું)</string>
+    <string name="switch_to_file_search">બધા દૃશ્યમાન ફોલ્ડરમાં ફાઇલ શોધ પર બદલો</string>
+    <string name="raw_images">RAW</string>
+    <string name="svgs">SVG</string>
+    <string name="portraits">ઊભા ફોટો</string>
+    <string name="hide_folder_description">આ ક્રિયા ફોલ્ડરમાં \'.nomedia\' ફાઇલ નાંખશે જેનાથી એ ફોલ્ડર અને એના અંદરના ફોલ્ડર પણ છુપાડી દેશે. સેટિંગ માં \'છુપાડેલી વસ્તુઓ દેખાડો\' ને ચાલુ બંદ કરવાથી તમે એને પાછું જોયશકસો. શું તમને આ કરવું છે?</string>
+    <string name="hidden_folders_placeholder">\".nomedia\" ફાઇલ થી છુપાયેલા એવા કોઈ ફોલ્ડર તમારી પાસે નથી એવું લાગે છે.</string>
 </resources>
