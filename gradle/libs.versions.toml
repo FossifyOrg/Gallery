@@ -21,7 +21,7 @@ commons = "6.1.3"
 #Gradle4
 gradlePlugins-agp = "9.0.0"
 #Other
-androidGifDrawable = "1.2.30"
+androidGifDrawable = "1.2.31"
 androidImageCropper = "4.7.0"
 animationAndroid = "3.0.5"
 glideCompiler = "5.0.5"
