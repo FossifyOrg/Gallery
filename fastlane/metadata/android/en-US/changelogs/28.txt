@@ -1,0 +1,8 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed file size calculations to use SI decimal units (divide by 1000)
+
