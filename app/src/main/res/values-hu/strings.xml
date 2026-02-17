@@ -262,4 +262,10 @@
         <item quantity="other">Biztosan vissza szeretné állítani a(z) %d fájlokat?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Képernyő bekapcsolva tartása teljes képernyős nézetben</string>
+    <string name="force_landscape_reverse">Tájkép kényszerítés (fordított)</string>
+    <string name="overwrite_original">Eredeti felülírása</string>
+    <string name="render_ultra_hdr_photos">Ultra HDR fotók megjelenítése HDR-ben</string>
+    <string name="open_in_app_player">In-app lejátszó használta</string>
+    <string name="open_system_default_player">Alapértelmezett lejátszó alkalmazás megnyitása</string>
+    <string name="video_no_sound">Eme videónak nincs hangja</string>
 </resources>
