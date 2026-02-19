@@ -261,7 +261,7 @@
         <item quantity="one">أمتأكد من أنك تريد استعادة ملف واحد؟</item>
         <item quantity="two">أمتأكد من أنك تريد استعادة ملفين؟</item>
         <item quantity="few">أمتأكد من أنك تريد استعادة %d ملف؟</item>
-        <item quantity="many">أمتأكد من أنك تريد استعادة %d ملف؟</item>
+        <item quantity="many">أمتأكد من أنك تريد استعادة %d ملفًا؟</item>
         <item quantity="other">أمتأكد من أنك تريد استعادة %d ملف؟</item>
     </plurals>
     <string name="full_storage_permission_required">يحتاج معرض Fossify إلى وصول كامل لعرض جميع الصور ومقاطع الفيديو الخاصة بك. انتقل إلى الإعدادات &gt; الأذونات &gt; الصور ومقاطع الفيديو &gt; السماح للكل.</string>
