@@ -249,4 +249,5 @@
     <string name="faq_10_text">네, 편집기에서 사진의 모서리를 드래그하여 사진을 자를 수 있습니다. 이미지 섬네일을 길게 누르고 편집을 선택하거나, 전체 화면에서 편집을 선택하여 편집기로 이동할 수 있습니다.</string>
     <string name="faq_11_title">미디어 파일 섬네일을 그룹화할 수 있나요?</string>
     <string name="faq_12_title">촬영한 날짜 기준 정렬이 제대로 안되는데 어떻게 해야 하나요?</string>
+    <string name="force_landscape_reverse">가로 모드(반전) 강제 적용</string>
 </resources>
