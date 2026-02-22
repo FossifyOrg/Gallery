@@ -6,11 +6,11 @@
     <string name="hidden">(مخفي)</string>
     <string name="excluded">(مستبعد)</string>
     <string name="pin_folder">تثبيت المجلد</string>
-    <string name="unpin_folder">إلغاء تثبيت المجلد</string>
+    <string name="unpin_folder">ألغِ تثبيت المجلد</string>
     <string name="pin_to_the_top">تثبيت في الأعلى</string>
     <string name="show_all">أظهر كل محتويات المجلدات</string>
     <string name="all_folders">كل المجلدات</string>
-    <string name="folder_view">التبديل إلى طريقة عرض المجلد</string>
+    <string name="folder_view">بدّل إلى عرض المجلد</string>
     <string name="other_folder">مجلد آخر</string>
     <string name="show_on_map">عرض على الخريطة</string>
     <string name="unknown_location">موقع غير معروف</string>
@@ -24,9 +24,9 @@
     <string name="use_default_orientation">استخدم الاتجاه الافتراضي</string>
     <string name="fix_date_taken">أصلح قيمة تاريخ الالتقاط</string>
     <string name="fixing">جارٍ الإصلاح…</string>
-    <string name="dates_fixed_successfully">تم إصلاح التواريخ بنجاح</string>
-    <string name="no_date_takens_found">لم يتم العثور على قيم تاريخ التقاط</string>
-    <string name="share_resized">مشاركة الصورة التي تم تغيير حجمها</string>
+    <string name="dates_fixed_successfully">أُصلحت التواريخ بنجاح</string>
+    <string name="no_date_takens_found">لم يُعثر على قيم تاريخ التقاط</string>
+    <string name="share_resized">شارك الصورة التي تم تغيير حجمها</string>
     <string name="switch_to_file_search">التبديل إلى البحث فى الملفات عبر كافة المجلدات المرئية</string>
     <string name="set_as_default_folder">عيِّن كمجلد افتراضي</string>
     <string name="unset_as_default_folder">ألغِ التعيين كمجلد افتراضي</string>
@@ -39,10 +39,10 @@
     <string name="gifs">الصور المتحركة (GIF)</string>
     <string name="raw_images">صور الخام (RAW)</string>
     <string name="svgs">صور الرسومات المتجهة (SVG)</string>
-    <string name="portraits">صور البورتريه</string>
-    <string name="no_media_with_filters">لم يتم العثور على ملفات وسائط مع الفلاتر المحددة.</string>
-    <string name="change_filters_underlined"><u>تغيير الفلاتر</u></string>
-    <string name="hide_folder_description">تقوم هذه الوظيفة بإخفاء المجلد عن طريق إضافة ملف \'. nomedia \' إليه، وستقوم بإخفاء كل المجلدات الفرعية أيضًا. يمكنك رؤيتهم عن طريق تبديل خيار \'إظهار العناصر المخفية \' في الإعدادات. هل تريد المتابعة؟</string>
+    <string name="portraits">طوليّ</string>
+    <string name="no_media_with_filters">لم يُعثر على ملفات وسائط مع التصفيات المحددة.</string>
+    <string name="change_filters_underlined"><u>غيِّر التصفيات</u></string>
+    <string name="hide_folder_description">تقوم هذه الوظيفة بإخفاء المجلد عن طريق إضافة ملف \'. nomedia \' إليه، وستقوم بإخفاء كل المجلدات الفرعية أيضًا. يمكنك رؤيتهم عن طريق تبديل خيار \'إظهار العناصر المخفية \' في الإعدادات. أتريد المتابعة؟</string>
     <string name="exclude_folder_parent">استبعاد المجلد الأصل بدلاً من ذلك (المحدد)؟</string>
     <string name="hidden_folders">المجلدات المخفية</string>
     <string name="manage_hidden_folders">إدارة المجلدات المخفية</string>
@@ -51,12 +51,12 @@
     <string name="cant_unhide_folder">إذا كان المجلد أو أحد مجلداته الأصل يحتوي على نقطة قبل اسمه ، فهو مخفي ولا يمكن إلغاء إخفائه مثل هذا. يجب عليك إزالة النقطة عن طريق إعادة تسميتها.</string>
     <string name="include_folders">المجلدات المضمنة</string>
     <string name="manage_included_folders">إدارة المجلدات المضمنة</string>
-    <string name="add_folder">إضافة مجلد</string>
+    <string name="add_folder">أضف مجلد</string>
     <string name="included_activity_placeholder">إذا كان لديك بعض المجلدات التي تحتوي على الوسائط، ولكن لم يتم التعرف عليها من قبل التطبيق، يمكنك إضافتها يدوياً هنا.
 \n
 \nلن تؤدي إضافة بعض العناصر هنا إلى استبعاد أي مجلد آخر.</string>
-    <string name="no_media_add_included">لم يتم العثور علي أي ملفات وسائط. يمكنك حل المشكلة عن طريق إضافة المجلدات التي تحتوي على ملفات وسائط يدوياً.</string>
-    <string name="resize_and_save">تغيير حجم التحديد والحفظ</string>
+    <string name="no_media_add_included">لم يُعثر علي أي ملفات وسائط. يمكنك حل المشكلة عن طريق إضافة المجلدات التي تحتوي على ملفات وسائط يدويًا.</string>
+    <string name="resize_and_save">غيِّر حجم التحديد والحفظ</string>
     <string name="width">العرض</string>
     <string name="height">الارتفاع</string>
     <string name="keep_aspect_ratio">الحفاظ على نسبة الأبعاد</string>
@@ -260,7 +260,7 @@
         <item quantity="zero">أمتأكد من أنك تريد استعادة %d ملف؟</item>
         <item quantity="one">أمتأكد من أنك تريد استعادة ملف واحد؟</item>
         <item quantity="two">أمتأكد من أنك تريد استعادة ملفين؟</item>
-        <item quantity="few">أمتأكد من أنك تريد استعادة %d ملف؟</item>
+        <item quantity="few">أمتأكد من أنك تريد استعادة %d ملفات؟</item>
         <item quantity="many">أمتأكد من أنك تريد استعادة %d ملفًا؟</item>
         <item quantity="other">أمتأكد من أنك تريد استعادة %d ملف؟</item>
     </plurals>
