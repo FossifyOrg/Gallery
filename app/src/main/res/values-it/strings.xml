@@ -148,7 +148,7 @@
     <string name="autoplay_videos">Riproduci automaticamente i video</string>
     <string name="remember_last_video_position">Ricorda l\'ultimo stato di riproduzione dei video</string>
     <string name="loop_videos">Ripeti i video</string>
-    <string name="animate_gifs">Anima le GIF in miniatura</string>
+    <string name="animate_gifs">Anima le GIF nelle miniature</string>
     <string name="max_brightness">Luminosità max durante la visualizzazione</string>
     <string name="crop_thumbnails">Ritaglia le miniature in quadrati</string>
     <string name="show_thumbnail_video_duration">Mostra la durata del video</string>
