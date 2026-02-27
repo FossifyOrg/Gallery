@@ -6,4 +6,8 @@
     </plurals>
     <string name="app_launcher_name">Gallery</string>
     <string name="edit">Edit</string>
+    <plurals name="failed_to_resize_images">
+        <item quantity="one">Failed to resize %d image</item>
+        <item quantity="other">Failed to resize %d images</item>
+    </plurals>
 </resources>
