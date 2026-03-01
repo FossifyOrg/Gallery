@@ -1074,18 +1074,6 @@ fun Context.getFavoriteFromPath(path: String): Favorite {
     return Favorite(null, path, path.getFilenameFromPath(), path.getParentPath())
 }
 
-fun Context.updateFavorite(path: String, isFavorite: Boolean) {
-    try {
-        if (isFavorite) {
-            favoritesDB.insert(getFavoriteFromPath(path))
-        } else {
-            favoritesDB.deleteFavoritePath(path)
-        }
-    } catch (e: Exception) {
-        toast(org.fossify.commons.R.string.unknown_error_occurred)
-    }
-}
-
 // remove the "recycle_bin" from the file path prefix, replace it with real bin path /data/user...
 fun Context.getUpdatedDeletedMedia(): ArrayList<Medium> {
     val media = try {

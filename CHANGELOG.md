@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.13.0] - 2026-02-06
 ### Added
 - Added "On video tap" option to choose between in-app player or default player app ([#917])
+- Update system favorites collection on Android 11+ when favoriting media ([#848])
 
 ### Changed
 - Updated translations
@@ -307,6 +308,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#800]: https://github.com/FossifyOrg/Gallery/issues/800
 [#830]: https://github.com/FossifyOrg/Gallery/issues/830
 [#831]: https://github.com/FossifyOrg/Gallery/issues/831
+[#848]: https://github.com/FossifyOrg/Gallery/issues/848
 [#876]: https://github.com/FossifyOrg/Gallery/issues/876
 [#917]: https://github.com/FossifyOrg/Gallery/issues/917
 [#925]: https://github.com/FossifyOrg/Gallery/issues/925
