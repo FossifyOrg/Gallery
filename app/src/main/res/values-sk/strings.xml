@@ -171,7 +171,7 @@
     <string name="show_recycle_bin_last">Zobraziť odpadkový kôš ako poslednú položku na hlavnej obrazovke</string>
     <string name="allow_down_gesture">Povoliť zatváranie celoobrazovkového režimu potiahnutím prsta dole</string>
     <string name="allow_one_to_one_zoom">Povoliť 1:1 priblíženie dvojnásobným dvojklikom</string>
-    <string name="open_videos_on_separate_screen">Vždy otvárať videá na novej obrazovke s novými vodorovnými gestami</string>
+    <string name="open_videos_on_separate_screen">Otvárať videá na novej obrazovke s novými vodorovnými gestami</string>
     <string name="show_notch">Zobraziť výrez obrazovky, ak je dostupný</string>
     <string name="allow_rotating_gestures">Povoliť otáčanie obrázkov gestami</string>
     <string name="file_loading_priority">Priorita pri načítavaní súborov</string>
@@ -262,4 +262,10 @@
     <string name="faq_1_title">Ako viem Fossify Galériu nastaviť ako predvolenú galériu v zariadení?</string>
     <string name="faq_1_text">Najprv vyhľadajte aktuálnu predvolenú galériu v sekcii Aplikácie v nastaveniach zariadenia, stlačte \"Predvolené otváranie\", potom \"Vymazať predvolené predvoľby\". Keď potom budete otvárať obrázok alebo video, zobrazí sa ponuka aplikácií na jeho otvorenie, v ktorej viete vybrať Fossify Galériu ako predvolenú.</string>
     <string name="faq_5_text">Vylúčenie priečinka zabraňuje zobrazeniu priečinka iba vo Fossify Galérii, ale Skryť funguje v rámci celého zariadenia, takže skryje tieto priečinky aj v iných galériách. Funguje to tak, že sa vytvorí \".nomedia\" súbor v danom priečinku, ktorý sa potom dá tiež zmazať s akoukoľvek aplikáciou na správu súborov. Poznámka: niektoré zariadenia neumožňujú skrytie priečinkov ako Camera, Screenshots a Downloads.</string>
+    <string name="overwrite_original">Prepísať originál</string>
+    <string name="render_ultra_hdr_photos">Ukázať Ultra HDR fotky v HDR</string>
+    <string name="open_in_app_player">Otvoriť prehrávač v aplikácii</string>
+    <string name="open_system_default_player">Otvoriť predvolenú aplikáciu na prehrávanie</string>
+    <string name="on_video_tap">Klepnite na video</string>
+    <string name="video_no_sound">žiadne audio</string>
 </resources>
