@@ -257,7 +257,7 @@
     <string name="open_system_default_player">افتح تطبيق المشغل الافتراضي</string>
     <string name="failed_to_load_media">تعذر تحميل الوسائط.</string>
     <plurals name="restore_confirmation">
-        <item quantity="zero">أمتأكد من أنك تريد استعادة %d ملف؟</item>
+        <item quantity="zero">لا ملفات لاستعادة</item>
         <item quantity="one">أمتأكد من أنك تريد استعادة ملف واحد؟</item>
         <item quantity="two">أمتأكد من أنك تريد استعادة ملفين؟</item>
         <item quantity="few">أمتأكد من أنك تريد استعادة %d ملفات؟</item>
