@@ -17,7 +17,7 @@ exif = "1.0.1"
 #Room
 room = "2.8.4"
 #Fossify
-commons = "6.1.5"
+commons = "6.1.6"
 #Gradle4
 gradlePlugins-agp = "9.0.1"
 #Other
@@ -33,7 +33,7 @@ androidphotofilters = "193f2ae509"
 sanselan = "0.97-incubator"
 media3Exoplayer = "1.9.2"
 okhttp = "5.3.2"
-okio = "3.16.4"
+okio = "3.17.0"
 picasso = "2.71828"
 subsamplingScaleImageView = "d705c3c4ad"
 #build
