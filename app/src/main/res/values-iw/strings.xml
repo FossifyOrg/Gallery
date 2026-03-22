@@ -13,7 +13,7 @@
     <string name="other_folder">תיקייה אחרת</string>
     <string name="show_on_map">הצגה על המפה</string>
     <string name="unknown_location">מיקום לא ידוע</string>
-    <string name="volume">עוצמה</string>
+    <string name="volume">עוצמת קול</string>
     <string name="brightness">בהירות</string>
     <string name="lock_orientation">נעילת כיוון הצפיה</string>
     <string name="unlock_orientation">ביטול נעילת כיוון הצפיה</string>
@@ -214,7 +214,7 @@
     <string name="allow_changing_aspect_ratio">אפשר לשנות את יחס הגובה-רוחב</string>
     <string name="import_favorite_paths">ייבוא מועדפים</string>
     <string name="faq_2_title">נעלתי את האפליקציה עם סיסמה, אבל שכחתי אותה. מה אני יכול לעשות?</string>
-    <string name="faq_5_title">מה ההבדל בין הסתרה לבין החרגת תיקיה?</string>
+    <string name="faq_5_title">מה ההבדל בין הסתרת תיקייה לבין החרגתה?</string>
     <string name="faq_6_title">מדוע מופיעות תיקיות עם אמנות עטיפת מוזיקה או מדבקות?</string>
     <string name="faq_7_title">תיקייה עם תמונות לא מופיעה, או שהיא לא מציגה את כל הפריטים. מה אני יכול לעשות?</string>
     <string name="faq_8_title">מה אם אני רוצה שרק כמה תיקיות מסוימות יהיו גלויות?</string>
