@@ -169,7 +169,7 @@
     <string name="show_recycle_bin_last">Vis papirkurven som siste element på hovedskjermen</string>
     <string name="allow_down_gesture">Tillat lukking av mediavisningen med en nedoverbevegelse</string>
     <string name="allow_one_to_one_zoom">Tillat å zoome 1:1 med to dobbeltrykk</string>
-    <string name="open_videos_on_separate_screen">Åpne alltid videoer på en separat skjerm med nye horisontale bevegelser</string>
+    <string name="open_videos_on_separate_screen">Spill videoer på en separat skjerm med horisontale bevegelser</string>
     <string name="show_notch">Vis flik hvis tilgjengelig</string>
     <string name="allow_rotating_gestures">Tillat rotering av bilder med fingerbevegelser</string>
     <string name="file_loading_priority">Fillastingsprioritet</string>
@@ -221,4 +221,8 @@
     <string name="wallpaper">Bakgrunnsbilde</string>
     <string name="force_landscape_reverse">Framtving landskap (omvendt)</string>
     <string name="overwrite_original">Overskriv original</string>
+    <string name="video_no_sound">Denne videoen har ingen lyd</string>
+    <string name="open_system_default_player">Åpne standardspilleren</string>
+    <string name="open_in_app_player">Åpne spilleren i appen</string>
+    <string name="on_video_tap">Ved videotrykk</string>
 </resources>
