@@ -392,7 +392,8 @@ class PhotoFragment : ViewPagerFragment() {
         if (!menuVisible && mIsMotionVideoPlaying) {
             stopMotionPhotoVideo()
         }
-        if (menuVisible && mWasInit && mIsMotionPhoto && !mIsMotionVideoPlaying && context?.config?.autoplayMotionPhotos == true) {
+        val shouldAutoplayMotionPhoto = mIsMotionPhoto && !mIsMotionVideoPlaying && context?.config?.autoplayMotionPhotos == true
+        if (menuVisible && mWasInit && shouldAutoplayMotionPhoto) {
             playMotionPhotoVideo()
         }
         if (mWasInit) {
@@ -937,9 +938,9 @@ class PhotoFragment : ViewPagerFragment() {
                     mMotionPhotoSurface = surface
                     initMotionPhotoPlayer(surface, info)
                 }
-                override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, w: Int, h: Int) {}
+                override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, w: Int, h: Int) = Unit
                 override fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean = true
-                override fun onSurfaceTextureUpdated(surface: SurfaceTexture) {}
+                override fun onSurfaceTextureUpdated(surface: SurfaceTexture) = Unit
             }
         }
     }

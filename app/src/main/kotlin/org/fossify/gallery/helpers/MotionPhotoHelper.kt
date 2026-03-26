@@ -6,6 +6,7 @@ import org.apache.sanselan.common.byteSources.ByteSourceInputStream
 import org.apache.sanselan.formats.jpeg.JpegImageParser
 import java.io.File
 import java.io.RandomAccessFile
+import androidx.core.net.toUri
 
 data class MotionPhotoInfo(
     val videoOffsetFromStart: Long,
@@ -16,8 +17,7 @@ object MotionPhotoHelper {
 
     private const val SCAN_RANGE = 5L * 1024 * 1024
 
-    // ftyp box signatures: the 4-byte box size + "ftyp" marker
-    private val FTYP_MARKER = byteArrayOf(0x66, 0x74, 0x79, 0x70) // "ftyp"
+    private val FTYP_MARKER = "ftyp".toByteArray(Charsets.US_ASCII)
 
     fun detectMotionPhoto(context: Context, path: String, name: String): MotionPhotoInfo? {
         if (!name.endsWith(".jpg", true) && !name.endsWith(".jpeg", true)) {
@@ -26,16 +26,14 @@ object MotionPhotoHelper {
 
         val xmpXml = try {
             val inputStream = if (path.startsWith("content:/")) {
-                context.contentResolver.openInputStream(Uri.parse(path))
+                context.contentResolver.openInputStream(path.toUri())
             } else {
                 File(path).inputStream()
             }
             inputStream?.use {
                 JpegImageParser().getXmpXml(ByteSourceInputStream(it, name), HashMap<String, Any>())
             }
-        } catch (e: Exception) {
-            null
-        } catch (e: OutOfMemoryError) {
+        } catch (_: OutOfMemoryError) {
             null
         }
 
@@ -119,7 +117,6 @@ object MotionPhotoHelper {
                 buffer[i + 3] == FTYP_MARKER[3]
             ) {
                 val boxStart = i - 4
-                if (boxStart < 0) continue
                 val boxSize = ((buffer[boxStart].toInt() and 0xFF) shl 24) or
                     ((buffer[boxStart + 1].toInt() and 0xFF) shl 16) or
                     ((buffer[boxStart + 2].toInt() and 0xFF) shl 8) or
