@@ -909,8 +909,6 @@ class PhotoFragment : ViewPagerFragment() {
 
         mIsMotionVideoPlaying = true
         binding.motionPhotoPlay.beGone()
-        binding.gesturesView.beGone()
-        binding.subsamplingView.beGone()
 
         val textureView = binding.motionPhotoSurface
         textureView.beVisible()
@@ -953,6 +951,13 @@ class PhotoFragment : ViewPagerFragment() {
                     override fun onPlaybackStateChanged(playbackState: Int) {
                         if (playbackState == Player.STATE_ENDED) {
                             stopMotionPhotoVideo()
+                        }
+                    }
+
+                    override fun onRenderedFirstFrame() {
+                        activity?.runOnUiThread {
+                            binding.gesturesView.beGone()
+                            binding.subsamplingView.beGone()
                         }
                     }
 
