@@ -111,11 +111,7 @@ object MotionPhotoHelper {
         // The box structure is: [4 bytes size][4 bytes "ftyp"][4+ bytes brand]
         // So we look for "ftyp" at position i, and the box starts at i-4.
         for (i in 4 until buffer.size - 4) {
-            if (buffer[i] == FTYP_MARKER[0] &&
-                buffer[i + 1] == FTYP_MARKER[1] &&
-                buffer[i + 2] == FTYP_MARKER[2] &&
-                buffer[i + 3] == FTYP_MARKER[3]
-            ) {
+            if (matchesFtypMarker(buffer, i)) {
                 val boxStart = i - 4
                 val boxSize = ((buffer[boxStart].toInt() and 0xFF) shl 24) or
                     ((buffer[boxStart + 1].toInt() and 0xFF) shl 16) or
@@ -128,4 +124,9 @@ object MotionPhotoHelper {
         }
         return null
     }
+
+    private fun matchesFtypMarker(buffer: ByteArray, i: Int): Boolean = buffer[i] == FTYP_MARKER[0] &&
+        buffer[i + 1] == FTYP_MARKER[1] &&
+        buffer[i + 2] == FTYP_MARKER[2] &&
+        buffer[i + 3] == FTYP_MARKER[3]
 }
