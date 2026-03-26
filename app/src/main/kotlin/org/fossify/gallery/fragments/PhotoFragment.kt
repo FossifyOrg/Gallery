@@ -147,6 +147,7 @@ class PhotoFragment : ViewPagerFragment() {
     private var mIsMotionPhoto = false
     private var mMotionPhotoInfo: MotionPhotoInfo? = null
     private var mMotionPhotoPlayer: ExoPlayer? = null
+    private var mMotionPhotoSurface: Surface? = null
     private var mIsMotionVideoPlaying = false
 
     private var mStoredShowExtendedDetails = false
@@ -926,11 +927,15 @@ class PhotoFragment : ViewPagerFragment() {
         textureView.beVisible()
 
         if (textureView.isAvailable) {
-            initMotionPhotoPlayer(Surface(textureView.surfaceTexture), info)
+            val surface = Surface(textureView.surfaceTexture)
+            mMotionPhotoSurface = surface
+            initMotionPhotoPlayer(surface, info)
         } else {
             textureView.surfaceTextureListener = object : TextureView.SurfaceTextureListener {
-                override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
-                    initMotionPhotoPlayer(Surface(surface), info)
+                override fun onSurfaceTextureAvailable(surfaceTexture: SurfaceTexture, width: Int, height: Int) {
+                    val surface = Surface(surfaceTexture)
+                    mMotionPhotoSurface = surface
+                    initMotionPhotoPlayer(surface, info)
                 }
                 override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, w: Int, h: Int) {}
                 override fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean = true
@@ -1013,6 +1018,8 @@ class PhotoFragment : ViewPagerFragment() {
     private fun stopMotionPhotoVideo() {
         mMotionPhotoPlayer?.release()
         mMotionPhotoPlayer = null
+        mMotionPhotoSurface?.release()
+        mMotionPhotoSurface = null
         mIsMotionVideoPlaying = false
 
         activity?.runOnUiThread {

@@ -9,6 +9,7 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.BaseDataSource
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DataSpec
+import android.os.ParcelFileDescriptor
 import java.io.File
 import java.io.RandomAccessFile
 import androidx.core.net.toUri
@@ -21,6 +22,7 @@ class MotionPhotoDataSource(
 ) : BaseDataSource(false) {
 
     private var randomAccessFile: RandomAccessFile? = null
+    private var parcelFileDescriptor: ParcelFileDescriptor? = null
     private var inputStream: java.io.InputStream? = null
     private var bytesRemaining = 0L
     private var opened = false
@@ -40,6 +42,7 @@ class MotionPhotoDataSource(
         if (filePath.startsWith("content:/")) {
             val pfd = context.contentResolver.openFileDescriptor(filePath.toUri(), "r")
                 ?: throw java.io.FileNotFoundException("Cannot open $filePath")
+            parcelFileDescriptor = pfd
             val fis = java.io.FileInputStream(pfd.fileDescriptor)
             fis.skip(videoOffset + position)
             inputStream = fis
@@ -82,6 +85,11 @@ class MotionPhotoDataSource(
             inputStream?.close()
         } finally {
             inputStream = null
+        }
+        try {
+            parcelFileDescriptor?.close()
+        } finally {
+            parcelFileDescriptor = null
         }
         if (opened) {
             opened = false
