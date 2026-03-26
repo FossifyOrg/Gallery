@@ -391,6 +391,9 @@ class PhotoFragment : ViewPagerFragment() {
         if (!menuVisible && mIsMotionVideoPlaying) {
             stopMotionPhotoVideo()
         }
+        if (menuVisible && mWasInit && mIsMotionPhoto && !mIsMotionVideoPlaying && context?.config?.autoplayMotionPhotos == true) {
+            playMotionPhotoVideo()
+        }
         if (mWasInit) {
             val isNotAnimatedContent =
                 !mMedium.isGIF() && !mMedium.isApng() && !mMedium.isAvif() && !mMedium.isWebP()
