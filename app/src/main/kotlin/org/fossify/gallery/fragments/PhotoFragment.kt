@@ -969,7 +969,7 @@ class PhotoFragment : ViewPagerFragment() {
                 addListener(object : Player.Listener {
                     override fun onPlaybackStateChanged(playbackState: Int) {
                         if (playbackState == Player.STATE_ENDED) {
-                            stopMotionPhotoVideo()
+                            activity?.runOnUiThread { stopMotionPhotoVideo() }
                         }
                     }
 
@@ -985,7 +985,7 @@ class PhotoFragment : ViewPagerFragment() {
                     }
 
                     override fun onPlayerError(error: PlaybackException) {
-                        stopMotionPhotoVideo()
+                        activity?.runOnUiThread { stopMotionPhotoVideo() }
                     }
                 })
             }
