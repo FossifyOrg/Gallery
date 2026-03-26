@@ -182,6 +182,11 @@ class PhotoFragment : ViewPagerFragment() {
             instantNextItem.setOnClickListener { listener?.goToNextItem() }
             panoramaOutline.setOnClickListener { openPanorama() }
             motionPhotoPlay.setOnClickListener { playMotionPhotoVideo() }
+            motionPhotoSurface.setOnClickListener {
+                if (mIsMotionVideoPlaying) {
+                    stopMotionPhotoVideo()
+                }
+            }
 
             instantPrevItem.parentView = container
             instantNextItem.parentView = container
@@ -896,9 +901,13 @@ class PhotoFragment : ViewPagerFragment() {
         mMotionPhotoInfo = info
 
         activity?.runOnUiThread {
-            binding.motionPhotoPlay.beVisibleIf(mIsMotionPhoto)
-            if (mIsFullscreen && mIsMotionPhoto) {
-                binding.motionPhotoPlay.alpha = 0f
+            if (mIsMotionPhoto && mIsFragmentVisible && requireContext().config.autoplayMotionPhotos) {
+                playMotionPhotoVideo()
+            } else {
+                binding.motionPhotoPlay.beVisibleIf(mIsMotionPhoto)
+                if (mIsFullscreen && mIsMotionPhoto) {
+                    binding.motionPhotoPlay.alpha = 0f
+                }
             }
         }
     }
@@ -937,11 +946,13 @@ class PhotoFragment : ViewPagerFragment() {
         val mediaSource = ProgressiveMediaSource.Factory(factory)
             .createMediaSource(MediaItem.fromUri(Uri.fromFile(File(mMedium.path))))
 
+        val shouldLoop = requireContext().config.loopMotionPhotos
+
         mMotionPhotoPlayer = ExoPlayer.Builder(requireContext())
             .setSeekParameters(SeekParameters.EXACT)
             .build()
             .apply {
-                repeatMode = Player.REPEAT_MODE_OFF
+                repeatMode = if (shouldLoop) Player.REPEAT_MODE_ONE else Player.REPEAT_MODE_OFF
                 setVideoSurface(surface)
                 setMediaSource(mediaSource)
                 prepare()
