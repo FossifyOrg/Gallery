@@ -77,32 +77,31 @@ object MotionPhotoHelper {
     }
 
     private fun findVideoOffsetFromContentUri(context: Context, path: String): MotionPhotoInfo? {
-        val uri = Uri.parse(path)
-        val pfd = context.contentResolver.openFileDescriptor(uri, "r") ?: return null
-        return pfd.use {
-            val fileSize = it.statSize
-            if (fileSize < 12) return null
+        val uri = path.toUri()
+        val fileSize = context.contentResolver.openFileDescriptor(uri, "r")?.use { it.statSize }?.takeIf { it >= 12 } ?: return null
+        val scanStart = maxOf(0L, fileSize - SCAN_RANGE)
+        val scanLength = (fileSize - scanStart).toInt()
+        val buffer = readBytesFromUri(context, uri, scanStart, scanLength) ?: return null
+        val relativeOffset = findFtypOffset(buffer) ?: return null
+        val absoluteOffset = scanStart + relativeOffset
+        return MotionPhotoInfo(
+            videoOffsetFromStart = absoluteOffset,
+            videoLength = fileSize - absoluteOffset
+        )
+    }
 
-            val scanStart = maxOf(0L, fileSize - SCAN_RANGE)
-            val scanLength = (fileSize - scanStart).toInt()
-
-            val inputStream = context.contentResolver.openInputStream(uri) ?: return null
-            inputStream.use { stream ->
-                stream.skip(scanStart)
-                val buffer = ByteArray(scanLength)
-                var totalRead = 0
-                while (totalRead < scanLength) {
-                    val read = stream.read(buffer, totalRead, scanLength - totalRead)
-                    if (read == -1) break
-                    totalRead += read
-                }
-                val relativeOffset = findFtypOffset(buffer) ?: return null
-                val absoluteOffset = scanStart + relativeOffset
-                MotionPhotoInfo(
-                    videoOffsetFromStart = absoluteOffset,
-                    videoLength = fileSize - absoluteOffset
-                )
+    private fun readBytesFromUri(context: Context, uri: Uri, offset: Long, length: Int): ByteArray? {
+        val inputStream = context.contentResolver.openInputStream(uri) ?: return null
+        return inputStream.use { stream ->
+            stream.skip(offset)
+            val buffer = ByteArray(length)
+            var totalRead = 0
+            while (totalRead < length) {
+                val read = stream.read(buffer, totalRead, length - totalRead)
+                if (read == -1) break
+                totalRead += read
             }
+            buffer
         }
     }
 
