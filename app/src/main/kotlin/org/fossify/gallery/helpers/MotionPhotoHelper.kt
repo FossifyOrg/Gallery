@@ -2,11 +2,11 @@ package org.fossify.gallery.helpers
 
 import android.content.Context
 import android.net.Uri
+import androidx.core.net.toUri
 import org.apache.sanselan.common.byteSources.ByteSourceInputStream
 import org.apache.sanselan.formats.jpeg.JpegImageParser
 import java.io.File
 import java.io.RandomAccessFile
-import androidx.core.net.toUri
 
 data class MotionPhotoInfo(
     val videoOffsetFromStart: Long,
@@ -16,6 +16,9 @@ data class MotionPhotoInfo(
 object MotionPhotoHelper {
 
     private const val SCAN_RANGE = 5L * 1024 * 1024
+    private const val MIN_FILE_SIZE = 12L
+    private const val MIN_BOX_SIZE = 8
+    private const val MAX_BOX_SIZE = 64
 
     private val FTYP_MARKER = "ftyp".toByteArray(Charsets.US_ASCII)
 
@@ -58,7 +61,7 @@ object MotionPhotoHelper {
     private fun findVideoOffsetFromFile(path: String): MotionPhotoInfo? {
         val file = File(path)
         val fileSize = file.length()
-        if (fileSize < 12) return null
+        if (fileSize < MIN_FILE_SIZE) return null
 
         val scanStart = maxOf(0L, fileSize - SCAN_RANGE)
         val scanLength = (fileSize - scanStart).toInt()
@@ -78,7 +81,10 @@ object MotionPhotoHelper {
 
     private fun findVideoOffsetFromContentUri(context: Context, path: String): MotionPhotoInfo? {
         val uri = path.toUri()
-        val fileSize = context.contentResolver.openFileDescriptor(uri, "r")?.use { it.statSize }?.takeIf { it >= 12 } ?: return null
+        val fileSize = context.contentResolver.openFileDescriptor(uri, "r")
+            ?.use { it.statSize }
+            ?.takeIf { it >= MIN_FILE_SIZE }
+            ?: return null
         val scanStart = maxOf(0L, fileSize - SCAN_RANGE)
         val scanLength = (fileSize - scanStart).toInt()
         val buffer = readBytesFromUri(context, uri, scanStart, scanLength) ?: return null
@@ -105,18 +111,20 @@ object MotionPhotoHelper {
         }
     }
 
+    @Suppress("MagicNumber")
     private fun findFtypOffset(buffer: ByteArray): Int? {
         // Search for "ftyp" marker and validate it's an MP4 box header.
         // The box structure is: [4 bytes size][4 bytes "ftyp"][4+ bytes brand]
         // So we look for "ftyp" at position i, and the box starts at i-4.
-        for (i in 4 until buffer.size - 4) {
+        val markerSize = FTYP_MARKER.size
+        for (i in markerSize until buffer.size - markerSize) {
             if (matchesFtypMarker(buffer, i)) {
-                val boxStart = i - 4
+                val boxStart = i - markerSize
                 val boxSize = ((buffer[boxStart].toInt() and 0xFF) shl 24) or
                     ((buffer[boxStart + 1].toInt() and 0xFF) shl 16) or
                     ((buffer[boxStart + 2].toInt() and 0xFF) shl 8) or
                     (buffer[boxStart + 3].toInt() and 0xFF)
-                if (boxSize in 8..64) {
+                if (boxSize in MIN_BOX_SIZE..MAX_BOX_SIZE) {
                     return boxStart
                 }
             }
@@ -124,6 +132,7 @@ object MotionPhotoHelper {
         return null
     }
 
+    @Suppress("MagicNumber")
     private fun matchesFtypMarker(buffer: ByteArray, i: Int): Boolean = buffer[i] == FTYP_MARKER[0] &&
         buffer[i + 1] == FTYP_MARKER[1] &&
         buffer[i + 2] == FTYP_MARKER[2] &&
