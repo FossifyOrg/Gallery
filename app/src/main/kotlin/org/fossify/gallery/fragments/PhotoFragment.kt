@@ -392,7 +392,8 @@ class PhotoFragment : ViewPagerFragment() {
         if (!menuVisible && mIsMotionVideoPlaying) {
             stopMotionPhotoVideo()
         }
-        val shouldAutoplayMotionPhoto = mIsMotionPhoto && !mIsMotionVideoPlaying && context?.config?.autoplayMotionPhotos == true
+        val shouldAutoplayMotionPhoto = mIsMotionPhoto && !mIsMotionVideoPlaying &&
+            context?.config?.autoplayMotionPhotos == true
         if (menuVisible && mWasInit && shouldAutoplayMotionPhoto) {
             playMotionPhotoVideo()
         }
