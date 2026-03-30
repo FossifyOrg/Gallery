@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 8.11.1" type="baseline" client="gradle" dependencies="false" name="AGP (8.11.1)" variant="all" version="8.11.1">
+<issues format="6" by="lint 9.0.1" type="baseline" client="gradle" dependencies="false" name="AGP (9.0.1)" variant="all" version="9.0.1">
 
     <issue
         id="CheckResult"
@@ -41,7 +41,7 @@
         errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/extensions/Activity.kt"
-            line="170"
+            line="189"
             column="29"/>
     </issue>
 
@@ -52,7 +52,7 @@
         errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/extensions/Activity.kt"
-            line="176"
+            line="195"
             column="25"/>
     </issue>
 
@@ -63,7 +63,7 @@
         errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/extensions/Activity.kt"
-            line="176"
+            line="195"
             column="25"/>
     </issue>
 
@@ -96,7 +96,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/SettingsActivity.kt"
-            line="166"
+            line="167"
             column="13"/>
     </issue>
 
@@ -145,28 +145,6 @@
     </issue>
 
     <issue
-        id="AndroidGradlePluginVersion"
-        message="A newer version of Gradle than 8.13 is available: 8.14.4"
-        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="$HOME/work/Gallery/Gallery/gradle/wrapper/gradle-wrapper.properties"
-            line="3"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.application than 8.11.1 is available: 9.0.0. (There is also a newer version of 8.11.𝑥 available, if upgrading to 9.0.0 is difficult: 8.11.2)"
-        errorLine1="gradlePlugins-agp = &quot;8.11.1&quot;"
-        errorLine2="                    ~~~~~~~~">
-        <location
-            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="21"
-            column="21"/>
-    </issue>
-
-    <issue
         id="LockedOrientationActivity"
         message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices"
         errorLine1="            android:screenOrientation=&quot;portrait&quot;"
@@ -195,74 +173,8 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="635"
+            line="631"
             column="17"/>
-    </issue>
-
-    <issue
-        id="UnsafeOptInUsageError"
-        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
-        errorLine1="            VideoFragment()"
-        errorLine2="            ~~~~~~~~~~~~~">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/adapters/MyPagerAdapter.kt"
-            line="30"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnsafeOptInUsageError"
-        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
-        errorLine1="            mFragment = if (mIsVideo) VideoFragment() else PhotoFragment()"
-        errorLine2="                                      ~~~~~~~~~~~~~">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/activities/PhotoVideoActivity.kt"
-            line="261"
-            column="39"/>
-    </issue>
-
-    <issue
-        id="UnsafeOptInUsageError"
-        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
-        errorLine1="        Intent(applicationContext, VideoPlayerActivity::class.java).apply {"
-        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/activities/PhotoVideoActivity.kt"
-            line="284"
-            column="36"/>
-    </issue>
-
-    <issue
-        id="UnsafeOptInUsageError"
-        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
-        errorLine1="                (getCurrentFragment() as? VideoFragment)!!.playVideo()"
-        errorLine2="                                          ~~~~~~~~~~~~~">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="733"
-            column="43"/>
-    </issue>
-
-    <issue
-        id="UnsafeOptInUsageError"
-        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
-        errorLine1="                (getCurrentFragment() as? VideoFragment)!!.playVideo()"
-        errorLine2="                                                           ~~~~~~~~~">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="733"
-            column="60"/>
-    </issue>
-
-    <issue
-        id="UnsafeOptInUsageError"
-        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
-        errorLine1="        val isPlaying = (getCurrentFragment() as? VideoFragment)?.mIsPlaying == true"
-        errorLine2="                                                  ~~~~~~~~~~~~~">
-        <location
-            file="src/main/kotlin/org/fossify/gallery/activities/ViewPagerActivity.kt"
-            line="1337"
-            column="51"/>
     </issue>
 
     <issue
@@ -272,7 +184,7 @@
         errorLine2="                ~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="562"
+            line="558"
             column="17"/>
     </issue>
 
@@ -283,7 +195,7 @@
         errorLine2="                ~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="431"
+            line="432"
             column="17"/>
     </issue>
 
@@ -291,14 +203,14 @@
         id="Aligned16KB"
         message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.13/transforms/15e4b31d5110a1dcfc48649ed3caa224/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
+            file="$GRADLE_USER_HOME/caches/9.3.1/transforms/f78e2c3475b46b7a573700f5888b98cb/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
     </issue>
 
     <issue
         id="Aligned16KB"
         message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
         <location
-            file="$GRADLE_USER_HOME/caches/8.13/transforms/15e4b31d5110a1dcfc48649ed3caa224/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
+            file="$GRADLE_USER_HOME/caches/9.3.1/transforms/f78e2c3475b46b7a573700f5888b98cb/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
     </issue>
 
     <issue
@@ -308,7 +220,7 @@
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="67"
+            line="69"
             column="24"/>
     </issue>
 
@@ -688,7 +600,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;force_landscape_reverse&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;force_landscape_reverse&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;force_landscape_reverse&quot;>Force landscape (reverse)&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -765,7 +677,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;switch_to_file_search&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;switch_to_file_search&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;switch_to_file_search&quot;>Switch to file search across all visible folders&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -831,7 +743,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;restore_confirmation&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;restore_confirmation&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;plurals name=&quot;restore_confirmation&quot;>"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -842,7 +754,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;full_storage_permission_required&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;full_storage_permission_required&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;full_storage_permission_required&quot;>Fossify Gallery needs full access to display all your photos and videos. Go to Settings > Permissions > Photos and videos > Allow all.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -897,7 +809,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;raw_images&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;raw_images&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;raw_images&quot;>RAW images&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
@@ -908,7 +820,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;svgs&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;svgs&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;svgs&quot;>SVGs&lt;/string>"
         errorLine2="            ~~~~~~~~~~~">
         <location
@@ -919,7 +831,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;portraits&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;portraits&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;portraits&quot;>Portraits&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
@@ -952,7 +864,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;hide_folder_description&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;hide_folder_description&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;hide_folder_description&quot;>This function hides the folder by adding a \&apos;.nomedia\&apos; file into it, it will hide all subfolders too. You can see them by toggling the \&apos;Show hidden items\&apos; option in Settings. Continue?&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -963,7 +875,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;exclude_folder_description&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;exclude_folder_description&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;exclude_folder_description&quot;>This will exclude the selection together with its subfolders from Fossify Gallery only. You can manage excluded folders in Settings.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -985,7 +897,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;excluded_activity_placeholder&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;excluded_activity_placeholder&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;excluded_activity_placeholder&quot;>Excluding folders will make them together with their subfolders hidden just in Fossify Gallery, they will still be visible in other applications.\n\nIf you want to hide them from other apps too, use the Hide function.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1018,7 +930,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;hidden_folders_placeholder&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
+        message="&quot;hidden_folders_placeholder&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;hidden_folders_placeholder&quot;>Seems like you don\&apos;t have any folders hidden with a \&quot;.nomedia\&quot; file.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1029,7 +941,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;hidden_all_files&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;hidden_all_files&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;hidden_all_files&quot;>You have to grant the app All Files access to see hidden files, else it cannot work.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1150,7 +1062,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;invalid_values&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;invalid_values&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;invalid_values&quot;>Please enter a valid resolution&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1161,7 +1073,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;resize_multiple_images&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;resize_multiple_images&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;resize_multiple_images&quot;>Resize multiple images&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1172,7 +1084,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;resize_factor&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;resize_factor&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;resize_factor&quot;>Resize factor&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1183,7 +1095,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;resize_factor_info&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;resize_factor_info&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;resize_factor_info&quot;>Resize images to the given percentage, value must be within 10 and 90.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1205,7 +1117,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;failed_to_resize_images&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;failed_to_resize_images&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;plurals name=&quot;failed_to_resize_images&quot;>"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1216,7 +1128,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;images_resized_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;images_resized_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;images_resized_successfully&quot;>Images resized successfully&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1271,7 +1183,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;invalid_image_path&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;invalid_image_path&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;invalid_image_path&quot;>Invalid image path&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1282,7 +1194,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;invalid_video_path&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;invalid_video_path&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;invalid_video_path&quot;>Invalid video path&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1304,7 +1216,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;video_editing_failed&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;video_editing_failed&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;video_editing_failed&quot;>Video editing failed&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1315,7 +1227,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;image_editing_cancelled&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;image_editing_cancelled&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;image_editing_cancelled&quot;>Image editing cancelled&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1326,7 +1238,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;video_editing_cancelled&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;video_editing_cancelled&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;video_editing_cancelled&quot;>Video editing cancelled&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1337,7 +1249,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;file_edited_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;file_edited_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;file_edited_successfully&quot;>File edited successfully&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1348,7 +1260,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;image_edited_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;image_edited_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;image_edited_successfully&quot;>Image edited successfully&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1359,7 +1271,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;video_edited_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;video_edited_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;video_edited_successfully&quot;>Video edited successfully&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1370,7 +1282,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;edit_image_with&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;edit_image_with&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;edit_image_with&quot;>Edit image with:&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1381,7 +1293,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;edit_video_with&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;edit_video_with&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;edit_video_with&quot;>Edit video with:&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1392,7 +1304,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;no_image_editor_found&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;no_image_editor_found&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;no_image_editor_found&quot;>No image editor found&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1403,7 +1315,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;no_video_editor_found&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;no_video_editor_found&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;no_video_editor_found&quot;>No video editor found&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1414,7 +1326,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;unknown_file_location&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;unknown_file_location&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;unknown_file_location&quot;>Unknown file location&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1425,7 +1337,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;overwrite_original&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
+        message="&quot;overwrite_original&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;overwrite_original&quot;>Overwrite original&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1436,7 +1348,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;error_saving_file&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
+        message="&quot;error_saving_file&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;error_saving_file&quot;>Could not overwrite the source file&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1447,7 +1359,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;rotate_left&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;rotate_left&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;rotate_left&quot;>Rotate left&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
@@ -1458,7 +1370,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;rotate_right&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;rotate_right&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;rotate_right&quot;>Rotate right&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1469,7 +1381,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;rotate_one_eighty&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;rotate_one_eighty&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;rotate_one_eighty&quot;>Rotate by 180º&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1480,7 +1392,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;transform&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;transform&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;transform&quot;>Transform&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
@@ -1491,7 +1403,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;crop&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;crop&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;crop&quot;>Crop&lt;/string>"
         errorLine2="            ~~~~~~~~~~~">
         <location
@@ -1502,7 +1414,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;draw&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;draw&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;draw&quot;>Draw&lt;/string>"
         errorLine2="            ~~~~~~~~~~~">
         <location
@@ -1513,7 +1425,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;flip&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;flip&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;flip&quot;>Flip&lt;/string>"
         errorLine2="            ~~~~~~~~~~~">
         <location
@@ -1524,7 +1436,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;flip_horizontally&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;flip_horizontally&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;flip_horizontally&quot;>Flip horizontally&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1535,7 +1447,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;flip_vertically&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;flip_vertically&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;flip_vertically&quot;>Flip vertically&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1546,7 +1458,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;free_aspect_ratio&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;free_aspect_ratio&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;free_aspect_ratio&quot;>Free&lt;/string>                  &lt;!-- available as an option: 1:1, 4:3, 16:9, free -->"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1557,7 +1469,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;other_aspect_ratio&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;other_aspect_ratio&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;other_aspect_ratio&quot;>Other&lt;/string>                &lt;!-- available as an option: 1:1, 4:3, 16:9, free, other -->"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1568,7 +1480,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;wallpaper&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;wallpaper&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;wallpaper&quot;>Wallpaper&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
@@ -1579,7 +1491,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;set_as_wallpaper&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;set_as_wallpaper&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;set_as_wallpaper&quot;>Set as Wallpaper&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1590,7 +1502,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;set_as_wallpaper_failed&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;set_as_wallpaper_failed&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;set_as_wallpaper_failed&quot;>Setting as Wallpaper failed&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1601,7 +1513,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;set_as_wallpaper_with&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;set_as_wallpaper_with&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;set_as_wallpaper_with&quot;>Set as wallpaper with:&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1612,7 +1524,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;setting_wallpaper&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;setting_wallpaper&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;setting_wallpaper&quot;>Setting wallpaper&amp;#8230;&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1623,7 +1535,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;wallpaper_set_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;wallpaper_set_successfully&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;nn&quot; (Norwegian Nynorsk), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;wallpaper_set_successfully&quot;>Wallpaper set successfully&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -2085,7 +1997,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;render_ultra_hdr_photos&quot; is not translated in &quot;hi&quot; (Hindi), &quot;pt&quot; (Portuguese), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hr&quot; (Croatian), &quot;hu&quot; (Hungarian), &quot;uk&quot; (Ukrainian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;eo&quot; (Esperanto), &quot;is&quot; (Icelandic), &quot;it&quot; (Italian), &quot;my&quot; (Burmese), &quot;es&quot; (Spanish), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;vi&quot; (Vietnamese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;fr&quot; (French), &quot;kab&quot; (Kabyle), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;ga&quot; (Irish), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;sv&quot; (Swedish), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish), &quot;tr&quot; (Turkish)"
+        message="&quot;render_ultra_hdr_photos&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish)"
         errorLine1="    &lt;string name=&quot;render_ultra_hdr_photos&quot;>Show Ultra HDR photos in HDR&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -2206,7 +2118,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;keep_screen_on_fullscreen_photos&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;keep_screen_on_fullscreen_photos&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;keep_screen_on_fullscreen_photos&quot;>Keep the screen on while viewing fullscreen photos&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -2239,7 +2151,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;playback_speed&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
+        message="&quot;playback_speed&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;playback_speed&quot;>Playback speed&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -2405,11 +2317,44 @@
     <issue
         id="MissingTranslation"
         message="&quot;open_videos_on_separate_screen&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;open_videos_on_separate_screen&quot;>Always open videos on a separate screen with new horizontal gestures&lt;/string>"
+        errorLine1="    &lt;string name=&quot;open_videos_on_separate_screen&quot;>Play videos on a separate screen with horizontal gestures&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
             line="208"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;on_video_tap&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;fr&quot; (French), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish)"
+        errorLine1="    &lt;string name=&quot;on_video_tap&quot;>On video tap&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="209"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;open_in_app_player&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;fr&quot; (French), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish)"
+        errorLine1="    &lt;string name=&quot;open_in_app_player&quot;>Open in-app player&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="210"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;open_system_default_player&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish)"
+        errorLine1="    &lt;string name=&quot;open_system_default_player&quot;>Open default player app&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="211"
             column="13"/>
     </issue>
 
@@ -2420,7 +2365,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="209"
+            line="212"
             column="13"/>
     </issue>
 
@@ -2431,7 +2376,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="210"
+            line="213"
             column="13"/>
     </issue>
 
@@ -2442,7 +2387,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="211"
+            line="214"
             column="13"/>
     </issue>
 
@@ -2453,7 +2398,7 @@
         errorLine2="            ~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="212"
+            line="215"
             column="13"/>
     </issue>
 
@@ -2464,7 +2409,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="213"
+            line="216"
             column="13"/>
     </issue>
 
@@ -2475,7 +2420,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="214"
+            line="217"
             column="13"/>
     </issue>
 
@@ -2486,7 +2431,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="215"
+            line="218"
             column="13"/>
     </issue>
 
@@ -2497,7 +2442,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="216"
+            line="219"
             column="13"/>
     </issue>
 
@@ -2508,7 +2453,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="217"
+            line="220"
             column="13"/>
     </issue>
 
@@ -2519,7 +2464,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="218"
+            line="221"
             column="13"/>
     </issue>
 
@@ -2530,7 +2475,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="219"
+            line="222"
             column="13"/>
     </issue>
 
@@ -2541,7 +2486,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="220"
+            line="223"
             column="13"/>
     </issue>
 
@@ -2552,7 +2497,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="221"
+            line="224"
             column="13"/>
     </issue>
 
@@ -2563,7 +2508,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="222"
+            line="225"
             column="13"/>
     </issue>
 
@@ -2574,7 +2519,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="223"
+            line="226"
             column="13"/>
     </issue>
 
@@ -2585,7 +2530,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="224"
+            line="227"
             column="13"/>
     </issue>
 
@@ -2596,7 +2541,7 @@
         errorLine2="            ~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="225"
+            line="228"
             column="13"/>
     </issue>
 
@@ -2607,7 +2552,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="226"
+            line="229"
             column="13"/>
     </issue>
 
@@ -2618,7 +2563,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="227"
+            line="230"
             column="13"/>
     </issue>
 
@@ -2629,7 +2574,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="228"
+            line="231"
             column="13"/>
     </issue>
 
@@ -2640,7 +2585,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="229"
+            line="232"
             column="13"/>
     </issue>
 
@@ -2651,7 +2596,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="230"
+            line="233"
             column="13"/>
     </issue>
 
@@ -2662,7 +2607,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="231"
+            line="234"
             column="13"/>
     </issue>
 
@@ -2673,7 +2618,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="232"
+            line="235"
             column="13"/>
     </issue>
 
@@ -2684,7 +2629,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="233"
+            line="236"
             column="13"/>
     </issue>
 
@@ -2695,7 +2640,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="234"
+            line="237"
             column="13"/>
     </issue>
 
@@ -2706,7 +2651,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="235"
+            line="238"
             column="13"/>
     </issue>
 
@@ -2717,7 +2662,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="236"
+            line="239"
             column="13"/>
     </issue>
 
@@ -2728,7 +2673,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="237"
+            line="240"
             column="13"/>
     </issue>
 
@@ -2739,7 +2684,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="238"
+            line="241"
             column="13"/>
     </issue>
 
@@ -2750,7 +2695,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="239"
+            line="242"
             column="13"/>
     </issue>
 
@@ -2761,7 +2706,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="242"
+            line="245"
             column="13"/>
     </issue>
 
@@ -2772,7 +2717,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="243"
+            line="246"
             column="13"/>
     </issue>
 
@@ -2783,7 +2728,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="244"
+            line="247"
             column="13"/>
     </issue>
 
@@ -2794,7 +2739,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="245"
+            line="248"
             column="13"/>
     </issue>
 
@@ -2805,7 +2750,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="248"
+            line="251"
             column="13"/>
     </issue>
 
@@ -2816,7 +2761,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="249"
+            line="252"
             column="13"/>
     </issue>
 
@@ -2827,48 +2772,15 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="250"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="MissingTranslation"
-        message="&quot;failed_to_load_media&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;failed_to_load_media&quot;>Failed to load media.&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/values/strings.xml"
             line="253"
             column="13"/>
     </issue>
 
     <issue
         id="MissingTranslation"
-        message="&quot;file_is_malformed_or_corrupted&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;file_is_malformed_or_corrupted&quot;>File is malformed or corrupted.&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/values/strings.xml"
-            line="254"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="MissingTranslation"
-        message="&quot;media_exceeds_device_capabilities&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;media_exceeds_device_capabilities&quot;>Media exceeds device capabilities.&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/values/strings.xml"
-            line="255"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="MissingTranslation"
-        message="&quot;unsupported_format&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;unsupported_format&quot;>Unsupported format.&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        message="&quot;failed_to_load_media&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nb&quot; (Norwegian Bokmål), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        errorLine1="    &lt;string name=&quot;failed_to_load_media&quot;>Failed to load media.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
             line="256"
@@ -2877,9 +2789,31 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;video_no_sound&quot; is not translated in &quot;hi&quot; (Hindi), &quot;pt&quot; (Portuguese), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hr&quot; (Croatian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;it&quot; (Italian), &quot;my&quot; (Burmese), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;vi&quot; (Vietnamese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;fr&quot; (French), &quot;kab&quot; (Kabyle), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;sv&quot; (Swedish), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish)"
-        errorLine1="    &lt;string name=&quot;video_no_sound&quot;>This video has no audio&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        message="&quot;file_is_malformed_or_corrupted&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        errorLine1="    &lt;string name=&quot;file_is_malformed_or_corrupted&quot;>File is malformed or corrupted.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="257"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;media_exceeds_device_capabilities&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        errorLine1="    &lt;string name=&quot;media_exceeds_device_capabilities&quot;>Media exceeds device capabilities.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="258"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;unsupported_format&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;bqi&quot;, &quot;ckb&quot;"
+        errorLine1="    &lt;string name=&quot;unsupported_format&quot;>Unsupported format.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
             line="259"
@@ -2888,9 +2822,9 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;faq_1_title&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
-        errorLine1="    &lt;string name=&quot;faq_1_title&quot;>How can I make Fossify Gallery the default device gallery?&lt;/string>"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        message="&quot;video_no_sound&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;iw&quot; (Hebrew), &quot;eu&quot; (Basque), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;, &quot;da&quot; (Danish)"
+        errorLine1="    &lt;string name=&quot;video_no_sound&quot;>This video has no audio&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
             line="262"
@@ -2899,12 +2833,23 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;faq_1_text&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;faq_1_title&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        errorLine1="    &lt;string name=&quot;faq_1_title&quot;>How can I make Fossify Gallery the default device gallery?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="265"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;faq_1_text&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;faq_1_text&quot;>First you have to find the currently default gallery in the Apps section of your device settings, look for a button that says something like \&quot;Open by default\&quot;, click on it, then select \&quot;Clear defaults\&quot;."
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="263"
+            line="266"
             column="13"/>
     </issue>
 
@@ -2915,7 +2860,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="265"
+            line="268"
             column="13"/>
     </issue>
 
@@ -2926,7 +2871,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="266"
+            line="269"
             column="13"/>
     </issue>
 
@@ -2937,7 +2882,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="267"
+            line="270"
             column="13"/>
     </issue>
 
@@ -2948,7 +2893,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="268"
+            line="271"
             column="13"/>
     </issue>
 
@@ -2959,7 +2904,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="269"
+            line="272"
             column="13"/>
     </issue>
 
@@ -2970,7 +2915,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="270"
+            line="273"
             column="13"/>
     </issue>
 
@@ -2981,18 +2926,18 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="271"
+            line="274"
             column="13"/>
     </issue>
 
     <issue
         id="MissingTranslation"
-        message="&quot;faq_5_text&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;ar&quot; (Arabic), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
+        message="&quot;faq_5_text&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;ms&quot; (Malay), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;gu&quot; (Gujarati), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;bqi&quot;, &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;faq_5_text&quot;>Exclude prevents displaying the folder only in Fossify Gallery, while Hide works system-wise and it hides the folder from other galleries too. It works by creating an empty \&quot;.nomedia\&quot; file in the given folder, which you can then remove with any file manager too. Note that some devices do not allow hiding folders like Camera, Screenshots and Downloads.&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="272"
+            line="275"
             column="13"/>
     </issue>
 
@@ -3003,7 +2948,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="273"
+            line="276"
             column="13"/>
     </issue>
 
@@ -3014,7 +2959,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="274"
+            line="277"
             column="13"/>
     </issue>
 
@@ -3025,7 +2970,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="275"
+            line="278"
             column="13"/>
     </issue>
 
@@ -3036,7 +2981,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="276"
+            line="279"
             column="13"/>
     </issue>
 
@@ -3047,7 +2992,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="277"
+            line="280"
             column="13"/>
     </issue>
 
@@ -3058,7 +3003,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="278"
+            line="281"
             column="13"/>
     </issue>
 
@@ -3069,7 +3014,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="280"
+            line="283"
             column="13"/>
     </issue>
 
@@ -3080,7 +3025,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="281"
+            line="284"
             column="13"/>
     </issue>
 
@@ -3091,7 +3036,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="282"
+            line="285"
             column="13"/>
     </issue>
 
@@ -3102,7 +3047,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="283"
+            line="286"
             column="13"/>
     </issue>
 
@@ -3113,7 +3058,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="284"
+            line="287"
             column="13"/>
     </issue>
 
@@ -3124,7 +3069,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="285"
+            line="288"
             column="13"/>
     </issue>
 
@@ -3135,7 +3080,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="286"
+            line="289"
             column="13"/>
     </issue>
 
@@ -3146,7 +3091,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="287"
+            line="290"
             column="13"/>
     </issue>
 
@@ -3157,7 +3102,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="288"
+            line="291"
             column="13"/>
     </issue>
 
@@ -3168,7 +3113,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="289"
+            line="292"
             column="13"/>
     </issue>
 
@@ -3179,7 +3124,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="290"
+            line="293"
             column="13"/>
     </issue>
 
@@ -3190,7 +3135,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="291"
+            line="294"
             column="13"/>
     </issue>
 
@@ -3201,7 +3146,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="292"
+            line="295"
             column="13"/>
     </issue>
 
@@ -3212,7 +3157,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="293"
+            line="296"
             column="13"/>
     </issue>
 
@@ -3223,7 +3168,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="294"
+            line="297"
             column="13"/>
     </issue>
 
@@ -3234,7 +3179,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="295"
+            line="298"
             column="13"/>
     </issue>
 
@@ -3245,7 +3190,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="296"
+            line="299"
             column="13"/>
     </issue>
 
@@ -3256,7 +3201,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="297"
+            line="300"
             column="13"/>
     </issue>
 
@@ -3267,7 +3212,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="298"
+            line="301"
             column="13"/>
     </issue>
 
@@ -3275,7 +3220,7 @@
         id="Typos"
         message="&quot;media&quot; is a common misspelling; did you mean &quot;medier&quot;?"
         errorLine1="    &lt;string name=&quot;filter_media&quot;>Filtrer media&lt;/string>"
-        errorLine2="                                        ^">
+        errorLine2="                                        ~~~~~">
         <location
             file="src/main/res/values-nb-rNO/strings.xml"
             line="36"
@@ -3286,7 +3231,7 @@
         id="Typos"
         message="&quot;media&quot; is a common misspelling; did you mean &quot;medier&quot;?"
         errorLine1="    &lt;string name=&quot;no_media_with_filters&quot;>Ingen media-filer er funnet med de valgte filtrene.&lt;/string>"
-        errorLine2="                                               ^">
+        errorLine2="                                               ~~~~~">
         <location
             file="src/main/res/values-nb-rNO/strings.xml"
             line="43"
@@ -3297,7 +3242,7 @@
         id="Typos"
         message="&quot;media&quot; is a common misspelling; did you mean &quot;medier&quot;?"
         errorLine1="    &lt;string name=&quot;included_activity_placeholder&quot;>Hvis du har noen mapper som inneholder media, men ikke ble gjenkjent av appen, kan du legge dem til manuelt her."
-        errorLine2="                                                                                        ^">
+        errorLine2="                                                                                        ~~~~~">
         <location
             file="src/main/res/values-nb-rNO/strings.xml"
             line="54"
@@ -3308,7 +3253,7 @@
         id="Typos"
         message="&quot;albuns&quot; is a common misspelling; did you mean &quot;álbuns&quot;?"
         errorLine1="    &lt;string name=&quot;faq_6_title&quot;>Porque são apresentadas capas de albuns ou stickers?&lt;/string>"
-        errorLine2="                                                                ^">
+        errorLine2="                                                                ~~~~~~">
         <location
             file="src/main/res/values-pt-rPT/strings.xml"
             line="110"
@@ -3319,7 +3264,7 @@
         id="Typos"
         message="&quot;media&quot; is a common misspelling; did you mean &quot;medier&quot;?"
         errorLine1="    &lt;string name=&quot;no_media_for_slideshow&quot;>Ingen media for lysbildeshowet er funnet&lt;/string>"
-        errorLine2="                                                ^">
+        errorLine2="                                                ~~~~~">
         <location
             file="src/main/res/values-nb-rNO/strings.xml"
             line="124"
@@ -3330,7 +3275,7 @@
         id="Typos"
         message="&quot;media&quot; is a common misspelling; did you mean &quot;medier&quot;?"
         errorLine1="    &lt;string name=&quot;screen_rotation_by&quot;>Roter media etter&lt;/string>"
-        errorLine2="                                            ^">
+        errorLine2="                                            ~~~~~">
         <location
             file="src/main/res/values-nb-rNO/strings.xml"
             line="148"
@@ -3341,7 +3286,7 @@
         id="Typos"
         message="&quot;media&quot; is a common misspelling; did you mean &quot;medier&quot;?"
         errorLine1="    &lt;string name=&quot;allow_instant_change&quot;>Tillat å skifte media øyeblikkelig ved å trykke på kanten av skjermen&lt;/string>"
-        errorLine2="                                                        ^">
+        errorLine2="                                                        ~~~~~">
         <location
             file="src/main/res/values-nb-rNO/strings.xml"
             line="162"
@@ -3352,7 +3297,7 @@
         id="Typos"
         message="&quot;media&quot; is a common misspelling; did you mean &quot;medier&quot;?"
         errorLine1="    &lt;string name=&quot;media_only&quot;>Kun media&lt;/string>"
-        errorLine2="                                  ^">
+        errorLine2="                                  ~~~~~">
         <location
             file="src/main/res/values-nb-rNO/strings.xml"
             line="197"
@@ -3363,7 +3308,7 @@
         id="Typos"
         message="&quot;Camera&quot; is a common misspelling; did you mean &quot;Câmera&quot;?"
         errorLine1="    &lt;string name=&quot;faq_5_text&quot;>Excluir esconde a pasta apenas na Galeria Fossify, enquanto que a função Hide funciona em todos o sistema e esconde a pasta igualmente noutras aplicações. Esta opção cria um ficheiro vazio \&quot;.nomedia\&quot; na pasta em questão, o qual pode ser removido com um gestor de ficheiros. Repara que alguns dispositivos não permite esconder ficheiros com as pastas Camera, Captura de Ecra e Transferências.&lt;/string>"
-        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                              ^">
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                              ~~~~~~">
         <location
             file="src/main/res/values-pt-rPT/strings.xml"
             line="221"
@@ -3374,7 +3319,7 @@
         id="Typos"
         message="&quot;Perchè&quot; is a common misspelling; did you mean &quot;Perché&quot;?"
         errorLine1="    &lt;string name=&quot;faq_6_title&quot;>Perchè vengono mostrate cartelle con copertine o adesivi di musica\?&lt;/string>"
-        errorLine2="                               ^">
+        errorLine2="                               ~~~~~~">
         <location
             file="src/main/res/values-it/strings.xml"
             line="228"
@@ -3385,7 +3330,7 @@
         id="Typos"
         message="&quot;Perchè&quot; is a common misspelling; did you mean &quot;Perché&quot;?"
         errorLine1="    &lt;string name=&quot;faq_15_title&quot;>Perchè l\&apos;app occupa così tanto spazio\?&lt;/string>"
-        errorLine2="                                ^">
+        errorLine2="                                ~~~~~~">
         <location
             file="src/main/res/values-it/strings.xml"
             line="244"
@@ -3396,7 +3341,7 @@
         id="Typos"
         message="&quot;a nível de&quot; is a common misspelling; did you mean &quot;em nível de&quot; or &quot;ao nível de&quot;?"
         errorLine1="    &lt;string name=&quot;faq_5_text&quot;>Ignorar impede a exibição da pasta apenas na Galeria Fossify, enquanto Ocultar funciona a nível de sistema e oculta a pasta de outras galerias também. Ele funciona criando um arquivo “.nomedia” vazio na pasta fornecida, que você também pode remover com qualquer gerenciador de arquivos. Observe que alguns dispositivos não permitem ocultar pastas como Câmera, Capturas de tela e Downloads.&lt;/string>"
-        errorLine2="                                                                                                                      ^">
+        errorLine2="                                                                                                                      ~~~~~~~~~~">
         <location
             file="src/main/res/values-pt-rBR/strings.xml"
             line="246"
@@ -3407,7 +3352,7 @@
         id="Typos"
         message="&quot;Camera&quot; is a common misspelling; did you mean &quot;Câmera&quot;?"
         errorLine1="    &lt;string name=&quot;faq_5_text&quot;>Excluir oculta a pasta na Galeria Fossify mas a função Ocultar funciona globalmente e esconde a pasta de todas as aplicações. Esta opção cria um ficheiro \&quot;.nomedia\&quot; na pasta, o qual pode ser eliminado com um gestor de ficheiros. Tenha em atenção de que alguns dispositivos não permitem esconder algumas pastas tais como, por exemplo, as pastas Camera, Screenshot e Downloads.&lt;/string>"
-        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                        ^">
+        errorLine2="                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~~">
         <location
             file="src/main/res/values-pt/strings.xml"
             line="250"
@@ -4246,7 +4191,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="216"
+            line="219"
             column="13"/>
     </issue>
 
@@ -4257,7 +4202,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="229"
+            line="232"
             column="13"/>
     </issue>
 
@@ -4268,7 +4213,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="230"
+            line="233"
             column="13"/>
     </issue>
 
@@ -4279,7 +4224,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="232"
+            line="235"
             column="13"/>
     </issue>
 
@@ -4290,7 +4235,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="233"
+            line="236"
             column="13"/>
     </issue>
 
@@ -4301,7 +4246,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
-            line="239"
+            line="242"
             column="13"/>
     </issue>
 
@@ -4341,12 +4286,12 @@
     <issue
         id="TooManyViews"
         message="`activity_settings.xml` has more than 80 views, bad for performance"
-        errorLine1="                &lt;org.fossify.commons.views.MyMaterialSwitch"
-        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            &lt;RelativeLayout"
+        errorLine2="             ~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/activity_settings.xml"
-            line="572"
-            column="18"/>
+            line="574"
+            column="14"/>
     </issue>
 
     <issue
@@ -4758,12 +4703,23 @@
     <issue
         id="UseKtx"
         message="Use the KTX extension function `SharedPreferences.edit` instead?"
-        errorLine1="        set(openVideosOnSeparateScreen) = prefs.edit().putBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, openVideosOnSeparateScreen).apply()"
-        errorLine2="                                          ~~~~~~~~~~~~">
+        errorLine1="        set(gestureVideoPlayer) = prefs.edit().putBoolean(GESTURE_VIDEO_PLAYER, gestureVideoPlayer)"
+        errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
             line="222"
-            column="43"/>
+            column="35"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        set(videoPlayerType) = prefs.edit().putInt(VIDEO_PLAYER_TYPE, videoPlayerType).apply()"
+        errorLine2="                               ~~~~~~~~~~~~">
+        <location
+            file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
+            line="227"
+            column="32"/>
     </issue>
 
     <issue
@@ -4773,7 +4729,7 @@
         errorLine2="                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="226"
+            line="231"
             column="24"/>
     </issue>
 
@@ -4784,7 +4740,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="230"
+            line="235"
             column="32"/>
     </issue>
 
@@ -4795,7 +4751,7 @@
         errorLine2="                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="234"
+            line="239"
             column="28"/>
     </issue>
 
@@ -4806,7 +4762,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="238"
+            line="243"
             column="29"/>
     </issue>
 
@@ -4817,7 +4773,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="242"
+            line="247"
             column="30"/>
     </issue>
 
@@ -4828,7 +4784,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="246"
+            line="251"
             column="35"/>
     </issue>
 
@@ -4839,7 +4795,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="275"
+            line="280"
             column="31"/>
     </issue>
 
@@ -4850,7 +4806,7 @@
         errorLine2="                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="304"
+            line="309"
             column="28"/>
     </issue>
 
@@ -4861,7 +4817,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="313"
+            line="318"
             column="29"/>
     </issue>
 
@@ -4872,7 +4828,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="317"
+            line="322"
             column="35"/>
     </issue>
 
@@ -4883,7 +4839,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="321"
+            line="326"
             column="29"/>
     </issue>
 
@@ -4894,7 +4850,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="325"
+            line="330"
             column="35"/>
     </issue>
 
@@ -4905,7 +4861,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="329"
+            line="334"
             column="35"/>
     </issue>
 
@@ -4916,7 +4872,7 @@
         errorLine2="                                 ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="333"
+            line="338"
             column="34"/>
     </issue>
 
@@ -4927,7 +4883,7 @@
         errorLine2="                                      ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="337"
+            line="342"
             column="39"/>
     </issue>
 
@@ -4938,7 +4894,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="341"
+            line="346"
             column="37"/>
     </issue>
 
@@ -4949,7 +4905,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="345"
+            line="350"
             column="37"/>
     </issue>
 
@@ -4960,7 +4916,7 @@
         errorLine2="                                      ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="349"
+            line="354"
             column="39"/>
     </issue>
 
@@ -4971,7 +4927,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="353"
+            line="358"
             column="35"/>
     </issue>
 
@@ -4982,7 +4938,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="357"
+            line="362"
             column="30"/>
     </issue>
 
@@ -4993,7 +4949,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="361"
+            line="366"
             column="31"/>
     </issue>
 
@@ -5004,7 +4960,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="365"
+            line="370"
             column="32"/>
     </issue>
 
@@ -5015,7 +4971,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="369"
+            line="374"
             column="30"/>
     </issue>
 
@@ -5026,7 +4982,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="373"
+            line="378"
             column="36"/>
     </issue>
 
@@ -5037,7 +4993,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="377"
+            line="382"
             column="36"/>
     </issue>
 
@@ -5048,7 +5004,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="381"
+            line="386"
             column="32"/>
     </issue>
 
@@ -5059,7 +5015,7 @@
         errorLine2="                              ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="385"
+            line="390"
             column="31"/>
     </issue>
 
@@ -5070,7 +5026,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="389"
+            line="394"
             column="35"/>
     </issue>
 
@@ -5081,7 +5037,7 @@
         errorLine2="                                          ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="393"
+            line="398"
             column="43"/>
     </issue>
 
@@ -5092,7 +5048,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="397"
+            line="402"
             column="35"/>
     </issue>
 
@@ -5103,7 +5059,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="401"
+            line="406"
             column="36"/>
     </issue>
 
@@ -5114,7 +5070,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="405"
+            line="410"
             column="36"/>
     </issue>
 
@@ -5125,7 +5081,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="409"
+            line="414"
             column="37"/>
     </issue>
 
@@ -5136,7 +5092,7 @@
         errorLine2="                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="413"
+            line="418"
             column="24"/>
     </issue>
 
@@ -5147,7 +5103,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="417"
+            line="422"
             column="30"/>
     </issue>
 
@@ -5158,7 +5114,7 @@
         errorLine2="                             ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="421"
+            line="426"
             column="30"/>
     </issue>
 
@@ -5169,7 +5125,7 @@
         errorLine2="        ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="424"
+            line="429"
             column="9"/>
     </issue>
 
@@ -5180,7 +5136,7 @@
         errorLine2="            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="429"
+            line="434"
             column="13"/>
     </issue>
 
@@ -5191,7 +5147,7 @@
         errorLine2="                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="444"
+            line="449"
             column="21"/>
     </issue>
 
@@ -5202,7 +5158,7 @@
         errorLine2="            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="447"
+            line="452"
             column="13"/>
     </issue>
 
@@ -5213,7 +5169,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="452"
+            line="457"
             column="37"/>
     </issue>
 
@@ -5224,7 +5180,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="457"
+            line="462"
             column="33"/>
     </issue>
 
@@ -5235,7 +5191,7 @@
         errorLine2="                                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="477"
+            line="482"
             column="40"/>
     </issue>
 
@@ -5246,7 +5202,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="481"
+            line="486"
             column="35"/>
     </issue>
 
@@ -5257,7 +5213,7 @@
         errorLine2="                            ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="485"
+            line="490"
             column="29"/>
     </issue>
 
@@ -5268,7 +5224,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="489"
+            line="494"
             column="35"/>
     </issue>
 
@@ -5279,7 +5235,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="493"
+            line="498"
             column="35"/>
     </issue>
 
@@ -5290,7 +5246,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="497"
+            line="502"
             column="33"/>
     </issue>
 
@@ -5301,7 +5257,7 @@
         errorLine2="                                         ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="501"
+            line="506"
             column="42"/>
     </issue>
 
@@ -5312,7 +5268,7 @@
         errorLine2="                                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="505"
+            line="510"
             column="48"/>
     </issue>
 
@@ -5323,7 +5279,7 @@
         errorLine2="                                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="509"
+            line="514"
             column="48"/>
     </issue>
 
@@ -5334,7 +5290,7 @@
         errorLine2="                                     ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="513"
+            line="518"
             column="38"/>
     </issue>
 
@@ -5345,7 +5301,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="517"
+            line="522"
             column="37"/>
     </issue>
 
@@ -5356,7 +5312,7 @@
         errorLine2="                                 ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="521"
+            line="526"
             column="34"/>
     </issue>
 
@@ -5367,7 +5323,7 @@
         errorLine2="                                         ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="525"
+            line="530"
             column="42"/>
     </issue>
 
@@ -5378,7 +5334,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="529"
+            line="534"
             column="36"/>
     </issue>
 
@@ -5389,7 +5345,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="533"
+            line="538"
             column="36"/>
     </issue>
 
@@ -5400,7 +5356,7 @@
         errorLine2="                         ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="537"
+            line="542"
             column="26"/>
     </issue>
 
@@ -5411,7 +5367,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="543"
+            line="548"
             column="35"/>
     </issue>
 
@@ -5422,7 +5378,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="547"
+            line="552"
             column="33"/>
     </issue>
 
@@ -5433,7 +5389,7 @@
         errorLine2="                                   ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="551"
+            line="556"
             column="36"/>
     </issue>
 
@@ -5444,7 +5400,7 @@
         errorLine2="                               ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="555"
+            line="560"
             column="32"/>
     </issue>
 
@@ -5455,7 +5411,7 @@
         errorLine2="                                     ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="559"
+            line="564"
             column="38"/>
     </issue>
 
@@ -5466,7 +5422,7 @@
         errorLine2="                                    ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="563"
+            line="568"
             column="37"/>
     </issue>
 
@@ -5477,7 +5433,7 @@
         errorLine2="                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="567"
+            line="572"
             column="28"/>
     </issue>
 
@@ -5488,7 +5444,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="571"
+            line="576"
             column="33"/>
     </issue>
 
@@ -5499,7 +5455,7 @@
         errorLine2="                                ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="575"
+            line="580"
             column="33"/>
     </issue>
 
@@ -5510,7 +5466,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="579"
+            line="584"
             column="35"/>
     </issue>
 
@@ -5521,7 +5477,7 @@
         errorLine2="                                  ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="583"
+            line="588"
             column="35"/>
     </issue>
 
@@ -5532,7 +5488,7 @@
         errorLine2="                                          ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="587"
+            line="592"
             column="43"/>
     </issue>
 
@@ -5543,7 +5499,7 @@
         errorLine2="                                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="591"
+            line="596"
             column="40"/>
     </issue>
 
@@ -5554,7 +5510,7 @@
         errorLine2="                                           ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="595"
+            line="600"
             column="44"/>
     </issue>
 
@@ -5565,7 +5521,7 @@
         errorLine2="                                       ~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/helpers/Config.kt"
-            line="599"
+            line="604"
             column="40"/>
     </issue>
 
@@ -5796,7 +5752,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="484"
+            line="480"
             column="37"/>
     </issue>
 
@@ -5807,7 +5763,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="175"
+            line="176"
             column="52"/>
     </issue>
 
@@ -5818,7 +5774,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="175"
+            line="176"
             column="52"/>
     </issue>
 
@@ -5928,7 +5884,7 @@
         errorLine2="            ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="242"
+            line="240"
             column="13"/>
     </issue>
 
@@ -5939,7 +5895,7 @@
         errorLine2="                                            ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="242"
+            line="240"
             column="45"/>
     </issue>
 
@@ -5950,7 +5906,7 @@
         errorLine2="            ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="247"
+            line="245"
             column="13"/>
     </issue>
 
@@ -5961,7 +5917,7 @@
         errorLine2="                                                 ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="247"
+            line="245"
             column="50"/>
     </issue>
 
@@ -5972,7 +5928,7 @@
         errorLine2="        ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="316"
+            line="317"
             column="9"/>
     </issue>
 
@@ -5983,7 +5939,7 @@
         errorLine2="                                                     ^">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="316"
+            line="317"
             column="54"/>
     </issue>
 
@@ -6489,7 +6445,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/SettingsActivity.kt"
-            line="204"
+            line="205"
             column="17"/>
     </issue>
 
@@ -6500,7 +6456,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/SettingsActivity.kt"
-            line="238"
+            line="239"
             column="17"/>
     </issue>
 
@@ -6522,7 +6478,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/fragments/VideoFragment.kt"
-            line="843"
+            line="829"
             column="17"/>
     </issue>
 
@@ -6533,7 +6489,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/gallery/activities/VideoPlayerActivity.kt"
-            line="469"
+            line="470"
             column="17"/>
     </issue>
 
