@@ -166,7 +166,7 @@
     <string name="allow_deep_zooming_images">Képek mély nagyításának engedélyezése</string>
     <string name="hide_extended_details">Bővített részletek elrejtése, ha az állapotsor rejtett</string>
     <string name="show_at_bottom">Egyes műveleti gombok megjelenítése a képernyő alján</string>
-    <string name="show_recycle_bin">Lomtár megjelenítése a mappák képernyőjén</string>
+    <string name="show_recycle_bin">Lomtár megjelenítése a mappáknál</string>
     <string name="deep_zoomable_images">Mély nagyítású képek</string>
     <string name="show_highest_quality">Képek megjelenítése a lehető legjobb minőségben</string>
     <string name="show_recycle_bin_last">Lomtár megjelenítése a főképernyő utolsó elemeként</string>
@@ -258,7 +258,7 @@
     <string name="file_is_malformed_or_corrupted">Hibás vagy sérült fájl.</string>
     <string name="unsupported_format">Nem támogatott formátum.</string>
     <plurals name="restore_confirmation">
-        <item quantity="one">Biztosan vissza szeretné állítani a(z) %d fájlt?</item>
+        <item quantity="one">Biztosan vissza szeretné állítani a %d fájlt?</item>
         <item quantity="other">Biztosan vissza szeretné állítani a(z) %d fájlokat?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Képernyő bekapcsolva tartása teljes képernyős nézetben</string>
@@ -268,4 +268,5 @@
     <string name="open_in_app_player">In-app lejátszó használta</string>
     <string name="open_system_default_player">Alapértelmezett lejátszó alkalmazás megnyitása</string>
     <string name="video_no_sound">Eme videónak nincs hangja</string>
+    <string name="on_video_tap">Video erintésekor</string>
 </resources>
