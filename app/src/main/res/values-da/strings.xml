@@ -167,7 +167,7 @@
     <string name="show_recycle_bin_last">Vis papirkurven som sidste element på hovedskærmen</string>
     <string name="allow_down_gesture">Tillad lukning af fuldskærmsvisning med en nedadgående bevægelse</string>
     <string name="allow_one_to_one_zoom">Tillad 1:1-zoom med dobbelttryk</string>
-    <string name="open_videos_on_separate_screen">Åbn altid videoer på en separat skærm med nye vandrette bevægelser</string>
+    <string name="open_videos_on_separate_screen">Afspil videoer på en separat skærm med vandrette bevægelser</string>
     <string name="show_notch">Vis \"notch\", hvis tilgængelig</string>
     <string name="allow_rotating_gestures">Tillad rotation af billeder via bevægelser</string>
     <string name="file_loading_priority">Prioritering af filindlæsning</string>
@@ -260,4 +260,7 @@
     </plurals>
     <string name="force_landscape_reverse">Tving landskab (omvendt)</string>
     <string name="overwrite_original">Overskriv original</string>
+    <string name="open_in_app_player">Åbn indbygget afspiller</string>
+    <string name="open_system_default_player">Åbn standard-afspiller</string>
+    <string name="video_no_sound">Denne video har ingen lyd</string>
 </resources>

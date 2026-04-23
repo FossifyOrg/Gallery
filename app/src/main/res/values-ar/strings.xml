@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">المعرض</string>
-    <string name="edit">عدِّل</string>
+    <string name="edit">حرّر</string>
     <string name="open_camera">افتح الكاميرا</string>
     <string name="hidden">(مخفي)</string>
     <string name="excluded">(مستبعد)</string>
@@ -74,23 +74,23 @@
         <item quantity="other">فشل في تغيير حجم الصور %d</item>
     </plurals>
     <string name="images_resized_successfully">تم تغيير حجم الصور بنجاح</string>
-    <string name="editor">المحرّر</string>
-    <string name="basic_editor">المحرّر الأساسي</string>
-    <string name="advanced_editor">محرّر متقدم</string>
+    <string name="editor">المحرِّر</string>
+    <string name="basic_editor">المحرِّر الأساسي</string>
+    <string name="advanced_editor">محرِّر متقدم</string>
     <string name="rotate">تدوير</string>
     <string name="invalid_image_path">مسار الصورة غير صحيح</string>
     <string name="invalid_video_path">مسار الفيديو غير صالح</string>
-    <string name="image_editing_failed">فشل تعديل الصورة</string>
+    <string name="image_editing_failed">فشل تحرير الصورة</string>
     <string name="video_editing_failed">فشل تحرير الفيديو</string>
-    <string name="image_editing_cancelled">تم إلغاء تعديل الصورة</string>
-    <string name="video_editing_cancelled">تم إلغاء تحرير الفيديو</string>
-    <string name="file_edited_successfully">عُدِّل الملف بنجاح</string>
-    <string name="image_edited_successfully">عُدِّلت الصورة بنجاح</string>
-    <string name="video_edited_successfully">عُدِّل الفيديو بنجاح</string>
-    <string name="edit_image_with">عدِّل الصورة باستخدام:</string>
-    <string name="edit_video_with">عدِّل الفيديو باستخدام:</string>
-    <string name="no_image_editor_found">لم يتم العثور على أي محرّر للصور</string>
-    <string name="no_video_editor_found">لم يتم العثور على محرّر فيديو</string>
+    <string name="image_editing_cancelled">أُلغِيَ تحرير الصورة</string>
+    <string name="video_editing_cancelled">أُلغِيَ تحرير الفيديو</string>
+    <string name="file_edited_successfully">حُرِّر الملف بنجاح</string>
+    <string name="image_edited_successfully">حُرِّرت الصورة بنجاح</string>
+    <string name="video_edited_successfully">حُرِّر الفيديو بنجاح</string>
+    <string name="edit_image_with">حرّر الصورة باستخدام:</string>
+    <string name="edit_video_with">حرّر الفيديو باستخدام:</string>
+    <string name="no_image_editor_found">لم يُعثر على أي محرِّر صور</string>
+    <string name="no_video_editor_found">لم يُعثر على أي محرِّر فيديو</string>
     <string name="unknown_file_location">موقع الملف غير معروف</string>
     <string name="error_saving_file">لا يمكن استبدال الملف الأصل</string>
     <string name="rotate_left">تدوير لليسار</string>
@@ -229,7 +229,7 @@
     <string name="faq_8_title">ماذا أفعل لو كنت أريد بعض المجلدات المحددة مرئية فقط؟</string>
     <string name="faq_8_text">إضافة مجلد إلى المجلدات المضمنة لا يستبعد تلقائياً أي شيء. ما يمكنك القيام به هو الإنتقال إلى الإعدادات -&gt; إدارة المجلدات المستبعدة، استبعاد المجلد الأصل \"/\"، ثم إضافة المجلدات المطلوبة في الإعدادات -&gt; إدارة المجلدات المضمنة. سيؤدي ذلك إلى جعل المجلدات المحددة مرئية فقط، حيث أن كل من الاستبعاد والتضمين منعكسين وإذا كان أحد المجلدات مستبعداً ومضمن معاً، فسوف يظهر.</string>
     <string name="faq_10_title">هل يمكنني اقتصاص الصور باستخدام هذا التطبيق؟</string>
-    <string name="faq_10_text">نعم، يمكنك اقتصاص الصور في المحرر، عن طريق سحب زوايا الصورة. يمكنك الوصول إلى المحرر إما بالضغط مطولاً على الصورة المصغرة واختيار تعديل، أو اختيار تعديل من عرض ملء الشاشة.</string>
+    <string name="faq_10_text">نعم، يمكنك اقتصاص الصور في المحرِّر، عن طريق سحب زوايا الصورة. يمكنك الوصول إلى المحرِّر إما بالضغط مطولاً على الصورة المصغرة واختيار حرّر، أو اختيار حرّر من عرض ملء الشاشة.</string>
     <string name="faq_11_title">هل يمكنني بطريقة ما تجميع الصور المصغرة لملف الوسائط؟</string>
     <string name="faq_11_text">بالتأكيد، فقط استخدم عنصر القائمة \"تجميع حسب\" أثناء عرض الصور المصغرة. يمكنك تجميع الملفات حسب معايير متعددة، بما في ذلك تاريخ الالتقاط. إذا كنت تستخدم وظيفة \"إظهار كل محتويات المجلدات\" فيمكنك تجميعها حسب المجلدات أيضًا.</string>
     <string name="faq_12_title">يبدو ان الفرز حسب تاريخ الالتقاط لا يعمل بشكل صحيح، كيف يمكنني إصلاحه؟</string>
