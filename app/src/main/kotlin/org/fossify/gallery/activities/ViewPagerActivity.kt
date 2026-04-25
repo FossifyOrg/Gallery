@@ -211,6 +211,7 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
     private var mFavoritePaths = ArrayList<String>()
     private var mIgnoredPaths = ArrayList<String>()
     private var mOriginalBrightness: Float? = null
+    private var mIsTogglingVisibility = false
 
     private val binding by viewBinding(ActivityMediumBinding::inflate)
 
@@ -801,6 +802,11 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
     }
 
     private fun toggleFileVisibility(hide: Boolean, callback: (() -> Unit)? = null) {
+        if (mIsTogglingVisibility) {
+            return
+        }
+        
+        mIsTogglingVisibility = true
         toggleFileVisibility(getCurrentPath(), hide) {
             val newFileName = it.getFilenameFromPath()
             binding.mediumViewerToolbar.title = newFileName
@@ -812,6 +818,7 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
             }
 
             refreshMenuItems()
+            mIsTogglingVisibility = false
             callback?.invoke()
         }
     }
@@ -1013,6 +1020,10 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
         }
 
         binding.bottomActions.bottomToggleFileVisibility.setOnClickListener {
+            if (mIsTogglingVisibility) {
+                return@setOnClickListener
+            }
+            
             currentMedium?.apply {
                 toggleFileVisibility(!isHidden()) {
                     updateBottomActionIcons(currentMedium)
