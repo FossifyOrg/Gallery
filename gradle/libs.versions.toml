@@ -19,7 +19,7 @@ room = "2.8.4"
 #Fossify
 commons = "6.1.6"
 #Gradle4
-gradlePlugins-agp = "9.0.1"
+gradlePlugins-agp = "9.2.0"
 #Other
 androidGifDrawable = "1.2.31"
 androidImageCropper = "4.7.0"
