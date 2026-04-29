@@ -87,10 +87,6 @@ import kotlin.math.max
 
 class EditActivity : BaseCropActivity() {
     companion object {
-        init {
-            System.loadLibrary("NativeImageProcessor")
-        }
-
         private const val ASPECT_X = "aspectX"
         private const val ASPECT_Y = "aspectY"
         private const val CROP = "crop"

@@ -211,31 +211,6 @@
     </issue>
 
     <issue
-        id="Aligned16KB"
-        message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
-        <location
-            file="$GRADLE_USER_HOME/caches/9.4.1/transforms/51a908bb5df44a6eafbf9daeee56e27b/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
-    </issue>
-
-    <issue
-        id="Aligned16KB"
-        message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned">
-        <location
-            file="$GRADLE_USER_HOME/caches/9.4.1/transforms/51a908bb5df44a6eafbf9daeee56e27b/transformed/jetified-androidphotofilters-193f2ae509/jni/arm64-v8a/libNativeImageProcessor.so"/>
-    </issue>
-
-    <issue
-        id="Aligned16KB"
-        message="The native library `arm64-v8a/libNativeImageProcessor.so` (from `com.github.naveensingh:androidphotofilters:193f2ae509`) is not 16 KB aligned"
-        errorLine1="androidphotofilters = { module = &quot;com.github.naveensingh:androidphotofilters&quot;, version.ref = &quot;androidphotofilters&quot; }"
-        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
-            line="69"
-            column="24"/>
-    </issue>
-
-    <issue
         id="DiscouragedApi"
         message="Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios."
         errorLine1="            android:screenOrientation=&quot;portrait&quot;"

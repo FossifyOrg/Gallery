@@ -29,7 +29,6 @@ zjupureWebpdecoder = "2.7.4.16.0"
 jxlDecoder = "2.6.0"
 gestureviews = "e706487a14"
 androidsvgAar = "1.4"
-androidphotofilters = "193f2ae509"
 sanselan = "0.97-incubator"
 media3Exoplayer = "1.10.0"
 okhttp = "5.3.2"
@@ -66,7 +65,6 @@ android-image-cropper = { module = "com.vanniktech:android-image-cropper", versi
 subsamplingscaleimageview = { module = "org.fossify:subsampling-scale-image-view", version.ref = "subsamplingScaleImageView" }
 androidsvg-aar = { module = "com.caverock:androidsvg-aar", version.ref = "androidsvgAar" }
 gestureviews = { module = "org.fossify:gestureviews", version.ref = "gestureviews" }
-androidphotofilters = { module = "com.github.naveensingh:androidphotofilters", version.ref = "androidphotofilters" }
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 sanselan = { module = "org.apache.sanselan:sanselan", version.ref = "sanselan" }
