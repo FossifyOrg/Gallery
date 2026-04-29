@@ -2,8 +2,11 @@ package org.fossify.gallery.extensions
 
 import android.app.Activity
 import android.content.ContentProviderOperation
+import android.content.ContentResolver
 import android.content.ContentValues
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Process
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.graphics.BitmapFactory
@@ -12,12 +15,14 @@ import android.graphics.Point
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import android.provider.MediaStore.Files
 import android.provider.MediaStore.Images
 import android.provider.Settings
 import android.util.DisplayMetrics
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.exifinterface.media.ExifInterface
 import com.bumptech.glide.Glide
@@ -1071,4 +1076,61 @@ fun Activity.proposeNewFilePath(uri: Uri): Pair<String, Boolean> {
     }
 
     return Pair(newPath, shouldAppendFilename)
+}
+
+fun Activity.updateFavorite(path: String, isFavorite: Boolean) {
+    try {
+        if (isFavorite) {
+            favoritesDB.insert(getFavoriteFromPath(path))
+        } else {
+            favoritesDB.deleteFavoritePath(path)
+        }
+        // Update media in favorites collection for Android 11+ (API level 30)
+        if (isRPlus()) {
+            val uri = getFilePublicUri(File(path), BuildConfig.APPLICATION_ID)
+            if (isMedia(contentResolver, uri)) {
+                updateFavoriteInMediaStore(uri, isFavorite)
+            }
+        }
+    } catch (_: Exception) {
+        toast(org.fossify.commons.R.string.unknown_error_occurred)
+    }
+}
+
+private const val FAVORITE_REQUEST_CODE = 100
+
+@RequiresApi(Build.VERSION_CODES.R)
+private fun Activity.updateFavoriteInMediaStore(uri: Uri, isFavorite: Boolean) {
+    if (checkUriPermission(
+            uri, Process.myPid(), Process.myUid(),
+            Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+        ) != PackageManager.PERMISSION_GRANTED
+    ) {
+        val pendingIntent = MediaStore.createFavoriteRequest(contentResolver, listOf(uri), isFavorite)
+        startIntentSenderForResult(pendingIntent.intentSender, FAVORITE_REQUEST_CODE, null, 0, 0, 0)
+    } else {
+        val values = ContentValues().apply {
+            put(MediaStore.MediaColumns.IS_FAVORITE, if (isFavorite) 1 else 0)
+        }
+        contentResolver.update(uri, values, null)
+    }
+}
+
+private fun isMedia(contentResolver: ContentResolver, uri: Uri): Boolean {
+    return try {
+        val type = contentResolver.getType(uri) ?: return false
+        val supportedImageTypes = setOf(
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+            "image/gif",
+            "image/bmp",
+            "image/x-ms-bmp"
+        )
+        val isImage = type in supportedImageTypes
+        val isVideo = type.startsWith("video/")
+        isImage || isVideo
+    } catch (_: Exception) {
+        false
+    }
 }
