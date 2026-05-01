@@ -263,4 +263,6 @@
     <string name="open_in_app_player">Åbn indbygget afspiller</string>
     <string name="open_system_default_player">Åbn standard-afspiller</string>
     <string name="video_no_sound">Denne video har ingen lyd</string>
+    <string name="render_ultra_hdr_photos">Vis Ultra HDR fotos i HDR</string>
+    <string name="on_video_tap">Ved tryk på video</string>
 </resources>
