@@ -1,38 +1,27 @@
-Tedd szabaddá az emlékeidet, ne a személyes adataidat. A Fossify Gallery az igazi fotó- és videóalkalmazás, ami pont annyira erőteljes, mint privát. Nincsenek reklámok, nincsenek felesleges engedélyek – csak egy zökkenőmentes, rád szabott élmény.
+Engedje szabadjára emlékeit a személyes adatai helyett. A Fossify Galéria univerzális fotó és videó app, amely egyszerre erős és privát. Se reklámok, se fölösleges engedélyek – csak maga az Önre szabott egyszerű használat.
 
-🖼️ FOTÓSZERKESZTÉS KÉZKÖZELBEN:
-Dobd fel a képeidet egyszerű, mégis erőteljes szerkesztőnkkel.
-Vágj, méretezz, forgass, tükrözz, rajzolj, és alkalmazz lenyűgöző szűrőket – mindezt úgy, hogy közben a magánéleted érintetlen marad.
-Vedd kézbe az emlékeid feletti irányítást, mint még soha.
+🖼️ FOTÓ SZERKESZTÉS EGY KARNYÚJTÁSNIYRA:
+Javítsa fel fényképeit az egyszerű de nagyszerű képszerkesztőnkkel. Vágja le, méretezze át, forgassa, tökrözze, rajzolja, és adjon hozzá lélegzetelállító filtereket, mindezt a személyes adatait kockáztatva. Vegye vissza az irányítást az emlékei felett.
 
-🌐 ELSŐ A MAGÁNÉLET:
-A privát szféra számít. Felejtsd el az adataidra éhes óriásokat.
-A Fossify Gallery a te kezedbe adja az irányítást.
-Távolítsd el az EXIF metaadatokat, például a GPS-koordinátákat és a kamera adatait, így az emlékeid csak a tieid maradnak.
+🌐 A PRIVÁT SZFÉRA AZ ELSŐ, MINDIG:
+A magánélete igenis számít. Szabaduljon meg az adatra éhes tech óriásoktól. A Fossify Galériánál Ön irányít. Szabaduljon meg az EXIF adatoktól mint pl a GPS metaadtok és kamera részletek, szerezze vissza az emlékeit a nagy vállalatoktól.
 
-🔒 KIVÁLÓ BIZTONSÁG:
-Zárd le az emlékeidet PIN-kóddal, mintával vagy ujjlenyomattal.
-Védd le a kiválasztott fotókat, videókat, vagy akár az egész alkalmazást – te döntöd el, ki férhet hozzá.
-Teljes nyugalom, garantáltan.
+🔒 NAGYOBB BIZTONSÁG:
+Zárja le emlékeit egy kóddal, mintával, vagy ujjlenyomattal. Biztosítsa egyes fotóit, videóit, vagy az egész app-ot – Ön dönti el ki kap hozzáférést. Garantált lelki nyugalom.
 
-🔄 EGYSZERŰ HELYREÁLLÍTÁS:
-Ne aggódj, ha baleset történik!
-A Fossify Gallery beépített kukája lehetővé teszi a törölt fotók és videók másodpercek alatti visszaállítását.
-Nincs több elveszett kincs – csak tiszta megkönnyebbülés.
+🔄 KÖNNYŰ VISSZAÁLLÍTÁS:
+Habár történnek blesetek, megkönnyebülhet. A Fossify Galéria beépített lomtárjából másodpercenken belül visszaállíthatja a kitörölt képeket vagy videókat. Nincs többé elveszett kincs, csak megkönnyebülés.
 
-🎨 A GALÉRIÁD, A STÍLUSOD:
-Szabd testre a megjelenést, a hangulatot és a funkciókat, hogy passzoljanak hozzád.
-A felhasználói felület témáitól kezdve a funkciógombokig – a Fossify Gallery megadja neked a kreatív szabadságot, amire vágysz.
+🎨 SAJÁT GALÉRIA, SAJÁT STYLUS:
+Szabja személyre a kinézetet és funcionalitást kedve szerint. A felhasználói felülettől a funkció gombokig, a Fossify Gallery megadja Önnek a kreatív szabadságot, amire vágyott.
 
-📷 FORMÁTUMSZABADSÁG:
-JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, videók és még sok más – minden formátumban megőrizzük az emlékeidet.
-Nincsenek korlátok, csak végtelen lehetőségek.
+📷 AZ UNIVERZÁLIS FORMÁTUM SZABADSÁGA:
+JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, videók, és még sok más – minden emlékét újra megtekintheti, bármilyen formátumot is választ. Lehetőségei útjába immáron nem áll semmilyen akadály.
 
-✨ MATERIAL DESIGN DINAMIKUS TÉMÁKKAL:
-Élvezd az intuitív Material Design szépségét dinamikus témákkal.
-Többre vágysz? Merülj el az egyedi témák világában, és tedd igazán egyedivé a galériádat.
+✨ MATERIAL DIZÁJN, DINAMIKUS TÉMÁKKAL:
+Keltse életre az material dizájn ösztönös szépségét dinamikus témákkal. Ennél is többet akar? Ássa bele magát az egyedi témákba, és varázsolja még egyedibbé galériáját.
 
-Fedezz fel még több appot a Fossify-tól: https://www.fossify.org
-Nyílt forrású kód: https://www.github.com/FossifyOrg
-Csatlakozz a Reddit közösséghez: https://www.reddit.com/r/Fossify
-Lépj velünk kapcsolatba Telegram-on: https://t.me/Fossify
+Fedezze fel a többi Fossify appot: https://www.fossify.org
+Nyílt Forráskód: https://www.github.com/FossifyOrg
+Csatlakozzon a Reddit közösséghez: https://www.reddit.com/r/Fossify
+Csatlakozzon Telegram csoportunkhoz: https://t.me/Fossify
