@@ -113,7 +113,7 @@
     <string name="faq_8_title">E se quiser que só algumas das pastas fiquem visíveis?</string>
     <string name="faq_10_text">Sim, é possível recortar imagens com o editor arrastando simplesmente os cantos. Aceda ao editor premindo longamente a imagem ou seleccionando Editar na vista de ecrã completo.</string>
     <string name="faq_11_text">A partir da vista de miniaturas, escolha \"Agrupar por\" do menu. Pode agrupar ficheiros por critérios como Tirada em. Ao seleccionar a opção \"Mostrar o conteúdo de todas as pastas\", pode também agrupá-los por pastas.</string>
-    <string name="show_recycle_bin_last">Mostrar reciclagem como o último item do ecrã principal</string>
+    <string name="show_recycle_bin_last">Mostrar reciclagem como o último elemento do ecrã principal</string>
     <string name="bottom_actions">Ações em baixo</string>
     <string name="faq_12_text">Deve-se provalmente ao facto dos ficheiros terem sido copiados de algum sítio. Para resolver, seleccione as miniaturas dos ficheiros e tente a opção \"Corrigir valores de Tirada em\".</string>
     <string name="failed_to_load_media">Erro ao carregar os dados.</string>
@@ -189,7 +189,7 @@
     <string name="allow_instant_change">Permitir troca imediata de ficheiro ao tocar nas margens do ecrã</string>
     <string name="allow_deep_zooming_images">Permitir ampliação profunda de imagens</string>
     <string name="hide_extended_details">Ocultar detalhes se a barra de estado estiver oculta</string>
-    <string name="show_recycle_bin">Mostrar reciclagem no ecrã de pastas</string>
+    <string name="show_recycle_bin">Mostrar o lixo no ecrã de pastas</string>
     <string name="deep_zoomable_images">Ampliação de imagens</string>
     <string name="show_highest_quality">Mostrar fotos com a melhor qualidade possível</string>
     <string name="file_thumbnail_style">Estilo de miniaturas dos ficheiros</string>
@@ -236,7 +236,7 @@
     <string name="screen_rotation_system_setting">Definições do sistema</string>
     <string name="screen_rotation_device_rotation">Rotação do dispositivo</string>
     <string name="allow_one_to_one_zoom">Permitir ampliação 1:1 com dois toques</string>
-    <string name="open_videos_on_separate_screen">Abrir vídeos em ecrã distinto com os novos toques horizontais</string>
+    <string name="open_videos_on_separate_screen">Reproduzir vídeos num ecrã distinto com os novos gestos horizontais</string>
     <string name="show_notch">Mostrar notch, se disponível</string>
     <string name="allow_rotating_gestures">Permitir rotação de imagens com gestos</string>
     <string name="file_loading_priority">Prioridade de carregamento dos ficheiros</string>
@@ -266,4 +266,9 @@
     </plurals>
     <string name="overwrite_original">Sobrescrever original</string>
     <string name="keep_screen_on_fullscreen_photos">Mantenha o ecrã ligado enquanto visualiza fotos em ecrã inteiro</string>
+    <string name="render_ultra_hdr_photos">Mostrar fotos Ultra HDR em HDR</string>
+    <string name="on_video_tap">Ao tocar no vídeo</string>
+    <string name="open_in_app_player">Abrir no reprodutor da app</string>
+    <string name="open_system_default_player">Abrir a app predefinida</string>
+    <string name="video_no_sound">Este vídeo não tem áudio</string>
 </resources>
