@@ -126,7 +126,7 @@
     <string name="slideshow_ended">Diaporama terminé</string>
     <string name="no_media_for_slideshow">Aucun média trouvé pour le diaporama</string>
     <string name="group_direct_subfolders">Mode sous-dossiers</string>
-    <string name="group_by">Grouper par...</string>
+    <string name="group_by">Grouper par</string>
     <string name="do_not_group_files">Ne pas grouper les fichiers</string>
     <string name="by_folder">Dossier</string>
     <string name="by_last_modified">Date de modification</string>
