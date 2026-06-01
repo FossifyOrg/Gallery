@@ -157,13 +157,35 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of Gradle than 9.4.1 is available: 9.5.0"
+        message="A newer version of Gradle than 9.4.1 is available: 9.5.1"
         errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-9.4.1-bin.zip"
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="$HOME/work/Gallery/Gallery/gradle/wrapper/gradle-wrapper.properties"
             line="3"
             column="17"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 9.2.0 is available: 9.2.1"
+        errorLine1="gradlePlugins-agp = &quot;9.2.0&quot;"
+        errorLine2="                    ~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="22"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media3:media3-exoplayer than 1.10.0 is available: 1.10.1"
+        errorLine1="media3Exoplayer = &quot;1.10.0&quot;"
+        errorLine2="                  ~~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="34"
+            column="19"/>
     </issue>
 
     <issue
@@ -190,13 +212,24 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.8"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.9"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="8"
             column="17"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of io.github.awxkee:jxl-coder-glide than 2.6.0 is available: 2.6.1"
+        errorLine1="jxlDecoder = &quot;2.6.0&quot;"
+        errorLine2="             ~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="29"
+            column="14"/>
     </issue>
 
     <issue
