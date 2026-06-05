@@ -188,7 +188,7 @@
     <string name="show_highest_quality">Ssken-d tugniwin s tɣara ifazen akk</string>
     <string name="show_recycle_bin_last">Sken-d taqecwalt n yiḍumman am uferdis aneggaru deg ugdil agejdan</string>
     <string name="allow_down_gesture">Sireg ad tmedleḍ timeẓri n ugdil aččuṛan s usɣel ɣer wedda</string>
-    <string name="open_videos_on_separate_screen">Ldi yal tikelt tividyutin deg ugdil yemgaraden s yisɣal iglan imaynuten</string>
+    <string name="open_videos_on_separate_screen">Ɣeṛ tividyutin deg ugdil yemgaraden s yimussuyen iglawanen</string>
     <string name="allow_rotating_gestures">Sireg tuzzya n tugniwin s tigawt</string>
     <string name="file_loading_priority">Asali n ufaylu uzwir</string>
     <string name="speed">Arured</string>
@@ -260,4 +260,7 @@
     <string name="faq_11_title">Zemreɣ ad geɣ kra usgrew n tiqmaḍin n ufaylu n umidya?</string>
     <string name="render_ultra_hdr_photos">Sken-d tiwlafin Ultra HDR deg HDR</string>
     <string name="video_no_sound">Tavidyut-a ur tesɛi ara ameslaw</string>
+    <string name="on_video_tap">Deg tesfift n uvidyu</string>
+    <string name="open_in_app_player">Ldi ameɣri usliɣ deg usnas</string>
+    <string name="open_system_default_player">Ldi asnas n umeɣri amezwer</string>
 </resources>

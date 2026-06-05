@@ -177,7 +177,7 @@
     <string name="show_recycle_bin_last">Geri dönüşüm kutusunu ana ekranda son öge olarak göster</string>
     <string name="allow_down_gesture">Tam ekran görünümünü aşağı hareketi ile kapatmaya izin ver</string>
     <string name="allow_one_to_one_zoom">İki çift dokunuşla 1:1 yakınlaştırmaya izin ver</string>
-    <string name="open_videos_on_separate_screen">Videoları yeni yatay hareketlerle daima ayrı bir ekranda aç</string>
+    <string name="open_videos_on_separate_screen">Videoları yatay hareketler ile ayrı bir ekranda oynat</string>
     <string name="show_notch">Varsa bir çentik göster</string>
     <string name="allow_rotating_gestures">Hareketlerle resimlerin döndürülmesine izin ver</string>
     <string name="file_loading_priority">Dosya yükleme önceliği</string>
@@ -266,4 +266,7 @@
     <string name="overwrite_original">Orijinal olanın üstüne yaz</string>
     <string name="video_no_sound">Bu video ses içermiyor</string>
     <string name="render_ultra_hdr_photos">HDR içinde Ultra HDR fotoğrafları göster</string>
+    <string name="on_video_tap">Videoya dokunulduğunda</string>
+    <string name="open_in_app_player">Dahili oynatıcıyı aç</string>
+    <string name="open_system_default_player">Varsayılan oynatma uygulamasını aç</string>
 </resources>

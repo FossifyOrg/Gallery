@@ -22,9 +22,7 @@
     <ID>ComplexCondition:SettingsActivity.kt$SettingsActivity$requestCode == PICK_IMPORT_SOURCE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
     <ID>ComplexCondition:SettingsActivity.kt$SettingsActivity$requestCode == SELECT_EXPORT_FAVORITES_FILE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
     <ID>ComplexCondition:SettingsActivity.kt$SettingsActivity$requestCode == SELECT_IMPORT_FAVORITES_FILE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
-    <ID>ComplexCondition:VideoFragment.kt$VideoFragment$activity == null || mConfig.openVideosOnSeparateScreen || mIsPanorama || mExoPlayer != null</ID>
     <ID>ComplexCondition:VideoFragment.kt$VideoFragment$mStoredShowExtendedDetails &amp;&amp; isVisible() &amp;&amp; context != null &amp;&amp; resources != null</ID>
-    <ID>ComplexCondition:VideoFragment.kt$VideoFragment$mWasFragmentInit &amp;&amp; menuVisible &amp;&amp; mConfig.autoplayVideos &amp;&amp; !mConfig.openVideosOnSeparateScreen</ID>
     <ID>ComplexCondition:VideoPlayerActivity.kt$VideoPlayerActivity$config.allowDownGesture &amp;&amp; !mIgnoreCloseDown &amp;&amp; Math.abs(diffY) &gt; Math.abs(diffX) &amp;&amp; diffY &lt; -mCloseDownThreshold &amp;&amp; downGestureDuration &lt; MAX_CLOSE_DOWN_GESTURE_DURATION &amp;&amp; binding.videoSurfaceFrame.controller.state.zoom == 1f</ID>
     <ID>ComplexCondition:VideoPlayerActivity.kt$VideoPlayerActivity$mIsDragged || (Math.abs(diffX) &gt; mDragThreshold &amp;&amp; Math.abs(diffX) &gt; Math.abs( diffY )) &amp;&amp; binding.videoSurfaceFrame.controller.state.zoom == 1f</ID>
     <ID>ComplexCondition:ViewPagerFragment.kt$ViewPagerFragment$!mIgnoreCloseDown &amp;&amp; (Math.abs(diffY) &gt; Math.abs(diffX)) &amp;&amp; (diffY &lt; -mCloseDownThreshold) &amp;&amp; downGestureDuration &lt; MAX_CLOSE_DOWN_GESTURE_DURATION &amp;&amp; context?.config?.allowDownGesture == true</ID>
@@ -245,7 +243,6 @@
     <ID>MaxLineLength:Config.kt$Config$set(lastEditorCropOtherAspectRatioX) = prefs.edit().putFloat(LAST_EDITOR_CROP_OTHER_ASPECT_RATIO_X, lastEditorCropOtherAspectRatioX).apply()</ID>
     <ID>MaxLineLength:Config.kt$Config$set(lastEditorCropOtherAspectRatioY) = prefs.edit().putFloat(LAST_EDITOR_CROP_OTHER_ASPECT_RATIO_Y, lastEditorCropOtherAspectRatioY).apply()</ID>
     <ID>MaxLineLength:Config.kt$Config$set(lastExportedFavoritesFolder) = prefs.edit().putString(LAST_EXPORTED_FAVORITES_FOLDER, lastExportedFavoritesFolder).apply()</ID>
-    <ID>MaxLineLength:Config.kt$Config$set(openVideosOnSeparateScreen) = prefs.edit().putBoolean(OPEN_VIDEOS_ON_SEPARATE_SCREEN, openVideosOnSeparateScreen).apply()</ID>
     <ID>MaxLineLength:Config.kt$Config$set(searchAllFilesByDefault) = prefs.edit().putBoolean(SEARCH_ALL_FILES_BY_DEFAULT, searchAllFilesByDefault).apply()</ID>
     <ID>MaxLineLength:Config.kt$Config$set(showPermissionRationale) = prefs.edit().putBoolean(SHOW_PERMISSION_RATIONALE, showPermissionRationale).apply()</ID>
     <ID>MaxLineLength:Config.kt$Config$set(showRecycleBinAtFolders) = prefs.edit().putBoolean(SHOW_RECYCLE_BIN_AT_FOLDERS, showRecycleBinAtFolders).apply()</ID>

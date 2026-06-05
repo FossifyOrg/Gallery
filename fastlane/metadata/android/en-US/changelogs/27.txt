@@ -1,0 +1,13 @@
+Added:
+
+• Added "On video tap" option to choose between in-app player or default player app 
+
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed unnecessary "Video has no audio" toast when looping videos 
+• Fixed same pencil icons for edit and rename buttons 
+

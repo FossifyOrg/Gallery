@@ -259,9 +259,14 @@
     <string name="unsupported_format">Fitxategi ezin da erakutsi.</string>
     <plurals name="restore_confirmation">
         <item quantity="one">Ziur zaude fitxategi %d leheneratu nahi duzula?</item>
-        <item quantity="other">Ziur zaude %d fitxategi leheneratu nahi duzula?</item>
+        <item quantity="other">Ziur zaude %d fitxategiak leheneratu nahi dituzula?</item>
     </plurals>
     <string name="keep_screen_on_fullscreen_photos">Mantendu pantaila piztuta argazkiak pantaila osoan ikusi bitartean</string>
     <string name="force_landscape_reverse">Behartu horizontala (alderantzizkoa)</string>
     <string name="overwrite_original">Gainidatzi jatorrizkoa</string>
+    <string name="render_ultra_hdr_photos">Erakutsi Ultra HDR argazkiak HDR-n</string>
+    <string name="on_video_tap">Bideoa sakatzean</string>
+    <string name="open_in_app_player">Ireki aplikazioaren erreproduzigailuan</string>
+    <string name="open_system_default_player">Ireki lehenetsitako erreproduzigailuan</string>
+    <string name="video_no_sound">Bideo honek ez dauka audiorik</string>
 </resources>
