@@ -1088,7 +1088,7 @@ fun Activity.updateFavorite(path: String, isFavorite: Boolean) {
         // Update media in favorites collection for Android 11+ (API level 30)
         if (isRPlus()) {
             val uri = getFilePublicUri(File(path), BuildConfig.APPLICATION_ID)
-            if (isMedia(contentResolver, uri)) {
+            if (isSupportedForFavorite(contentResolver, uri)) {
                 updateFavoriteInMediaStore(uri, isFavorite)
             }
         }
@@ -1116,18 +1116,10 @@ private fun Activity.updateFavoriteInMediaStore(uri: Uri, isFavorite: Boolean) {
     }
 }
 
-private fun isMedia(contentResolver: ContentResolver, uri: Uri): Boolean {
+private fun isSupportedForFavorite(contentResolver: ContentResolver, uri: Uri): Boolean {
     return try {
         val type = contentResolver.getType(uri) ?: return false
-        val supportedImageTypes = setOf(
-            "image/jpeg",
-            "image/png",
-            "image/webp",
-            "image/gif",
-            "image/bmp",
-            "image/x-ms-bmp"
-        )
-        val isImage = type in supportedImageTypes
+        val isImage = type == "image/jpeg"
         val isVideo = type.startsWith("video/")
         isImage || isVideo
     } catch (_: Exception) {
