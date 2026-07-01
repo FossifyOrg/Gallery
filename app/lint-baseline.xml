@@ -157,7 +157,7 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of Gradle than 9.4.1 is available: 9.5.1"
+        message="A newer version of Gradle than 9.4.1 is available: 9.6.1"
         errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-9.4.1-bin.zip"
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -175,6 +175,17 @@
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="22"
             column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime than 2.10.0 is available: 2.11.0"
+        errorLine1="androidx-lifecycle = &quot;2.10.0&quot;"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="10"
+            column="22"/>
     </issue>
 
     <issue
@@ -212,13 +223,24 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.9"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.6.2"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="8"
             column="17"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of pl.droidsonroids.gif:android-gif-drawable than 1.2.31 is available: 1.2.32"
+        errorLine1="androidGifDrawable = &quot;1.2.31&quot;"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="24"
+            column="22"/>
     </issue>
 
     <issue
@@ -230,6 +252,17 @@
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="29"
             column="14"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.squareup.okhttp3:okhttp than 5.3.2 is available: 5.4.0"
+        errorLine1="okhttp = &quot;5.3.2&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="35"
+            column="10"/>
     </issue>
 
     <issue
