@@ -2,7 +2,7 @@
 #jetbrains
 kotlin = "2.3.10"
 #KSP
-ksp = "2.3.6"
+ksp = "2.3.7"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.28"
@@ -19,7 +19,7 @@ room = "2.8.4"
 #Fossify
 commons = "6.1.6"
 #Gradle4
-gradlePlugins-agp = "9.0.1"
+gradlePlugins-agp = "9.2.0"
 #Other
 androidGifDrawable = "1.2.31"
 androidImageCropper = "4.7.0"
