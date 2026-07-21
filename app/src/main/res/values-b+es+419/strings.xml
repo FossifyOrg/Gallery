@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="edit">Editar</string>
+    <string name="app_launcher_name">Galería</string>
+    <string name="open_camera">Abrir cámara</string>
+    <string name="hidden">(oculto)</string>
+    <string name="excluded">(excluido)</string>
+    <string name="pin_folder">Fijar carpeta</string>
+    <string name="unpin_folder">Desfijar carpeta</string>
+    <string name="pin_to_the_top">Fijar arriba de todo</string>
+    <string name="show_all">Mostrar el contenido de todas las carpetas</string>
+    <string name="all_folders">Todas las carpetas</string>
+    <string name="folder_view">Cambiar a vista de carpeta</string>
+    <string name="other_folder">Otra carpeta</string>
+    <string name="show_on_map">Mostrar en el mapa</string>
+    <string name="unknown_location">Ubicación desconocida</string>
+    <string name="volume">Volúmen</string>
+    <string name="brightness">Brillo</string>
+    <string name="lock_orientation">Fijar orientación</string>
+    <string name="unlock_orientation">Desfijar orientación</string>
+    <string name="change_orientation">Cambiar orientación</string>
+    <string name="force_portrait">Forzar retrato</string>
 </resources>
