@@ -20,4 +20,5 @@
     <string name="unlock_orientation">Desfijar orientación</string>
     <string name="change_orientation">Cambiar orientación</string>
     <string name="force_portrait">Forzar retrato</string>
+    <string name="thumbnails">Miniaturas</string>
 </resources>
