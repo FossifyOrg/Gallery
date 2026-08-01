@@ -168,7 +168,7 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.application than 9.2.0 is available: 9.2.1"
+        message="A newer version of com.android.application than 9.2.0 is available: 9.3.1. (There is also a newer version of 9.2.𝑥 available, if upgrading to 9.3.1 is difficult: 9.2.1)"
         errorLine1="gradlePlugins-agp = &quot;9.2.0&quot;"
         errorLine2="                    ~~~~~~~">
         <location
@@ -186,6 +186,17 @@
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="10"
             column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.2.1 is available: 2.2.2"
+        errorLine1="androidx-constraintlayout = &quot;2.2.1&quot;"
+        errorLine2="                            ~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="13"
+            column="29"/>
     </issue>
 
     <issue
@@ -223,7 +234,7 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.6.2"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.6.3"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
@@ -241,6 +252,28 @@
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="24"
             column="22"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.github.bumptech.glide:avif-integration than 5.0.7 is available: 5.0.9"
+        errorLine1="glideCompiler = &quot;5.0.7&quot;"
+        errorLine2="                ~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="27"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.github.bumptech.glide:ksp than 5.0.7 is available: 5.0.9"
+        errorLine1="glideCompiler = &quot;5.0.7&quot;"
+        errorLine2="                ~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="27"
+            column="17"/>
     </issue>
 
     <issue
@@ -263,6 +296,17 @@
             file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
             line="35"
             column="10"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.squareup.okio:okio than 3.17.0 is available: 3.18.1"
+        errorLine1="okio = &quot;3.17.0&quot;"
+        errorLine2="       ~~~~~~~~">
+        <location
+            file="$HOME/work/Gallery/Gallery/gradle/libs.versions.toml"
+            line="36"
+            column="8"/>
     </issue>
 
     <issue
