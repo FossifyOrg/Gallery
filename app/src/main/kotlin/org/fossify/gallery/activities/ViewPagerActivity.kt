@@ -171,6 +171,7 @@ import org.fossify.gallery.helpers.SLIDESHOW_DEFAULT_INTERVAL
 import org.fossify.gallery.helpers.SLIDESHOW_FADE_DURATION
 import org.fossify.gallery.helpers.SLIDESHOW_SLIDE_DURATION
 import org.fossify.gallery.helpers.SLIDESHOW_START_ON_ENTER
+import org.fossify.gallery.helpers.SLIDING_ANIMATION_TYPE_FADE
 import org.fossify.gallery.helpers.TYPE_GIFS
 import org.fossify.gallery.helpers.TYPE_IMAGES
 import org.fossify.gallery.helpers.TYPE_PORTRAITS
@@ -241,7 +242,7 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
 
         initFavorites()
 
-        binding.viewPager.setPageTransformer(false, FadePageTransformer())
+        setupSlidingAnimation()
     }
 
     override fun onResume() {
@@ -386,6 +387,16 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
         binding.mediumViewerToolbar.setNavigationOnClickListener {
             finish()
         }
+    }
+
+    private fun setupSlidingAnimation() {
+        binding.viewPager.setPageTransformer(
+            false,
+            when (config.slidingAnimation) {
+                SLIDING_ANIMATION_TYPE_FADE -> FadePageTransformer()
+                else -> DefaultPageTransformer()
+            }
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
