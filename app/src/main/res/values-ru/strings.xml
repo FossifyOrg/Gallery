@@ -151,9 +151,15 @@
     <string name="crop_thumbnails">Нарезать миниатюры на квадраты</string>
     <string name="show_thumbnail_video_duration">Показывать длительность видео</string>
     <string name="screen_rotation_by">Поворот экрана при просмотре изображения</string>
+
     <string name="screen_rotation_system_setting">Системные настройки</string>
     <string name="screen_rotation_device_rotation">При повороте устройства</string>
     <string name="screen_rotation_aspect_ratio">По размеру изображения</string>
+
+    <string name="sliding_animation_type">Анимация листания</string>
+    <string name="sliding_animation_type_slide">Сдвиг</string>
+    <string name="sliding_animation_type_fade">Затухание/появление</string>
+
     <string name="black_background_at_fullscreen">Чёрные фон и строка состояния при просмотре изображения</string>
     <string name="scroll_thumbnails_horizontally">Прокрутка миниатюр по горизонтали</string>
     <string name="hide_system_ui_at_fullscreen">Автоматически скрывать системный интерфейс при просмотре изображения</string>

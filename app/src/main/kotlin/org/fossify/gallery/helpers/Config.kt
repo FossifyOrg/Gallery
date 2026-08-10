@@ -205,6 +205,10 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getInt(SCREEN_ROTATION, ROTATE_BY_SYSTEM_SETTING)
         set(screenRotation) = prefs.edit().putInt(SCREEN_ROTATION, screenRotation).apply()
 
+    var slidingAnimation: Int
+        get() = prefs.getInt(SLIDING_ANIMATION, SLIDING_ANIMATION_TYPE_SLIDE)
+        set(slidingAnimation) = prefs.edit().putInt(SLIDING_ANIMATION, slidingAnimation).apply()
+
     var fileLoadingPriority: Int
         get() = prefs.getInt(FILE_LOADING_PRIORITY, PRIORITY_SPEED)
         set(fileLoadingPriority) = prefs.edit().putInt(FILE_LOADING_PRIORITY, fileLoadingPriority).apply()

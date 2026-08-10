@@ -74,6 +74,7 @@ class SettingsActivity : SimpleActivity() {
         setupDarkBackground()
         setupScrollHorizontally()
         setupScreenRotation()
+        setupSlidingAnimation()
         setupHideSystemUI()
         setupHiddenItemPasswordProtection()
         setupExcludedItemPasswordProtection()
@@ -672,11 +673,33 @@ class SettingsActivity : SimpleActivity() {
         }
     }
 
+    private fun setupSlidingAnimation() {
+        binding.settingsSlidingAnimation.text = getScreenRotationText()
+        binding.settingsSlidingAnimationHolder.setOnClickListener {
+            val items = arrayListOf(
+                RadioItem(SLIDING_ANIMATION_TYPE_SLIDE, getString(R.string.sliding_animation_type_slide)),
+                RadioItem(SLIDING_ANIMATION_TYPE_FADE, getString(R.string.sliding_animation_type_fade)),
+            )
+
+            RadioGroupDialog(this@SettingsActivity, items, config.slidingAnimation) {
+                config.slidingAnimation = it as Int
+                binding.settingsSlidingAnimation.text = getSlidingAnimationText()
+            }
+        }
+    }
+
     private fun getScreenRotationText() = getString(
         when (config.screenRotation) {
             ROTATE_BY_SYSTEM_SETTING -> R.string.screen_rotation_system_setting
             ROTATE_BY_DEVICE_ROTATION -> R.string.screen_rotation_device_rotation
             else -> R.string.screen_rotation_aspect_ratio
+        }
+    )
+
+    private fun getSlidingAnimationText() = getString(
+        when (config.slidingAnimation) {
+            SLIDING_ANIMATION_TYPE_FADE -> R.string.sliding_animation_type_fade
+            else -> R.string.sliding_animation_type_slide
         }
     )
 

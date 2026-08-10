@@ -624,6 +624,29 @@
 
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/settings_sliding_animation_holder"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_sliding_animation_label"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sliding_animation_type" />
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_sliding_animation"
+                    style="@style/SettingsTextValueStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/settings_sliding_animation_label"
+                    tools:text="@string/sliding_animation_type_slide" />
+
+            </RelativeLayout>
+
             <include
                 android:id="@+id/settings_fullscreen_media_divider"
                 layout="@layout/divider" />
