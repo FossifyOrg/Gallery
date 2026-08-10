@@ -240,6 +240,8 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
         }
 
         initFavorites()
+
+        binding.viewPager.setPageTransformer(false, FadePageTransformer())
     }
 
     override fun onResume() {
