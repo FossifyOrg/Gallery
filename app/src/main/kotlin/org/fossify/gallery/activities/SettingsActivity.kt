@@ -674,7 +674,7 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private fun setupSlidingAnimation() {
-        binding.settingsSlidingAnimation.text = getScreenRotationText()
+        binding.settingsSlidingAnimation.text = getSlidingAnimationText()
         binding.settingsSlidingAnimationHolder.setOnClickListener {
             val items = arrayListOf(
                 RadioItem(SLIDING_ANIMATION_TYPE_SLIDE, getString(R.string.sliding_animation_type_slide)),
