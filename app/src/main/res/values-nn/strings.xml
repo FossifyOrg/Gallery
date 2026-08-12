@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_launcher_name">Galleri</string>
+    <string name="edit">Gjer om</string>
+    <string name="open_camera">Opna kameraet</string>
+    <string name="pin_folder">Fest mappa</string>
+    <string name="unpin_folder">Løys mappa</string>
+    <string name="pin_to_the_top">Fest øvst</string>
+    <string name="show_all">Syn innhaldet i alle mapper</string>
+    <string name="all_folders">Alle mapper</string>
+    <string name="folder_view">Byt til mappesyning</string>
+    <string name="other_folder">Andre mapper</string>
+    <string name="show_on_map">Syn på kartet</string>
+    <string name="unknown_location">Ukjend plassering</string>
+    <string name="volume">Ljodstyrke</string>
+    <string name="brightness">Ljosstyrke</string>
+    <string name="force_portrait">Tvinga portrettmodus</string>
+    <string name="force_landscape">Tvinga landskapsmodus</string>
+    <string name="force_landscape_reverse">Tvinga landskapsmodus (vrengd)</string>
+    <string name="fix_date_taken">Retta dato på opptak</string>
+    <string name="fixing">Rettar…</string>
+</resources>
