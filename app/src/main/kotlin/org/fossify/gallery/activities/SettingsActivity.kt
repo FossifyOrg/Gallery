@@ -679,7 +679,6 @@ class SettingsActivity : SimpleActivity() {
             val items = arrayListOf(
                 RadioItem(SLIDING_ANIMATION_TYPE_SLIDE, getString(R.string.sliding_animation_type_slide)),
                 RadioItem(SLIDING_ANIMATION_TYPE_FADE, getString(R.string.sliding_animation_type_fade)),
-                RadioItem(SLIDING_ANIMATION_TYPE_NONE, getString(R.string.sliding_animation_type_none)),
             )
 
             RadioGroupDialog(this@SettingsActivity, items, config.slidingAnimation) {
