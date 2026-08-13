@@ -171,8 +171,9 @@ const val ROTATE_BY_DEVICE_ROTATION = 1
 const val ROTATE_BY_ASPECT_RATIO = 2
 
 // slide amination
-const val SLIDING_ANIMATION_TYPE_SLIDE = 0
-const val SLIDING_ANIMATION_TYPE_FADE = 1
+const val SLIDING_ANIMATION_TYPE_NONE = 0
+const val SLIDING_ANIMATION_TYPE_SLIDE = 1
+const val SLIDING_ANIMATION_TYPE_FADE = 2
 
 // video player type
 const val VIDEO_PLAYER_APP = 0

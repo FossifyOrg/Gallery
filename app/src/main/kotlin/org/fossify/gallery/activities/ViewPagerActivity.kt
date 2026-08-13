@@ -152,6 +152,7 @@ import org.fossify.gallery.helpers.GO_TO_PREV_ITEM
 import org.fossify.gallery.helpers.HIDE_SYSTEM_UI_DELAY
 import org.fossify.gallery.helpers.IS_VIEW_INTENT
 import org.fossify.gallery.helpers.MAX_PRINT_SIDE_SIZE
+import org.fossify.gallery.helpers.NoAnimationTransformer
 import org.fossify.gallery.helpers.PATH
 import org.fossify.gallery.helpers.PORTRAIT_PATH
 import org.fossify.gallery.helpers.RECYCLE_BIN
@@ -172,6 +173,8 @@ import org.fossify.gallery.helpers.SLIDESHOW_FADE_DURATION
 import org.fossify.gallery.helpers.SLIDESHOW_SLIDE_DURATION
 import org.fossify.gallery.helpers.SLIDESHOW_START_ON_ENTER
 import org.fossify.gallery.helpers.SLIDING_ANIMATION_TYPE_FADE
+import org.fossify.gallery.helpers.SLIDING_ANIMATION_TYPE_NONE
+import org.fossify.gallery.helpers.SLIDING_ANIMATION_TYPE_SLIDE
 import org.fossify.gallery.helpers.TYPE_GIFS
 import org.fossify.gallery.helpers.TYPE_IMAGES
 import org.fossify.gallery.helpers.TYPE_PORTRAITS
@@ -393,7 +396,8 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
         binding.viewPager.setPageTransformer(
             false,
             when (config.slidingAnimation) {
-                SLIDING_ANIMATION_TYPE_FADE -> FadePageTransformer()
+                SLIDING_ANIMATION_TYPE_NONE -> NoAnimationTransformer()
+                SLIDING_ANIMATION_TYPE_SLIDE -> FadePageTransformer()
                 else -> DefaultPageTransformer()
             }
         )

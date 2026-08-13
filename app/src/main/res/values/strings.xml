@@ -187,6 +187,7 @@
     <string name="sliding_animation_type">Image sliding animation</string>
     <string name="sliding_animation_type_slide">Slide</string>
     <string name="sliding_animation_type_fade">Fade</string>
+    <string name="sliding_animation_type_none">No animation</string>
 
     <string name="black_background_at_fullscreen">Black background at fullscreen media</string>
     <string name="scroll_thumbnails_horizontally">Scroll thumbnails horizontally</string>
