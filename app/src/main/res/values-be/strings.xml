@@ -178,6 +178,9 @@
     <string name="screen_rotation_system_setting">Налада сістэмы</string>
     <string name="screen_rotation_device_rotation">Паварот прылады</string>
     <string name="screen_rotation_aspect_ratio">Суадносіны бакоў</string>
+    <string name="sliding_animation_type">Анімацыя гартання</string>
+    <string name="sliding_animation_type_slide">Зрух</string>
+    <string name="sliding_animation_type_fade">Знікае</string>
     <string name="black_background_at_fullscreen">Чорныя фон і радок стану пры праглядзе выявы</string>
     <string name="scroll_thumbnails_horizontally">Пракруціць эскізы па гарызанталі</string>
     <string name="max_brightness">Максімальная яркасць пры праглядзе файлаў</string>

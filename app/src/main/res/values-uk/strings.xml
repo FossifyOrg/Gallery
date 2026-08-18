@@ -154,6 +154,9 @@
     <string name="screen_rotation_system_setting">Системними налаштуваннями</string>
     <string name="screen_rotation_device_rotation">Поворотом пристрою</string>
     <string name="screen_rotation_aspect_ratio">Співвідношенням сторін</string>
+    <string name="sliding_animation_type">Анімація гортання</string>
+    <string name="sliding_animation_type_slide">Зміщення</string>
+    <string name="sliding_animation_type_fade">Загасати</string>
     <string name="black_background_at_fullscreen">Чорне тло і рядок стану при повноекранному перегляді</string>
     <string name="scroll_thumbnails_horizontally">Гортати мініатюри горизонтально</string>
     <string name="hide_system_ui_at_fullscreen">Автоматично приховувати системний інтерфейс при повноекранному перегляді</string>
