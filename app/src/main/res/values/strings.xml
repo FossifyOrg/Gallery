@@ -184,7 +184,7 @@
     <string name="screen_rotation_device_rotation">Device rotation</string>
     <string name="screen_rotation_aspect_ratio">Aspect ratio</string>
 
-    <string name="sliding_animation_type">Image sliding animation</string>
+    <string name="sliding_animation_type">Image change animation</string>
     <string name="sliding_animation_type_slide">Slide</string>
     <string name="sliding_animation_type_fade">Fade</string>
 
