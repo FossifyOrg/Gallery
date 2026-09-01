@@ -157,7 +157,7 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of Gradle than 9.4.1 is available: 9.6.1"
+        message="A newer version of Gradle than 9.4.1 is available: 9.7.1"
         errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-9.4.1-bin.zip"
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -168,7 +168,7 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.application than 9.2.0 is available: 9.3.1. (There is also a newer version of 9.2.𝑥 available, if upgrading to 9.3.1 is difficult: 9.2.1)"
+        message="A newer version of com.android.application than 9.2.0 is available: 9.3.2. (There is also a newer version of 9.2.𝑥 available, if upgrading to 9.3.2 is difficult: 9.2.1)"
         errorLine1="gradlePlugins-agp = &quot;9.2.0&quot;"
         errorLine2="                    ~~~~~~~">
         <location
@@ -201,7 +201,7 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.media3:media3-exoplayer than 1.10.0 is available: 1.10.1"
+        message="A newer version of androidx.media3:media3-exoplayer than 1.10.0 is available: 1.11.0"
         errorLine1="media3Exoplayer = &quot;1.10.0&quot;"
         errorLine2="                  ~~~~~~~~">
         <location
@@ -234,7 +234,7 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.6.3"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.6.4"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
@@ -289,7 +289,7 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of com.squareup.okhttp3:okhttp than 5.3.2 is available: 5.4.0"
+        message="A newer version of com.squareup.okhttp3:okhttp than 5.3.2 is available: 5.5.0"
         errorLine1="okhttp = &quot;5.3.2&quot;"
         errorLine2="         ~~~~~~~">
         <location
