@@ -154,13 +154,13 @@
     <string name="allow_deep_zooming_images">Dovoli globoko povečavo slik</string>
     <string name="hide_extended_details">Skrij razširjene podrobnosti, ko je statusna vrstica skrita</string>
     <string name="show_at_bottom">Prikaži določene akcijske gumbe na dnu zaslona</string>
-    <string name="show_recycle_bin">Prikaži Koš na zaslonu z mapami</string>
+    <string name="show_recycle_bin">Prikaži koš na zaslonu z mapami</string>
     <string name="deep_zoomable_images">Globoko povečljive slike</string>
     <string name="show_highest_quality">Prikaži slike v največji možni kvaliteti</string>
-    <string name="show_recycle_bin_last">Prikaži Koš kot zadnji element na glavnem zaslonu</string>
+    <string name="show_recycle_bin_last">Prikaži koš kot zadnji element na glavnem zaslonu</string>
     <string name="allow_down_gesture">Dovoli zapiranje celozaslonskega načina z gesto navzdol</string>
     <string name="allow_one_to_one_zoom">Dovoli 1:1 povečavo z dvojnim pritiskom</string>
-    <string name="open_videos_on_separate_screen">Vedno odpri videoposnetke na ločenem zaslonu z novimi horizontalnimi gestami</string>
+    <string name="open_videos_on_separate_screen">Predvajanje videoposnetkov na ločenem zaslonu z vodoravnimi kretnjami</string>
     <string name="show_notch">Prikaži notch, če je na voljo</string>
     <string name="allow_rotating_gestures">Dovoli obračanje slik z gestami</string>
     <string name="file_loading_priority">Prioriteta pri nalaganju datotek</string>
@@ -223,7 +223,7 @@
     <string name="faq_14_title">Skril sem mapo/datoteko. Kako jo lahko zopet prikažem\?</string>
     <string name="faq_14_text">Lahko uporabite funkcijo \"Začasno prikaži skrito\", ki se nahaja v meniju na glavnem zaslonu ali preklopite \"Prikaži skrite elemente\" v nastavitvah aplikacije. Če želite element označiti kot viden, z dolgim pritiskom nanj prikličite meni in izberite \"Prikaži\". Skrivanje map deluje tako, da se kreira prazna \".nomedia\" datoteka v izbrani mapi, ki jo tudi lahko odstranite s katerimkoli urejevalnikom datotek. Upoštevajte, da skrivanje deluje rekurzivno. Ko skrijete mapo, bodo skrite tudi vse podmape. Torej, če želite odkriti podmape, morate odkriti nadrejeno mapo.</string>
     <string name="faq_15_title">Zakaj aplikacija zaseda toliko prostora\?</string>
-    <string name="faq_15_text">Predpomnilnik aplikacije lahko zasede do 250MB, zagotavlja pa hitrejše nalaganje fotografij. Če aplikacija zaseda še več prostora, je to najverjetneje zaradi velikega števila elementov v košu. Tudi te datoteke se štejejo v velikost aplikacije. Ročno odstranite datoteke iz koša. Vsaka datoteka v košu je sicer avtomatično izbrisana po 30 dneh.</string>
+    <string name="faq_15_text">Predpomnilnik aplikacije lahko zavzame do 250 MB, kar zagotavlja hitrejše nalaganje slik. Če aplikacija zavzema še več prostora, je to najverjetneje posledica elementov v košu. Te datoteke se štejejo v velikost aplikacije. Koš lahko počistite tako, da ga odprete in izbrišete vse datoteke ali pa to storite v nastavitvah aplikacije. Vsaka datoteka v košu se samodejno izbriše po 30 dneh.</string>
     <string name="faq_16_title">Kaj se je zgodi s skrivanjem datotek in map ter zakaj ne morem več videti skritih elementov\?</string>
     <string name="faq_16_text">Od sistema Android 11 naprej ne morete več skriti ali odkriti datotek ali map, zaradi sistemskih omejitev pa tudi ne morete videti skritih datotek ali map v aplikacijah galerije. Za to boste morali uporabiti kakšnega upravitelja datotek.</string>
     <string name="faq_16_text_extra">V nastavitvah naprave lahko tej galeriji omogočite tudi dostop do vseh datotek, kar bo omogočilo prikazovanje skritih elementov in na splošno zanesljivejše delovanje z datotekami.</string>
@@ -253,4 +253,24 @@
     <string name="slide">Diapozitiv</string>
     <string name="faq_5_text">Funkcija Izključi prepreči prikaz mape samo v galeriji Fossify, medtem ko funkcija Skrij deluje sistemsko in skrije mapo tudi iz drugih galerij. Deluje tako, da v dani mapi ustvari prazno datoteko \".nomedia\", ki jo lahko nato odstranite tudi s katerim koli upraviteljem datotek. Upoštevajte, da nekatere naprave ne omogočajo skrivanja map, kot so Kamera, Posnetki zaslona in Prenosi.</string>
     <string name="exclude_folder_description">Izbrano skupaj z njenimi podmapami boste izključili samo iz Galerije Fossify. Izključene mape lahko upravljate v nastavitvah.</string>
+    <string name="force_landscape_reverse">Vsili ležeče (obratno)</string>
+    <plurals name="restore_confirmation">
+        <item quantity="one">Ali ste prepričani, da želite obnoviti %d datoteko?</item>
+        <item quantity="two">Ali ste prepričani, da želite obnoviti %d datoteki?</item>
+        <item quantity="few">Ali ste prepričani, da želite obnoviti %d datoteke?</item>
+        <item quantity="other">Ali ste prepričani, da želite obnoviti %d datotek?</item>
+    </plurals>
+    <string name="full_storage_permission_required">Galerija Fossify potrebuje poln dostop za prikaz vseh vaših fotografij in videoposnetkov. Pojdite v Nastavitve &gt; Dovoljenja &gt; Fotografije in videoposnetki &gt; Dovoli vse.</string>
+    <string name="overwrite_original">Prepiši izvirnik</string>
+    <string name="render_ultra_hdr_photos">Prikaži fotografije Ultra HDR v HDR</string>
+    <string name="keep_screen_on_fullscreen_photos">Med ogledom fotografij na celotnem zaslonu naj bo zaslon vklopljen</string>
+    <string name="playback_speed">Hitrost predvajanja</string>
+    <string name="on_video_tap">Na video dotik</string>
+    <string name="open_in_app_player">Odpri predvajalnik v aplikaciji</string>
+    <string name="open_system_default_player">Odpri privzeto aplikacijo predvajalnika</string>
+    <string name="failed_to_load_media">Nalaganje medija ni uspelo.</string>
+    <string name="file_is_malformed_or_corrupted">Datoteka je nepravilno oblikovana ali poškodovana.</string>
+    <string name="media_exceeds_device_capabilities">Mediji presegajo zmogljivosti naprave.</string>
+    <string name="unsupported_format">Nepodprta oblika.</string>
+    <string name="video_no_sound">Ta videoposnetek nima zvoka</string>
 </resources>
