@@ -1,3 +1,5 @@
+@file:androidx.annotation.OptIn(markerClass = [androidx.media3.common.util.UnstableApi::class])
+
 package org.fossify.gallery.fragments
 
 import android.annotation.SuppressLint
@@ -6,6 +8,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Matrix
+import android.graphics.SurfaceTexture
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -17,6 +20,8 @@ import android.os.Handler
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.MotionEvent
+import android.view.Surface
+import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -30,6 +35,13 @@ import androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_90
 import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSPOSE
 import androidx.exifinterface.media.ExifInterface.ORIENTATION_TRANSVERSE
 import androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION
+import androidx.media3.common.MediaItem
+import androidx.media3.common.PlaybackException
+import androidx.media3.common.Player
+import androidx.media3.common.VideoSize
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.SeekParameters
+import androidx.media3.exoplayer.source.ProgressiveMediaSource
 import com.alexvasilkov.gestures.GestureController
 import com.alexvasilkov.gestures.State
 import com.bumptech.glide.Glide
@@ -85,6 +97,9 @@ import org.fossify.gallery.extensions.getBottomActionsHeight
 import org.fossify.gallery.extensions.sendFakeClick
 import org.fossify.gallery.helpers.ColorModeHelper
 import org.fossify.gallery.helpers.HIGH_TILE_DPI
+import org.fossify.gallery.helpers.MotionPhotoDataSourceFactory
+import org.fossify.gallery.helpers.MotionPhotoHelper
+import org.fossify.gallery.helpers.MotionPhotoInfo
 import org.fossify.gallery.helpers.LOW_TILE_DPI
 import org.fossify.gallery.helpers.MAX_ZOOM_EQUALITY_TOLERANCE
 import org.fossify.gallery.helpers.MEDIUM
@@ -129,6 +144,11 @@ class PhotoFragment : ViewPagerFragment() {
     private var mCurrentGestureViewZoom = 1f
     private var mInitialZoom = 1f
     private var mHasInitialZoom = false
+    private var mIsMotionPhoto = false
+    private var mMotionPhotoInfo: MotionPhotoInfo? = null
+    private var mMotionPhotoPlayer: ExoPlayer? = null
+    private var mMotionPhotoSurface: Surface? = null
+    private var mIsMotionVideoPlaying = false
 
     private var mStoredShowExtendedDetails = false
     private var mStoredHideExtendedDetails = false
@@ -162,6 +182,12 @@ class PhotoFragment : ViewPagerFragment() {
             instantPrevItem.setOnClickListener { listener?.goToPrevItem() }
             instantNextItem.setOnClickListener { listener?.goToNextItem() }
             panoramaOutline.setOnClickListener { openPanorama() }
+            motionPhotoPlay.setOnClickListener { playMotionPhotoVideo() }
+            motionPhotoSurface.setOnClickListener {
+                if (mIsMotionVideoPlaying) {
+                    stopMotionPhotoVideo()
+                }
+            }
 
             instantPrevItem.parentView = container
             instantNextItem.parentView = container
@@ -257,11 +283,20 @@ class PhotoFragment : ViewPagerFragment() {
         //      checkIfPanorama()
         // }
 
+        if (mMedium.isImage() && (mMedium.name.endsWith(".jpg", true) || mMedium.name.endsWith(".jpeg", true))) {
+            ensureBackgroundThread {
+                checkIfMotionPhoto()
+            }
+        }
+
         return mView
     }
 
     override fun onPause() {
         super.onPause()
+        if (mIsMotionVideoPlaying) {
+            stopMotionPhotoVideo()
+        }
         activity?.window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         storeStateVariables()
     }
@@ -308,6 +343,7 @@ class PhotoFragment : ViewPagerFragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        stopMotionPhotoVideo()
         if (activity?.isDestroyed == false) {
             binding.subsamplingView.recycle()
 
@@ -353,6 +389,14 @@ class PhotoFragment : ViewPagerFragment() {
     override fun setMenuVisibility(menuVisible: Boolean) {
         super.setMenuVisibility(menuVisible)
         mIsFragmentVisible = menuVisible
+        if (!menuVisible && mIsMotionVideoPlaying) {
+            stopMotionPhotoVideo()
+        }
+        val shouldAutoplayMotionPhoto = mIsMotionPhoto && !mIsMotionVideoPlaying &&
+            context?.config?.autoplayMotionPhotos == true
+        if (menuVisible && mWasInit && shouldAutoplayMotionPhoto) {
+            playMotionPhotoVideo()
+        }
         if (mWasInit) {
             val isNotAnimatedContent =
                 !mMedium.isGIF() && !mMedium.isApng() && !mMedium.isAvif() && !mMedium.isWebP()
@@ -852,6 +896,149 @@ class PhotoFragment : ViewPagerFragment() {
         }
     }
 
+    private fun checkIfMotionPhoto() {
+        val info = try {
+            MotionPhotoHelper.detectMotionPhoto(requireContext(), mMedium.path, mMedium.name)
+        } catch (e: Exception) {
+            null
+        }
+
+        mIsMotionPhoto = info != null
+        mMotionPhotoInfo = info
+
+        activity?.runOnUiThread {
+            if (mIsMotionPhoto && mIsFragmentVisible && requireContext().config.autoplayMotionPhotos) {
+                playMotionPhotoVideo()
+            } else {
+                binding.motionPhotoPlay.beVisibleIf(mIsMotionPhoto)
+                if (mIsFullscreen && mIsMotionPhoto) {
+                    binding.motionPhotoPlay.alpha = 0f
+                }
+            }
+        }
+    }
+
+    private fun playMotionPhotoVideo() {
+        val info = mMotionPhotoInfo ?: return
+        if (mIsMotionVideoPlaying) return
+
+        mIsMotionVideoPlaying = true
+        binding.motionPhotoPlay.beGone()
+
+        val textureView = binding.motionPhotoSurface
+        textureView.beVisible()
+
+        if (textureView.isAvailable) {
+            val surface = Surface(textureView.surfaceTexture)
+            mMotionPhotoSurface = surface
+            initMotionPhotoPlayer(surface, info)
+        } else {
+            textureView.surfaceTextureListener = object : TextureView.SurfaceTextureListener {
+                override fun onSurfaceTextureAvailable(surfaceTexture: SurfaceTexture, width: Int, height: Int) {
+                    val surface = Surface(surfaceTexture)
+                    mMotionPhotoSurface = surface
+                    initMotionPhotoPlayer(surface, info)
+                }
+                override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, w: Int, h: Int) = Unit
+                override fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean = true
+                override fun onSurfaceTextureUpdated(surface: SurfaceTexture) = Unit
+            }
+        }
+    }
+
+    private fun initMotionPhotoPlayer(surface: Surface, info: MotionPhotoInfo) {
+        if (activity == null) return
+
+        val factory = MotionPhotoDataSourceFactory(
+            requireContext(), mMedium.path, info.videoOffsetFromStart, info.videoLength
+        )
+
+        val mediaSource = ProgressiveMediaSource.Factory(factory)
+            .createMediaSource(MediaItem.fromUri(Uri.fromFile(File(mMedium.path))))
+
+        val shouldLoop = requireContext().config.loopMotionPhotos
+
+        mMotionPhotoPlayer = ExoPlayer.Builder(requireContext())
+            .setSeekParameters(SeekParameters.EXACT)
+            .build()
+            .apply {
+                repeatMode = if (shouldLoop) Player.REPEAT_MODE_ONE else Player.REPEAT_MODE_OFF
+                setVideoSurface(surface)
+                setMediaSource(mediaSource)
+                prepare()
+                playWhenReady = true
+
+                addListener(object : Player.Listener {
+                    override fun onPlaybackStateChanged(playbackState: Int) {
+                        if (playbackState == Player.STATE_ENDED) {
+                            activity?.runOnUiThread { stopMotionPhotoVideo() }
+                        }
+                    }
+
+                    override fun onRenderedFirstFrame() {
+                        activity?.runOnUiThread {
+                            binding.gesturesView.beGone()
+                            binding.subsamplingView.beGone()
+                        }
+                    }
+
+                    override fun onVideoSizeChanged(videoSize: VideoSize) {
+                        updateMotionPhotoSurfaceSize(videoSize)
+                    }
+
+                    override fun onPlayerError(error: PlaybackException) {
+                        activity?.runOnUiThread { stopMotionPhotoVideo() }
+                    }
+                })
+            }
+    }
+
+    private fun updateMotionPhotoSurfaceSize(videoSize: VideoSize) {
+        if (activity == null) return
+        val videoWidth = videoSize.width
+        val videoHeight = (videoSize.height / videoSize.pixelWidthHeightRatio).toInt()
+        if (videoWidth == 0 || videoHeight == 0) return
+
+        activity?.runOnUiThread {
+            val videoProportion = videoWidth.toFloat() / videoHeight.toFloat()
+            checkScreenDimensions()
+            val screenProportion = mScreenWidth.toFloat() / mScreenHeight.toFloat()
+
+            binding.motionPhotoSurface.layoutParams.apply {
+                if (videoProportion > screenProportion) {
+                    width = mScreenWidth
+                    height = (mScreenWidth.toFloat() / videoProportion).toInt()
+                } else {
+                    width = (videoProportion * mScreenHeight.toFloat()).toInt()
+                    height = mScreenHeight
+                }
+                binding.motionPhotoSurface.layoutParams = this
+            }
+        }
+    }
+
+    private fun stopMotionPhotoVideo() {
+        mMotionPhotoPlayer?.release()
+        mMotionPhotoPlayer = null
+        mMotionPhotoSurface?.release()
+        mMotionPhotoSurface = null
+        mIsMotionVideoPlaying = false
+
+        activity?.runOnUiThread {
+            binding.motionPhotoSurface.layoutParams.apply {
+                width = ViewGroup.LayoutParams.MATCH_PARENT
+                height = ViewGroup.LayoutParams.MATCH_PARENT
+                binding.motionPhotoSurface.layoutParams = this
+            }
+            binding.motionPhotoSurface.beGone()
+            binding.gesturesView.beVisible()
+            if (mIsSubsamplingVisible) {
+                binding.subsamplingView.beVisible()
+            }
+            binding.motionPhotoPlay.beVisibleIf(mIsMotionPhoto)
+        }
+    }
+
     private fun getImageOrientation(): Int {
         val defaultOrientation = -1
         var orient = defaultOrientation
@@ -969,6 +1156,11 @@ class PhotoFragment : ViewPagerFragment() {
             if (mIsPanorama) {
                 panoramaOutline.animate().alpha(if (isFullscreen) 0f else 1f).start()
                 panoramaOutline.isClickable = !isFullscreen
+            }
+
+            if (mIsMotionPhoto && !mIsMotionVideoPlaying) {
+                motionPhotoPlay.animate().alpha(if (isFullscreen) 0f else 1f).start()
+                motionPhotoPlay.isClickable = !isFullscreen
             }
 
             if (mWasInit && mMedium.isPortrait()) {

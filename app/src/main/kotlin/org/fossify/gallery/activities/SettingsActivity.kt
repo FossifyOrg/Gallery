@@ -67,6 +67,8 @@ class SettingsActivity : SimpleActivity() {
         setupLoopVideos()
         setupOpenVideosOnSeparateScreen()
         setupOnVideoTap()
+        setupAutoplayMotionPhotos()
+        setupLoopMotionPhotos()
         setupMaxBrightness()
         setupUltraHdrRendering()
         setupCropThumbnails()
@@ -289,6 +291,22 @@ class SettingsActivity : SimpleActivity() {
         binding.settingsLoopVideosHolder.setOnClickListener {
             binding.settingsLoopVideos.toggle()
             config.loopVideos = binding.settingsLoopVideos.isChecked
+        }
+    }
+
+    private fun setupAutoplayMotionPhotos() {
+        binding.settingsAutoplayMotionPhotos.isChecked = config.autoplayMotionPhotos
+        binding.settingsAutoplayMotionPhotosHolder.setOnClickListener {
+            binding.settingsAutoplayMotionPhotos.toggle()
+            config.autoplayMotionPhotos = binding.settingsAutoplayMotionPhotos.isChecked
+        }
+    }
+
+    private fun setupLoopMotionPhotos() {
+        binding.settingsLoopMotionPhotos.isChecked = config.loopMotionPhotos
+        binding.settingsLoopMotionPhotosHolder.setOnClickListener {
+            binding.settingsLoopMotionPhotos.toggle()
+            config.loopMotionPhotos = binding.settingsLoopMotionPhotos.isChecked
         }
     }
 
@@ -922,6 +940,8 @@ class SettingsActivity : SimpleActivity() {
                 put(GESTURE_VIDEO_PLAYER, config.gestureVideoPlayer)
                 put(VIDEO_PLAYER_TYPE, config.videoPlayerType)
                 put(ALLOW_VIDEO_GESTURES, config.allowVideoGestures)
+                put(AUTOPLAY_MOTION_PHOTOS, config.autoplayMotionPhotos)
+                put(LOOP_MOTION_PHOTOS, config.loopMotionPhotos)
                 put(ANIMATE_GIFS, config.animateGifs)
                 put(CROP_THUMBNAILS, config.cropThumbnails)
                 put(SHOW_THUMBNAIL_VIDEO_DURATION, config.showThumbnailVideoDuration)
@@ -1068,6 +1088,8 @@ class SettingsActivity : SimpleActivity() {
                 GESTURE_VIDEO_PLAYER -> config.gestureVideoPlayer = value.toBoolean()
                 VIDEO_PLAYER_TYPE -> config.videoPlayerType = value.toInt()
                 ALLOW_VIDEO_GESTURES -> config.allowVideoGestures = value.toBoolean()
+                AUTOPLAY_MOTION_PHOTOS -> config.autoplayMotionPhotos = value.toBoolean()
+                LOOP_MOTION_PHOTOS -> config.loopMotionPhotos = value.toBoolean()
                 ANIMATE_GIFS -> config.animateGifs = value.toBoolean()
                 CROP_THUMBNAILS -> config.cropThumbnails = value.toBoolean()
                 SHOW_THUMBNAIL_VIDEO_DURATION -> config.showThumbnailVideoDuration = value.toBoolean()
