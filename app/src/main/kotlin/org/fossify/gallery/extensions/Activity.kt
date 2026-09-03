@@ -1019,11 +1019,18 @@ fun BaseSimpleActivity.ensureWritablePath(
     }
 
     fun requestGrantsThenProceed() {
-        if (isRPlus() && !isExternalStorageManager()) {
-            val fileDirItem = arrayListOf(File(targetPath).toFileDirItem(this))
-            val fileUris = getFileUrisFromFileDirItems(fileDirItem)
-            updateSDK30Uris(fileUris) { success ->
-                if (success) proceedAfterGrants() else onCancel?.invoke()
+        if (isRPlus() && !isExternalStorageManager() && getDoesFilePathExist(targetPath)) {
+            val fileDirItems = arrayListOf(File(targetPath).toFileDirItem(this))
+            resolveMediaStoreUris(fileDirItems) { resolution ->
+                val fileUris = resolution.uris
+                if (fileUris.isEmpty()) {
+                    proceedAfterGrants()
+                    return@resolveMediaStoreUris
+                }
+
+                updateSDK30Uris(fileUris) { success ->
+                    if (success) proceedAfterGrants() else onCancel?.invoke()
+                }
             }
         } else {
             proceedAfterGrants()
