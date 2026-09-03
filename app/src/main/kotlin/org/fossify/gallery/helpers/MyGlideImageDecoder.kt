@@ -10,7 +10,7 @@ import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.signature.ObjectKey
 import com.davemorrissey.labs.subscaleview.ImageDecoder
 
-class MyGlideImageDecoder(val degrees: Int, val signature: ObjectKey) : ImageDecoder {
+class MyGlideImageDecoder(val orientation: Int, val signature: ObjectKey) : ImageDecoder {
 
     override fun decode(context: Context, uri: Uri): Bitmap {
         val options = RequestOptions()
@@ -22,7 +22,7 @@ class MyGlideImageDecoder(val degrees: Int, val signature: ObjectKey) : ImageDec
             .asBitmap()
             .load(uri.toString().substringAfter("file://"))
             .apply(options)
-            .transform(RotateTransformation(-degrees))
+            .transform(OrientationTransformation(orientation))
             .submit(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
 
         return builder.get()
