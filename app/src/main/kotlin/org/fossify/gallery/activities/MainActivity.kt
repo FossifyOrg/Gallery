@@ -443,6 +443,14 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
                 setResult(RESULT_OK)
                 finish()
             }
+        } else if (
+            resultCode == RESULT_CANCELED
+            && requestCode == PICK_MEDIA
+            && mIsThirdPartyIntent
+            && config.showAll
+        ) {
+            setResult(RESULT_CANCELED)
+            finish()
         }
         super.onActivityResult(requestCode, resultCode, resultData)
     }
