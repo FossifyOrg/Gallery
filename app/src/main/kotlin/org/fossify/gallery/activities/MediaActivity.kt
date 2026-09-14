@@ -713,7 +713,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             }
         }
 
-        mCurrAsyncTask!!.execute()
+        mCurrAsyncTask!!.start()
     }
 
     private fun isDirEmpty(): Boolean {

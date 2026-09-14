@@ -245,7 +245,7 @@ class SearchActivity : SimpleActivity(), MediaOperationsListener {
             }
         }
 
-        mCurrAsyncTask!!.execute()
+        mCurrAsyncTask!!.start()
     }
 
     override fun refreshItems() {

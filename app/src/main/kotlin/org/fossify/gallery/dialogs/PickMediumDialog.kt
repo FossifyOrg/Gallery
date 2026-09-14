@@ -57,7 +57,7 @@ class PickMediumDialog(val activity: BaseSimpleActivity, val path: String, val c
 
         GetMediaAsynctask(activity, path, false, false, false) {
             gotMedia(it)
-        }.execute()
+        }.start()
     }
 
     private fun showOtherFolder() {

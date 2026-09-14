@@ -1,7 +1,8 @@
 package org.fossify.gallery.asynctasks
 
 import android.content.Context
-import android.os.AsyncTask
+import android.os.Handler
+import android.os.Looper
 import org.fossify.commons.helpers.FAVORITES
 import org.fossify.commons.helpers.SORT_BY_DATE_MODIFIED
 import org.fossify.commons.helpers.SORT_BY_DATE_TAKEN
@@ -11,15 +12,46 @@ import org.fossify.gallery.extensions.getFavoritePaths
 import org.fossify.gallery.helpers.*
 import org.fossify.gallery.models.Medium
 import org.fossify.gallery.models.ThumbnailItem
+import java.util.concurrent.Callable
+import java.util.concurrent.ExecutionException
+import java.util.concurrent.Executors
+import java.util.concurrent.FutureTask
+import java.util.concurrent.atomic.AtomicBoolean
 
 class GetMediaAsynctask(
     val context: Context, val mPath: String, val isPickImage: Boolean = false, val isPickVideo: Boolean = false,
     val showAll: Boolean, val callback: (media: ArrayList<ThumbnailItem>) -> Unit
-) :
-    AsyncTask<Void, Void, ArrayList<ThumbnailItem>>() {
+) {
     private val mediaFetcher = MediaFetcher(context)
+    private val mainThreadHandler = Handler(Looper.getMainLooper())
+    private val hasStarted = AtomicBoolean(false)
+    private val isCancellationRequested = AtomicBoolean(false)
+    private val callbackLock = Any()
+    private val fetchFuture = object : FutureTask<ArrayList<ThumbnailItem>>(Callable { fetchMedia() }) {
+        override fun done() {
+            if (isCancelled || isCancellationRequested.get()) {
+                return
+            }
 
-    override fun doInBackground(vararg params: Void): ArrayList<ThumbnailItem> {
+            val media = try {
+                get()
+            } catch (exception: ExecutionException) {
+                throw RuntimeException("An error occurred while executing media fetch", exception.cause)
+            }
+
+            if (!isCancellationRequested.get()) {
+                mainThreadHandler.post {
+                    synchronized(callbackLock) {
+                        if (!isCancellationRequested.get()) {
+                            callback(media)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun fetchMedia(): ArrayList<ThumbnailItem> {
         val pathToUse = if (showAll) SHOW_ALL else mPath
         val folderGrouping = context.config.getFolderGrouping(pathToUse)
         val folderSorting = context.config.getFolderSorting(pathToUse)
@@ -60,13 +92,20 @@ class GetMediaAsynctask(
         return mediaFetcher.groupMedia(media, pathToUse)
     }
 
-    override fun onPostExecute(media: ArrayList<ThumbnailItem>) {
-        super.onPostExecute(media)
-        callback(media)
+    internal fun start() {
+        check(hasStarted.compareAndSet(false, true)) { "This task has already been started." }
+        executor.execute(fetchFuture)
     }
 
     fun stopFetching() {
         mediaFetcher.shouldStop = true
-        cancel(true)
+        synchronized(callbackLock) {
+            isCancellationRequested.set(true)
+            fetchFuture.cancel(true)
+        }
+    }
+
+    private companion object {
+        val executor = Executors.newSingleThreadExecutor()
     }
 }

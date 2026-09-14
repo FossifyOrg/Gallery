@@ -557,7 +557,7 @@ fun Context.rescanFolderMediaSync(path: String) {
                 } catch (ignored: Exception) {
                 }
             }
-        }.execute()
+        }.start()
     }
 }
 
