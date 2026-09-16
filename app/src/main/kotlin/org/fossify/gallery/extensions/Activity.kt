@@ -48,6 +48,7 @@ import org.fossify.gallery.helpers.DIRECTORY
 import org.fossify.gallery.helpers.RECYCLE_BIN
 import org.fossify.gallery.helpers.TEMP_FOLDER_NAME
 import org.fossify.gallery.models.DateTaken
+import org.fossify.gallery.models.Medium
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -63,6 +64,14 @@ fun Activity.sharePaths(paths: ArrayList<String>) {
 
 fun Activity.shareMediumPath(path: String) {
     sharePath(path)
+}
+
+fun applyFavoriteToOpenGrids(path: String, isFavorite: Boolean) {
+    MediaActivity.mMedia.filterIsInstance<Medium>().forEach {
+        if (it.path.equals(path, true)) {
+            it.isFavorite = isFavorite
+        }
+    }
 }
 
 fun Activity.shareMediaPaths(paths: ArrayList<String>) {

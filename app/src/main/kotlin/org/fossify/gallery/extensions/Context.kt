@@ -1081,6 +1081,7 @@ fun Context.updateFavorite(path: String, isFavorite: Boolean) {
         } else {
             favoritesDB.deleteFavoritePath(path)
         }
+        applyFavoriteToOpenGrids(path, isFavorite)
     } catch (e: Exception) {
         toast(org.fossify.commons.R.string.unknown_error_occurred)
     }
