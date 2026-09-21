@@ -21,6 +21,7 @@
 
     <ImageView
         android:id="@+id/favorite"
+        android:contentDescription="@string/toggle_favorite"
         android:layout_width="@dimen/favorite_list_icon_size"
         android:layout_height="@dimen/favorite_list_icon_size"
         android:layout_alignEnd="@id/medium_thumbnail"

@@ -25,6 +25,7 @@
 
         <ImageView
             android:id="@+id/play_portrait_outline"
+            android:contentDescription="@string/play"
             android:layout_width="@dimen/selection_check_size"
             android:layout_height="@dimen/selection_check_size"
             android:layout_alignParentStart="true"
@@ -74,6 +75,7 @@
 
         <ImageView
             android:id="@+id/favorite"
+            android:contentDescription="@string/toggle_favorite"
             android:layout_width="@dimen/selection_check_size"
             android:layout_height="@dimen/selection_check_size"
             android:layout_margin="@dimen/smaller_margin"
