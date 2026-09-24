@@ -62,11 +62,25 @@ fun Activity.sharePaths(paths: ArrayList<String>) {
 }
 
 fun Activity.shareMediumPath(path: String) {
-    sharePath(path)
+    val finalPath = if (config.stripMetadataOnShare && org.fossify.gallery.helpers.MetadataStripper.isSupported(path)) {
+        org.fossify.gallery.helpers.MetadataStripper.stripToCacheCopy(this, path) ?: path
+    } else {
+        path
+    }
+    sharePath(finalPath)
 }
 
 fun Activity.shareMediaPaths(paths: ArrayList<String>) {
-    sharePaths(paths)
+    val finalPaths = if (config.stripMetadataOnShare) {
+        ArrayList(paths.map { sourcePath ->
+            if (org.fossify.gallery.helpers.MetadataStripper.isSupported(sourcePath)) {
+                org.fossify.gallery.helpers.MetadataStripper.stripToCacheCopy(this, sourcePath) ?: sourcePath
+            } else sourcePath
+        })
+    } else {
+        paths
+    }
+    sharePaths(finalPaths)
 }
 
 fun Activity.setAs(path: String) {

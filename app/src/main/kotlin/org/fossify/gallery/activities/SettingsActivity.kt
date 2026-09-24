@@ -62,6 +62,7 @@ class SettingsActivity : SimpleActivity() {
         setupManageHiddenFolders()
         setupSearchAllFiles()
         setupShowHiddenItems()
+        setupStripMetadataOnShare()
         setupAutoplayVideos()
         setupRememberLastVideo()
         setupLoopVideos()
@@ -258,6 +259,14 @@ class SettingsActivity : SimpleActivity() {
     private fun toggleHiddenItems() {
         binding.settingsShowHiddenItems.toggle()
         config.showHiddenMedia = binding.settingsShowHiddenItems.isChecked
+    }
+
+    private fun setupStripMetadataOnShare() {
+        binding.settingsStripMetadataOnShare.isChecked = config.stripMetadataOnShare
+        binding.settingsStripMetadataOnShareHolder.setOnClickListener {
+            binding.settingsStripMetadataOnShare.toggle()
+            config.stripMetadataOnShare = binding.settingsStripMetadataOnShare.isChecked
+        }
     }
 
     private fun setupSearchAllFiles() {
