@@ -340,6 +340,47 @@
                 layout="@layout/divider" />
 
             <TextView
+                android:id="@+id/settings_motion_photos_label"
+                style="@style/SettingsSectionLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/motion_photos" />
+
+            <RelativeLayout
+                android:id="@+id/settings_autoplay_motion_photos_holder"
+                style="@style/SettingsHolderSwitchStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyMaterialSwitch
+                    android:id="@+id/settings_autoplay_motion_photos"
+                    style="@style/SettingsSwitchStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/autoplay_motion_photos" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_loop_motion_photos_holder"
+                style="@style/SettingsHolderSwitchStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyMaterialSwitch
+                    android:id="@+id/settings_loop_motion_photos"
+                    style="@style/SettingsSwitchStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loop_motion_photos" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/settings_motion_photos_divider"
+                layout="@layout/divider" />
+
+            <TextView
                 android:id="@+id/settings_thumbnails_label"
                 style="@style/SettingsSectionLabelStyle"
                 android:layout_width="match_parent"
