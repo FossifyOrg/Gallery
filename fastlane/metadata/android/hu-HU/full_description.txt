@@ -1,25 +1,25 @@
 Engedje szabadjára emlékeit a személyes adatai helyett. A Fossify Galéria univerzális fotó és videó app, amely egyszerre erős és privát. Se reklámok, se fölösleges engedélyek – csak maga az Önre szabott egyszerű használat.
 
-🖼️ FOTÓ SZERKESZTÉS EGY KARNYÚJTÁSNIYRA:
-Javítsa fel fényképeit az egyszerű de nagyszerű képszerkesztőnkkel. Vágja le, méretezze át, forgassa, tökrözze, rajzolja, és adjon hozzá lélegzetelállító filtereket, mindezt a személyes adatait kockáztatva. Vegye vissza az irányítást az emlékei felett.
+🖼️ FOTÓSZERKESZTÉS EGY KARNYÚJTÁSNYIRA:
+Javítsa fel fényképeit az egyszerű de nagyszerű képszerkesztőnkkel. Vágja le, méretezze át, forgassa, tükrözze, rajzolja, és adjon hozzá lélegzetelállító filtereket, mindezt a személyes adatait nem kockáztatva. Vegye vissza az irányítást az emlékei felett.
 
 🌐 A PRIVÁT SZFÉRA AZ ELSŐ, MINDIG:
-A magánélete igenis számít. Szabaduljon meg az adatra éhes tech óriásoktól. A Fossify Galériánál Ön irányít. Szabaduljon meg az EXIF adatoktól mint pl a GPS metaadtok és kamera részletek, szerezze vissza az emlékeit a nagy vállalatoktól.
+A magánélete igenis számít. Szabaduljon meg az adatra éhes tech óriásoktól. A Fossify Galériánál Ön irányít. Szabaduljon meg az EXIF adatoktól mint pl a GPS metaadatok és kamera részletek, szerezze vissza az emlékeit a nagy vállalatoktól.
 
 🔒 NAGYOBB BIZTONSÁG:
 Zárja le emlékeit egy kóddal, mintával, vagy ujjlenyomattal. Biztosítsa egyes fotóit, videóit, vagy az egész app-ot – Ön dönti el ki kap hozzáférést. Garantált lelki nyugalom.
 
 🔄 KÖNNYŰ VISSZAÁLLÍTÁS:
-Habár történnek blesetek, megkönnyebülhet. A Fossify Galéria beépített lomtárjából másodpercenken belül visszaállíthatja a kitörölt képeket vagy videókat. Nincs többé elveszett kincs, csak megkönnyebülés.
+Habár történnek balesetek, megkönnyebbülhet. A Fossify Galéria beépített lomtárjából másodperceken belül visszaállíthatja a kitörölt képeket vagy videókat. Nincs többé elveszett kincs, csak megkönnyebbülés.
 
-🎨 SAJÁT GALÉRIA, SAJÁT STYLUS:
-Szabja személyre a kinézetet és funcionalitást kedve szerint. A felhasználói felülettől a funkció gombokig, a Fossify Gallery megadja Önnek a kreatív szabadságot, amire vágyott.
+🎨 SAJÁT GALÉRIA, SAJÁT STÍLUS:
+Szabja személyre a kinézetet és funkcionalitást kedve szerint. A felhasználói felülettől a funkció gombokig, a Fossify Gallery megadja Önnek a kreatív szabadságot, amire vágyott.
 
 📷 AZ UNIVERZÁLIS FORMÁTUM SZABADSÁGA:
 JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, videók, és még sok más – minden emlékét újra megtekintheti, bármilyen formátumot is választ. Lehetőségei útjába immáron nem áll semmilyen akadály.
 
 ✨ MATERIAL DIZÁJN, DINAMIKUS TÉMÁKKAL:
-Keltse életre az material dizájn ösztönös szépségét dinamikus témákkal. Ennél is többet akar? Ássa bele magát az egyedi témákba, és varázsolja még egyedibbé galériáját.
+Keltse életre a material dizájn ösztönös szépségét dinamikus témákkal. Ennél is többet akar? Ássa bele magát az egyedi témákba, és varázsolja még egyedibbé galériáját.
 
 Fedezze fel a többi Fossify appot: https://www.fossify.org
 Nyílt Forráskód: https://www.github.com/FossifyOrg
