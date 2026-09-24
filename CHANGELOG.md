@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Hide the non-functional "Move to" action when viewing items in the recycle bin ([#692])
 
 ## [1.13.1] - 2026-02-14
 ### Changed
@@ -294,6 +296,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#648]: https://github.com/FossifyOrg/Gallery/issues/648
 [#659]: https://github.com/FossifyOrg/Gallery/issues/659
 [#666]: https://github.com/FossifyOrg/Gallery/issues/666
+[#692]: https://github.com/FossifyOrg/Gallery/issues/692
 [#718]: https://github.com/FossifyOrg/Gallery/issues/718
 [#734]: https://github.com/FossifyOrg/Gallery/issues/734
 [#743]: https://github.com/FossifyOrg/Gallery/issues/743
