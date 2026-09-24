@@ -3,25 +3,25 @@ Deel herinneringen, geen persoonlijke gegevens.  Fossify Galerij is de ultieme f
 🖼️ FOTOBEWERKING BINNEN HANDBEREIK:
 Verbeter je foto’s met onze basale maar krachtige fotobewerker.  Bijsnijden, schalen, roteren, omkeren, tekenen en verbazingwekkende filters toepassen, allemaal zonder je privacy in gevaar te brengen.  Houd controle over je herinneringen als nooit tevoren.
 
-🌐 PRIVACY OP DE EERSTE PLAATS, ALTIJD
-Your privacy matters. Ditch the data-hungry giants. Fossify Gallery puts you in control. Strip away EXIF metadata like GPS coordinates and camera details, keeping your memories yours, and yours alone.
+🌐 PRIVACY OP DE EERSTE PLAATS, ALTIJD:
+Je privacy is belangrijk. Laat de datahongerige giganten achter je. Fossify Galerij geeft jou de controle. Verwijder EXIF-metadata zoals GPS-coördinaten en cameragegevens, zodat je herinneringen van jou blijven, en van jou alleen.
 
-🔒 SUPERIOR SECURITY:
-Lock down your memories with pin, pattern, or fingerprint protection. Secure specific photos, videos, or the entire app – you decide who gets access. Peace of mind, guaranteed.
+🔒 SUPERIEURE BEVEILIGING:
+Vergrendel je herinneringen met een pincode, patroon of vingerafdruk. Beveilig specifieke foto's, video's of de hele app; jij bepaalt wie toegang krijgt. Gemoedsrust gegarandeerd.
 
-🔄 RECOVER WITH EASE:
-Breathe easy, accidents happen! Fossify Gallery's built-in recycle bin lets you recover deleted photos and videos in seconds. No more lost treasures, just pure relief.
+🔄 EENVOUDIG HERSTELLEN:
+Haal opgelucht adem, ongelukjes gebeuren! Met de ingebouwde prullenbak van Fossify Galerij herstel je verwijderde foto's en video's binnen enkele seconden. Geen verloren schatten meer, alleen pure opluchting.
 
-🎨 YOUR GALLERY, YOUR STYLE:
-Customize the look, feel, and functionality to match your style. From UI themes to function buttons, Fossify Gallery gives you the creative freedom you crave.
+🎨 JOUW GALERIJ, JOUW STIJL:
+Pas het uiterlijk, de uitstraling en de functionaliteit aan jouw stijl aan. Van UI-thema's tot functieknoppen, Fossify Galerij geeft je de creatieve vrijheid waar je naar verlangt.
 
-📷 UNIVERSAL FORMAT FREEDOM:
-JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, videos, and more – we've got your memories covered, in any format you choose. No restrictions, just limitless possibilities.
+📷 UNIVERSELE FORMAATVRIJHEID:
+JPEG, JPEG XL, PNG, MP4, MKV, RAW, SVG, GIF, video's en meer: we ondersteunen je herinneringen in elk formaat dat je kiest. Geen beperkingen, alleen eindeloze mogelijkheden.
 
-✨ MATERIAL DESIGN WITH DYNAMIC THEMES:
-Experience the beauty of intuitive material design with dynamic themes. Want more? Dive into custom themes and make your gallery truly unique.
+✨ MATERIAL DESIGN MET DYNAMISCHE THEMA'S:
+Ervaar de schoonheid van intuïtief Material Design met dynamische thema's. Wil je meer? Duik in aangepaste thema's en maak je galerij echt uniek.
 
-Explore more apps by Fossify: https://www.fossify.org
-Open-Source Code: https://www.github.com/FossifyOrg
-Join the community on Reddit: https://www.reddit.com/r/Fossify
-Connect on Telegram: https://t.me/Fossify
+Ontdek meer apps van Fossify: https://www.fossify.org
+Opensourcecode: https://www.github.com/FossifyOrg
+Sluit je aan bij de community op Reddit: https://www.reddit.com/r/Fossify
+Neem contact op via Telegram: https://t.me/Fossify
