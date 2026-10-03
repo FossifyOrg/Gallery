@@ -26,7 +26,7 @@
     <string name="dates_fixed_successfully">‹تاریخ‌ها با موفقیت اصلاح شدند</string>
     <string name="no_date_takens_found">تاریخ عکس‌برداری یافت نشد</string>
     <string name="share_resized">هم‌رسانی نسخهٔ تغییر اندازه یافته</string>
-    <string name="switch_to_file_search">تغییر حالت به جستجوی پرونده در تمام پوشه‌های قابل‌مشاهده</string>
+    <string name="switch_to_file_search">تغییر حالت به جستجوی فایل در تمام پوشه‌های قابل‌مشاهده</string>
     <string name="set_as_default_folder">تنظیم به عنوان پوشه‌ٔ پیش‌فرض</string>
     <string name="unset_as_default_folder">لغو تنظیم به عنوان پوشهٔ پیش‌فرض</string>
     <string name="reorder_by_dragging">مرتب‌سازی پوشه‌ها با کشیدن</string>
@@ -38,9 +38,9 @@
     <string name="raw_images">تصاویر خام</string>
     <string name="svgs">تصاویر بُرداری</string>
     <string name="portraits">پرتره‌ها</string>
-    <string name="no_media_with_filters">هیچ پروندهٔ رسانه‌ای با پالایه‌های انتخاب‌شده یافت نشد.</string>
+    <string name="no_media_with_filters">هیچ فایل رسانه‌ای با پالایه‌های انتخاب‌شده یافت نشد.</string>
     <string name="change_filters_underlined"><u>تغییر پالایه‌ها</u></string>
-    <string name="hide_folder_description">این قابلیت، با افزودن پروندهٔ «‎.nomedia» به پوشه، آن را پنهان می‌کند؛ این کار باعث پنهان شدن تمام زیرشاخه‌ها نیز خواهد شد. شما می‌توانید با تغییر حالت «نمایش موارد پنهان» در تنظیمات آن‌ها را ببینید. همین را می‌خواهید؟</string>
+    <string name="hide_folder_description">این قابلیت، با افزودن فایل «‎.nomedia» به پوشه، آن را پنهان می‌کند؛ این کار باعث پنهان شدن تمام زیرشاخه‌ها نیز خواهد شد. شما می‌توانید با تغییر حالت «نمایش موارد پنهان» در تنظیمات آن‌ها را ببینید. همین را می‌خواهید؟</string>
     <string name="crop_thumbnails">برش مربعی ریزنماها</string>
     <string name="autoplay_videos">پخش خودکار ویدیوها</string>
     <string name="remember_last_video_position">آخرین موقعیت پخش ویدیو را به‌‌خاطر بسپار</string>
@@ -55,7 +55,7 @@
     <string name="keep_aspect_ratio">نسبت ابعاد را حفظ کنید</string>
     <string name="hidden_folders">پوشه‌های پنهان</string>
     <string name="manage_hidden_folders">مدیریت پوشه‌های پنهان</string>
-    <string name="hidden_folders_placeholder">به نظر می‌رسد هیچ پوشه‌ای که با پرونده‌ٔ «‎.nomedia» پنهان شده باشد، ندارید.</string>
+    <string name="hidden_folders_placeholder">به نظر می‌رسد هیچ پوشه‌ای که با فایل «‎.nomedia» پنهان شده باشد، ندارید.</string>
     <string name="include_folders">پوشه‌های شامل‌شده</string>
     <string name="manage_included_folders">مدیریت پوشه‌های شامل‌شده</string>
     <string name="resize_factor_error">عددی از ۱۰ تا ۹۰ وارد کنید</string>
@@ -69,7 +69,7 @@
     <string name="slideshow">اسلایدشو</string>
     <string name="animation">انیمیشن</string>
     <string name="loop_slideshow">پخش حلقه‌ای اسلایدشو</string>
-    <string name="no_media_add_included">هیچ پرونده‌ٔ رسانه‌ای پیدا نشد. می‌توانید با اضافه کردن دستی پوشه‌های دارای پرونده‌های رسانه‌ای، مشکل را برطرف کنید.</string>
+    <string name="no_media_add_included">هیچ فایل رسانه‌ای پیدا نشد. می‌توانید با اضافه کردن دستی پوشه‌های دارای فایل‌های رسانه‌ای، مشکل را برطرف کنید.</string>
     <string name="resize_and_save">تغییر اندازه‌ٔ بخش انتخاب‌شده و ذخیره‌سازی</string>
     <string name="invalid_values">لطفاً وضوح‌تصویر معتبری وارد کنید</string>
     <string name="images_resized_successfully">تغییر اندازه‌ٔ تصاویر با موفقیت انجام شد</string>
@@ -93,13 +93,13 @@
     <string name="no_animation">بدون انیمیشن</string>
     <string name="folder_thumbnail_style">سبک ریزنمای پوشه</string>
     <string name="limit_folder_title">نام طولانی پوشه‌ها را به یک سطر محدود کن</string>
-    <string name="hidden_all_files">برای دیدن پرونده‌های پنهان، باید به برنامه اجازه‌ٔ دسترسی به همه‌ٔ پرونده‌ها را بدهید؛ وگرنه کار نمی‌کند.</string>
+    <string name="hidden_all_files">برای دیدن فایل‌های پنهان، باید به برنامه اجازه‌ٔ دسترسی به همه‌ٔ فایل‌ها را بدهید؛ وگرنه کار نمی‌کند.</string>
     <string name="cant_unhide_folder">اگر پوشه‌ای یا یکی از پوشه‌های والدش، قبل از اسمش نقطه داشته باشد، پنهان است و با این کار از حالت پنهان در نمی‌آید. باید با تغییر نام آن، نقطه را بردارید.</string>
     <string name="include_gifs">تصاویر متحرک را ضمیمه کنید</string>
     <string name="excluded_activity_placeholder">مستثنا کردن پوشه‌ها، آن‌ها را با زیرشاخه‌هایشان، تنها در این برنامه پنهان می‌کند؛ در برنامه‌های دیگر نمایان خواهند بود.
 \n
 \nاگر می‌خواهید در برنامه‌های دیگر هم پنهان بمانند، از قابلیت پنهان‌سازی استفاده کنید.</string>
-    <string name="included_activity_placeholder">اگر پوشه‌هایی دارید که پرونده‌های رسانه‌ای دارند ولی برنامه آن‌ها را شناسایی نمی‌کند، می‌توانید آن‌ها را از این‌جا دستی اضافه کنید. \n \nاضافه کردن موارد از این‌جا، هیچ پوشه‌ٔ دیگری را مستثنا نمی‌کند.</string>
+    <string name="included_activity_placeholder">اگر پوشه‌هایی دارید که فایل‌های رسانه‌ای دارند ولی برنامه آن‌ها را شناسایی نمی‌کند، می‌توانید آن‌ها را از این‌جا دستی اضافه کنید. \n \nاضافه کردن موارد از این‌جا، هیچ پوشه‌ٔ دیگری را مستثنا نمی‌کند.</string>
     <string name="resize_factor">ضریب تغییر اندازه</string>
     <plurals name="failed_to_resize_images">
         <item quantity="one">تغییر اندازهٔ تصویر %d ناموفق بود.</item>
@@ -121,11 +121,11 @@
     <string name="export_favorite_paths">خروجی برگزیده‌ها</string>
     <string name="import_favorite_paths">واردکردن برگزیده‌ها</string>
     <string name="bottom_actions">عملکردهای پایین صفحه</string>
-    <string name="all_files">همه‌ی پرونده‌ها</string>
+    <string name="all_files">همه‌ٔ فایل‌ها</string>
     <string name="manage_bottom_actions">مدیریت عملکردهای نمایان در پایین صفحه</string>
     <string name="media_only">فقط رسانه‌ها</string>
     <string name="search_all_files">در صفحه‌ٔ اصلی، به‌جای پوشه‌ها، بین همه‌ٔ فایل‌ها جست‌وجو کن</string>
-    <string name="file_thumbnail_style">سبک ریزنمای پرونده</string>
+    <string name="file_thumbnail_style">سبک ریزنمای فایل</string>
     <string name="wallpaper">پس‌زمینه</string>
     <string name="free_aspect_ratio">آزاد</string>
     <string name="other_aspect_ratio">غیره</string>
@@ -158,7 +158,7 @@
     <string name="no_media_for_slideshow">هیچ رسانه‌ای برای اسلایدشو یافت نشد</string>
     <string name="group_direct_subfolders">گروه‌بندی زیرپوشه‌های مستقیم</string>
     <string name="group_by">گروه‌بندی بر اساس</string>
-    <string name="do_not_group_files">پرونده‌ها گروه‌بندی نشوند</string>
+    <string name="do_not_group_files">فایل‌ها گروه‌بندی نشوند</string>
     <string name="by_folder">پوشه</string>
     <string name="by_last_modified">آخرین تغییر</string>
     <string name="by_last_modified_daily">آخرین تغییر (روزانه)</string>
@@ -166,9 +166,9 @@
     <string name="by_date_taken">تاریخ عکس‌برداری</string>
     <string name="by_date_taken_daily">تاریخ عکس‌برداری (روزانه)</string>
     <string name="by_date_taken_monthly">تاریخ عکس‌برداری (ماهانه)</string>
-    <string name="by_file_type">نوع پرونده</string>
-    <string name="by_extension">پسوند پرونده</string>
-    <string name="show_file_count_section_header">نمایش تعداد پرونده در سربرگ بخش‌ها</string>
+    <string name="by_file_type">نوع فایل</string>
+    <string name="by_extension">پسوند فایل</string>
+    <string name="show_file_count_section_header">نمایش تعداد فایل در سربرگ بخش‌ها</string>
     <string name="grouping_and_sorting">لطفاً توجه داشته باشید که گروه‌بندی و مرتب‌سازی دو مورد مستقل هستند</string>
     <string name="folder_on_widget">پوشه نمایش داده شده در ابزارک:</string>
     <string name="show_folder_name">نمایش نام پوشه</string>
@@ -253,7 +253,7 @@
     <string name="faq_11_title">آیا می‌توانم به نحوی ریزنماهای فایل‌های رسانه‌ای را گروه‌بندی کنم؟</string>
     <string name="faq_11_text">قطعاً، فقط در نمای ریزنماها از گزینه منوی \"گروه‌بندی بر اساس\" استفاده کنید. می‌توانید فایل‌ها را بر اساس معیارهای متعدد، از جمله تاریخ عکس‌برداری، گروه‌بندی کنید. اگر از عملکرد \"نمایش محتوای همه پوشه‌ها\" استفاده کنید، می‌توانید آن‌ها را بر اساس پوشه نیز گروه‌بندی کنید.</string>
     <string name="faq_12_title">به نظر می‌رسد مرتب‌سازی بر اساس تاریخ عکس‌برداری به درستی کار نمی‌کند، چگونه می‌توانم آن را برطرف کنم؟</string>
-    <string name="faq_12_text">به احتمال زیاد به دلیل کپی شدن فایل‌ها از جایی دیگر است. می‌توانید آن را با انتخاب تصاویر بندانگشتی فایل و انتخاب \"اصلاح تاریخ عکس‌برداری\" برطرف کنید.</string>
+    <string name="faq_12_text">به احتمال زیاد به دلیل کپی شدن فایل‌ها از جایی دیگر است. می‌توانید آن را با انتخاب ریزنماهای فایل و انتخاب \"اصلاح تاریخ عکس‌برداری\" برطرف کنید.</string>
     <string name="faq_13_title">من روی تصاویر برخی نوارهای رنگی (Color banding) می‌بینم. چگونه می‌توانم کیفیت را بهبود دهم؟</string>
     <string name="faq_13_text">راه‌حل فعلی برای نمایش تصاویر در اکثر موارد به خوبی کار می‌کند، اما اگر کیفیت تصویر بهتری می‌خواهید، می‌توانید گزینه \"نمایش تصاویر با بالاترین کیفیت ممکن\" را در تنظیمات برنامه، در بخش \"تصاویر با بزرگنمایی عمیق\" فعال کنید.</string>
     <string name="faq_14_title">من یک فایل/پوشه را مخفی کرده‌ام. چگونه می‌توانم آن را از حالت مخفی خارج کنم؟</string>
