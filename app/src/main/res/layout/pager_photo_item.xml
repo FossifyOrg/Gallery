@@ -32,6 +32,13 @@
         android:layout_height="match_parent"
         android:visibility="gone" />
 
+    <TextureView
+        android:id="@+id/motion_photo_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
     <include
         android:id="@+id/error_message_holder"
         layout="@layout/layout_media_load_error" />
@@ -44,6 +51,17 @@
         android:contentDescription="@null"
         android:padding="20dp"
         android:src="@drawable/ic_panorama_outline"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/motion_photo_play"
+        android:layout_width="@dimen/play_outline_size_big"
+        android:layout_height="@dimen/play_outline_size_big"
+        android:layout_above="@id/bottom_actions_dummy"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:padding="20dp"
+        android:src="@drawable/ic_play_outline_vector"
         android:visibility="gone" />
 
     <TextView
