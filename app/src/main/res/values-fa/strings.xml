@@ -23,7 +23,7 @@
     <string name="use_default_orientation">استفاده از راستای پیش‌فرض</string>
     <string name="fix_date_taken">اصلاح تاریخ عکس‌برداری</string>
     <string name="fixing">در حال اصلاح…</string>
-    <string name="dates_fixed_successfully">‹تاریخ‌ها با موفقیت اصلاح شدند</string>
+    <string name="dates_fixed_successfully">تاریخ‌ها با موفقیت اصلاح شدند</string>
     <string name="no_date_takens_found">تاریخ عکس‌برداری یافت نشد</string>
     <string name="share_resized">هم‌رسانی نسخهٔ تغییر اندازه یافته</string>
     <string name="switch_to_file_search">تغییر حالت به جستجوی فایل در تمام پوشه‌های قابل‌مشاهده</string>
@@ -102,8 +102,8 @@
     <string name="included_activity_placeholder">اگر پوشه‌هایی دارید که فایل‌های رسانه‌ای دارند ولی برنامه آن‌ها را شناسایی نمی‌کند، می‌توانید آن‌ها را از این‌جا دستی اضافه کنید. \n \nاضافه کردن موارد از این‌جا، هیچ پوشه‌ٔ دیگری را مستثنا نمی‌کند.</string>
     <string name="resize_factor">ضریب تغییر اندازه</string>
     <plurals name="failed_to_resize_images">
-        <item quantity="one">تغییر اندازهٔ تصویر %d ناموفق بود.</item>
-        <item quantity="other">تغییر اندازهٔ تصاویر %d ناموفق بودند.</item>
+        <item quantity="one">تغییر اندازهٔ %d تصویر ناموفق بود.</item>
+        <item quantity="other">تغییر اندازهٔ %d تصویر ناموفق بود.</item>
     </plurals>
     <string name="resize_factor_info">تغییر اندازه‌ٔ تصاویر به درصد دلخواه، مقدار باید از ۱۰ تا ۹۰ باشد.</string>
     <string name="advanced_editor">ویرایشگر پیشرفته</string>
@@ -173,7 +173,7 @@
     <string name="folder_on_widget">پوشه نمایش داده شده در ابزارک:</string>
     <string name="show_folder_name">نمایش نام پوشه</string>
     <string name="loop_videos">پخش حلقه‌ای ویدیوها</string>
-    <string name="animate_gifs">انیمیشن تصاویر متحرک در ریرنماها</string>
+    <string name="animate_gifs">انیمیشن تصاویر متحرک در ریزنماها</string>
     <string name="max_brightness">حداکثر روشنایی هنگام نمایش تمام‌صفحه رسانه</string>
     <string name="render_ultra_hdr_photos">نمایش عکس‌های Ultra HDR در حالت HDR</string>
     <string name="show_thumbnail_video_duration">نمایش مدت زمان ویدیوها</string>
