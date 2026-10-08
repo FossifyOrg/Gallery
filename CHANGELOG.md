@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changes
+### Changed
 - Compatibility with newer Android devices using 16KB pages
 
 ## [1.13.1] - 2026-02-14
