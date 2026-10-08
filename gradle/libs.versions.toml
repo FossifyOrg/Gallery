@@ -2,7 +2,7 @@
 #jetbrains
 kotlin = "2.3.10"
 #KSP
-ksp = "2.3.7"
+ksp = "2.3.8"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.28"
@@ -19,19 +19,19 @@ room = "2.8.4"
 #Fossify
 commons = "7.1.0"
 #Gradle4
-gradlePlugins-agp = "9.2.0"
+gradlePlugins-agp = "9.2.1"
 #Other
 androidGifDrawable = "1.2.31"
 androidImageCropper = "4.7.0"
 animationAndroid = "3.0.5"
 glideCompiler = "5.0.7"
 zjupureWebpdecoder = "2.7.4.16.0"
-jxlDecoder = "2.6.0"
+jxlDecoder = "2.6.1"
 gestureviews = "e706487a14"
 androidsvgAar = "1.4"
 androidphotofilters = "193f2ae509"
 sanselan = "0.97-incubator"
-media3Exoplayer = "1.10.0"
+media3Exoplayer = "1.10.1"
 okhttp = "5.3.2"
 okio = "3.17.0"
 picasso = "2.71828"
