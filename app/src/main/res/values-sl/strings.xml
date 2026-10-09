@@ -265,7 +265,7 @@
     <string name="render_ultra_hdr_photos">Prikaži fotografije Ultra HDR v HDR</string>
     <string name="keep_screen_on_fullscreen_photos">Med ogledom fotografij na celotnem zaslonu naj bo zaslon vklopljen</string>
     <string name="playback_speed">Hitrost predvajanja</string>
-    <string name="on_video_tap">Na video dotik</string>
+    <string name="on_video_tap">Na dotik videa</string>
     <string name="open_in_app_player">Odpri predvajalnik v aplikaciji</string>
     <string name="open_system_default_player">Odpri privzeto aplikacijo predvajalnika</string>
     <string name="failed_to_load_media">Nalaganje medija ni uspelo.</string>
