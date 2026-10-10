@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed the Properties action doing nothing on the Recycle Bin and Favorites folders ([#976])
 
 ## [1.14.0] - 2026-10-10
 ### Changed
@@ -315,6 +317,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#876]: https://github.com/FossifyOrg/Gallery/issues/876
 [#917]: https://github.com/FossifyOrg/Gallery/issues/917
 [#925]: https://github.com/FossifyOrg/Gallery/issues/925
+[#976]: https://github.com/FossifyOrg/Gallery/issues/976
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.14.0...HEAD
 [1.14.0]: https://github.com/FossifyOrg/Gallery/compare/1.13.1...1.14.0
