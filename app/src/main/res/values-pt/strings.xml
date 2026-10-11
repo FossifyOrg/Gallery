@@ -169,7 +169,7 @@
     <string name="show_recycle_bin_last">Mostrar reciclagem como o último item do ecrã principal</string>
     <string name="allow_down_gesture">Sair de ecrã completo com um gesto para baixo</string>
     <string name="allow_one_to_one_zoom">Permitir ampliação 1:1 com dois toques</string>
-    <string name="open_videos_on_separate_screen">Abrir vídeos em ecrã distinto com os novos toques horizontais</string>
+    <string name="open_videos_on_separate_screen">Reproduzir vídeos em ecrã distinto com os toques horizontais</string>
     <string name="show_notch">Mostrar notch, se disponível</string>
     <string name="allow_rotating_gestures">Permitir rotação de imagens com gestos</string>
     <string name="file_loading_priority">Prioridade de carregamento dos ficheiros</string>
@@ -232,7 +232,7 @@
     <string name="faq_14_title">Ocultei um ficheiro/uma pasta. Como posso torná-lo de novo visível\?</string>
     <string name="faq_14_text">Pode seleccionar \"Mostrar ocultos temporariamente \" do menu, ou então habilite \"Mostrar itens ocultos\" nas Definições. As pastas ficam ocultas quando se lhes introduz um ficheiro \".nomedia\", também ele oculto. É possível apagar esse ficheiro com um gestor de ficheiros. No entanto, tome em atenção que a acção de ocultar é recursiva, e todas as subpastas ficarão ocultas também. E é por isso que para tornar visíveis as subpastas deve fazê-lo a montante, a partir da pasta superior na hierarquia.</string>
     <string name="faq_15_title">Porque é que a aplicação ocupa tanto espaço\?</string>
-    <string name="faq_15_text">O armazenamento em cache da aplicação comporta até 250MB para assegurar que a imagem é carregada rapidamente. Caso esteja a ocupar mais espaço, o mais certo é que a Reciclagem esteja cheia, e isso também conta para o tamanho total da aplicação. Esvazie a Reciclagem abrindo-a e removendo todos os ficheiros lá contidos, ou faça-o pelas Definições. Todos os ficheiros na Reciclagem são automaticamente apagados após 30 dias.</string>
+    <string name="faq_15_text">O armazenamento em cache da aplicação comporta até 250MB para assegurar que a imagem é carregada rapidamente. Caso esteja a ocupar mais espaço, o mais certo é que a reciclagem esteja cheia, e isso também conta para o tamanho total da aplicação. Esvazie a reciclagem abrindo-a e removendo todos os ficheiros existentes nas Definições. Todos os ficheiros existentes na reciclagem são automaticamente apagados após 30 dias.</string>
     <string name="faq_16_title">O que aconteceu com o arquivos e as pastas ocultas e por que não posso mais ver itens ocultos\?</string>
     <string name="faq_16_text">A partir do Android 11, você não pode mais ocultar ou exibir arquivos ou pastas, também não pode ver os ocultos nos aplicativos da galeria devido a restrições do sistema. Você terá que usar algum gerenciador de arquivos para isso.</string>
     <string name="faq_16_text_extra">Também poder conceder a esta aplicação a permissão para aceder a todos os ficheiros nas definições. Desta forma, será possível mostrar os ficheiros ocultos e executar ações de ficheiros de uma forma mais fiável.</string>
@@ -264,4 +264,9 @@
     <string name="keep_screen_on_fullscreen_photos">Manter o ecrã ligado enquanto vê fotos em ecrã cheio</string>
     <string name="force_landscape_reverse">Paisagem forçada (reversa)</string>
     <string name="overwrite_original">Sobrescrever original</string>
+    <string name="render_ultra_hdr_photos">Mostrar fotos Ultra HDR em HDR</string>
+    <string name="on_video_tap">Ao tocar no vídeo</string>
+    <string name="open_in_app_player">Abrir na aplicação</string>
+    <string name="open_system_default_player">Abrir aplicação padrão</string>
+    <string name="video_no_sound">Este vídeo não tem som</string>
 </resources>
