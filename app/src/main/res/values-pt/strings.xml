@@ -152,7 +152,7 @@
     <string name="black_background_at_fullscreen">Fundo escuro no modo de ecrã completo</string>
     <string name="scroll_thumbnails_horizontally">Deslocação horizontal de miniaturas</string>
     <string name="hide_system_ui_at_fullscreen">Ocultar interface do sistema se em ecrã completo</string>
-    <string name="delete_empty_folders">Apagar pastas vazias depois de remover o seu conteúdo</string>
+    <string name="delete_empty_folders">Eliminar pastas vazias depois de remover o seu conteúdo</string>
     <string name="allow_photo_gestures">Permitir controlo do brilho com gestos verticais</string>
     <string name="allow_video_gestures">Permitir controlo do volume e do brilho com gestos verticais</string>
     <string name="show_media_count">Mostrar número de ficheiros na vista principal</string>
