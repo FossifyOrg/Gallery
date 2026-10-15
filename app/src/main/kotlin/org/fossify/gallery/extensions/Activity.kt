@@ -1019,7 +1019,7 @@ fun BaseSimpleActivity.ensureWritablePath(
     }
 
     fun requestGrantsThenProceed() {
-        if (isRPlus() && !isExternalStorageManager()) {
+        if (isRPlus() && !isExternalStorageManager() && getDoesFilePathExist(targetPath)) {
             val fileDirItem = arrayListOf(File(targetPath).toFileDirItem(this))
             val fileUris = getFileUrisFromFileDirItems(fileDirItem)
             updateSDK30Uris(fileUris) { success ->
