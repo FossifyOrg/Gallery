@@ -79,7 +79,9 @@ import org.fossify.gallery.extensions.emptyAndDisableTheRecycleBin
 import org.fossify.gallery.extensions.emptyTheRecycleBin
 import org.fossify.gallery.extensions.favoritesDB
 import org.fossify.gallery.extensions.fixDateTaken
+import org.fossify.gallery.extensions.getFavoritePaths
 import org.fossify.gallery.extensions.getShortcutImage
+import org.fossify.gallery.extensions.getUpdatedDeletedMedia
 import org.fossify.gallery.extensions.isThisOrParentFolderHidden
 import org.fossify.gallery.extensions.loadImage
 import org.fossify.gallery.extensions.mediaDB
@@ -292,8 +294,10 @@ class DirectoryAdapter(
     private fun showProperties() {
         if (selectedKeys.size <= 1) {
             val path = getFirstSelectedItemPath() ?: return
-            if (path != FAVORITES && path != RECYCLE_BIN) {
-                activity.handleLockedFolderOpening(path) { success ->
+            when (path) {
+                FAVORITES -> showVirtualFolderProperties { activity.getFavoritePaths() }
+                RECYCLE_BIN -> showVirtualFolderProperties { activity.getUpdatedDeletedMedia().map { it.path } }
+                else -> activity.handleLockedFolderOpening(path) { success ->
                     if (success) {
                         PropertiesDialog(activity, path, config.shouldShowHidden)
                     }
@@ -303,6 +307,19 @@ class DirectoryAdapter(
             PropertiesDialog(activity, getSelectedPaths().filter {
                 it != FAVORITES && it != RECYCLE_BIN && !config.isFolderProtected(it)
             }.toMutableList(), config.shouldShowHidden)
+        }
+    }
+
+    // Recycle Bin and Favorites are virtual folders without a real path, so gather the
+    // actual media file paths on a background thread and show them in the properties dialog.
+    private fun showVirtualFolderProperties(getPaths: () -> List<String>) {
+        ensureBackgroundThread {
+            val paths = getPaths()
+            if (paths.isNotEmpty()) {
+                activity.runOnUiThread {
+                    PropertiesDialog(activity, paths, config.shouldShowHidden)
+                }
+            }
         }
     }
 
