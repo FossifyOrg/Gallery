@@ -308,13 +308,14 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     override fun onBackPressedCompat(): Boolean {
         return if (binding.mediaMenu.isSearchOpen) {
             binding.mediaMenu.closeSearch()
+            markBackHandled()
             true
         } else {
             if (config.showAll) {
                 appLockManager.lock()
             }
 
-            false
+            super.onBackPressedCompat()
         }
     }
 

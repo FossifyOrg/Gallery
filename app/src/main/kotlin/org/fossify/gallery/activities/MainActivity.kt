@@ -395,20 +395,22 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
     override fun onBackPressedCompat(): Boolean {
         return if (binding.mainMenu.isSearchOpen) {
             binding.mainMenu.closeSearch()
+            markBackHandled()
             true
         } else if (config.groupDirectSubfolders) {
             if (mCurrentPathPrefix.isEmpty()) {
                 appLockManager.lock()
-                false
+                super.onBackPressedCompat()
             } else {
                 mOpenedSubfolders.removeAt(mOpenedSubfolders.lastIndex)
                 mCurrentPathPrefix = mOpenedSubfolders.last()
                 setupAdapter(mDirs)
+                markBackHandled()
                 true
             }
         } else {
             appLockManager.lock()
-            false
+            super.onBackPressedCompat()
         }
     }
 

@@ -2,8 +2,10 @@ package org.fossify.gallery.activities
 
 import android.database.ContentObserver
 import android.net.Uri
+import android.os.SystemClock
 import android.provider.MediaStore.Images
 import android.provider.MediaStore.Video
+import android.view.KeyEvent
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import org.fossify.commons.activities.BaseSimpleActivity
@@ -20,7 +22,59 @@ import org.fossify.gallery.helpers.getPermissionsToRequest
 
 open class SimpleActivity : BaseSimpleActivity() {
 
+    companion object {
+        private var lastBackHandledTime = 0L
+        private const val BACK_DEBOUNCE_THRESHOLD_MS = 600L
+
+        fun markBackHandled() {
+            lastBackHandledTime = SystemClock.uptimeMillis()
+        }
+    }
+
     private var dialog: AlertDialog? = null
+    private var resumedTimestamp = 0L
+
+    override fun onResume() {
+        super.onResume()
+        resumedTimestamp = SystemClock.uptimeMillis()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        resumedTimestamp = 0L
+    }
+
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+        if (event.keyCode == KeyEvent.KEYCODE_BACK) {
+            if (event.action == KeyEvent.ACTION_DOWN && event.repeatCount > 0) {
+                return true
+            }
+        }
+        return super.dispatchKeyEvent(event)
+    }
+
+    override fun finish() {
+        markBackHandled()
+        super.finish()
+    }
+
+    fun shouldDebounceBack(): Boolean {
+        val now = SystemClock.uptimeMillis()
+        val elapsedSinceResume = if (resumedTimestamp == 0L) 0L else now - resumedTimestamp
+        val elapsedSinceLastBack = now - lastBackHandledTime
+        if (resumedTimestamp == 0L || elapsedSinceResume < BACK_DEBOUNCE_THRESHOLD_MS || elapsedSinceLastBack < BACK_DEBOUNCE_THRESHOLD_MS) {
+            return true
+        }
+        lastBackHandledTime = now
+        return false
+    }
+
+    override fun onBackPressedCompat(): Boolean {
+        if (shouldDebounceBack()) {
+            return true
+        }
+        return super.onBackPressedCompat()
+    }
 
     private val observer = object : ContentObserver(null) {
         override fun onChange(selfChange: Boolean, uri: Uri?) {

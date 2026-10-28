@@ -382,6 +382,7 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
         }
 
         binding.mediumViewerToolbar.setNavigationOnClickListener {
+            markBackHandled()
             finish()
         }
     }
@@ -1433,6 +1434,15 @@ class ViewPagerActivity : BaseViewerActivity(), ViewPager.OnPageChangeListener, 
     override fun isSlideShowActive() = mIsSlideshowActive
 
     override fun isFullScreen() = mIsFullScreen
+
+    override fun onBackPressedCompat(): Boolean {
+        if (mIsSlideshowActive) {
+            stopSlideshow()
+            markBackHandled()
+            return true
+        }
+        return super.onBackPressedCompat()
+    }
 
     override fun goToPrevItem() {
         binding.viewPager.setCurrentItem(binding.viewPager.currentItem - 1, false)

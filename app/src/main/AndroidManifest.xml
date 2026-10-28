@@ -45,6 +45,7 @@
         android:name="org.fossify.gallery.App"
         android:allowBackup="true"
         android:appCategory="image"
+        android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_launcher_name"
         android:requestLegacyExternalStorage="true"
