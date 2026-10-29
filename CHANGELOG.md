@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Scan QR codes in images
+
 ## [1.14.0] - 2026-10-10
 ### Changed
 - Compatibility with newer Android devices using 16KB pages
