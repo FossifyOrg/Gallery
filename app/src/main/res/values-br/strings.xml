@@ -2,4 +2,7 @@
 <resources>
     <string name="videos">Videoioù</string>
     <string name="images">Skeudennoù</string>
+    <string name="edit">Kemmañ</string>
+    <string name="thumbnails">Skeudennigoù</string>
+    <string name="excluded">(laosket da gostez)</string>
 </resources>
