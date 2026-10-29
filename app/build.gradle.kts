@@ -195,6 +195,8 @@ dependencies {
     implementation(libs.avif.integration)
     implementation(libs.jxl.integration)
     implementation(libs.okio)
+    implementation(libs.zxing.core)
+    testImplementation(libs.junit)
     implementation(libs.picasso) {
         exclude(group = "com.squareup.okhttp3", module = "okhttp")
     }

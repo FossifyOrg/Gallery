@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="scan_qr_code">Scan QR code</string>
+    <string name="qr_code_scanning">Scanning image…</string>
+    <string name="qr_code_result">QR code</string>
+    <string name="qr_code_not_found">No QR code found. Try a clearer image or crop around the code and scan again.</string>
+    <string name="qr_copy_text">Copy text</string>
+    <string name="qr_open_link">Open link</string>
+    <string name="qr_text_copied">Text copied</string>
+    <string name="qr_link_unavailable">No app available to open this link.</string>
+    <string name="qr_code_position">Code %1$d of %2$d</string>
+    <string name="qr_next_code">Next code</string>
     <string name="app_launcher_name">Gallery</string>
     <string name="edit">Edit</string>
     <string name="open_camera">Open camera</string>

@@ -145,6 +145,10 @@
         android:title="@string/slideshow"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/menu_scan_qr_code"
+        android:title="@string/scan_qr_code"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_settings"
         android:icon="@drawable/ic_settings_cog_vector"
         android:title="@string/settings"

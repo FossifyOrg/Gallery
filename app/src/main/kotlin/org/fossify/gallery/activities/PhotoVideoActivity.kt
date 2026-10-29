@@ -128,6 +128,7 @@ open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.Fragment
         val visibleBottomActions = if (config.bottomActions) config.visibleBottomActions else 0
 
         binding.fragmentViewerToolbar.menu.apply {
+            findItem(R.id.menu_scan_qr_code).isVisible = mMedium != null && !mIsVideo && mMedium?.isSVG() != true
             findItem(R.id.menu_set_as).isVisible = mMedium?.isImage() == true && visibleBottomActions and BOTTOM_ACTION_SET_AS == 0
             findItem(R.id.menu_edit).isVisible = mMedium?.isImage() == true && mUri?.scheme == "file" && visibleBottomActions and BOTTOM_ACTION_EDIT == 0
             findItem(R.id.menu_properties).isVisible = mUri?.scheme == "file" && visibleBottomActions and BOTTOM_ACTION_PROPERTIES == 0
@@ -156,6 +157,7 @@ open class PhotoVideoActivity : BaseViewerActivity(), ViewPagerFragment.Fragment
                 R.id.menu_edit -> openEditor(mUri!!.toString())
                 R.id.menu_properties -> showProperties()
                 R.id.menu_show_on_map -> showFileOnMap(mUri!!.toString())
+                R.id.menu_scan_qr_code -> qrScanController.scan(mUri!!.toString())
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true

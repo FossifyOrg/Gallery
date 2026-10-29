@@ -13,11 +13,13 @@ import kotlinx.coroutines.launch
 import org.fossify.commons.extensions.updateMarginWithBase
 import org.fossify.commons.extensions.updatePaddingWithBase
 import org.fossify.gallery.extensions.config
+import org.fossify.gallery.helpers.QrScanController
 
 abstract class BaseViewerActivity : SimpleActivity() {
     override val padCutout: Boolean = false
     abstract val contentHolder: View
     abstract val appBarLayout: AppBarLayout
+    protected val qrScanController by lazy { QrScanController(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

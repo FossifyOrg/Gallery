@@ -29,6 +29,10 @@
         android:title="@string/open_with"
         app:showAsAction="never" />
     <item
+        android:id="@+id/menu_scan_qr_code"
+        android:title="@string/scan_qr_code"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_show_on_map"
         android:showAsAction="never"
         android:title="@string/show_on_map"
