@@ -90,6 +90,7 @@ import org.fossify.gallery.helpers.MAX_ZOOM_EQUALITY_TOLERANCE
 import org.fossify.gallery.helpers.MEDIUM
 import org.fossify.gallery.helpers.MyGlideImageDecoder
 import org.fossify.gallery.helpers.NORMAL_TILE_DPI
+import org.fossify.gallery.helpers.OrientationTransformation
 import org.fossify.gallery.helpers.PicassoRegionDecoder
 import org.fossify.gallery.helpers.SHOULD_INIT_FRAGMENT
 import org.fossify.gallery.helpers.WEIRD_TILE_DPI
@@ -739,23 +740,17 @@ class PhotoFragment : ViewPagerFragment() {
     }
 
     private fun addZoomableView() {
-        val rotation = degreesForRotation(mImageOrientation)
         mIsSubsamplingVisible = true
         val config = requireContext().config
         val showHighestQuality = config.showHighestQuality
         val minTileDpi = if (showHighestQuality) -1 else getMinTileDpi()
 
         val bitmapDecoder = object : DecoderFactory<ImageDecoder> {
-            override fun make() = MyGlideImageDecoder(rotation, mMedium.getKey())
+            override fun make() = MyGlideImageDecoder(mImageOrientation, mMedium.getKey())
         }
 
         val regionDecoder = object : DecoderFactory<ImageRegionDecoder> {
-            override fun make() = PicassoRegionDecoder(showHighestQuality, mScreenWidth, mScreenHeight, minTileDpi)
-        }
-
-        var newOrientation = (rotation + mCurrentRotationDegrees) % 360
-        if (newOrientation < 0) {
-            newOrientation += 360
+            override fun make() = PicassoRegionDecoder(showHighestQuality, mScreenWidth, mScreenHeight, minTileDpi, mImageOrientation)
         }
 
         binding.subsamplingView.apply {
@@ -768,7 +763,7 @@ class PhotoFragment : ViewPagerFragment() {
             beVisible()
             rotationEnabled = config.allowRotatingWithGestures
             isOneToOneZoomEnabled = config.allowOneToOneZoom
-            orientation = newOrientation
+            orientation = mCurrentRotationDegrees
             setImage(getFilePathToShow())
 
             onImageEventListener = object : SubsamplingScaleImageView.OnImageEventListener {
@@ -781,8 +776,9 @@ class PhotoFragment : ViewPagerFragment() {
                         }
                     )
 
-                    val useWidth = if (mImageOrientation == ORIENTATION_ROTATE_90 || mImageOrientation == ORIENTATION_ROTATE_270) sHeight else sWidth
-                    val useHeight = if (mImageOrientation == ORIENTATION_ROTATE_90 || mImageOrientation == ORIENTATION_ROTATE_270) sWidth else sHeight
+                    val whSwapped = OrientationTransformation.whSwapped(mImageOrientation)
+                    val useWidth = if (whSwapped) sHeight else sWidth
+                    val useHeight = if (whSwapped) sWidth else sHeight
                     doubleTapZoomScale = getDoubleTapZoomScale(useWidth, useHeight)
                 }
 
@@ -794,9 +790,8 @@ class PhotoFragment : ViewPagerFragment() {
                 }
 
                 override fun onImageRotation(degrees: Int) {
-                    val fullRotation = (rotation + degrees) % 360
-                    val useWidth = if (fullRotation == 90 || fullRotation == 270) sHeight else sWidth
-                    val useHeight = if (fullRotation == 90 || fullRotation == 270) sWidth else sHeight
+                    val useWidth = if (degrees == 90 || degrees == 270) sHeight else sWidth
+                    val useHeight = if (degrees == 90 || degrees == 270) sWidth else sHeight
                     doubleTapZoomScale = getDoubleTapZoomScale(useWidth, useHeight)
                     mCurrentRotationDegrees = (mCurrentRotationDegrees + degrees) % 360
                     loadBitmap(false)
