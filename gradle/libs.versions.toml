@@ -10,7 +10,7 @@ detektCompose = "0.4.28"
 androidx-lifecycle = "2.10.0"
 androidx-print = "1.1.0"
 androidx-swiperefreshlayout = "1.2.0"
-androidx-constraintlayout = "2.2.1"
+androidx-constraintlayout = "2.2.2"
 androidx-documentfile = "1.1.0"
 #exif
 exif = "1.0.1"
