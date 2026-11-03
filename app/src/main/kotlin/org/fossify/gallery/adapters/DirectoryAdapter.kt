@@ -306,6 +306,21 @@ class DirectoryAdapter(
         }
     }
 
+    /** A locked folder has to stay locked under its new name, so the lock moves with it (#1195). */
+    private fun moveFolderProtection(oldPath: String, newPath: String) {
+        if (!config.isFolderProtected(oldPath)) {
+            return
+        }
+
+        val hash = config.getFolderProtectionHash(oldPath)
+        val type = config.getFolderProtectionType(oldPath)
+        config.removeFolderProtection(oldPath)
+        config.addFolderProtection(newPath, hash, type)
+        if (lockedFolderPaths.remove(oldPath)) {
+            lockedFolderPaths.add(newPath)
+        }
+    }
+
     private fun renameDir() {
         if (selectedKeys.size == 1) {
             val firstDir = getFirstSelectedItem() ?: return
@@ -319,6 +334,7 @@ class DirectoryAdapter(
             activity.handleLockedFolderOpening(sourcePath) { success ->
                 if (success) {
                     RenameItemDialog(activity, dir.absolutePath) {
+                        moveFolderProtection(sourcePath, it)
                         activity.runOnUiThread {
                             firstDir.apply {
                                 path = it

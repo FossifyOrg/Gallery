@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed renaming a locked folder removing its lock ([#1195])
 
 ## [1.14.1] - 2026-10-23
 ### Changed
@@ -319,6 +321,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#876]: https://github.com/FossifyOrg/Gallery/issues/876
 [#917]: https://github.com/FossifyOrg/Gallery/issues/917
 [#925]: https://github.com/FossifyOrg/Gallery/issues/925
+[#1195]: https://github.com/FossifyOrg/Gallery/issues/1195
 
 [Unreleased]: https://github.com/FossifyOrg/Gallery/compare/1.14.1...HEAD
 [1.14.1]: https://github.com/FossifyOrg/Gallery/compare/1.14.0...1.14.1
