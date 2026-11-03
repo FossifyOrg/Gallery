@@ -914,6 +914,10 @@ class VideoFragment : ViewPagerFragment(), TextureView.SurfaceTextureListener,
         }
 
         mCurrTime = mExoPlayer!!.duration
+        // Video finished — clear remembered position so next open starts from the beginning (#969)
+        if (mConfig.rememberLastVideoPosition) {
+            mConfig.removeLastVideoPosition(mMedium.path)
+        }
         if (listener?.videoEnded() == false && mConfig.loopVideos) {
             playVideo()
         } else {
