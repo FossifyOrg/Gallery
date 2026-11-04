@@ -37,7 +37,8 @@
                                            bottom_aspect_ratios,
                                            bottom_editor_filter_actions,
                                            bottom_editor_crop_rotate_actions,
-                                           bottom_editor_draw_actions" />
+                                           bottom_editor_draw_actions,
+                                           bottom_editor_text_actions" />
 
         <ImageView
             android:id="@+id/default_image_view"
@@ -115,6 +116,15 @@
         <include
             android:id="@+id/bottom_editor_draw_actions"
             layout="@layout/bottom_editor_draw_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/bottom_editor_primary_actions"
+            tools:visibility="visible" />
+
+        <include
+            android:id="@+id/bottom_editor_text_actions"
+            layout="@layout/bottom_editor_text_actions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"

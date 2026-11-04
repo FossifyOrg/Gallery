@@ -93,7 +93,8 @@
     <string name="crop">Recortar</string>
     <string name="draw">Desenhar</string>
     <string name="add_text">Adicionar texto</string>
-    <string name="add_text_pressed">Premiu para adicionar texto</string>
+    <string name="text_size">Tamanho do texto</string>
+    <string name="text_style">Estilo do texto</string>
     <string name="flip">Inverter</string>
     <string name="flip_horizontally">Horizontalmente</string>
     <string name="flip_vertically">Verticalmente</string>

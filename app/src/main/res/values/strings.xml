@@ -113,7 +113,9 @@
     <string name="crop">Crop</string>
     <string name="draw">Draw</string>
     <string name="add_text">Add text</string>
-    <string name="add_text_pressed">Pressed to add text</string>
+    <string name="text_size">Text size</string>
+    <string name="text_style">Text style</string>
+    <string name="text_preview_sample">A</string>
     <string name="flip">Flip</string>
     <string name="flip_horizontally">Flip horizontally</string>
     <string name="flip_vertically">Flip vertically</string>

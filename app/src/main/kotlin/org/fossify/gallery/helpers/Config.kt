@@ -2,6 +2,8 @@ package org.fossify.gallery.helpers
 
 import android.content.Context
 import android.content.res.Configuration
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Environment
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -536,6 +538,18 @@ class Config(context: Context) : BaseConfig(context) {
     var lastEditorBrushSize: Int
         get() = prefs.getInt(LAST_EDITOR_BRUSH_SIZE, 50)
         set(lastEditorBrushSize) = prefs.edit().putInt(LAST_EDITOR_BRUSH_SIZE, lastEditorBrushSize).apply()
+
+    var lastEditorTextColor: Int
+        get() = prefs.getInt(LAST_EDITOR_TEXT_COLOR, Color.WHITE)
+        set(lastEditorTextColor) = prefs.edit().putInt(LAST_EDITOR_TEXT_COLOR, lastEditorTextColor).apply()
+
+    var lastEditorTextSize: Int
+        get() = prefs.getInt(LAST_EDITOR_TEXT_SIZE, DEFAULT_EDITOR_TEXT_SIZE)
+        set(lastEditorTextSize) = prefs.edit().putInt(LAST_EDITOR_TEXT_SIZE, lastEditorTextSize).apply()
+
+    var lastEditorTextStyle: Int
+        get() = prefs.getInt(LAST_EDITOR_TEXT_STYLE, Typeface.NORMAL)
+        set(lastEditorTextStyle) = prefs.edit().putInt(LAST_EDITOR_TEXT_STYLE, lastEditorTextStyle).apply()
 
     var showNotch: Boolean
         get() = prefs.getBoolean(SHOW_NOTCH, true)

@@ -4,6 +4,8 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.Point
+import android.graphics.Typeface
+import android.util.TypedValue
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -77,6 +79,7 @@ import org.fossify.gallery.helpers.ASPECT_RATIO_ONE_ONE
 import org.fossify.gallery.helpers.ASPECT_RATIO_OTHER
 import org.fossify.gallery.helpers.ASPECT_RATIO_SIXTEEN_NINE
 import org.fossify.gallery.helpers.ColorModeHelper
+import org.fossify.gallery.helpers.DEFAULT_EDITOR_TEXT_SIZE
 import org.fossify.gallery.helpers.FilterThumbnailsManager
 import org.fossify.gallery.helpers.getPermissionToRequest
 import org.fossify.gallery.models.FilterItem
@@ -100,6 +103,11 @@ class EditActivity : BaseCropActivity() {
         private const val PRIMARY_ACTION_FILTER = 1
         private const val PRIMARY_ACTION_CROP_ROTATE = 2
         private const val PRIMARY_ACTION_DRAW = 3
+        private const val PRIMARY_ACTION_TEXT = 4
+
+        private const val EDITOR_TEXT_SIZE_MAX = 100
+        private const val TEXT_PREVIEW_MIN_DP = 14
+        private const val TEXT_PREVIEW_EXTRA_DP = 14
 
         private const val CROP_ROTATE_NONE = 0
         private const val CROP_ROTATE_ASPECT_RATIO = 1
@@ -110,6 +118,9 @@ class EditActivity : BaseCropActivity() {
     private var resizeWidth = 0
     private var resizeHeight = 0
     private var drawColor = 0
+    private var textColor = Color.WHITE
+    private var textSize = DEFAULT_EDITOR_TEXT_SIZE
+    private var textStyle = Typeface.NORMAL
     private var lastOtherAspectRatio: Pair<Float, Float>? = null
     private var currPrimaryAction = PRIMARY_ACTION_NONE
     private var currCropRotateAction = CROP_ROTATE_ASPECT_RATIO
@@ -160,6 +171,11 @@ class EditActivity : BaseCropActivity() {
         super.onResume()
         isEditingWithThirdParty = false
         binding.bottomEditorDrawActions.bottomDrawWidth.setColors(getProperTextColor(), getProperPrimaryColor(), getProperBackgroundColor())
+        binding.bottomEditorTextActions.bottomTextSize.setColors(
+            getProperTextColor(),
+            getProperPrimaryColor(),
+            getProperBackgroundColor()
+        )
         setupTopAppBar(binding.editorAppbar, NavigationIcon.Arrow)
     }
 
@@ -506,6 +522,7 @@ class EditActivity : BaseCropActivity() {
         setupCropRotateActionButtons()
         setupAspectRatioButtons()
         setupDrawButtons()
+        setupTextButtons()
     }
 
     private fun setupPrimaryActionButtons() {
@@ -522,7 +539,7 @@ class EditActivity : BaseCropActivity() {
         }
 
         binding.bottomEditorPrimaryActions.bottomPrimaryText.setOnClickListener {
-            toast(R.string.add_text_pressed)
+            bottomTextClicked()
         }
         arrayOf(
             binding.bottomEditorPrimaryActions.bottomPrimaryFilter,
@@ -557,6 +574,15 @@ class EditActivity : BaseCropActivity() {
             PRIMARY_ACTION_NONE
         } else {
             PRIMARY_ACTION_DRAW
+        }
+        updatePrimaryActionButtons()
+    }
+
+    private fun bottomTextClicked() {
+        currPrimaryAction = if (currPrimaryAction == PRIMARY_ACTION_TEXT) {
+            PRIMARY_ACTION_NONE
+        } else {
+            PRIMARY_ACTION_TEXT
         }
         updatePrimaryActionButtons()
     }
@@ -655,6 +681,30 @@ class EditActivity : BaseCropActivity() {
         }
     }
 
+    private fun setupTextButtons() {
+        textSize = config.lastEditorTextSize.coerceIn(0, EDITOR_TEXT_SIZE_MAX)
+        textColor = config.lastEditorTextColor
+        textStyle = config.lastEditorTextStyle.coerceIn(Typeface.NORMAL, Typeface.BOLD_ITALIC)
+        binding.bottomEditorTextActions.bottomTextSize.progress = textSize
+        updateTextSize(textSize)
+        updateTextColor(textColor)
+        updateTextStyle(textStyle)
+
+        binding.bottomEditorTextActions.bottomTextColorClickable.setOnClickListener {
+            ColorPickerDialog(this, textColor) { wasPositivePressed, color ->
+                if (wasPositivePressed) {
+                    updateTextColor(color)
+                }
+            }
+        }
+
+        binding.bottomEditorTextActions.bottomTextSize.onSeekBarChangeListener {
+            updateTextSize(it)
+        }
+
+        binding.bottomEditorTextActions.bottomTextStyle.showContentDescriptionOnLongClick()
+    }
+
     private fun updateBrushSize(percent: Int) {
         binding.editorDrawCanvas.updateBrushSize(percent)
         val scale = max(0.03f, percent / 100f)
@@ -669,6 +719,8 @@ class EditActivity : BaseCropActivity() {
             loadDefaultImageView()
         } else if (binding.editorDrawCanvas.isGone() && currPrimaryAction == PRIMARY_ACTION_DRAW) {
             loadDrawCanvas()
+        } else if (binding.defaultImageView.isGone() && currPrimaryAction == PRIMARY_ACTION_TEXT) {
+            loadDefaultImageView()
         }
 
         arrayOf(
@@ -684,6 +736,7 @@ class EditActivity : BaseCropActivity() {
             PRIMARY_ACTION_FILTER -> binding.bottomEditorPrimaryActions.bottomPrimaryFilter
             PRIMARY_ACTION_CROP_ROTATE -> binding.bottomEditorPrimaryActions.bottomPrimaryCropRotate
             PRIMARY_ACTION_DRAW -> binding.bottomEditorPrimaryActions.bottomPrimaryDraw
+            PRIMARY_ACTION_TEXT -> binding.bottomEditorPrimaryActions.bottomPrimaryText
             else -> null
         }
 
@@ -691,6 +744,7 @@ class EditActivity : BaseCropActivity() {
         binding.bottomEditorFilterActions.root.beVisibleIf(currPrimaryAction == PRIMARY_ACTION_FILTER)
         binding.bottomEditorCropRotateActions.root.beVisibleIf(currPrimaryAction == PRIMARY_ACTION_CROP_ROTATE)
         binding.bottomEditorDrawActions.root.beVisibleIf(currPrimaryAction == PRIMARY_ACTION_DRAW)
+        binding.bottomEditorTextActions.root.beVisibleIf(currPrimaryAction == PRIMARY_ACTION_TEXT)
 
         if (currPrimaryAction == PRIMARY_ACTION_FILTER && binding.bottomEditorFilterActions.bottomActionsFilterList.adapter == null) {
             ensureBackgroundThread {
@@ -825,6 +879,26 @@ class EditActivity : BaseCropActivity() {
             .setFillWithStroke(color, getProperBackgroundColor())
         config.lastEditorDrawColor = color
         binding.editorDrawCanvas.updateColor(color)
+    }
+
+    private fun updateTextSize(percent: Int) {
+        textSize = percent
+        config.lastEditorTextSize = percent
+        val previewDp = TEXT_PREVIEW_MIN_DP + percent.toFloat() / EDITOR_TEXT_SIZE_MAX * TEXT_PREVIEW_EXTRA_DP
+        binding.bottomEditorTextActions.bottomTextPreview.setTextSize(TypedValue.COMPLEX_UNIT_DIP, previewDp)
+    }
+
+    private fun updateTextColor(color: Int) {
+        textColor = color
+        binding.bottomEditorTextActions.bottomTextColor.setFillWithStroke(color, getProperBackgroundColor())
+        binding.bottomEditorTextActions.bottomTextPreview.setTextColor(color)
+        config.lastEditorTextColor = color
+    }
+
+    private fun updateTextStyle(style: Int) {
+        textStyle = style
+        config.lastEditorTextStyle = style
+        binding.bottomEditorTextActions.bottomTextPreview.typeface = Typeface.create(Typeface.DEFAULT, style)
     }
 
     private fun resizeImage() {

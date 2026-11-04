@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_editor_text_actions_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_actions_height"
+    android:layout_alignParentBottom="true">
+
+    <org.fossify.commons.views.MySeekBar
+        android:id="@+id/bottom_text_size"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:contentDescription="@string/text_size"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_text_preview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bottom_text_preview"
+        android:layout_width="@dimen/bottom_editor_color_picker_size"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:importantForAccessibility="no"
+        android:includeFontPadding="false"
+        android:text="@string/text_preview_sample"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_text_color_clickable"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="A" />
+
+    <ImageView
+        android:id="@+id/bottom_text_color_clickable"
+        android:layout_width="@dimen/bottom_editor_color_picker_size"
+        android:layout_height="@dimen/bottom_editor_color_picker_size"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/change_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_text_style"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bottom_text_color"
+        android:layout_width="@dimen/bottom_editor_text_color_size"
+        android:layout_height="@dimen/bottom_editor_text_color_size"
+        android:clickable="false"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_text_color_clickable"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_text_color_clickable"
+        app:layout_constraintStart_toStartOf="@+id/bottom_text_color_clickable"
+        app:layout_constraintTop_toTopOf="@+id/bottom_text_color_clickable"
+        tools:src="@drawable/circle_background" />
+
+    <ImageView
+        android:id="@+id/bottom_text_style"
+        android:layout_width="@dimen/bottom_editor_color_picker_size"
+        android:layout_height="@dimen/bottom_editor_color_picker_size"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:contentDescription="@string/text_style"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/ic_text_style_vector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
