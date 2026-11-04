@@ -304,6 +304,7 @@ class EditActivity : BaseCropActivity() {
                     if (isCropIntent) {
                         binding.bottomEditorPrimaryActions.bottomPrimaryFilter.beGone()
                         binding.bottomEditorPrimaryActions.bottomPrimaryDraw.beGone()
+                        binding.bottomEditorPrimaryActions.bottomPrimaryText.beGone()
                     }
 
                     return false
@@ -519,10 +520,15 @@ class EditActivity : BaseCropActivity() {
         binding.bottomEditorPrimaryActions.bottomPrimaryDraw.setOnClickListener {
             bottomDrawClicked()
         }
+
+        binding.bottomEditorPrimaryActions.bottomPrimaryText.setOnClickListener {
+            toast(R.string.add_text_pressed)
+        }
         arrayOf(
             binding.bottomEditorPrimaryActions.bottomPrimaryFilter,
             binding.bottomEditorPrimaryActions.bottomPrimaryCropRotate,
-            binding.bottomEditorPrimaryActions.bottomPrimaryDraw
+            binding.bottomEditorPrimaryActions.bottomPrimaryDraw,
+            binding.bottomEditorPrimaryActions.bottomPrimaryText
         ).forEach {
             it.showContentDescriptionOnLongClick()
         }
@@ -668,7 +674,8 @@ class EditActivity : BaseCropActivity() {
         arrayOf(
             binding.bottomEditorPrimaryActions.bottomPrimaryFilter,
             binding.bottomEditorPrimaryActions.bottomPrimaryCropRotate,
-            binding.bottomEditorPrimaryActions.bottomPrimaryDraw
+            binding.bottomEditorPrimaryActions.bottomPrimaryDraw,
+            binding.bottomEditorPrimaryActions.bottomPrimaryText
         ).forEach {
             it.applyColorFilter(Color.WHITE)
         }

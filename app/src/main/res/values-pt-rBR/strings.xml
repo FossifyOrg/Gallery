@@ -90,6 +90,8 @@
     <string name="transform">Transformar</string>
     <string name="crop">Recortar</string>
     <string name="draw">Desenhar</string>
+    <string name="add_text">Adicionar texto</string>
+    <string name="add_text_pressed">Apertou para adicionar texto</string>
     <string name="flip">Inverter</string>
     <string name="flip_horizontally">Horizontalmente</string>
     <string name="flip_vertically">Verticalmente</string>
