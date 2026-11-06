@@ -63,6 +63,7 @@
         android:layout_width="@dimen/bottom_editor_color_picker_size"
         android:layout_height="@dimen/bottom_editor_color_picker_size"
         android:layout_marginEnd="@dimen/normal_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/text_style"
         android:padding="@dimen/medium_margin"
         android:src="@drawable/ic_text_style_vector"

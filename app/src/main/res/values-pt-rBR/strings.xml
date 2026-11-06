@@ -93,6 +93,11 @@
     <string name="add_text">Adicionar texto</string>
     <string name="text_size">Tamanho do texto</string>
     <string name="text_style">Estilo do texto</string>
+    <string name="bold">Negrito</string>
+    <string name="italic">Itálico</string>
+    <string name="underline">Sublinhado</string>
+    <string name="strikethrough">Tachado</string>
+    <string name="text_font">Fonte</string>
     <string name="flip">Inverter</string>
     <string name="flip_horizontally">Horizontalmente</string>
     <string name="flip_vertically">Verticalmente</string>

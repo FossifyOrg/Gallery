@@ -67,6 +67,7 @@ import org.fossify.gallery.extensions.ensureWritablePath
 import org.fossify.gallery.extensions.fixDateTaken
 import org.fossify.gallery.extensions.getCompressionFormatFromUri
 import org.fossify.gallery.extensions.openEditor
+import org.fossify.gallery.dialogs.TextStyleDialog
 import org.fossify.gallery.extensions.proposeNewFilePath
 import org.fossify.gallery.extensions.readExif
 import org.fossify.gallery.extensions.resolveUriScheme
@@ -79,7 +80,13 @@ import org.fossify.gallery.helpers.ASPECT_RATIO_ONE_ONE
 import org.fossify.gallery.helpers.ASPECT_RATIO_OTHER
 import org.fossify.gallery.helpers.ASPECT_RATIO_SIXTEEN_NINE
 import org.fossify.gallery.helpers.ColorModeHelper
+import org.fossify.gallery.helpers.DEFAULT_EDITOR_TEXT_FONT
 import org.fossify.gallery.helpers.DEFAULT_EDITOR_TEXT_SIZE
+import org.fossify.gallery.helpers.TEXT_STYLE_BOLD
+import org.fossify.gallery.helpers.TEXT_STYLE_ITALIC
+import org.fossify.gallery.helpers.TEXT_STYLE_STRIKE_THROUGH
+import org.fossify.gallery.helpers.TEXT_STYLE_UNDERLINE
+import org.fossify.gallery.helpers.applyEditorTextStyle
 import org.fossify.gallery.helpers.FilterThumbnailsManager
 import org.fossify.gallery.helpers.getPermissionToRequest
 import org.fossify.gallery.models.FilterItem
@@ -121,6 +128,7 @@ class EditActivity : BaseCropActivity() {
     private var textColor = Color.WHITE
     private var textSize = DEFAULT_EDITOR_TEXT_SIZE
     private var textStyle = Typeface.NORMAL
+    private var textFont = DEFAULT_EDITOR_TEXT_FONT
     private var lastOtherAspectRatio: Pair<Float, Float>? = null
     private var currPrimaryAction = PRIMARY_ACTION_NONE
     private var currCropRotateAction = CROP_ROTATE_ASPECT_RATIO
@@ -684,11 +692,13 @@ class EditActivity : BaseCropActivity() {
     private fun setupTextButtons() {
         textSize = config.lastEditorTextSize.coerceIn(0, EDITOR_TEXT_SIZE_MAX)
         textColor = config.lastEditorTextColor
-        textStyle = config.lastEditorTextStyle.coerceIn(Typeface.NORMAL, Typeface.BOLD_ITALIC)
+        val styleMask = TEXT_STYLE_BOLD or TEXT_STYLE_ITALIC or TEXT_STYLE_UNDERLINE or TEXT_STYLE_STRIKE_THROUGH
+        textStyle = config.lastEditorTextStyle and styleMask
+        textFont = config.lastEditorTextFont.ifBlank { DEFAULT_EDITOR_TEXT_FONT }
         binding.bottomEditorTextActions.bottomTextSize.progress = textSize
         updateTextSize(textSize)
         updateTextColor(textColor)
-        updateTextStyle(textStyle)
+        updateTextStyle(textStyle, textFont)
 
         binding.bottomEditorTextActions.bottomTextColorClickable.setOnClickListener {
             ColorPickerDialog(this, textColor) { wasPositivePressed, color ->
@@ -702,6 +712,11 @@ class EditActivity : BaseCropActivity() {
             updateTextSize(it)
         }
 
+        binding.bottomEditorTextActions.bottomTextStyle.setOnClickListener {
+            TextStyleDialog(this, textStyle, textFont) { style, fontFamily ->
+                updateTextStyle(style, fontFamily)
+            }
+        }
         binding.bottomEditorTextActions.bottomTextStyle.showContentDescriptionOnLongClick()
     }
 
@@ -895,10 +910,12 @@ class EditActivity : BaseCropActivity() {
         config.lastEditorTextColor = color
     }
 
-    private fun updateTextStyle(style: Int) {
+    private fun updateTextStyle(style: Int, fontFamily: String) {
         textStyle = style
+        textFont = fontFamily
         config.lastEditorTextStyle = style
-        binding.bottomEditorTextActions.bottomTextPreview.typeface = Typeface.create(Typeface.DEFAULT, style)
+        config.lastEditorTextFont = fontFamily
+        binding.bottomEditorTextActions.bottomTextPreview.applyEditorTextStyle(style, fontFamily)
     }
 
     private fun resizeImage() {

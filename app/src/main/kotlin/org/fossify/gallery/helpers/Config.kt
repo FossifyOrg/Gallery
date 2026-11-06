@@ -551,6 +551,12 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getInt(LAST_EDITOR_TEXT_STYLE, Typeface.NORMAL)
         set(lastEditorTextStyle) = prefs.edit().putInt(LAST_EDITOR_TEXT_STYLE, lastEditorTextStyle).apply()
 
+    var lastEditorTextFont: String
+        get() = prefs.getString(LAST_EDITOR_TEXT_FONT, DEFAULT_EDITOR_TEXT_FONT) ?: DEFAULT_EDITOR_TEXT_FONT
+        set(lastEditorTextFont) {
+            prefs.edit().putString(LAST_EDITOR_TEXT_FONT, lastEditorTextFont).apply()
+        }
+
     var showNotch: Boolean
         get() = prefs.getBoolean(SHOW_NOTCH, true)
         set(showNotch) = prefs.edit().putBoolean(SHOW_NOTCH, showNotch).apply()

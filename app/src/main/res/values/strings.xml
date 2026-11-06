@@ -115,7 +115,14 @@
     <string name="add_text">Add text</string>
     <string name="text_size">Text size</string>
     <string name="text_style">Text style</string>
+    <string name="bold">Bold</string>
+    <string name="italic">Italic</string>
+    <string name="underline">Underline</string>
+    <string name="strikethrough">Strikethrough</string>
+    <string name="text_font">Font</string>
     <string name="text_preview_sample">A</string>
+    <string name="text_style_sample" translatable="false">Lorem ipsum dolor sit amet.</string>
+
     <string name="flip">Flip</string>
     <string name="flip_horizontally">Flip horizontally</string>
     <string name="flip_vertically">Flip vertically</string>

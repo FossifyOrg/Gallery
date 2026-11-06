@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/text_style_dialog_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/text_style_dialog_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingTop="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin"
+        android:paddingBottom="@dimen/activity_margin">
+
+        <org.fossify.commons.views.MyTextView
+            android:id="@+id/text_style_sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/activity_margin"
+            android:text="@string/text_style_sample"
+            android:textSize="@dimen/extra_big_text_size" />
+
+        <LinearLayout
+            android:id="@+id/text_style_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_margin">
+
+            <ImageView
+                android:id="@+id/text_style_bold"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_editor_color_picker_size"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/bold"
+                android:padding="@dimen/medium_margin"
+                android:scaleType="center"
+                android:src="@drawable/ic_format_bold_vector" />
+
+            <ImageView
+                android:id="@+id/text_style_italic"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_editor_color_picker_size"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/italic"
+                android:padding="@dimen/medium_margin"
+                android:scaleType="center"
+                android:src="@drawable/ic_format_italic_vector" />
+
+            <ImageView
+                android:id="@+id/text_style_underline"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_editor_color_picker_size"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/underline"
+                android:padding="@dimen/medium_margin"
+                android:scaleType="center"
+                android:src="@drawable/ic_format_underlined_vector" />
+
+            <ImageView
+                android:id="@+id/text_style_strike"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_editor_color_picker_size"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/strikethrough"
+                android:padding="@dimen/medium_margin"
+                android:scaleType="center"
+                android:src="@drawable/ic_format_strikethrough_vector" />
+
+        </LinearLayout>
+
+        <org.fossify.commons.views.MyTextInputLayout
+            android:id="@+id/text_style_font_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_font"
+            app:endIconMode="dropdown_menu">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/text_style_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:gravity="start|center_vertical"
+                android:inputType="none"
+                android:paddingStart="@dimen/activity_margin"
+                android:paddingTop="@dimen/medium_margin"
+                android:paddingEnd="@dimen/activity_margin"
+                android:paddingBottom="@dimen/medium_margin"
+                android:singleLine="true" />
+
+        </org.fossify.commons.views.MyTextInputLayout>
+
+    </LinearLayout>
+</ScrollView>
