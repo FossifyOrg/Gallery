@@ -99,7 +99,10 @@
     <string name="italic">Itálico</string>
     <string name="underline">Sublinhado</string>
     <string name="strikethrough">Rasurado</string>
+    <string name="shadow">Sombra</string>
     <string name="text_font">Fonte</string>
+    <string name="enter_text">Escreva aqui</string>
+    <string name="new_text">Novo texto</string>
     <string name="flip">Inverter</string>
     <string name="flip_horizontally">Horizontalmente</string>
     <string name="flip_vertically">Verticalmente</string>

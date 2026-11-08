@@ -62,11 +62,23 @@
         android:id="@+id/bottom_text_style"
         android:layout_width="@dimen/bottom_editor_color_picker_size"
         android:layout_height="@dimen/bottom_editor_color_picker_size"
-        android:layout_marginEnd="@dimen/normal_margin"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/text_style"
         android:padding="@dimen/medium_margin"
         android:src="@drawable/ic_text_style_vector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_text_add"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bottom_text_add"
+        android:layout_width="@dimen/bottom_editor_color_picker_size"
+        android:layout_height="@dimen/bottom_editor_color_picker_size"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/new_text"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/ic_add_vector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

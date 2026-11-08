@@ -21,6 +21,7 @@ import org.fossify.gallery.extensions.showContentDescriptionOnLongClick
 import org.fossify.gallery.helpers.DEFAULT_EDITOR_TEXT_FONT
 import org.fossify.gallery.helpers.TEXT_STYLE_BOLD
 import org.fossify.gallery.helpers.TEXT_STYLE_ITALIC
+import org.fossify.gallery.helpers.TEXT_STYLE_NO_SHADOW
 import org.fossify.gallery.helpers.TEXT_STYLE_STRIKE_THROUGH
 import org.fossify.gallery.helpers.TEXT_STYLE_UNDERLINE
 import org.fossify.gallery.helpers.applyEditorTextStyle
@@ -56,14 +57,15 @@ class TextStyleDialog(
     }
 
     private fun setupStyleIcons(style: Int) {
-        bindToggle(binding.textStyleBold, TEXT_STYLE_BOLD, style)
-        bindToggle(binding.textStyleItalic, TEXT_STYLE_ITALIC, style)
-        bindToggle(binding.textStyleUnderline, TEXT_STYLE_UNDERLINE, style)
-        bindToggle(binding.textStyleStrike, TEXT_STYLE_STRIKE_THROUGH, style)
+        bindToggle(binding.textStyleBold, (style and TEXT_STYLE_BOLD) != 0)
+        bindToggle(binding.textStyleItalic, (style and TEXT_STYLE_ITALIC) != 0)
+        bindToggle(binding.textStyleUnderline, (style and TEXT_STYLE_UNDERLINE) != 0)
+        bindToggle(binding.textStyleStrike, (style and TEXT_STYLE_STRIKE_THROUGH) != 0)
+        bindToggle(binding.textStyleShadow, (style and TEXT_STYLE_NO_SHADOW) == 0)
     }
 
-    private fun bindToggle(view: ImageView, flag: Int, style: Int) {
-        view.isSelected = (style and flag) != 0
+    private fun bindToggle(view: ImageView, selected: Boolean) {
+        view.isSelected = selected
         tintStyleIcon(view)
         view.setOnClickListener {
             view.isSelected = !view.isSelected
@@ -142,6 +144,9 @@ class TextStyleDialog(
         }
         if (binding.textStyleStrike.isSelected) {
             style = style or TEXT_STYLE_STRIKE_THROUGH
+        }
+        if (!binding.textStyleShadow.isSelected) {
+            style = style or TEXT_STYLE_NO_SHADOW
         }
         return style
     }

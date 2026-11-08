@@ -96,6 +96,7 @@ const val TEXT_STYLE_BOLD = 1
 const val TEXT_STYLE_ITALIC = 2
 const val TEXT_STYLE_UNDERLINE = 4
 const val TEXT_STYLE_STRIKE_THROUGH = 8
+const val TEXT_STYLE_NO_SHADOW = 16
 const val SHOW_NOTCH = "show_notch"
 const val FILE_LOADING_PRIORITY = "file_loading_priority"
 const val SPAM_FOLDERS_CHECKED = "spam_folders_checked"

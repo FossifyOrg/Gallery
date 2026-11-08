@@ -234,7 +234,8 @@
             android:name="org.fossify.gallery.activities.EditActivity"
             android:configChanges="orientation"
             android:exported="true"
-            android:label="@string/basic_editor">
+            android:label="@string/basic_editor"
+            android:windowSoftInputMode="adjustNothing">
 
             <intent-filter android:name="foss-editor">
 

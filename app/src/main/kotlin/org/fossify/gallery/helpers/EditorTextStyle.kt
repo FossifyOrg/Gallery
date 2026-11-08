@@ -12,6 +12,9 @@ private const val SYSTEM_FONTS_XML = "/system/etc/fonts.xml"
 private const val FONT_FAMILY_TAG = "family"
 private const val FONT_ALIAS_TAG = "alias"
 private const val FONT_NAME_ATTRIBUTE = "name"
+private const val EDITOR_TEXT_SHADOW_COLOR = 0xB0000000.toInt()
+private const val EDITOR_TEXT_SHADOW_RADIUS_DP = 3f
+private const val EDITOR_TEXT_SHADOW_DY_DP = 1f
 
 private val PREFERRED_FONT_FAMILIES = listOf("sans-serif", "serif", "monospace")
 private val FALLBACK_FONT_FAMILIES = listOf("sans-serif", "serif", "monospace", "cursive", "casual")
@@ -38,6 +41,17 @@ fun TextView.applyEditorTextStyle(style: Int, fontFamily: String) {
         flags = flags or Paint.STRIKE_THRU_TEXT_FLAG
     }
     paintFlags = flags
+    val density = resources.displayMetrics.density
+    if ((style and TEXT_STYLE_NO_SHADOW) != 0) {
+        setShadowLayer(0f, 0f, 0f, 0)
+    } else {
+        setShadowLayer(
+            EDITOR_TEXT_SHADOW_RADIUS_DP * density,
+            0f,
+            EDITOR_TEXT_SHADOW_DY_DP * density,
+            EDITOR_TEXT_SHADOW_COLOR,
+        )
+    }
 }
 
 private fun readSystemFontNames(): Set<String> {

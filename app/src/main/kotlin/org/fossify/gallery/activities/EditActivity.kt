@@ -68,6 +68,9 @@ import org.fossify.gallery.extensions.fixDateTaken
 import org.fossify.gallery.extensions.getCompressionFormatFromUri
 import org.fossify.gallery.extensions.openEditor
 import org.fossify.gallery.dialogs.TextStyleDialog
+import org.fossify.gallery.views.EditorTextAppearance
+import org.fossify.gallery.views.EditorTextOverlay
+import org.fossify.gallery.views.EditorTextStamp
 import org.fossify.gallery.extensions.proposeNewFilePath
 import org.fossify.gallery.extensions.readExif
 import org.fossify.gallery.extensions.resolveUriScheme
@@ -84,6 +87,7 @@ import org.fossify.gallery.helpers.DEFAULT_EDITOR_TEXT_FONT
 import org.fossify.gallery.helpers.DEFAULT_EDITOR_TEXT_SIZE
 import org.fossify.gallery.helpers.TEXT_STYLE_BOLD
 import org.fossify.gallery.helpers.TEXT_STYLE_ITALIC
+import org.fossify.gallery.helpers.TEXT_STYLE_NO_SHADOW
 import org.fossify.gallery.helpers.TEXT_STYLE_STRIKE_THROUGH
 import org.fossify.gallery.helpers.TEXT_STYLE_UNDERLINE
 import org.fossify.gallery.helpers.applyEditorTextStyle
@@ -94,6 +98,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
 import kotlin.math.max
+import kotlin.math.roundToInt
 
 class EditActivity : BaseCropActivity() {
     companion object {
@@ -129,6 +134,7 @@ class EditActivity : BaseCropActivity() {
     private var textSize = DEFAULT_EDITOR_TEXT_SIZE
     private var textStyle = Typeface.NORMAL
     private var textFont = DEFAULT_EDITOR_TEXT_FONT
+    private var syncingTextBar = false
     private var lastOtherAspectRatio: Pair<Float, Float>? = null
     private var currPrimaryAction = PRIMARY_ACTION_NONE
     private var currCropRotateAction = CROP_ROTATE_ASPECT_RATIO
@@ -282,6 +288,7 @@ class EditActivity : BaseCropActivity() {
         binding.defaultImageView.beVisible()
         binding.cropImageView.beGone()
         binding.editorDrawCanvas.beGone()
+        refreshTextOverlay()
 
         val options = RequestOptions()
             .skipMemoryCache(true)
@@ -339,6 +346,7 @@ class EditActivity : BaseCropActivity() {
     private fun loadCropImageView() {
         binding.defaultImageView.beGone()
         binding.editorDrawCanvas.beGone()
+        refreshTextOverlay()
         binding.cropImageView.apply {
             beVisible()
             setImageUriAsync(uri)
@@ -356,6 +364,7 @@ class EditActivity : BaseCropActivity() {
         binding.defaultImageView.beGone()
         binding.cropImageView.beGone()
         binding.editorDrawCanvas.beVisible()
+        refreshTextOverlay()
 
         if (!wasDrawCanvasPositioned) {
             wasDrawCanvasPositioned = true
@@ -457,12 +466,12 @@ class EditActivity : BaseCropActivity() {
     }
 
     private fun withFilteredImage(callback: (Bitmap) -> Unit) {
-        val currentFilter = getFiltersAdapter()?.getCurrentFilter()?.filter ?: return
+        val currentFilter = getFiltersAdapter()?.getCurrentFilter()?.filter
         freeMemory()
         ensureBackgroundThread {
             try {
                 val original = getOriginalBitmap()
-                currentFilter.processFilter(original)
+                currentFilter?.processFilter(original)
                 callback(original)
             } catch (_: OutOfMemoryError) {
                 toast(org.fossify.commons.R.string.out_of_memory_error)
@@ -471,32 +480,36 @@ class EditActivity : BaseCropActivity() {
     }
 
     private fun saveFilteredImage(overwrite: Boolean) {
+        val stamps = binding.editorTextOverlay.captureStamps(binding.defaultImageView)
         if (overwrite) {
-            withFilteredImage {
-                saveBitmap(true, it)
+            withFilteredImage { bitmap ->
+                saveBitmap(true, stamps.drawOnBitmap(bitmap))
             }
         } else {
             resolveSaveAsPath { path ->
-                withFilteredImage {
-                    saveBitmapToPath(it, path, showSavingToast = true)
+                withFilteredImage { bitmap ->
+                    saveBitmapToPath(stamps.drawOnBitmap(bitmap), path, showSavingToast = true)
                 }
             }
         }
     }
 
     private fun shareImage() {
+        val stamps = if (binding.defaultImageView.isVisible()) {
+            binding.editorTextOverlay.captureStamps(binding.defaultImageView)
+        } else {
+            emptyList()
+        }
         ensureBackgroundThread {
             when {
                 binding.defaultImageView.isVisible() -> {
-                    val currentFilter = getFiltersAdapter()?.getCurrentFilter()
-                    if (currentFilter == null) {
-                        toast(org.fossify.commons.R.string.unknown_error_occurred)
-                        return@ensureBackgroundThread
+                    try {
+                        val originalBitmap = getOriginalBitmap()
+                        getFiltersAdapter()?.getCurrentFilter()?.filter?.processFilter(originalBitmap)
+                        shareBitmap(stamps.drawOnBitmap(originalBitmap))
+                    } catch (_: OutOfMemoryError) {
+                        toast(org.fossify.commons.R.string.out_of_memory_error)
                     }
-
-                    val originalBitmap = getOriginalBitmap()
-                    currentFilter.filter.processFilter(originalBitmap)
-                    shareBitmap(originalBitmap)
                 }
 
                 binding.cropImageView.isVisible() -> {
@@ -692,7 +705,8 @@ class EditActivity : BaseCropActivity() {
     private fun setupTextButtons() {
         textSize = config.lastEditorTextSize.coerceIn(0, EDITOR_TEXT_SIZE_MAX)
         textColor = config.lastEditorTextColor
-        val styleMask = TEXT_STYLE_BOLD or TEXT_STYLE_ITALIC or TEXT_STYLE_UNDERLINE or TEXT_STYLE_STRIKE_THROUGH
+        val styleMask = TEXT_STYLE_BOLD or TEXT_STYLE_ITALIC or TEXT_STYLE_UNDERLINE or
+            TEXT_STYLE_STRIKE_THROUGH or TEXT_STYLE_NO_SHADOW
         textStyle = config.lastEditorTextStyle and styleMask
         textFont = config.lastEditorTextFont.ifBlank { DEFAULT_EDITOR_TEXT_FONT }
         binding.bottomEditorTextActions.bottomTextSize.progress = textSize
@@ -718,6 +732,18 @@ class EditActivity : BaseCropActivity() {
             }
         }
         binding.bottomEditorTextActions.bottomTextStyle.showContentDescriptionOnLongClick()
+        binding.bottomEditorTextActions.bottomTextAdd.setOnClickListener {
+            binding.editorTextOverlay.addText(currentTextAppearance())
+        }
+        binding.bottomEditorTextActions.bottomTextAdd.showContentDescriptionOnLongClick()
+        binding.editorTextOverlay.onSelectionChanged = { appearance ->
+            if (appearance != null) {
+                showTextAppearance(appearance)
+            }
+        }
+        binding.editorTextOverlay.onSelectedSizeChanged = { sizeSp ->
+            showTextAppearance(currentTextAppearance().copy(sizeSp = sizeSp))
+        }
     }
 
     private fun updateBrushSize(percent: Int) {
@@ -825,6 +851,7 @@ class EditActivity : BaseCropActivity() {
             currCropRotateAction = CROP_ROTATE_NONE
         }
         updateCropRotateActionButtons()
+        refreshTextOverlay()
     }
 
     private fun applyFilter(filterItem: FilterItem) {
@@ -901,6 +928,7 @@ class EditActivity : BaseCropActivity() {
         config.lastEditorTextSize = percent
         val previewDp = TEXT_PREVIEW_MIN_DP + percent.toFloat() / EDITOR_TEXT_SIZE_MAX * TEXT_PREVIEW_EXTRA_DP
         binding.bottomEditorTextActions.bottomTextPreview.setTextSize(TypedValue.COMPLEX_UNIT_DIP, previewDp)
+        pushTextAppearance()
     }
 
     private fun updateTextColor(color: Int) {
@@ -908,6 +936,7 @@ class EditActivity : BaseCropActivity() {
         binding.bottomEditorTextActions.bottomTextColor.setFillWithStroke(color, getProperBackgroundColor())
         binding.bottomEditorTextActions.bottomTextPreview.setTextColor(color)
         config.lastEditorTextColor = color
+        pushTextAppearance()
     }
 
     private fun updateTextStyle(style: Int, fontFamily: String) {
@@ -916,6 +945,61 @@ class EditActivity : BaseCropActivity() {
         config.lastEditorTextStyle = style
         config.lastEditorTextFont = fontFamily
         binding.bottomEditorTextActions.bottomTextPreview.applyEditorTextStyle(style, fontFamily)
+        pushTextAppearance()
+    }
+
+    private fun pushTextAppearance() {
+        if (!syncingTextBar) {
+            binding.editorTextOverlay.applyToSelected(currentTextAppearance())
+        }
+    }
+
+    private fun showTextAppearance(appearance: EditorTextAppearance) {
+        syncingTextBar = true
+        val percent = appearance.sizeSp.toTextPercent()
+        textSize = percent
+        textColor = appearance.color
+        textStyle = appearance.style
+        textFont = appearance.fontFamily
+        binding.bottomEditorTextActions.bottomTextSize.progress = percent
+        updateTextSize(percent)
+        updateTextColor(appearance.color)
+        updateTextStyle(appearance.style, appearance.fontFamily)
+        syncingTextBar = false
+    }
+
+    private fun currentTextAppearance(): EditorTextAppearance {
+        val sizeSp = EditorTextOverlay.MIN_TEXT_SP +
+            textSize.toFloat() / EDITOR_TEXT_SIZE_MAX * EditorTextOverlay.TEXT_SIZE_SPAN_SP
+        return EditorTextAppearance(sizeSp, textColor, textStyle, textFont)
+    }
+
+    private fun Float.toTextPercent(): Int {
+        val fraction = (this - EditorTextOverlay.MIN_TEXT_SP) / EditorTextOverlay.TEXT_SIZE_SPAN_SP
+        return (fraction * EDITOR_TEXT_SIZE_MAX).roundToInt().coerceIn(0, EDITOR_TEXT_SIZE_MAX)
+    }
+
+    private fun List<EditorTextStamp>.drawOnBitmap(bitmap: Bitmap): Bitmap {
+        var current = bitmap
+        for (stamp in this) {
+            current = stamp.drawOn(current)
+        }
+        return current
+    }
+
+    private fun refreshTextOverlay() {
+        val overlay = binding.editorTextOverlay
+        val textTool = currPrimaryAction == PRIMARY_ACTION_TEXT
+        val photoVisible = binding.defaultImageView.isVisible()
+        if (!textTool || !photoVisible) {
+            overlay.finishTool()
+        }
+        val showOnPhoto = photoVisible && (textTool || overlay.hasContent())
+        overlay.gesturesEnabled = showOnPhoto && textTool
+        overlay.beVisibleIf(showOnPhoto)
+        if (showOnPhoto && textTool && !overlay.hasContent()) {
+            overlay.addText(currentTextAppearance())
+        }
     }
 
     private fun resizeImage() {

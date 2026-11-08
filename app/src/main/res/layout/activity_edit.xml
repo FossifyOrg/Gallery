@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/editor_coordinator"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipChildren="false">
 
     <org.fossify.commons.views.MyAppBarLayout
         android:id="@+id/editor_appbar"
@@ -26,6 +27,8 @@
         android:id="@+id/activity_edit_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.Barrier
@@ -44,6 +47,18 @@
             android:id="@+id/default_image_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_actions_barrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <org.fossify.gallery.views.EditorTextOverlay
+            android:id="@+id/editor_text_overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipChildren="false"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/bottom_actions_barrier"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

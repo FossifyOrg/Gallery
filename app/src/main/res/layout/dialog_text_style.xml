@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingTop="@dimen/small_margin"
             android:paddingBottom="@dimen/activity_margin"
             android:text="@string/text_style_sample"
             android:textSize="@dimen/extra_big_text_size" />
@@ -75,6 +76,17 @@
                 android:padding="@dimen/medium_margin"
                 android:scaleType="center"
                 android:src="@drawable/ic_format_strikethrough_vector" />
+
+            <ImageView
+                android:id="@+id/text_style_shadow"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_editor_color_picker_size"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/shadow"
+                android:padding="@dimen/medium_margin"
+                android:scaleType="center"
+                android:src="@drawable/ic_format_shadow_vector" />
 
         </LinearLayout>
 

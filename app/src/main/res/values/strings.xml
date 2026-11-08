@@ -119,7 +119,10 @@
     <string name="italic">Italic</string>
     <string name="underline">Underline</string>
     <string name="strikethrough">Strikethrough</string>
+    <string name="shadow">Shadow</string>
     <string name="text_font">Font</string>
+    <string name="enter_text">Type here</string>
+    <string name="new_text">New text</string>
     <string name="text_preview_sample">A</string>
     <string name="text_style_sample" translatable="false">Lorem ipsum dolor sit amet.</string>
 
