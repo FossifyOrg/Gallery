@@ -2,9 +2,12 @@ package org.fossify.gallery.activities
 
 import android.app.WallpaperManager
 import android.content.Intent
+import android.database.ContentObserver
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.Handler
+import android.provider.MediaStore.Images
+import android.provider.MediaStore.Video
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.core.net.toUri
@@ -132,9 +135,26 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     private var mLatestMediaId = 0L
     private var mLatestMediaDateId = 0L
     private var mLastMediaHandler = Handler()
+    @Volatile
+    private var mReloadPending = false
     private var mTempShowHiddenHandler = Handler()
     private var mCurrAsyncTask: GetMediaAsynctask? = null
     private var mZoomListener: MyRecyclerView.MyZoomListener? = null
+
+    // react to MediaStore changes shortly instead of waiting for the next periodic check. Debounced on a separate
+    // handler, so that a reload finishing meanwhile and rescheduling the periodic check doesn't cancel it
+    private val mMediaChangeHandler = Handler()
+    private val mMediaChangeCheck = Runnable {
+        if (mLatestMediaId != 0L) {
+            checkLastMediaChanged(0L)
+        }
+    }
+    private val mMediaObserver = object : ContentObserver(mMediaChangeHandler) {
+        override fun onChange(selfChange: Boolean) {
+            mMediaChangeHandler.removeCallbacks(mMediaChangeCheck)
+            mMediaChangeHandler.postDelayed(mMediaChangeCheck, MEDIA_CHANGE_DEBOUNCE)
+        }
+    }
 
     private var mStoredAnimateGifs = true
     private var mStoredCropThumbnails = true
@@ -149,6 +169,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     private val binding by viewBinding(ActivityMediaBinding::inflate)
 
     companion object {
+        private const val MEDIA_CHANGE_DEBOUNCE = 500L
         var mMedia = ArrayList<ThumbnailItem>()
     }
 
@@ -198,6 +219,12 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
 
     override fun onResume() {
         super.onResume()
+        try {
+            contentResolver.registerContentObserver(Images.Media.EXTERNAL_CONTENT_URI, true, mMediaObserver)
+            contentResolver.registerContentObserver(Video.Media.EXTERNAL_CONTENT_URI, true, mMediaObserver)
+        } catch (ignored: Exception) {
+        }
+
         updateMenuColors()
         if (mStoredAnimateGifs != config.animateGifs) {
             getMediaAdapter()?.updateAnimateGifs(config.animateGifs)
@@ -269,9 +296,15 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
     override fun onPause() {
         super.onPause()
         mIsGettingMedia = false
+        mReloadPending = false
         binding.mediaRefreshLayout.isRefreshing = false
         storeStateVariables()
         mLastMediaHandler.removeCallbacksAndMessages(null)
+        try {
+            contentResolver.unregisterContentObserver(mMediaObserver)
+        } catch (ignored: Exception) {
+        }
+        mMediaChangeHandler.removeCallbacks(mMediaChangeCheck)
 
         if (!mMedia.isEmpty()) {
             mCurrAsyncTask?.stopFetching()
@@ -542,7 +575,7 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
         binding.mediaFastscroller.setScrollVertically(!scrollHorizontally)
     }
 
-    private fun checkLastMediaChanged() {
+    private fun checkLastMediaChanged(delay: Long = LAST_MEDIA_CHECK_PERIOD) {
         if (isDestroyed || config.getFolderSorting(mPath) and SORT_BY_RANDOM != 0) {
             return
         }
@@ -556,13 +589,18 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
                     mLatestMediaId = mediaId
                     mLatestMediaDateId = mediaDateId
                     runOnUiThread {
-                        getMedia()
+                        if (mIsGettingMedia) {
+                            // a reload is already running and might have missed this change, reload once more after it
+                            mReloadPending = true
+                        } else {
+                            getMedia()
+                        }
                     }
                 } else {
                     checkLastMediaChanged()
                 }
             }
-        }, LAST_MEDIA_CHECK_PERIOD)
+        }, delay)
     }
 
     private fun showSortingDialog() {
@@ -682,17 +720,30 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
 
     private fun startAsyncTask() {
         mCurrAsyncTask?.stopFetching()
+        var latestMediaId = 0L
+        var latestMediaDateId = 0L
         mCurrAsyncTask = GetMediaAsynctask(
             context = applicationContext,
             mPath = mPath,
             isPickImage = mIsGetImageIntent && !mIsGetVideoIntent,
             isPickVideo = mIsGetVideoIntent && !mIsGetImageIntent,
-            showAll = mShowAll
+            showAll = mShowAll,
+            onBeforeFetch = {
+                // take the snapshot before fetching, so that media added during the fetch
+                // (e.g. a camera finalizing a pending photo) is still detected by checkLastMediaChanged()
+                latestMediaId = getLatestMediaId()
+                latestMediaDateId = getLatestMediaByDateId()
+            }
         ) {
             ensureBackgroundThread {
                 val oldMedia = mMedia.clone() as ArrayList<ThumbnailItem>
                 val newMedia = it
                 try {
+                    // keep the newer snapshot of a change detected meanwhile, the pending reload updates it
+                    if (!mReloadPending) {
+                        mLatestMediaId = latestMediaId
+                        mLatestMediaDateId = latestMediaDateId
+                    }
                     gotMedia(newMedia, false)
 
                     // remove cached files that are no longer valid for whatever reason
@@ -1020,9 +1071,10 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
             setupAdapter()
         }
 
-        mLatestMediaId = getLatestMediaId()
-        mLatestMediaDateId = getLatestMediaByDateId()
-        if (!isFromCache) {
+        if (isFromCache) {
+            mLatestMediaId = getLatestMediaId()
+            mLatestMediaDateId = getLatestMediaByDateId()
+        } else {
             val mediaToInsert = mMedia
                 .filter { it is Medium && it.deletedTS == 0L }.map { it as Medium }
             Thread {
@@ -1031,6 +1083,14 @@ class MediaActivity : SimpleActivity(), MediaOperationsListener {
                 } catch (e: Exception) {
                 }
             }.start()
+
+            // consume the flag on the UI thread, where it is set, so a reload requested meanwhile is never lost
+            runOnUiThread {
+                if (mReloadPending) {
+                    mReloadPending = false
+                    getMedia()
+                }
+            }
         }
     }
 

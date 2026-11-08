@@ -14,12 +14,14 @@ import org.fossify.gallery.models.ThumbnailItem
 
 class GetMediaAsynctask(
     val context: Context, val mPath: String, val isPickImage: Boolean = false, val isPickVideo: Boolean = false,
-    val showAll: Boolean, val callback: (media: ArrayList<ThumbnailItem>) -> Unit
+    val showAll: Boolean, val onBeforeFetch: (() -> Unit)? = null,
+    val callback: (media: ArrayList<ThumbnailItem>) -> Unit
 ) :
     AsyncTask<Void, Void, ArrayList<ThumbnailItem>>() {
     private val mediaFetcher = MediaFetcher(context)
 
     override fun doInBackground(vararg params: Void): ArrayList<ThumbnailItem> {
+        onBeforeFetch?.invoke()
         val pathToUse = if (showAll) SHOW_ALL else mPath
         val folderGrouping = context.config.getFolderGrouping(pathToUse)
         val folderSorting = context.config.getFolderSorting(pathToUse)

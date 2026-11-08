@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed new photos sometimes not appearing until the next refresh ([#284])
 
 ## [1.14.2] - 2026-11-03
 ### Changed
@@ -284,6 +286,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#237]: https://github.com/FossifyOrg/Gallery/issues/237
 [#241]: https://github.com/FossifyOrg/Gallery/issues/241
 [#275]: https://github.com/FossifyOrg/Gallery/issues/275
+[#284]: https://github.com/FossifyOrg/Gallery/issues/284
 [#325]: https://github.com/FossifyOrg/Gallery/issues/325
 [#362]: https://github.com/FossifyOrg/Gallery/issues/362
 [#363]: https://github.com/FossifyOrg/Gallery/issues/363
