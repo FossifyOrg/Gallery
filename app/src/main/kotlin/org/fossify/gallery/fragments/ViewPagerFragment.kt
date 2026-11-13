@@ -144,12 +144,19 @@ abstract class ViewPagerFragment : Fragment() {
         }
 
         val latLon = FloatArray(2)
-
-        if (exif.getLatLong(latLon)) {
-            result = "${latLon[0]},  ${latLon[1]}"
+        try {
+            if (exif.getLatLong(latLon)) {
+                result = "${latLon[0]},  ${latLon[1]}"
+            }
+        } catch (ignored: Exception) {
+            // ACCESS_MEDIA_LOCATION revoked: redacted GPS tags can make getLatLong throw
         }
 
-        val altitude = exif.getAltitude(0.0)
+        val altitude = try {
+            exif.getAltitude(0.0)
+        } catch (ignored: Exception) {
+            0.0
+        }
         if (altitude != 0.0) {
             result += ",  ${altitude}m"
         }

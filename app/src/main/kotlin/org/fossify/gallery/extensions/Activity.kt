@@ -940,7 +940,13 @@ fun Activity.showFileOnMap(path: String) {
     }
 
     val latLon = FloatArray(2)
-    if (exif.getLatLong(latLon)) {
+    val hasLocation = try {
+        exif.getLatLong(latLon)
+    } catch (ignored: Exception) {
+        // ACCESS_MEDIA_LOCATION revoked: redacted GPS tags can make getLatLong throw
+        false
+    }
+    if (hasLocation) {
         showLocationOnMap("${latLon[0]}, ${latLon[1]}")
     } else {
         toast(R.string.unknown_location)
