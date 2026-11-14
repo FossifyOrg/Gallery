@@ -167,13 +167,13 @@ Att lägga till mappar här utesluter inte några andra mappar.</string>
     <string name="hide_extended_details">Dölj utökad information när statusfältet är dolt</string>
     <string name="show_at_bottom">Visa några åtgärdsknappar längst ned på skärmen</string>
     <string name="show_recycle_bin">Visa papperskorgen på mappskärmen</string>
-    <string name="deep_zoomable_images">Djupt zoombara bilder</string>
+    <string name="deep_zoomable_images">Bilder med djupzoom</string>
     <string name="show_highest_quality">Visa bilder i högsta möjliga kvalitet</string>
     <string name="show_recycle_bin_last">Visa papperskorgen som det sista objektet på huvudskärmen</string>
     <string name="allow_down_gesture">Tillåt avslutning av helskärmsläget med en nedåtgest</string>
     <string name="allow_one_to_one_zoom">Tillåt 1:1-zoomning med två dubbeltryck</string>
     <string name="open_videos_on_separate_screen">Spela upp videor på en separat skärm med horisontella gester</string>
-    <string name="show_notch">Visa notch om tillgängligt</string>
+    <string name="show_notch">Visa skärmutskärning om tillgänglig</string>
     <string name="allow_rotating_gestures">Tillåt bildrotation med gester</string>
     <string name="file_loading_priority">Filinläsningsprioritet</string>
     <string name="speed">Hastighet</string>
@@ -186,7 +186,7 @@ Att lägga till mappar här utesluter inte några andra mappar.</string>
     <string name="mark_favorite_items">Markera favoriter</string>
     <string name="thumbnail_spacing">Avstånd för miniatyrbild</string>
     <string name="show_file_count_line">Visa filantal på en separat rad</string>
-    <string name="show_file_count_brackets">Visa filantal i klammrar</string>
+    <string name="show_file_count_brackets">Visa filantal i parenteser</string>
     <string name="show_file_count_none">Visa inte filantal</string>
     <string name="limit_folder_title">Begränsa långa mappnamn till en rad</string>
     <string name="square">Fyrkant</string>
@@ -232,7 +232,7 @@ Att lägga till mappar här utesluter inte några andra mappar.</string>
     <string name="faq_12_title">Sortering efter fotodatum verkar inte fungera korrekt. Hur rättar jag det\?</string>
     <string name="faq_12_text">Det beror troligen på att filerna har kopierats från en annan plats. Markera filernas miniatyrer och välj \"Korrigera fotodatum\".</string>
     <string name="faq_13_title">Jag ser färgbandning i bilderna. Hur kan jag förbättra kvaliteten\?</string>
-    <string name="faq_13_text">Bilder visas bra i de flesta fall. Vill du ha ännu högre bildkvalitet kan du aktivera \"Visa bilder i högsta möjliga kvalitet\" i avsnittet \"Djupt zoombara bilder\" i appinställningarna.</string>
+    <string name="faq_13_text">Bilder visas bra i de flesta fall. Vill du ha ännu högre bildkvalitet kan du aktivera \"Visa bilder i högsta möjliga kvalitet\" i avsnittet \"Bilder med djupzoom\" i appinställningarna.</string>
     <string name="faq_14_title">Jag har dolt en fil eller mapp. Hur visar jag den igen\?</string>
     <string name="faq_14_text">Välj antingen \"Visa dolda objekt tillfälligt\" på huvudskärmen eller aktivera \"Visa dolda objekt\" i appinställningarna. Om du vill visa objektet igen trycker du länge på det och väljer \"Visa igen\". Mappar döljs genom att lägga till en dold \".nomedia\"-fil i dem. Du kan ta bort filen med valfri filhanterare. Döljning gäller rekursivt: om du döljer en mapp döljs även alla undermappar. Visa därför den överordnade mappen igen för att visa undermapparna.</string>
     <string name="faq_15_title">Varför upptar appen så mycket utrymme\?</string>
