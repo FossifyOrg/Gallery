@@ -602,4 +602,8 @@ class Config(context: Context) : BaseConfig(context) {
     var showPermissionRationale: Boolean
         get() = prefs.getBoolean(SHOW_PERMISSION_RATIONALE, false)
         set(showPermissionRationale) = prefs.edit().putBoolean(SHOW_PERMISSION_RATIONALE, showPermissionRationale).apply()
+
+    var stripMetadataOnShare: Boolean
+        get() = prefs.getBoolean(STRIP_METADATA_ON_SHARE, false)
+        set(value) = prefs.edit().putBoolean(STRIP_METADATA_ON_SHARE, value).apply()
 }
