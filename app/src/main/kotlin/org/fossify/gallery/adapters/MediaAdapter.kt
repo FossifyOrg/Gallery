@@ -725,9 +725,9 @@ class MediaAdapter(
             }
 
             val roundedCorners = when {
+                !config.fileRoundedCorners -> ROUNDED_CORNERS_NONE
                 isListViewType -> ROUNDED_CORNERS_SMALL
-                config.fileRoundedCorners -> ROUNDED_CORNERS_BIG
-                else -> ROUNDED_CORNERS_NONE
+                else -> ROUNDED_CORNERS_BIG
             }
 
             mediumThumbnail.setBackgroundResource(
