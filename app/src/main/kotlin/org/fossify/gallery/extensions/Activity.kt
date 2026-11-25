@@ -135,7 +135,7 @@ fun SimpleActivity.launchAbout() {
         FAQItem(org.fossify.commons.R.string.faq_9_title_commons, org.fossify.commons.R.string.faq_9_text_commons),
     )
 
-    if (!resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)) {
+    if (resources.getBoolean(org.fossify.commons.R.bool.is_google_play_build)) {
         faqItems.add(FAQItem(org.fossify.commons.R.string.faq_2_title_commons, org.fossify.commons.R.string.faq_2_text_commons))
         faqItems.add(FAQItem(org.fossify.commons.R.string.faq_6_title_commons, org.fossify.commons.R.string.faq_6_text_commons))
         faqItems.add(FAQItem(org.fossify.commons.R.string.faq_7_title_commons, org.fossify.commons.R.string.faq_7_text_commons))

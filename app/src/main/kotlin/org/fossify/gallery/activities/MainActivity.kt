@@ -455,7 +455,7 @@ class MainActivity : SimpleActivity(), DirectoryOperationsListener {
                 findItem(R.id.open_recycle_bin).isVisible =
                     config.useRecycleBin && !config.showRecycleBinAtFolders
                 findItem(R.id.more_apps_from_us).isVisible =
-                    !resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)
+                    resources.getBoolean(org.fossify.commons.R.bool.is_google_play_build)
             }
         }
 

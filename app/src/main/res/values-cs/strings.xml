@@ -127,7 +127,7 @@
     <string name="group_direct_subfolders">Sloučit přímé podsložky</string>
     <string name="group_by">Seskupit podle</string>
     <string name="do_not_group_files">Neseskupovat</string>
-    <string name="by_folder">Složky</string>
+    <string name="by_folder">Složka</string>
     <string name="by_last_modified">Data poslední úpravy</string>
     <string name="by_last_modified_daily">Data poslední úpravy (denně)</string>
     <string name="by_last_modified_monthly">Data poslední úpravy (měsíčně)</string>

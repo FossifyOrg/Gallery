@@ -12,4 +12,6 @@ on:
 jobs:
   call-release-pr:
     uses: FossifyOrg/.github/.github/workflows/prepare-release-pr.yml@main
+    with:
+      abi_apks: true
     secrets: inherit
