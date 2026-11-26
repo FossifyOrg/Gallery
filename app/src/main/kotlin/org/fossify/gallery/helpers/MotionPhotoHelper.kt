@@ -42,12 +42,44 @@ object MotionPhotoHelper {
 
         if (xmpXml == null) return null
 
-        val isMotionPhoto = xmpXml.contains("GCamera:MotionPhoto=\"1\"", true) ||
-            xmpXml.contains("<GCamera:MotionPhoto>1</GCamera:MotionPhoto>", true)
+        val isMotionPhoto = hasXmpFlag(xmpXml, "MotionPhoto")
+        val isMicroVideo = hasXmpFlag(xmpXml, "MicroVideo")
 
-        if (!isMotionPhoto) return null
+        if (!isMotionPhoto && !isMicroVideo) return null
+
+        if (isMicroVideo) {
+            val microVideoOffset = getXmpValue(xmpXml, "MicroVideoOffset")?.toLongOrNull()
+            if (microVideoOffset != null && microVideoOffset > 0) {
+                fromOffsetFromEnd(context, path, microVideoOffset)?.let { return it }
+            }
+        }
 
         return findVideoOffset(context, path)
+    }
+
+    private fun hasXmpFlag(xmpXml: String, name: String) = getXmpValue(xmpXml, name) == "1"
+
+    private fun getXmpValue(xmpXml: String, name: String): String? {
+        val regex = Regex("""GCamera:$name(?:="([^"]*)"|>([^<]*)</GCamera:$name>)""", RegexOption.IGNORE_CASE)
+        val match = regex.find(xmpXml) ?: return null
+        return match.groupValues[1].ifEmpty { match.groupValues[2] }.trim()
+    }
+
+    private fun fromOffsetFromEnd(context: Context, path: String, offsetFromEnd: Long): MotionPhotoInfo? {
+        val fileSize = getFileSize(context, path) ?: return null
+        if (offsetFromEnd >= fileSize) return null
+        return MotionPhotoInfo(
+            videoOffsetFromStart = fileSize - offsetFromEnd,
+            videoLength = offsetFromEnd
+        )
+    }
+
+    private fun getFileSize(context: Context, path: String): Long? {
+        return if (path.startsWith("content:/")) {
+            context.contentResolver.openFileDescriptor(path.toUri(), "r")?.use { it.statSize }
+        } else {
+            File(path).length()
+        }?.takeIf { it >= MIN_FILE_SIZE }
     }
 
     private fun findVideoOffset(context: Context, path: String): MotionPhotoInfo? {
@@ -81,10 +113,7 @@ object MotionPhotoHelper {
 
     private fun findVideoOffsetFromContentUri(context: Context, path: String): MotionPhotoInfo? {
         val uri = path.toUri()
-        val fileSize = context.contentResolver.openFileDescriptor(uri, "r")
-            ?.use { it.statSize }
-            ?.takeIf { it >= MIN_FILE_SIZE }
-            ?: return null
+        val fileSize = getFileSize(context, path) ?: return null
         val scanStart = maxOf(0L, fileSize - SCAN_RANGE)
         val scanLength = (fileSize - scanStart).toInt()
         val buffer = readBytesFromUri(context, uri, scanStart, scanLength) ?: return null
