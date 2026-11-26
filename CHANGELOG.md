@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Support for Pixel motion photos
+
 ## [1.14.3] - 2026-11-18
 ### Changed
 - Updated translations

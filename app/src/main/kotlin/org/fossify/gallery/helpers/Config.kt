@@ -165,6 +165,14 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(AUTOPLAY_VIDEOS, false)
         set(autoplayVideos) = prefs.edit().putBoolean(AUTOPLAY_VIDEOS, autoplayVideos).apply()
 
+    var autoplayMotionPhotos: Boolean
+        get() = prefs.getBoolean(AUTOPLAY_MOTION_PHOTOS, false)
+        set(autoplayMotionPhotos) = prefs.edit().putBoolean(AUTOPLAY_MOTION_PHOTOS, autoplayMotionPhotos).apply()
+
+    var loopMotionPhotos: Boolean
+        get() = prefs.getBoolean(LOOP_MOTION_PHOTOS, false)
+        set(loopMotionPhotos) = prefs.edit().putBoolean(LOOP_MOTION_PHOTOS, loopMotionPhotos).apply()
+
     var animateGifs: Boolean
         get() = prefs.getBoolean(ANIMATE_GIFS, false)
         set(animateGifs) = prefs.edit().putBoolean(ANIMATE_GIFS, animateGifs).apply()
