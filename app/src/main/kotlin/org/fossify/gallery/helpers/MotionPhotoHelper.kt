@@ -42,8 +42,8 @@ object MotionPhotoHelper {
 
         if (xmpXml == null) return null
 
-        val isMotionPhoto = hasXmpFlag(xmpXml, "MotionPhoto")
-        val isMicroVideo = hasXmpFlag(xmpXml, "MicroVideo")
+        val isMotionPhoto = getXmpValue(xmpXml, "MotionPhoto") == "1"
+        val isMicroVideo = getXmpValue(xmpXml, "MicroVideo") == "1"
 
         if (!isMotionPhoto && !isMicroVideo) return null
 
@@ -56,8 +56,6 @@ object MotionPhotoHelper {
 
         return findVideoOffset(context, path)
     }
-
-    private fun hasXmpFlag(xmpXml: String, name: String) = getXmpValue(xmpXml, name) == "1"
 
     private fun getXmpValue(xmpXml: String, name: String): String? {
         val regex = Regex("""GCamera:$name(?:="([^"]*)"|>([^<]*)</GCamera:$name>)""", RegexOption.IGNORE_CASE)
