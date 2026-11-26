@@ -897,8 +897,9 @@ class PhotoFragment : ViewPagerFragment() {
     }
 
     private fun checkIfMotionPhoto() {
+        val appContext = context?.applicationContext ?: return
         val info = try {
-            MotionPhotoHelper.detectMotionPhoto(requireContext(), mMedium.path, mMedium.name)
+            MotionPhotoHelper.detectMotionPhoto(appContext, mMedium.path, mMedium.name)
         } catch (e: Exception) {
             null
         }
@@ -907,7 +908,8 @@ class PhotoFragment : ViewPagerFragment() {
         mMotionPhotoInfo = info
 
         activity?.runOnUiThread {
-            if (mIsMotionPhoto && mIsFragmentVisible && requireContext().config.autoplayMotionPhotos) {
+            if (!isAdded || view == null) return@runOnUiThread
+            if (mIsMotionPhoto && mIsFragmentVisible && appContext.config.autoplayMotionPhotos) {
                 playMotionPhotoVideo()
             } else {
                 binding.motionPhotoPlay.beVisibleIf(mIsMotionPhoto)
@@ -947,7 +949,7 @@ class PhotoFragment : ViewPagerFragment() {
     }
 
     private fun initMotionPhotoPlayer(surface: Surface, info: MotionPhotoInfo) {
-        if (activity == null) return
+        if (!isAdded) return
 
         val factory = MotionPhotoDataSourceFactory(
             requireContext(), mMedium.path, info.videoOffsetFromStart, info.videoLength
